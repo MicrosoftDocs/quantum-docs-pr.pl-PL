@@ -1,0 +1,11 @@
+- name: Klasyczne komputery i sterowniki
+  href: index.md
+- name: Symulator kwantowy
+  href: full-state-simulator.md
+- name: Narzędzie do szacowania zasobów
+  href: resources-estimator.md
+- name: Symulator śledzenia komputera kwantowego
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Symulator Toffoli
+  href: toffoli-simulator.md
