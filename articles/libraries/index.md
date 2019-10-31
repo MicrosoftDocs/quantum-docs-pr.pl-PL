@@ -1,0 +1,22 @@
+---
+title: Biblioteki zestawu Quantum Development Kit | Microsoft Docs
+author: cgranade
+ms.author: chgranad@microsoft.com
+ms.date: 10/17/2018
+ms.topic: article
+uid: microsoft.quantum.libraries
+ms.openlocfilehash: 5a5b28f7e8c1669d26d1064753f20551a6b0d036
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72970387"
+---
+<span data-ttu-id="ec252-102">Zestaw Quantum Development Kit jest dostarczany z kilkoma bibliotekami, które ułatwiają tworzenie aplikacji Quantum w języku Q#.</span><span class="sxs-lookup"><span data-stu-id="ec252-102">The Quantum Development Kit is provided with several libraries to make it easier to develop quantum applications in Q#.</span></span>
+<span data-ttu-id="ec252-103">W tej sekcji dokumentacji opisano te biblioteki i sposoby ich używania w programach.</span><span class="sxs-lookup"><span data-stu-id="ec252-103">In this section of the documentation, we describe these libraries and how to use them in your programs.</span></span>
+
+- <span data-ttu-id="ec252-104">[**Biblioteki standardowe**](xref:microsoft.quantum.libraries.standard.intro): W tej sekcji opisano bibliotekę preludium definiującą interfejs między programami Q# i maszynami docelowymi oraz bibliotekę kanon udostępniającą operacje i funkcje ogólnego zastosowania przydatne podczas pisania programów w języku Q#.</span><span class="sxs-lookup"><span data-stu-id="ec252-104">[**Standard libraries**](xref:microsoft.quantum.libraries.standard.intro): This section describes the prelude, which defines the interface between Q# programs and target machines, and the canon, a Q# library that provides general-purpose operations and functions for use in writing Q# programs.</span></span>
+- <span data-ttu-id="ec252-105">[**Biblioteka dla chemii kwantowej**](xref:microsoft.quantum.chemistry.concepts.intro): W tej sekcji opisano bibliotekę dla chemii kwantowej udostępniającą model danych na potrzeby ładowania reprezentacji funkcji Hamiltona dla fermionów, a także operacje i funkcje symulacji kwantowej, które działają w tych reprezentacjach.</span><span class="sxs-lookup"><span data-stu-id="ec252-105">[**Quantum chemistry library**](xref:microsoft.quantum.chemistry.concepts.intro): This section describes the quantum chemistry library, which provides a data model for loading representations of fermionic Hamiltonians and quantum simulation operations and functions which act on these representations.</span></span>
+- <span data-ttu-id="ec252-106">[**Biblioteka dla liczb kwantowych**](xref:microsoft.quantum.numerics.intro): W tej sekcji opisano bibliotekę dla liczb kwantowych, która udostępnia implementacje dla hosta funkcji matematycznych.</span><span class="sxs-lookup"><span data-stu-id="ec252-106">[**Quantum numerics library**](xref:microsoft.quantum.numerics.intro): This section describes the quantum numerics library, which provides implementations for a host of mathematical functions.</span></span> <span data-ttu-id="ec252-107">Obsługuje ona reprezentacje liczb całkowitych (ze znakiem i bez znaki) oraz liczb stałoprzecinkowych.</span><span class="sxs-lookup"><span data-stu-id="ec252-107">It supports integer (signed & unsigned) and fixed-point representations.</span></span>
+
+<span data-ttu-id="ec252-108">Kod źródłowy tych bibliotek oraz przykłady kodu można uzyskać z witryny GitHub.</span><span class="sxs-lookup"><span data-stu-id="ec252-108">Sources of the libraries as well as code samples can be obtained from GitHub.</span></span> <span data-ttu-id="ec252-109">Więcej informacji można znaleźć w sekcji dotyczącej [licencjonowania](xref:microsoft.quantum.libraries.licensing).</span><span class="sxs-lookup"><span data-stu-id="ec252-109">See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information.</span></span> <span data-ttu-id="ec252-110">Należy zauważyć, że odwołania do pakietów („pliki binarne”) są dostępne również dla bibliotek, które oferują inny sposób dołączania bibliotek do projektów.</span><span class="sxs-lookup"><span data-stu-id="ec252-110">It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects.</span></span> <span data-ttu-id="ec252-111">Można je łatwo uzyskać z witryny [nuget](https://nuget.org).</span><span class="sxs-lookup"><span data-stu-id="ec252-111">A convenient way of obtaining them is via [nuget](https://nuget.org).</span></span>  
