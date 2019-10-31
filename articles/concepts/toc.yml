@@ -1,0 +1,20 @@
+- name: Co to są obliczenia kwantowe?
+  href: index.md
+- name: Wektory i macierze
+  href: vectors-and-matrices.md
+- name: Zaawansowane pojęcia dotyczące macierzy
+  href: advanced-matrices.md
+- name: Kubit
+  href: the-qubit.md
+- name: Wiele kubitów
+  href: multiple-qubits.md
+- name: Notacja Diraca
+  href: dirac-notation.md
+- name: Pomiary Pauliego
+  href: pauli-measurements.md
+- name: Obwody kwantowe
+  href: circuits.md
+- name: Wyrocznie kwantowe
+  href: oracles.md
+- name: Stos oprogramowania
+  href: software-stack.md

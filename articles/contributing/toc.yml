@@ -1,0 +1,10 @@
+- name: Raportowanie usterek
+  href: reporting-bugs.md
+- name: Dokumentacja dotycząca współtworzenia
+  href: docs.md
+- name: Otwieranie żądań ściągnięcia
+  href: pull-requests.md
+- name: Zasady współtworzenia
+  href: code.md
+- name: Przewodnik dotyczący stylu
+  href: style-guide.md
