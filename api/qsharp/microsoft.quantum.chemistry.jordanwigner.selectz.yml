@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.selectz
+name: SelectZ
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Jednostkowa $U $, która stosuje bramę programu Pauli $Z $ na qubits $p $ conditiond w stanie indeksu $ \ket{p} $. Oznacza to, $ $ \begin{align} U\ket {p} \ KET {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+syntax: 'operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+input:
+  content: '(indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: indexRegister
+    summary: Stan $ \ket{p} $ tej rejestracji określa qubit, na którym zastosowano $Z $.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: Rejestr elementu qubits, na którym są stosowane operatory Pauli.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: b0de216ff102b8c969b9e920127e567ed349e874
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225064"

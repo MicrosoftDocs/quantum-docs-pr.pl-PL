@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyif
+name: ApplyIf
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje operację warunkową przy użyciu klasycznego bitu.
+
+
+  Po `op` operacji i `bit`wartość bitowa stosuje `op` do `target`, jeśli `bit` jest `true`. Jeśli `false`, nic się nie dzieje z `target`.
+examples: >-
+  Poniżej przygotowuje się rejestr qubits do stanu podstawy obliczeniowej reprezentowanego przez klasyczny ciąg bitowy wyrażony jako tablica wartości `Bool`:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIf (op : ('T => Unit), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Operacja, która ma być stosowana warunkowo.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: bit
+    summary: wartość logiczna, która kontroluje, czy operacja jest stosowana, czy nie.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: Dane wejściowe, do których zostanie zastosowana operacja.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Typ wejściowy operacji, która ma być stosowana warunkowo.
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: 8493200e8c87fc423bee6754f50f0f5c6b7cdd5c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217652"

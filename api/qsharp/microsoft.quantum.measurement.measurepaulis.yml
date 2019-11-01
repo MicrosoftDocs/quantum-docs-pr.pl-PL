@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measurepaulis
+name: MeasurePaulis
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Dana tablica operatorów wieloqubitowych Pauli, miara każdego przy użyciu określonego gadżetu pomiaru, a następnie zwraca tablicę wyników.
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
+input:
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: paulis
+    summary: Tablica operatorów qubit Pauli, które mają być mierzone.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: target
+    summary: Zarejestruj się, w którym mają zostać dopasowane określone operatory.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: gadget
+    summary: Operacja, która wykonuje pomiary danego operatora qubit.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Result[]
+  types:
+  - summary: Tablica wyników uzyskanych od mierzenia każdego elementu `paulis` w `target`.
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 97ad0beb222a6a6d11394499e0039c405a3be9e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231405"

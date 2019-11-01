@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.expmodl
+name: ExpModL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Zwraca liczbę całkowitą podniesioną do danej potęgi w odniesieniu do danego modułu.
+
+
+  Zezwól nam na expBase przez $x $, moc przez $p $ i modulo przez $N $.
+
+  Funkcja zwraca $x ^ p \operatorname{mod} N $.
+
+
+  Przyjęto założenie, że $N $, $x $ są pozytywne i potęga nie jest ujemna.
+remarks: Czas jest proporcjonalny do liczby bitów w `power`, a nie `power` samego.
+syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
+input:
+  content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
+  types:
+  - name: expBase
+    isPrimitive: true
+    uid: BigInt
+  - name: power
+    isPrimitive: true
+    uid: BigInt
+  - name: modulus
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: c314b3b34a1abf253dd9af205f766fad14abea49
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233054"

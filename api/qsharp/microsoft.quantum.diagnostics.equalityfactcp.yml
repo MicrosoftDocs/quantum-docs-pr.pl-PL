@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactcp
+name: EqualityFactCP
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Potwierdza, że liczba złożona ma oczekiwaną wartość.
+syntax: 'function EqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar, message : String) : Unit'
+input:
+  content: '(actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar, message : String)'
+  types:
+  - name: actual
+    summary: Wartość, która ma zostać sprawdzona.
+    uid: microsoft.quantum.math.complexpolar
+  - name: expected
+    summary: Oczekiwana wartość.
+    uid: microsoft.quantum.math.complexpolar
+  - name: message
+    summary: Ciąg komunikatu o niepowodzeniu, który ma być używany, gdy potwierdzenie jest wyzwalane.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: ed9201ef56ceb64db69f785af49b4a5fc71b91da
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226951"

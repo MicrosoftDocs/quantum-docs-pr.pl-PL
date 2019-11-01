@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.quantumphaseestimation
+name: QuantumPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Wykonuje algorytm szacowania fazy Quantum dla danego `U` i `targetState`Oracle, odczytując fazę do rejestru Quantum big-endian.
+syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: oracle
+    summary: Operacja implementująca $U ^ m $ dla podaną liczbę całkowitą potęgi m.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: Rejestr Quantum reprezentujący stan $ \ket{\phi} $ działał na $U $. Jeśli $ \ket{\phi} $ jest eigenstateem $U $, $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ dla $ \phi \In [0, 2 \ PI) $ nieznana faza.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlRegister
+    summary: Rejestr operacji big-endian, który może służyć do kontrolowania dostarczonej firmy Oracle i który będzie zawierać reprezentację $ \phi $ po zastosowaniu tej operacji. Założono, że controlRegister rozpoczyna się w stanie początkowym $ \ket{00\cdots 0} $, gdzie długość rejestru wskazuje żądaną precyzję.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: f5cb07ee948a0472bbd5b85ba13e12fa6a9eff39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229110"

@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpmachine
+name: DumpMachine
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Zrzuca stan bieżącej maszyny docelowej.
+remarks: >-
+  Ta metoda umożliwia zrzut informacji o bieżącym stanie maszyny docelowej do pliku lub innej lokalizacji.
+
+  Rzeczywiste wygenerowane informacje i semantyka `location` są specyficzne dla każdej maszyny docelowej. Jednak podanie pustej spójnej kolekcji jako lokalizacji (`()`) lub po prostu pominięcie parametru `location` zazwyczaj oznacza wygenerowanie danych wyjściowych w konsoli.
+
+
+  W przypadku lokalnego symulatora pełnego stanu dystrybuowanego w ramach zestawu Quantum Development Kit ta metoda oczekuje ciągu z ścieżką do pliku, w którym pisze funkcję Wave jako jednowymiarową tablicę liczb zespolonych, w której każdy element reprezentuje Amplituda prawdopodobieństwa mierzenia odpowiedniego stanu.
+syntax: "function DumpMachine (location : 'T) : Unit"
+input:
+  content: "(location : 'T)"
+  types:
+  - name: location
+    summary: Zawiera informacje o tym, gdzie wygenerować zrzut maszyny.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - summary: Brak.
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227070"
