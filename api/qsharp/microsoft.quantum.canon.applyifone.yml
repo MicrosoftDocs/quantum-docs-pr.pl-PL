@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifone
+name: ApplyIfOne
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje operację warunkową dla klasycznej wartości wynikowej.
+
+
+  Po `op` operacji i `result`wartość wyniku stosuje `op` do `target`, jeśli `result` jest `One`. Jeśli `Zero`, nic się nie dzieje z `target`.
+syntax: "operation ApplyIfOne (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit), target : 'T))"
+  types:
+  - name: result
+    summary: Wynik pomiaru, który kontroluje, czy operacja jest stosowana, czy nie.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Operacja, która ma być stosowana warunkowo.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: Dane wejściowe, do których zostanie zastosowana operacja.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Typ wejściowy operacji, która ma być stosowana warunkowo.
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 5609226c113fd6b9660fdad2f05d154a7abde5a3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220916"

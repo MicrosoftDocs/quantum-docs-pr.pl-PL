@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.modulusi
+name: ModulusI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Oblicza pozostałą liczbę kanonicznych postanowień `value` modulo `modulus`.
+remarks: 'Ta funkcja zachowuje się różnie w zależności od zachowania `%` operatora C# i Q # AS w wyniku jest zawsze dodatnią liczbą całkowitą z zakresu od 0 do `modulus - 1`, nawet jeśli wartość jest ujemna.'
+syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
+input:
+  content: '(value : Int, modulus : Int)'
+  types:
+  - name: value
+    summary: Wartość, dla której jest obliczana pozostała część
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Moduł, w którym są pożądane pozostałości, musi być dodatni
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Liczba całkowita $r $ między 0 i `modulus - 1` taka, która `value - r` jest podzielna przez moduł
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 1bb3877b4d66b5ad09dabbc072d7d9fb61813745
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212093"

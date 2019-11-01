@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.xbits
+name: XBits
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Zwraca liczbę całkowitą reprezentującą X bity tablicy operatorów Pauli.
+remarks: Funkcja zgłosi, jeśli długość tablicy `paulis` jest większa niż 63.
+syntax: 'function XBits (paulis : Pauli[]) : Int'
+input:
+  content: '(paulis : Pauli[])'
+  types:
+  - name: paulis
+    summary: Tablica operatorów Pauli, która ma być reprezentowana jako liczba całkowita.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Int
+  types:
+  - summary: Liczba całkowita $x $ z reprezentacją binarną $ (p_{62}\,p_{61}\,\dots\,p_0) $, gdzie $p _i = $0, jeśli `paulis[i]` jest `PauliI` lub `PauliZ` i gdzie $p _i = $1, jeśli `paulis[i]` jest `PauliX` lub `PauliY`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- zbits
+ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217737"

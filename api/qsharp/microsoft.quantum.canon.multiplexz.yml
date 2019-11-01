@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje obrót Pauli Z na tablicy qubits.
+
+
+  W ten sposób stosowana jest przemnożona operacja jednostkowa, $U $, która dokonuje rotacji według kąta $ \theta_j $ o pojedynczym operatorze Pauli $Z $, gdy jest to kontrolowane przez $n $-qubit numer stanu $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+remarks: '`coefficients` zostaną uzupełnione elementami $ \theta_j = $0,0, jeśli określono mniej niż $2 ^ n $.'
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- Synteza obwodów logiki Quantum Vivek V. Shende, Stephen S. Bullock, Igora L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: Tablica do $2 ^ n $ współczynniki $ \theta_j $. Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: $n $-qubit kontroli rejestru, który koduje liczbę Stany $ \ket{j} $ w formacie little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Pojedynczy rejestr qubit, który jest obrócony przez $e ^ {i P \theta_j} $.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222701"

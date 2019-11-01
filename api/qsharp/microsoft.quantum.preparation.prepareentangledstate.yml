@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareentangledstate
+name: PrepareEntangledState
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Buforowanie entangles dwóch qubit rejestrów.
+
+
+  W odniesieniu do dwóch rejestrów przygotowuje Maximally Entangled State $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ między każdą parą qubits w odpowiednich rejestrach przy założeniu, że każda z tych rejestrów zaczyna się w $ \ket{0\ stan cdots 0} $.
+syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
+input:
+  content: '(left : Qubit[], right : Qubit[])'
+  types:
+  - name: left
+    summary: Tablica qubit w stanie $ \ket{0\cdots 0} $
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: right
+    summary: Tablica qubit w stanie $ \ket{0\cdots 0} $
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 8bbd7a3a87a55a930fda18669f75dc9a98aee981
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226628"

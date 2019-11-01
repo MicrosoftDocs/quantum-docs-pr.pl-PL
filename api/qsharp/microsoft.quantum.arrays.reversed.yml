@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.reversed
+name: Reversed
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Utwórz tablicę zawierającą te same elementy co Tablica wejściowa, ale w odwrotnej kolejności.
+syntax: "function Reversed (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Tablica, której elementy mają być kopiowane w odwrotnej kolejności.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Tablica zawierająca elementy `array[Length(array) - 1]`.. `array[0]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Typ elementów tablicy.
+ms.openlocfilehash: 946d1f06619a4533a2c32cf58266815d7a510434
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218026"

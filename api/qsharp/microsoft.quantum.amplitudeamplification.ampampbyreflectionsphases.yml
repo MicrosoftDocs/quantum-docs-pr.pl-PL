@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+name: AmpAmpByReflectionsPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Wzmocnienie amplitudy poprzez częściowe odbicia.
+remarks: >-
+  Wzmocnienie amplitudy jest szczególnym przypadkiem wzmocnienia amplitudy Oblivious, w którym nie ma qubits systemowej, a Oblivious Oracle jest ustawiona na tożsamość.
+
+  W większości przypadków `startQubits` jest inicjowana w stanie $ \ket{\Text{Start}}\_$1, który jest eigenstate $-$1 `startStateReflection`.
+syntax: 'function AmpAmpByReflectionsPhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'
+  types:
+  - name: phases
+    summary: Fazy częściowego odbicia
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: startStateReflection
+    summary: Operator odbicia informacji o stanie uruchamiania
+    uid: microsoft.quantum.oracles.reflectionoracle
+  - name: targetStateReflection
+    summary: Operator odbicia dotyczący stanu docelowego
+    uid: microsoft.quantum.oracles.reflectionoracle
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - summary: Operacja implementująca wzmocnienie amplitudy poprzez częściowe odbicia.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 90305f330669aa4e9570e56b26744cdb7efd98bc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215816"

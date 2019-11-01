@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequencya
+name: EstimateFrequencyA
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Na podstawie przygotowań, które są przylegające i pomiarowe, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+remarks: W przypadku operacji współdziałania niektóre założenia mogą zostać wykonane, takie jak wywołanie operacji, przygotuje qubits do tego samego stanu, co umożliwi maszynom docelowym wykonywanie niektórych optymalizacji wydajności.
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Operacja współdziałania $P $, która przygotowuje dany stan $ \rho $ na swój rejestr wejściowy.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: measurement
+    summary: Operacja $M $ reprezentująca miarę zainteresowania.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: Liczba qubits, na których przygotowanie i pomiar każdego działania.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: Liczba przypadków, w których pomiar ma być wykonywany w celu oszacowania częstotliwości zainteresowania.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Oszacowanie $ \hat{p} $ częstotliwości, z którą $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zwraca `Zero`, uzyskany przy użyciu nieobciążonego dwumianu, szacowania $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, gdzie $n\_{\ pozostała liczba zaobserwowanych wyników to z prze`Zero`.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229178"

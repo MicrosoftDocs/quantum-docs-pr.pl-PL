@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoracle
+name: StateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Przedstawia oprogramowanie Oracle do przygotowywania stanu.
+
+
+  Dane wejściowe programu Oracle $O $ to:
+
+
+  - Liczba całkowita indeksowania flagi qubit $f $.
+
+  - Rejestr systemu $s $, który będzie przechowywać żądany stan Quantum $ \ket{\psi}\_s $.
+remarks: >-
+  Ta Oracle zdefiniowana przez $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots $ $ działa w ramach obliczenia stanu podstawy $ \ket{0}\_{f} \ket{0}\_s $, aby utworzyć stan docelowy $ \ket{\psi}\_s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{1}\_f $.
+
+  Pierwszy parametr jest indeksem do rejestru qubit $ \ket{0}\_f $. Drugi parametr obejmował oba rejestry.
+syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067224"

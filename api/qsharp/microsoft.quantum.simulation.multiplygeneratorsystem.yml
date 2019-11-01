@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorsystem
+name: MultiplyGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Mnoży współczynnik wszystkich warunków w `GeneratorSystem`.
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(mnożnik: Double, generatorSystem: Microsoft. Quantum. Symulacja. GeneratorSystem)'
+  types:
+  - name: Mnożnik
+    summary: Mnożnik na współczynniku.
+    isPrimitive: true
+    uid: Double
+  - name: generatorSystem
+    summary: '`GeneratorSystem`, które mają zostać pomnożone.'
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Microsoft. Quantum. Symulacja. GeneratorSystem
+  types:
+  - summary: '`GeneratorSystem` reprezentujący system ze współczynnikiem `multiplier` większym.'
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065456"

@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip3
+name: Zip3
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Podano trzy tablice, zwraca nową tablicę 3-krotek, tak że każda 3-krotka zawiera element z każdej oryginalnej tablicy.
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
+  types:
+  - name: first
+    summary: Tablica zawierająca wartości dla pierwszego elementu każdej krotki.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: Tablica zawierająca wartości dla drugiego elementu każdej krotki.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: Tablica zawierająca wartości trzeciego elementu każdej krotki.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3)[]
+  types:
+  - summary: Tablica zawierająca 3-krotek formularza `(first[idx], second[idx], third[idx])` dla każdej `idx`. Jeśli trzy tablice nie mają równej długości, dane wyjściowe będą tak długo jak krótsze dane wejściowe.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: Typ pierwszego elementu tablicy.
+- uid: "'T2"
+  summary: Typ drugiego elementu tablicy.
+- uid: "'T3"
+  summary: Typ trzeciego elementu tablicy.
+seeAlso:
+- zip
+- zip4
+ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214184"

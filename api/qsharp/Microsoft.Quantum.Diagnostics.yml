@@ -1,0 +1,82 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.diagnostics
+name: Microsoft. Quantum. Diagnostics
+functions:
+- uid: microsoft.quantum.diagnostics.allequalityfactb
+  summary: Potwierdza, że dwie tablice wartości logicznych są równe.
+- uid: microsoft.quantum.diagnostics.dumpmachine
+  summary: Zrzuca stan bieżącej maszyny docelowej.
+- uid: microsoft.quantum.diagnostics.dumpregister
+  summary: Zrzuca stan bieżącej maszyny docelowej skojarzony z danym qubits.
+- uid: microsoft.quantum.diagnostics.equalityfactb
+  summary: Potwierdza, że klasyczna zmienna logiczna ma oczekiwaną wartość.
+- uid: microsoft.quantum.diagnostics.equalityfactc
+  summary: Potwierdza, że liczba złożona ma oczekiwaną wartość.
+- uid: microsoft.quantum.diagnostics.equalityfactcp
+  summary: Potwierdza, że liczba złożona ma oczekiwaną wartość.
+- uid: microsoft.quantum.diagnostics.equalityfacti
+  summary: Potwierdza, że klasyczna zmienna int ma oczekiwaną wartość.
+- uid: microsoft.quantum.diagnostics.equalityfactl
+  summary: Potwierdza, że klasyczna zmienna BigInt ma oczekiwaną wartość.
+- uid: microsoft.quantum.diagnostics.equalityfactr
+  summary: Potwierdza, że klasyczna zmienna wynikowa ma oczekiwaną wartość.
+- uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  summary: Reprezentuje zastrzeżenie, że klasyczna wartość zmiennoprzecinkowa ma oczekiwaną wartość do odporności absolutnej.
+- uid: microsoft.quantum.diagnostics.fact
+  summary: Deklaruje, że klasyczny warunek ma wartość true.
+- uid: microsoft.quantum.diagnostics.nearequalityfactc
+  summary: Potwierdza, że klasyczna liczba złożona ma oczekiwaną wartość na małą tolerancję 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  summary: Potwierdza, że klasyczna liczba złożona ma oczekiwaną wartość na małą tolerancję 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactd
+  summary: Potwierdza, że klasyczna wartość zmiennoprzecinkowa ma oczekiwaną wartość do małej tolerancji o wartości 1e-10.
+operations:
+- uid: microsoft.quantum.diagnostics.assertallzero
+  summary: Potwierdzenie, że podano qubits wszystkie w $ \ket{0}$ State.
+- uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  summary: Potwierdzenie, że qubits są wszystkie w $ \ket{0}$ stanu do danej tolerancji.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+  summary: >-
+    Dwie operacje, potwierdzają, że działają identycznie dla wszystkich stanów wejściowych.
+
+
+    To potwierdzenie jest implementowane przez sprawdzenie działania operacji we wszystkich stanach formularza $V _0 \otimes... \otimes v_ {n-1} $, gdzie $V _k $ jest jednym z Stanów $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ i $ \ket{i} $ (+ 1 eigenstate-Pauli-operator).
+
+
+    To potwierdzenie używa $n $ qubits i wymaga wielu wywołań operacji, które są porównywane.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+  summary: >-
+    Sprawdza, czy operacja `givenU` jest równa operacji `expectedU` dla danego rozmiaru danych wejściowych przez sprawdzenie działania operacji tylko dla wektorów z podstawy obliczeniowej.
+
+    Jest to niezbędne, ale nie wystarczające, warunek dla równości dwóch unitaries.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+  summary: >-
+    Dwie operacje, potwierdzają, że działają identycznie dla wszystkich stanów wejściowych.
+
+
+    To potwierdzenie jest implementowane za pomocą Choi – Jamiłkowski isomorphism, aby ograniczyć potwierdzenie do jednego z potwierdzeń stanu qubit na dwóch rejestrach Entangled.
+
+    W rezultacie ta operacja wymaga tylko jednego wywołania dla każdej testowanej operacji, ale wymaga dwukrotnego przydzielenia qubits.
+
+    To potwierdzenie może służyć do upewnienia się, że na przykład, że zoptymalizowana wersja operacji działa identycznie z implementacją algorytmie, lub że operacja, która działa w zakresie danych wejściowych innych niż Quantum, zgadza się ze znanymi przypadkami.
+- uid: microsoft.quantum.diagnostics.assertqubit
+  summary: Potwierdza, że `q` qubit znajduje się w oczekiwanej eigenstate operatora Pauli Z.
+- uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+  summary: >-
+    Potwierdza, że element qubit w oczekiwanym stanie.
+
+
+    `expected` reprezentuje złożony wektor, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+
+    Pierwszy element spójnych krotek reprezentuje każdy z $a $, $b $ jest rzeczywistą częścią liczby zespolonej, a druga jest częścią urojoną.
+
+    Ostatni argument definiuje tolerancję, z którą jest wykonywane potwierdzenie.
+- uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  summary: Potwierdza, że `q` qubit znajduje się w oczekiwanej eigenstate operatora Pauli Z do danej tolerancji.
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje przydatne do celów diagnostycznych, w tym operacje potwierdzania i funkcje roszczeń."
+ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056858"

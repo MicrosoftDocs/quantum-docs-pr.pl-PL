@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+name: CompareGreaterThanFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Porównuje dwie stałe numery przechowywane w rejestrach Quantum i kontroluje odbicie w wyniku.
+remarks: Bieżąca implementacja wymaga, aby dwie stałe numery miały tę samą pozycję punktu i taką samą liczbę qubits.
+syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
+  types:
+  - name: fp1
+    summary: Pierwsza stała liczba do porównania.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: Druga liczba stałych punktów do porównania.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Wynik porównania. Zostanie przerzucony, jeśli `fp1 > fp2`.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6a7e87a53d91c928d45719dea8d7179ac347ec70
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221290"

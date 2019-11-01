@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequency
+name: EstimateFrequency
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Mając na celu przygotowanie i pomiar, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Operacja $P $, która przygotowuje dane stanu $ \rho $ w rejestrze wejściowym.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: measurement
+    summary: Operacja $M $ reprezentująca miarę zainteresowania.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: Liczba qubits, na których przygotowanie i pomiar każdego działania.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: Liczba przypadków, w których pomiar ma być wykonywany w celu oszacowania częstotliwości zainteresowania.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: >-
+      Oszacowanie $ \hat{p} $ częstotliwości, z którą $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zwraca `Zero`, uzyskany przy użyciu nieobciążonego dwumianu, szacowania $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, gdzie $n\_{\ pozostała liczba zaobserwowanych wyników to z prze`Zero`.
+
+
+      Jest to szczególnie ważne w przypadku maszyn docelowych, które respektują ograniczenia fizyczne, tak że nie można mierzyć prawdopodobieństwa.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229195"

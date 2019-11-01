@@ -1,0 +1,33 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.characterization
+name: Microsoft. Quantum. charakteryzującą
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje dla właściwości uczenia dla stanów i procesów Quantum, w tym Tomography i oszacowanie fazy."
+operations:
+- uid: microsoft.quantum.characterization.continuousphaseestimationiteration
+  summary: Wykonuje pojedynczą iterację algorytmu szacowania fazy iteracyjnej (kontrolowanej w trybie klasycznym) przy użyciu dowolnych rzeczywistych uprawnień dla jednostki firmy Oracle.
+- uid: microsoft.quantum.characterization.discretephaseestimationiteration
+  summary: Wykonuje pojedynczą iterację algorytmu szacowania fazy iteracyjnej (kontrolowanej w sposób klasyczny) przy użyciu wartości całkowitych dla jednostki firmy Oracle.
+- uid: microsoft.quantum.characterization.estimatefrequency
+  summary: Mając na celu przygotowanie i pomiar, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+- uid: microsoft.quantum.characterization.estimatefrequencya
+  summary: Na podstawie przygotowań, które są przylegające i pomiarowe, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+- uid: microsoft.quantum.characterization.measureallz
+  summary: >-
+    Wspólnie mierzy rejestr qubits na bazie Pauli Z.
+
+
+    Innymi słowy, miara operacji $Z \otimes Z \otimes \cdots \otimes Z $ w danym rejestrze.
+- uid: microsoft.quantum.characterization.measureidentity
+  summary: Mierzy operator tożsamości w rejestrze qubits.
+- uid: microsoft.quantum.characterization.quantumphaseestimation
+  summary: Wykonuje algorytm szacowania fazy Quantum dla danego `U` i `targetState`Oracle, odczytując fazę do rejestru Quantum big-endian.
+- uid: microsoft.quantum.characterization.robustphaseestimation
+  summary: Wykonuje niezawodny nieiteracyjny algorytm szacowania fazy Quantum dla danego `U` i eigenstate firmy Oracle, a także zapewnia jednolite oszacowanie fazy z skalowaniem wartości Heisenberg.
+- uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
+  summary: Wykonuje pojedynczy qubit proces pomiaru Tomography w bazie Pauli, z uwzględnieniem konkretnego kanału zainteresowania.
+ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056945"

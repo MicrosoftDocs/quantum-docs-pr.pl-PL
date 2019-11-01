@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. Quantum. Arrays
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje do tworzenia tablic danych i manipulowania nimi."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, i sprawdza, czy wszystkie elementy tablicy spełniają predykat.
+- uid: microsoft.quantum.arrays.any
+  summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, sprawdza, czy co najmniej jeden element tablicy spełnia predykat.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Tworzy tablicę o podaną długość ze wszystkimi elementami równymi podaną wartością.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: Dana tablica zwraca nową tablicę zawierającą elementy oryginalnej tablicy wraz z indeksami każdego elementu.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Zwraca tablicę zawierającą elementy innej tablicy, z wyłączeniem elementów na danej liście indeksów.
+- uid: microsoft.quantum.arrays.filtered
+  summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca tablicę, która składa się z tych elementów, które spełniają predykat.
+- uid: microsoft.quantum.arrays.fold
+  summary: Iteruje funkcję `f` za pomocą `array`tablicy, zwracając `f(f(f(initialState, array[0]), array[1]), ...)`.
+- uid: microsoft.quantum.arrays.head
+  summary: Zwraca pierwszy element tablicy.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Zwraca pierwszy indeks pierwszego elementu w tablicy, który spełnia określony predykat. Jeśli taki element nie istnieje, zwraca wartość-1.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: Dana tablica zwraca zakres przez indeksy tej tablicy, odpowiedni do użycia w pętli for.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: Dana tablica zwraca funkcję, która zwraca elementy tej tablicy.
+- uid: microsoft.quantum.arrays.mapped
+  summary: Dana tablica i funkcja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w funkcji.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: Dana tablica i funkcja, która jest zdefiniowana dla indeksowanych elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w funkcji.
+- uid: microsoft.quantum.arrays.most
+  summary: Tworzy tablicę, która jest równa tablicy wejściowej, z tą różnicą, że ostatni element tablicy jest porzucany.
+- uid: microsoft.quantum.arrays.padded
+  summary: Zwraca tablicę uzupełnioną o określone wartości do określonej długości.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Dzieli tablicę na wiele części.
+- uid: microsoft.quantum.arrays.rest
+  summary: Tworzy tablicę, która jest równa tablicy wejściowej, z tą różnicą, że pierwszy element tablicy jest porzucany.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Utwórz tablicę zawierającą te same elementy co Tablica wejściowa, ale w odwrotnej kolejności.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Pobierz tablicę liczb całkowitych w danym interwale.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Pobierz tablicę liczb całkowitych w danym interwale.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Pobiera tablicę i listę lokalizacji i tworzy nową tablicę utworzoną z elementów oryginalnej tablicy, które pasują do określonych lokalizacji.
+- uid: microsoft.quantum.arrays.tail
+  summary: Zwraca ostatni element tablicy.
+- uid: microsoft.quantum.arrays.zip
+  summary: Dana dwie tablice zwraca nową tablicę par, w taki sposób, że każda para zawiera element z każdej oryginalnej tablicy.
+- uid: microsoft.quantum.arrays.zip3
+  summary: Podano trzy tablice, zwraca nową tablicę 3-krotek, tak że każda 3-krotka zawiera element z każdej oryginalnej tablicy.
+- uid: microsoft.quantum.arrays.zip4
+  summary: W przypadku czterech tablic funkcja zwraca nową tablicę składającą się z 4 krotek, tak że każda 4-krotka zawiera element z każdej oryginalnej tablicy.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: Dana tablica i operacja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w ramach operacji.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057105"

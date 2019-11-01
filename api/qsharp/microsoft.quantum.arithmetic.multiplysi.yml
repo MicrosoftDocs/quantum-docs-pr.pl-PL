@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplysi
+name: MultiplySI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Pomnóż `xs` ze znakami całkowitymi przez zapisaną liczbę całkowitą `ys` i Zapisz wynik w `result`, który musi być początkowo zerem.
+syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: n-bitowy multiplicand (SignedLittleEndian)
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: ys
+    summary: mnożnik n-bitowy (SignedLittleEndian)
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: result
+    summary: wynik 2n-bitowy (SignedLittleEndian) musi znajdować się w stanie $ \ket{0}$.
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 154e870416e47547a115fcc5533d187b3ed67213
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214813"

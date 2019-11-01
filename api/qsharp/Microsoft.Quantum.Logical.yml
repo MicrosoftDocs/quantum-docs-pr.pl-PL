@@ -1,0 +1,73 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.logical
+name: Microsoft. Quantum. Logical
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Zawiera funkcje do pracy z wyrażeniami logicznymi i logiką logiczną."
+functions:
+- uid: microsoft.quantum.logical.and
+  summary: Zwraca wartość logiczną koniunkcji dwóch wartości.
+- uid: microsoft.quantum.logical.conditioned
+  summary: Zwraca jedną z dwóch wartości, w zależności od wartości warunku logicznego.
+- uid: microsoft.quantum.logical.equalb
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.equalc
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.equalcp
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.equald
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.equali
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.equall
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.equalr
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+- uid: microsoft.quantum.logical.greaterthand
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa niż inna liczba.
+- uid: microsoft.quantum.logical.greaterthani
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa niż inna liczba.
+- uid: microsoft.quantum.logical.greaterthanl
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa niż inna liczba.
+- uid: microsoft.quantum.logical.greaterthanorequald
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa lub równa innej liczbie.
+- uid: microsoft.quantum.logical.greaterthanorequali
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa lub równa innej liczbie.
+- uid: microsoft.quantum.logical.greaterthanorequall
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa lub równa innej liczbie.
+- uid: microsoft.quantum.logical.lessthand
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza od innej liczby.
+- uid: microsoft.quantum.logical.lessthani
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza od innej liczby.
+- uid: microsoft.quantum.logical.lessthanl
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza od innej liczby.
+- uid: microsoft.quantum.logical.lessthanorequald
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza lub równa innej liczbie.
+- uid: microsoft.quantum.logical.lessthanorequali
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza lub równa innej liczbie.
+- uid: microsoft.quantum.logical.lessthanorequall
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza lub równa innej liczbie.
+- uid: microsoft.quantum.logical.not
+  summary: Zwraca wartość logiczną negacji wartości.
+- uid: microsoft.quantum.logical.notequalb
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notequalc
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notequalcp
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notequald
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notequali
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notequall
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notequalr
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.or
+  summary: Zwraca wartość logiczną, która powoduje odłączenie dwóch wartości.
+- uid: microsoft.quantum.logical.xor
+  summary: Zwraca wartość logiczną bez odłączenia dwóch wartości.
+ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056277"

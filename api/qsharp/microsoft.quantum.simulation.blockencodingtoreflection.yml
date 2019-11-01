@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencodingtoreflection
+name: BlockEncodingToReflection
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Konwertuje `BlockEncoding` na odpowiedni `BLockEncodingReflection`.
+
+
+  Oznacza to, że w przypadku `BlockEncoding` jednostkowego $U $, który koduje pewne operatory $H $ zainteresowania, konwertuje ją na `BlockEncodingReflection` $U "$, który koduje ten sam operator, ale również spełnia $U" ^ \dagger = U "$.
+
+  Zwiększa to rozmiar pomocniczego rejestru $U $ przez jeden qubit.
+remarks: Zwiększa to rozmiar pomocniczego rejestru $U $ przez jeden qubit.
+syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
+references: >-
+  - Hamiltonian Simulation by Qubitization
+    Guang Hao Low, Isaac L. Chuang
+    https://arxiv.org/abs/1610.06546
+input:
+  content: '(blockEncoding: Microsoft. Quantum. Symulacja. BlockEncoding)'
+  types:
+  - name: blockEncoding
+    summary: '`BlockEncoding` jednostki $U $ do przekonwertowania na odbicie.'
+    uid: microsoft.quantum.simulation.blockencoding
+output:
+  content: Microsoft. Quantum. Symulacja. BlockEncodingReflection
+  types:
+  - summary: $U jednostkowa "$ działa wspólnie w przypadku rejestrów `a` i `s` te, które zablokują $H $, i spełniają $U" ^ \dagger = U "$.
+    uid: microsoft.quantum.simulation.blockencodingreflection
+seeAlso:
+- microsoft.quantum.canon.blockencoding
+- microsoft.quantum.canon.blockencodingreflection
+ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065626"

@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+name: JordanWignerOptimizedFermionEvolutionSet
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w Pauli.
+syntax: 'function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionSet'
+input:
+  content: '(parityQubit : Qubit)'
+  types:
+  - name: parityQubit
+    summary: Qubit, który określa znak ewolucji czasu.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft. Quantum. Symulacja. EvolutionSet
+  types:
+  - summary: '`EvolutionSet`, który mapuje `GeneratorIndex` dla podstawy JWOptimized na element "EvolutionUnitary".'
+    uid: microsoft.quantum.simulation.evolutionset
+ms.openlocfilehash: 7d39228c91995e38423e2b3b5894952ab3bfa533
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066204"

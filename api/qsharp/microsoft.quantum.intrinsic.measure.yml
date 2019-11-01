@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.measure
+name: Measure
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Wykonuje wspólne pomiary co najmniej jednego qubits w określonych bazach Pauli.
+
+
+  Wynik danych wyjściowych jest podawany przez dystrybucję: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes p_ {N-1} \right) \mid | \psi}, \end{align}, gdzie $P _i $ to $i $ ty elementu @no__ t_0_ i gdzie $N = \texttt{Length} (\texttt{Bases}) $.
+
+  Oznacza to, że pomiar zwraca `Result` $d $ w taki sposób, że eigenvalue zaobserwowanego efektu pomiarowego wynosi $ (-1) ^ d $.
+remarks: Jeśli tablica podstawa i tablica qubit są różne długości, operacja zakończy się niepowodzeniem.
+syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[])'
+  types:
+  - name: bases
+    summary: Tablica wartości qubit Pauli, wskazujących czynniki iloczynu dwubajtowego na każdym qubit.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Rejestr qubits, który ma być mierzony.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: '`Zero` Jeśli zaobserwowano eigenvalue $ + $1 i `One`, jeśli zaobserwowano eigenvalue $-$1.'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234108"

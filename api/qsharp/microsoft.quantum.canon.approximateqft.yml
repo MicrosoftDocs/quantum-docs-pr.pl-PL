@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.approximateqft
+name: ApproximateQFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Zastosuj przybliżoną transformację Quantum Fouriera (AQFT) do rejestru Quantum.
+remarks: >-
+  AQFT wymaga bram do rotacji z 2π/2K i Hadamard.
+
+
+  Założono, że dane wejściowe i wyjściowe są kodowane w kodowaniu big endian.
+syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+references: >-
+  - [*M. Roetteler, th. Beth*, Zastosuj. algebry aparatu. gmin. Comput. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+
+  - [*D. Coppersmith* ArXiv: Quant-pH/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
+input:
+  content: '(a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: a
+    summary: >-
+      Przybliżony parametr, który określa, na którym poziomie kontrolowane są obroty Z osi Z, które występują w obwodzie QFT.
+
+
+      Parametr przybliżenia a określa poziom oczyszczania obrotów Z, czyli ∈ {0.. n} i wszystkie rotacje Z 2π/2K, gdzie k > a są usuwane z obwodu QFT. Wiadomo, że w przypadku k > = log ₂ (n) + log ₂ (1/ε) + 3 jeden może być powiązany | | QFT-AQFT | | < ε.
+    isPrimitive: true
+    uid: Int
+  - name: qs
+    summary: Rejestr Quantum o n qubits, do którego jest stosowana Przybliżona transformacja Quantum Fouriera.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212535"

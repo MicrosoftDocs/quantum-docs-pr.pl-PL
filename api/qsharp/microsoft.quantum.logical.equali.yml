@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equali
+name: EqualI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
+remarks: >-
+  Następujące elementy są równoważne:
+
+
+  ```Q#
+
+  let cond = a == b;
+
+  let cond = EqualI(a, b);
+
+  ```
+syntax: 'function EqualI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: Pierwsza wartość do porównania.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: Druga wartość do porównania.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`true` if i tylko wtedy, gdy `a` jest równa `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 34e1207e0bf4da6168d1f21b41573b3414063dc6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233139"

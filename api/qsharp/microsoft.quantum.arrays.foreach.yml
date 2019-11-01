@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.foreach
+name: ForEach
+type: operation
+namespace: Microsoft.Quantum.Arrays
+summary: Dana tablica i operacja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w ramach operacji.
+remarks: "Operacja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i operację `action : 'T -> 'U` możemy zmapować elementy tablicy i utworzyć nową tablicę typu `'U[]`."
+syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(action : ('T => 'U), array : 'T[])"
+  types:
+  - name: action
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: Tablica elementów na `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: "`'U[]` tablicy elementów, które są mapowane przez operację `action`."
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Typ elementów `array`.
+- uid: "'U"
+  summary: Typ wyniku operacji `action`.
+ms.openlocfilehash: f97e01504142681f34772cc84d6e598507d7d734
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218332"
