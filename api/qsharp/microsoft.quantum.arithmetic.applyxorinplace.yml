@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyxorinplace
+name: ApplyXorInPlace
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Stosuje `X` operacji do qubits w rejestrze little-endian w oparciu o 1 bity w postaci liczby całkowitej.
+
+
+  Poinformuj nas o tym, `value` przez i pozwól y być liczbą całkowitą bez znaku zakodowaną w `target`, a następnie `InPlaceXorLE` wykonuje operację określoną przez następującą mapę: $ \ket{y}\rightarrow \ket{y\oplus a} $, gdzie $ \oplus $ jest operatorem wyłącznym or.
+syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    summary: Liczba całkowita, która przyjmuje wartość nieujemną.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Rejestr Quantum służący do przechowywania `value` w kodowaniu little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: b37de7ed7e838089fe0c3bce00c8a0e9b222c43f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221647"

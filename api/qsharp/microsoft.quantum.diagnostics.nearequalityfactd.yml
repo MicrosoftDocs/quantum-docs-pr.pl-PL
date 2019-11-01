@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactd
+name: NearEqualityFactD
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Potwierdza, że klasyczna wartość zmiennoprzecinkowa ma oczekiwaną wartość do małej tolerancji o wartości 1e-10.
+remarks: Jest to równoważne <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> z tolerancją stałeą $10 ^{-10}$.
+syntax: 'function NearEqualityFactD (actual : Double, expected : Double) : Unit'
+input:
+  content: '(actual : Double, expected : Double)'
+  types:
+  - name: actual
+    summary: Liczba, która ma zostać sprawdzona.
+    isPrimitive: true
+    uid: Double
+  - name: expected
+    summary: Oczekiwana wartość.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 9bbf1ced753b2fde5a3f8fb20417053a47866ada
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230504"

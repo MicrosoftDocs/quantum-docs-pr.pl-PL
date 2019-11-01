@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.recovercss
+name: RecoverCSS
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez typ `CSS`.
+syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
+input:
+  content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  types:
+  - name: code
+    summary: Błąd w kodzie CSS Quantum — poprawianie kodu w formie `CSS` Typ opisuje kodowanie i dekodowanie danych Quantum oraz sposób mierzenia błędów Syndromes.
+    uid: microsoft.quantum.errorcorrection.css
+  - name: fnX
+    summary: '`RecoveryFn`, który mapuje każdy $X $ Error Syndrome na operacje `Pauli[]`, które korygują wykryte błędy.'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+  - name: fnZ
+    summary: '`RecoveryFn`, który mapuje każdy $Z $ Error Syndrome na operacje `Pauli[]`, które korygują wykryte błędy.'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+  - name: logicalRegister
+    summary: Tablica qubits, w której jest zdefiniowany kod stabilizatorów.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.css
+- microsoft.quantum.canon.recoveryfn
+- microsoft.quantum.canon.logicalregister
+ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220270"

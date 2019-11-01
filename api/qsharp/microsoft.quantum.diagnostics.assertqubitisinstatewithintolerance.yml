@@ -1,0 +1,88 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+name: AssertQubitIsInStateWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  Potwierdza, że element qubit w oczekiwanym stanie.
+
+
+  `expected` reprezentuje złożony wektor, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+
+  Pierwszy element spójnych krotek reprezentuje każdy z $a $, $b $ jest rzeczywistą częścią liczby zespolonej, a druga jest częścią urojoną.
+
+  Ostatni argument definiuje tolerancję, z którą jest wykonywane potwierdzenie.
+remarks: >-
+  Następujący kod Mathematica może służyć do weryfikowania wyrażeń dla mi, MX, my, MZ:
+
+
+  ```mathematica
+
+  {Id, X, Y, Z} = Table[PauliMatrix[k], {k, 0, 3}];
+
+  st = {{ reA + I imA }, { reB + I imB} };
+
+  M = st . ConjugateTranspose[st];
+
+  mx = Tr[M.X] // ComplexExpand;
+
+  my = Tr[M.Y] // ComplexExpand;
+
+  mz = Tr[M.Z] // ComplexExpand;
+
+  mi = Tr[M.Id] // ComplexExpand;
+
+  2 m == Id mi + X mx + Z mz + Y my // ComplexExpand // Simplify
+
+  ```
+
+
+  Tolerancja jest $L\_{\infty} $ odległość między 3 wymiarowymi wektorami rzeczywistymi (x ₂, x ₃, x ₄) zdefiniowanymi przez $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ i Real Vector (Y ₂ , y ₃, y ₄) zdefiniowane przez ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z, gdzie ρ jest matrycą gęstości odpowiadającą stanowi rejestru.
+
+  Jest to tylko prawdziwe w założeniu, że TR (ρ) i TR (| ψ ⟩ ⟨ ψ |) są zarówno 1 (np. x ₁ = 1/2, y ₁ = 1/2).
+
+  Jeśli tak się nie dzieje, funkcja potwierdza, że odległość l ∞ między (x ₂-x ₁, x ₃-x ₁, x ₄-x ₁, x ₄ + x ₁) i (y ₂-y ₁, y ₃-y ₁, y ₄-y ₁, y ₄ + y ₁) jest mniejsza niż parametr tolerancji.
+examples: >-
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+      // Both qubits are initialized as |0〉: a=(1 + 0*i), b=(0 + 0*i)
+      AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[0], 1e-5);
+      AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[1], 1e-5);
+      Y(qubits[1]);
+      // Y |0〉 = i |1〉: a=(0 + 0*i), b=(0 + 1*i)
+      AssertQubitIsInStateWithinTolerance((Complex(0., 0.), Complex(0., 1.)), qubits[1], 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertQubitIsInStateWithinTolerance (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: Oczekiwane są odpowiednio złożone amplitudy dla $ \ket{0}$ i $ \ket{1}$.
+    types:
+    - uid: microsoft.quantum.math.complex
+    - uid: microsoft.quantum.math.complex
+  - name: register
+    summary: Qubit, którego stan ma zostać potwierdzony. Należy zauważyć, że ta qubit jest traktowana jako oddzielna od innych przyznanych qubits, a nie Entangled.
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: >-
+      Tolerancja dodatku, według którego rzeczywiste Amplitude mogą odbiegać od oczekiwanego.
+
+      Aby uzyskać szczegółowe informacje, zobacz uwagi poniżej.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227121"

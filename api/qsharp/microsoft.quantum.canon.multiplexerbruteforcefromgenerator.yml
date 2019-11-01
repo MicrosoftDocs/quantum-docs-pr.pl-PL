@@ -1,0 +1,65 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+name: MultiplexerBruteForceFromGenerator
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Zwraca przemnożoną operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+syntax: 'function MultiplexerBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl)))) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)'
+input:
+  content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
+  types:
+  - name: unitaryGenerator
+    summary: Krotka, w której pierwszy element `Int` jest liczbą unitaries $N $, a drugi element `(Int -> ('T => () is Adj + Ctl))` jest funkcją, która przyjmuje liczbę całkowitą $j $ w $ [0, N-1] $ i wyprowadza operację jednostkową $V _j $.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - isFunction: true
+      input:
+        types:
+        - isPrimitive: true
+          uid: Int
+      output:
+        types:
+        - isOperation: true
+          input:
+            types:
+            - isArray: true
+              isPrimitive: true
+              uid: Qubit
+          output:
+            types:
+            - isPrimitive: true
+              uid: Unit
+          functors:
+          - Adjoint
+          - Controlled
+output:
+  content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
+  types:
+  - summary: Przemnożona przez siebie operacja jednostkowa $U $, która stosuje unitaries opisane przez `unitaryGenerator`.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+ms.openlocfilehash: 3a5fc9e4b21f14833f28513ad66baa20a4df3de4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222735"

@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applydiagonalunitary
+name: ApplyDiagonalUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje tablicę złożonych faz do numerycznych Stanów rejestru qubits.
+
+
+  Oznacza to, że implementuje ona ukośną operację jednostkową $U $, która stosuje złożoną fazę $e ^ {i \theta_j} $ na $n $-qubit Number State $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ KET {j} \ bra {j} $.
+remarks: '`coefficients` zostaną uzupełnione elementami $ \theta_j = $0,0, jeśli określono mniej niż $2 ^ n $.'
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: '- Synteza obwodów logiki Quantum Vivek V. Shende, Stephen S. Bullock, Igora L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: coefficients
+    summary: Tablica do $2 ^ n $ współczynniki $ \theta_j $. Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 80247438297c9d3a4f7d582f659a50f5d48c1335
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217686"

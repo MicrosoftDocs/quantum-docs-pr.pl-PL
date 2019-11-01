@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.carry
+name: Carry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Implementuje bramę przenoszące odwracalnie. Mając na celu zakodowany bit w qubit `carryIn` i dwie summand bity zakodowane w `summand1` i `summand2`, program obliczy bitowe XOR dla `carryIn`, `summand1` i `summand2` w `summand2` qubit, a ich przeprowadzenie zostanie XORed do `carryOut`qubit.
+syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
+  types:
+  - name: carryIn
+    summary: Qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: Pierwszy summand qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: Druga summand qubit, jest zastępowana niższą bitową sumą `summand1` i `summand2`.
+    isPrimitive: true
+    uid: Qubit
+  - name: carryOut
+    summary: Przeprowadzenie qubit, będzie XORed z wyższą bitową sumą.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221341"

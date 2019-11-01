@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
+name: OptimizedBEXY
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1}\_PR ^ {z}\_p) Z\_{p-1}... Z_0 $ qubits $0.. p $ warunkuje indeks $z \In\{0, 1\}$ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_z PR ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ psi} \end{align} $ $
+syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+references: '- Kodowanie elektronicznych widm w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Neven https://arxiv.org/abs/1805.03662'
+input:
+  content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: pauliBasis
+    summary: Gdy qubit jest w stanie $ \ket{0}$, $X $ jest zastosowany. Gdy jest w stanie $ \ket{1}$, $Y $ jest zastosowany.
+    isPrimitive: true
+    uid: Qubit
+  - name: indexRegister
+    summary: Stan $ \ket{p} $ tej rejestracji określa qubit, na których zastosowano $X $ lub $Y $.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: Rejestr elementu qubits, na którym są stosowane operatory Pauli.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228464"
