@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.generatorsystem
+name: generatorSystem
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Reprezentuje kolekcję `GeneratorIndex`es.
+
+
+  Wykonujemy iterację tej kolekcji przy użyciu jednego indeksu Integer, a rozmiar kolekcji jest uznawany za znany.
+remarks: Wystąpienia `GeneratorSystem` można łatwo zdefiniować przy użyciu funkcji <xref:microsoft.quantum.arrays.lookupfunction>.
+syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
+seeAlso:
+- microsoft.quantum.canon.lookupfunction
+ms.openlocfilehash: 61312eb42da1e9bb67b5d2a79350c39e23aa0dac
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067020"

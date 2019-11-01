@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.fixedpoint
+name: FixedPoint
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: Reprezentuje rejestr qubits kodowania o stałej liczbie punktów. Składa się z liczby całkowitej, która jest równa liczbie qubits z lewej strony punktu binarnego, czyli qubits wagi większej lub równej 1 oraz rejestr Quantum.
+syntax: newtype FixedPoint = (Int, Qubit[]);
+ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219080"

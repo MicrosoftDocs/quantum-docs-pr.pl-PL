@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.curriedop
+name: CurriedOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Zwraca wersję rozwinięte operacji dla dwóch danych wejściowych.
+
+
+  Oznacza to, że w wyniku operacji z dwoma danymi wejściowymi ta funkcja stosuje curry isomorphism $f (x, y) \equiv f (x) (y) $, aby zwrócić operację jednego danych wejściowych, która zwraca operację jednego danych wejściowych.
+remarks: >-
+  Następujące elementy są równoważne:
+
+
+  ```qsharp
+
+  op(x, y);
+
+
+  let curried = CurriedOp(op);
+
+  let partial = curried(x);
+
+  partial(y);
+
+  ```
+syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
+input:
+  content: "(op: ((t, ' U) = > Unit))"
+  types:
+  - name: op
+    summary: Operacja, której dane wejściowe to para.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: (T-> ("U = Jednostka >))
+  types:
+  - summary: Operacja, która akceptuje pierwszy element pary i zwraca operację, która akceptuje jako dane wejściowe drugiego elementu danych wejściowych pierwotnej operacji.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Typ pierwszego składnika funkcji zdefiniowanej w parach.
+- uid: "'U"
+  summary: Typ drugiego składnika funkcji zdefiniowanej w parach.
+ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067904"

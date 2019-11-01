@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowca
+name: OperationPowCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Wywołuje operację do potęgi.
+
+  Modyfikator `A` wskazuje, że operacja jest sterowana i sąsiadująca.
+
+
+  Oznacza to, że w wyniku operacji reprezentującej bramę $U $, zwraca nową operację $U ^ m $ dla $m potęgi $.
+syntax: "function OperationPowCA (oracle : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
+input:
+  content: "(oracle : ('T => Unit is Ctl + Adj), power : Int)"
+  types:
+  - name: oracle
+    summary: Operacja $U $ reprezentująca bramę do powtórzenia.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: power
+    summary: Liczba powtórzeń $U $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Ctl + Adj)
+  types:
+  - summary: Nowa operacja reprezentująca $U ^ m $, gdzie $m = \texttt{Power} $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Typ operacji, która ma być włączona.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: d671ba738ec1d8d24b6fe956230ab0af60dbbda1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211719"

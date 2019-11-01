@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementphasebyinteger
+name: IncrementPhaseByInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Zwiększa niepodpisany rejestr Quantum przez klasyczną liczbę całkowitą, używając rotacji faz.
+
+
+  Załóżmy, że `target` koduje liczbę całkowitą bez znaku $x $ w kodowaniu little-endian i że `increment` jest równa $a $.
+
+  Następnie ta operacja implementuje moduł $ \ket{x} \mapsto \ket{x + a} $, w którym jest wykonywane dzielenie modulo $2 ^ n $, gdzie $n = \texttt{Length (target!)} $.
+remarks: >-
+  Należy pamiętać, że uproszczono obwód, ponieważ przyrost jest klasyczną stałą, a nie rejestrem Quantum.
+
+
+  Zobacz rysunek na [stronie 6 of ArXiv: Quant-pH/0008033v1](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6) dla diagramu obwodu i wyjaśnienie.
+syntax: 'operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+references: '- [*Thomas G. Draper*, ArXiv: Quant-pH/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: increment
+    summary: Liczba całkowita, przez którą `target` jest zwiększana.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Rejestr Quantum zarejestruje liczbę całkowitą bez znaku przy użyciu kodowania little-endian na zasadzie podwójnej (QFT).
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerbe
+- incrementbyintegerle
+ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219046"

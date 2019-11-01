@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexpauli
+name: MultiplexPauli
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje obrót Pauli na tablicy qubits.
+
+
+  W ten sposób stosowana jest przemnożona operacja jednostkowa, $U $, która dokonuje rotacji według kąta $ \theta_j $ o pojedynczym operatorze Pauli $P $, gdy jest to kontrolowane przez $n $-qubit numer stanu $ \ket{j} $.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+remarks: '`coefficients` zostaną uzupełnione elementami $ \theta_j = $0,0, jeśli określono mniej niż $2 ^ n $.'
+syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+input:
+  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: Tablica do $2 ^ n $ współczynniki $ \theta_j $. Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: pauli
+    summary: Operator Pauli $P $, który określa oś obrotu.
+    isPrimitive: true
+    uid: Pauli
+  - name: control
+    summary: $n $-qubit kontroli rejestru, który koduje liczbę Stany $ \ket{j} $ w formacie little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Pojedynczy rejestr qubit, który jest obrócony przez $e ^ {i P \theta_j} $.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: efc5e1cef8574528eeb124100c4d5f875fc2e0e3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227750"

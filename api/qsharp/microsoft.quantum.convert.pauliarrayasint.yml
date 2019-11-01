@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.pauliarrayasint
+name: PauliArrayAsInt
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Koduje wieloqubitowy operator Pauli reprezentowany jako tablica operatorów typu Single-qubit Pauli w postaci liczby całkowitej.
+remarks: >-
+  Każdy operator Pauli można zakodować przy użyciu dwóch bitów: $ $ \begin{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
+
+  \end{align} $ $
+
+
+  Dana tablica operatorów Pauli `[P0, ..., Pn]`, funkcja ta zwraca liczbę całkowitą z rozszerzeniem binarnym, łącząc mapowania każdego operatora Pauli w `bits(Pn) ... bits(P0)`kolejności big-endian.
+syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
+input:
+  content: '(paulis : Pauli[])'
+  types:
+  - name: paulis
+    summary: Tablica z co najwyżej 31 operatorami jednoqubitowych Pauli.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Int
+  types:
+  - summary: Liczba całkowita, która jednoznacznie identyfikuje `paulis`, zgodnie z poniższym opisem.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230759"

@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.or
+name: Or
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Zwraca wartość logiczną, która powoduje odłączenie dwóch wartości.
+remarks: >-
+  W przeciwieństwie do operatora `or` ta funkcja nie jest krótka, tak aby oba dane wejściowe były w pełni oceniane.
+
+
+  W przypadku zachowania do krótkiego obwodu następujące elementy są równoważne:
+
+
+  ```Q#
+
+  let x = a or b;
+
+  let x = Or(a, b);
+
+  ```
+syntax: 'function Or (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: Pierwsza wartość do uwzględnienia.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: Druga wartość do uwzględnienia.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true`, jeśli i tylko wtedy, gdy `a` lub `b` są `true`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235162"

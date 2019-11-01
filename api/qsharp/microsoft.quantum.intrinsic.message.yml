@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.message
+name: Message
+type: function
+namespace: Microsoft.Quantum.Intrinsic
+summary: Rejestruje komunikat.
+remarks: Określone zachowanie tej funkcji jest zależne od symulatora, ale w większości przypadków dany komunikat zostanie zapisany w konsoli programu.
+syntax: 'function Message (msg : String) : Unit'
+input:
+  content: '(msg : String)'
+  types:
+  - name: msg
+    summary: Komunikat, który ma zostać zgłoszony.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 90ca6c1a059a327da86e81de70f1f6bfc34f8785
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234057"

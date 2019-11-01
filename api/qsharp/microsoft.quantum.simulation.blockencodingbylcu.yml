@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencodingbylcu
+name: BlockEncodingByLCU
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Koduje operatora zainteresowania w `BlockEncoding`.
+
+
+  To konstruuje `BlockEncoding` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \sum_{j} | \alpha_j | U_j $ interes jest liniową kombinacją unitaries. Typowo, $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+remarks: Ta `BlockEncoding` implementacja udostępnia właściwości `BlockEncodingReflection`.
+syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
+input:
+  content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
+  types:
+  - name: statePreparation
+    summary: Jednostkowy $P $, który przygotowuje jakiś stan docelowy.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: selector
+    summary: Jednostkowy $V $, który koduje składnik unitaries $H $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'S"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: (('T, 'S) => Unit is Adj + Ctl)
+  types:
+  - summary: Jednostkowe $U $ działające wspólnie z rejestrami `a` i `s` te, które zablokują $H $, i spełniają $U ^ \dagger = U $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'S"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- microsoft.quantum.canon.blockencoding
+- microsoft.quantum.canon.blockencodingreflection
+ms.openlocfilehash: b2a107a8497e6fdd24f5d6511d61541ce932ec6c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227869"

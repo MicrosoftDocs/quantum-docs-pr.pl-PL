@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+name: ExpandedCoefficients
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: Rozwija kompaktową reprezentację współczynników Jordania-Wigner w celu uzyskania mapowania jeden-do-jednego między tymi i Paulimi terminami.
+syntax: 'function ExpandedCoefficients (coeff : Double[], termType : Int) : Double[]'
+input:
+  content: '(coeff : Double[], termType : Int)'
+  types:
+  - name: coeff
+    summary: Tablica współczynników, jako przeczytana z struktury danych Jordania-Wigner hamiltonian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: termType
+    summary: Typ okresu Jordanii-Wigner.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: Rozwinięte tablice współczynników, jeden na termin Pauli.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 1eb141b0410e8d4cccaef0001bfec67fecf12831
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227512"

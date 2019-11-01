@@ -1,0 +1,188 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.intrinsic
+name: Microsoft. Quantum. wewnętrzna
+functions:
+- uid: microsoft.quantum.intrinsic.message
+  summary: Rejestruje komunikat.
+operations:
+- uid: microsoft.quantum.intrinsic.assert
+  summary: Potwierdzenia, które mierzą podaną qubits w danej Pauli, będą mieć zawsze określony wynik.
+- uid: microsoft.quantum.intrinsic.assertprob
+  summary: Potwierdzenia, które mierzą podaną qubits w danej Pauli, będą miały wynik z określonym prawdopodobieństwem, w granicach tolerancji.
+- uid: microsoft.quantum.intrinsic.ccnot
+  summary: Stosuje bramę z kontrolą podwójną — nie (CCNOT) do trzech qubits.
+- uid: microsoft.quantum.intrinsic.cnot
+  summary: >-
+    Stosuje bramę sterowaną niezależną (CNOT) do pary qubits.
+
+
+    \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+
+
+    gdzie wiersze i kolumny są uporządkowane jak w przewodniku koncepcji Quantum.
+- uid: microsoft.quantum.intrinsic.exp
+  summary: >-
+    Stosuje wykładniczą qubit wieloskładnikowego operatora Pauli.
+
+
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots p_ {N-1}]}, \end{align}, gdzie $P _i $ to $i $ th elementu `paulis`i gdzie $N = $`Length(paulis)`.
+- uid: microsoft.quantum.intrinsic.expfrac
+  summary: >-
+    Stosuje wykładniczą qubit wieloskładnikowego operatora Pauli z argumentem podanym przez ułamek dyadic.
+
+
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots p_ {N-1}]/2 ^ N}, \end{align}, gdzie $P _i $ to $i $ th elementu `paulis`i gdzie $N = $`Length(paulis)`.
+- uid: microsoft.quantum.intrinsic.h
+  summary: >-
+    Stosuje transformację Hadamard do jednego qubit.
+
+
+    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.i
+  summary: Wykonuje operację Identity (No-op) w jednej qubit.
+- uid: microsoft.quantum.intrinsic.m
+  summary: >-
+    Wykonuje pomiary jednego qubit w bazie Pauli $Z $.
+
+
+    Wynik wyjściowy jest podawany przez dystrybucję \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.measure
+  summary: >-
+    Wykonuje wspólne pomiary co najmniej jednego qubits w określonych bazach Pauli.
+
+
+    Wynik danych wyjściowych jest podawany przez dystrybucję: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes p_ {N-1} \right) \mid | \psi}, \end{align}, gdzie $P _i $ to $i $ ty elementu @no__ t_0_ i gdzie $N = \texttt{Length} (\texttt{Bases}) $.
+
+    Oznacza to, że pomiar zwraca `Result` $d $ w taki sposób, że eigenvalue zaobserwowanego efektu pomiarowego wynosi $ (-1) ^ d $.
+- uid: microsoft.quantum.intrinsic.r
+  summary: >-
+    Stosuje obrót o podaną oś Pauli.
+
+
+    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \sigma_{\mu}/2}, \end{align} gdzie $ \mu \In \{I, X, Y, Z\}$.
+- uid: microsoft.quantum.intrinsic.r1
+  summary: >-
+    Stosuje obrót o stanie $ \ket{1}$ o danym kącie.
+
+
+    \begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.r1frac
+  summary: >-
+    Stosuje obrót o stanie $ \ket{1}$ o kąt określony jako ułamek dyadic.
+
+
+    \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
+
+    \end{align}
+
+
+    > [!WARNING]
+
+    > Ta operacja używa **przeciwległej** Konwencji podpisywania z @"microsoft.quantum.intrinsic.r"i nie obejmuje współczynnika $1/2 $ dołączonego przez @"microsoft.quantum.intrinsic.r1".
+- uid: microsoft.quantum.intrinsic.random
+  summary: >-
+    Operacja Losowa pobiera tablicę podwajania jako dane wejściowe i zwraca losowo wybrany indeks do tablicy jako `Int`.
+
+    Prawdopodobieństwo wyboru określonego indeksu jest proporcjonalne do wartości elementu tablicy w tym indeksie.
+
+    Elementy tablicy, które są równe zeru, są ignorowane, a ich indeksy nigdy nie są zwracane. Jeśli którykolwiek element tablicy jest mniejszy od zera lub żaden element tablicy nie jest większy niż zero, operacja kończy się niepowodzeniem.
+- uid: microsoft.quantum.intrinsic.reset
+  summary: Podano jeden qubit, mierzy go i zapewnia, że znajduje się w stanie | 0 ⟩, aby można go było bezpiecznie zwolnić.
+- uid: microsoft.quantum.intrinsic.resetall
+  summary: Podano tablicę qubits, zmierzyć ją i upewnij się, że znajdują się w stanie | 0 ⟩ w taki sposób, aby mogły być bezpiecznie wydane.
+- uid: microsoft.quantum.intrinsic.rfrac
+  summary: >-
+    Stosuje obrót dotyczący danej osi Pauli o kąt określony jako ułamek dyadic.
+
+
+    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} gdzie $ \mu \In \{I, X, Y, Z\}$.
+
+
+    > [!WARNING]
+
+    > Ta operacja używa **przeciwległej** Konwencji podpisywania z @"microsoft.quantum.intrinsic.r".
+- uid: microsoft.quantum.intrinsic.rx
+  summary: >-
+    Stosuje obrót o $x osi $ o danym kącie.
+
+
+    \begin{align} R_x (\theta) \mathrel{: =} e ^ {-i \theta \sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.ry
+  summary: >-
+    Stosuje obrót o $y osi $ o danym kącie.
+
+
+    \begin{align} R_y (\theta) \mathrel{: =} e ^ {-i \theta \sigma_y/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-\sin \frac{\theta}{2}\\\\ \sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.rz
+  summary: >-
+    Stosuje obrót o $z osi $ o danym kącie.
+
+
+    \begin{align} R_z (\theta) \mathrel{: =} e ^ {-i \theta \sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.s
+  summary: >-
+    Stosuje bramę fazy π/4 do jednego qubitu.
+
+
+    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.swap
+  summary: >-
+    Stosuje bramę ZAMIANy do pary qubits.
+
+
+    \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+
+
+    gdzie wiersze i kolumny są uporządkowane jak w przewodniku koncepcji Quantum.
+- uid: microsoft.quantum.intrinsic.t
+  summary: >-
+    Stosuje bramę π/8 do jednego qubitu.
+
+
+    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.x
+  summary: >-
+    Stosuje bramę Pauli $X $.
+
+
+    \begin{align} \sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.y
+  summary: >-
+    Stosuje bramę Pauli $Y $.
+
+
+    \begin{align} \sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.z
+  summary: >-
+    Stosuje bramę Pauli $Z $.
+
+
+    \begin{align} \sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+
+    \end{align}
+ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056343"

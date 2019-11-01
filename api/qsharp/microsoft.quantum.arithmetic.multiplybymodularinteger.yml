@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+name: MultiplyByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Wykonuje mnożenie modularne przez stałą całkowitą w rejestrze qubit.
+
+
+  Poinformuj nas o tym, że działy przez N i constMultiplier przez tę operację implementują jednostki zdefiniowane przez następującą mapę w oparciu o obliczenia: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, dla wszystkich y od 0 do N-1
+remarks: >-
+  - Aby zapoznać się ze schematem obwodu i wyjaśnieniem, zobacz rysunek 7 na [stronie 8 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+
+  - Ta operacja odnosi się do p ₐ w [ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    summary: Stała, przez którą mnożnik jest mnożony. Musi być współdzielone z modułem.
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Operacja mnożenia jest wykonywana `modulus` modulo
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: >-
+      Liczba pomnożona przez stałą.
+
+      Jest to tablica qubits reprezentująca liczbę całkowitą w kolejności bitowej little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218757"

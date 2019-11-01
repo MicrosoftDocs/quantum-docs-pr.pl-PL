@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.measureinteger
+name: MeasureInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Mierzy zawartość rejestru Quantum i konwertuje ją na liczbę całkowitą. Pomiary są wykonywane w odniesieniu do standardowej obliczeń, tj. eigenbasis `PauliZ`.
+remarks: Ta operacja resetuje swój rejestr wejściowy do stanu $ \ket{00\cdots 0} $, który jest odpowiedni do wydawania z powrotem do maszyny docelowej.
+syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
+input:
+  content: '(target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: target
+    summary: Rejestr Quantum w kodowaniu little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Int
+  types:
+  - summary: Liczba całkowita bez znaku, która zawiera mierzoną wartość `target`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.canon.measureintegerbe
+ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214881"

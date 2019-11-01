@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachca
+name: ApplyToEachCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje operację pojedynczego qubit do każdego elementu w rejestrze.
+
+  Modyfikator `CA` wskazuje, że operacje pojedynczego qubit są kontrolowane i sąsiadujące.
+examples: >-
+  Przygotuj stan qubit $ \ket{+} $:
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEachCA (singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit is Adj + Ctl), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: Operacja do zastosowania do każdego qubitu.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: register
+    summary: Tablica qubits, na której ma zostać zastosowana dana operacja.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Obiekt docelowy, na którym działa operacja.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytoeach
+ms.openlocfilehash: dfc43c0293a1c056ff773d7bd6b1c3fe13c2d78d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210287"

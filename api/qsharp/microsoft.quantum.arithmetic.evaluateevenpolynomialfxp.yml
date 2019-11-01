@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
+name: EvaluateEvenPolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Oblicza parzysty wielomian w reprezentacji ustalonej.
+syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: Współczynniki wielomianu nawet jako tablicę podwójną, czyli tablicę $ [a_0, A_1,..., a_k] $ dla parzystego wielomianu $P (x) = a_0 + A_1 x ^ 2 + \cdots + a_k x ^ {2K} $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Wprowadź liczbę stałych punktów, dla której ma zostać obliczony wielomian.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Liczba stałych punktów wyjściowych, które będą przechowywane $P (x) $. Musi być w stanie $ \ket{0}$.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4b0979dd2a0758bbefbb4b0456051a38e040ab5a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221035"

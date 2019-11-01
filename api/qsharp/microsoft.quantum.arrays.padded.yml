@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.padded
+name: Padded
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Zwraca tablicę uzupełnioną o określone wartości do określonej długości.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12];
+
+  // The following line returns [10, 12, 15, 2, 2, 2].
+
+  let output = Padded(-6, array, 2);
+
+  // The following line returns [2, 2, 2, 10, 12, 15].
+
+  let output = Padded(6, array, 2);
+
+  ```
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    summary: Długość zapełnionej tablicy. Jeśli jest to dodatnie, `inputArray` jest dopełniany na początku. Jeśli jest to wartość ujemna, `inputArray` zostanie uzupełniona na ogon.
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    summary: Wartość domyślna służąca do uzupełniania elementów.
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    summary: Tablica, której wartości znajdują się na początku tablicy wyjściowej.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Tablica `output`, która jest `inputArray` dopełniana na początku z `defaultElement`s do momentu `output` długość `nElementsTotal`
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Typ elementów tablicy.
+ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218060"

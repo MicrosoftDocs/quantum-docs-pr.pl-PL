@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Potwierdza, że prawdopodobieństwo określonego stanu rejestru Quantum ma oczekiwaną wartość.
+
+
+  $N $-qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, potwierdza, że prawdopodobieństwo $ | \alpha_j | ^ 2 $ stanu $ \ket{j} $ indeksowane przez $j $ ma oczekiwaną wartość.
+examples: >-
+  Załóżmy, że rejestr `qubits` ma zakodować qubit \ket{\psi} = \ sqrt {1/8} \ KET{0}+ \ sqrt {7/8} \ KET{6}$ w formacie little-endian.
+
+  Oznacza to, że liczba Stanów $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ i $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$. Następnie następujące potwierdzenia zostały wykonane pomyślnie:
+
+
+  - `AssertProbInt(0,0.125,qubits,10e-10);`
+
+  - `AssertProbInt(6,0.875,qubits,10e-10);`
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    summary: Indeks $j $ stanu $ \ket{j} $ reprezentowanego przez `LittleEndian` rejestru.
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: Oczekiwana wartość $ | \alpha_j | ^ 2 $.
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: Rejestr qubit, który przechowuje $ \ket{\psi} $ w formacie little-endian.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    summary: Absolutna tolerancja różnicy między wartością rzeczywistą i oczekiwaną.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221443"

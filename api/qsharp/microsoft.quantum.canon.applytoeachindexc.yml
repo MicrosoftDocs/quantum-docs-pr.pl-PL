@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachindexc
+name: ApplyToEachIndexC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje pojedyncze qubit operacji do każdego indeksowanego elementu w rejestrze.
+
+  Modyfikator `C` wskazuje, że operacje pojedynczej qubit są kontrolowane.
+syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
+input:
+  content: '(singleElementOperation: (int, t) = > Unit to CTL), Register: t [])'
+  types:
+  - name: singleElementOperation
+    summary: Operacja do zastosowania do każdego qubitu.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: zarejestrować
+    summary: Tablica qubits, na której ma zostać zastosowana dana operacja.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Jednostka
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Obiekt docelowy, na którym działa każda z operacji.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068448"

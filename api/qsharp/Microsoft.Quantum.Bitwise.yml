@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: >-
+    Zwraca wartości bitowe i z dwóch liczb całkowitych.
+
+    Wykonuje to takie samo obliczenie jak wbudowany operator `&&&`.
+- uid: microsoft.quantum.bitwise.leftshiftedi
+  summary: Przenosi bitową reprezentację liczby pozostawionej przez daną liczbę bitów.
+- uid: microsoft.quantum.bitwise.leftshiftedl
+  summary: Przenosi bitową reprezentację liczby pozostawionej przez daną liczbę bitów.
+- uid: microsoft.quantum.bitwise.not
+  summary: >-
+    Zwraca wartość bitową, która nie jest liczbą całkowitą.
+
+    Wykonuje to takie samo obliczenie jak wbudowany operator `~~~`.
+- uid: microsoft.quantum.bitwise.or
+  summary: >-
+    Zwraca wartości bitowe lub z dwóch liczb całkowitych.
+
+    Wykonuje to takie samo obliczenie jak wbudowany operator `|||`.
+- uid: microsoft.quantum.bitwise.parity
+  summary: Zwraca bitową PARZYSTość liczby całkowitej (1, jeśli jej reprezentacja binarna zawiera nieparzystą liczbę elementów i 0 w przeciwnym razie).
+- uid: microsoft.quantum.bitwise.rightshiftedi
+  summary: Przenosi bitową reprezentację liczby bezpośrednio przez daną liczbę bitów.
+- uid: microsoft.quantum.bitwise.rightshiftedl
+  summary: Przenosi bitową reprezentację liczby bezpośrednio przez daną liczbę bitów.
+- uid: microsoft.quantum.bitwise.xbits
+  summary: Zwraca liczbę całkowitą reprezentującą X bity tablicy operatorów Pauli.
+- uid: microsoft.quantum.bitwise.xor
+  summary: >-
+    Zwraca bitowe wartości wyłącznych lub (XOR) dwóch liczb całkowitych.
+
+    Wykonuje to takie samo obliczenie jak wbudowany operator `^^^`.
+- uid: microsoft.quantum.bitwise.zbits
+  summary: Zwraca liczbę całkowitą reprezentującą bity Z tablicy operatorów Pauli.
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje do działania na bitowej reprezentacji klasycznych typów danych."
+ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210954"

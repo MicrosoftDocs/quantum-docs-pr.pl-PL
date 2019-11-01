@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayc
+name: DelayC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje daną operację z opóźnieniem.
+
+
+  Mając daną operację i dane wejściowe dla tej operacji, stosuje operację po udostępnieniu dodatkowych danych wejściowych.
+
+  W szczególności wyrażenie `Delay(op, arg, _)` jest operacją, która stosuje `op` do `arg` po wywołaniu.
+
+  `Delay(op,arg,_)` wyrażeń umożliwia opóźnienie aplikacji `op`.
+syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: Operacja, która ma zostać zastosowana.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: arg
+    summary: Dane wejściowe, do których zostanie zastosowana operacja.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: Argument używany do opóźniania stosowania operacji przy użyciu częściowej aplikacji.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Typ wejściowy operacji, która ma zostać opóźniona.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.delay
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: bbba9e29e35702d21f4c34a869b4cc1f0046b6ad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219675"

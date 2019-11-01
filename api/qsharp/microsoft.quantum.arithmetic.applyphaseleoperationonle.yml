@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
+name: ApplyPhaseLEOperationOnLE
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Stosuje operację, która przyjmuje <xref:microsoft.quantum.arithmetic.littleendian> zarejestrować jako dane wejściowe w docelowym rejestrze typu <xref:microsoft.quantum.arithmetic.phaselittleendian>.
+remarks: Rejestr jest przekształcany do `PhaseLittleEndian` przez użycie <xref:microsoft.quantum.canon.qftle> i jest następnie zwracany do oryginalnej reprezentacji po zastosowaniu `op`.
+syntax: 'operation ApplyPhaseLEOperationOnLE (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(op: (Microsoft. Quantum. arytmetyczne. PhaseLittleEndian = > Unit), Target: Microsoft. Quantum. arytmetyczne. LittleEndian)'
+  types:
+  - name: op
+    summary: Operacja, która ma zostać zastosowana.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.phaselittleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: Obiektów
+    summary: Rejestr, do którego zostanie zastosowana operacja.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Jednostka
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.applyphaseleoperationonlea
+- microsoft.quantum.canon.applyphaseleoperationonlea
+- microsoft.quantum.canon.applyphaseleoperationonleca
+ms.openlocfilehash: f610069706c06a3454c15b2f5170cce4b478530d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056993"

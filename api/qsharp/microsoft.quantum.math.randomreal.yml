@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Zwraca losową liczbę rzeczywistą w interwale większym lub równym zero i mniejszą od jednej.
+remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, więc jej losowość zależy od implementacji `Random`.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >-
+      Liczba bitów dokładności, z którą należy próbkować liczbę losową.
+
+          # Output
+
+      Liczba rzeczywista $x = k/2 ^ {\texttt{bitsRandom}} $ dla liczby całkowitej $k $ próbkowanie z interwału $ [0, 2 ^ {\texttt{bitsRandom}}) $ z prawdopodobieństwem $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219964"

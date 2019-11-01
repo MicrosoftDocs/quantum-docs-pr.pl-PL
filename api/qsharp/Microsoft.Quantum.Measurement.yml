@@ -1,0 +1,22 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.measurement
+name: Microsoft.Quantum.Measurement
+operations:
+- uid: microsoft.quantum.measurement.measurepaulis
+  summary: Dana tablica operatorów wieloqubitowych Pauli, miara każdego przy użyciu określonego gadżetu pomiaru, a następnie zwraca tablicę wyników.
+- uid: microsoft.quantum.measurement.measurewithscratch
+  summary: Mierzy dany operator Pauli za pomocą jawnego qubitu do przeprowadzenia pomiaru.
+- uid: microsoft.quantum.measurement.mresetx
+  summary: Mierzy pojedynczy qubit w bazie X, a następnie resetuje go do standardowego stanu podstawy | 0 〉 po pomiar.
+- uid: microsoft.quantum.measurement.mresety
+  summary: Mierzy pojedynczy qubit w bazie Y i resetuje go do standardowego stanu podstawy | 0 〉 po pomiar.
+- uid: microsoft.quantum.measurement.mresetz
+  summary: Mierzy pojedynczy qubit w bazie `Z` i resetuje go do standardowego stanu podstawy | 0 〉 po pomiar.
+- uid: microsoft.quantum.measurement.multim
+  summary: Mierzy każdy qubit w danej tablicy w standardowej bazie.
+ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210988"

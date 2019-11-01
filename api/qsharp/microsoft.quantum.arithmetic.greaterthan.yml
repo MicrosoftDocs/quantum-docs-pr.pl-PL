@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.greaterthan
+name: GreaterThan
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Wykonuje ściśle większe niż porównanie dwóch liczb całkowitych, $x $ i $y $, zakodowane w qubit rejestruje i YS. Jeśli $x > y $, wynik qubit będzie przerzucany, w przeciwnym razie Zachowaj jego stan.
+remarks: Używa lew, która $x-y = (x ' + y) ' $, gdzie ' oznacza uzupełnienie jednego.
+syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+references: >-
+  - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A New Quantum Ripple-przenieść obwód dodawania", 2004.
+    https://arxiv.org/abs/quant-ph/0410184v1
+
+  - Thomas Haener, Martin Roetteler, krysta M. Svore: "factoring using 2n + 2 qubits with modułowe mnożenia", 2016 https://arxiv.org/abs/1611.07995
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  types:
+  - name: xs
+    summary: LittleEndian qubit Zarejestruj pierwszą liczbę całkowitą $x $.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian qubit Register kodowanie drugiej liczby całkowitej $y $.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: Pojedyncze qubit, które zostaną przerzucone, jeśli $x > y $.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214949"

@@ -1,0 +1,67 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mappedbyindex
+name: MappedByIndex
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dana tablica i funkcja, która jest zdefiniowana dla indeksowanych elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w funkcji.
+examples: >-
+  Dwa następujące wiersze są równoważne:
+
+
+  ```qsharp
+
+  let arr = MapIndex(f, [x0, x1, x2]);
+
+  ```
+
+
+  oraz
+
+
+  ```qsharp
+
+  let arr = [f(0, x0), f(1, x1), f(2, x2)];
+
+  ```
+syntax: "function MappedByIndex (mapper : ((Int, 'T) -> 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
+  types:
+  - name: mapper
+    summary: Funkcja od `(Int, 'T)` do `'U`, która jest używana do mapowania elementów i ich indeksów.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: Tablica elementów na `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: "`'U[]` tablicy elementów, które są mapowane przez funkcję `mapper`."
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Typ elementów `array`.
+- uid: "'U"
+  summary: Typ wyniku funkcji `mapper`.
+seeAlso:
+- mapped
+ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214286"

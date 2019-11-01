@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.indexrange
+name: IndexRange
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dana tablica zwraca zakres przez indeksy tej tablicy, odpowiedni do użycia w pętli for.
+examples: >-
+  Następujące pętle `for` są równoważne:
+
+
+  ```Q#
+
+  for (idx in IndexRange(array)) { ... }
+
+  for (idx in IndexRange(array)) { ... }
+
+  ```
+syntax: "function IndexRange (array : 'TElement[]) : Range"
+input:
+  content: "(array : 'TElement[])"
+  types:
+  - name: array
+    summary: Tablica, dla której należy zwrócić zakres indeksów.
+    isArray: true
+    uid: "'TElement"
+    isLocal: true
+output:
+  content: Range
+  types:
+  - summary: Zakres na wszystkie indeksy tablicy.
+    isPrimitive: true
+    uid: Range
+typeParameters:
+- uid: "'TElement"
+  summary: Typ elementów tablicy.
+ms.openlocfilehash: a70935980fc49a3f8c155fe1901b13da923caaee
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218162"

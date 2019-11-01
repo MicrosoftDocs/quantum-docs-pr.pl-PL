@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Iteruje funkcję `f` za pomocą `array`tablicy, zwracając `f(f(f(initialState, array[0]), array[1]), ...)`.
+examples: >-
+  ```qsharp
+
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+
+  ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: folder
+    summary: Funkcja, która ma być składana na tablicy.
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: Początkowy stan folderu.
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: Tablica wartości do przejęcia.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: Końcowy stan zwrócony przez folder po przeprowadzeniu iteracji we wszystkich elementach `array`.
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: Typ Stanów, w których działa funkcja `folder`, czyli akceptuje jako pierwszy argument i zwraca.
+- uid: "'T"
+  summary: Typ elementów `array`.
+ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214354"

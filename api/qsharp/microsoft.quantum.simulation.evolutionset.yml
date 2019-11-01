@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutionset
+name: EvolutionSet
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Reprezentuje zestaw bram, które mogą być łatwo zaimplementowane i używane do implementowania algorytmów symulacji.
+
+
+  Elementy w zestawie są indeksowane przez <xref:microsoft.quantum.simulation.generatorindex>, a każdy zestaw jest opisany przez funkcję z `GeneratorIndex` do <xref:microsoft.quantum.simulation.evolutionunitary>, które są operacjami sparametryzowanymi o liczbie rzeczywistej reprezentującej czas
+syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
+ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211090"

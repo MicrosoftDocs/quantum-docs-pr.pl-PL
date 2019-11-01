@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulistringfromgenidx
+name: PauliStringFromGenIdx
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Wyodrębnia ciąg Pauli i jego qubite indeksy Pauli terminu opisanego przez `GeneratorIndex`.
+syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
+input:
+  content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
+  types:
+  - name: generatorIndex
+    summary: Typ `GeneratorIndex`, który koduje termin Pauli.
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: (Pauli[], Int[])
+  types:
+  - summary: Pauli ciąg terminu opisanego przez `GeneratorIndex`i indeksów do qubits, nad którym działa.
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+ms.openlocfilehash: e94fd2ddf1b6c18890cc0e4c82cef9d648808661
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221664"

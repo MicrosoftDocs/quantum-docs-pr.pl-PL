@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: CX
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Stosuje bramę z kontrolą X (CX) do pary qubits.
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
+remarks: >-
+  Równoważne:
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+
+
+  i do:
+
+
+  ```qsharp
+
+  CNOT(control, target);
+
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(Control: qubit, Target: qubit)'
+  types:
+  - name: Kontroli
+    summary: Kontrolka qubit dla bramy CX.
+    isPrimitive: true
+    uid: Qubit
+  - name: Obiektów
+    summary: Docelowa qubit dla bramy CX.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Jednostka
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067870"

@@ -1,0 +1,117 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.errorcorrection
+name: Microsoft. Quantum. ErrorCorrection
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje, operacje i typy zdefiniowane przez użytkownika dla korekcji błędów Quantum."
+functions:
+- uid: microsoft.quantum.errorcorrection.bitflipcode
+  summary: Zwraca wartość QECC reprezentującą ⟦ 3, 1, 1 ⟧ bitowego przerzucania kodera kodu i dekodera z pomiarem Syndrome w miejscu.
+- uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
+  summary: Funkcja dla operacji odzyskiwania Pauli dla danego pomiaru Syndrome przez wyszukiwanie w tabeli dla kodu przewrócenia ⟦ 3, 1, 1 ⟧.
+- uid: microsoft.quantum.errorcorrection.fivequbitcode
+  summary: Zwraca wartość QECC reprezentującą ⟦ 5, 1, 3 ⟧ kodu kodera i dekodera z pomiarem Syndrome w miejscu.
+- uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
+  summary: Zwraca funkcję, która mapuje Syndrome błędów do odpowiednich operatorów Pauliych w celu poprawienia błędów przez wyszukiwanie w tabeli dla kodu ⟦ 5, 1, 3 ⟧.
+- uid: microsoft.quantum.errorcorrection.steanecode
+  summary: Zwraca wartość CSS reprezentującą ⟦ 7, 1, 3 ⟧ Steane Code Encoder i dekodera z pomiarem Syndrome w miejscu.
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryfns
+  summary: Dekodery dla połączonych elementów X i Z-części grupy stabilizatorów ⟦ 7, 1, 3 ⟧ Steane w kodzie Quantum.
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
+  summary: Dekoder dla X części grupy stabilizatorów ⟦ 7, 1, 3 ⟧ Steane w kodzie Quantum.
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
+  summary: Dekoder dla części Z i grupy stabilizatorów ⟦ 7, 1, 3 ⟧ Steane w kodzie Quantum.
+- uid: microsoft.quantum.errorcorrection.tablelookuprecovery
+  summary: Dla danej tabeli operacji Pauli w danym rejestrze qubits, ta funkcja zwraca obiekt typu `RecoveryFn`, który zawiera wszystkie informacje, które są konieczne do wykonania dekodowania wyszukiwania w tabeli w odniesieniu do danej tablicy operacji Pauli.
+operations:
+- uid: microsoft.quantum.errorcorrection.bitflipdecoder
+  summary: >-
+    > [!WARNING]
+
+    > Przestarzałe. Użyj @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
+- uid: microsoft.quantum.errorcorrection.bitflipencoder
+  summary: >-
+    > [!WARNING]
+
+    > Przestarzałe. Użyj @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
+- uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
+  summary: Dekoduje z kodu [3, 1, 3]/⟦ 3, 1, 1 ⟧ bitowego.
+- uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
+  summary: Dekoduje kod Quantum ⟦ 5, 1, 3 ⟧.
+- uid: microsoft.quantum.errorcorrection.decodefromsteanecode
+  summary: Operacja kodowania odwrotnego, która mapuje niezakodowany rejestr Quantum na zakodowany rejestr Quantum w ⟦ 7, 1, 3 ⟧ Steane Quantum.
+- uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
+  summary: Koduje kod [3, 1, 3]/⟦ 3, 1, 1 ⟧ bitową.
+- uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
+  summary: Koduje kod Quantum ⟦ 5, 1, 3 ⟧.
+- uid: microsoft.quantum.errorcorrection.encodeintosteanecode
+  summary: Operacja kodowania, która mapuje niezakodowany rejestr Quantum na zakodowany rejestr Quantum w ⟦ 7, 1, 3 ⟧ Steane Quantum.
+- uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
+  summary: >-
+    > [!WARNING]
+
+    > Przestarzałe. Użyj @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+- uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
+  summary: >-
+    > [!WARNING]
+
+    > Przestarzałe. Użyj @"microsoft.quantum.errorcorrection.encodeintofivequbitcode".
+- uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+  summary: >-
+    Wykonuje obrót π/4 o `Y`.
+
+
+    Obrót jest wykonywany przez zużywanie stanu Magic; oznacza to, że kopia stanu $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.errorcorrection.knilldistill
+  summary: >-
+    Implementuje algorytm Knillowania stanu Magic.
+
+
+    W przypadku 15 przybliżonych kopii stanu Magic $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ daje jedną kopię w wyższej jakości.
+- uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
+  summary: Mierzy dany zestaw generatorów grupy stabilizatorów.
+- uid: microsoft.quantum.errorcorrection.recover
+  summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez typ `QECC`.
+- uid: microsoft.quantum.errorcorrection.recovercss
+  summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez typ `CSS`.
+- uid: microsoft.quantum.errorcorrection.steanecodedecoder
+  summary: >-
+    > [!WARNING]
+
+    > Przestarzałe. Użyj @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+- uid: microsoft.quantum.errorcorrection.steanecodeencoder
+  summary: >-
+    > [!WARNING]
+
+    > Przestarzałe. Użyj @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+newtypes:
+- uid: microsoft.quantum.errorcorrection.css
+  summary: Reprezentuje kod Calderbank – skró – Steane (CSS) określony przez koder, dekoder i jego procedury pomiaru Syndrome dla `X` i `Z` błędy.
+- uid: microsoft.quantum.errorcorrection.decodeop
+  summary: >-
+    Reprezentuje operację, która dekoduje zakodowany rejestr w rejestrze fizycznym i qubits, używany do rejestrowania Syndrome.
+
+
+    Argument DecodeOp jest taki sam jak zwrot z EncodeOp i na odwrót.
+- uid: microsoft.quantum.errorcorrection.encodeop
+  summary: >-
+    Reprezentuje operację, która koduje fizyczny rejestr do rejestru logicznego przy użyciu dostarczonej qubits.
+
+
+    Pierwszy argument jest traktowany jako rejestr fizyczny, który zostanie zakodowany, natomiast drugi argument jest traktowany jako rejestr, który zostanie użyty.
+- uid: microsoft.quantum.errorcorrection.logicalregister
+  summary: Typ dla rejestru `Qubit[]` fizycznego qubits, który koduje qubits logiczne.
+- uid: microsoft.quantum.errorcorrection.qecc
+  summary: Reprezentuje kod poprawiający błąd zgodnie z opisem w procedurze Syndrome, dekodera i pomiaru.
+- uid: microsoft.quantum.errorcorrection.recoveryfn
+  summary: Typ funkcji, która mapuje błąd Syndrome na sekwencję operacji `Pauli[]`, które poprawiają wykryte błędy.
+- uid: microsoft.quantum.errorcorrection.syndrome
+  summary: Typ wyników pomiaru `Result[]`, które określają błąd Syndrome kodu Quantum.
+- uid: microsoft.quantum.errorcorrection.syndromemeasop
+  summary: Reprezentuje operację, która jest używana do mierzenia Syndrome w bloku kodu z korekcją błędów.
+ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056797"
