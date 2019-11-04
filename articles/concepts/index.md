@@ -1,21 +1,21 @@
 ---
-title: Pojęcia związane z obliczeniami kwantowymi
-description: Co to są obliczenia kwantowe?
+title: Historia i podstawy obliczeń kwantowych
+description: Poznaj historię obliczeń kwantowych oraz ich podstawy działania, a także zestaw deweloperski Microsoft Quantum.
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978946"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442312"
 ---
-# <a name="what-is-quantum-computing"></a>Co to są obliczenia kwantowe?
+# <a name="quantum-computing-history-and-background"></a>Historia i podstawy obliczeń kwantowych
 
-Mnóstwo nowych technologii komputerowych powstało w ciągu ostatnich kilku lat, a obliczenia kwantowe to prawdopodobnie technologia wymagająca największego przesunięcia paradygmatu ze strony deweloperów.  Komputery kwantowe zaproponowali w latach 80. fizyk [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) i matematyk [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  Intuicja stojąca za obliczeniami kwantowymi wywodzi się z czegoś, co często postrzegane było jako jeden z największych kłopotów fizyki: nadzwyczajnego postępu naukowego stojącego w obliczu niemożności modelowania nawet prostych układów. Mechanika kwantowa została stworzona między 1900 a 1925 rokiem i pozostaje kamieniem węgielnym, który ostatecznie stanowi podstawę chemii, fizyki materii skondensowanej i najrozmaitszych technologii, od układów scalonych po oświetlenie LED.  Pomimo tych sukcesów modelowanie nawet niektórych najprostszych układów w mechanice kwantowej wydawało się przekraczać ludzkie możliwości.  Przyczyną jest to, że symulowanie układów nawet kilkudziesięciu cząstek wchodzących między sobą w interakcje wymaga więcej mocy obliczeniowej niż jakikolwiek konwencjonalny komputer jest w stanie dostarczyć w ciągu tysięcy lat!
+W ciągu ostatnich kilku lat powstało mnóstwo nowych technologii komputerowych, a obliczenia kwantowe to prawdopodobnie technologia wymagająca największego przesunięcia paradygmatu ze strony deweloperów.  Komputery kwantowe zaproponowali w latach 80. fizyk [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) i matematyk [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  Intuicja stojąca za obliczeniami kwantowymi wywodzi się z czegoś, co często postrzegane było jako jeden z największych kłopotów fizyki: nadzwyczajnego postępu naukowego stojącego w obliczu niemożności modelowania nawet prostych układów. Mechanika kwantowa powstała między 1900 a 1925 rokiem i pozostaje kamieniem węgielnym, który ostatecznie stanowi podstawę chemii, fizyki materii skondensowanej i najrozmaitszych technologii, od układów scalonych po oświetlenie LED.  Pomimo tych sukcesów modelowanie nawet niektórych najprostszych układów w mechanice kwantowej wydawało się przekraczać ludzkie możliwości.  Przyczyną jest to, że symulowanie układów nawet kilkudziesięciu cząstek wchodzących między sobą w interakcje wymaga więcej mocy obliczeniowej niż jakikolwiek konwencjonalny komputer jest w stanie dostarczyć w ciągu tysięcy lat!
 
 To, dlaczego symulacja mechaniki kwantowej jest tak trudna, można wytłumaczyć na wiele sposobów.  Być może najprostszym wyjaśnieniem jest to, że teorię kwantów można interpretować jako twierdzącą, że materia na poziomie kwantowym znajduje się w wielu konfiguracjach (nazywanych *stanami*) jednocześnie.  W przeciwieństwie do klasycznej teorii prawdopodobieństwa, te wiele potencjalnie obserwowalnych konfiguracji stanu kwantowego może interferować ze sobą jak fale w basenie pływowym.  Ta interferencja uniemożliwia użycie próbkowania statystycznego do uzyskania konfiguracji stanu kwantowego.  Zamiast tego, jeśli chcemy zrozumieć ewolucję kwantu, musimy śledzić *każdą możliwą* konfigurację, w jakiej mógłby znajdować się układ kwantowy.  
 

@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035305"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442255"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Instalowanie zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -26,11 +26,13 @@ W zależności od wybranego środowiska programistycznego istnieją różne krok
 
 ## <a name="develop-with-python"></a>Programowanie przy użyciu platformy Python
 
+Pakiet qsharp dla języka Python ułatwia symulowanie operacji i funkcji języka Q# z poziomu języka Python. IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie używane głównie w środowiskach Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i symulowania operacji języka Q#.
+
 1. Wymagania wstępne
 
     - Środowisko [Python](https://www.python.org/downloads/) 3.6 lub nowsze
     - Menedżer pakietów języka Python narzędzia [PIP](https://pip.pypa.io/en/stable/installing)
-    - [Zestaw .NET Core SDK 2.1 lub nowszy](https://www.microsoft.com/net/download)
+    - [Zestaw .NET Core SDK 3.0 lub nowszy](https://www.microsoft.com/net/download)
 
 1. Instalowanie pakietu `iqsharp`
 
@@ -87,11 +89,16 @@ W zależności od wybranego środowiska programistycznego istnieją różne krok
 
 ## <a name="develop-with-jupyter-notebooks"></a>Programowanie za pomocą notesów Jupyter
 
+Notesy programu Jupyter to ulubione rozwiązanie na uczelniach i w laboratoriach naukowych oraz podczas wspólnego programowania w trybie online. Oferują one wykonywanie kodu w miejscu — teraz także kodu języka Q# — a także instrukcje, notesy oraz inną zawartość.  Oto jak zacząć tworzyć własne notesy języka Q#.
+
+IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używane głównie w środowiskach Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i symulowania operacji języka Q#.
+
+
 1. Wymagania wstępne
 
     - Środowisko [Python](https://www.python.org/downloads/) 3.6 lub nowsze
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [Zestaw .NET Core SDK 2.1 lub nowszy](https://www.microsoft.com/net/download)
+    - [Zestaw .NET Core SDK 3.0 lub nowszy](https://www.microsoft.com/net/download)
 
 1. Instalowanie pakietu `iqsharp`
 
@@ -120,11 +127,22 @@ W zależności od wybranego środowiska programistycznego istnieją różne krok
 
     - Uruchom tę komórkę notesu:
 
-        ![Komórka notesu Jupyter](~/media/install-guide-jupyter.png)
+        ![Komórka notesu Jupyter z kodem języka Q#](~/media/install-guide-jupyter.png)
 
         W danych wyjściowych komórki powinien zostać wyświetlony element `SayHello`. W przypadku uruchamiania w notesach Jupyter kod języka Q# jest kompilowany, a notes zwraca w danych wyjściowych nazwę znalezionych operacji.
 
+
+    - W nowej komórce zasymuluj wykonywanie na komputerze kwantowym właśnie utworzonej operacji przy użyciu polecenia magic `%simulate`:
+
+        ![Komórka notesu Jupyter z poleceniem magic %simulate](~/media/install-guide-jupyter-simulate.png)
+
+        Na ekranie powinien zostać wyświetlony komunikat oraz wynik wywołanej operacji (w tym przypadku pusty).
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Programowanie w języku C# w systemie Windows przy użyciu programu Visual Studio
+
+Program Visual Studio zapewnia zaawansowane środowisko tworzenia programów w języku Q# oraz doskonałe opcje takie jak uzupełnianie kodu i wyróżnianie składni, które ułatwiają deweloperom tworzenie aplikacji.  Rozszerzenie Q# w programie Visual Studio zawiera szablony dla plików i projektów Q# oraz obsługę wyróżniania składni i funkcji IntelliSense.
+
 
 1. Wymagania wstępne
 
@@ -158,12 +176,16 @@ W zależności od wybranego środowiska programistycznego istnieją różne krok
 > [!NOTE]
 > * Jeśli masz wiele projektów w jednym rozwiązaniu programu Visual Studio, wszystkie projekty zawarte w rozwiązaniu muszą znajdować się w tym samym folderze co rozwiązanie lub w jednym z jego podfolderów.  
 
-## <a name="develop-with-c-using-vs-code"></a>Programowanie w języku C# przy użyciu programu VS Code
+## <a name="develop-with-c-using-visual-studio-code"></a>Programowanie w języku C# w programie Visual Studio Code
+
+Program Visual Studio Code (VS Code) zapewnia zaawansowane środowisko tworzenia programów w języku Q# w wielu środowiskach z wieloma komputerami, takich jak systemy Windows i Linux oraz komputery Mac, a także doskonałe opcje takie jak uzupełnianie kodu i wyróżnianie składni, które ułatwiają deweloperom tworzenie aplikacji.  Rozszerzenia Q# programu VS Code zawiera funkcję wyróżniania składni oraz fragmenty kodu języka Q#.
+
+Program Visual Studio Code (VS Code) zapewnia zaawansowane środowisko tworzenia programów w języku Q# w wielu środowiskach z wieloma komputerami, takich jak systemy Windows i Linux oraz komputery Mac, a także doskonałe opcje takie jak uzupełnianie kodu i wyróżnianie składni, które ułatwiają deweloperom tworzenie aplikacji.  Rozszerzenia Q# programu VS Code zawiera funkcję wyróżniania składni oraz fragmenty kodu języka Q#.
 
 1. Wymagania wstępne
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [Zestaw .NET Core SDK 2.1 lub nowszy](https://www.microsoft.com/net/download)
+   - [Zestaw .NET Core SDK 3.0 lub nowszy](https://www.microsoft.com/net/download)
 
 1. Instalowanie rozszerzenia programu VS Code dla obliczeń kwantowych
 
@@ -195,9 +217,11 @@ W zależności od wybranego środowiska programistycznego istnieją różne krok
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>Programowanie w języku C# przy użyciu narzędzia wiersza polecenia `dotnet`
 
+Oczywiście programy Q# możesz kompilować i uruchamiać z poziomu wiersza polecenia, po prostu instalując zestaw SDK .NET Core i szablony projektów QDK. 
+
 1. Wymagania wstępne
 
-    - [Zestaw .NET Core SDK 2.1 lub nowszy](https://www.microsoft.com/net/download)
+    - [Zestaw .NET Core SDK 3.0 lub nowszy](https://www.microsoft.com/net/download)
 
 1. Instalowanie szablonów projektów kwantowych dla platformy .NET
 

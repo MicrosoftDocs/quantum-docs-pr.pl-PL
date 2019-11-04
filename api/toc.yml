@@ -1,0 +1,12 @@
+- name: Dokumentacja
+  items:
+    - name: 'Biblioteki języka Q#'
+      href: qsharp/toc.yml
+    - name: Biblioteki platformy .NET
+      items:
+        - name: Symulator śledzenia
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Chemia kwantowa
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Biblioteki języka Python
+      href: 'https://docs.microsoft.com/python/qsharp'

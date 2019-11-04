@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: f8d7071b4917aba7ba7eec4e84ba4f46dff3618a
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958883"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442177"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Ten artykuł zawiera informacje dotyczące poszczególnych wersji zestawu Quantu
 Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.quantum.install).
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
+
+## <a name="version-01019103107"></a>Wersja 0.10.1910.3107
+
+*Data wydania: 1 listopada 2019 r.*
+
+To wydanie zawiera następujące elementy:
+
+- Aktualizacje rozszerzeń programów Visual Studio Code i Visual Studio dotyczące wdrażania serwera języka jako autonomicznego pliku wykonywalnego, eliminując w ten sposób zależność od wersji zestawu .NET Core SDK  
+- Migracja do platformy .NET Core 3.0
+- Istotna zmiana w elemencie Microsoft.Quantum.Simulation.Core.IOperationFactory po wprowadzeniu nowej metody `Fail`. Dotyczy ona tylko symulatorów niestandardowych, które nie rozszerzają elementu SimulatorBase. Aby uzyskać więcej informacji, [wyświetl pełne żądanie ściągnięcia w usłudze GitHub](https://github.com/microsoft/qsharp-runtime/pull/59).
+- Nowa obsługa przestarzałych atrybutów
+
+Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0919093002"></a>Wersja 0.9.1909.3002
 
@@ -448,7 +461,7 @@ Ta wersja zawiera rozwiązania niektórych problemów zgłaszanych przez społec
 #### <a name="hardware-and-software-requirements"></a>Wymagania dotyczące sprzętu i oprogramowania
 
 - Symulator dołączony do zestawu Quantum Development Kit wymaga zainstalowania 64-bitowego systemu Microsoft Windows.
-- Symulator kwantowy firmy Microsoft instalowany z zestawem Quantum Development Kit wykorzystuje instrukcje Advance Vector Extensions (AVX) i wymaga procesorów z włączonymi instrukcjami AVX. Procesory firmy Intel od modelu Sandy Bridge (dostarczanego od 1. kwartału 2011 r.) obsługują instrukcje AVX. Rozważamy obsługę wcześniejszych procesorów i być może, że szczegółowe informacje na ten temat zostaną ogłoszone w późniejszym czasie.
+- Symulator kwantowy firmy Microsoft instalowany z zestawem Quantum Development Kit wykorzystuje instrukcje Advanced Vector Extensions (AVX) i wymaga procesorów z włączonymi instrukcjami AVX. Procesory firmy Intel od modelu Sandy Bridge (dostarczanego od 1. kwartału 2011 r.) obsługują instrukcje AVX. Rozważamy obsługę wcześniejszych procesorów i być może, że szczegółowe informacje na ten temat zostaną ogłoszone w późniejszym czasie.
 
 #### <a name="project-creation"></a>Tworzenie projektu
 

@@ -1,19 +1,19 @@
 ---
-title: Symulatory kwantowe i sterowniki klasyczne | Microsoft Docs
+title: Symulatory kwantowe i aplikacje hosta | Microsoft Docs
 description: Opis tworzenia symulatorów kwantowych przy użyciu klasycznego języka platformy .NET (zazwyczaj C# lub Q#).
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035117"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442218"
 ---
-# <a name="classical-drivers-and-machines"></a>Klasyczne sterowniki i komputery
+# <a name="quantum-simulators-and-host-applications"></a>Symulatory kwantowe i aplikacje hosta
 
 ## <a name="what-youll-learn"></a>Zawartość
 
@@ -52,7 +52,7 @@ Każda klasa jest zdefiniowana w przestrzeni nazw `Microsoft.Quantum.Simulation.
 * Klasa `QCTraceSimulator`, [oparte na śledzeniu narzędzie do szacowania zasobów](xref:microsoft.quantum.machines.qc-trace-simulator.intro), umożliwia zaawansowaną analizę zużycia zasobów dla całego grafu wywołań algorytmu.
 * Klasa `ToffoliSimulator`, [symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator).
 
-## <a name="writing-a-classical-driver-program"></a>Pisanie klasycznego programu sterującego
+## <a name="writing-a-host-application"></a>Pisanie aplikacji hosta
 
 W artykule [Pisanie programu kwantowego](xref:microsoft.quantum.write-program) napisaliśmy prosty sterownik w języku C# dla algorytmu teleportacji. Sterownik w języku C# ma 4 główne funkcje:
 
@@ -94,7 +94,7 @@ Przekazując argumenty do metody `Run`, trzeba pamiętać o kilku kwestiach:
 * Tablice muszą być opakowane w obiekt `Microsoft.Quantum.Simulation.Core.QArray<T>`.
     Klasa `QArray` ma konstruktor, który przyjmuje dowolną uporządkowaną kolekcję (`IEnumerable<T>`) odpowiednich obiektów.
 * Pusta krotka, `()` w języku Q#, jest reprezentowana przez element `QVoid.Instance` w języku C#.
-* Niepuste krotki są reprezentowane jako wystąpienia `ValueType` programu .NET.
+* Niepuste krotki są reprezentowane jako wystąpienia `ValueTuple` programu .NET.
 * Zdefiniowane przez użytkownika typy języka Q# są przekazywane jako typy podstawowe.
 * Aby przekazać operację lub funkcję do metody `Run`, należy uzyskać wystąpienie klasy operacji lub funkcji przy użyciu metody `Get<>` symulatora.
 
