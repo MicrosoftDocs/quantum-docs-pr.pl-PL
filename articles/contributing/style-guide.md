@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183849"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463323"
 ---
 # <a name="q-style-guide"></a>Przewodnik po stylu Q # #
 ## <a name="general-conventions"></a>Konwencje ogólne ##
 
 Konwencje sugerowane w tym przewodniku mają na celu ułatwienie odczytywania i zrozumienia programów oraz bibliotek utworzonych w usłudze Q.
 
-# <a name="guidancetabguidance"></a>[Wskazówki](#tab/guidance)
+## <a name="guidance"></a>Wskazówka
 
 Sugerujemy:
 
 - Nigdy nie należy ignorować Konwencji, chyba że jest to celowe w celu zapewnienia bardziej czytelnego i zrozumiałego kodu dla użytkowników.
-
-# <a name="examplestabexamples"></a>[Przykłady](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa ##
 
@@ -67,9 +63,9 @@ Inne zlecenia mogą być również przydatne w tym przypadku, jak w `IterateThro
 | Czasownik | Oczekiwany efekt |
 | ---- | ------ |
 | Składanie wniosku o przyjęcie do programu | Operacja podana jako dane wejściowe jest wywoływana |
-| Stanowcz | Hipoteza dotycząca wyniku możliwego pomiaru Quantum jest sprawdzana przez symulator |
+| Assert | Hipoteza dotycząca wyniku możliwego pomiaru Quantum jest sprawdzana przez symulator |
 | Szacowany | Wartość jest zwracana, reprezentująca oszacowanie pobrane z co najmniej jednego pomiaru |
-| Mierzyć | Pomiar Quantum jest wykonywany, a jego wynik jest zwracany do użytkownika |
+| Measure | Pomiar Quantum jest wykonywany, a jego wynik jest zwracany do użytkownika |
 | Przygotowanie | Dana Rejestracja qubits jest inicjowana w określonym stanie |
 | Przykład | Wartość klasyczna jest zwracana losowo z pewnej dystrybucji |
 

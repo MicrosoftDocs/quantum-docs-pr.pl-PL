@@ -1,21 +1,18 @@
 ---
-title: Licencja Microsoft Quantum Development Kit | Microsoft Docs
+title: Licencja Microsoft Quantum Development Kit
 description: Licencja Microsoft Quantum Development Kit
-services: service-name-with-dashes-AZURE-ONLY
-keywords: Nie dodawaj ani nie edytuj słów kluczowych bez konsultacji z ekspertem SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184937"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463365"
 ---
 # <a name="microsoft-software-license-terms"></a>POSTANOWIENIA LICENCYJNE DOTYCZĄCE OPROGRAMOWANIA FIRMY MICROSOFT 
-# <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT QUANTUM DEVELOPMENT KIT (WERSJA ZAPOZNAWCZA)
+## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT QUANTUM DEVELOPMENT KIT (WERSJA ZAPOZNAWCZA)
 
 
 * * *
@@ -61,13 +58,13 @@ PRZESTRZEGANIE TYCH POSTANOWIEŃ LICENCYJNYCH MA NASTĘPUJĄCE PRAWA. ZA POMOCĄ
     
     e. Udostępnianie, publikowanie, rozpowszechnianie lub wypożyczanie oprogramowania, udostępnianie oprogramowania jako autonomicznego rozwiązania hostowanego innym osobom lub przekazywanie oprogramowania lub niniejszej Umowy osobom trzecim.
 
-1. **ograniczenia eksportowe**. Należy przestrzegać wszystkich krajowych i międzynarodowych przepisów eksportowych, które są stosowane do oprogramowania, które obejmują ograniczenia dotyczące miejsc docelowych, użytkowników końcowych i użytkowania. Aby uzyskać więcej informacji na temat ograniczeń eksportu, odwiedź stronę http://aka.ms/exporting.
+1. **ograniczenia eksportowe**. Należy przestrzegać wszystkich krajowych i międzynarodowych przepisów eksportowych, które są stosowane do oprogramowania, które obejmują ograniczenia dotyczące miejsc docelowych, użytkowników końcowych i użytkowania. Aby uzyskać więcej informacji na temat ograniczeń eksportu, odwiedź stronę https://aka.ms/exporting.
 
 1. **usługi pomocy technicznej**. Firma Microsoft nie jest zobowiązana na mocy niniejszej umowy w celu świadczenia usług pomocy technicznej dla oprogramowania. Wszelka świadczona pomoc techniczna to "AS IS", "ze wszystkimi błędami" i bez żadnej rękojmi.
 
 1. **Aktualizacje**. Oprogramowanie może okresowo sprawdzać dostępność aktualizacji oraz pobierać i instalować. Licencjobiorca może uzyskać aktualizacje tylko od firmy Microsoft lub z autoryzowanych źródeł. Firma Microsoft może potrzebować aktualizacji systemu w celu udostępnienia aktualizacji. Użytkownik zgadza się otrzymywać te aktualizacje automatyczne bez żadnych dodatkowych powiadomień. Aktualizacje mogą nie zawierać ani obsługiwać wszystkich istniejących funkcji oprogramowania, usług lub urządzeń peryferyjnych.
 
-1. **ODstąpienie do rozstrzygania i podejmowania akcji klasy. Ta sekcja ma zastosowanie w przypadku, gdy użytkownik jest aktywny w programie (lub, jeśli firma, główne miejsce pracy jest w) Stany Zjednoczone**.  Jeśli ty i Microsoft masz spór, ty i firma Microsoft wyraża zgodę na wypróbowanie przez 60 dni, aby rozwiązać ten problem. Jeśli ty i firma Microsoft nie mogą, ty i firma Microsoft zgadzają się **powiązać z poszczególnymi postępowaniami** **sądowymi przed sądem w**ramach postępowania Federalnego ("FAA"). Zamiast tego decyduje o tym neutralny arbiter. **Czynności podejmowane w ramach działań klasy, arbitrażu w całej klasie, prywatnych prawnikach — ogólnych działaniach**i innych postępowaniach w przypadku, gdy ktoś działa w reprezentatywnej pojemności **nie jest dozwolony**; nie łączy się również z poszczególnymi postępowaniami bez zgody wszystkich stron. Pełna umowa arbitrażowa zawiera więcej warunków i jest w http://aka.ms/arb-agreement-1. Ty i firma Microsoft zgadzają się na te warunki.
+1. **ODstąpienie do rozstrzygania i podejmowania akcji klasy. Ta sekcja ma zastosowanie w przypadku, gdy użytkownik jest aktywny w programie (lub, jeśli firma, główne miejsce pracy jest w) Stany Zjednoczone**.  Jeśli ty i Microsoft masz spór, ty i firma Microsoft wyraża zgodę na wypróbowanie przez 60 dni, aby rozwiązać ten problem. Jeśli ty i firma Microsoft nie mogą, ty i firma Microsoft zgadzają się **powiązać z poszczególnymi postępowaniami** **sądowymi przed sądem w**ramach postępowania Federalnego ("FAA"). Zamiast tego decyduje o tym neutralny arbiter. **Czynności podejmowane w ramach działań klasy, arbitrażu w całej klasie, prywatnych prawnikach — ogólnych działaniach**i innych postępowaniach w przypadku, gdy ktoś działa w reprezentatywnej pojemności **nie jest dozwolony**; nie łączy się również z poszczególnymi postępowaniami bez zgody wszystkich stron. Pełna umowa arbitrażowa zawiera więcej warunków i jest w https://aka.ms/arb-agreement-1. Ty i firma Microsoft zgadzają się na te warunki.
 
 1. **cała umowa**. Niniejsza Umowa oraz inne postanowienia firmy Microsoft mogą stanowić uzupełnienie oprogramowania, aktualizacji lub aplikacji innych firm.
 
