@@ -1,4 +1,4 @@
-- name: Klasyczne komputery i sterowniki
+- name: Omówienie
   href: index.md
 - name: Symulator kwantowy
   href: full-state-simulator.md
