@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442255"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462875"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Instalowanie zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -177,8 +177,6 @@ Program Visual Studio zapewnia zaawansowane środowisko tworzenia programów w j
 > * Jeśli masz wiele projektów w jednym rozwiązaniu programu Visual Studio, wszystkie projekty zawarte w rozwiązaniu muszą znajdować się w tym samym folderze co rozwiązanie lub w jednym z jego podfolderów.  
 
 ## <a name="develop-with-c-using-visual-studio-code"></a>Programowanie w języku C# w programie Visual Studio Code
-
-Program Visual Studio Code (VS Code) zapewnia zaawansowane środowisko tworzenia programów w języku Q# w wielu środowiskach z wieloma komputerami, takich jak systemy Windows i Linux oraz komputery Mac, a także doskonałe opcje takie jak uzupełnianie kodu i wyróżnianie składni, które ułatwiają deweloperom tworzenie aplikacji.  Rozszerzenia Q# programu VS Code zawiera funkcję wyróżniania składni oraz fragmenty kodu języka Q#.
 
 Program Visual Studio Code (VS Code) zapewnia zaawansowane środowisko tworzenia programów w języku Q# w wielu środowiskach z wieloma komputerami, takich jak systemy Windows i Linux oraz komputery Mac, a także doskonałe opcje takie jak uzupełnianie kodu i wyróżnianie składni, które ułatwiają deweloperom tworzenie aplikacji.  Rozszerzenia Q# programu VS Code zawiera funkcję wyróżniania składni oraz fragmenty kodu języka Q#.
 
