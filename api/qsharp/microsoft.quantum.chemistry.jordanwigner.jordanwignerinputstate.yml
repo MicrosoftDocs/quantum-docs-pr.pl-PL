@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: 'Format danych przesłanych od C# do Q # w celu reprezentowania przygotowania stanu początkowego znaczenie danych reprezentowane przez algorytm, który go otrzymuje.'
 syntax: newtype JordanWignerInputState = ((Double, Double), Int[]);
-ms.openlocfilehash: a4c234749d85c544dedce0feb4e9b7a4e468a120
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73228566"
+metadata:
+  ms.openlocfilehash: a4c234749d85c544dedce0feb4e9b7a4e468a120
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73228566"
