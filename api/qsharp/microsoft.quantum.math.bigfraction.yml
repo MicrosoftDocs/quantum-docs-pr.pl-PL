@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Math
 summary: Przedstawia liczbę racjonalną `p/q`formularza. Liczba całkowita `p` jest pierwszym elementem krotki, a `q` jest drugim elementem krotki.
 syntax: newtype BigFraction = (BigInt, BigInt);
-ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73230215"
+metadata:
+  ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73230215"

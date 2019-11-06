@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: Stosuje operację, która powoduje, że dane wejściowe w formacie big-endian są zakodowane w rejestrze, a liczba całkowita bez znaku jest używana.
 syntax: 'operation ApplyReversedOpLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
-  content: '(op: (Microsoft. Quantum. arytmetyczne. LittleEndian = > Unit), Register: Microsoft. Quantum. arytmetyczne. BigEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), register : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: op
     summary: Operacja, która działa w odniesieniu do rejestru little-endian.
@@ -18,11 +18,11 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: zarejestrować
+  - name: register
     summary: Rejestr big-endian do przetworzenia.
     uid: microsoft.quantum.arithmetic.bigendian
 output:
-  content: Jednostka
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -30,9 +30,10 @@ seeAlso:
 - applyreversedoplea
 - applyreversedoplec
 - applyreversedopleca
-ms.openlocfilehash: a48900eba6a7afce3cb57c0514dbfd58bf11633c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057142"
+metadata:
+  ms.openlocfilehash: a48900eba6a7afce3cb57c0514dbfd58bf11633c
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057142"
