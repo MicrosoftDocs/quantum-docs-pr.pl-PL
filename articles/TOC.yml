@@ -1,15 +1,39 @@
 - name: Dokumentacja rozwiązania Microsoft Quantum
   href: index.yml
 - name: Omówienie
-  href: welcome.md
+  items:
+    - name: Rozpoczęcie pracy
+      href: welcome.md
+    - name: Pięć pytań dotyczących obliczeń kwantowych
+      items:
+        - name: Co to są obliczenia kwantowe?
+          href: overview/what-is-quantum-computing.md
+        - name: Co może robić komputer kwantowy?
+          href: overview/quantum-computers.md
+        - name: Dlaczego warto uczyć się wykonywania obliczeń kwantowych?
+          href: overview/why-learn-quantum-computing.md
+        - name: 'Co to jest język Q#?'
+          href: overview/what-is-qsharp.md
+        - name: Jak nauczyć się wykonywania obliczeń kwantowych?
+          href: overview/how-to-learn-quantum-computing.md
+    - name: Informacje w artykułach Quantum Kata
+      href: intro-to-katas.md
 - name: Przewodniki Szybki start
+  items:
+    - name: Kwantowy generator liczb losowych
+      href: quickstarts/qrng.md
+    - name: 'Podstawy kwantowe w języku Q#'
+      href: quickstart.md
+    - name: Implementowanie algorytmu wyszukiwania Grovera
+      href: quickstarts/search.md
+- name: Przewodniki z instrukcjami
   items:
     - name: Instalowanie zestawu QDK
       href: install-guide/index.md
     - name: Aktualizowanie zestawu QDK
       href: install-guide/update.md
-    - name: Napisz swój pierwszy program kwantowy
-      href: quickstart.md
+    - name: 'Tworzenie projektu języka Q#'
+      href: how-to-guides/create-qsharp-project.md
 - name: Pojęcia
   items:
     - name: Techniki projektowania kwantowego
@@ -22,7 +46,7 @@
       href: libraries/toc.yml
     - name: Pojęcia związane z obliczeniami kwantowymi
       href: concepts/toc.yml
-    - name: Jak hostować maszynę kwantową
+    - name: Symulatory kwantowe i narzędzia do szacowania zasobów
       href: machines/toc.yml
 - name: Zasoby
   items:
