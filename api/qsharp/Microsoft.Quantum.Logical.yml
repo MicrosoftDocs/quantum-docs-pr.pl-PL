@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
-name: Microsoft. Quantum. Logical
+name: Microsoft.Quantum.Logical
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Zawiera funkcje do pracy z wyrażeniami logicznymi i logiką logiczną."
 functions:
 - uid: microsoft.quantum.logical.and
@@ -65,9 +65,10 @@ functions:
   summary: Zwraca wartość logiczną, która powoduje odłączenie dwóch wartości.
 - uid: microsoft.quantum.logical.xor
   summary: Zwraca wartość logiczną bez odłączenia dwóch wartości.
-ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056277"
+metadata:
+  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056277"

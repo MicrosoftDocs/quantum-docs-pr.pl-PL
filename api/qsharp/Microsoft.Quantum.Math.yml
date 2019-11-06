@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.math
-name: Microsoft. Quantum. Math
+name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
   summary: Zwraca wartość bezwzględną złożonej liczby typu `Complex`.
@@ -252,9 +252,10 @@ operations:
   summary: Zwraca losową liczbę rzeczywistą w interwale większym lub równym zero i mniejszą od jednej.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Zwraca jeden z jednoqubitowych operatorów Pauli jednolicie losowo.
-ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056295"
+metadata:
+  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056295"

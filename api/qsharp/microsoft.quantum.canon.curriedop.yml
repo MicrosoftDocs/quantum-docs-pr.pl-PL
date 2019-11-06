@@ -26,7 +26,7 @@ remarks: >-
   ```
 syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
 input:
-  content: "(op: ((t, ' U) = > Unit))"
+  content: "(op : (('T, 'U) => Unit))"
   types:
   - name: op
     summary: Operacja, której dane wejściowe to para.
@@ -42,7 +42,7 @@ input:
       - isPrimitive: true
         uid: Unit
 output:
-  content: (T-> ("U = Jednostka >))
+  content: ('T -> ('U => Unit))
   types:
   - summary: Operacja, która akceptuje pierwszy element pary i zwraca operację, która akceptuje jako dane wejściowe drugiego elementu danych wejściowych pierwotnej operacji.
     isFunction: true
@@ -66,9 +66,10 @@ typeParameters:
   summary: Typ pierwszego składnika funkcji zdefiniowanej w parach.
 - uid: "'U"
   summary: Typ drugiego składnika funkcji zdefiniowanej w parach.
-ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067904"
+metadata:
+  ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067904"
