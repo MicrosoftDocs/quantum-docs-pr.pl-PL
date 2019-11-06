@@ -6,20 +6,21 @@ namespace: Microsoft.Quantum.Simulation
 summary: Zwraca indeks generatora spójny z zerem hamiltonian, `H = 0`, który odnosi się do operacji ewolucji tożsamości.
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
-  content: '(idxTerm: int)'
+  content: '(idxTerm : Int)'
   types:
   - name: idxTerm
     summary: Ta wartość wejściowa jest ignorowana i jest definiowana dla spójności z typem zdefiniowanym przez użytkownika <xref:microsoft.quantum.simulation.generatorsystem>.
     isPrimitive: true
     uid: Int
 output:
-  content: Microsoft. Quantum. Symulacja. GeneratorIndex
+  content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
   - summary: Indeks generatora reprezentujący ewolucję w hamiltonian $H = $0.
     uid: microsoft.quantum.simulation.generatorindex
-ms.openlocfilehash: 004eea82988c6a4f6c776802d5f4634f600ed404
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065592"
+metadata:
+  ms.openlocfilehash: 004eea82988c6a4f6c776802d5f4634f600ed404
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065592"

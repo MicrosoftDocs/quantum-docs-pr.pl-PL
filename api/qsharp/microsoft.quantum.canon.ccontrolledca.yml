@@ -9,7 +9,7 @@ summary: >-
   Modyfikator `CA` wskazuje, że operacja jest sterowana i sąsiadująca.
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
-  content: "(op: ('T = > jednostka to CTL + przymiotnik))"
+  content: "(op : ('T => Unit is Ctl + Adj))"
   types:
   - name: op
     summary: Operacja, która ma być stosowana warunkowo.
@@ -26,7 +26,7 @@ input:
     - Adjoint
     - Controlled
 output:
-  content: ((Bool, t) = Jednostka > jest CTL + przymiotnik)
+  content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
   - summary: Nowa operacja, która jest operacją, jeśli klasyczny bit kontroli ma wartość true.
     isOperation: true
@@ -48,9 +48,10 @@ typeParameters:
   summary: Typ wejściowy operacji, która ma być stosowana warunkowo.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068074"
+metadata:
+  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068074"
