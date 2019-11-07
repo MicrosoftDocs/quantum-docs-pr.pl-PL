@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 8967fee11931c6cef4b2d98084b2e319cea55284
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444110"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529961"
 ---
 # <a name="how-to-learn-quantum-computing"></a>Jak nauczyć się wykonywania obliczeń kwantowych?
 
@@ -29,7 +29,7 @@ Te pojęcia stanowią dobre wprowadzenie do podstawowej wiedzy wymaganej do rozp
 
 * [Podstawowa mechanika kwantowa](xref:microsoft.quantum.concepts.intro): Właśnie powiedzieliśmy, że nie trzeba znać fizyki kwantowej, aby rozpocząć kodowanie (i to prawda!). Jednak niektóre podstawowe pojęcia mechaniki kwantowej i powiązana notacja matematyczna będą pomocne w poznawaniu programowania kwantowego.
 
-* **Algebra liniowa (wektory i macierze)** : w obliczeniach kwantowych stany kwantowe są reprezentowane przez wektory, a operacje kwantowe są liniowymi transformacjami stosowanymi do tych wektorów.  Oto [samouczek w notesie Jupyter dotyczący algebry liniowej](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  Więcej informacji na ten temat można też znaleźć w naszym przewodniku po koncepcjach dotyczącym[wektorów i macierzy](xref:microsoft.quantum.concepts.vectors).
+* **Algebra liniowa (wektory i macierze)** : w obliczeniach kwantowych stany kwantowe są reprezentowane przez wektory, a operacje kwantowe są liniowymi transformacjami stosowanymi do tych wektorów.  Oto [samouczek w notesie Jupyter dotyczący algebry liniowej](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  Więcej informacji na temat algebry liniowej można też znaleźć w naszym przewodniku po koncepcjach dotyczącym [wektorów i macierzy](xref:microsoft.quantum.concepts.vectors).
 
 * **Arytmetyka zespolona**: współczynniki wektorów stanu kwantowego to liczby zespolone. Niektóre podstawowe pojęcia obliczeń kwantowych można zrozumieć bez znajomości liczb zespolonych, lecz szybko trzeba będzie włączyć je do używanego zestawu narzędzi kwantowych.  Oto [samouczek w notesie Jupyter dotyczący arytmetyki zespolonej](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic), w którym objaśniono podstawy matematyczne wymagane do pracy z obliczeniami kwantowymi. 
 
@@ -45,8 +45,8 @@ Być może chcesz bardziej szczegółowo zapoznać się z teorią mechaniki kwan
 
 * Zacznij od naszego przewodnika po [pojęciach związanych z obliczeniami kwantowych](xref:microsoft.quantum.concepts.intro) — kompilacji podstawowych koncepcji dotyczących przetwarzania kwantowego.
 * Książka _Learn Quantum Computing with Python and Q# (Poznaj obliczenia kwantowe z językami Python i Q#)_ (autorzy: Sarah C. Kaiser i Christophera E. Granade) stanowi doskonałe wprowadzenie dla osób, które mają mało doświadczenia z mechaniką kwantową lub nie mają go wcale, lecz posiadają nieco wiedzy programistycznej.
-* Książka _Quantum Computation and Quantum Information (Obliczenia kwantowe i informacja kwantowa)_ (autorzy: Michael A. Nielsen, Isaac L. Chuang) to najczęściej cytowany tekst w dziedzinie obliczeń kwantowych. Jest ona traktowana jako standardowy tekst dotyczący opisywanego zagadnienia. Książka zakłada minimalne doświadczenie z zakresu mechaniki kwantowej i informatyki. Jest to doskonały wybór dla tych czytelników, którzy chcą formalnego wprowadzenia do tematu, a także dla osób, które szukają szczegółowych informacji o zaawansowanych pojęciach.
-* Publikacje MIT OpenCourseWare obejmują doskonały [kurs online](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) polecany przez Allana Adamsa do nauki podstaw mechaniki kwantowej. Idealny dla tych, którzy chcą lepiej zrozumieć fizykę leżącą u podstaw tych zagadnień.
+* Książka _Quantum Computation and Quantum Information (Obliczenia kwantowe i informacja kwantowa)_ (autorzy: Michael A. Nielsen, Isaac L. Chuang) to najczęściej cytowany tekst w dziedzinie obliczeń kwantowych i jest on uważany za standard w tym temacie. Książka zakłada minimalne doświadczenie z zakresu mechaniki kwantowej i informatyki. Jest to doskonały wybór dla czytelników, którzy chcą formalnego wprowadzenia do tematu, a także dla czytelników, którzy szukają szczegółowych informacji o zaawansowanych pojęciach.
+* Publikacje MIT OpenCourseWare obejmują doskonały [kurs online](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) polecany przez Allana Adamsa do nauki podstaw mechaniki kwantowej. Idealny dla deweloperów, którzy chcą lepiej zrozumieć fizykę leżącą u podstaw tych zagadnień.
 
 ## <a name="join-the-quantum-community"></a>Dołącz do społeczności kwantowej
 

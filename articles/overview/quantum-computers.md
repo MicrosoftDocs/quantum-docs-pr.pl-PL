@@ -6,18 +6,20 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
-ms.openlocfilehash: d4be970c635ca090e8dcb1b58d5c840eebd4d110
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443838"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529948"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Co może robić komputer kwantowy?
 
 Co można zrobić za pomocą komputera kwantowego, czego nie można zrobić za pomocą komputera klasycznego?
 
-Rozwiązanie niektórych najtrudniejszych światowych problemów, w przypadku których współczesne komputery musiałyby pracować miliardy lat, zabiera komputerowi kwantowemu dni, godziny lub nawet minuty. Obliczenia kwantowe pozwolą badaczom na opracowywanie nowych katalizatorów i materiałów, ulepszanie leków, przyspieszenie postępów sztucznej inteligencji oraz odpowiadanie na fundamentalne pytania dotyczące pochodzenia naszego Wszechświata.
+Rozwiązanie niektórych najtrudniejszych światowych problemów, w przypadku których współczesne komputery musiałyby pracować miliardy lat, zabiera komputerowi kwantowemu dni, godziny lub nawet minuty.
+
+Obliczenia kwantowe pozwolą badaczom na opracowywanie nowych katalizatorów i materiałów, ulepszanie leków, przyspieszenie postępów sztucznej inteligencji oraz odpowiadanie na fundamentalne pytania dotyczące pochodzenia naszego Wszechświata.
 
 ## <a name="quantum-simulation"></a>Symulacja kwantowa
 
@@ -29,19 +31,25 @@ Cząsteczki chemiczne są systemami kwantowymi i dlatego można je analizować w
 
 ## <a name="cryptography"></a>Kryptografia
 
-Prawdopodobnie najbardziej znanym zastosowaniem komputerów kwantowych jest kryptografia, w przypadku której Peter Shor pokazał w 1994 roku, że skalowalny komputer kwantowy może złamać każdą powszechnie używaną technikę szyfrowania.  Kryptografia klasyczna bazuje na niewykonalności operacji na dużych liczbach, takich jak faktoryzacja dużych liczb na dwie liczby pierwsze.  Obliczenia kwantowe sprawiają, że te operacje stają się efektywnie obliczalne w teorii (za pomocą algorytmu Shora). O ile implementacja tego algorytmu nie jest fizycznie możliwa przy obecnej skali sprzętu kwantowego, to spowodował on rozwój algorytmów odpornych na techniki kwantowe w celu zapewnienia bezpieczeństwa danych w przyszłości, w tym nowatorskich algorytmów kwantowych do szyfrowania i dystrybucji kluczy kryptograficznych.  Firma Microsoft ma wiodący na świecie zespół ds. zabezpieczeń i kryptografii postkwantowej, który opracowuje algorytmy odporne na obliczenia kwantowe. 
+Prawdopodobnie najbardziej znanym zastosowaniem komputerów kwantowych jest kryptografia, w przypadku której Peter Shor pokazał w 1994 roku, że skalowalny komputer kwantowy może złamać każdą powszechnie używaną technikę szyfrowania.  Kryptografia klasyczna bazuje na niewykonalności operacji na dużych liczbach, takich jak faktoryzacja dużych liczb na dwie liczby pierwsze.
+
+Obliczenia kwantowe sprawiają, że te operacje stają się efektywnie obliczalne w teorii (za pomocą algorytmu Shora). O ile implementacja tego algorytmu nie jest fizycznie możliwa przy obecnej skali sprzętu kwantowego, to spowodował on rozwój algorytmów odpornych na techniki kwantowe w celu zapewnienia bezpieczeństwa danych w przyszłości, w tym nowatorskich algorytmów kwantowych do szyfrowania i dystrybucji kluczy kryptograficznych.
+
+Firma Microsoft ma wiodący na świecie zespół ds. zabezpieczeń i kryptografii postkwantowej, który opracowuje algorytmy odporne na obliczenia kwantowe.
 
 ## <a name="optimization"></a>Optymalizacja
 
-Optymalizacja to wielkoskalowe przeszukiwanie wielowymiarowej przestrzeni w celu znalezienia bardzo dobrego rozwiązania, które minimalizuje daną funkcję kosztu.   Na komputerze kwantowym można przyspieszyć algorytmy optymalizacji, umożliwiając znalezienie rozwiązań, które w przeciwnym razie były nieosiągalne. Zastosowania obejmują transport, logistykę, opiekę zdrowotną, diagnostykę i materiałoznawstwo. Może to mieć istotny wpływ na możliwości usprawniania tych branż. 
+Optymalizacja to wielkoskalowe przeszukiwanie wielowymiarowej przestrzeni w celu znalezienia rozwiązania, które minimalizuje daną funkcję kosztu.   Na komputerze kwantowym można przyspieszyć algorytmy optymalizacji, umożliwiając znalezienie rozwiązań, które w przeciwnym razie były nieosiągalne. Zastosowania obejmują transport, logistykę, opiekę zdrowotną, diagnostykę i materiałoznawstwo. Może to mieć istotny wpływ na możliwości usprawniania tych branż.
 
-Optymalizacja przy użyciu obliczeń kwantowych pozwala wprowadzać innowacje dotyczące transportu i logistyki w sposób, który nie jest możliwy we współczesnych systemach klasycznych. Optymalizacja przepływu ruchu może zmniejszyć zatory.  Oprócz planowania tras istnieją problemy takie jak przypisywanie bramek na lotniskach, dostarczanie paczek i planowanie zadań.  Dzięki przełomom w materiałoznawstwie zostaną wprowadzone nowe formy energii, baterie o większej pojemności oraz lżejsze i mocniejsze materiały. 
+Optymalizacja przy użyciu obliczeń kwantowych pozwala wprowadzać innowacje dotyczące transportu i logistyki w sposób, który nie jest możliwy we współczesnych systemach klasycznych.
+
+Optymalizacja przepływu ruchu może zmniejszyć zatory.  Oprócz planowania tras istnieją problemy takie jak przypisywanie bramek na lotniskach, dostarczanie paczek i planowanie zadań. Dzięki przełomom w materiałoznawstwie zostaną wprowadzone nowe formy energii, baterie o większej pojemności oraz lżejsze i mocniejsze materiały.
 
 ## <a name="machine-learning"></a>Uczenie maszynowe
 
 Bardzo wiele obliczeń numerycznych w przypadku klasycznego przetwarzania danych polega głównie na rozwiązywaniu liniowych systemów równań. Jest to szczególnie prawdziwe w dziedzinie uczenia maszynowego, w której większość kosztów przetwarzania to obliczanie odwrotności ogromnych macierzy.
 
-Na szczęście istnieje algorytm kwantowy, który umożliwia nam określenie przybliżonego rozwiązania systemu wykładniczo szybciej niż w przypadku komputera klasycznego. Otwiera to wrota znacznemu przyspieszeniu rozwiązywania wszystkich problemów wymagających rozwiązania liniowych systemów równań.
+Na szczęście istnieje algorytm kwantowy, który umożliwia nam określenie przybliżonego rozwiązania systemu wykładniczo szybciej niż w przypadku komputera klasycznego. Ten algorytm otwiera wrota do znacznego przyspieszenia rozwiązywania wszystkich problemów wymagających rozwiązania liniowych systemów równań.
 
 Rozwiązania problemów w tych obszarach będą pomocne w dziedzinach kryzysu energetycznego, zmian klimatu, niedoborów żywności oraz dokładnej i spersonalizowanej diagnostyki medycznej.
 

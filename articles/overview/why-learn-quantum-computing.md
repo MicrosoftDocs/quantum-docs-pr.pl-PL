@@ -6,20 +6,22 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443906"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529915"
 ---
 # <a name="why-learn-quantum-computing"></a>Dlaczego warto uczyć się wykonywania obliczeń kwantowych?
 
-Komputer kwantowe to świetny pomysł, ale dlaczego warto nauczyć się wykonywać obliczenia kwantowe? W tej sekcji przedstawimy kilka powodów, dlaczego rozpoczęcie uczenia się wykonywania obliczeń kwantowych już dzisiaj jest świetnym pomysłem.
+Komputer kwantowe to świetny pomysł, ale dlaczego warto nauczyć się wykonywać obliczenia kwantowe?
+
+W tej sekcji przedstawimy kilka powodów, dlaczego rozpoczęcie uczenia się wykonywania obliczeń kwantowych już dzisiaj jest świetnym pomysłem.
 
 ## <a name="join-the-quantum-revolution"></a>Dołącz do rewolucji kwantowej
 
-Badacze właśnie rozpoczęli przewidywanie przyszłych technologii kwantowych. Jesteśmy teraz świadkiem tego, co niektórzy nazywają drugą rewolucją kwantową. Pierwszy rewolucja polegała na użyciu fizyki kwantowej do tworzenia rewolucyjnych wynalazków, takich jak laser i tranzystor. W ciągu ostatniej dekady dokonał się postęp naukowy dotyczący systemów kwantowych na poziomie poszczególnych cząstek. Otwiera to drzwi do ogromnych możliwości, z których większość nie została jeszcze odkryta. Nie stój z boku, zacznij działać! Już dzisiaj możesz zacząć współtworzyć technologię, która będzie kształtować jutrzejszy świat.
+Badacze właśnie rozpoczęli przewidywanie przyszłych technologii kwantowych. Jesteśmy teraz świadkiem tego, co niektórzy nazywają drugą rewolucją kwantową. Pierwszy rewolucja polegała na użyciu fizyki kwantowej do tworzenia rewolucyjnych wynalazków, takich jak laser i tranzystor. W ciągu ostatniej dekady dokonał się postęp naukowy dotyczący systemów kwantowych na poziomie poszczególnych cząstek, co otworzyło drzwi do ogromnych możliwości, z których większość nie została jeszcze odkryta. Nie stój z boku, zacznij działać! Już dzisiaj możesz zacząć współtworzyć technologię, która będzie kształtować jutrzejszy świat.
 
 ## <a name="solving-great-challenges-requires-diverse-communities"></a>Rozwiązywanie wielkich wyzwań wymaga zróżnicowanych społeczności
 
