@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Współczynniki wielomianu nieparzystego jako tablicę podwójną, czyli tablicę $ [a_0, A_1,..., a_k] $ dla nieparzystego wielomianu $P (x) = a_0 x + A_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
+    summary: Współczynniki nieparzystego wielomianu jako tablicy podwójnej, tj. Array $ [a_0, a_1,..., a_k] $ dla nieparzystego wielomianu $P (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
     isArray: true
     isPrimitive: true
     uid: Double

@@ -7,7 +7,7 @@ summary: >-
   Stosuje analogową wartość Y do transformacji Hadamard, która polega na wzajemnym zmianie osi Z i Y.
 
 
-  Przekształcenie x Hadamard $H _Y = S H $ na jednym qubit:
+  Przekształcanie Hadamard Y $H _Y = S H $ na jednym qubit to:
 
 
   \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
