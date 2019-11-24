@@ -7,10 +7,10 @@ summary: >-
   Reprezentuje jednostkę, w której dowolny operator zainteresowań jest zakodowany w bloku znajdującym się w lewym górnym rogu.
 
 
-  Oznacza to, że `BlockEncoding` jest jednostkowym $U $, gdzie pojedynczy operator $H $ interesu, który działa w rejestrze systemu `s` jest zakodowany w bloku znajdującym się w lewym górnym rogu, odpowiadającym stanowi pomocniczemu $ \ket{0}_A $. Czyli
+  Oznacza to, że `BlockEncoding` jest jednostkowym $U $, gdzie dowolny operator $H $ interesu, który działa w rejestrze systemowym `s` jest zakodowany w bloku z lewej strony, odpowiadającym stanowi pomocniczemu $ \ket{0}_a $. Czyli
 
 
-  $ $ \begin{align} (\bra{0}_A \ otimes I_s) U (\ket{0}_A \ otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
   ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7

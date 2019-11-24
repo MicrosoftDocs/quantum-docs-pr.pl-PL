@@ -7,7 +7,7 @@ summary: >-
   Stosuje bramę kontrolowane-Y (CY) do pary qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & & 0 \end{align} , $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align}, $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
 remarks: >-
   Równoważne:
 

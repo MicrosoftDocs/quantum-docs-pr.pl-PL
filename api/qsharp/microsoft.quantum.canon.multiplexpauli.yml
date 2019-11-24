@@ -7,17 +7,17 @@ summary: >-
   Stosuje obrót Pauli na tablicy qubits.
 
 
-  W ten sposób stosowana jest przemnożona operacja jednostkowa, $U $, która dokonuje rotacji według kąta $ \theta_j $ o pojedynczym operatorze Pauli $P $, gdy jest to kontrolowane przez $n $-qubit numer stanu $ \ket{j} $.
+  W ten sposób stosowana jest operacja pomnożona przez operacje jednostkowe $U $, która dokonuje rotacji według kąta $ \ theta_j $ dotyczącej operatora Pauli o pojedynczej qubit, $P $, gdy jest to kontrolowane przez $n $-qubit Number $ \ket{j} $.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
-remarks: '`coefficients` zostaną uzupełnione elementami $ \theta_j = $0,0, jeśli określono mniej niż $2 ^ n $.'
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
+remarks: '`coefficients` zostaną uzupełnione elementami $ \ theta_j = $0,0, jeśli określono mniej niż $2 ^ n $.'
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Tablica do $2 ^ n $ współczynniki $ \theta_j $. Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.
+    summary: Tablica do $2 ^ n $ współczynniki $ \ theta_j $. Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -29,7 +29,7 @@ input:
     summary: $n $-qubit kontroli rejestru, który koduje liczbę Stany $ \ket{j} $ w formacie little-endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Pojedynczy rejestr qubit, który jest obrócony przez $e ^ {i P \theta_j} $.
+    summary: Pojedynczy rejestr qubit, który jest obrócony $e ^ {i P \ theta_j} $.
     isPrimitive: true
     uid: Qubit
 output:
