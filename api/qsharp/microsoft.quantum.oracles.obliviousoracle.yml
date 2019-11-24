@@ -14,7 +14,7 @@ summary: >-
 
   - System rejestruje $s $, na którym jest zastosowana żądana jednostka $U $, po wybraniu rejestracji $a $ w stanie $ \ket{t}\_$.
 remarks: >-
-  Ta Oracle zdefiniowana przez $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ działa w Ancilla State $ \ket{s}\_a $ to Zaimplementuj $U jednostkowe $ na dowolnym stanie systemu $ \ket{\psi}\_s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{t}\_a $.
+  Ta Oracle zdefiniowana przez $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ działa na stan Ancilla $ \ket{s}\_a $, aby zaimplementować $U jednostki $ na dowolnym stanie systemu $ \ket{\psi}\_s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{t}\_a $.
 
   Pierwszy parametr jest rejestrem qubit $ \ket{s}\_a $. Drugi parametr jest rejestrem qubit $ \ket{\psi}\_s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);

@@ -7,7 +7,7 @@ summary: >-
   Dwie operacje, potwierdzają, że działają identycznie dla wszystkich stanów wejściowych.
 
 
-  To potwierdzenie jest implementowane przez sprawdzenie działania operacji we wszystkich stanach formularza $V _0 \otimes... \otimes v_ {n-1} $, gdzie $V _k $ jest jednym z Stanów $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ i $ \ket{i} $ (+ 1 eigenstate-Pauli-operator).
+  To potwierdzenie jest implementowane przez sprawdzenie działania operacji we wszystkich stanach formularza $V _0 \otimes... \otimes V_ {n-1} $, gdzie $V _k $ to jeden z Stanów $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ i $ \ket{i} $ (+ 1 eigenstate-operator Pauli).
 
 
   To potwierdzenie używa $n $ qubits i wymaga wielu wywołań operacji, które są porównywane.

@@ -7,7 +7,7 @@ summary: >-
   Koduje operatora zainteresowania w `BlockEncodingReflection`.
 
 
-  To konstruuje `BlockEncodingReflection` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \sum_{j} | \alpha_j | U_j $ interes jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+  To konstruuje `BlockEncodingReflection` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 remarks: Ta `BlockEncoding` implementacja udostępnia właściwości `BlockEncodingReflection`.
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:

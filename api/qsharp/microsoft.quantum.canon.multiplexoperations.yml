@@ -7,7 +7,7 @@ summary: >-
   Stosuje tablicę operacji sterowaną przez tablicę liczb Stanów.
 
 
-  Oznacza to, że program stosuje operacje jednostkowe z pomnożeniem $U $, które stosują $V jednostek _j $, gdy są kontrolowane przez $n $-qubit Number State $ \ket{j} $.
+  Oznacza to, że jest stosowana operacja jednostkowa o pomnożenia $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez $n $-qubit Number State $ \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.

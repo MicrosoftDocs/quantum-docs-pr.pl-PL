@@ -10,13 +10,13 @@ functions:
     Koduje operatora zainteresowania w `BlockEncoding`.
 
 
-    To konstruuje `BlockEncoding` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \sum_{j} | \alpha_j | U_j $ interes jest liniową kombinacją unitaries. Typowo, $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    To konstruuje `BlockEncoding` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     Koduje operatora zainteresowania w `BlockEncodingReflection`.
 
 
-    To konstruuje `BlockEncodingReflection` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \sum_{j} | \alpha_j | U_j $ interes jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    To konstruuje `BlockEncodingReflection` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
     Konwertuje `BlockEncoding` na odpowiedni `BLockEncodingReflection`.
@@ -52,7 +52,7 @@ functions:
     Tworzy moduł kodowania bloku dla hamiltonian.
 
 
-    Hamiltonian $H = \sum_{j}\alpha_j P_j $ jest opisywany przez sumę Pauli warunków $P _j $, każdy z rzeczywistym czynnikiem $ \alpha_j $.
+    Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ jest opisywany przez sumę Pauliych warunków $P _j $, każdy z rzeczywistym czynnikiem $ \ alpha_j $.
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
   summary: Wyodrębnia współczynnik terminu Pauli opisanego przez `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.paulievolutionfunction
@@ -88,10 +88,10 @@ newtypes:
     Reprezentuje jednostkę, w której dowolny operator zainteresowań jest zakodowany w bloku znajdującym się w lewym górnym rogu.
 
 
-    Oznacza to, że `BlockEncoding` jest jednostkowym $U $, gdzie pojedynczy operator $H $ interesu, który działa w rejestrze systemu `s` jest zakodowany w bloku znajdującym się w lewym górnym rogu, odpowiadającym stanowi pomocniczemu $ \ket{0}_A $. Czyli
+    Oznacza to, że `BlockEncoding` jest jednostkowym $U $, gdzie dowolny operator $H $ interesu, który działa w rejestrze systemowym `s` jest zakodowany w bloku z lewej strony, odpowiadającym stanowi pomocniczemu $ \ket{0}_a $. Czyli
 
 
-    $ $ \begin{align} (\bra{0}_A \ otimes I_s) U (\ket{0}_A \ otimes I_s) = H \end{align} $ $.
+    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: Reprezentuje `BlockEncoding`, który jest również odbiciem.
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -143,10 +143,10 @@ newtypes:
     Reprezentuje `BlockEncoding`, który jest kontrolowany przez rejestr zegara.
 
 
-    Oznacza to, że `TimeDependentBlockEncoding` jest jednostkowym $U $ kontrolowanym przez stan $ \ket{k}_D $ w rejestrze zegara `d` w taki sposób, że dowolny operator $H _k $ interesu, który działa w rejestrze systemu `s` jest zakodowany w bloku znajdującym się w lewym górnym rogu odpowiadającym stanowi pomocniczemu $ \ket @no __t_3_ _A $. Czyli
+    Oznacza to, że `TimeDependentBlockEncoding` jest jednostkowym $U $ kontrolowanym przez stan $ \ket{k} _d $ w rejestrze zegara `d` w taki sposób, że dowolny operator $H _k $ zainteresowania, który działa na `s` rejestru systemu, jest zakodowany w bloku znajdującym się w lewym górnym rogu odpowiadającym stanowi pomocniczemu $ \ket{0}_a $. Czyli
 
 
-    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
     \end{align} $ $.
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem

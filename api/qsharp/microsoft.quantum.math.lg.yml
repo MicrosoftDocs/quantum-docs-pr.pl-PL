@@ -15,7 +15,7 @@ input:
 output:
   content: Double
   types:
-  - summary: Logarytm dziesiętny $y = \log_2 (x) $ taki, który $x = 2 ^ y $.
+  - summary: Wartość logarytmu Base-2 $y = \ log_2 (x) $ taką, która $x = 2 ^ y $.
     isPrimitive: true
     uid: Double
 metadata:

@@ -44,7 +44,7 @@ output:
   content: Double
   types:
   - summary: >-
-      Oszacowanie $ \hat{p} $ częstotliwości, z którą $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zwraca `Zero`, uzyskany przy użyciu nieobciążonego dwumianu, szacowania $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, gdzie $n\_{\ pozostała liczba zaobserwowanych wyników to z prze`Zero`.
+      Oszacowanie $ \hat{p} $ częstotliwości, z którą $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zwraca `Zero`, uzyskane przy użyciu nieobciążonego dwumianu szacowania $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, gdzie $n\_{\uparrow} $ to liczba zaobserwowanych wyników `Zero`.
 
 
       Jest to szczególnie ważne w przypadku maszyn docelowych, które respektują ograniczenia fizyczne, tak że nie można mierzyć prawdopodobieństwa.

@@ -7,8 +7,8 @@ summary: >-
   Tworzy moduł kodowania bloku dla hamiltonian.
 
 
-  Hamiltonian $H = \sum_{j}\alpha_j P_j $ jest opisywany przez sumę Pauli warunków $P _j $, każdy z rzeczywistym czynnikiem $ \alpha_j $.
-remarks: Ten element jest uzyskiwany przez przygotowanie i cofnięcie przygotowania stanu $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ KET {j} $ i konstruowanie <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> jednostek i <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+  Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ jest opisywany przez sumę Pauliych warunków $P _j $, każdy z rzeczywistym czynnikiem $ \ alpha_j $.
+remarks: Jest on uzyskiwany przez przygotowanie i cofnięcie przygotowania stanu $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ i konstruowanie <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> jednostek i <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>sterowanych przez mnożenie.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Pierwszy parametr
 
 
-      Jedna z norm współczynników $ \Alpha = \sum_{j} | \alpha_j | $.
+      Jedna z norm współczynników $ \Alpha = \ sum_ {j} | \ alpha_j | $.
 
 
       ## <a name="second-parameter"></a>Drugi parametr

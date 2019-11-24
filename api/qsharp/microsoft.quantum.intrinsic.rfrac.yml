@@ -7,7 +7,7 @@ summary: >-
   Stosuje obrót dotyczący danej osi Pauli o kąt określony jako ułamek dyadic.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} gdzie $ \mu \In \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} gdzie $ \mu \In \{I, X, Y, Z\}$.
 
 
   > [!WARNING]

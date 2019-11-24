@@ -4,7 +4,7 @@ name: MultiplexOperationsFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Stosuje przemnożoną przez siebie operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+  Stosuje przemnożoną przez siebie operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.

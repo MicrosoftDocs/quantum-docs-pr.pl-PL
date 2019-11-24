@@ -7,11 +7,11 @@ summary: >-
   Tworzy jednolity nadpozycja w stosunku do Stanów, które kodują od 0 do `nIndices`.
 
 
-  Oznacza to, że ta jednostka $U $ tworzy jednolity nadpozycja dla wszystkich stanów $0 $ do $M-$1, z uwzględnieniem stanu wejściowego $ \ket{0\cdots 0} $. Innymi słowy, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+  Oznacza to, że ta jednostka $U $ tworzy jednolity nadpozycja dla wszystkich stanów $0 $ do $M-$1, z uwzględnieniem stanu wejściowego $ \ket{0\cdots 0} $. Innymi słowy, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  Poniższy przykład przygotowuje stan $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ on $3 $ qubits.
+  Poniższy przykład przygotowuje stan $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ on $3 $ qubits.
 
 
   ```Q#

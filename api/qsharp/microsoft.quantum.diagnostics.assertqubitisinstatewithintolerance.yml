@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  Tolerancja jest $L\_{\infty} $ odległość między 3 wymiarowymi wektorami rzeczywistymi (x ₂, x ₃, x ₄) zdefiniowanymi przez $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ i Real Vector (Y ₂ , y ₃, y ₄) zdefiniowane przez ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z, gdzie ρ jest matrycą gęstości odpowiadającą stanowi rejestru.
+  Tolerancja jest $L\_{\infty} $ odległość między trójwymiarową rzeczywistością wektorową (x ₂, x ₃, x ₄) zdefiniowane przez $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ i Real Vector (y ₂, y ₃, y ₄) zdefiniowane przez ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z, gdzie ρ jest matrycą gęstości odpowiadającą stanowi rejestru.
 
   Jest to tylko prawdziwe w założeniu, że TR (ρ) i TR (| ψ ⟩ ⟨ ψ |) są zarówno 1 (np. x ₁ = 1/2, y ₁ = 1/2).
 
