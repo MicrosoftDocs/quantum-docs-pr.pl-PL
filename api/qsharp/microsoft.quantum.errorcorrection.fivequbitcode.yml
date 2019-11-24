@@ -8,7 +8,7 @@ remarks: >-
   Ten kod został znaleziony niezależnie w następujących dwóch dokumentach:
 
 
-  - C. C. Bennett, D. DiVincenzo, J. A. Smolin i W. K. Wootters, "mieszane Stany Entanglement i Korekcja błędów Quantum," fizyczny. Rev. A, 54 (1996) PP. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 i
+  - C. H. Bennett, D. DiVincenzo, J. A. Smolin i W. K. Wootters, "mieszane Stany Entanglement i Korekcja błędów Quantum," fizyczny. Rev. A, 54 (1996) PP. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 i
 
   - R. Laflamme, C. Miquel, J. P. Paz i W. H. Zurek, "doskonały kod korekcji błędów Quantum", "fizyczny. Rev. Lett. 77 (1996) PP. 198-201; https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'

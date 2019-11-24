@@ -247,13 +247,13 @@ functions:
     > Przestarzałe. Użyj @"microsoft.quantum.math.modulusi".
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
-    Zwraca przemnożoną operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+    Zwraca przemnożoną operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: >-
-    Zwraca przemnożoną operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+    Zwraca przemnożoną operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -458,16 +458,16 @@ operations:
     Wykonuje kontrolowane "i drabinę" w docelowym qubits.
 
 
-    Ma to zastosowanie do jednostki nadawanej przez następującą mapę w wektorach obliczeniowych: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $ WHERE $ \ket{x\_1, \dots, x\_n} $ odwołuje się do obliczeniowych Stanów `controls`i gdzie $ \ket{y\_1, \dots, y\_{n-1}} $ odwołuje się do obliczanych Stanów `targets`.
+    Ma to zastosowanie do jednostki nadawanej przez następującą mapę w wektorach obliczeniowych: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $ WHERE $ \ket{x\_1, \dots, x\_n} $ odwołuje się do obliczeniowych Stanów `controls`i gdzie $ \ket{y\_1, \dots, y\_{n-1}} $ odwołuje się do obliczanych Stanów `targets`.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     Stosuje tablicę złożonych faz do numerycznych Stanów rejestru qubits.
 
 
-    Oznacza to, że implementuje ona ukośną operację jednostkową $U $, która stosuje złożoną fazę $e ^ {i \theta_j} $ na $n $-qubit Number State $ \ket{j} $.
+    Oznacza to, że implementuje ona ukośną operację jednostkową $U $, która stosuje złożoną fazę $e ^ {i \ theta_j} $ na $n $-qubit Number State $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ KET {j} \ bra {j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Stosuje Fermionic ZAMIANę.
 - uid: microsoft.quantum.canon.applyif
@@ -752,7 +752,7 @@ operations:
     Oblicza parzystość tablicy qubits w docelowym qubit.
 
 
-    Jeśli tablica jest początkowo w stanie $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{Target}}} $, ostatni stan jest określony przez $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
+    Jeśli tablica jest początkowo w stanie $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\Text{Target}}} $, stan końcowy jest określony przez $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
 - uid: microsoft.quantum.canon.copymostsignificantbitle
   summary: >-
     > [!WARNING]
@@ -763,19 +763,19 @@ operations:
     Stosuje bramę z kontrolą X (CX) do pary qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}, $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
 - uid: microsoft.quantum.canon.cy
   summary: >-
     Stosuje bramę kontrolowane-Y (CY) do pary qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & & 0 \end{align} , $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align}, $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
 - uid: microsoft.quantum.canon.cz
   summary: >-
     Stosuje bramę z kontrolą Z (CZ) do pary qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}, $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
 - uid: microsoft.quantum.canon.delay
   summary: Stosuje daną operację z opóźnieniem.
 - uid: microsoft.quantum.canon.delaya
@@ -789,7 +789,7 @@ operations:
     Stosuje analogową wartość Y do transformacji Hadamard, która polega na wzajemnym zmianie osi Z i Y.
 
 
-    Przekształcenie x Hadamard $H _Y = S H $ na jednym qubit:
+    Przekształcanie Hadamard Y $H _Y = S H $ na jednym qubit to:
 
 
     \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
@@ -854,19 +854,19 @@ operations:
     Stosuje tablicę operacji sterowaną przez tablicę liczb Stanów.
 
 
-    Oznacza to, że program stosuje operacje jednostkowe z pomnożeniem $U $, które stosują $V jednostek _j $, gdy są kontrolowane przez $n $-qubit Number State $ \ket{j} $.
+    Oznacza to, że jest stosowana operacja jednostkowa o pomnożenia $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez $n $-qubit Number State $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
   summary: >-
-    Stosuje przemnożoną przez siebie operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+    Stosuje przemnożoną przez siebie operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: >-
-    Stosuje przemnożoną przez siebie operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+    Stosuje przemnożoną przez siebie operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -875,19 +875,19 @@ operations:
     Stosuje obrót Pauli na tablicy qubits.
 
 
-    W ten sposób stosowana jest przemnożona operacja jednostkowa, $U $, która dokonuje rotacji według kąta $ \theta_j $ o pojedynczym operatorze Pauli $P $, gdy jest to kontrolowane przez $n $-qubit numer stanu $ \ket{j} $.
+    W ten sposób stosowana jest operacja pomnożona przez operacje jednostkowe $U $, która dokonuje rotacji według kąta $ \ theta_j $ dotyczącej operatora Pauli o pojedynczej qubit, $P $, gdy jest to kontrolowane przez $n $-qubit Number $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
 - uid: microsoft.quantum.canon.multiplexz
   summary: >-
     Stosuje obrót Pauli Z na tablicy qubits.
 
 
-    W ten sposób stosowana jest przemnożona operacja jednostkowa, $U $, która dokonuje rotacji według kąta $ \theta_j $ o pojedynczym operatorze Pauli $Z $, gdy jest to kontrolowane przez $n $-qubit numer stanu $ \ket{j} $.
+    W ten sposób stosowana jest operacja pomnożona przez operacje jednostkowe $U $, która dokonuje rotacji według kąta $ \ theta_j $ dotyczącej operatora Pauli o pojedynczej qubit, $Z $, gdy jest to kontrolowane przez $n $-qubit Number $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
 - uid: microsoft.quantum.canon.noop
   summary: Wykonuje operację Identity (No-op) w argumencie.
 - uid: microsoft.quantum.canon.qft

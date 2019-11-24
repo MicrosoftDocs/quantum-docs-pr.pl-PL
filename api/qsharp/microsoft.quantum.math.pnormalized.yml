@@ -23,7 +23,7 @@ input:
 output:
   content: Double[]
   types:
-  - summary: Tablica $x $ znormalizowana przez $p $-norma\|x\|_p $.
+  - summary: Tablica $x $ znormalizowana przez $p $-Standard $\|x\|_p $.
     isArray: true
     isPrimitive: true
     uid: Double

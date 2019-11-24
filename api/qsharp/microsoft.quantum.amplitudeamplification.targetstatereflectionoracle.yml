@@ -7,7 +7,7 @@ summary: >-
   Konstruuje `ReflectionOracle` o stanie docelowym jednoznacznie oznaczony przez flagę qubit.
 
 
-  Stan docelowy ma jeden qubit ustawiony na 1, a wszystkie pozostałe 0: $ \ket{1}_F $.
+  Stan docelowy ma jeden qubit ustawiony na 1, a wszystkie pozostałe 0: $ \ket{1}_f $.
 syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(idxFlagQubit : Int)'
@@ -19,7 +19,7 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: '`ReflectionOracle`, który odzwierciedla informacje o stanie oznaczonym przez $ \ket{1}_F $.'
+  - summary: '`ReflectionOracle`, który odzwierciedla informacje o stanie oznaczonym przez $ \ket{1}_f $.'
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle

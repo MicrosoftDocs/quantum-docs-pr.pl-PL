@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Współczynniki wielomianu nawet jako tablicę podwójną, czyli tablicę $ [a_0, A_1,..., a_k] $ dla parzystego wielomianu $P (x) = a_0 + A_1 x ^ 2 + \cdots + a_k x ^ {2K} $.
+    summary: Współczynniki wielomianu parzystego jako tablicę podwójną, czyli tablicę $ [a_0, a_1,..., a_k] $ dla parzystego wielomianu $P (x) = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2K} $.
     isArray: true
     isPrimitive: true
     uid: Double

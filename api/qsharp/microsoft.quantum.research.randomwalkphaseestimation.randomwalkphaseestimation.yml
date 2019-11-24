@@ -8,7 +8,7 @@ remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Szacowanie fazy iteracyjnej i Eigenstates
 
 
-  Ogólnie rzecz biorąc, rejestr wejściowy `eigenstate` nie musi być eigenstate $ \ket{\phi} $ $U $, ale może być nadpozycją w przedziale eigenstates. Załóżmy, że stan danych wejściowych jest określony przez \begin{align} \ket{\psi} & = \sum\_{j} \Alpha\_j \ket{\phi\_j}, \end{align}, gdzie $\{\Alpha\_j\}$ są złożonymi współczynnikimi, takimi jak $ \sum\_j | \Alpha @no__ t_7_ j | ^ 2 = $1 i gdzie $U \ket{\phi\_j} = \phi\_j\ket {\ Fi\_j} $.
+  Ogólnie rzecz biorąc, rejestr wejściowy `eigenstate` nie musi być eigenstate $ \ket{\phi} $ $U $, ale może być nadpozycją w przedziale eigenstates. Załóżmy, że stan danych wejściowych jest określony przez \begin{align} \ket{\psi} & = \sum\_{j} \Alpha\_j \ket{\phi\_j}, \end{align}, gdzie $\{\Alpha\_j\}$ są złożonymi współczynnikimi, takimi jak $ \sum\_j | \Alpha\_j | ^ 2 = $1 i gdzie $U \ket{\phi\_j} = \phi\_j\ket {\ Fi\_j} $.
 
 
   Następnie wykonywanie szacowania fazy iteracyjnej ostatecznie wywoła zbieżność do jednego eigenstateu, zgodnie z opisem w [przewodniku programistycznym](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates).

@@ -7,7 +7,7 @@ summary: >-
   Wykonuje wspólne pomiary co najmniej jednego qubits w określonych bazach Pauli.
 
 
-  Wynik danych wyjściowych jest podawany przez dystrybucję: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes p_ {N-1} \right) \mid | \psi}, \end{align}, gdzie $P _i $ to $i $ ty elementu @no__ t_0_ i gdzie $N = \texttt{Length} (\texttt{Bases}) $.
+  Wynik danych wyjściowych jest podawany przez dystrybucję: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, gdzie $P _i $ to $i $ th elementu `bases`i gdzie $N = \texttt{Length} (\texttt{Bases}) $.
 
   Oznacza to, że pomiar zwraca `Result` $d $ w taki sposób, że eigenvalue zaobserwowanego efektu pomiarowego wynosi $ (-1) ^ d $.
 remarks: Jeśli tablica podstawa i tablica qubit są różne długości, operacja zakończy się niepowodzeniem.

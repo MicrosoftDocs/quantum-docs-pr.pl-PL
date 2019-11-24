@@ -7,7 +7,7 @@ summary: >-
   Stosuje bramę ZAMIANy do pary qubits.
 
 
-  \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+  \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
   gdzie wiersze i kolumny są uporządkowane jak w przewodniku koncepcji Quantum.

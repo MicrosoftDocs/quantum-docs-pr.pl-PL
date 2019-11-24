@@ -7,7 +7,7 @@ summary: >-
   Oblicza parzystość tablicy qubits w docelowym qubit.
 
 
-  Jeśli tablica jest początkowo w stanie $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{Target}}} $, ostatni stan jest określony przez $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
+  Jeśli tablica jest początkowo w stanie $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\Text{Target}}} $, stan końcowy jest określony przez $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
 remarks: >-
   Następujące elementy są równoważne:
 
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  oraz
+  i
 
 
   ```qsharp
