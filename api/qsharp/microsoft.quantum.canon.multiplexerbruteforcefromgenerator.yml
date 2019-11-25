@@ -4,7 +4,7 @@ name: MultiplexerBruteForceFromGenerator
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Zwraca przemnożoną operację jednostkową $U $, która stosuje jednostkę $V _j $, gdy jest kontrolowana przy użyciu stanu n-qubit Number $ \ket{j} $.
+  Zwraca przemnożoną operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
