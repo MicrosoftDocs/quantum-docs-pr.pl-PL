@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyseriesofopsca
+name: ApplySeriesOfOpsCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Stosuje listę operacji Ops i ich obiekty docelowe sekwencyjnie na tablicy. (Sąsiadujące + kontrolowane)
+syntax: "operation ApplySeriesOfOpsCA (listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[]) : Unit"
+input:
+  content: "(listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[])"
+  types:
+  - name: listOfOps
+    summary: >-
+      Lista operacji, z których każda pobiera tablicę, która ma zostać zastosowana. Są one stosowane sekwencyjnie, najpierw najniższy indeks.
+
+      Każdy z nich musi mieć zarówno sąsiadujące, jak i kontrolowane Funktor.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: targets
+    summary: Zagnieżdżone tablice opisujące cele operacji. Każda tablica powinna zawierać listę liczby całkowite opisujących indeksy, które mają być używane.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+  - name: register
+    summary: Zarejestruj się, aby zarejestrować się w qubit.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyoprepeatedlyover
+metadata:
+  ms.openlocfilehash: 797928c16e9b14127d12bf6853181cf1e2c8c4ae
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866380"

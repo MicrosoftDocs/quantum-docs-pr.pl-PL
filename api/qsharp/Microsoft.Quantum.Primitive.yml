@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.message".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nKomunikat jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.message\".\nUżyj @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.assert".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPotwierdzenie zostało zaniechane. Zamiast tego użyj @\"microsoft.quantum.intrinsic.assert\".\nUżyj @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.assertprob".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertProb jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.assertprob\".\nUżyj @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.ccnot".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCCNOT jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.ccnot\".\nUżyj @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.cnot".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCNOT jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.cnot\".\nUżyj @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.exp".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nEXP jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.exp\".\nUżyj @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.expfrac".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nExpFrac jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.expfrac\".\nUżyj @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.h".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nH został uznany za przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.h\".\nUżyj @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.i".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nJestem przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.i\".\nUżyj @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.m".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nM jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.m\".\nUżyj @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.measure".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMiara jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.measure\".\nUżyj @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.canon.applytoeachca".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMultiX jest przestarzała. Zamiast tego należy użyć @ \"applytoeachca (x, _)\".\nUżyj @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.r".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nJęzyk R jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.r\".\nUżyj @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.r1".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nR1 jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.r1\".\nUżyj @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.r1frac".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nR1Frac jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.r1frac\".\nUżyj @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.random".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLosowo jest przestarzałe. Zamiast tego użyj @\"microsoft.quantum.intrinsic.random\".\nUżyj @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.reset".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nResetowanie zostało zaniechane. Zamiast tego użyj @\"microsoft.quantum.intrinsic.reset\".\nUżyj @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.resetall".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nResetAll jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.resetall\".\nUżyj @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.rfrac".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRFrac jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.rfrac\".\nUżyj @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.rx".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nOdbieranie zostało wycofane. Zamiast tego użyj @\"microsoft.quantum.intrinsic.rx\".\nUżyj @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.ry".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRy jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.ry\".\nUżyj @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.rz".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRz jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.intrinsic.rz\".\nUżyj @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.s".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nS jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.s\".\nUżyj @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.swap".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nZAMIANa została zaniechana. Zamiast tego użyj @\"microsoft.quantum.intrinsic.swap\".\nUżyj @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.t".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nJęzyk T jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.t\".\nUżyj @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.x".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nX jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.x\".\nUżyj @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.y".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nT jest przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.y\".\nUżyj @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.intrinsic.z".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nZ został uznany za przestarzały. Zamiast tego użyj @\"microsoft.quantum.intrinsic.z\".\nUżyj @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216037"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858245"
