@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184444"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863201"
 ---
 # <a name="error-correction"></a>Korekcja błędów #
 
@@ -28,7 +28,7 @@ W ustawieniu Quantum zobaczymy, że pomiar ma problemy. Nadal możemy zaimplemen
 Warto to zrobić, aby zobaczyć, jak możemy uogólniać korekcję błędów do przypadku Quantum.
 W tym celu pozwól $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$ i let $ \ket{\overline{1}} = \ket{111}$.
 Następnie, według liniowości, definiujemy kod powtarzania dla wszystkich danych wejściowych; na przykład $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-W szczególności, dzięki czemu błąd przerzucania wartości bitowej $X _1 $ Act na środkowym qubitu, zobaczymy, że korekta wymagana w obu gałęziach jest precyzyjna $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket @no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
+W szczególności, wypróbowanie błędu bitowego $X _1 $ Act w środkowym qubite. zobaczymy, że korekta wymagana w obu gałęziach jest dokładnie $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
 \end{align} $ $
 
 Aby dowiedzieć się, w jaki sposób można określić, że jest to przypadek bez mierzenia bardzo stanu, który próbujesz chronić, warto napisać, co każdy inny błąd przerzucania bitów ma wpływ na nasze Stany logiczne:
@@ -44,8 +44,8 @@ Aby chronić stan, który jest kodowany, musimy mieć możliwość odróżnienia
 Na przykład jeśli mierzę $Z _0 $, uzyskamy inny wynik dla $ \ket{\overline{0}} $ i $ \ket{\overline{1}} $ w przypadku braku błędów, więc zwija zakodowany stan.
 Z drugiej strony należy rozważyć zmierzenie $Z _0 Z_1 $, parzystość pierwszych dwóch bitów w każdym stanie bazowym.
 Należy odwołać się do każdego pomiaru operatora Pauli, który eigenvalue mierzony stan odpowiada, więc dla każdego stanu $ \ket{\psi} $ w powyższej tabeli możemy obliczyć $Z _0 Z_1 \ket{\psi} $, aby zobaczyć, czy otrzymamy $ \pm\ket{\psi} $.
-Należy zauważyć, że $Z _0 Z_1 \ket{000} = \ket{000}$ i $Z _0 Z_1 \ket{111} = \ket{111}$, dzięki czemu zakończymy, że ta wartość jest taka sama jak w przypadku obu zakodowanych Stanów.
-Z drugiej strony $Z _0 Z_1 \ket{100} =-\ket{100}$ i $Z _0 Z_1 \ket{011} =-\ket{011}$, dlatego wynik pomiaru $Z _0 Z_1 $ ujawnia przydatne informacje o wystąpieniu błędu.
+Należy zauważyć, że $Z _0 Z_1 \ket{000} = \ket{000}$ i $Z _0 Z_1 \ket{111} = \ket{111}$, dzięki czemu zakończymy, że ta miara jest taka sama jak w przypadku obu zakodowanych Stanów.
+Z drugiej strony $Z _0 Z_1 \ket{100} = \ket{100}$ i $Z _0 Z_1 \ket{011} =-\ket{011}$, dlatego wynik pomiaru $Z _0 Z_1 $ ujawnia przydatne informacje o wystąpieniu błędu.
 
 Aby to wyróżnić, powtórzmy powyższą tabelę, ale Dodaj wyniki pomiaru $Z _0 Z_1 $ i $Z _1 Z_2 $ w każdym wierszu.
 Należy zwrócić uwagę na wyniki każdego pomiaru przez znak eigenvalue, który jest zaobserwowany, albo $ + $ lub $-$, odpowiednio do wartości Q # `Result` `Zero` i `One`.
@@ -67,7 +67,7 @@ W szczególności podkreślamy, że odzyskiwanie jest *klasyczną* procedurą wn
 > Podobnie zastosowanie operacji przerzucenia fazy `Z` spowoduje zamapowanie $ \ket{\overline{1}} $ na $-\ket{\overline{1}} $, a tym samym zamapowanie $ \ket{\overline{+}} $ do $ \ket{\overline{-}} $.
 > Bardziej ogólnie rzecz biorąc, kody mogą być tworzone w celu obsługi większej liczby błędów oraz do obsługi $Z $ błędów, a także $X $ błędy.
 
-Szczegółowe informacje o tym, że możemy opisać miary w korekcji błędów Quantum, które działają tak samo jak w przypadku wszystkich stanów kodu, jest to poproszenie o *formalnej stabilizacji*.
+Szczegółowe informacje o tym, że możemy opisać miary w korekcji błędów Quantum, które działają tak samo jak w przypadku wszystkich stanów kodu, jest istoty *formalnego stabilizacji*.
 Program Q # Canon oferuje strukturę służącą do opisywania kodowania i dekodowania od kodów stabilizatorów oraz do opisywania, jak jeden odzyskuje błędy.
 W tej sekcji opisano te struktury i jej aplikacje do kilku prostych kodów korygujących błędów Quantum.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Więcej szczegółów znajduje się w [przykładowym kodzie przerzucania bitowego](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode).
+Więcej szczegółów znajduje się w [przykładowym kodzie przerzucania bitowego](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Oprócz kodu przewrócenia bitowego Q # Canon jest dostarczany z implementacjami [pięciu qubit idealnego kodu](https://arxiv.org/abs/1305.08), a [kod siedmiu qubit](https://arxiv.org/abs/quant-ph/9705052), oba mogą poprawić dowolny błąd pojedynczego qubit.
+Oprócz kodu przewrócenia bitowego Q # Canon jest dostarczany z implementacjami [pięciu qubit idealnego kodu](https://arxiv.org/abs/quant-ph/9602019), a [kod siedmiu qubit](https://arxiv.org/abs/quant-ph/9705052), oba mogą poprawić dowolny błąd pojedynczego qubit.

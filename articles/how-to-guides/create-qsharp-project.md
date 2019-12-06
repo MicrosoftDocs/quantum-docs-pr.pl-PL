@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: b4bec5e7a174b7e2d588331dd2093c7b23a728b0
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444178"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864410"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Tworzenie projektu Q # w środowisku deweloperskim
 
@@ -23,7 +23,7 @@ Projekt Q # zawiera pliki Q # zawierające kod Quantum oraz program hosta służ
 Wybierz środowisko deweloperskie i język w poniższych sekcjach:
 
 * [Python](#create-a-python-project)
-* [Notesy Jupyter](#create-a-jupyter-notebook-project)
+* [Program Jupyter notebooks](#create-a-jupyter-notebook-project)
 * [C#za pomocą programu Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#z VS Code](#create-a-c-project-using-vs-code)
 * [C#przy użyciu wiersza polecenia](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -99,15 +99,15 @@ Teraz można kontynuować opracowywanie programu Quantum.
 
 1. Zaznacz **komórkę** > **Run Cells** , aby uruchomić Notes. `SayHello` pojawi się wkrótce w danych wyjściowych komórki:
 
-    ![Komórka notesu Jupyter z kodem Q #](~/media/install-guide-jupyter.png)
+    ![Komórka notesu Jupyter z kodem języka Q#](~/media/install-guide-jupyter.png)
 
     W przypadku uruchamiania w notesach Jupyter kod Q # jest kompilowany, a Notes będzie wyprowadzał nazwę znalezionych operacji.
 
-1. W nowej komórce Symuluj wykonywanie na komputerze Quantum dla właśnie utworzonej operacji przy użyciu Magic `%simulate`:
+1. W nowej komórce zasymuluj wykonywanie na komputerze kwantowym właśnie utworzonej operacji przy użyciu polecenia magic `%simulate`:
 
-    ![Komórka notesu Jupyter z użyciem symulowania Magic](~/media/install-guide-jupyter-simulate.png)
+    ![Komórka notesu Jupyter z poleceniem magic %simulate](~/media/install-guide-jupyter-simulate.png)
 
-    Powinien zostać wyświetlony komunikat wydrukowany na ekranie wraz z wynikiem wywołanej operacji (w tym przypadku pustą).
+    Na ekranie powinien zostać wyświetlony komunikat oraz wynik wywołanej operacji (w tym przypadku pusty).
 
 Teraz możesz dodać inne operacje pytań i odpowiedzi, aby kontynuować tworzenie procesów Quantum.
 
@@ -150,12 +150,14 @@ Teraz możesz kontynuować opracowywanie Quantum przy użyciu programu Visual St
 
     * Przejdź do pozycji **Widok** -> **Paleta poleceń**
     * Wybierz pozycję **Q #: Utwórz nowy projekt**
+    * Wybierz **autonomiczną aplikację konsolową**
     * Przejdź do lokalizacji w systemie plików, w której chcesz utworzyć aplikację
     * Po utworzeniu projektu kliknij przycisk **Otwórz nowy projekt**
 
 1. Uruchom aplikację:
 
-    * Wybierz kolejno pozycje **Debuguj** -> **Uruchom bez debugowania**
+    * Przejdź do **terminalu** -> **nowym terminalu**
+    * Wprowadź wartość `dotnet run`
     * W oknie danych wyjściowych powinien zostać wyświetlony następujący tekst: `Hello quantum world!`
 
 Teraz możesz kontynuować tworzenie aplikacji Quantum przy użyciu Visual Studio Code.

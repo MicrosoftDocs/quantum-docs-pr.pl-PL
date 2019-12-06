@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185906"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864427"
 ---
-# <a name="contributing-code"></a>Współtworzenie kodu #
+# <a name="contributing-code"></a>Zasady współtworzenia #
 
 Oprócz zgłaszania problemów i ulepszania dokumentacji, współdziałanie kodu z zestawem SDK Development Kit może być bardzo bezpośrednim sposobem, aby pomóc swoim partnerom w społeczności programowania Quantum.
 Dzięki objęcie kodu możesz pomóc w rozwiązywaniu problemów, dostarczeniu nowych przykładów, Ułatw korzystanie z istniejących bibliotek, a nawet dodawać zupełnie nowe funkcje.
@@ -30,13 +30,14 @@ W ten sposób jest przydatne, gdy funkcje dodane przez wkład są dobrze przetes
 
 Funkcje Q #, operacje i typy zdefiniowane przez użytkownika, które tworzą biblioteki, takie jak Canon, są automatycznie testowane w ramach opracowywania w repozytorium [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Gdy zostanie otwarte nowe żądanie ściągnięcia, na przykład nasza konfiguracja [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) sprawdzi, czy zmiany w żądaniu ściągnięcia nie podzielą żadnych istniejących funkcji, od których zależy społeczność programowania Quantum.
-Te testy są zapisywane przy użyciu pakietu [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , który udostępnia funkcję Q # i operacje jako testy dla struktury [xUnit](https://xunit.github.io/) .
 
-[`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) używa tej integracji xUnit do uruchamiania dowolnych funkcji lub operacji kończących się w `Test`.
-Na przykład następująca funkcja służy do upewnienia się, że funkcje <xref:microsoft.quantum.canon.fst> i <xref:microsoft.quantum.canon.snd> zwracają odpowiednie dane wyjściowe w reprezentatywnym przykładzie.
+W przypadku najnowszej wersji Q # test jednostkowy jest definiowany przy użyciu atrybutu `@Test("QuantumSimulator")`. Argument może mieć wartość "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" lub dowolną w pełni kwalifikowaną nazwę określającą cel wykonania. Kilka atrybutów definiujących różne elementy docelowe wykonywania może być dołączanych do tego samego możliwego do odtworzenia. Niektóre z naszych testów nadal używają przestarzałego pakietu [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , który uwidacznia wszystkie funkcje Q # i operacje kończące się `Test` do środowiska [xUnit](https://xunit.github.io/) Framework. Ten pakiet nie jest już wymagany do definiowania testów jednostkowych. 
+
+Poniższa funkcja służy do upewnienia się, że funkcje <xref:microsoft.quantum.canon.fst> i <xref:microsoft.quantum.canon.snd> zwracają odpowiednie dane wyjściowe w reprezentatywnym przykładzie.
 Jeśli dane wyjściowe `Fst` lub `Snd` są niepoprawne, instrukcja `fail` jest używana w celu spowodowania niepowodzenia testu.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ Bardziej skomplikowane warunki można sprawdzić przy użyciu technik w [sekcji 
 Na przykład następujące testy testu, które `H(q); X(q); H(q);` jak wywołane przez <xref:microsoft.quantum.canon.applywith>, są takie same jak `Z(q)`.
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;

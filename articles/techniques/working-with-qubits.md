@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183475"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864257"
 ---
 # <a name="working-with-qubits"></a>Praca z Qubits #
 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Później zobaczymy bardziej kompaktowe sposoby zapisywania tej operacji, które nie wymagają ręcznego sterowania przepływem.
 
-Możemy również przygotować takie Stany jak $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ i $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ przy użyciu Hadamard Transform $H $ , która jest reprezentowana w Q # przez operację wewnętrzną `H : (Qubit => Unit is Adj + Ctl)`:
+Możemy również przygotować takie Stany jak $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ i $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ przy użyciu Hadamard Transform $H $, który jest reprezentowany przez Q # przez operację wewnętrzną `H : (Qubit => Unit is Adj + Ctl)`:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Miary ##
 
-Za pomocą `Measure` operacji, która jest wbudowana w wewnętrznej operacji nienależącej do jednostki, możemy wyodrębnić klasyczne informacje z obiektu typu `Qubit` i przypisać wartość klasyczną w wyniku, który ma typ zastrzeżony `Result`, co oznacza, że wynik nie jest dłuższym stanem Quantum. Dane wejściowe do `Measure` to oś Pauli w sferze Bloch, reprezentowana przez obiekt typu `Pauli` (tj. na przykład `PauliX`) i obiekt typu `Qubit`. 
+Za pomocą `Measure` operacji, która jest wbudowana w wewnętrznej operacji nienależącej do jednostki, możemy wyodrębnić klasyczne informacje z obiektu typu `Qubit` i przypisać wartość klasyczną w wyniku, który ma typ zastrzeżony `Result`, co oznacza, że wynik nie jest już stanem Quantum. Dane wejściowe do `Measure` to oś Pauli w sferze Bloch, reprezentowana przez obiekt typu `Pauli` (tj. na przykład `PauliX`) i obiekt typu `Qubit`. 
 
 Prostym przykładem jest następująca operacja, która tworzy jeden qubit w stanie $ \ket{0}$, a następnie stosuje do niego bramę Hadamard ``H``, a następnie mierzy wynik w `PauliZ`. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Język Q # umożliwia zależności przepływu klasycznej kontroli nad wynikami pomiaru qubits. To z kolei umożliwia zaimplementowanie zaawansowanych probabilistyczneych gadżetów, które mogą zmniejszyć koszt obliczeniowy wdrożenia unitaries. Przykładowo można łatwo zaimplementować tak zwanego powtarzające się- *do-sukcesu* w Q #, które są obwodami probabilistyczne, które mają *przewidywane* niskie koszty w zakresie bram elementarnych, ale dla których rzeczywisty koszt zależy od rzeczywistego przebiegu i rzeczywiste odchodzenie między różnymi możliwymi gałęziami. 
+Język Q # umożliwia zależności przepływu klasycznej kontroli nad wynikami pomiaru qubits. To z kolei umożliwia zaimplementowanie zaawansowanych probabilistyczneych gadżetów, które mogą zmniejszyć koszt obliczeniowy wdrożenia unitaries. Przykładowo można łatwo zaimplementować tak zwanego powtarzające się- *do-sukcesu* w Q #, które są obwodami probabilistyczne, które mają *przewidywane* niskie koszty w zakresie bram elementarnych, ale dla których rzeczywisty koszt zależy od rzeczywistego przebiegu i faktycznego odchodzenia między różnymi możliwymi gałęziami. 
 
 Aby ułatwić wzorce powtarzania do sukcesu (jednostek ru), Q # obsługuje konstrukcję
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 W tym przykładzie pokazano użycie modyfikowalnej zmiennej `finished`, która jest w zakresie całej pętli REPEAT-until-Naprawa i która zostaje zainicjowana przed pętlą i zaktualizowaną w kroku naprawy.
 
-Na koniec pokazujemy przykład wzorca jednostek ru, aby przygotować stan Quantum $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, rozpoczynając od stanu $ \ket{+} $. Zobacz również [przykład testowania jednostkowego w standardowej bibliotece](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs): 
+Na koniec pokazujemy przykład wzorca jednostek ru, aby przygotować stan Quantum $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, rozpoczynając od stanu $ \ket{+} $. Zobacz również [przykład testowania jednostkowego w standardowej bibliotece](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Istotne funkcje programistyczne przedstawione w tej operacji są bardziej skomplikowane `fixup` część pętli, która obejmuje operacje Quantum i użycie instrukcji `AssertProb` do ustalenia prawdopodobieństwa mierzenia stanu Quantum w określonych punktach w Program. Więcej informacji na temat `Assert` i `AssertProb` instrukcji można znaleźć w temacie [testowanie i debugowanie](xref:microsoft.quantum.techniques.testing-and-debugging) . 
+Istotne funkcje programistyczne przedstawione w tej operacji są bardziej skomplikowane `fixup` częścią pętli, która obejmuje operacje Quantum i użycie instrukcji `AssertProb` do ustalenia prawdopodobieństwa mierzenia stanu Quantum w określonych punktach w programie. Więcej informacji na temat `Assert` i `AssertProb` instrukcji można znaleźć w temacie [testowanie i debugowanie](xref:microsoft.quantum.techniques.testing-and-debugging) . 

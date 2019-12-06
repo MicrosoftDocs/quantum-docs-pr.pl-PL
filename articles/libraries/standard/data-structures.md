@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184512"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864359"
 ---
 # <a name="data-structures-and-modeling"></a>Struktury i modelowanie danych #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184512"
 Wraz z typami zdefiniowanymi przez użytkownika do reprezentowania koncepcji Quantum, Canon oferuje również operacje, funkcje i typy do pracy z danymi klasycznymi używanymi w kontroli systemów Quantum.
 Na przykład funkcja <xref:microsoft.quantum.arrays.reversed> pobiera tablicę jako dane wejściowe i zwraca tę samą tablicę w odwrotnej kolejności.
 Można go następnie użyć w tablicy typu `Qubit[]`, aby uniknąć konieczności stosowania niepotrzebnych bram $ \operatorname{SWAP} $ podczas konwersji między reprezentacjami jednostek Quantum.
-Podobnie znaleźliśmy w poprzedniej sekcji, że typy formularzy `(Int, Int -> T)` mogą być przydatne do reprezentowania losowych kolekcji dostępu, więc funkcja <xref:microsoft.quantum.arrays.lookupfunction> udostępnia convienent sposób konstruowania takich typów z typów tablic.
+Podobnie znaleźliśmy w poprzedniej sekcji, że typy formularzy `(Int, Int -> T)` mogą być przydatne do reprezentowania losowych kolekcji dostępu, więc funkcja <xref:microsoft.quantum.arrays.lookupfunction> zapewnia wygodny sposób konstruowania takich typów z typów tablic.
 
 ### <a name="pairs"></a>Parowanie ###
 
@@ -77,7 +77,7 @@ Ponadto typy zdefiniowane przez użytkownika są używane do etykietowania róż
 
 Takie firmy Oracle są wyświetlane w wielu różnych kontekstach, w tym w przykładach sławę, takich jak [Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) i algorytmy symulacji Quantum.
 W tym miejscu koncentrujemy się na systemach Oracle wymaganych przez tylko dwie aplikacje: wzmocnienie amplitudy i szacowanie faz.
-Najpierw będziemy omawiać wzproceding wzmocnienie amplitudy przed rozpoczęciem szacowania faz.
+Najpierw będziemy omawiać wzmocnienie wzmocnienia amplitudy przed rozpoczęciem szacowania faz.
 
 ### <a name="amplitude-amplification-oracles"></a>Wzmocnienie amplitudy dla rozwiązań firmy Oracle ###
 
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-Następnie możemy połączyć te dwa firmy Oracle, aby obrócić między dwoma stanami i deterministycznie przekształcić $ \ket{+} ^ {\otimes n} $ do $ \ket{0}$ przy użyciu szeregu warstw bramy Hadamard, która jest proporcjonalna do $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) w odróżnieniu od około $2 ^ n $ warstw, które byłyby konieczne do niedeterministycznego przygotowania stanu $ \ket{0}$ przez przygotowanie i pomiar stanu początkowego do momentu zaobserwowania wyniku $0 $.
+Następnie możemy połączyć te dwa firmy Oracle, aby obrócić między dwoma stanami i deterministycznie przekształcić $ \ket{+} ^ {\otimes n} $ do $ \ket{0}$ przy użyciu szeregu warstw bramy Hadamard, która jest proporcjonalna do $ \sqrt{2 ^ n} $ (program IE $m \propto \sqrt{2 ^ n} $) zamiast niedeterministycznych warstw $2 ^ n $, które byłyby konieczne do niedyskryminacyjnego przygotowania stanu $ \ket{0}$ przez przygotowanie i pomiar stanu początkowego do momentu zaobserwowania wyniku $0 $.
 
 ### <a name="phase-estimation-oracles"></a>Fazy oceny rozwiązań firmy Oracle ###
 
 W przypadku szacowania fazy firmy Oracle są nieco bardziej naturalne.
 Celem szacowania fazy jest zaprojektowanie podprocedury, która może próbkować z eigenvalues macierzy jednostkowej.
-Ta metoda jest indispensible w symulacji Quantum, ponieważ w przypadku wielu fizycznych problemów związanych z chemią i nauką materiału te eigenvalues zapewniają niedrogią kondycję systemów Quantum, która zapewnia nam cenne informacje o diagramach faz dynamika materiałów i odpowiedzi dla cząsteczek.
+Ta metoda jest niezbędna w symulacji Quantum, ponieważ w przypadku wielu fizycznych problemów związanych z analizą chemiczną i nauką materiału te eigenvalues zapewniają niedrogią kondycję systemów Quantum, która zapewnia nam cenne informacje o diagramach faz dynamika materiałów i odpowiedzi dla cząsteczek.
 Każda wersja oszacowania fazy musi być jednostką wejściową.
 Ten moduł jest zwykle opisywany przez jeden z dwóch typów rozwiązań firmy Oracle.
 
 > [!TIP]
 > Oba typy Oracle opisane poniżej zostały omówione w przykładach.
-> Aby dowiedzieć się więcej o programie Oracle Query, zobacz przykład [ **PhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
-> Aby dowiedzieć się więcej na temat zapytań dyskretnych, zobacz [przykład **IsingPhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> Aby dowiedzieć się więcej o programie Oracle Query, zobacz przykład [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
+> Aby dowiedzieć się więcej na temat zapytań dyskretnych, zobacz [przykład **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 Pierwszy typ firmy Oracle, który wywołuje zapytanie dyskretne Oracle i reprezentuje typ zdefiniowany przez użytkownika <xref:microsoft.quantum.oracles.discreteoracle>, po prostu obejmuje macierz jednostkową.
 Jeśli $U $ jest jednostką, której eigenvalues chcemy oszacować, a firma Oracle dla $U $ jest po prostu dodatkiem do procedury podrzędnej, która implementuje $U $.
@@ -166,8 +166,8 @@ Na przykład może upłynąć $U $, aby było to Oracle $Q $ zdefiniowany powyż
 Eigenvalues tej macierzy można użyć do oszacowania nakładania się między Stanami początkowymi i docelowymi $ \sin ^ 2 (\theta) $, przy użyciu kwadratów z mniejszą ilością próbek niż w przypadku, w przeciwnym razie będzie potrzebna.
 Dzięki temu aplikacja do oceny fazy jest uzyskiwana przy użyciu Grover Oracle $Q $ jako dane wejściowe szacowania amplitudy.
 Inna typowa aplikacja, szeroko wykorzystywana w metrologii Quantum, obejmuje oszacowanie małego kąta obrotu.
-Innymi słowy chcemy oszacować $ \theta $ dla nieznanej bramy rotacji w formie $R _Z (\theta) $.
-W takich przypadkach podprocedura, z którą będziemy korzystać, aby poznać tę stałą wartość $ \theta $ dla bramy to $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ teta/2} \end{bmatrix}.
+Innymi słowy, chcemy oszacować $ \theta $ dla nieznanej bramy rotacji w formularzu $R _z (\theta) $.
+W takich przypadkach podprocedura, z którą będziemy korzystać w celu poznania ustalonej wartości $ \theta $ dla bramy to $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ teta/2} \end{bmatrix}.
 \end{align} $ $
 
 Drugim typem Oracle używanym w ocenie fazy jest ciągłe zapytanie Oracle reprezentowane przez typ <xref:microsoft.quantum.oracles.continuousoracle>.
@@ -186,7 +186,7 @@ Jest to ważne, aby przeprowadzić ściskanie wszystkich ostatnich uncji algoryt
 
 W ramach konkretnego przykładu należy wziąć pod uwagę problem związany z oszacowaniem, a nie kąt obrotu bramy, ale częstotliwość przetwarzania w systemie Quantum.
 Jednostką, która opisuje takie bioquantum Dynamics, jest $U (t) = R_z (2 \ Omega t) $ dla czasu ewolucji $t $ i nieznana częstotliwość $ \omega $.
-W tym kontekście możemy symulować $U (t) $ dla dowolnego $t $ przy użyciu jednej bramy $R _Z $ i ponieważ nie trzeba ograniczać wypróbujemy tylko do zapytań dyskretnych do jednostki.
+W tym kontekście możemy symulować $U (t) $ dla dowolnego $t $ przy użyciu pojedynczej $R _z $ bramy i ponieważ nie trzeba ograniczać wypróbujemy tylko do zapytań dyskretnych do jednostki.
 Taki ciągły model ma również właściwość, którą częstotliwości większe niż $2 \ Pi $ można poznać z procesów szacowania fazy, które używają ciągłych zapytań, ponieważ informacje o fazie, które w przeciwnym razie byłyby maskowane przez gałąź — kawałki funkcji logarytmu mogą być ujawnione w wyniku eksperymentów wykonanych dla nieproporcjonalnych wartości $t $.
 W związku z tym w przypadku problemów, takich jak te modele ciągłego zapytania dla oceny fazy Oracle, nie tylko są odpowiednie, ale są również preferowane dla dyskretnego modelu zapytań.
 Z tego powodu funkcja Q # ma funkcje dla obu rodzajów zapytań i pozostawia ją użytkownikowi w celu podjęcia decyzji o algorytmie szacowania fazy w celu dopasowania ich do potrzeb i typu dostępnego dla programu Oracle.
@@ -199,17 +199,17 @@ Głównym celem symulacji dynamicznego jest zaimplementowanie operatora ewolucji
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-w przypadku, gdy poszczególne terminy są łatwe do wdrożenia na komputerze Quantum. Na przykład jeśli $H _j $ jest operatorem Pauli $X _1X_2, działającym na 1. i 2 elementów `qubits`Register qubit, czas trwania zmiany czasu dla każdej chwili $t $ może być implementowany po prostu, wywołując operację `Exp([PauliX,PauliX], t, qubits[1..2])`, która ma `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`sygnatury. Jak opisano w dalszej części symulacji hamiltonian, jedno rozwiązanie ma na celu przybliżone ewolucję czasu przez $H $ z sekwencją prostszej operacji
+w przypadku, gdy poszczególne terminy są łatwe do wdrożenia na komputerze Quantum. Na przykład, jeśli $H _j $ jest Pauli $X _1X_2 operator, który działa na 1. i 2 elementów rejestru qubit `qubits`, ewolucj czasowo dla każdej chwili $t $ można zaimplementować po prostu, wywołując operację `Exp([PauliX,PauliX], t, qubits[1..2])`, która ma `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`sygnatury. Jak opisano w dalszej części symulacji hamiltonian, jedno rozwiązanie ma na celu przybliżone ewolucję czasu przez $H $ z sekwencją prostszej operacji
 
-$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 gdzie liczba całkowita $r > $0 kontroluje błąd przybliżenia.
 
 Biblioteka modelowania generatora dynamicznego zapewnia strukturę służącą do systematycznego kodowania skomplikowanych generatorów pod kątem łatwiejszych generatorów. Taki opis może zostać następnie przesłany do, powiedzmy, biblioteka symulacji w celu zaimplementowania ewolucji czasu przez wybrany przez Ciebie algorytm symulacji z wieloma szczegółami.
 
 > [!TIP]
-> Dynamiczna biblioteka generatora opisana poniżej znajduje się w przykładach. Aby zapoznać się z przykładem opartym na modelu Ising, zobacz [przykład **IsingGenerators** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
-> Przykład na podstawie wodoru molekularnego można znaleźć w [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) i [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) Samples.
+> Dynamiczna biblioteka generatora opisana poniżej znajduje się w przykładach. Aby zapoznać się z przykładem opartym na modelu Ising, zobacz [przykład **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
+> Przykład na podstawie wodoru molekularnego można znaleźć w [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) i [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) Samples.
 
 ### <a name="complete-description-of-a-generator"></a>Pełny opis generatora ###
 
@@ -244,7 +244,7 @@ $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $, gdzie k
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-W naszym kodowaniu pierwszy parametr `Int[]` określa ciąg Pauli, gdzie $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 i $ \hat Z\rightarrow $3. Drugi parametr `Double[]` przechowuje współczynnik ciągu Pauli w hamiltonian. Należy zauważyć, że używany jest tylko pierwszy element tej tablicy. Trzeci parametr `Int[]` indeksuje qubits, w którym działa ten ciąg Pauli i nie może zawierać zduplikowanych elementów. W ten sposób hamiltonian termin $0,4 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $ może być reprezentowany jako
+W naszym kodowaniu pierwszy parametr `Int[]` określa ciąg Pauli, gdzie $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 i $ \hat Z\rightarrow $3. Drugi parametr `Double[]` przechowuje współczynnik ciągu Pauli w hamiltonian. Należy zauważyć, że używany jest tylko pierwszy element tej tablicy. Trzeci parametr `Int[]` indeksuje qubits, w którym działa ten ciąg Pauli i nie może zawierać zduplikowanych elementów. W tym celu hamiltonian termin $0,4 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $ może być reprezentowany jako
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

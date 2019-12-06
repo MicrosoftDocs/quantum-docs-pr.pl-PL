@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 25679331f1bed9f98b86c6eb20f511c891bac1af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183492"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864274"
 ---
 # <a name="testing-and-debugging"></a>Testowanie i debugowanie
 
@@ -27,10 +27,10 @@ Polecenie Q # obsługuje tworzenie testów jednostkowych dla programów Quantum 
 
 ### <a name="creating-a-test-project"></a>Tworzenie projektu testowego
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Otwórz program Visual Studio 2019. Przejdź do menu `File` i wybierz pozycję `New` > `Project...`.
-W Eksploratorze szablonów projektu w obszarze `Installed` > `Visual C#`wybierz szablon `Q# Test Project`.
+Open Visual Studio 2019. Przejdź do menu `File` i wybierz pozycję `New` > `Project...`.
+W prawym górnym rogu Wyszukaj pozycję `Q#`i wybierz szablon `Q# Test Project`.
 
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
@@ -43,12 +43,13 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-W obu przypadkach nowy projekt będzie miał otwarte dwa pliki.
-Pierwszy plik, `Tests.qs`, zapewnia wygodne miejsce do definiowania nowych testów pytań typu "Q #".
-Początkowo ten plik zawiera jeden przykładowy test jednostkowy `AllocateQubitTest`, który sprawdza, czy nowo przydzieloną qubit znajduje się w stanie $ \ket{0}$ i drukuje komunikat:
+Nowy projekt będzie miał `Tests.qs`jednego pliku, który stanowi wygodne miejsce do zdefiniowania nowych testów.
+Początkowo ten plik zawiera jeden przykładowy test jednostkowy `AllocateQubit`, który sprawdza, czy nowo przydzieloną qubit znajduje się w stanie $ \ket{0}$ i drukuje komunikat:
 
 ```qsharp
-    operation AllocateQubitTest () : Unit {
+    @Test("QuantumSimulator")
+    operation AllocateQubit () : Unit {
+
         using (q = Qubit()) {
             Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
@@ -57,32 +58,20 @@ Początkowo ten plik zawiera jeden przykładowy test jednostkowy `AllocateQubitT
     }
 ```
 
-Wszelkie operacje Q # zgodne z typem `(Unit => Unit)` lub funkcją zgodną z `(Unit -> Unit)` można wykonać jako test jednostkowy. 
-
-Drugi plik, `TestSuiteRunner.cs` zawiera metodę, która odnajduje i uruchamia testy jednostkowe Q #. Jest to metoda `TestTarget` Adnotacja z atrybutem `OperationDriver`.
-Atrybut `OperationDriver` jest częścią biblioteki rozszerzeń xUnit Microsoft. Quantum. Symulacja. xUnit.
-Struktura testowania jednostkowego wywołuje `TestTarget` metody dla każdego testu jednostki Q #, który został odnaleziony.
-Struktura przekazuje opis testu jednostkowego do metody za pomocą argumentu `op`. Następujący wiersz kodu:
-```csharp
-op.TestOperationRunner(sim);
+: New: Każda operacja Q # lub funkcja, która przyjmuje argument typu `Unit` i zwraca `Unit` może być oznaczona jako test jednostkowy za pośrednictwem atrybutu `@Test("...")`. Argument tego atrybutu, `"QuantumSimulator"` powyżej, określa obiekt docelowy, na którym wykonywany jest test. Pojedynczy test można wykonać na wielu celach. Na przykład Dodaj atrybut `@Test("ResourcesEstimator")` powyżej `AllocateQubit`. 
+```qsharp
+    @Test("QuantumSimulator")
+    @Test("ResourcesEstimator")
+    operation AllocateQubit () : Unit {
+        ...
 ```
-wykonuje test jednostkowy na `QuantumSimulator`.
+Zapisz plik i wykonaj wszystkie testy. Teraz powinny być dwa testy jednostkowe, jeden, gdzie AllocateQubit jest wykonywany w QuantumSimulator i jeden, gdzie jest wykonywany w ResourceEstimator. 
 
-Domyślnie mechanizm odnajdywania testów jednostkowych szuka wszystkich funkcji Q # lub operacji typu zgodnego, które spełniają następujące właściwości:
-* Znajduje się w tym samym zestawie, co metoda oznaczona adnotacją z atrybutem `OperationDriver`.
-* Znajduje się w tej samej przestrzeni nazw co metoda z adnotacją `OperationDriver` atrybutu.
-* Ma nazwę kończącą się na `Test`.
-
-Zestaw, przestrzeń nazw i sufiks dla funkcji testów jednostkowych i operacji można ustawić przy użyciu opcjonalnych parametrów `OperationDriver` atrybutu:
-* parametr `AssemblyName` ustawia nazwę zestawu, który jest wyszukiwany dla testów.
-* parametr `TestNamespace` ustawia nazwę przestrzeni nazw, która jest wyszukiwana dla testów.
-* `Suffix` ustawia sufiks nazw operacji lub funkcji, które są uznawane za testy jednostkowe.
-
-Ponadto opcjonalny parametr `TestCasePrefix` umożliwia ustawienie prefiksu dla nazwy przypadku testowego. Prefiks przed nazwą operacji pojawi się na liście przypadków testowych. Na przykład `TestCasePrefix = "QSim:"` spowoduje, że `AllocateQubitTest` pojawić się jako `QSim:AllocateQubitTest` na liście znalezionych testów. Może to być przydatne do wskazania na przykład, który symulator jest używany do uruchomienia testu.
+Kompilator Q # rozpoznaje wbudowane elementy docelowe "QuantumSimulator", "ToffoliSimulator" i "ResourcesEstimator" jako prawidłowe cele wykonywania dla testów jednostkowych. Istnieje również możliwość określenia dowolnej w pełni kwalifikowanej nazwy, aby zdefiniować niestandardowy cel wykonania. 
 
 ### <a name="running-q-unit-tests"></a>Uruchamianie testów jednostkowych Q #
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Jako jednorazowe skonfigurowanie poszczególnych rozwiązań przejdź do menu `Test` i wybierz `Test Settings` > `Default Processor Architecture` > `X64`.
 
@@ -90,7 +79,7 @@ Jako jednorazowe skonfigurowanie poszczególnych rozwiązań przejdź do menu `T
 > Domyślne ustawienie architektury procesora dla programu Visual Studio jest przechowywane w pliku opcji rozwiązania (`.suo`) dla każdego rozwiązania.
 > W przypadku usunięcia tego pliku należy ponownie wybrać `X64` jako architekturę procesora.
 
-Skompiluj projekt, przejdź do menu `Test` i wybierz pozycję `Windows` > `Test Explorer`. `AllocateQubitTest` zostanie wyświetlona na liście testów w grupie `Not Run Tests`. Wybierz `Run All` lub Uruchom ten test indywidualny, który powinien zostać przekazany!
+Skompiluj projekt, przejdź do menu `Test` i wybierz pozycję `Windows` > `Test Explorer`. `AllocateQubit` zostanie wyświetlona na liście testów w grupie `Not Run Tests`. Wybierz `Run All` lub Uruchom ten test indywidualny, który powinien zostać przekazany!
 
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
@@ -122,32 +111,19 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
+Testy jednostkowe można filtrować według ich nazwy i/lub celu wykonania:
+
+```bash 
+$ dotnet test --filter "Target=QuantumSimulator"
+$ dotnet test --filter "Name=AllocateQubit"
+```
+
+
 ***
-
-## <a name="logging-and-assertions"></a>Rejestrowanie i potwierdzenia
-
-Jedną z ważnych konsekwencji, że funkcje w Q # nie mają żadnych efektów ubocznych, jest to, że wszystkie efekty wykonywania funkcji, której typem danych wyjściowych jest pusta krotka `()` nie mogą być obserwowane w ramach programu Q #.
-Oznacza to, że komputer docelowy może nie wykonywać żadnej funkcji, która zwraca `()` z gwarancją, że to pominięcie nie zmodyfikuje zachowania żadnego z następujących kodów Q #.
-Dzięki temu funkcje zwracają `()` użytecznym narzędziem do osadzania potwierdzeń i logiki debugowania do programów Q #. 
-
-### <a name="logging"></a>Rejestrowanie
 
 Funkcja wewnętrzna <xref:microsoft.quantum.intrinsic.message> ma typ `(String -> Unit)` i umożliwia tworzenie komunikatów diagnostycznych.
 
-Akcja `onLog` `QuantumSimulator` może służyć do definiowania akcji wykonywanych w przypadku wywołania kodu Q # `Message`. Domyślnie zarejestrowane komunikaty są drukowane w standardowym wyjściu.
-
-Podczas definiowania zestawu testów jednostkowych, zarejestrowane komunikaty można skierować do danych wyjściowych testu. Gdy projekt jest tworzony na podstawie szablonu projektu testowego Q #, to przekierowanie jest wstępnie skonfigurowane dla pakietu i domyślnie utworzone w następujący sposób:
-
-```qsharp
-using (var sim = new QuantumSimulator())
-{
-    // OnLog defines action(s) performed when Q# test calls operation Message
-    sim.OnLog += (msg) => { output.WriteLine(msg); };
-    op.TestOperationRunner(sim);
-}
-```
-
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Po wykonaniu testu w Eksploratorze testów i kliknięciu testu zostanie wyświetlony panel z informacjami o wykonywaniu testów: stanie zakończonych niepowodzeniem, czas, który upłynął, i link "output". Kliknięcie linku "output" spowoduje otwarcie danych wyjściowych testu w nowym oknie.
 
@@ -156,11 +132,15 @@ Po wykonaniu testu w Eksploratorze testów i kliknięciu testu zostanie wyświet
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
 Stan przekazywania/niepowodzenia dla każdego testu jest drukowany w konsoli programu przez `dotnet test`.
-W przypadku niepowodzeń testów dane wyjściowe zarejestrowane w wyniku wywołania `output.WriteLine(msg)` powyżej są również drukowane w konsoli programu w celu ułatwienia zdiagnozowania błędu.
+W przypadku niepowodzeń testów są one również drukowane w konsoli programu w celu ułatwienia zdiagnozowania błędu.
 
 ***
 
-### <a name="assertions"></a>Asercje
+## <a name="assertions"></a>Potwierdzenia
+
+Ponieważ funkcje w pytaniach Q # nie mają _logicznych_ efektów ubocznych, wszelkie _Inne rodzaje_ efektów wykonywania funkcji, której typem danych wyjściowych jest pusta `()` krotka, nie można nigdy zaobserwować w programie Q #.
+Oznacza to, że komputer docelowy może nie wykonywać żadnej funkcji, która zwraca `()` z gwarancją, że to pominięcie nie zmodyfikuje zachowania żadnego z następujących kodów Q #.
+Dzięki temu funkcje zwracają `()` użytecznym narzędziem do osadzania potwierdzeń i logiki debugowania do programów Q #. 
 
 Tę samą logikę można zastosować do implementacji zatwierdzeń. Rozważmy prosty przykład:
 
@@ -203,7 +183,7 @@ Aby ułatwić rozwiązywanie problemów z programami Quantum, przestrzeń nazw <
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-Kompleksowy symulator Quantum dystrybuowany w ramach zestawu Quantum Development Kit zapisuje w pliku [funkcję Wave](https://en.wikipedia.org/wiki/Wave_function) całego systemu Quantum jako tablicę jednowymiarową liczb zespolonych, w której każdy element reprezentuje amplitudę prawdopodobieństwo pomiaru stanu podstawy obliczeniowej $ \ket{n} $, gdzie $ \ket{n} = \ket{b_{n-1}... b_1b_0} $ dla BITS $\{b_i\}$. Na przykład na komputerze z tylko dwoma qubits przydzielonymi i w stanie Quantum $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ wywołując <xref:microsoft.quantum.diagnostics.dumpmachine> generuje te dane wyjściowe :
+Kompleksowy symulator Quantum dystrybuowany w ramach zestawu Quantum Development Kit zapisuje w pliku [funkcję Wave](https://en.wikipedia.org/wiki/Wave_function) całego systemu Quantum jako tablicę jednowymiarową liczb zespolonych, w której każdy element reprezentuje amplitudę prawdopodobieństwa pomiaru stanu podstawy obliczeniowej $ \ket{n} $, gdzie $ \ket{n} = \ket{b_ {n-1}... b_1b_0} $ dla usługi BITS $\{b_i\}$. Na przykład na komputerze z tylko dwoma qubits przydzielonymi i w stanie Quantum $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ wywołując <xref:microsoft.quantum.diagnostics.dumpmachine> generuje te dane wyjściowe:
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -285,7 +265,7 @@ W poniższych przykładach przedstawiono `DumpMachine` niektórych typowych stan
   > Identyfikator qubit jest przypisywany w czasie wykonywania i nie musi być wyrównany do kolejności, w której został przydzielony qubit lub jej pozycji w rejestrze qubit.
 
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > Identyfikator qubit można ustalić w programie Visual Studio, umieszczając punkt przerwania w kodzie i sprawdzając wartość zmiennej qubit, na przykład:
@@ -333,7 +313,7 @@ namespace Samples {
 
 <xref:microsoft.quantum.diagnostics.dumpregister> działa jak <xref:microsoft.quantum.diagnostics.dumpmachine>, z tą różnicą, że pobiera również tablicę qubits w celu ograniczenia ilości informacji tylko do odpowiednich qubits.
 
-Podobnie jak w przypadku <xref:microsoft.quantum.diagnostics.dumpmachine>, informacje generowane przez <xref:microsoft.quantum.diagnostics.dumpregister> są zależne od maszyny docelowej. W przypadku kompleksowego symulatora Quantum zapisuje w pliku funkcję Wave do globalnej fazy podsystemu Quantum wygenerowanego przez podaną qubits w tym samym formacie co <xref:microsoft.quantum.diagnostics.dumpmachine>.  Na przykład należy ponownie wykonać maszynę z tylko dwoma qubits przydzielonymi i w stanie Quantum $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ Pi/4} ((\frac{1}{\sqrt{2}} \ KET{0}-\frac{(1 + i)}{2} \ket{1}) \otimes \frac{-(1 + i)} {\sqrt{2}} \ket{0}), \end{align} $ $ wywołując <xref:microsoft.quantum.diagnostics.dumpregister> for `qubit[0]` generuje te dane wyjściowe:
+Podobnie jak w przypadku <xref:microsoft.quantum.diagnostics.dumpmachine>, informacje generowane przez <xref:microsoft.quantum.diagnostics.dumpregister> są zależne od maszyny docelowej. W przypadku kompleksowego symulatora Quantum zapisuje w pliku funkcję Wave do globalnej fazy podsystemu Quantum wygenerowanego przez podaną qubits w tym samym formacie co <xref:microsoft.quantum.diagnostics.dumpmachine>.  Na przykład należy ponownie wykonać maszynę z tylko dwoma qubits przydzielonymi i w stanie Quantum $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ Pi/4} ((\frac{1}{\sqrt{2}} \ket{0}-\frac{(1 + i)}{2} \ket{1}) \otimes \frac{-(1 + i)} {\sqrt{2}} \ket{0}) \end{align} $ $ wywołujący <xref:microsoft.quantum.diagnostics.dumpregister> dla `qubit[0]` generuje te dane wyjściowe :
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -382,7 +362,6 @@ namespace app
 
 ## <a name="debugging"></a>Debugowanie
 
-W oparciu o `Assert` i `Dump` funkcje i operacje, funkcja Q # obsługuje podzbiór standardowych możliwości debugowania programu Visual Studio: [ustawianie punktów przerwania linii](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [krokowe wykonywanie kodu przy użyciu języka F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) i [Sprawdzanie wartości zmiennych klasycznych ](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)są one możliwe podczas wykonywania kodu w symulatorze.
+W oparciu o `Assert` i `Dump` funkcje i operacje, funkcja Q # obsługuje podzbiór standardowych możliwości debugowania programu Visual Studio: [ustawianie punktów przerwania](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [Przechodzenie przez kod przy użyciu](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) klawisza F10 i [Sprawdzanie wartości zmiennych klasycznych](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) jest możliwe podczas wykonywania kodu w symulatorze.
 
-Debugowanie w Visual Studio Code nie jest jeszcze obsługiwane.
-
+Debugowanie w Visual Studio Code wykorzystuje funkcje debugowania udostępniane przez program C# for Visual Studio Code Extension obsługiwane przez OmniSharp i wymagające zainstalowania [najnowszej wersji](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

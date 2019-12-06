@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183305"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863150"
 ---
 # <a name="going-further"></a>Dalsze przechodzenie #
 
 Teraz, gdy wiesz już, jak pisać interesujące programy Quantum w Q #, ta sekcja jest bardziej wydajna, wprowadzając kilka bardziej zaawansowanych tematów, które powinny być przydatne w przyszłości.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Operacje ogólne i funkcje ##
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 W tym miejscu należy określić dokładnie `A`, `B`i `C`, a tym samym znacznie ograniczyć narzędzie do nowej funkcji `Compose`.
 Po wszystkich `Compose` zależy tylko od `A`, `B`i `C` *za pośrednictwem* `innerFn` i `outerFn`.
-Alternatywnie, możemy dodać parametry typu do `Compose`, które wskazują, że działa dla *dowolnego* `A`, `B`i `C`, tak długo, jak te parametry są zgodne z oczekiwanymi przez `innerFn` i `outerFn`:
+Alternatywnie, możemy dodać parametry typu do `Compose`, które wskazują, że działa dla *każdej* `A`, `B`i `C`, tak długo, jak te parametry są zgodne z oczekiwanymi przez `innerFn` i `outerFn`:
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Należy zauważyć, że rozległe użycie `With` Combinator---w swojej formie, która ma zastosowanie do operacji, które obsługują sąsiednie, tj., `WithA`---zostało wykonane w tym przykładzie, który jest dobrym stylem programowania jako dodanie kontroli do struktur obejmujących tylko `With` propaguje formant do operacji wewnętrznej. Należy również zwrócić uwagę, że w tym miejscu oprócz `body` operacji wdrożenie `controlled` treści operacji zostało jawnie dostarczone, a nie do instrukcji `controlled auto`. Przyczyną tego jest fakt, że wiemy ze struktury obwodu, jak łatwo dodać dalsze kontrolki, które są korzystne w porównaniu z dodawaniem kontroli do poszczególnych bram i każdej bramy w `body`. 
+Należy zauważyć, że rozległe użycie `With` Combinator---w swojej formie, która ma zastosowanie do operacji, które obsługują sąsiednie, tj., `WithA`---zostało wykonane w tym przykładzie, który jest dobrym stylem programowania, ponieważ dodawanie kontroli do struktur obejmujących `With` tylko propagowanie kontroli do operacji wewnętrznej. Należy również zwrócić uwagę, że w tym miejscu oprócz `body` operacji wdrożenie `controlled` treści operacji zostało jawnie dostarczone, a nie do instrukcji `controlled auto`. Przyczyną tego jest fakt, że wiemy ze struktury obwodu, jak łatwo dodać dalsze kontrolki, które są korzystne w porównaniu z dodawaniem kontroli do poszczególnych bram i każdej bramy w `body`. 
 
 Warto porównać ten kod z inną funkcją firmy Canon `MultiControlledXClean`, która osiąga ten sam cel implementacji operacji pomnożonej `X`, ale korzysta z kilku czystych qubits przy użyciu mechanizmu `using`. 
