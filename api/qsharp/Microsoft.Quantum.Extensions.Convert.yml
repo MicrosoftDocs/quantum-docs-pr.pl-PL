@@ -4,59 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Są to niektóre funkcje z przestrzeni nazw System. Convert środowiska .NET CLR, które są istotne w systemie typu Q #.\n\n # <a name=\"remarks\"></a>Uwagi\n Jeśli istnieje kilka wersji funkcji dla typów bool, int i Double, odpowiadające im funkcje mają sufiks B, I i D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.bigintasboolarray".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBigIntToBools jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.bigintasboolarray\".\nUżyj @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.boolarrayasbigint".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBoolsToBigInt jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.boolarrayasbigint\".\nUżyj @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.pauliarrayasint".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPauliArrayToInt jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.pauliarrayasint\".\nUżyj @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.intasbigint".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToBigInt jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.intasbigint\".\nUżyj @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.intasdouble".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToDouble — jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.intasdouble\".\nUżyj @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.boolasstring".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringB jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.boolasstring\".\nUżyj @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.doubleasstring".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMetoda ToString została uznana za przestarzałą. Zamiast tego użyj @\"microsoft.quantum.convert.doubleasstring\".\nUżyj @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.doubleasstringwithformat".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringDFormat jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.doubleasstringwithformat\".\nUżyj @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.intasstring".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringI jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.intasstring\".\nUżyj @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.convert.intasstringwithformat".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringIFormat jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.convert.intasstringwithformat\".\nUżyj @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 372c58096cab091560ae6d3bebc165f09e201b9c
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056482"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858313"

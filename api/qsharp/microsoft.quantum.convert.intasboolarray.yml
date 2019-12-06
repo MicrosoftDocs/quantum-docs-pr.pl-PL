@@ -4,7 +4,10 @@ name: IntAsBoolArray
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: Tworzy binarną reprezentację dodatniej liczby całkowitej przy użyciu reprezentacji little-endian dla zwróconej tablicy.
-remarks: '`number` wejściowy musi składać się z maksymalnie $2 ^ {\texttt{BITS}}-$1.'
+remarks: >-
+  `bits` wejściowy musi zawierać się w przedziale od 0 do 63.
+
+  `number` wejściowy musi zawierać się w przedziale od 0 do $2 ^ {\texttt{BITS}}-$1.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -25,9 +28,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220372"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858993"

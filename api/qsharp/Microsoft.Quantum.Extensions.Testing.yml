@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertallzero".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAllZero jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertallzero\".\nUżyj @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAllZeroTol jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\".\nUżyj @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
-
-    Należy zauważyć, że kolejność argumentów dla tej operacji została zmieniona.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualInPlace jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nUżyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
-
-    Należy zauważyć, że kolejność argumentów dla tej operacji została zmieniona.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualInPlaceCompBasis jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\".\nUżyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
-
-    Należy zauważyć, że kolejność argumentów dla tej operacji została zmieniona.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualReferenced jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nUżyj @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertqubit".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubit jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertqubit\".\nUżyj @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubitState jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\".\nUżyj @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > Przestarzałe. Użyj @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubitTol jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\".\nUżyj @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210354"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858418"
