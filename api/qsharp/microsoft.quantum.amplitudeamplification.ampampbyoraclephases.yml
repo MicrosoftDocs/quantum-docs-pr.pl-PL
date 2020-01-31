@@ -3,32 +3,22 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
 name: AmpAmpByOraclePhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Wzmocnienie amplitudy przez firmy Oracle dla częściowych odbicia.
-remarks: >-
-  Stanowi to bardziej rygorystyczne warunki na formularzu stanu początkowego i docelowego niż w `AmpAmpByReflectionPhases`.
-
-  Przyjęto założenie, że stan docelowy jest oznaczony przez $ \ket{1}\_f $.
-
-  Przyjęto założenie, że \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} w większości przypadków, `flagQubit` i `ancillaRegister` zostanie zainicjowany w stanie $ \ket{0}\_{f} \ket{0}\_s $.
+summary: AmpAmpByOraclePhases jest przestarzała. Zamiast tego użyj @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation".
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
-    summary: Fazy częściowego odbicia
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: stateOracle
-    summary: Jednostkowa firma Oracle $A $, która przygotowuje stan początkowy
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Indeks do flagi qubit
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Operacja implementująca wzmocnienie amplitudy przez firmy Oracle, które są implementowane przez częściowe odbicia.
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isArray: true
@@ -42,9 +32,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a20dbb207841bf5dd9e46746814b4d7560cc67
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215833"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869232"

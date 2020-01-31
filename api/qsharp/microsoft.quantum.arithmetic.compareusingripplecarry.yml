@@ -4,12 +4,14 @@ name: CompareUsingRippleCarry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Te testy jednostkowe, jeśli dwie liczby całkowite `x` i `y` przechowywane w rejestrach qubit z równoważeniem rozmiaru spełniają `x > y`. W przypadku wartości true wartość 1 jest XORed do qubit wyjściowego. W przeciwnym razie wartość 0 jest XORed do qubit wyjściowego.
+  Ta operacja sprawdza, czy liczba całkowita reprezentowana przez rejestr qubits jest większa niż inna liczba całkowita, stosując XOR wyniku do qubit wyjściowego.
 
 
-  Innymi słowy, ta jednostka $U $ spełnia następujące wymagania: $ $ \begin{align} U\ket {x} \ KET {y} \ KET {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+  Dla dwóch liczb całkowitych `x` i `y` przechowywanych w rejestrach qubit o równym rozmiarze, ta operacja sprawdza, czy spełniają one `x > y`. W przypadku wartości true wartość 1 jest XORed do qubit wyjściowego. W przeciwnym razie wartość 0 jest XORed do qubit wyjściowego.
 
-  \end{align} $ $.
+  Innymi słowy, ta operacja może być reprezentowana przez jednostkę $ $ \begin{align} U\ket {x} \ KET {y} \ KET {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+  \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: '- Nowy program Quantum Ripple — przenieść obwód dodawania Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
@@ -34,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221103"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871128"

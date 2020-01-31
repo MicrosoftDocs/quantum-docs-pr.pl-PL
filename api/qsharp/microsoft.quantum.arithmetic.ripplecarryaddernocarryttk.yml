@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
 name: RippleCarryAdderNoCarryTTK
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych bez przeprowadzenia. W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys`operacja oblicza sumę dwóch liczb całkowitych modulo $2 ^ n $, gdzie $n $ jest rozmiarem bitowym danych wejściowych `xs` i `ys`. Nie jest obliczany bit przeprowadzenia.
+summary: >-
+  Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych bez przeprowadzenia.
+
+
+  W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys`operacja oblicza sumę dwóch liczb całkowitych modulo $2 ^ n $, gdzie $n $ jest rozmiarem bitowym danych wejściowych `xs` i `ys`. Nie jest obliczany bit przeprowadzenia.
 remarks: Ta operacja ma takie same funkcje jak RippleCarryAdderTTK, ale nie zwraca bitu przenoszenia.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -27,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9aa955764b16806df1ea6205b92483f4747463f5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214524"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871060"
