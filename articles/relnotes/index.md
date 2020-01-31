@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863167"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871621"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Ten artykuł zawiera informacje dotyczące poszczególnych wersji zestawu Quantu
 Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.quantum.install).
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>Wersja 0.10.2001.2831
+
+*Data wydania: 29 stycznia 2020 r.*
+
+To wydanie zawiera następujące elementy:
+
+- Nowy pakiet NuGet Microsoft.Quantum.SDK; zobacz [plik README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md), aby uzyskać więcej szczegółów
+- Dodano obsługę platformy .NET Core 3.1; zdecydowanie zaleca się zainstalowanie wersji 3.1.100, ponieważ kompilowanie przy użyciu starszych wersji zestawu .NET Core SDK może powodować problemy
+- Nowe przekształcenia kompilatorów są dostępne w ramach elementu Microsoft.Quantum.QsCompiler.Experimental
+- Nowa funkcja uwidaczniająca wyjściowe wektory stanu jako kod HTML w jądrze IQ#
+- Dodano obsługę elementu EstimateFrequencyA do przestrzeni nazw Microsoft.Quantum.Characterization dla testów Hadamard i SWAP
+- Przestrzeń nazw AmplitudeAmplification używa teraz przewodnika dotyczącego stylu języka Q#
 
 ## <a name="version-01019120501"></a>Wersja 0.10.1912.0501
 
@@ -127,7 +140,7 @@ Ta wersja reorganizuje rozszerzania i aktualizuje bibliotekę chemiczną:
 * Dodano obsługę [funkcji falowych z wieloma odwołaniami](xref:microsoft.quantum.chemistry.concepts.multireference) — zarówno rozrzedzonych funkcji falowych z wieloma odwołaniami, jak i unitarnego klastra sprzężonego.  [Żądanie ściągnięcia nr 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Dzięki Wam!) Współautor [1QBit](https://1qbit.com) ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Ocena energii przy użyciu założenia zmiennego. [Żądanie ściągnięcia nr 120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Zaktualizowano schemat [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) do nowej [wersji 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), dodano specyfikację unitarnego klastra sprzężonego. [Problem nr 65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Dodano współdziałania języka Python z funkcjami biblioteki chemicznej. Wypróbuj ten [przykład](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problem nr 53](https://github.com/microsoft/QuantumLibraries/issues/53) [żądania ściągnięcia nr 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Dodano współdziałania języka Python z funkcjami biblioteki chemicznej. Wypróbuj ten [przykład](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problem 53](https://github.com/microsoft/QuantumLibraries/issues/53) [Żądanie ściągnięcia 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Wersja 0.6.1905
 
@@ -512,7 +525,7 @@ Ta wersja zawiera rozwiązania niektórych problemów zgłaszanych przez społec
 - Testy muszą być wykonywane w trybie 64-bitowym. Jeśli testy kończą się niepowodzeniem ze zgłoszonym wyjątkiem BadImageFormatException, przejdź do menu testu, a następnie wybierz pozycję Ustawienia testu > Domyślna architektura procesora > X64.
 - Niektóre testy są długotrwałe (w zależności od komputera mogą trwać do 5 minut). Jest to normalne w przypadku użycia ponad dwudziestu kubitów. Nasz największy test aktualnie działa z 23 kubitami.
 
-#### <a name="samples"></a>Przykłady
+#### <a name="samples"></a>Samples
 
 - Na niektórych komputerach niektóre małe przykłady mogą działać wolno, jeśli zmienna środowiskowa OMP_NUM_THREADS nie zostanie ustawiona na wartość „1”. Zobacz również uwagi dotyczące wersji w sekcji „Symulacja”.
 
