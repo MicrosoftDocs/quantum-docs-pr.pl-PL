@@ -22,14 +22,22 @@
   items:
     - name: Kwantowy generator liczb losowych
       href: quickstarts/qrng.md
-    - name: 'Podstawy kwantowe w języku Q#'
+    - name: 'Podstawy obliczeń kwantowych w języku Q#'
       href: quickstart.md
     - name: Implementowanie algorytmu wyszukiwania Grovera
       href: quickstarts/search.md
 - name: Przewodniki z instrukcjami
   items:
     - name: Instalowanie zestawu QDK
-      href: install-guide/index.md
+      items:
+        - name: Omówienie instalacji
+          href: install-guide/index.md
+        - name: 'Q# i C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# i Python'
+          href: install-guide/pyinstall.md
+        - name: 'Notesy programu Jupyter dla języka Q#'
+          href: install-guide/qjupyter.md
     - name: Aktualizowanie zestawu QDK
       href: install-guide/update.md
     - name: 'Tworzenie projektu języka Q#'
