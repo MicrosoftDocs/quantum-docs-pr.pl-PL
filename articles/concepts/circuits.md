@@ -1,17 +1,17 @@
 ---
 title: Obwody Quantum | Microsoft Docs
-description: Obwody Quantum
+description: Obwody kwantowe
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210681"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820797"
 ---
 # <a name="quantum-circuits"></a>Obwody Quantum
 Rozważ chwilę przekształcenie jednostkowe $ \Text{CNOT} _{01}(H\otimes 1) $.
@@ -39,7 +39,7 @@ Na przykład symbol
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-jest bramą [Hadamard](xref:microsoft.quantum.primitive.h) działającą w rejestrze o pojedynczej qubit.
+jest bramą [Hadamard](xref:microsoft.quantum.intrinsic.h) działającą w rejestrze o pojedynczej qubit.
 
 Bramy Quantum są uporządkowane w kolejności chronologicznej z bramą z lewej strony, jako brama po raz pierwszy zastosowana do qubits.
 Innymi słowy, jeśli zdjęcia są nastawione jako przechowanie stanu Quantum, przewody te przesuwają stan Quantum za pośrednictwem każdej bramy na diagramie od lewej do prawej.
@@ -72,7 +72,7 @@ Oznacza to, że można uzyskać Intuition o przepływie danych dla dużego algor
 
 ## <a name="controlled-gates"></a>Kontrolowane bramy
 Druga konstrukcja, która jest wbudowana w wieloqubit diagramy obwodu Quantum jest formantem.
-Działanie bramy Quantum sterowanej pojedynczo, oznaczona jako $ \Lambda (G) $, gdzie wartość jednej qubit kontroluje zastosowanie $G $, można zrozumieć, przeglądając następujący przykład danych wejściowych stanu produktu $ \Lambda (G) (\Alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \Alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
+Działanie bramki Quantum pojedynczo sterowanej, oznaczona jako $ \Lambda (G) $, gdzie wartość jednej qubit kontroluje zastosowanie $G $, można zrozumieć, przeglądając następujący przykład danych wejściowych stanu produktu $ \Lambda (G) (\Alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \Alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
 Oznacza to, że kontrolowana brama ma zastosowanie $G $ do rejestru zawierającego $ \psi $ if i tylko wtedy, gdy kontrolka qubit przyjmuje wartość $1 $.
 Ogólnie rzecz biorąc, firma Microsoft opisuje takie kontrolowane operacje na diagramach obwodów jako
 
@@ -81,7 +81,7 @@ Ogólnie rzecz biorąc, firma Microsoft opisuje takie kontrolowane operacje na d
 ![](~/media/concepts_5.png)
 
 W tym miejscu czarne kółko oznacza bit Quantum, na którym Brama jest kontrolowana, a przewod pionowy oznacza jednostkę, która jest stosowana, gdy kontrolka qubit przyjmuje wartość $1 $.
-W przypadku specjalnych przypadków, w których $G = X $ i $G = Z $ wprowadzamy następującą notację do opisywania kontrolowanej wersji bram (należy zauważyć, że brama sterowana X jest [bramą $CNOT $](xref:microsoft.quantum.primitive.cnot)):
+W przypadku specjalnych przypadków, w których $G = X $ i $G = Z $ wprowadzamy następującą notację do opisywania kontrolowanej wersji bram (należy zauważyć, że brama sterowana X jest [bramą $CNOT $](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ W związku z tym, taki obwód jest podobny do:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![obwód pomiarowy](~/media/concepts_7.png)
 
-Q # implementuje [operator miary](xref:microsoft.quantum.primitive.measure) do tego celu.
+Q # implementuje [operator miary](xref:microsoft.quantum.intrinsic.measure) do tego celu.
 Zapoznaj się z [sekcją pomiary](xref:microsoft.quantum.libraries.standard.prelude#measurements) , aby uzyskać więcej informacji.
 
 Analogicznie, podobwód

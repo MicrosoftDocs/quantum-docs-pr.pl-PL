@@ -7,11 +7,13 @@ summary: >-
   Wykonuje modularny przyrost qubit rejestru przez stałą całkowitą.
 
 
-  Poczekaj, aż `increment` przez, `modulus` przez N i liczbę całkowitą zakodowaną w `target` przez t, a następnie operacja wykonuje następujące przekształcenia: | y ⟩ ↦ | t + a (mod N) ⟩ integer są zakodowane w formacie little-endian na podstawie QFT
+  Poczekaj, aż `increment` przez $a $, `modulus` przez $N $ i Integer zakodowane w `target` przez $y $.
+
+  Następnie operacja wykonuje następujące przekształcenia: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} INTEGERS są zakodowane w formacie little-endian w QFT.
 remarks: >-
   Przyjęto założenie, że `target` ma największą wartość równą 0.
 
-  Zakłada również, że wartość docelowa jest mniejsza niż N.
+  Zakłada również, że wartość docelowa jest mniejsza niż $N $.
 
 
   Aby zapoznać się ze schematem obwodu i wyjaśnieniem, zobacz rysunek 5 na [stronie 5 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
@@ -20,12 +22,15 @@ input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
+    summary: Przyrost liczby całkowitej $a $, który ma zostać dodany do $y $.
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: Liczba całkowita $N $, która modyfikacje $y + a $.
     isPrimitive: true
     uid: Int
   - name: target
+    summary: Liczba całkowita $y $ w formacie little-endian z kodowaniem fazowym, która `increment` $a $ jest dodawana do.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -36,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularincrementle
+- microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 897e46cca640e714e1f000548ffd3226e8e27fa4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219029"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871417"

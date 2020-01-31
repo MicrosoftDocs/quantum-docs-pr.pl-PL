@@ -1,17 +1,17 @@
 ---
-title: 'Techniki Q # — operacje i funkcje | Microsoft Docs'
-description: 'Metody Q # — operacje i funkcje'
+title: 'Operacje i funkcje — techniki Q # | Microsoft Docs'
+description: 'Operacje i funkcje — techniki Q #'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183458"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820780"
 ---
 # <a name="q-operations-and-functions"></a>Operacje i funkcje pytań i odpowiedzi
 
@@ -66,7 +66,7 @@ Jeśli operacja implementuje transformację jednostkową, można zdefiniować sp
 Istnienie tych specjalizacji może być zadeklarowane jako część sygnatury operacji: `is Adj + Ctl` w poniższym przykładzie. Odpowiednia implementacja dla każdej takiej niejawnie zadeklarowanej specjalizacji jest generowana przez kompilator. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-W powyższym przykładzie `adjoint invert;` wskazuje, że podległych specjalizacji ma być generowana przez odwrócenie implementacji treści, a `controlled adjoint invert;` wskazuje, że kontrolowana podległych specjalizacji ma być generowany przez odwrócenie danej implementacji kontrolowana specjalizacja.
+W powyższym przykładzie `adjoint invert;` wskazuje, że jest generowana podległych specjalizacji, przez odwrócenie implementacji treści, a `controlled adjoint invert;` wskazuje, że kontrolowana podległych specjalizacji ma być generowana przez odwrócenie danej implementacji kontrolowanej specjalizacji.
 
 Zobaczymy więcej przykładów tego elementu w [przepływie sterowania wyższej kolejności](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Za każdym razem, gdy `U` jest wywoływana, będzie ona mieć inną akcję na `target`.
 W szczególności kompilator nie może zagwarantować, że w przypadku dodania do `U`deklaracji specjalizacji `adjoint auto`, `U(target); Adjoint U(target);` działa jako tożsamość (to oznacza, że jako No-op).
-Jest to naruszone w przypadku [wektorów i macierzy](xref:microsoft.quantum.concepts.vectors), co pozwala na automatyczne generowanie podległych specjalizacji w operacji, w których wywołano operację, <xref:microsoft.quantum.math.randomreal> spowodują przerwanie gwarancji dostarczonych przez kompilator ; <xref:microsoft.quantum.math.randomreal> to operacja, dla której nie istnieje przyległych lub kontrolowana wersja.
+Jest to naruszone w przypadku [wektorów i macierzy](xref:microsoft.quantum.concepts.vectors), co pozwala na automatyczne generowanie podległych specjalizacji w operacji, w których wywołano operację, <xref:microsoft.quantum.math.randomreal> spowodują przerwanie gwarancji dostarczonych przez kompilator; <xref:microsoft.quantum.math.randomreal> to operacja, dla której nie istnieje przyległych lub kontrolowana wersja.
 
 Z drugiej strony, zezwolenie na wywołania funkcji, takie jak `Square`, jest bezpieczne, w tym przypadku kompilator może mieć pewność, że tylko dane wejściowe są zachowywane `Square` w celu zapewnienia stabilności danych wyjściowych.
 W ten sposób izolowanie możliwie największej logiki w ramach funkcji pozwala łatwo ponownie wykorzystać tę logikę w innych funkcjach i operacjach.

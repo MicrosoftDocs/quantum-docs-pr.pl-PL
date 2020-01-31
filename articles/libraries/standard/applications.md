@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864393"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868972"
 ---
 # <a name="applications"></a>Aplikacje #
 
@@ -69,15 +69,16 @@ Na przykład dekompozycja Trotter-Suzuki może być wywoływana przy użyciu nas
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Dlatego definiujemy wygodną funkcję
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ Spowoduje to zwrócenie operacji jednostkowej implementującej wszystkie kroki p
 Definiujemy również przydatną operację, która automatycznie wykonuje wszystkie kroki typowego eksperymentu z chemią Quantum. Na przykład mamy następujące elementy, które zwracają oszacowanie energii stanu utworzonego przez przygotowanie adiabatic stanu:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ Kontrolowane $U _a $ Gate Maps $ \ket{x} $ do $ \ket{(AX) \Text{mod} N} $, jeśl
 Aby osiągnąć $ (a ^ NX) \Text{mod} N $, można po prostu zastosować kontrolowane $U _ {a ^ N} $, gdzie obliczamy $a ^ n \Text{mod} N $ w trybie klasycznym, aby podłączyć obwód do obwodu Quantum.  
 Obwody do osiągnięcia takich modularnych arytmetycznych zostały opisane w [dokumentacji arytmetycznej](./algorithms.md#arithmetic), w związku z czym potrzebujemy modularnego obwodu wykładniczego, aby zaimplementować operacje $U kontrolowane\_
 
-Chociaż obwód powyżej odnosi się do [szacowania fazy Quantum](xref:microsoft.quantum.characterization.quantumphaseestimation) i jawnie włącza wyszukiwanie zamówień, można zmniejszyć liczbę wymaganych qubits. Możemy użyć metody Beauregard, aby znaleźć kolejność wyszukiwania zgodnie z opisem [na stronie 8 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)lub skorzystać z jednej z procedur szacowania fazy dostępnych w Microsoft. Quantum. Canon. Na przykład [niezawodna Ocena fazy](xref:microsoft.quantum.characterization.robustphaseestimation) używa również jednej dodatkowej qubit.
+Chociaż obwód powyżej odnosi się do [szacowania fazy Quantum](xref:microsoft.quantum.characterization.quantumphaseestimation) i jawnie włącza wyszukiwanie zamówień, można zmniejszyć liczbę wymaganych qubits. Możemy użyć metody Beauregard, aby znaleźć kolejność wyszukiwania zgodnie z opisem [na stronie 8 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), lub skorzystać z jednej z procedur szacowania fazy dostępnych w Microsoft. Quantum. charakteryzującą. Na przykład [niezawodna Ocena fazy](xref:microsoft.quantum.characterization.robustphaseestimation) używa również jednej dodatkowej qubit.
  
 ### <a name="factoring"></a>Wyprowadzenie ###
 Celem jest określenie dwóch czynników zasadniczych liczby całkowitej $N $, gdzie $N $ jest numerem $n $-bitowym.  

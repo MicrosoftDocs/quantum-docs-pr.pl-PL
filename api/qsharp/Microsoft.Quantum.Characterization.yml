@@ -11,12 +11,14 @@ operations:
   summary: Mając na celu przygotowanie i pomiar, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
 - uid: microsoft.quantum.characterization.estimatefrequencya
   summary: Na podstawie przygotowań, które są przylegające i pomiarowe, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+- uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+  summary: Dwie operacje, które każda przygotowuje kopie stanu, oceniają część urojoną nakładania się między Stanami przygotowanymi przez poszczególne operacje.
+- uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+  summary: W przypadku dwóch operacji, które każda przygotowuje kopie stanu, szacuje kwadratowe nakładanie się między Stanami przygotowanymi przez poszczególne operacje.
+- uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+  summary: Dwie operacje, które każdy przygotują kopie stanu, szacują rzeczywistą część nakładania się między Stanami przygotowanymi przez poszczególne operacje.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: >-
-    Wspólnie mierzy rejestr qubits na bazie Pauli Z.
-
-
-    Innymi słowy, miara operacji $Z \otimes Z \otimes \cdots \otimes Z $ w danym rejestrze.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMeasureAllZ jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.measurement.measureallz\".\nUżyj @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mierzy operator tożsamości w rejestrze qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
@@ -26,9 +28,9 @@ operations:
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Wykonuje pojedynczy qubit proces pomiaru Tomography w bazie Pauli, z uwzględnieniem konkretnego kanału zainteresowania.
 metadata:
-  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056945"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870685"

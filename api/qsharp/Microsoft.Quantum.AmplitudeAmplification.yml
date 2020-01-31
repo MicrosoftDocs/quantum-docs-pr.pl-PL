@@ -4,41 +4,63 @@ name: Microsoft.Quantum.AmplitudeAmplification
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje do wykonywania wzmocnienia amplitudy.\n\n # <a name=\"description\"></a>Opis\n Wzmocnienie amplitudy Oblivious z częściowym odbiciem stanowi najbardziej ogólną formę wzmocnienia amplitudy wdrożonego w tym miejscu.\n\n Jest to wywoływane przez operację AmpAmpObliviousByReflectionPhases.\n\n Ma dwa rejestry: `ancillaRegister` i `systemRegister`.\n\n Akceptuje to dwie Oracle dla tych odniesień typu `ReflectionOracle` które działają tylko w rejestrze `ancillaRegister`.\n\n Jest to akceptowane przez firmę Oracle specjalna do Oblivious wzmocnienia amplitudy typu `ObliviousOracle`, który działa wspólnie zarówno w przypadku obu rejestrów.\n\n Przyjmuje się, że stan wejściowy `ancillaRegister` jest unikatowy eigenstate $-$1 pierwszego operatora odbicia $I-2 \\ KET {s} \\ bra {s} $.\n\n Odbicia w docelowym stanie Quantum są często implementowane przez założenie dostępu do bazy danych Oracle, która przygotowuje ten stan od podstaw obliczeniowej $ \\ket{0\\cdots 0} $.\n\n Nasza Konwencja dla tych systemów Oracle wymaga dwóch rejestrów: `flagQubit` qubit Rejestracja jednokrotna i rejestr dla wszystkiego innego w rejestrze ancillaRegister.\n\n Oracle typu `StateOracle` działa wspólnie z obydwoma rejestrami w celu utworzenia stanu docelowego oflagowanego przez $ \\ket{1}$ w `flagQubit` rejestrze z rzeczywistą amplitudą.\n\n `ReflectionOracle` odbicia na temat tego stanu flagi jest generowany przez operację `TargetStateReflectionOracle`.\n\n Odbicie `ReflectionOracle` informacji o stanie wprowadzania do `ancillaRegister` jest generowana przez odwracanie StateOracle, a następnie odzwierciedlenia wartości $ \\ket{0\\cdots 0} $ with ReflectionStart ().\n\n Oracle typu `DeterministicStateOracle` działa w rejestrach `qubitState`, aby utworzyć stan docelowy dokładnie bez flagi.\n\n `AmpAmpObliviousByOraclePhases` to wersja wzmocnienia amplitudy Oblivious, która akceptuje bazy danych Oracle `StateOracle` i `ObliviousOracle` zamiast odbić.\n\n Należy zauważyć, że wzmocnienie amplitudy jest szczególnym przypadkiem wzmocnienia amplitudy Oblivious, gdzie `ObliviousOracle` jest operatorem tożsamości i nie istnieje system qubits, tj. `systemRegister` jest pusty.\n\n Jest to wywoływane przez operację `AmpAmByReflectionPhases` i `AmpAmpByOraclePhases`.\n\n Fazy dla częściowego odbicia w standardowym przypadku wyszukiwania Grover są dostarczane przez funkcję AmpAmpPhasesStandard.\n\n Na przykład mamy następujące zależności: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: Algorytm wzmocnienia amplitudy standardowej
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByOracle jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\".\nUżyj @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: Wzmocnienie amplitudy przez firmy Oracle dla częściowych odbicia.
-- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
-  summary: Wzmocnienie amplitudy poprzez częściowe odbicia.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByOraclePhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\".\nUżyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"."
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByReflectionPhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\".\nUżyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: Wzmocnienie amplitudy Oblivious przez firmy Oracle dla częściowych odbicia.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpObliviousByOraclePhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\".\nUżyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: Zwraca jednostkę, która implementuje wzmocnienie amplitudy Oblivious przez określenie dla częściowego odbicia.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpObliviousByReflectionPhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\".\nUżyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: Oblicza częściowe fazy odbicia dla wzmocnienia amplitudy stałej.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpPhasesFixedPoint jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\".\nUżyj @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: Oblicza częściowe fazy odbicia w przypadku wzmocnienia amplitudy standardowej.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpPhasesStandard jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\".\nUżyj @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: Konwertuje fazy określone jako rotacje pojedynczej qubit na fazy określone jako częściowe odbicia.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpRotationToReflectionPhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\".\nUżyj @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"."
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
+  summary: Wzmocnienie amplitudy poprzez częściowe odbicia.
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
+  summary: Wzmocnienie amplitudy przez firmy Oracle dla częściowych odbicia.
+- uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
+  summary: Oblicza częściowe fazy odbicia dla wzmocnienia amplitudy stałej.
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
+  summary: Zwraca jednostkę, która implementuje wzmocnienie amplitudy Oblivious przez określenie dla częściowego odbicia.
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
+  summary: Wzmocnienie amplitudy Oblivious przez firmy Oracle dla częściowych odbicia.
 - uid: microsoft.quantum.amplitudeamplification.reflectionstart
   summary: Tworzy odbicie na temat ciągu All-zero | 0... 0 〉, który jest typowym stanem wejścia do wzmocnienia amplitudy.
+- uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+  summary: Konwertuje fazy określone jako rotacje pojedynczej qubit na fazy określone jako częściowe odbicia.
+- uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
+  summary: Algorytm wzmocnienia amplitudy standardowej
+- uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
+  summary: Oblicza częściowe fazy odbicia w przypadku wzmocnienia amplitudy standardowej.
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
     Konstruuje `ReflectionOracle` o stanie docelowym jednoznacznie oznaczony przez flagę qubit.
 
 
-    Stan docelowy ma jeden qubit ustawiony na 1, a wszystkie pozostałe 0: $ \ket{1}_F $.
+    Stan docelowy ma jeden qubit ustawiony na 1, a wszystkie pozostałe 0: $ \ket{1}_f $.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpRUSByOracle jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\".\nUżyj @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"."
+- uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
+  summary: Stosuje wzmocnienie amplitudy w danym rejestrze, korzystając z danego zestawu faz i Oracle w celu odzwierciedlenia stanu początkowego i końcowego.
+- uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
   summary: Algorytm wzmocnienia amplitudy stałych punktów
+- uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
+  summary: Wzmocnienie amplitudy Oblivious, określając częściowe odbicie.
 newtypes:
 - uid: microsoft.quantum.amplitudeamplification.reflectionphases
   summary: Fazy dla sekwencji częściowego odbicia w wzmocnienia amplitudy.
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: Fazy dla sekwencji rotacji z pojedynczą qubitą w wzmocnienie amplitudy.
 metadata:
-  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057136"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870386"

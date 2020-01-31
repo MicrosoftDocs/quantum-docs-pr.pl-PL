@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442536"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820763"
 ---
 # <a name="quantum-computing-glossary"></a>Słownik przetwarzania Quantum
 
@@ -19,7 +19,7 @@ ms.locfileid: "73442536"
 |-------------|----------|
 |Sąsiadująco|Złożone sprzężenie sprzężone operacji. W przypadku operacji implementujących operator jednostki sąsiednie jest odwrotność operacji.|
 |Żądanie|Operacje i funkcje są nazywane zbiorczo jako *możliwymi*do przeniesień.|
-|Standardowa (Standard)|Operacje i funkcje zdefiniowane w Q # Kompilowanie w logice zdefiniowanej w Preludium. Implementacja biblioteki standardowej jest niezależny od w odniesieniu do komputerów docelowych.|
+|Standardowa|Operacje i funkcje zdefiniowane w Q # Kompilowanie w logice zdefiniowanej w Preludium. Implementacja biblioteki standardowej jest niezależny od w odniesieniu do komputerów docelowych.|
 |Grupa Clifford|Zestaw operacji, które zajmują octants sfery Bloch. Należą do nich: `X`, `Y`, `Z`, `H` i `S`|
 |Kontrolowane|Operacja Quantum, która przyjmuje co najmniej jeden qubits jako element do obsługi dla operacji docelowej.|
 |Notacja Dirac|Skrócona reprezentacja stanu Quantum. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [notacji Dirac](xref:microsoft.quantum.concepts.dirac) .|
@@ -39,9 +39,8 @@ ms.locfileid: "73442536"
 |Preludium|Zestaw operacji pierwotnych i klasycznych zdefiniowanych przez poszczególne maszyny docelowe, a nie na poziomie Q #.|
 |Obwód Quantum|Reprezentacja programu dla komputera Quantum. Aby uzyskać więcej informacji, zobacz sekcję <xref:microsoft.quantum.concepts.circuits>.|
 |Stan Quantum|Reprezentacja qubits w systemie. Ta wartość jest zwykle oznaczona jako złożona wektor kolumn. Aby uzyskać więcej informacji, zobacz <xref:microsoft.quantum.concepts.vectors>. |
-|qubit|Jednostka magazynu Quantum. Aby uzyskać więcej informacji, zobacz sekcję <xref:microsoft.quantum.concepts.qubit>.|
+|Qubit|Jednostka magazynu Quantum. Aby uzyskać więcej informacji, zobacz sekcję <xref:microsoft.quantum.concepts.qubit>.|
 |Powtarzaj-do-sukces|Algorytm Quantum, który probabilistically się pomyślnie. W przypadku niepowodzenia procedura zostanie ponowiona do momentu pomyślnego (lub limit został osiągnięty). |
-|Stos oprogramowania|Kompletny zestaw klasycznych i Quantum oprogramowania, a także kompilatory, symulatory i środowiska uruchomieniowe niezbędne do obsługi komputera Quantum. Aby uzyskać więcej informacji, zobacz sekcję <xref:microsoft.quantum.concepts.software-stack>. |
 |Maszyna docelowa|Element docelowy kompilacji, który obniża abstrakcyjny program Quantum do sprzętu lub symulacji. Obejmuje to zwykle ponowne zapisy w wielu celach, w tym zastępowanie bram, kodowanie dla korekcji błędów, układ geometryczny i inne.|
 |Spoin|Rozdzielane przecinkami typy zgrupowane razem za pośrednictwem nawiasów. |
 |Typ zdefiniowany przez użytkownika|Kolekcja wbudowanych lub wcześniej zdefiniowanych typów, które mogą być określane jako pojedyncza jednostka.|

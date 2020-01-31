@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184988"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820865"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>Maszyna docelowa ResourcesEstimator
 
@@ -97,37 +97,37 @@ Poniżej znajduje się lista metryk szacowanych przez `ResourcesEstimator`:
 * __QubitClifford__: liczba wykonanych pojedynczej bramy qubit Clifford i Pauli.
 * __Miara__: liczba wykonanych pomiarów.
 * __R__: liczba wykonanych pojedynczych rotacji qubit, z wyjątkiem bram T, Clifford i Pauli.
-* __T__: liczba bram t i ich sprzężenia, łącznie z bramą t, T_x = H. T. h i T_y = HY. T. HY, wykonane.
+* __T__: liczba bram t i ich sprzężenia, łącznie z bramą t, T_x = H. T. H i T_y = HY. t. HY, wykonane.
 * __Głębokość__: Głębokość obwodu Quantum wykonywanego przez operację Q #. Domyślnie tylko bramy T są zliczane na głębokości, szczegóły można znaleźć w temacie [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
 * __Width__: Maksymalna liczba qubits przypisana podczas wykonywania operacji Q #.
 * __BorrowedWidth__: Maksymalna liczba qubits została zapożyczone w ramach operacji Q #.
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Zapewnianie prawdopodobieństwa wyników pomiarów
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Podawanie prawdopodobieństwa wyników pomiarów
 
-<xref:microsoft.quantum.primitive.assertprob> z przestrzeni nazw <xref:microsoft.quantum.primitive> można użyć, aby podać informacje o oczekiwanym prawdopodobieństwie pomiaru, aby ułatwić wykonanie programu Q #. Poniższy przykład ilustruje:
+<xref:microsoft.quantum.intrinsic.assertprob> z przestrzeni nazw <xref:microsoft.quantum.intrinsic> można użyć, aby podać informacje o oczekiwanym prawdopodobieństwie pomiaru, aby ułatwić wykonanie programu Q #. Zostało to przedstawione w poniższym przykładzie:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-Gdy `ResourcesEstimator` napotka `AssertProb`, nastąpi zapisanie `PauliZ` pomiaru na `source` i `ancilla` należy otrzymać wynik `Zero` z prawdopodobieństwem 0,5. Gdy zostanie on wykonany `M` później, będzie znajdował zarejestrowane wartości prawdopodobieństwa wyniku i `M` zwróci `Zero` lub `One` z prawdopodobieństwem 0,5.
+Gdy `ResourcesEstimator` napotka `AssertProb`, nastąpi zapisanie `PauliZ` pomiaru na `source` i `q` należy otrzymać wynik `Zero` z prawdopodobieństwem 0,5. Gdy zostanie on wykonany `M` później, będzie znajdował zarejestrowane wartości prawdopodobieństwa wyniku i `M` zwróci `Zero` lub `One` z prawdopodobieństwem 0,5.
 
 
 ## <a name="see-also"></a>Zobacz także

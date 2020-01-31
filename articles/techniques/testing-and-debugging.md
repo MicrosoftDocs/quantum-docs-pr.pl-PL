@@ -1,17 +1,17 @@
 ---
-title: 'Techniki Q # — testowanie i debugowanie | Microsoft Docs'
-description: 'Techniki Q # — testowanie i debugowanie'
+title: 'Testowanie i debugowanie — techniki Q # | Microsoft Docs'
+description: 'Testowanie i debugowanie — techniki Q #'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864274"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820117"
 ---
 # <a name="testing-and-debugging"></a>Testowanie i debugowanie
 
@@ -50,8 +50,8 @@ Początkowo ten plik zawiera jeden przykładowy test jednostkowy `AllocateQubit`
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ W przypadku niepowodzeń testów są one również drukowane w konsoli programu 
 
 ***
 
-## <a name="assertions"></a>Potwierdzenia
+## <a name="assertions"></a>Asercje
 
 Ponieważ funkcje w pytaniach Q # nie mają _logicznych_ efektów ubocznych, wszelkie _Inne rodzaje_ efektów wykonywania funkcji, której typem danych wyjściowych jest pusta `()` krotka, nie można nigdy zaobserwować w programie Q #.
 Oznacza to, że komputer docelowy może nie wykonywać żadnej funkcji, która zwraca `()` z gwarancją, że to pominięcie nie zmodyfikuje zachowania żadnego z następujących kodów Q #.
@@ -360,7 +360,7 @@ namespace app
 }
 ```
 
-## <a name="debugging"></a>Debugowanie
+## <a name="debugging"></a>Debugging
 
 W oparciu o `Assert` i `Dump` funkcje i operacje, funkcja Q # obsługuje podzbiór standardowych możliwości debugowania programu Visual Studio: [ustawianie punktów przerwania](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [Przechodzenie przez kod przy użyciu](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) klawisza F10 i [Sprawdzanie wartości zmiennych klasycznych](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) jest możliwe podczas wykonywania kodu w symulatorze.
 

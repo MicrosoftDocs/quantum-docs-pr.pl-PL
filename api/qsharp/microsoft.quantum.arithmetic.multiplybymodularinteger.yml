@@ -7,7 +7,9 @@ summary: >-
   Wykonuje mnożenie modularne przez stałą całkowitą w rejestrze qubit.
 
 
-  Poinformuj nas o tym, że działy przez N i constMultiplier przez tę operację implementują jednostki zdefiniowane przez następującą mapę w oparciu o obliczenia: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, dla wszystkich y od 0 do N-1
+  Poinformuj nas, `modulus`, $N $ i `constMultiplier` przez $a $.
+
+  Następnie ta operacja implementuje operacje jednostkowe zdefiniowane przez następującą mapę w oparciu o obliczenia: $ $ \begin{align} \ket{y} \mapsto \ket{(\cdot y) \operatorname{mod} N} \end{align} $ $ dla wszystkich $y $ między $0 $ i $N – $1.
 remarks: >-
   - Aby zapoznać się ze schematem obwodu i wyjaśnieniem, zobacz rysunek 7 na [stronie 8 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
 
@@ -21,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Operacja mnożenia jest wykonywana `modulus` modulo
+    summary: Operacja mnożenia jest wykonywana `modulus`modulo.
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       Liczba pomnożona przez stałą.
 
-      Jest to tablica qubits reprezentująca liczbę całkowitą w kolejności bitowej little-endian.
+      Jest to tablica qubits kodowania liczby całkowitej w formacie little-endian.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -39,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 49d46d1dda5afaf4a35667ec98d24aeb51beba1f
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218757"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871383"

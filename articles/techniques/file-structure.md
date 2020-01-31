@@ -1,18 +1,19 @@
 ---
-title: Wprowadzenie do technik programowania Quantum | Microsoft Docs
-description: Wprowadzenie do technik programowania Quantum
+title: 'Omówienie programu q # — techniki pytań i odpowiedzi | Microsoft Docs'
+description: 'Przegląd programu q # — techniki dla technologii Q #'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442556"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820831"
 ---
-# <a name="q-program-overview"></a>Przegląd programu Q #
+# <a name="q-program-overview"></a>Przegląd programu Q#
 
 Q # to skalowalny, wielowymiarowy, specyficzny dla domeny język programowania dla przetwarzania Quantum. Q # to język programowania Quantum w systemie, który może służyć do opisywania sposobu wykonywania instrukcji na maszynach Quantum. Maszyny, które mogą być przeznaczone do zakresu od symulatorów do rzeczywistego sprzętu Quantum. Polecenie Q # jest skalowalne: może służyć do pisania prostych programów demonstracyjnych, takich jak teleport, które działają na kilku qubits, ale również obsługuje pisanie dużych, zaawansowanych programów, takich jak symulacje złożonych cząsteczek, które będą wymagały dużych maszyn z milionami qubits. Mimo że duże maszyny fizyczne są nadal w przyszłości, funkcja Q # umożliwia programistom programowanie złożonych algorytmów Quantum teraz. Co więcej, funkcja Q # obsługuje różne zadania, takie jak debugowanie, profilowanie, szacowanie zasobów i pewne symulacje specjalnego przeznaczenia w sposób skalowalny. 
 

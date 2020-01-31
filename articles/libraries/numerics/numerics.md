@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184614"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821035"
 ---
 # <a name="using-the-numerics-library"></a>Korzystanie z biblioteki liczb
 
@@ -28,7 +28,7 @@ Dostęp do wszystkich tych składników można uzyskać przy użyciu jednej inst
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Typ
+## <a name="types"></a>Typy
 
 Biblioteka liczb obsługuje następujące typy:
 
@@ -64,7 +64,7 @@ Dla każdego z trzech powyższych typów dostępne są różne operacje:
     - Wzajemne (1/x)
     - Pomiar (klasyczny Double)
 
-Aby uzyskać więcej informacji i szczegółowe informacje dotyczące każdej z tych operacji, zobacz dokumentację dotyczącą bibliotek Q # w witrynie [docs.Microsoft.com](https://docs.microsoft.com/en-us/quantum)
+Aby uzyskać więcej informacji i szczegółowe informacje dotyczące każdej z tych operacji, zobacz dokumentację dotyczącą bibliotek Q # w witrynie [docs.Microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Przykład: dodanie liczby całkowitej
 
@@ -72,15 +72,14 @@ Przykładowo należy rozważyć wykonanie operacji $ $ \ket x\ket y\mapsto \ket 
 
 Korzystając z zestawu Quantum Development Kit, tę operację można zastosować w następujący sposób:
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -93,20 +92,20 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 
 Aby oszacować funkcje gładkie, takie jak $ \sin (x) $ na komputerze z systemem Quantum, gdzie $x $ jest typem Quantum `FixedPoint`, Biblioteka elementów Quantum Development Kit zawiera operacje `EvaluatePolynomialFxP` i `Evaluate[Even/Odd]PolynomialFxP`.
 
-Pierwszy, `EvaluatePolynomialFxP`, umożliwia ocenę wielomianu formularza $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, gdzie $d $ oznacza *stopień*. W tym celu wystarczy, że są to współczynniki wielomianowe `[a_0,..., a_d]` (typu `Double[]`), `x : FixedPoint` wejściowe i `y : FixedPoint` wyjściowych (początkowo zero):
+Pierwszy `EvaluatePolynomialFxP`, umożliwia ocenę wielomianu formularza $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, gdzie $d $ oznacza *stopień*. W tym celu wystarczy, że są to współczynniki wielomianowe `[a_0,..., a_d]` (typu `Double[]`), `x : FixedPoint` wejściowe i `y : FixedPoint` wyjściowych (początkowo zero):
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 Wynik, $P (x) = 1 + 2x $, będzie przechowywany w `yFxP`.
 
-Drugi, `EvaluateEvenPolynomialFxP`i trzeci, `EvaluateOddPolynomialFxP`, są specjalizacjami dla przypadków funkcji parzystych i nieparzystych. Oznacza to, że dla funkcji parzystej/nieparzystej $f (x) $ i $ $ p_ {nawet} (x) = a_0 + A_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ jest dobrze po$P _ {nawet} (x) $ lub $P _ {nieparzysta} (x): = x\cdot p_ {Parzyst} (x) $ piwo.
+Drugi, `EvaluateEvenPolynomialFxP`i trzeci, `EvaluateOddPolynomialFxP`, są specjalizacjami dla przypadków funkcji parzystych i nieparzystych. Oznacza to, że dla funkcji parzystej/nieparzystej $f (x) $ i $ $ P_ {nawet} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, symbol $ $ $f (x) $ jest dobrze zbliżony do $P _ {nawet} (x) $ lub $P _ {nieparzysta} (x): = x\cdot P_ {nawet} (x) $, odpowiednio.
 W Q # te dwa przypadki mogą być obsługiwane w następujący sposób:
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 który szacuje $P _ {parzysty} (x) = 1 + 2 $, i
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 który szacuje $P _ {unparzysty} (x) = x + 2x ^ 3 $.
 

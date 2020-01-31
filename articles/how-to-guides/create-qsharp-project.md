@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864410"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819896"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Tworzenie projektu Q # w środowisku deweloperskim
 
@@ -23,7 +23,7 @@ Projekt Q # zawiera pliki Q # zawierające kod Quantum oraz program hosta służ
 Wybierz środowisko deweloperskie i język w poniższych sekcjach:
 
 * [Python](#create-a-python-project)
-* [Program Jupyter notebooks](#create-a-jupyter-notebook-project)
+* [Notesy Q # Jupyter](#create-a-q-jupyter-notebook-project)
 * [C#za pomocą programu Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#z VS Code](#create-a-c-project-using-vs-code)
 * [C#przy użyciu wiersza polecenia](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -32,11 +32,11 @@ Wybierz środowisko deweloperskie i język w poniższych sekcjach:
 
 1. Wymagania wstępne
 
-     * [Zestaw Quantum Development Kit dla języka Python](xref:microsoft.quantum.install#develop-with-python)
+     * Instalowanie [zestawu Quantum Development Kit dla języka Python](xref:microsoft.quantum.install.python)
 
 1. Utwórz folder dla projektu i przejdź do tego folderu
 
-1. Utwórz plik Q # o nazwie `Operation.qs`i Dodaj do niego kod Q. Na przykład:
+1. Utwórz plik Q # o nazwie `Operation.qs`i Dodaj do niego kod Q. Przykład:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Wybierz środowisko deweloperskie i język w poniższych sekcjach:
     }
     ```
 
-1. Utwórz plik hosta języka Python o nazwie `host.py`, aby wywołać operację Q #. Na przykład:
+1. Utwórz plik hosta języka Python o nazwie `host.py`, aby wywołać operację Q #. Przykład:
 
     ```python
     import qsharp
@@ -75,11 +75,11 @@ Wybierz środowisko deweloperskie i język w poniższych sekcjach:
 
 Teraz można kontynuować opracowywanie programu Quantum.
 
-## <a name="create-a-jupyter-notebook-project"></a>Tworzenie projektu Jupyter Notebook
+## <a name="create-a-q-jupyter-notebook-project"></a>Utwórz projekt Q # Jupyter Notebook
 
 1. Wymagania wstępne
 
-    * [Zestaw Quantum Development Kit dla notesów Jupyter](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * Instalowanie [zestawu Quantum Development Kit dla notesów Jupyter](xref:microsoft.quantum.install.jupyter)
 
 1. Uruchom następujące polecenie, aby uruchomić serwer notesów:
 
@@ -115,7 +115,7 @@ Teraz możesz dodać inne operacje pytań i odpowiedzi, aby kontynuować tworzen
 
 1. Wymagania wstępne
 
-    * [Zestaw Quantum Development Kit dla programu Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * Zainstaluj [rozszerzenie Quantum Development Kit dla programu Visual Studio](xref:microsoft.quantum.install.cs)
 
 1. Tworzenie nowej aplikacji w języku Q#
 
@@ -144,7 +144,7 @@ Teraz możesz kontynuować opracowywanie Quantum przy użyciu programu Visual St
 
 1. Wymagania wstępne
 
-    * [Zestaw Quantum Development Kit dla vs Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * Zainstaluj [rozszerzenie Quantum Development Kit dla vs Code](xref:microsoft.quantum.install.cs)
 
 1. Tworzenie nowego projektu:
 
@@ -169,7 +169,7 @@ Teraz możesz kontynuować tworzenie aplikacji Quantum przy użyciu Visual Studi
 
 1. Wymagania wstępne
 
-    * [Zestaw Quantum Development Kit dla wiersza polecenia](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * Instalowanie [zestawu Quantum Development Kit dla wiersza polecenia](xref:microsoft.quantum.install.cs)
 
 1. Tworzenie nowej aplikacji
 

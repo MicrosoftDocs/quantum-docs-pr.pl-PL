@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 7fd9d1fa4fb3c5dd216d846038abd40454ece2e8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035137"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820440"
 ---
 # <a name="quantum-trace-simulator"></a>Symulator śledzenia kwantowego
 
@@ -24,29 +24,26 @@ W przypadku konieczności wykonywania pomiarów symulator śledzenia korzysta z 
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Podawanie prawdopodobieństwa wyników pomiarów
 
-W algorytmach kwantowych są używane dwa rodzaje pomiarów. Pierwszy odgrywa rolę pomocniczą — użytkownik zazwyczaj zna prawdopodobieństwo wystąpienia wyników. W takim przypadku użytkownik może napisać operację <xref:microsoft.quantum.primitive.assertprob> w przestrzeni nazw <xref:microsoft.quantum.primitive>, aby udostępnić te informacje. Zostało to przedstawione w poniższym przykładzie:
+W algorytmach kwantowych są używane dwa rodzaje pomiarów. Pierwszy odgrywa rolę pomocniczą — użytkownik zazwyczaj zna prawdopodobieństwo wystąpienia wyników. W takim przypadku użytkownik może napisać operację <xref:microsoft.quantum.intrinsic.assertprob> w przestrzeni nazw <xref:microsoft.quantum.intrinsic>, aby udostępnić te informacje. Zostało to przedstawione w poniższym przykładzie:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
-Gdy symulator śledzenia wykona operację `AssertProb`, zarejestruje wynik `Zero` dla wartości `PauliZ` w elementach `source` i `ancilla` z prawdopodobieństwem 0,5. Gdy symulator wykona później operację `M`, znajdzie zarejestrowane wartości prawdopodobieństwa wyników, a operacja `M` zwróci element `Zero` lub `One` z prawdopodobieństwem 0,5. Jeśli ten sam kod zostanie wykonany w symulatorze, który śledzi stan kwantowy, symulator sprawdzi, czy prawdopodobieństwa podane w operacji `AssertProb` są poprawne.
+Gdy symulator śledzenia wykona operację `AssertProb`, zarejestruje wynik `Zero` dla wartości `PauliZ` w elementach `source` i `q` z prawdopodobieństwem 0,5. Gdy symulator wykona później operację `M`, znajdzie zarejestrowane wartości prawdopodobieństwa wyników, a operacja `M` zwróci element `Zero` lub `One` z prawdopodobieństwem 0,5. Jeśli ten sam kod zostanie wykonany w symulatorze, który śledzi stan kwantowy, symulator sprawdzi, czy prawdopodobieństwa podane w operacji `AssertProb` są poprawne.
 
 ## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Uruchamianie programu za pomocą symulatora śledzenia komputera kwantowego 
 

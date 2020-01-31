@@ -10,11 +10,7 @@ functions:
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: W wyniku operacji reprezentowanej przez firmę Oracle "Black-Box" funkcja zwraca osobne oprogramowanie Oracle, które reprezentuje wielokrotnie powtórzone oprogramowanie Oracle.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    Tworzy odbicie dotyczące danego stanu z bazy danych Oracle.
-
-
-    W przypadku <xref:microsoft.quantum.oracles.deterministicstateoracle>Oracle $O $ typu, wynikiem tej funkcji jest odbicie wokół stanu $ \ket{\psi} $, gdzie $O \ket{0} = \ket{\psi} $.
+  summary: Tworzy odbicie dotyczące danego stanu z bazy danych Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: Konwertuje Oracle typu `DeterministicStateOracle`, aby `StateOracle`.
 newtypes:
@@ -73,9 +69,9 @@ newtypes:
 
     - Rejestr systemu $s $, który będzie przechowywać żądany stan Quantum $ \ket{\psi}\_s $.
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216105"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870007"

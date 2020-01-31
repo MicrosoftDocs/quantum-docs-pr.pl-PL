@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: f34233bc17ff68a9e04256959f8d79be2682c34f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184053"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820542"
 ---
 # <a name="jordan-wigner-representation"></a>Jordania — reprezentacja Wigner
 
@@ -24,14 +24,19 @@ Główną zaletą reprezentacji Jordania-Wigner jest prostota.
 Reprezentacja Jordania-Wigner jest prosta do przesłania do.
 Należy odwołać się, że stan $ \ket{0}_j $ oznacza, że wartość obracająca się $j $ jest pusta i $ \ket{1}_j $ oznacza, że jest zajęta.
 Oznacza to, że qubits może w naturalny sposób przechowywać zawód danego kręgu.
-Następnie będziemy $a ^ \dagger_j \ket{0}_j = \ket{1}_j $ i $a ^ \dagger_j \ket{1}_j = $0.
-Można łatwo sprawdzić, czy \begin{align} ^ \dagger_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}, \nonumber\\\\ a_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{ bmatrix} = \frac{X_j-iY_j}{2}, \end{align}, gdzie $X _j $ i $Y _j $ są operatorami Pauli-$X $ i-$Y $ działającymi na qubit $j $.
+Następnie będziemy $a ^ \ dagger_j \ket{0}_j = \ket{1}_j $ i $a ^ \ dagger_j \ket{1}_j = $0.
+Można łatwo sprawdzić, czy \begin{align} a ^ \ dagger_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{bmatrix} = \frac{X_j-iY_j}{2}, \nonumber\\\\ a_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}, \end{align}, gdzie $X _j $ i $Y _j $ są operatorami Pauli-$X $ i-$Y $ działającymi na qubit $j $.
+
+>[!NOTE]
+> W Q # stan $ \ket{0}$ reprezentuje znak + 1 eigenstate operatora $Z $. W niektórych obszarach fizyki $ \ket{0}$ reprezentuje stan ziemi niskiego zużycia energii, a tym samym-1 eigenstate operatora $Z $. W związku z tym niektóre formuły mogą różnić się od popularnej literatury.
+
+W bibliotece chemii używamy $ \ket{0}$, aby reprezentować nieprzejmowany obrót.
 Pokazuje to, że w przypadku pojedynczego kręgu można łatwo reprezentować operatory tworzenia i Annihilation w odniesieniu do macierzy jednostkowych, które są rozpoznawane przez komputery Quantum.
 Należy pamiętać, że chociaż $X $ i $Y $ są jednostkowymi $a ^ \dagger $, a $a $ nie są.
 Zobaczymy później, że to nie stanowi wyzwania dla symulacji.
 
 Jeden z problemów, który pozostanie, że chociaż powyższa konstrukcja działa w przypadku pojedynczego kręgu, kończy się niepowodzeniem w przypadku systemów z co najmniej dwoma orbitals.
-Ponieważ Fermions są antisymmetic, wiemy, że $a ^ \dagger_j a ^ \dagger_k =-a ^ \dagger_k a ^ \dagger_j $ dla dowolnego $j $ i $k $.
+Ponieważ Fermions są antisymmetic, wiemy, że $a ^ \ dagger_j ^ \ dagger_k =-a ^ \ dagger_k a ^ \ dagger_j $ dla dowolnego $j $ i $k $.
 Jednak $ $ \left (\frac{X_j-iY_j}{2}\right) \left (\frac{X_k-iY_k}{2}\right) = \left (\frac{X_k-iY_k}{2}\right) \left (\frac{X_j-iY_j}{2}\right).
 $ $ Innymi słowy, dwa operatory tworzenia nie przełączają się zgodnie z potrzebami.
 Można to rozwiązać przy użyciu prostego, w przypadku nieeleganckiego sposobu.
@@ -40,11 +45,11 @@ W szczególności $XZ =-ZX $ i $YZ =-ZY $.
 W tym celu przeplatanie operatorów $Z $ do konstrukcji operatora pozwala na emulowanie poprawnej ochrony.
 Pełna konstrukcja jest następująca: 
 
-\begin{align} ^ \dagger_1 & = \left (\frac{X-iY}{2}\right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1,\\\\ a ^ \dagger_2 & = Z\otimes\left (\frac{X-iY}{2}\right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1 ,\\\\ ^ \dagger_3 & = Z\otimes Z\otimes \left (\frac{X-iY}{2}\right) \otimes 1 \otimes \cdots \otimes 1,\\\\ & \vdots\\\\ \dagger_N & = Z\otimes Z\otimes Z\otimes Z \otimes \cdots Z\otimes \left (\frac{X-iY}{2}\right). \label{eq:JW} \end{align}
+\begin{align} a ^ \ dagger_1 & = \left (\frac{X-iY}{2}\right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1,\\\\ ^ \ dagger_2 & = Z\otimes\left (\frac{X-iY}{2}\right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1,\\\\ ^ \ dagger_3 & = Z\otimes Z\otimes \left (\frac{X-iY}{2}\right) \otimes 1 \otimes \cdots \otimes 1,\\\\ & \vdots\\\\ dagger_N otimes \left (\frac{X-iY}{2}\right). \label{eq:JW} \end{align}
 
-Warto również przedstawić Operatory liczbowe, $n _j $, w warunkach operatorów Pauli.
+Warto również przedstawić Operatory liczbowe, $n _j $, w odniesieniu do operatorów Pauli.
 Thankfully, ciągi $Z $ operatory (nazywane ciągami Jordania-Wigner) anulują po wykonaniu tej podstawienia.
-Po przeprowadzeniu tego wywołania (i odwołując się do $X _jY_j = iZ_j $) mamy{2}\begin{Equation} n_j = a ^ \dagger_j a_j = \frac{(1-Z_j)}.
+Po przeprowadzeniu tego wywołania (i odwołując się do $X _jY_j = iZ_j $) mamy \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)}{2}.
 \end{equation}
 
 
@@ -56,7 +61,7 @@ Gdy jedna z nich wykonuje tę podstawienie, istnieje tylko pięć klas warunków
 Te pięć klas odpowiada różnym sposobom, w których można wybrać $p, q $ i $p, q, r, s $ w jednoczęściowej i dwóch terminologii w hamiltonian.
 Te pięć klas, w przypadku $p > q > r > s $ i rzeczywista orbitals, są
 
-\begin{align} H_ {PP} a_p ^ \dagger a_p & = \sum_p \frac{H_{PP}}{2}(1-Z_p)\\\\ H_ {pq} (a_p ^ \dagger a_q + a ^ \dagger_q a_p) & = \frac{H_{pq}}{2}\left (\prod_{j = q + 1} ^ {p-1} Z_j \right) \ Left (X_pX_q + Y_pY_q\right)\\\\ H_ {pqqp} n_p n_q & = \frac{H_{pqqp}}{4}\left (1-Z_p-Z_q + Z_pZ_q \right)\\\\ H_ {pqqr} & = \frac{H_{pqqr}}{2}\left (\prod_{j = r + 1} ^ {p-1} Z_j \right) \left (X_pX_r + Y_pY_r\right) \left (\frac{1-Z_q}{2}\right)\\\\ H_ {pqrs} & = \frac{H_{pqrs}}{8}\prod_{j = s + 1} ^ {r-1} Z_j\prod_ {k = q + 1} ^ {p-1} Z_k \Big (XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big) \end{align}
+\begin{align} h_ {PP} a_p ^ \dagger a_p & = \ sum_p \frac{h_ {PP}}{2}(1-Z_p)\\\\ h_ {pq} (a_p ^ \dagger a_q + a ^ \ dagger_q a_p) & = \frac{h_ {pq}}{2}\left (\ prod_ {j = q + 1} ^ {p-1} Z_j \right) \left (X_pX_q + Y_pY_q \right)\\\\ h_ {pqqp} n_p n_q & = \frac{h_ {pqqp}}{4}\left (1-Z_p-Z_q + Z_pZ_q \right)\\\\ H_ {pqqr} & = \frac{h_ {pqqr}}{2}\left (\ prod_ {j = r + 1} ^ {p-1} Z_j \right) \left (X_pX_r + Y_pY_r \right) \left (\frac{1-Z_q}{2}\right)\\\\ H_ {pqrs} & = \frac{h_ {pqrs}}{8}\ prod_ {j = s + 1} ^ {r-1} Z_j \ prod_ {k = q + 1} ^ {p-1} Z_k \Big (XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big) \end{align}
 
 Chociaż generowanie takich Hamiltonians jest wymagane tylko wtedy, gdy wymagają zastosowania tych reguł zamiennych, to nie byłoby możliwe w przypadku dużych cząsteczek, które mogą składać się z milionów Hamiltonianych warunków.
 Alternatywnie możemy automatycznie skonstruować `JordanWignerEncoding`, uwzględniając `FermionHamiltonian` reprezentację hamiltonian.

@@ -1,87 +1,186 @@
 ---
-title: Pomiary Pauli | Microsoft Docs
+title: Pomiary Pauli
 description: Pomiary Pauli
 author: QuantumWriter
 uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7bea821be7e26e72f2860278486d35be676ca63d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0a3ee595022ec389ecadcab081ccd126cb3252ae
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183713"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819913"
 ---
 # <a name="pauli-measurements"></a>Pomiary Pauli
 
-W poprzednich dyskusjach koncentrujemy się na obliczaniu pomiarów bazowych.  W rzeczywistości istnieją inne typowe pomiary wykonywane w ramach przetwarzania Quantum, które z perspektywy notacji są wygodne do wyrażania na podstawie obliczeniowych pomiarów.  Najbardziej typowym zestawem tych pomiarów są *pomiary Pauli*.  W takich przypadkach często omawia się pomiar pomiaru operatora Pauli, w ogólności operatora, takiego jak $X, Y, Z $ lub $Z \otimes Z, X\otimes X, X\otimes Y $ i tak dalej.  Omawianie pomiaru w warunkach operatorów Pauli jest szczególnie powszechne w podpolu korekcji błędów Quantum. W Q # korzystamy z podobnej Konwencji; teraz wyjaśnimy ten alternatywny widok pomiarów.
+W poprzednich dyskusjach koncentrujemy się na obliczaniu pomiarów bazowych.
+W rzeczywistości istnieją inne typowe pomiary związane z przetwarzaniem jednostek Quantum, które z perspektywy notacji są wygodne do wyrażania na podstawie obliczeniowych pomiarów.
+Podczas pracy z pytaniami Q # najbardziej typowym rodzajem pomiarów, które będą używane, prawdopodobnie będą *pomiary Pauli*, które uogólnią obliczenia obliczające pomiary w celu uwzględnienia pomiarów w innych bazach i parzystości między różnymi qubits.
+W takich przypadkach często omawia się pomiar pomiaru operatora Pauli, w ogólności operatora, takiego jak $X, Y, Z $ lub $Z \otimes Z, X\otimes X, X\otimes Y $ i tak dalej.
 
-Przed napisaniem szczegółowych informacji o tym, jak sądzisz o pomiarze Pauli, warto zastanowić się nad tym, co mierzy jeden qubit wewnątrz komputera Quantum w stanie Quantum.  Załóżmy, że mamy $n $-qubit Quantum State; następnie zmierzenie jednej qubit od razu wystawia wszystkie możliwości $2 ^ n $, które mogą być w stanie.  Innymi słowy, pomiar projektuje stan Quantum na jedną z dwóch miejsc.  Możemy uogólnić sposób, w jaki myślimy o pomiarach, aby to uwzględnić.
+> [!TIP]
+> W pytaniach Q # qubit operatory Pauli są ogólnie reprezentowane przez tablice typu `Pauli[]`.
+> Na przykład, aby reprezentować $X \otimes Z \otimes Y $, można użyć `[PauliX, PauliZ, PauliY]`tablicy.
 
-Aby zwięzłie zidentyfikować te podobszary, należy zapoznać się z językiem.  Jednym ze sposobów, aby to zrobić, można opisać dwa podobszary, określając je za pośrednictwem macierzy, która ma dwa unikatowe eigenvalues, podejmowane przez Konwencję jako $ \Pm $1.  Najprostszym przykładem jest:
+Omawianie pomiaru w warunkach operatorów Pauli jest szczególnie powszechne w podpolu korekcji błędów Quantum.
+W pytaniach Q # przestrzegamy podobnej Konwencji; teraz wyjaśnimy ten alternatywny widok pomiarów.
 
-$ $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
-$$
+Przed napisaniem szczegółowych informacji o tym, jak sądzisz o pomiarze Pauli, warto zastanowić się nad tym, co mierzy jeden qubit wewnątrz komputera Quantum w stanie Quantum.
+Załóżmy, że mamy $n $-qubit Quantum State; następnie zmierzenie jednej qubit od razu wystawia wszystkie możliwości $2 ^ n $, które mogą być w stanie.
+Innymi słowy, pomiar projektuje stan Quantum na jedną z dwóch miejsc.
+Możemy uogólnić sposób, w jaki myślimy o pomiarach, aby odzwierciedlić ten Intuition.
 
-Pauli-$Z $ Matrix jasno ma dwa eigenvectors $ \ket{0}$ i $ \ket{1}$ z eigenvalues $ \Pm $1.  W takim przypadku firma Microsoft mierzy qubit i uzyska $ \ket{0}$ w eigenspace $ + $1 (zestaw wszystkich wektorów, które są tworzone z sum eigenvectors z tylko dodatnimi lub tylko negatywnymi eigenvalues), i jeśli mierzę $ \ket{1}$ jesteśmy w $-$1 eigenspace $Z $.  Ten proces jest określany w języku Pauli pomiarów jako "pomiar Pauli $Z $" i jest całkowicie równoważny do wykonywania obliczeniowej miary.
+Aby zwięzłie zidentyfikować te podobszary, należy zapoznać się z językiem.
+Jednym ze sposobów opisywania dwóch podobszarów jest określenie ich za pośrednictwem macierzy, która ma dwie unikalne eigenvalues, podejmowane przez Konwencję jako $ \Pm $1.
+Aby zapoznać się z prostym przykładem opisywania podobszarów w ten sposób, rozważ $Z $:
 
-Oczywiście każda $2 \ Times $2 macierz, która jest przekształceniem jednostkowym $Z $ spełnia również te kryteria.  Jest to konieczne, ponieważ możemy również rozważyć użycie macierzy $A = U ^ \dagger Z U $, dla dowolnej macierzy jednostkowej $U $, w celu uzyskania matrycy, która definiuje dwa wyniki pomiaru w jego $ \Pm $1 eigenvectors.  Notacja pomiarów Pauli odwołuje się do tego, identyfikując $X, Y, Z $ pomiarów jako równoważne pomiary, które mogą wykonać, aby uzyskać informacje z qubit.  Te pomiary są podane poniżej dla wygody.
+$ $ \begin{align} Z & = \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+\end{align} $ $
 
-$ $ \begin{Array}{| c | c |} \text{Pauli pomiary} & U\\\\ Z & \boldone\\\\ X & H\\\\ Y & HS ^ \dagger\\\\ \end{Array} $ $
+Odczytując elementy ukośne macierzy Pauli $Z $, widzimy, że $Z $ ma dwie eigenvectors, $ \ket{0}$ i $ \ket{1}$, z odpowiednimi eigenvalues $ \Pm $1.
+W takim przypadku, jeśli mierzę qubit i uzyskamy `Zero` (odpowiadający stanowi $ \ket{0}$), wiemy, że stan naszego qubit to $ + $1 eigenstate operatora $Z $.
+Podobnie, jeśli uzyskamy `One`, wiemy, że stan naszego qubit to $-$1 eigenstate $Z $.
+Ten proces jest określany w języku Pauli pomiarów jako "pomiar Pauli $Z $" i jest całkowicie równoważny do wykonywania obliczeniowej miary.
 
-Oznacza to, że użycie tego języka "Measure $Y $" jest równoznaczne z zastosowaniem $HS ^ \dagger $, a następnie pomiary w oparciu o obliczenia, gdzie $S $ to brama fazy o tej samej nazwie określona przez
+Wszystkie $2 \ Times $2 Matrix, który jest przekształceniem jednostkowym $Z $ spełnia również te kryteria.
+Oznacza to, że możemy również użyć macierzy $A = U ^ \dagger Z p $, gdzie $U $ to każda inna macierz jednostkowa, aby zapewnić macierz, która definiuje dwa wyniki pomiaru w jego $ \Pm $1 eigenvectors.
+Notacja miary Pauli odwołuje się do tej równoważności jednostek, identyfikując $X, Y, Z $ pomiarów jako równoważne pomiary, które mogą wykonać, aby uzyskać informacje z qubit.
+Te pomiary są podane poniżej dla wygody.
 
-$ $ \begin{bmatrix}1 & 0\\\\ 0 & i\end {bmatrix}.
-$$
 
-Jest to również równoznaczne z zastosowaniem $HS ^ \dagger $ do wektora stanu Quantum, a następnie zmierzenie $Z $.  Prawidłowy stan można znaleźć, przenosząc z powrotem do podstawy obliczeniowej, które dotyczą zastosowania $SH $ do wektora stanu Quantum.
+|Pomiar Pauli  |Transformacja jednostkowa  |
+|-------------------|------------------------|
+| $Z $               | $ \boldone $             |
+| $X $               | $H $                    |
+| $Y $               | $HS ^ {\dagger} $         |
 
-## <a name="q-outcome-classical-information-obtained-from-quantum-state"></a>Informacje o wynikach pytań i odpowiedzi klasycznej uzyskane z stanu Quantum
-W odpowiedzi na pytanie o wyniki, tj. klasyczne informacje wyodrębnione z tego stanu, to $j $, który znajduje się w zestawie $\{0, 1\}$, jeśli wynik znajduje się w $ (-1) ^ j $ eigenspace operatora Pauli.
+Oznacza to, że użycie tego języka "Measure $Y $" jest równoznaczne z zastosowaniem $HS ^ \dagger $, a następnie pomiary w oparciu o obliczenia, gdzie [`S`](xref:microsoft.quantum.intrinsic.s) jest wewnętrzną operacją Quantum czasami nazywaną "bramą fazowy" i może być symulowana przez macierz jednostkową
+
+$ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+\end{align} $ $
+
+Jest to również równoznaczne z zastosowaniem $HS ^ \dagger $ do wektora stanu Quantum, a następnie zmierzenie $Z $, w taki sposób, aby Następująca operacja była równoważna `Measure([PauliY], [q]])`:
+
+```Q#
+operation MeasureY(qubit : Qubit) : Result {
+    mutable result = Zero;
+    within {
+        H(q);
+        Adjoint S(q);
+    } apply {
+        set result = M(q);
+    }
+    return result;
+}
+```
+
+Prawidłowy stan można znaleźć, przenosząc z powrotem do podstawy obliczeniowej, które dotyczą stosowania $SH $ do wektora stanu Quantum; w powyższym fragmencie, przekształcenie z powrotem do podstawy obliczeniowej jest obsługiwane automatycznie przy użyciu bloku `within … apply`.
+
+W polu Q # mówimy, że---wynik, czyli klasyczne informacje wyodrębnione ze stanu współdziałania ze stanem---są nadawane przez `Result` wartość $j \In \\{\texttt{Zero}, \texttt{One}\\} $ wskazujące, czy wynik znajduje się w $ (-1) ^ j $ eigenspace operatora Pauli.
+
+
+## <a name="multiple-qubit-measurements"></a>Pomiary z wieloma qubitami
 
 Pomiary operatorów Pauli wieloqubitowych są zdefiniowane w podobny sposób, jak pokazano w:
 
 $ $ Z\otimes Z = \begin{bmatrix}1 & 0 & 0 & 0\\\\ 0 &-1 & 0 & 0\\\\ 0 & 0 &-1 & 0\\\\ 0 & 0 & 0 & 1 \ End {bmatrix}.
 $$
 
-W tym celu dwa operatory Pauli-$Z $ tworzą tablicę składającą się z dwóch spacji składających się z $ + $1 i $-$1 eigenvalues.  Podobnie jak w przypadku pojedynczej qubit, oba stanowią pół miejsca, że połowa dostępnego miejsca wektorowego należy do $ + $1 eigenspace i pozostała połowa do eigenspace $-$1.  Ogólnie rzecz biorąc, łatwo jest zapoznać się z definicją iloczynu dwuczęściowego, że każdy dwuczęściowy produkt Pauli-$Z $ operatory i tożsamość również przestrzega tego.  Na przykład
+W tym celu dwa operatory Pauli-$Z $ tworzą tablicę składającą się z dwóch spacji składających się z $ + $1 i $-$1 eigenvalues.
+Podobnie jak w przypadku pojedynczej qubit, oba stanowią pół miejsca, że połowa dostępnego miejsca wektorowego należy do $ + $1 eigenspace i pozostała połowa do eigenspace $-$1.
+Ogólnie rzecz biorąc, łatwo jest zapoznać się z definicją iloczynu dwuczęściowego, że każdy dwuczęściowy produkt Pauli-$Z $ operatory i tożsamość również przestrzega tego.
+Na przykład:
 
-$ $ Z\otimes\boldone = \begin{bmatrix} 1 & 0 & 0 & 0\\\\ 0 & 1 & 0 & 0\\\\ 0 & 0 &-1 & 0\\\\ 0 & 0 & 0 &-1 \ End {bmatrix}.
-$$
+$ $ \begin{align} Z \otimes \boldone = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 &-1 & 0 \\\\ 0 & 0 & 0 &-1 \end{bmatrix}.
+\end{align} $ $
 
-Tak jak wcześniej, każda jednostkowa transformacja takich macierzy również zawiera opis dwóch miejsc z etykietą $ \Pm $1 eigenvalues.  Na przykład $X \otimes X = H\otimes H (Z\otimes Z) H\otimes H $ od tożsamości, która $Z = HXH $.  Podobnie jak w przypadku qubit, wszystkie dwie qubit Pauli-pomiary mogą być zapisywane jako $U ^ \dagger (Z\otimes \id) U $ dla $4 \ Times $4 macierze jednostkowe $U $.  Wyliczamy przekształcenia w poniższej tabeli, w której wprowadzamy dla wygody usługi wymiany, która zamienia qubits $0 $ i $1 $: $ \operatorname{SWAP} = \operatorname{CNOT}\_{01}\operatorname{CNOT}\_{10}\operatorname{CNOT}\_{01}$:
+Tak jak wcześniej, każda jednostkowa transformacja takich macierzy również zawiera opis dwóch miejsc z etykietą $ \Pm $1 eigenvalues.
+Na przykład $X \otimes X = H\otimes H (Z\otimes Z) H\otimes H $ od tożsamości, która $Z = HXH $.
+Podobnie jak w przypadku qubit, wszystkie dwie qubit Pauli-pomiary mogą być zapisywane jako $U ^ \dagger (Z\otimes \id) U $ dla $4 \ Times $4 macierze jednostkowe $U $. Wyliczmy przekształcenia w poniższej tabeli.
 
-$ $ \begin{Array}{| c | c |} \text{Paulie} & U\\\\ \hline Z\otimes \boldone & \boldone\otimes \boldone\\\\ X\otimes \boldone & H\otimes \boldone\\\\ Y\otimes \boldone &\\\dagger\otimes \boldone \boldone \\ & \otimes \operatorname{swap} Z\\\\ & \boldone \otimes X\\operatorname {SWAP}\\\\ Z\otimes Z & \operatorname{CNOT}\_{10}\\\\ X\otimes Z & \operatorname{CNOT}\_{10}(H\otimes \boldone)\\\\ Y\otimes Z & \operatorname{CNOT}\_{10}(HS ^ \dagger\otimes \boldone)\\\\ Z\otimes X & \operatorname{CNOT}\_{10}(\boldone\otimes H)\\\\ X\otimes X & \operatorname{CNOT}\_{10}(H \ otimes H)\\\\ Y\otimes X & \operatorname{CNOT}\_{10}(HS ^ \dagger\otimes H)\\\\ Z\otimes Y & \operatorname{CNOT}\_{10}(\boldone \otimes HS ^ \dagger)\\\\ X\otimes Y & \operatorname{CNOT}\_{10}(H\otimes HS ^ \dagger)\\\\ Y\otimes Y & \operatorname{CNOT}\_{10}(HS ^ \dagger\otimes\\\\\\
+> [!NOTE]
+> W poniższej tabeli użyto $ \operatorname{SWAP} $ do wskazania macierzy $ $ \begin{align} \operatorname{SWAP} & = \left (\begin{Matrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{Matrix}\right) \end{align} $ $ użytego do symulowania wewnętrznej operacji na [`SWAP`](xref:microsoft.quantum.intrinsic).
 
-Tutaj Brama $ \operatorname{CNOT}\_{10}$ pojawia się z następującej przyczyny.  Każda miara Pauli, która nie obejmuje macierzy $ \boldone $, jest równoważna do jednostki do $Z \otimes Z $ według powyższego powodu.  Eigenvalues $Z \otimes Z $ zależą od parzystości qubits, która składa się z poszczególnych wektorów obliczeniowych, a operacje kontrolowane przez nie są wyświetlane na tej liście, służą do obliczenia tej parzystości i zapisania jej w pierwszym bitach.  Następnie po przemierzeniu pierwszego bitu można odzyskać tożsamość wynikowego miejsca, które jest równoważne pomiarowi operatora Pauli.
+|Pomiar Pauli     |Transformacja jednostkowa  |
+|----------------------|------------------------|
+| $Z \otimes \boldone $ | $ \boldone \otimes \boldone $ |
+| $Z \otimes \boldone $ | $ \boldone\otimes \boldone $ |
+| $X \otimes \boldone $ | $H \otimes \boldone $ |
+| $Y \otimes \boldone $ | $HS ^ \dagger\otimes \boldone $ |
+| $ \boldone \otimes Z $ | $ \operatorname{SWAP} $ |
+| $ \boldone \otimes X $ | $ (H\otimes \boldone) \operatorname{SWAP} $ |
+| $ \boldone \otimes Y $ | $ (HS ^ \dagger\otimes \boldone) \operatorname{SWAP} $ |
+| $Z \otimes Z $ | $ \operatorname{CNOT}\_{10}$ |
+| $X \otimes Z $ | $ \operatorname{CNOT}\_{10}(H\otimes \boldone) $ |
+| $Y \otimes Z $ | $ \operatorname{CNOT}\_{10}(HS ^ \dagger\otimes \boldone) $ |
+| $Z \otimes X $ | $ \operatorname{CNOT}\_{10}(\boldone\otimes H) $ |
+| $X \otimes X $ | $ \operatorname{CNOT}\_{10}(H\otimes H) $ |
+| $Y \otimes X $ | $ \operatorname{CNOT}\_{10}(HS ^ \dagger\otimes H) $ |
+| $Z \otimes Y $ | $ \operatorname{CNOT}\_{10}(\boldone \otimes HS ^ \dagger) $ |
+| $X \otimes Y $ | $ \operatorname{CNOT}\_{10}(H\otimes HS ^ \dagger) $ |
+| $Y \otimes Y $ | $ \operatorname{CNOT}\_{10}(HS ^ \dagger\otimes HS ^ \dagger) $ |
 
-Jedna dodatkowa Uwaga, chociaż może być skłonny do założenia, że pomiary $Z \otimes Z $ są takie same jak pomiary $Z \otimes \id $, a następnie $ \id \otimes Z $, to założenie miałoby wartość false.  Powodem jest to, że pomiar $Z \otimes Z $ projektów w stanie Quantum do wartości $ + $1 lub $-$1 eigenstate tych operatorów.  Pomiar $Z \otimes \id $, a następnie $ \id \otimes Z $ projects Vector State w pierwszej kolejności do pół miejsca na $Z \otimes \id $, a następnie do połowy miejsca z $ \id \otimes Z $.  Ponieważ istnieją cztery wektory obliczeniowe, przeprowadzenie obydwu pomiarów zmniejsza stan do kwartału, a tym samym redukuje go do jednego wektora obliczanego na podstawie.
+W tym miejscu zostanie wyświetlona [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) operacja z następującej przyczyny.
+Każda miara Pauli, która nie obejmuje macierzy $ \boldone $, jest równoważna do jednostki do $Z \otimes Z $ według powyższego powodu.
+Eigenvalues $Z \otimes Z $ zależą od parzystości qubits, która składa się z poszczególnych wektorów obliczeniowych, a operacje kontrolowane nie służą do obliczenia tej parzystości i zapisania jej w pierwszym bitach.
+Następnie po przemierzeniu pierwszego bitu możemy odzyskać tożsamość wynikowego, który jest równoważny do mierzenia operatora Pauli.
 
+Jedna dodatkowa Uwaga: Chociaż może być skłonny do założenia, że pomiary $Z \otimes Z $ są takie same jak pomiary sekwencyjne $Z \otimes \mathbb{1}$, a następnie $ \mathbb{1} \otimes Z $, to założenie miałoby wartość false.
+Powodem jest to, że pomiar $Z \otimes Z $ projektów w stanie Quantum do wartości $ + $1 lub $-$1 eigenstate tych operatorów.
+Pomiar $Z \otimes \mathbb{1}$, a następnie $ \mathbb{1} \otimes Z $ projects wektora stanu Quantum najpierw w połowie miejsca $Z \otimes \mathbb{1}$, a następnie do połowy miejsca z $ \mathbb{1} \otimes Z $.
+Ponieważ istnieją cztery wektory obliczeniowe, przeprowadzenie obydwu pomiarów zmniejsza stan do kwartału, a tym samym redukuje go do jednego wektora obliczanego na podstawie.
 
 ## <a name="correlations-between-qubits"></a>Korelacje między qubits
-Innym sposobem na poszukiwanie produktów dwuskładnikowych Pauly, takich jak $X \otimes X $ lub $Z \otimes Z $, jest to, że pomiary umożliwiają przeszukanie informacji przechowywanych w korelacji między tymi dwoma qubits.  Pomiar $X \otimes \id $ umożliwia przeglądanie informacji przechowywanych lokalnie w pierwszej qubit.  Mimo że oba typy pomiarów są równie cenne w przypadku obliczeń opartych na usługach Quantum Wykaże, że w ramach przetwarzania Quantum często informacje, które chcesz poznać, nie są przechowywane w żadnym z pojedynczych qubit, ale raczej są przechowywane nielokalnie we wszystkich qubitsach i tylko przez przechodzenie przez wspólne pomiary z $Z \otimes Z $ czy te informacje stają się manifestu.
+Innym sposobem na pomiar iloczynów ilościowych macierzy Pauli, takich jak $X \otimes X $ lub $Z \otimes Z $, jest to, że te pomiary umożliwiają przeszukanie informacji przechowywanych w korelacji między tymi dwoma qubitsami.
+Pomiar $X \otimes \id $ umożliwia przeglądanie informacji przechowywanych lokalnie w pierwszej qubit.
+Mimo że oba typy pomiarów są równie cenne w przypadku obliczeń opartych na usługach Quantum
+Wykaże, że w ramach przetwarzania Quantum często informacje, które chcesz poznać, nie są przechowywane w żadnym z pojedynczych qubit, ale raczej przechowywane nielokalnie we wszystkich qubitsach i dlatego tylko przez ich przechodzenie przez wspólną miarę (np. $Z \otimes Z $). informacje stają się manifestem.
 
-Można również mierzyć dowolne operatory Pauli, takie jak $X \otimes Y \otimes Z \otimes \boldone $.  Wszystkie te produkty dwuskładnikowe operatorów Pauli mają tylko dwa eigenvalues $ \Pm $1, a oba eigenspaces stanowią pół miejsca całego obszaru wektora.  W ten sposób są one zgodne z wymaganiami określonymi powyżej.
+Na przykład w przypadku korekcji błędów często chcemy dowiedzieć się, jaki błąd wystąpił podczas uczenia niczego o stanie, który próbujesz chronić.
+[Przykładowy kod przerzucania bitów](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) przedstawia przykład sposobu, w jaki można to zrobić przy użyciu pomiarów, takich jak $Z \otimes z \otimes \id $ i $ \Id \otimes Z \otimes z $.
+<!-- TODO: change this to a link to the samples browser as soon as the bit-flip code sample is on-boarded. -->
 
-W Q #, takie pomiary zwracają $j $, jeśli pomiar daje wynik w eigenspace znak $ (-1) ^ j $.  To jak wbudowana funkcja w funkcji Q # jest przydatna, ponieważ pomiar takich operatorów wymaga długich łańcuchów z kontrolowanymi bramami i transformacjami bazowymi, aby opisać diagonalizing $U $Z $  Po prostu można określić, że chcesz wykonać jedną z tych wstępnie zdefiniowanych pomiarów, nie musisz martwić się o to, jak przekształcić swoją podstawę, tak aby pomiar bazowy obliczał informacje.  W programie Q # wszystkie wymagane przekształcenia podstawowe są obsługiwane automatycznie. Zobacz [Informacje o bibliotece Q # dla pomiarów Pauli](/qsharp/api/canon/microsoft.quantum.canon.measurepaulis)
+Można również mierzyć dowolne operatory Pauli, takie jak $X \otimes Y \otimes Z \otimes \boldone $.
+Wszystkie te produkty dwuskładnikowe operatorów Pauli mają tylko dwa eigenvalues $ \Pm $1, a oba eigenspaces stanowią pół miejsca całego obszaru wektora.
+W ten sposób są one zgodne z wymaganiami określonymi powyżej.
+
+W Q #, takie pomiary zwracają $j $, jeśli pomiar daje wynik w eigenspace znak $ (-1) ^ j $.
+Pauli pomiary jako wbudowaną funkcję w Q # są przydatne, ponieważ pomiary takich operatorów wymagają długich łańcuchów kontrolowanych i nieopartych na bramach i transformacji bazowych, aby opisać diagonalizing $U $ bramę, która jest wymagana do wyrażania operacji jako iloczyn dwuskładnikowy $Z $ i $ \id $.
+Aby określić, że chcesz wykonać jedną z tych wstępnie zdefiniowanych pomiarów, nie musisz martwić się o to, jak przekształcić swoją podstawę, tak aby pomiar bazowy obliczał informacje.
+W programie Q # wszystkie wymagane przekształcenia podstawowe są obsługiwane automatycznie.
+Aby uzyskać więcej informacji, zobacz operacje [`Measure`](xref:microsoft.quantum.intrinsic.measure) i [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) .
 
 ## <a name="the-no-cloning-theorem"></a>Theorem bez klonowania
-Informacje o Quantum są zaawansowane.  Umożliwia nam wykonywanie niezwykłych rzeczy, takich jak liczba czynników, które są wykładniczo szybsze niż najlepsze znane klasyczne algorytmy, lub efektywnie symuluje skorelowane systemy elektronów, które w sposób klasyczny wymagają wykładniczego kosztu, aby symulować dokładne symulacje.  Istnieją jednak ograniczenia dotyczące mocy obliczeniowej Quantum.  Takie ograniczenie jest określone przez *theorem bez klonowania*.
+
+Informacje o Quantum są zaawansowane.
+Umożliwia nam wykonywanie niezwykłych rzeczy, takich jak liczba czynników, które są wykładniczo szybsze niż najlepsze znane klasyczne algorytmy, lub efektywnie symuluje skorelowane systemy elektronów, które w sposób klasyczny wymagają wykładniczego kosztu, aby symulować dokładne symulacje.
+Istnieją jednak ograniczenia dotyczące mocy obliczeniowej Quantum.
+Takie ograniczenie jest określone przez *theorem bez klonowania*.
 
 Theorem No-kloning ma nazwę aptly.
 Nie zezwala na klonowanie ogólnych Stanów Quantum przez komputer Quantum.
 Potwierdzenie theorem jest niezwykle proste.
-Mimo że pełne potwierdzenie theorem nie jest w stanie nieco zbyt technicznym w naszej dyskusji, dowód theorem w przypadku, gdy dany komputer Quantum nie ma dodatkowej Ancilla qubits, jest w naszym zakresie (Ancilla qubits jest używany do wyznaczania miejsca podczas obliczeń i jest łatwo używany i zarządzany w usłudze Q #), zobacz <xref:microsoft.quantum.techniques.qubits>).
-W przypadku takiego komputera z systemem Quantum Operacja klonowania musi być macierzą jednostkową. Nie można wymusić pomiaru, ponieważ spowodowałoby to uszkodzenie stanu Quantum, który próbujemy sklonować. Potrzebna macierz jednostkowa musi mieć Właściwość $ $ U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi}, $ $ dla dowolnego stanu $ \ket{\psi} $.
+Gdy Pełna weryfikacja theorem nie jest w stanie nieco zbyt technicznym w naszej dyskusji, w przypadku braku dodatkowych qubits pomocniczych znajduje się w naszym zakresie (pomocnicze qubits to qubits używany do wyznaczania miejsca podczas obliczeń i są łatwe w użyciu i zarządzane w usłudze Q #), zobacz <xref:microsoft.quantum.techniques.qubits>).
+
+W przypadku takiego komputera z systemem Quantum Operacja klonowania musi być opisana przez macierz jednostkową.
+Nie można wymusić pomiaru, ponieważ spowodowałoby to uszkodzenie stanu Quantum, który próbujemy sklonować.
+Aby symulować operację klonowania, chcemy, aby macierz jednostkowa używała właściwości $ $ U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi} $ $ dla dowolnego stanu $ \ket{\psi} $.
 Właściwość liniowości mnożenia macierzy wskazuje, że dla każdego drugiego stanu Quantum $ \ket{\phi} $,
 
-\begin{align} & U\left [\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right] \ket{0}= \frac{1}{\sqrt{2}} U\ket {\ Fi} \ KET{0}+ \frac{1}{\sqrt{2}} U\ket {\ psi} \ KET{0}\\\\ & \qquad\qquad = \frac{1}{\sqrt{2}} \left (\ket{\phi}\ket{\phi} + \ket{\psi}\ket{\psi}\right)\\\\ & \qquad\qquad\ne \left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \ Right) \right) \otimes\left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right).
-\end{align}
+$ $ \begin{align} U \left [\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right] \ket{0} & = \frac{1}{\sqrt{2}} U\ket {\ Fi} \ KET{0} + \frac{1}{\sqrt{2}} U\ket {\ psi} \ KET{0} \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi} \right) \\\\ & \ne \left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right) \otimes \ Left (\frac{1}{\sqrt{2}} \left (\ket{\phi} + \ket{\psi} \right) \right).
+\end{align} $ $
 
-Zapewnia to podstawowe Intuition za theorem bez klonowania: każde urządzenie, które kopiuje nieznany stan Quantum, musi powodować błędy w co najmniej niektórych stanach, które kopiuje.  Podczas gdy klucz założono, że Cloner działa w sposób liniowy w stanie wprowadzania, może zostać naruszony przez dodanie Ancilla i pomiaru Ancilla qubits, takie interakcje także przecieki informacji o systemie za pomocą statystyk pomiarów i zapobiegania również dokładne klonowanie w takich przypadkach.  Aby uzyskać bardziej szczegółowe informacje, zobacz theorem No-kloning, [Aby uzyskać więcej informacji](xref:microsoft.quantum.more-information).
+Zapewnia to podstawowe Intuition za theorem bez klonowania: każde urządzenie, które kopiuje nieznany stan Quantum, musi powodować błędy w co najmniej niektórych stanach, które kopiuje.
+Podczas gdy klucz założono, że Cloner działa liniowo na stanie wprowadzania, może zostać naruszony poprzez dodanie i pomiar pomocniczej qubits, takie interakcje także przecieki informacji o systemie za pomocą statystyk pomiarów i zapobiegania dokładnemu w takich przypadkach również klonowanie.
+Aby uzyskać bardziej szczegółowe informacje, zobacz theorem No-kloning, [Aby uzyskać więcej informacji](xref:microsoft.quantum.more-information).
 
-Theorema bez klonowania jest ważna w przypadku jakościowej interpretacji obliczeń opartych na usłudze Quantum, ponieważ w przypadku niedrogiego klonowania Stanów Quantum można udzielić prawie magicalej możliwości uczenia się od Stanów Quantum.  Rzeczywiście można naruszyć zasadę niepewności vaunted Heisenberg.  Alternatywnie można użyć optymalnej Cloner do pobrania pojedynczego przykładu ze złożonej dystrybucji Quantum i dowiedzieć się wszystkiego, co może być możliwe, aby poznać tę dystrybucję z zaledwie jednego przykładu.  Przypomina to Przerzucanie monet i obserwowanie głowic, a następnie na poinformowanie przyjaciela o tym, że reagują na "Ah" dystrybucja tej monety musi być Bernoulliego z $p = 0.512643 \ ldots $! "  Taka instrukcja byłaby niesensicala, ponieważ jeden bit informacji (wynik Head) po prostu nie może udostępnić wielu bitów informacji potrzebnych do zakodowania dystrybucji bez poważnych informacji.  Podobnie, bez wcześniejszej informacji, nie możemy idealnie sklonować stanu Quantum, tak samo, jak nie można przygotować kompletu takich monet bez znajomości $p $.
+Theorema bez klonowania jest ważna w przypadku jakościowej interpretacji obliczeń opartych na usłudze Quantum, ponieważ w przypadku niedrogiego klonowania Stanów Quantum można udzielić prawie magicalej możliwości uczenia się od Stanów Quantum.
+Rzeczywiście można naruszyć zasadę niepewności vaunted Heisenberg.
+Alternatywnie można użyć optymalnej Cloner do pobrania pojedynczego przykładu ze złożonej dystrybucji Quantum i dowiedzieć się wszystkiego, co może być możliwe, aby poznać tę dystrybucję z zaledwie jednego przykładu.
+Przypomina to Przerzucanie monet i obserwowanie głowic, a następnie na poinformowanie przyjaciela o tym, że reagują na "Ah" dystrybucja tej monety musi być Bernoulliego z $p = 0.512643 \ ldots $! "  Taka instrukcja byłaby niesensicala, ponieważ jeden bit informacji (wynik Head) po prostu nie może udostępnić wielu bitów informacji potrzebnych do zakodowania dystrybucji bez poważnych informacji.
+Podobnie, bez wcześniejszej informacji, nie możemy idealnie sklonować stanu Quantum, tak samo, jak nie można przygotować kompletu takich monet bez znajomości $p $.
 
-Informacje nie są bezpłatne w obliczeniach Quantum.  Każda qubit mierzona w postaci pojedynczej informacji, a theorem bez klonowania nie wykazuje, że nie ma tylne wejście, które mogą być wykorzystywane w celu założenia zasadniczego kompromisu między informacjami uzyskanymi na temat systemu a zaistniałymi zakłóceniami.
-
+Informacje nie są bezpłatne w obliczeniach Quantum.
+Każda qubit mierzona w postaci pojedynczej informacji, a theorem bez klonowania nie wykazuje, że nie ma tylne wejście, które mogą być wykorzystywane w celu założenia zasadniczego kompromisu między informacjami uzyskanymi na temat systemu a zaistniałymi zakłóceniami.

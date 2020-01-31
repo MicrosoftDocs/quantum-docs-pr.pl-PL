@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864376"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870354"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -39,11 +39,11 @@ W omawianiu oszacowania fazy iteracyjnej będziemy rozważać $U jednostkowe $ p
 Zgodnie z opisem w sekcji dotyczącej rozwiązań firmy Oracle w [strukturach danych](xref:microsoft.quantum.libraries.data-structures), program Q # Canon modeluje takie operacje przez <xref:microsoft.quantum.oracles.discreteoracle> typ zdefiniowany przez użytkownika, zdefiniowany przez `((Int, Qubit[]) => Unit : Adjoint, Controlled)`typu krotki.
 W konkretnym przypadku, jeśli `U : DiscreteOracle`, `U(m)` implementuje $U ^ m $ dla `m : Int`.
 
-W przypadku tej definicji, każdy krok iteracji fazy szacowania jest realizowany przez przygotowanie Auxillary qubit w stanie $ \ket{+} $ wraz z początkowym stanem $ \ket{\phi} $ przyjętym przez nas jest [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) of $U (m) $, tj. $U (m) \ket{\phi} = e ^ {im\phi} \ KET {\ Fi} $.  
+W przypadku tej definicji, każdy krok iteracji fazy szacowania kontynuuje proces przygotowywania pomocniczej qubit w stanie $ \ket{+} $ wraz z początkowym stanem $ \ket{\phi} $ przyjętym przez nas jest [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) $U (m) $, tj. $U (m) \ket{\phi} = e ^ {im\phi} \ KET {\ Fi} $.  
 Następnie zostanie użyta kontrolowana aplikacja `U(m)`, która przygotuje stan $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $.
 Podobnie jak w przypadku Quantum, wpływ kontrolowanej aplikacji Oracle `U(m)` jest dokładnie taki sam, jak efekt zastosowania $R _1 $ dla nieznanej fazy w $ \ket{+} $, dzięki czemu można opisać efekty $U $ w ten sposób prostsze.
 Opcjonalnie algorytm obraca qubit kontroli, stosując $R _1 (-m\theta) $, aby uzyskać stan $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
-Auxillary qubit używany jako formant dla `U(m)` jest następnie mierzony na podstawie $X $ w celu uzyskania pojedynczego `Result`klasycznego.
+Pomocnicza qubit używana jako kontrolka dla `U(m)` jest następnie mierzona w bazie $X $ w celu uzyskania pojedynczego `Result`klasycznego.
 
 W tym momencie Rekonstruowanie fazy z wartości `Result` uzyskanych za pomocą szacowania fazy iteracyjnej jest klasycznym problemem wnioskowania statystycznego.
 Znalezienie wartości $m $, która maksymalizuje zdobyte informacje, z uwzględnieniem ustalonej metody wnioskowania, jest po prostu problemem w statystyce.
@@ -106,7 +106,7 @@ Jednym z takich przykładów z wydajnym klasycznym etapem przetwarzania jest [ni
 
 Najważniejszym elementem niezawodnym oszacowania fazy, który jest współużytkowany z większością użytecznych wariantów, jest to, że jakość budowy klasy $ \hat{\phi} $ jest w pewnym sensie Heisenberg-Limited. Oznacza to, że jeśli odchylenie $ \hat{\phi} $ od prawdziwej wartości to $ \sigma $, a $ \sigma $ jest skalowane proporcjonalnie do całkowitej liczby zapytań $Q $ wykonane do kontroli $U $, tj. $ \sigma = \mathcal{O} (1/Q) $. Teraz definicja odchylenia różni się od różnych algorytmów szacowania. W niektórych przypadkach może to oznaczać, że w przypadku co najmniej $ \mathcal{O} (1) $ prawdopodobieństwa błąd szacowania $ | \hat{\phi}-\phi |\_\circ\le \sigma $ dla pewnej miary cyklicznej $ \circ $. W przypadku niezawodnych ocen faz odchylenia jest dokładne od wariancji $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $ Jeśli rozwiniesz okresowe fazy do jednego skończonego interwału $ (-\pi, \pi] $). Dokładniej, odchylenie standardowe w niezawodnej ocenie fazy jest zgodne ze znakiem nierówności $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10,7 \ pi/Q, \end{align} $ $, gdzie Dolna granica jest osiągnięta w limicie asymptotically duży $Q $, a górna granica jest gwarantowana nawet dla małych rozmiarów próbek.  Należy pamiętać, że $n $ wybranych przez `bitsPrecision` dane wejściowe, które niejawnie definiuje $Q $.
 
-Inne istotne szczegóły obejmują:, na przykład, obciążenie małą ilością tylko $1 $ Ancilla qubit lub że procedura jest nieadaptacyjna, co oznacza, że wymagana sekwencja eksperymentów Quantum jest niezależna od wyników pomiaru pośredniego. W tym i przemieszczonych przykładach, gdy wybór algorytmu szacowania fazy jest istotny, jeden powinien odnosić się do dokumentacji, takiej jak @"microsoft.quantum.canon.robustphaseestimation", i publikacji, do których istnieją odwołania, aby uzyskać więcej informacji i ich implementacji.
+Inne istotne szczegóły obejmują:, na przykład, obciążenie małą ilością tylko $1 $ Ancilla qubit lub że procedura jest nieadaptacyjna, co oznacza, że wymagana sekwencja eksperymentów Quantum jest niezależna od wyników pomiaru pośredniego. W tym i przemieszczonych przykładach, gdy wybór algorytmu szacowania fazy jest istotny, jeden powinien odnosić się do dokumentacji, takiej jak @"microsoft.quantum.characterization.robustphaseestimation", i publikacji, do których istnieją odwołania, aby uzyskać więcej informacji i ich implementacji.
 
 > [!TIP]
 > Istnieje wiele przykładów, w których jest używane niezawodne szacowanie faz. W przypadku szacowania fazy w przypadku wyodrębnienia energii stanu ziemi w różnych systemach fizycznych należy zapoznać się z przykładem [ **symulacji H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [przykładem **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)i [przykładowym **modelem Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
@@ -154,25 +154,27 @@ Tak więc, jak widać w **H2Sample**, operacja może zaakceptować algorytm szac
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Te algorytmy szacowania fazy wyposażono są zoptymalizowane pod kątem różnych właściwości i parametrów wejściowych, które należy zrozumieć w celu zapewnienia najlepszego wyboru dla aplikacji docelowej. Na przykład niektóre algorytmy szacowania fazy są adaptacyjne, co oznacza, że przyszłe kroki są kontrolowane w sposób klasyczny przez wyniki pomiarów poprzednich kroków. Niektóre z nich wymagają możliwości exponentiate swojej wbudowanej sieci firmy Oracle z dowolnymi rzeczywistymi uprawnieniami, a inne wymagają tylko liczby całkowitej, ale mogą jedynie rozpoznać oszacowanie fazy modulo $2 \ pi $. Niektóre wymagają wielu Auxillary qubits, a inne wymagają tylko jednego.
+Te algorytmy szacowania fazy wyposażono są zoptymalizowane pod kątem różnych właściwości i parametrów wejściowych, które należy zrozumieć w celu zapewnienia najlepszego wyboru dla aplikacji docelowej. Na przykład niektóre algorytmy szacowania fazy są adaptacyjne, co oznacza, że przyszłe kroki są kontrolowane w sposób klasyczny przez wyniki pomiarów poprzednich kroków. Niektóre z nich wymagają możliwości exponentiate swojej wbudowanej sieci firmy Oracle z dowolnymi rzeczywistymi uprawnieniami, a inne wymagają tylko liczby całkowitej, ale mogą jedynie rozpoznać oszacowanie fazy modulo $2 \ pi $. Niektóre wymagają wielu pomocniczych qubits, a inne wymagają tylko jednego.
 
 Podobnie użycie szacowania fazy losowego przeszukiwania przebiega w podobny sposób, jak w przypadku innych algorytmów udostępnianych w języku Canon:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

@@ -1,23 +1,23 @@
 ---
-title: 'Techniki Q # — całą całość | Microsoft Docs'
-description: 'Techniki Q # — umieszczanie ich razem'
+title: 'Umieszczenie ich razem — techniki Q # | Microsoft Docs'
+description: 'Umieszczenie ich razem — techniki Q #'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183271"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820168"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Wszystkie razem: teleportowanie #
 Wróćmy do przykładowego obwodu teleportowego zdefiniowanego w [obwodach Quantum](xref:microsoft.quantum.concepts.circuits). Zamierzamy użyć tego przykładu do zilustrowania koncepcji, które już poznasz. W przypadku osób, które nie znają tego teorii, należy zapoznać się z opisem teleportów Quantum, a następnie wskazówki dotyczące implementacji kodu w Q #. 
 
 ## <a name="quantum-teleportation-theory"></a>Teleportowanie Quantum: teoretyczne
-Teleportowanie Quantum jest techniką wysyłania nieznanego stanu Quantum (do którego odwołuje się jako "__wiadomość__") z qubit w jednej lokalizacji do qubit w innej lokalizacji (odwołujemy się do tych qubits jako "__tutaj__" i "__tam__"). odpowiednio). Możemy reprezentować nasz __komunikat__ jako wektor przy użyciu notacji Dirac: 
+Teleportowanie Quantum jest techniką wysyłania nieznanego stanu Quantum (jako "__wiadomość__") z qubit w jednej lokalizacji do qubit w innej lokalizacji (odwołujemy się do tych qubits jako "__tutaj__" i "__tam__"). Możemy reprezentować nasz __komunikat__ jako wektor przy użyciu notacji Dirac: 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Jeśli stosujemy bramę Hadamard do pierwszego qubit każdego z powyższych danych wyjściowych powyżej, otrzymamy następujący wynik:
 
-$ $ \frac{\Alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\Alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\Alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\Alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Należy zauważyć, że każdy termin ma $2 \frac{1}{\sqrt{2}} $. Możemy pomnożyć te wartości, dając następujące wyniki:
 
@@ -125,7 +125,7 @@ Musimy również przydzielić `here` qubit, które są dostępne w bloku `using`
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>Krok 1. Tworzenie stanu Entangled
-Następnie możemy utworzyć parę Entangled między `here` i `there` przy użyciu operacji @"microsoft.quantum.primitive.h" i @"microsoft.quantum.primitive.cnot":
+Następnie możemy utworzyć parę Entangled między `here` i `there` przy użyciu operacji @"microsoft.quantum.intrinsic.h" i @"microsoft.quantum.intrinsic.cnot":
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Następnie użyjemy kolejnych bram $ \operatorname{CNOT} $ i $H $, aby przenieś
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Krok 3 & 4: mierzenie i interpretacja wyniku
-Na koniec używamy @"microsoft.quantum.primitive.m" do wykonywania pomiarów i wykonywania niezbędnych operacji bram w celu uzyskania żądanego stanu, zgodnie z instrukcją `if`:
+Na koniec używamy @"microsoft.quantum.intrinsic.m" do wykonywania pomiarów i wykonywania niezbędnych operacji bram w celu uzyskania żądanego stanu, zgodnie z instrukcją `if`:
 
 ```qsharp
         // Measure out the entanglement

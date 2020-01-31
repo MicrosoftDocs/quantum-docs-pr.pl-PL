@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185192"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821086"
 ---
 # <a name="file-structure"></a>Struktura plików
 
@@ -66,7 +66,7 @@ W szczególności nie istnieje Automatyczna konwersja między wartościami dwóc
 
 Deklaracja typu zdefiniowanego przez użytkownika składa się ze słowa kluczowego `newtype`, po którym następuje nazwa typu zdefiniowanego przez użytkownika, `=`, prawidłowej specyfikacji typu i kończącego się średnika.
 
-Na przykład:
+Przykład:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -84,13 +84,13 @@ Każdy plik źródłowy Q # może definiować dowolną liczbę operacji.
 
 Nazwy operacji muszą być unikatowe w obrębie przestrzeni nazw i mogą nie powodować konfliktów z nazwami typów i funkcji.
 
-Deklaracje operacji składają się ze słowa kluczowego `operation`, po którym następują symbol, który jest nazwą operacji, spójną kolekcję identyfikatorów, która definiuje argumenty operacji, dwukropek `:`, adnotację typu opisującą typ wyniku operacji, Opcjonalnie Adnotacja z charakterystyką operacji, otwierającym nawiasem klamrowym `{`, treścią deklaracji operacji i końcowym nawiasem zamykającym `}`.
+Deklaracje operacji składają się ze słowa kluczowego `operation`, po którym występuje symbol, który jest nazwą operacji, spójna kolekcja identyfikatorów, która definiuje argumenty do operacji, dwukropek `:`, adnotację typu opisującą typ wyniku operacji, opcjonalnie adnotację z charakterystykami operacji, otwierającą nawias `{`klamrowy, treść deklaracji operacji i końcowy nawias zamykający `}`.
 
 Treść deklaracji operacji obejmuje domyślną implementację lub listę specjalizacji.
 Implementację domyślną można określić bezpośrednio w deklaracji, jeśli tylko implementacja specjalizacji treści domyślnej musi być określona jawnie.
 W takim przypadku Adnotacja z charakterystyką operacji w deklaracji jest przydatna do zapewnienia, że kompilator automatycznie generuje inne specjalizacje na podstawie domyślnej implementacji. 
 
-Na przykład 
+Na przykład: 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-W powyższym przykładzie `adjoint invert;` wskazuje, że podległych specjalizacji ma być generowana przez odwrócenie implementacji treści, a `controlled adjoint invert;` wskazuje, że kontrolowana podległych specjalizacji ma być generowany przez odwrócenie danej implementacji kontrolowana specjalizacja.
+W powyższym przykładzie `adjoint invert;` wskazuje, że jest generowana podległych specjalizacji, przez odwrócenie implementacji treści, a `controlled adjoint invert;` wskazuje, że kontrolowana podległych specjalizacji ma być generowana przez odwrócenie danej implementacji kontrolowanej specjalizacji.
 
 Aby można było wykonać operację do obsługi aplikacji `Adjoint` i/lub `Controlled` Funktor, jego typ zwracany musi być `Unit`. 
 
@@ -187,12 +187,12 @@ Dla `body` i `adjoint`lista argumentów powinna być zawsze `(...)`; dla `contro
 Jeśli co najmniej jedna specjalizacja poza treścią domyślną musi być zadeklarowana w sposób jawny, implementacja treści domyślnej musi być opakowana do odpowiedniej deklaracji specjalizacji:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Jest to możliwe, aby określić operację niesąsiadującą; na przykład opera
 Operacja obsługuje `Adjoint` Funktor, jeśli jej deklaracja zawiera niejawną lub jawną deklarację specjalizacji.
 Jawne zadeklarowane, kontrolowane podległych specjalizacji oznacza istnienie podległych specjalizacji. 
 
-Dla operacji, której treść zawiera pętle REPEAT-until-Success, Set instrukcje, pomiary, instrukcje Return lub wywołania do innych operacji, które nie obsługują `Adjoint` Funktor, generując funkcję tworzenia sąsiadującej specjalizacji po `invert` lub @no__ nie można t_2_ dyrektywy.
+Dla operacji, której treść zawiera pętle REPEAT-until-Success, Set instrukcje, pomiary, instrukcje Return lub wywołania do innych operacji, które nie obsługują `Adjoint` Funktor, Autogenerowanie podległych specjalizacji po `invert` lub `auto` dyrektywie nie jest możliwe.
 
 ### <a name="controlled"></a>Kontrolowane
 
@@ -236,7 +236,7 @@ W przypadku operacji, której treść zawiera wywołania do innych operacji, kt�
 Deklaracja operacji może być prosta jako następująca, która definiuje pierwotną operację Pauli X:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 Funkcje są czysto klasycznymi procedurami w Q #.
 Każdy plik źródłowy Q # może definiować dowolną liczbę funkcji.
 
-Deklaracja funkcji składa się z `function`słowa kluczowego, po którym następuje symbol, który jest nazwą funkcji, krotką o identyfikatorze wpisanej, adnotacją typu opisującą typ zwracany funkcji i blokiem instrukcji opisującym implementację funkcyjn.
+Deklaracja funkcji składa się z `function`słowa kluczowego, po którym następuje symbol, który jest nazwą funkcji, krotką o identyfikatorze wpisanej, adnotacją typu opisującą typ zwracany funkcji i blokiem instrukcji opisującym implementację funkcji.
 
 Blok instrukcji definiujący funkcję musi być ujęty w `{` i `}` jak każdy inny blok instrukcji.
 
