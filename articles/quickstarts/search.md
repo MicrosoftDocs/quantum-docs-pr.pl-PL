@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 75028a1dc29abe5fbea2e789d896563f3d6331c9
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443940"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820355"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Szybki start: Implementowanie algorytmu wyszukiwania Grovera w języku Q#
 
@@ -43,11 +43,11 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
 1. Dodaj następujący kod do pliku `Operations.qs` w nowym projekcie:
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
 
 1. Aby zdefiniować przeszukiwaną listę, utwórz nowy plik `Reflections.qs` i wklej następujący kod:
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
     Operacja `ReflectAboutMarked` definiuje oznaczone dane wejściowe, które są wyszukiwane: ciąg naprzemiennych wartości 0 i 1. W tym przykładzie oznaczone dane wejściowe są na stałe umieszczone w kodzie. Przykład można rozszerzyć, aby wyszukać różne dane wejściowe, lub uogólnić, aby wyszukać dowolne dane wejściowe.
 
@@ -57,7 +57,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
     Aby uruchomić nowy program języka Q# z poziomu środowiska Python, zapisz następujący kod jako `host.py`:
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     Następnie możesz uruchomić program hosta języka Python z poziomu wiersza polecenia:
 
@@ -75,7 +75,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
     Aby uruchomić nowy program języka Q# z poziomu środowiska C#, zmodyfikuj element `Driver.cs` tak, aby zawierał następujący kod języka C#:
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     Następnie możesz uruchomić program hosta języka C# z poziomu wiersza polecenia:
 
@@ -94,7 +94,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
     Aby uruchomić nowy program języka Q# z poziomu środowiska C# w programie Visual Studio, zmodyfikuj element `Driver.cs` tak, aby zawierał następujący kod języka C#:
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     Następnie naciśnij klawisz F5. Program zacznie działać i pojawią się nowe okna z następującymi wynikami: 
 
