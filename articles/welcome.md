@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530018"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819931"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Wprowadzenie do zestawu Quantum Development Kit (QDK)
 
-Microsoft Quantum Development Kit — Zapraszamy!  Tutaj znajdziesz wszystkie narzędzia, których potrzebujesz, aby poznać programowanie kwantowe przy użyciu języka Q#.  Aby ułatwić naukę obliczeń kwantowych w języku Q#, udostępniamy przewodnik Wprowadzenie. Zawiera on „szlak podróży” dla tych z Was, którzy chcą rozpocząć kodowanie programów kwantowych, oraz dla osób, które nie są jeszcze gotowe do rozpoczęcia kodowania, ale chcą dowiedzieć się więcej o języku Q# i programowaniu kwantowym.
+Microsoft Quantum Development Kit — Zapraszamy!  Tutaj znajdziesz wszystkie narzędzia, których potrzebujesz, aby poznać programowanie kwantowe przy użyciu języka Q#.  Aby ułatwić naukę obliczeń kwantowych w języku Q#, udostępniamy przewodnik Wprowadzenie. Jest to przewodnik dla tych z Was, którzy chcą rozpocząć kodowanie programów kwantowych, oraz dla osób, które nie są jeszcze gotowe do rozpoczęcia kodowania, ale chcą dowiedzieć się więcej o języku Q# i programowaniu kwantowym. 
+
+Jeśli chcesz zacząć kodowanie, [zainstaluj zestaw QDK teraz](xref:microsoft.quantum.install).
 
 ## <a name="questions-about-quantum-computing"></a>Pytania dotyczące obliczeń kwantowych
 
@@ -54,9 +56,8 @@ Samouczki Wprowadzenie i artykuły zawierają wprowadzenie do obliczeń kwantowy
 * Zapoznaj się z naszymi [przykładami języka Q#](https://docs.microsoft.com/samples/browse/?languages=qsharp) i zobacz problemy, które można rozwiązać za pomocą obliczeń kwantowych.
 
 * Twórz zawartość na komputerze lokalnym przy użyciu języka programowania hosta i wybranego przez siebie środowiska deweloperskiego:
-  * Programowanie przy użyciu platformy [Python](xref:microsoft.quantum.install#develop-with-python)
-  * Programowanie w programie [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Programowanie w programie [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
-  * Programowanie za pomocą [notesów Jupyter](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+  * Programowanie przy użyciu [języków Q# i Python](xref:microsoft.quantum.install.python)
+  * Programowanie przy użyciu [języków Q# i C#](xref:microsoft.quantum.install.cs)
+  * Programowanie przy użyciu [notesów Jupyter w języku Q#](xref:microsoft.quantum.install.jupyter)
 
 * Dołącz do społeczności rozwiązania Microsoft Quantum, biorąc udział w projekcie zestawu [QDK](xref:microsoft.quantum.contributing) typu open source.
