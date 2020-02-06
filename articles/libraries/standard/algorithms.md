@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821018"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036359"
 ---
 # <a name="quantum-algorithms"></a>Algorytmy Quantum #
 
@@ -48,7 +48,8 @@ Ponadto wydajność *transformacji Fouriera* (QFT) w oparciu o liczbę, która j
 
 Dzięki przybliżonej generalizacji QFT udostępniamy operację <xref:microsoft.quantum.canon.approximateqft>, która pozwala na dalsze optymalizacje przez oczyszczenie rotacji, które nie są absolutnie niezbędne do uzyskania odpowiedniej dokładności algorytmu.
 Przybliżona QFT wymaga <xref:microsoft.quantum.intrinsic.rfrac> $Z $-Rotation operacji, a także operacji <xref:microsoft.quantum.intrinsic.h>.
-Założono, że dane wejściowe i wyjściowe są kodowane w kodowaniu big endian (najniższy bit/qubit znajduje się po lewej stronie, taki sam jak [notacja KET](xref:microsoft.quantum.concepts.dirac)).
+Założono, że dane wejściowe i wyjściowe są zakodowane w big endian kodowania---to oznacza, że qubit z indeksem `0` jest zakodowana w lewym największej liczbie (najwyższa) bitowej binarnej liczbie całkowitej.
+Jest to zgodne z [notacją KET](xref:microsoft.quantum.concepts.dirac), ponieważ rejestr trzech qubits w stanie $ \ket{100}$ odpowiada $q _0 $ jest w stanie $ \ket{1}$, $q _1 $ i $q _2 $ są w stanie $ \ket{0}$.
 Parametr przybliżenia $a $ określa poziom oczyszczenia $Z $-rotations, czyli $a \In [0.. n] $.
 W tym przypadku wszystkie $Z $-rotations $2 \ pi/2 ^ k $, gdzie $k > a $ są usuwane z obwodu usługi QFT.
 Wiadomo, że dla $k \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3. jeden może być powiązany z $\\| \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.
@@ -56,7 +57,7 @@ W tym miejscu $\\| \cdot\\| $ jest normą operatora, która w tym przypadku jest
 
 ## <a name="arithmetic"></a>Arytmetyczny ##
 
-Podobnie jak arytmetyczne odgrywają centralną rolę w środowisku klasycznym, jest również indispensible w przypadku przetwarzania Quantum.  Algorytmy, takie jak algorytm refaktoryzacji skró, metody symulacji Quantum i wiele algorytmów oracular polegają na spójnych operacjach arytmetycznych.  Większość podejścia do operacji arytmetycznych na podstawie obwodów z dołączaniem Quantum.  Najprostszym obiektem dodającym jest klasyczne dane wejściowe $b $ i dodaje wartość do stanu Quantum przechowującego liczbę całkowitą $ \ket{a} $.  Matematycznie, Metoda dodająca (która oznacza $ \operatorname{Add} (b) $ dla klasycznego wejścia $b $) ma właściwość, która
+Podobnie jak arytmetyczne odgrywają centralną rolę w środowisku klasycznym, jest również niezbędny w przypadku przetwarzania Quantum.  Algorytmy, takie jak algorytm refaktoryzacji skró, metody symulacji Quantum i wiele algorytmów oracular polegają na spójnych operacjach arytmetycznych.  Większość podejścia do operacji arytmetycznych na podstawie obwodów z dołączaniem Quantum.  Najprostszym obiektem dodającym jest klasyczne dane wejściowe $b $ i dodaje wartość do stanu Quantum przechowującego liczbę całkowitą $ \ket{a} $.  Matematycznie, Metoda dodająca (która oznacza $ \operatorname{Add} (b) $ dla klasycznego wejścia $b $) ma właściwość, która
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Ten podstawowy obwód do dołączania jest większy niż dodający się do dołączenia.

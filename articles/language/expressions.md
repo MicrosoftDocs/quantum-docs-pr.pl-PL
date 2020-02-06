@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185209"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036318"
 ---
 # <a name="expressions"></a>Wyrażenia
 
-## <a name="grouping"></a>Grupie
+## <a name="grouping"></a>Grupowanie
 
 Uwzględniając dowolne wyrażenie, to samo wyrażenie ujęte w nawiasy jest wyrażeniem tego samego typu.
 Na przykład `(7)` jest wyrażeniem `Int`, `([1,2,3])` jest wyrażeniem typu Array `Int`s, a `((1,2))` jest wyrażeniem z typem `(Int, Int)`.
@@ -61,7 +61,7 @@ W takim przypadku drugi parametr musi pasować do 32 bitów; Jeśli nie, zostani
 
 W przypadku dwóch wyrażeń całkowitych lub dużych liczb całkowitych można utworzyć nowe wyrażenie typu Integer lub Big Integer przy użyciu operatorów `%` (moduł), `&&&` (bitowe AND), `|||` (bitowe OR) lub `^^^` (bitowe XOR).
 
-W przypadku wyrażenia typu Integer lub Big Integer po lewej stronie i wyrażenia liczb całkowitych po prawej stronie operatory `<<<` (arytmetyczne przesunięcie w lewo) lub `>>>` (arytmetyczne przesunięcie w prawo) mogą być używane do tworzenia nowego wyrażenia z tym samym typem co lewa wyrażenia.
+W przypadku wyrażenia typu Integer lub Big Integer po lewej stronie i wyrażenia liczb całkowitych po prawej stronie operatory `<<<` (arytmetyczne przesunięcie w lewo) lub `>>>` (arytmetyczne przesunięcie w prawo) mogą być używane do tworzenia nowego wyrażenia z tym samym typem co wyrażenie lewej strony.
 
 Drugi parametr (wartość przesunięcia) dla operacji Shift musi być większy lub równy zero; zachowanie dla ujemnych kwot przesunięcia jest niezdefiniowane.
 Wartość przesunięcia dla operacji przesunięcia musi być również zgodna z 32 bitowymi; Jeśli nie, zostanie zgłoszony błąd czasu wykonywania.
@@ -94,9 +94,9 @@ W przypadku dowolnego wyrażenia typu Integer lub Big Integer nowe wyrażenie te
 Dwie `Bool` wartości literału są `true` i `false`.
 
 Uwzględniając wszystkie dwa wyrażenia tego samego typu pierwotnego, operatory `==` i `!=` mogą służyć do konstruowania wyrażenia `Bool`.
-Wyrażenie będzie prawdziwe, jeśli dwa wyrażenia są równe.
+Wyrażenie będzie prawdziwe, jeśli dwa wyrażenia są równe, i wartość false, jeśli nie.
 
-Wartości typów zdefiniowanych przez użytkownika mogą nie być porównywane. można porównać tylko ich wartości. Na przykład:
+Wartości typów zdefiniowanych przez użytkownika mogą nie być porównywane. można porównać tylko ich nieopakowane wartości. Na przykład użycie operatora "unotocz" `!` (wyjaśnione na [stronie modelu typu Q #](xref:microsoft.quantum.language.type-model#user-defined-types)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ Stan dwóch qubits nie jest porównywany, dostępny, mierzony ani modyfikowany p
 Porównanie równości dla wartości `Double` może być mylące ze względu na efekt zaokrąglenia.
 Na przykład `49.0 * (1.0/49.0) != 1.0`.
 
-Uwzględniając wszystkie dwa wyrażenia liczbowe, operatory binarne `>`, `<`, `>=`i `<=` mogą służyć do konstruowania nowego wyrażenia logicznego, które ma wartość true, jeśli pierwsze wyrażenie jest odpowiednio większe niż, mniejsze niż lub równe lub mniejsze lub równe drugiemu wyrażeniu.
+Uwzględniając wszystkie dwa wyrażenia liczbowe, operatory binarne `>`, `<`, `>=`i `<=` mogą służyć do konstruowania nowego wyrażenia logicznego, które ma wartość true, jeśli pierwsze wyrażenie jest odpowiednio większe niż, mniejsze niż lub równe lub mniejsze niż lub równe drugie wyrażenie.
 
 Uwzględniając dowolne dwa wyrażenia logiczne, `and` i `or` operatory binarne mogą służyć do konstruowania nowego wyrażenia logicznego, które ma wartość true, jeśli oba wyrażenia (centr. or lub oba) są prawdziwe.
 
@@ -229,7 +229,7 @@ Zwykle nie jest to konieczne, ponieważ kompilator Q # wykryje rzeczywiste typy.
 Jest to wymagane w przypadku częściowej aplikacji (patrz poniżej), jeśli argument z parametrem sparametryzowanym nie został określony.
 Jest to również czasami przydatne, gdy przekazywanie operacji z różnymi Funktor obsługuje do możliwego do odwoływać.
 
-Na przykład jeśli `Func` ma sygnaturę `('T1, 'T2, 'T1) -> 'T2`, `Op1` i `Op2` mają sygnaturę `(Qubit[] => Unit is Adj)`, a `Op3` ma sygnaturę `(Qubit[] => Unit)`, aby wywoływać `Func` z `Op1` jako pierwszy argument, `Op2` jako drugi i `Op3` jako trzeci:
+Na przykład jeśli `Func` ma sygnaturę `('T1, 'T2, 'T1) -> 'T2`, `Op1` i `Op2` mają sygnaturę `(Qubit[] => Unit is Adj)`, a `Op3` ma sygnaturę `(Qubit[] => Unit)`, aby wywoływać `Func` z `Op1` jako pierwszy argument `Op2` jako drugi, a `Op3` jako trzeci:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -496,13 +496,13 @@ Operator | Większa | Opis | Typy operandów
  `/`, `*`, `%` | Binarny | Dzielenie, mnożenie, moduł całkowity | `Int`, `BigInt` lub `Double` dla `/` i `*`, `Int` lub `BigInt` dla `%`
  `+`, `-` | Binarny | Dodawanie lub łączenie ciągów i tablic, odejmowanie | `Int`, `BigInt` lub `Double`, dodatkowo `String` lub dowolnego typu tablicy dla `+`
  `<<<`, `>>>` | Binarny | Lewy Shift, prawy Shift | `Int` lub `BigInt`
- `<`, `<=`, `>``>=` | Binarny | Mniejsze niż, mniejsze niż lub równe, większe niż, większe niż lub równe | `Int`, `BigInt` lub `Double`
+ `<`, `<=`, `>`, `>=` | Binarny | Mniejsze niż, mniejsze niż lub równe, większe niż, większe niż lub równe | `Int`, `BigInt` lub `Double`
  `==`, `!=` | Binarny | porównania równe, nierówne | dowolny typ pierwotny
  `&&&` | Binarny | Bitowe i | `Int` lub `BigInt`
  `^^^` | Binarny | Bitowe XOR | `Int` lub `BigInt`
- <code>\|\|\|</code> | Binarny | Bitowe lub | `Int` lub `BigInt`
- `and` | Binarny | Koniunkcja logiczna i | `Bool`
- `or` | Binarny | Logiczne lub | `Bool`
+ <code>\|\|\|</code> | Binarny | Bitowe LUB | `Int` lub `BigInt`
+ `and` | Binarny | Logicznego AND | `Bool`
+ `or` | Binarny | Logicznego OR | `Bool`
  `..` | Plik binarny/Trzyelementowy | Operator zakresu | `Int`
  `?` `|` | Trójargumentowy | Warunkowe | `Bool` po lewej stronie
 `w/` `<-` | Trójargumentowy | Kopiuj i Aktualizuj | Zobacz [wyrażenia kopiowania i aktualizowania](#copy-and-update-expressions)

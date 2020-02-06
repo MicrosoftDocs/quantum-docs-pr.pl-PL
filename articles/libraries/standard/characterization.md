@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870354"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036257"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -88,7 +88,7 @@ Zgodnie z tradycyjną klasyczną terminologią, wywołamy metodę $ \eqref{EQ: P
 
 Po zaobserwowaniu `Result` od funkcji prawdopodobieństwa oszacowania fazy iteracji możemy użyć reguły Bayesa ', aby określić, co powinna być uważana za tę obserwację.
 W konkretnym miejscu \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation} WHERE $d \In \\{\texttt{Zero}, \texttt{One}\\} $ to `Result`i gdzie $ \Pr (\phi) $ opisuje poprzednią przekonania o $ \phi $.
-Powoduje to, że iteracyjny charakter oszacowania fazy iteracyjnej jest w sposób jawny, ponieważ dystrybucja tylna $ \Pr (\phi | d) $ opisuje nasze przekonania bezpośrednio poprzedzające nasze obserwacje kolejnej `Result`.
+Powoduje to, że iteracyjny charakter iteracyjnej oceny fazy jest jawny, jako rozkład tylny $ \Pr (\phi | d) $ opisuje nasze przekonania bezpośrednio przed naszymi obserwacją następnego `Result`.
 
 W dowolnym momencie podczas tej procedury możemy zgłosić fazę $ \hat{\phi} $ wnioskowaną przez klasyczny kontroler jako \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \Text{data}] = \int \phi \Pr (\phi | \Text{Data}) {\mathrm d} \phi, \end{Equation} WHERE $ \Text{Data} $ oznacza cały rekord wszystkich uzyskanych wartości `Result`.
 

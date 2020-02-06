@@ -6,12 +6,12 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: fd43c783fa82c7219e143a57759919606fdd197f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184206"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036478"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Instalowanie i sprawdzanie poprawności biblioteki chemicznej
 
@@ -51,18 +51,18 @@ Aby uzyskać więcej informacji, zobacz [Przewodnik po konsoli Menedżera pakiet
 
 **Wiersz polecenia lub Visual Studio Code:** Przy użyciu wiersza polecenia lub z poziomu Visual Studio Code można użyć polecenia `dotnet`, aby dodać odwołanie do pakietu NuGet do projektu:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## <a name="verifying-your-installation"></a>Weryfikowanie instalacji 
 
 Podobnie jak w przypadku reszty zestawu Quantum Development Kit, biblioteka chemii Quantum zawiera wiele w pełni udokumentowanych przykładów, które ułatwiają szybkie rozpoczęcie pracy.
-Aby przetestować instalację przy użyciu tych przykładów, Sklonuj [repozytorium głównych przykładów](https://github.com/Microsoft/Quantum), a następnie uruchom jedną z przykładów.  Na przykład, aby uruchomić przykład [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen) :
+Aby przetestować instalację przy użyciu tych przykładów, Sklonuj [repozytorium głównych przykładów](https://github.com/Microsoft/Quantum), a następnie uruchom jedną z przykładów.  Na przykład, aby uruchomić przykład [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) :
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -78,11 +78,11 @@ Aby uzyskać więcej informacji na temat oszacowania wartości poziomów energii
 
 Przykład MolecularHydrogen korzysta z danych wejściowych molekularnych skonfigurowanych ręcznie.  Chociaż jest to bardzo szczegółowe w przypadku małych przykładów, Chemia Quantum na skalę wymaga Hamiltonians z milionami lub miliardami warunków. Takie Hamiltonians, generowane przez skalowalne pakiety chemii obliczeniowej, są zbyt duże, aby można je było zaimportować. 
 
-Biblioteka chemii Quantum dla zestawu Quantum Development Kit została zaprojektowana tak, aby działała prawidłowo [**z obliczanymi**](http://www.nwchem-sw.org/) pakietami chemicznymi EMSL) w laboratorium krajowym Pacyfiku Zachodnie.
+Biblioteka chemii Quantum dla zestawu Quantum Development Kit została zaprojektowana tak, aby działała prawidłowo z obliczanymi pakietami chemicznymi, w szczególności [**NWChem**](http://www.nwchem-sw.org/) obliczeniową platformą chemiczną, opracowaną przez laboratorium ds. analiz molekularnych (EMSL) w krajowym laboratorium zachodnie Pacyfiku.
 W szczególności pakiet `Microsoft.Quantum.Chemistry` udostępnia narzędzia do ładowania wystąpień problemów związanych z symulacją jednostek Quantum przedstawionymi w [schemacie Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), które są również obsługiwane w przypadku eksportowania przez ostatnie wersje programu NWChem.
 
 Aby rozpocząć korzystanie z programu NWChem wraz z zestawem Quantum Development Kit, sugerujemy jedną z następujących metod:
-- Zacznij korzystać z istniejących plików Broombridge dostarczonych z przykładami w [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
+- Zacznij korzystać z istniejących plików Broombridge dostarczonych z przykładami w [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
 - Użyj [konstruktora strzałek EMSL dla Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) , który jest oparty na sieci Web frontonem NWChem, aby generować nowe pliki wejściowe molekularne w formacie Broombridge.  
 - Użyj [obrazu platformy Docker](https://hub.docker.com/r/nwchemorg/nwchem-qc/) dostarczonego przez PNNL do uruchomienia NWChem lub
 - [Kompiluj NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) dla swojej platformy.
@@ -90,9 +90,10 @@ Aby rozpocząć korzystanie z programu NWChem wraz z zestawem Quantum Developmen
 Zobacz [kompleksowe z NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) , aby uzyskać więcej informacji na temat pracy z NWChemami z modelami chemicznymi w celu przeanalizowania za pomocą biblioteki chemii zestawu Quantum opracowuje.
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>Wprowadzenie do korzystania z plików Broombridge dostarczonych z przykładami
-Folder [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML) w repozytorium "Quantum Development Kit Samples" zawiera pliki danych cząsteczków Broombridge.  
 
-W prostym przykładzie należy użyć przykładowej biblioteki chemij, [GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount) do załadowania hamiltonian z jednego z plików Broombridge i wykonania oszacowania bramy Quantum algorigthms:
+Folder [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) w repozytorium "Quantum Development Kit Samples" zawiera pliki danych cząsteczków Broombridge.  
+
+W prostym przykładzie należy użyć przykładowej biblioteki chemij, [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) do załadowania hamiltonian z jednego z plików Broombridge i wykonania oszacowania bramy Quantum algorigthms:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -171,5 +172,3 @@ Więcej informacji można uzyskać przy użyciu wbudowanych funkcji pomocy progr
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

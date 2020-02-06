@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819896"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036444"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Tworzenie projektu Q # w środowisku deweloperskim
 
@@ -36,7 +36,7 @@ Wybierz środowisko deweloperskie i język w poniższych sekcjach:
 
 1. Utwórz folder dla projektu i przejdź do tego folderu
 
-1. Utwórz plik Q # o nazwie `Operation.qs`i Dodaj do niego kod Q. Przykład:
+1. Utwórz plik Q # o nazwie `Operation.qs`i Dodaj do niego kod Q. Na przykład:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Wybierz środowisko deweloperskie i język w poniższych sekcjach:
     }
     ```
 
-1. Utwórz plik hosta języka Python o nazwie `host.py`, aby wywołać operację Q #. Przykład:
+1. Utwórz plik hosta języka Python o nazwie `host.py`, aby wywołać operację Q #. Na przykład:
 
     ```python
     import qsharp
@@ -87,7 +87,7 @@ Teraz można kontynuować opracowywanie programu Quantum.
     jupyter notebook
     ```
 
-1. Przejdź do adresu URL podanego w wierszu polecenia. Na przykład: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
+1. Przejdź do adresu URL podanego w wierszu polecenia. Na przykład: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
 1. W przeglądarce pojawi się Strona Jupyter. Na karcie **pliki** wybierz pozycję **Nowy** > **Q #** , aby utworzyć Notes Jupyter z jądrem Q #. Dodaj następujący kod do pierwszej komórki notesu:
 
@@ -157,7 +157,7 @@ Teraz możesz kontynuować opracowywanie Quantum przy użyciu programu Visual St
 1. Uruchom aplikację:
 
     * Przejdź do **terminalu** -> **nowym terminalu**
-    * Wprowadź wartość `dotnet run`
+    * Wprowadź `dotnet run`
     * W oknie danych wyjściowych powinien zostać wyświetlony następujący tekst: `Hello quantum world!`
 
 Teraz możesz kontynuować tworzenie aplikacji Quantum przy użyciu Visual Studio Code.
@@ -173,7 +173,7 @@ Teraz możesz kontynuować tworzenie aplikacji Quantum przy użyciu Visual Studi
 
 1. Tworzenie nowej aplikacji
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -187,7 +187,7 @@ Teraz możesz kontynuować tworzenie aplikacji Quantum przy użyciu Visual Studi
 
 1. Uruchamianie aplikacji
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
