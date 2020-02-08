@@ -16,17 +16,7 @@
           href: overview/what-is-qsharp.md
         - name: Jak nauczyć się wykonywania obliczeń kwantowych?
           href: overview/how-to-learn-quantum-computing.md
-    - name: Informacje w artykułach Quantum Kata
-      href: intro-to-katas.md
-- name: Przewodniki Szybki start
-  items:
-    - name: Kwantowy generator liczb losowych
-      href: quickstarts/qrng.md
-    - name: 'Podstawy obliczeń kwantowych w języku Q#'
-      href: quickstart.md
-    - name: Implementowanie algorytmu wyszukiwania Grovera
-      href: quickstarts/search.md
-- name: Przewodniki z instrukcjami
+- name: Instalowanie i aktualizowanie
   items:
     - name: Instalowanie zestawu QDK
       items:
@@ -40,8 +30,14 @@
           href: install-guide/qjupyter.md
     - name: Aktualizowanie zestawu QDK
       href: install-guide/update.md
-    - name: 'Tworzenie projektu języka Q#'
-      href: how-to-guides/create-qsharp-project.md
+- name: Przewodniki Szybki start
+  items:
+    - name: Kwantowy generator liczb losowych
+      href: quickstarts/qrng.md
+    - name: 'Podstawy obliczeń kwantowych w języku Q#'
+      href: quickstart.md
+    - name: Implementowanie algorytmu wyszukiwania Grovera
+      href: quickstarts/search.md
 - name: Pojęcia
   items:
     - name: Techniki projektowania kwantowego
@@ -52,21 +48,31 @@
       href: language/toc.yml
     - name: 'Biblioteki języka Q#'
       href: libraries/toc.yml
-    - name: Pojęcia związane z obliczeniami kwantowymi
-      href: concepts/toc.yml
     - name: Symulatory kwantowe i narzędzia do szacowania zasobów
       href: machines/toc.yml
+    - name: Pojęcia związane z obliczeniami kwantowymi
+      href: concepts/toc.yml
+- name: Przewodniki z instrukcjami
+  items:
+    - name: 'Tworzenie projektu języka Q#'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Zasoby szkoleniowe dla języka Q#'
+  items:
+    - name: Informacje w artykułach Quantum Kata
+      href: intro-to-katas.md
+    - name: 'Przykłady dla języka Q#'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
 - name: Zasoby
   items:
+    - name: Słownik
+      href: Glossary.md
+    - name: Dodatkowe informacje
+      href: for-more-info.md
     - name: Informacje o wersji zestawu QDK
       topicHref: relnotes/index.md
       href: relnotes/toc.yml
     - name: Współtworzenie zestawu QDK
       href: contributing/toc.yml
       topicHref: contributing/index.md
-    - name: Słownik
-      href: Glossary.md
-    - name: Więcej informacji
-      href: for-more-info.md
     - name: Licencja
       href: license.md

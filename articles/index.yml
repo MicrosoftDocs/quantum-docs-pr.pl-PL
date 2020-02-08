@@ -1,122 +1,96 @@
 ### YamlMime:Landing
-title: Microsoft Quantum Development Kit
-summary: Dowiedz się, jak używać zestawu Microsoft Quantum Development Kit i języka Q# przeznaczonego do programowania algorytmów kwantowych.
+title: Dokumentacja rozwiązania Microsoft Quantum
+summary: Dowiedz się, jak używać zestawu Microsoft Quantum Developer Kit i języka Q# na potrzeby algorytmów kwantowych. Poznaj kluczowe pojęcia i napisz pierwszy program kwantowy.
 metadata:
-  title: Microsoft Quantum Development Kit — dokumentacja interfejsu API Q#
-  description: Dowiedz się, jak używać zestawu Microsoft Quantum Development Kit i języka Q# przeznaczonego do programowania algorytmów kwantowych. Poznaj kluczowe pojęcia i napisz pierwszy program kwantowy.  Poznaj zaawansowane narzędzia i biblioteki zestawu QDK.
+  title: Dokumentacja rozwiązania Microsoft Quantum — dokumentacja interfejsu API języka Q#
+  description: Dowiedz się, jak używać zestawu Microsoft Quantum Development Kit i języka Q#, czyli języka do programowania kwantowego. Poznaj kluczowe pojęcia i napisz pierwszy program kwantowy.  Poznaj zaawansowane narzędzia i biblioteki zestawu QDK.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
-  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
+  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
   ms.translationtype: HT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76820729"
+  ms.lasthandoff: 02/06/2020
+  ms.locfileid: "77036580"
 landingContent:
 - title: Wprowadzenie do rozwiązania Microsoft Quantum
   linkLists:
   - linkListType: overview
     links:
-    - text: Pięć pytań dotyczących obliczeń kwantowych
+    - text: Zestaw Quantum Development Kit
       url: welcome.md
-  - linkListType: get-started
+  - linkListType: learn
+    links:
+    - text: Co to są obliczenia kwantowe?
+      url: overview/what-is-quantum-computing.md
+    - text: Co może robić komputer kwantowy?
+      url: overview/quantum-computers.md
+    - text: Dlaczego warto uczyć się wykonywania obliczeń kwantowych?
+      url: overview/why-learn-quantum-computing.md
+    - text: Co to jest język Q#?
+      url: overview/what-is-qsharp.md
+    - text: Jak mogę nauczyć się wykonywania obliczeń kwantowych?
+      url: overview/how-to-learn-quantum-computing.md
+- title: Pobierz zestaw Quantum Development Kit
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Instalowanie zestawu QDK
+      url: install-guide/index.md
+    - text: Aktualizowanie zestawu QDK
+      url: install-guide/update.md
+- title: Przewodniki Szybki start
+  linkLists:
+  - linkListType: quickstart
     links:
     - text: Tworzenie kwantowego generatora liczb losowych
       url: quickstarts/qrng.md
-    - text: Podstawy kwantowe w języku Q#
+    - text: Podstawy obliczeń kwantowych w języku Q#
       url: quickstart.md
-    - text: Uzyskaj informacje o ważnych programach kwantowych za pomocą języka Q#
+    - text: 'Przyspieszenie kwantowe: Algorytm wyszukiwania Grovera'
       url: quickstarts/search.md
-    - text: Uzyskaj informacje na temat rozwiązywania największych problemów w dziedzinie chemii
-      url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
-  - linkListType: learn
-    links:
-    - text: Informacje w artykułach Quantum Kata
-      url: intro-to-katas.md
-    - text: Przeglądaj przykłady języka Q#
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Tworzenie zawartości za pomocą języków Q# i Python lub notesów Jupyter
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Instalacja środowiska Python
-      url: install-guide/pyinstall.md
-    - text: Instalacja programu Jupyter
-      url: install-guide/qjupyter.md
-  - linkListType: how-to-guide
-    links:
-    - text: Przykłady języka Q# w języku Python
-      url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
-    - text: Teleportowanie notesu programu Jupyter w języku Q#
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Tworzenie notesów programu Jupyter w języku Q#
-      url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
-- title: Środowiska programistyczne języka Q#
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Instalacja programu Visual Studio
-      url: install-guide/csinstall.md
-    - text: Instalacja programu Visual Studio Code
-      url: install-guide/csinstall.md
-- title: Przykłady języka Q#
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Trzy proste algorytmy
-      url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
-    - text: Wyszukiwanie przy użyciu algorytmu Grovera
-      url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
-    - text: Teleportacja kwantowa
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Wszystkie przykłady
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Język Q# i techniki programistyczne
-  linkLists:
-  - linkListType: learn
-    links:
-    - text: Wprowadzenie do języka Q#
-      url: language/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: Symulatory kwantowe i aplikacje hosta
-      url: machines/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: Przegląd programu Q#
-      url: techniques/file-structure.md
-    - text: Operacje i funkcje
-      url: techniques/operations-and-functions.md
-    - text: Zmienne lokalne
-      url: techniques/local-variables.md
-    - text: Praca z kubitami
-      url: techniques/working-with-qubits.md
-    - text: 'Podsumowanie: Teleportacja'
-      url: techniques/putting-it-all-together.md
 - title: Pojęcia związane z obliczeniami kwantowymi
   linkLists:
   - linkListType: concept
     links:
     - text: Pojęcia związane z obliczeniami kwantowymi
       url: concepts/index.md
-    - text: Słownik
-      url: Glossary.md
-- title: Algorytmy i aplikacje języka Q#
+- title: Język programowania Q#
   linkLists:
-  - linkListType: reference
+  - linkListType: learn
     links:
-    - text: Wzmacnianie amplitudy
-      url: libraries/standard/algorithms.md
-    - text: Szacowanie fazy kwantowej
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Algorytm Shora
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: Symulacja Hamiltona
-      url: libraries/standard/applications.md
+    - text: Wprowadzenie do języka Q#
+      url: language/index.md
+    - text: Techniki programowania w języku Q#
+      url: techniques/index.md
+- title: Maszyny docelowe
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Symulatory kwantowe i aplikacje hosta
+      url: machines/index.md
+  - linkListType: architecture
+    links:
+    - text: Symulator pełnego stanu
+      url: machines/full-state-simulator.md
+    - text: Narzędzie do szacowania zasobów
+      url: machines/resources-estimator.md
+    - text: Symulator śledzenia
+      url: machines/qc-trace-simulator/index.md
+    - text: Symulator Toffoli
+      url: machines/toffoli-simulator.md
+- title: Zasoby szkoleniowe dla języka Q#
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Informacje w artykułach Quantum Kata
+      url: intro-to-katas.md
+    - text: Przeglądaj przykłady kodu w języku Q
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: Biblioteki języka Q#
   linkLists:
   - linkListType: reference
@@ -129,14 +103,18 @@ landingContent:
       url: libraries/chemistry/index.md
     - text: Pojęcia z zakresu chemii
       url: libraries/chemistry/concepts/quantum-dynamics.md
-  - linkListType: how-to-guide
+- title: Algorytmy i aplikacje w języku Q# (z bibliotek standardowych)
+  linkLists:
+  - linkListType: reference
     links:
-    - text: Wartości liczbowe — przykłady języka Q#
-      url: libraries/numerics/numerics.md
-    - text: Chemia — przykłady języka Q#
-      url: libraries/chemistry/samples/index.md
-    - text: Kompleksowe rozwiązania przy użyciu narzędzia NWChem
-      url: libraries/chemistry/samples/end-to-end.md
+    - text: Wzmacnianie amplitudy
+      url: libraries/standard/algorithms.md
+    - text: Szacowanie fazy kwantowej
+      url: libraries/standard/algorithms.md#quantum-phase-estimation
+    - text: Algorytm Shora
+      url: libraries/standard/applications.md#shors-algorithm
+    - text: Symulacja Hamiltona
+      url: libraries/standard/applications.md
 - title: Społeczność i współtworzenie
   linkLists:
   - linkListType: how-to-guide
