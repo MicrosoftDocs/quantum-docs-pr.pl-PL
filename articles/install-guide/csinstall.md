@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831022"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036291"
 ---
 # <a name="develop-with-q--c"></a>Programowanie przy użyciu narzędzia Q # +C#
 
@@ -23,7 +23,7 @@ Program Q # jest zbudowany w celu pomyślnego C#odtwarzania z językami .NET —
 - [Q # + C# używa Visual Studio Code (Windows, Linux i Mac)](#VSC)
 - [Q # + C# przy użyciu narzędzia wiersza polecenia `dotnet`](#command)
 
-## Programowanie przy użyciu narzędzia Q C# # + w programie Visual Studio<a name="VS"></a>
+## Programowanie przy użyciu narzędzia Q C# # + w programie Visual Studio <a name="VS"></a>
 
 Program Visual Studio oferuje bogate środowisko do opracowywania programów pytań i odpowiedzi. Rozszerzenie Q # programu Visual Studio zawiera szablony dla plików i projektów Q #, a także wyróżnianie składni, uzupełnianie kodu i obsługa technologii IntelliSense.
 
@@ -59,7 +59,7 @@ Program Visual Studio oferuje bogate środowisko do opracowywania programów pyt
 > [!NOTE]
 > * Jeśli masz wiele projektów w jednym rozwiązaniu programu Visual Studio, wszystkie projekty zawarte w rozwiązaniu muszą znajdować się w tym samym folderze co rozwiązanie lub w jednym z jego podfolderów.  
 
-## Programowanie przy użyciu funkcji Q C# # + Visual Studio Code<a name="VSC"></a>
+## Programowanie przy użyciu funkcji Q C# # + Visual Studio Code <a name="VSC"></a>
 
 Visual Studio Code (VS Code) oferuje bogate środowisko do opracowywania programów Q # w systemach Windows, Linux i Mac.  Rozszerzenie Q # VS Code obejmuje obsługę wyróżniania składni Q #, uzupełniania kodu i fragmentów kodu pytań i odpowiedzi.
 
@@ -94,14 +94,14 @@ Visual Studio Code (VS Code) oferuje bogate środowisko do opracowywania program
     - Uruchom aplikację:
 
         - Przejdź do **terminalu** -> **nowym terminalu**
-        - Wprowadź wartość `dotnet run`
+        - Wprowadź `dotnet run`
         - W oknie danych wyjściowych powinien zostać wyświetlony następujący tekst: `Hello quantum world!`
 
 
 > [!NOTE]
 > * Obszary robocze z wieloma folderami głównymi nie są obecnie obsługiwane przez rozszerzenie programu Visual Studio Code. Jeśli masz wiele projektów w jednym obszarze roboczym programu VS Code, wszystkie projekty muszą znajdować się w tym samym folderze głównym.
 
-## Programowanie przy użyciu funkcji Q C# # + za pomocą narzędzia wiersza polecenia `dotnet`<a name="command"></a>
+## Programowanie przy użyciu funkcji Q C# # + za pomocą narzędzia wiersza polecenia `dotnet` <a name="command"></a>
 
 Oczywiście programy Q# możesz kompilować i uruchamiać z poziomu wiersza polecenia, po prostu instalując zestaw SDK .NET Core i szablony projektów QDK. 
 
@@ -111,7 +111,7 @@ Oczywiście programy Q# możesz kompilować i uruchamiać z poziomu wiersza pole
 
 1. Instalowanie szablonów projektów kwantowych dla platformy .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Oczywiście programy Q# możesz kompilować i uruchamiać z poziomu wiersza pole
 
     - Tworzenie nowej aplikacji
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Przechodzenie do nowego katalogu aplikacji
@@ -135,7 +135,7 @@ Oczywiście programy Q# możesz kompilować i uruchamiać z poziomu wiersza pole
 
     - Uruchamianie aplikacji
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
