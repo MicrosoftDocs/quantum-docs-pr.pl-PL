@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871621"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441033"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -21,13 +21,14 @@ Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.q
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
 
+
 ## <a name="version-01020012831"></a>Wersja 0.10.2001.2831
 
 *Data wydania: 29 stycznia 2020 r.*
 
 To wydanie zawiera następujące elementy:
 
-- Nowy pakiet NuGet Microsoft.Quantum.SDK; zobacz [plik README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md), aby uzyskać więcej szczegółów
+- Nowy pakiet NuGet Microsoft.Quantum.SDK
 - Dodano obsługę platformy .NET Core 3.1; zdecydowanie zaleca się zainstalowanie wersji 3.1.100, ponieważ kompilowanie przy użyciu starszych wersji zestawu .NET Core SDK może powodować problemy
 - Nowe przekształcenia kompilatorów są dostępne w ramach elementu Microsoft.Quantum.QsCompiler.Experimental
 - Nowa funkcja uwidaczniająca wyjściowe wektory stanu jako kod HTML w jądrze IQ#
