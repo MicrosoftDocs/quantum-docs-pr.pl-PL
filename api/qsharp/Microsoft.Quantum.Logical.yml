@@ -45,6 +45,8 @@ functions:
   summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza lub równa innej liczbie.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza lub równa innej liczbie.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są niemal równe (to jest, w ramach tolerancji o wartości 1e-12).
 - uid: microsoft.quantum.logical.not
   summary: Zwraca wartość logiczną negacji wartości.
 - uid: microsoft.quantum.logical.notequalb
@@ -61,14 +63,16 @@ functions:
   summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
 - uid: microsoft.quantum.logical.notequalr
   summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są równe.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są niemal równe (czyli nie są objęte tolerancją 1e-12).
 - uid: microsoft.quantum.logical.or
   summary: Zwraca wartość logiczną, która powoduje odłączenie dwóch wartości.
 - uid: microsoft.quantum.logical.xor
   summary: Zwraca wartość logiczną bez odłączenia dwóch wartości.
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056277"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905900"

@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.partialrotationslayer
+name: PartialRotationsLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Zwraca tablicę obrotów z pojedynczą qubitą wzdłuż danej osi, sparametryzowane według odrębnych parametrów modelu.
+syntax: 'function PartialRotationsLayer (idxsQubits : Int[], axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(idxsQubits : Int[], axis : Pauli)'
+  types:
+  - name: idxsQubits
+    summary: Indeksy dla qubits mają być używane jako elementy docelowe dla każdego obrotu.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: Oś obrotu dla każdego obrotu w danej warstwie.
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: Tablica kontrolowanych obrotów dotyczących danej osi, po jednej na `nQubits` qubits.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: ece8381560c4d7501282eb909506a10e7ab1fe72
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908637"
