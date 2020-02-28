@@ -1,4 +1,4 @@
-- name: Dokumentacja
+- name: Dokumentacja interfejsu API
   items:
     - name: 'Biblioteki języka Q#'
       href: qsharp/toc.yml
