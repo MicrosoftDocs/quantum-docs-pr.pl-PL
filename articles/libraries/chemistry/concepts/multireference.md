@@ -1,19 +1,19 @@
 ---
-title: Skorelowane wavefunctions | Microsoft Docs
-description: Dokumentacja koncepcji systemu Quantum Dynamics
+title: Skorelowane funkcje falowe
+description: Dowiedz się więcej na temat korelacji dynamicznych i niedynamicznych w wavefunctions przy użyciu biblioteki chemii Microsoft Quantum.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184036"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904438"
 ---
-# <a name="correlated-wavefunctions"></a>Skorelowane wavefunctions
+# <a name="correlated-wavefunctions"></a>Skorelowane funkcje falowe
 
 W przypadku wielu systemów, szczególnie tych znajdujących się w sąsiedztwie równowagi, [Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) teoretycznie zapewnia jakościowy opis właściwości molekularnych za pomocą jednoelementowego stanu odwołania. Jednak w celu osiągnięcia dokładności ilościowej należy również wziąć pod uwagę wpływ korelacji. 
 
@@ -24,9 +24,9 @@ To wymaga nadłożenia znaczników i jest przykładem wieloodwołaniaowej wavefu
 Biblioteka chemii umożliwia określenie zerowego Order wavefunction dla problemu wieloreferencyjnego jako nadpozycji znaczników. To podejście, które dzwonimy do wavefunctions rozrzedzenia, jest skuteczne, gdy tylko kilka składników wystarcza do określenia nadpozycji. Biblioteka udostępnia również metodę, aby uwzględnić dynamiczne korelacje na jednym wyznaczniku, za pośrednictwem uogólnionego, połączonego z jednostką ansatz. Ponadto tworzy również obwodów Quantum, które generują te Stany na komputerze Quantum. Te Stany mogą być określone w [schemacie Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)i udostępniamy również funkcje ręcznego określania tych stanów za pomocą biblioteki chemicznej.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>Rozrzedzony wavefunction wiele odwołań
-Stan wieloodwołania $ \ket{\psi_{\RM {MCSCF}}} $ może być jawnie określony jako liniowa kombinacja $N $-elektron Slater determininants.
-\begin{align} \ket{\psi_{\RM {MCSCF}}} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1, i_2, \cdots, i_N} a ^ \dagger_{i_1}a ^ \dagger_{i_2}\cdots a ^ \dagger_{i_N}\ket{0}.
-\end{align} na przykład stan $ \propto (0,1 a ^ \dagger_1a ^ \dagger_2a ^ \dagger_6-0,2 a ^ \dagger_2a ^ \dagger_1a ^ \dagger_5) \ket{0}$ można określić w bibliotece chemii w następujący sposób.
+Stan wieloodwołania $ \ket{\ psi_ {\RM {MCSCF}}} $ może być jawnie określony jako liniowa kombinacja $N $-elektron Slater determininants.
+\begin{align} \ket{\ psi_ {\RM {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1, i_2, \cdots, i_N} a ^ \ dagger_ {i_1} \cdots dagger_.{0}
+\end{align} na przykład stan $ \propto (0,1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0,2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \ket{0}$ można określić w bibliotece chemii w następujący sposób.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -42,18 +42,18 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Ta jawna reprezentacja składników położeniu jest skuteczna, gdy należy określić tylko kilka składników. Należy unikać używania tej reprezentacji, gdy wiele składników jest wymaganych do dokładnego przechwycenia żądanego stanu. Przyczyną tego jest koszt usługi w ramach obwodu Quantum, który przygotowuje ten stan na komputerze z systemem Quantum, co oznacza, że skaluje się co najmniej liniowo przy użyciu liczby składników podpozycji, a najwyżej jedna z nich jest równa jednej kombinacji amplitud.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>Połączone z jednostką — wavefunction klastra
-Istnieje również możliwość określenia jednostki powiązanej-Cluster wavefunction $ \ket{\psi_{\RM {UCC}}} $ przy użyciu biblioteki chemistery. W tej sytuacji mamy jednoelementowy stan odwołania, powiedzmy, $ \ket{\psi_{\rm{SCF}}} $. Składniki połączonego z jednostką wavefunction klastra są następnie określone jako niejawne przez operatora jednostki działającej na stanie odwołania.
-Ten operator jednostkowy jest często pisany jako $e ^ {T-T ^ \dagger} $, gdzie $T-T ^ \dagger $ jest operatorem klastra hermitian. Tak więc \begin{align} \ket{\psi_{\RM {UCC}}} = e ^ {T-T ^ \dagger}\ket{\psi_{\rm{SCF}}}.
+Istnieje również możliwość określenia jednostki powiązanej-Cluster wavefunction $ \ket{\ psi_ {\RM {UCC}}} $ przy użyciu biblioteki chemistery. W takiej sytuacji mamy jednoelementowy stan odwołania, powiedzmy, $ \ket{\ psi_ {\rm{SCF}}} $. Składniki połączonego z jednostką wavefunction klastra są następnie określone jako niejawne przez operatora jednostki działającej na stanie odwołania.
+Ten operator jednostkowy jest często pisany jako $e ^ {T-T ^ \dagger} $, gdzie $T-T ^ \dagger $ jest operatorem klastra hermitian. W tym celu \begin{align} \ket{\ psi_ {\RM {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\rm{SCF}}}.
 \end{align}
 
-Jest to również typowe, aby podzielić operator klastra $T = T_1 + T_2 + \cdots $ na części, gdzie każda część $T _j $ zawiera warunki $j $-Body. W przypadku uogólnionych teoretycznie klastra, operator jednoczęściowego klastra (zmiennoprzecinkowych) ma postać \begin{align} T_1 = \sum_{pq}t ^ {p} _ {q} a ^ \dagger_p a_q, \end{align}
+Często należy również podzielić operator klastra $T = T_1 + T_2 + \cdots $ na części, gdzie każda część $T _j $ zawiera $j $-terms. Ogólnie rzecz biorąc, teoretycznie sprzężone klaster, operator jednoczęściowego klastra (zmiennoprzecinkowych) ma postać \begin{align} T_1 = \ sum_ {pq} T ^ {p} _ {q} a ^ \ dagger_p a_q, \end{align}
 
-i operator dwuczęściowego klastra (podwaja) ma postać \begin{align} T_2 = \sum_{pqrs}t ^ {pq} _ {RS} a ^ \dagger_p a ^ \dagger_q a_r a_s.
+i operator dwuczęściowego klastra (podwaja) ma postać \begin{align} T_2 = \ sum_ {pqrs} T ^ {pq} _ {RS} a ^ \ dagger_p ^ \ dagger_q a_r a_s.
 \end{align}
 
 Warunki wyższej kolejności (potrójne, czterokrotne itp.) są możliwe, ale nie są obecnie obsługiwane przez bibliotekę chemii.
 
-Na przykład, Let $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_1 ^ \dagger_2\ket{0}$ i let $T = 0,123 a ^ \dagger_0 A_1 + 0,456 a ^ \dagger_0a ^ \dagger_3 A_1 a_2-0,789 a ^ \dagger_3a ^ \dagger_2 A_1 a_0 $. Następnie ten stan jest tworzona w bibliotece chemicznej w następujący sposób.
+Na przykład, niech $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_1 a ^ \ dagger_2 \ket{0}$, i pozwól $T = 0,123 a ^ \ dagger_0 A_1 + 0,456 a ^ \ dagger_0a ^ \ dagger_3 A_1 a_2 0,789 Następnie ten stan jest tworzona w bibliotece chemicznej w następujący sposób.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-Convervation pokrętła może być jawnie określana przez określenie `SpinOrbital` indeksy zamiast indeksów całkowitych. Na przykład, niech $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_{1, \uparrow} ^ \dagger_{2, \downarrow}\ket{0}$ i let $T = 0,123 a ^ \dagger_{0, \uparrow} a_ {1, \uparrow} + 0,456 a ^ \dagger_{0, \uparrow} a ^ \dagger_{3, \downarrow} a_ {1, \uparrow} a_ {2, \ Strzałka}-0,789 a ^ \dagger_{3, \uparrow} ^ \dagger_{2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $ to spin convserving. Następnie ten stan jest tworzona w bibliotece chemicznej w następujący sposób.
+Convervation pokrętła może być jawnie określana przez określenie `SpinOrbital` indeksy zamiast indeksów całkowitych. Na przykład niech $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_ {1, \uparrow} a ^ \ dagger_ {2, \downarrow}\ket{0}$ i let $T = 0,123 a ^ \ dagger_ {0, \uparrow} a_ {1, \uparrow} + 0,456 a ^ \ dagger_ {0, \uparrow} a ^ \ dagger_ {3, \downarrow} a_ {1, \uparrow} a_ {2, \downarrow}-0,789 a ^ \ dagger_ {3, \uparrow} a ^ \ dagger_ {2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $ to pokrętło convserving. Następnie ten stan jest tworzona w bibliotece chemicznej w następujący sposób.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

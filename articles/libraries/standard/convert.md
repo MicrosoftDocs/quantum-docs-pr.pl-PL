@@ -1,16 +1,16 @@
 ---
-title: 'Biblioteki Q # standardowe — konwersje typów | Microsoft Docs'
-description: 'Biblioteki Q # standardowe — konwersje typów'
+title: Konwersje typów w bibliotekach standardowych Q
+description: 'Poznaj typowe i zdefiniowane przez użytkownika funkcje konwersji typów w bibliotekach Q # Standard.'
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 4716f0d9562229f08ef6f0f5f80961f793de4c5c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e941d7e3d76459546861410e91a03d7315183867
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184478"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907804"
 ---
 # <a name="type-conversions"></a>Konwersje typów #
 

@@ -1,17 +1,17 @@
 ---
-title: Współtworzenie dokumentacji | Microsoft Docs
-description: Dokumentacja dotycząca współtworzenia
+title: Współtworzenie dokumentacji do programu Microsoft QDKe
+description: Dowiedz się, jak współtworzyć koncepcję lub zawartość interfejsu API w zestawie dokumentacji Microsoft Quantum.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: 1e24dd859c0b75a161f4f3c7151e2eec227075a2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183679"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904897"
 ---
 # <a name="improving-documentation"></a>Ulepszanie dokumentacji #
 
@@ -24,7 +24,7 @@ Podobnie przyjmujemy bibliotekę [MathJax](https://www.mathjax.org/) , aby umoż
 
 W ten sposób każda forma dokumentacji różni się nieco w zależności od szczegółów:
 
-- **Dokumentacja dotycząca pojęć** składa się z zestawu artykułów, które są publikowane w https://docs.microsoft.com/quantum i opisują wszystko, od podstaw obliczeniowych usługi Quantum do specyfikacji technicznych dla formatów wymiany. Te artykuły są zapisywane w [DocFXej promocji (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), która jest używana do tworzenia rozbudowanych zestawów dokumentacji.
+- **Dokumentacja dotycząca pojęć** składa się z zestawu artykułów, które są publikowane w https://docs.microsoft.com/quantumi opisują wszystko, od podstaw obliczeniowych usługi Quantum do specyfikacji technicznych dla formatów wymiany. Te artykuły są zapisywane w [DocFXej promocji (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), która jest używana do tworzenia rozbudowanych zestawów dokumentacji.
 - **Dokumentacja interfejsu API** to zestaw stron dla każdej funkcji Q #, operacji i typu zdefiniowanego przez użytkownika, który jest publikowany w https://docs.microsoft.com/qsharp/api/. Te strony dokumentują dane wejściowe i operacje do każdego z nich, a także przykłady i linki do dodatkowych informacji. Odwołanie do interfejsu API jest automatycznie wyodrębniane z małych dokumentów DFM w kodzie kodu źródłowego Q # jako część każdej wersji.
 - Pliki **readme<!---->. MD** dołączone do każdego przykładu i Kata opisują, jak używać tego przykładu lub Kata jest używany, co obejmuje, i w jaki sposób odnosi się do reszty zestawu Quantum Development Kit. Te pliki są zapisywane przy użyciu [promocji (GFM) usługi GitHub](https://github.github.com/gfm/), która jest bardziej lekkim rozwiązaniem alternatywnym dla dołączania dokumentacji bezpośrednio do repozytoriów kodu.
 
@@ -45,48 +45,85 @@ Opiszemy więcej informacji na temat żądań ściągnięcia poniżej, ale teraz
 
 Aby współtworzyć udoskonalenia odwołań do interfejsów API, warto otworzyć żądanie ściągnięcia bezpośrednio na udokumentowanym kodzie.
 Każda funkcja, operacja lub typ zdefiniowany przez użytkownika obsługuje komentarz do dokumentacji (oznaczone `///` zamiast `//`).
-Podczas kompilowania każdej wersji zestawu Quantum Development Kit te komentarze są używane do generowania odniesienia do interfejsu API w https://docs.microsoft.com/qsharp/api/ , w tym szczegółów dotyczących danych wejściowych i wyjściowych z każdego z nich, założeń, każdy możliwy do przetworzenia i przykłady ich użycia.
+Podczas kompilowania każdej wersji zestawu Quantum Development Kit te komentarze są używane do generowania odniesienia do interfejsu API w https://docs.microsoft.com/qsharp/api/, w tym szczegółów dotyczących danych wejściowych i wyjściowych z każdego z nich, założeń, każdy możliwy do przetworzenia i przykłady ich użycia.
 
 > [!IMPORTANT]
 > Pamiętaj, aby nie edytować ręcznie wygenerowanej dokumentacji interfejsu API, ponieważ te pliki są zastępowane w każdej nowej wersji.
 > Firma Microsoft zastrzega sobie udział w społeczności i chce mieć pewność, że zmiany będą nadal pomocne w udostępnieniu ich przez program.
 
-Rozważmy na przykład operację `PrepareTrialState(angles : Double[], register : Qubit[]) : Unit`.
-Komentarz dokumentacji powinien pomóc użytkownikowi dowiedzieć się, jak interpretować `angles`, jakie operacje założono na początkowy stan `register`, jaki ma wpływ na `register` i tak dalej.
+Rozważmy na przykład funkcję `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)`.
+Komentarz dokumentacji powinien pomóc użytkownikowi dowiedzieć się, jak interpretować `bits` i `oracle` i do czego służy funkcja.
 Każdą z tych informacji można dostarczyć do kompilatora Q # przez specjalną sekcję o nazwie promocji w komentarzu do dokumentacji.
-Na przykład `PrepareTrialState`można napisać coś w następujący sposób:
+Na przykład `ControlledOnBitString`można napisać coś w następujący sposób:
 
 ```qsharp
-/// # Summary
-/// Given a register of qubits, prepares them in a trial state by rotating each
-/// independently.
-///
-/// # Description
-/// This operation prepares the input register by performing a
-/// $Y$ rotation on each qubit by an angle given in `angles`.
-///
-/// # Input
-/// ## angles
-/// An array of parameters
-/// ## register
-/// A register of qubits initially in the $\ket{00\cdots0}$ state.
-///
-/// # Example
-/// To prepare an equal superposition $\ket{++\cdots+}$ over all input qubits:
-/// ```qsharp
-/// PrepareTrialState(ConstantArray(Length(register), PI() / 2.0), register);
-/// ```
-///
-/// # Remarks
-/// This operation is generally useful in the inner loop of an optimization
-/// algorithm.
-///
-/// # See Also
-/// - Microsoft.Quantum.Intrinsic.Ry
-operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
-    // ...
-}
+ /// # Summary
+ /// Returns a unitary operation that applies an oracle on the target register if the 
+ /// control register state corresponds to a specified bit mask.
+ ///
+ /// # Description
+ /// The output of this function is an operation that can be represented by a
+ /// unitary transformation $U$ such that
+ /// \begin{align}
+ ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
+ ///     \begin{cases}
+ ///         V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\
+ ///         \ket{\psi} & \textrm{otherwise}
+ ///     \end{cases},
+ /// \end{align}
+ /// where $V$ is a unitary transformation that represents the action of the
+ /// `oracle` operation.
+ ///
+ /// # Input
+ /// ## bits
+ /// The bit string to control the given unitary operation on.
+ /// ## oracle
+ /// The unitary operation to be applied on the target register.
+ ///
+ /// # Output
+ /// A unitary operation that applies `oracle` on the target register if the control 
+ /// register state corresponds to the bit mask `bits`.
+ ///
+ /// # Remarks
+ /// The length of `bits` and `controlRegister` must be equal.
+ ///
+ /// Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
+ /// is an operation that performs the following steps:
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits`;
+ /// * apply `Controlled oracle` to the control and target registers;
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits` again to return the control register to the original state.
+ ///
+ /// The output of the `Controlled` functor is a special case of `ControlledOnBitString` where `bits` is equal to `[true, ..., true]`.
+ ///
+ /// # Example
+ /// The following code snippets are equivalent:
+ /// ```qsharp
+ /// (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+ /// ```
+ /// and
+ /// ```qsharp
+ /// within {
+ ///     ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+ /// } apply {
+ ///     Controlled oracle(controlRegister, targetRegister);
+ /// }
+ /// ```
+ ///
+ /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
+ /// ```qsharp
+ /// using (register = Qubit[2]) {
+ ///     ApplyToEach(H, register);
+ ///     (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+ /// }
+ /// ```
+ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)
+ {
+     return ControlledOnBitStringImpl(bits, oracle, _, _);
+ }
 ```
+Możesz zobaczyć wyrenderowaną wersję kodu powyżej w [dokumentacji interfejsu API dla funkcji `ControlledOnBitString`](xref:microsoft.quantum.canon.controlledonbitstring).
 
 Oprócz ogólnych metod pisania dokumentacji, w opisie komentarzy dokumentacji interfejsu API pomocne jest zachowanie kilku rzeczy:
 

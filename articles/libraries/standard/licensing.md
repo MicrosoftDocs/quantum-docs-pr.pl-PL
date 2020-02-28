@@ -1,22 +1,22 @@
 ---
-title: Licencjonowanie OSS
-description: Standardowe biblioteki Q — Licencjonowanie i Współtworzenie
+title: Licencjonowanie Open Source dla QDK
+description: 'Dowiedz się więcej na temat licencjonowania na potrzeby używania i współtworzenia bibliotek Microsoft Q # Standard — Licencjonowanie i Współtworzenie.'
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 35e55f6741e5dcc79724f80f31d89937696d8554
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184393"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906206"
 ---
 # <a name="licensing"></a>Licencjonowanie #
 
 Zestaw Quantum Development Kit jest dostarczany z obszerną kolekcją funkcji i operacji typu open source licencjonowanych w ramach [licencji MIT](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
-Części biblioteki standardowej, które są przenośne między komputerami docelowymi, można uzyskać z repozytorium [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) w witrynie GitHub wraz z innymi bibliotekami, takimi jak i innymi bibliotekami, takimi jak [Biblioteka chemii Quantum ](xref:microsoft.quantum.chemistry.concepts.intro).
+Części biblioteki standardowej, które są przenośne między maszynami docelowymi, można uzyskać z repozytorium [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) w witrynie GitHub oraz z innymi bibliotekami, takimi jak i innymi bibliotekami, takimi jak [Biblioteka chemii Quantum](xref:microsoft.quantum.chemistry.concepts.intro).
 
 Zestaw Quantum Development Kit firmy Microsoft udostępnia także wyspecjalizowane funkcje biblioteki i operacje, które są licencjonowane w ramach [licencji badawczej firmy Microsoft](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
 Można je uzyskać z repozytorium [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) w serwisie GitHub.

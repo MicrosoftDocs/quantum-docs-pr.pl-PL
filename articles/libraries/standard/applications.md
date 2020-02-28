@@ -1,17 +1,17 @@
 ---
-title: Standardowe biblioteki Q — aplikacje | Microsoft Docs
-description: Standardowe biblioteki języka Q#
+title: Aplikacje w bibliotekach standardowych Q
+description: Dowiedz się więcej o dwóch podstawowych aplikacjach związanych z przetwarzaniem Quantum — hamiltonian symulacji i algorytmem wyszukiwania skró.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868972"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907226"
 ---
 # <a name="applications"></a>Aplikacje #
 
@@ -159,7 +159,7 @@ Oszacowanie fazy w ten sposób wyprowadza eigenvalues $e ^ {2 \ pi i s/r} $, z k
 
 Diagram obwodu dla wyszukiwania okresu Quantum to:
 
-![](./../../media/QPE.svg)
+![Diagram obwodu dla wyszukiwania okresu Quantum](./../../media/QPE.svg)
 
 W tym miejscu $2n $ qubits są inicjowane do $ \ket{0}$ i $n $ qubits są inicjowane do $ \ket{1}$.
 Czytelnik ponownie może się zastanawiać, dlaczego rejestr Quantum do przechowywania eigenstates został zainicjowany do $ \ket{1}$.

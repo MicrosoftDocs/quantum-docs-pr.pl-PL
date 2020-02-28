@@ -1,17 +1,17 @@
 ---
-title: Zaawansowane koncepcje dotyczące macierzy | Microsoft Docs
-description: Zaawansowane koncepcje macierzy
+title: Zaawansowane pojęcia dotyczące macierzy
+description: Więcej informacji na temat eigenvectors, eigenvalues i matryc wykładniczych, podstawowych narzędzi używanych do opisywania i symulowania algorytmów Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183764"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907583"
 ---
 # <a name="advanced-matrix-concepts"></a>Zaawansowane koncepcje macierzy #
 
@@ -27,7 +27,7 @@ Na przykład w przypadku macierzy tożsamości każdy wektor $v $ jest eigenvect
 
 Innym przykładem jest rozważenie $D [*macierzy ukośnej*](https://en.wikipedia.org/wiki/Diagonal_matrix) $, która ma tylko niezerowe wpisy na przekątnej:
 
-$ $ \begin{bmatrix} D_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & D_3 \end{bmatrix}.
+$ $ \begin{bmatrix} d_1 & 0 & 0 \\\\ 0 & d_2 & 0 \\\\ 0 & 0 & d_3 \end{bmatrix}.
 $$
 
 Wektory
@@ -36,10 +36,10 @@ $ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0
 
 są eigenvectors tej macierzy z eigenvalues $d _1 $, $d _2 $ i $d _3 $, odpowiednio. Jeśli $d _1 $, $d _2 $, i $d _3 $ to różne liczby, wówczas te wektory (i ich wielokrotność) są jedynym eigenvectors macierzy $D $. Ogólnie rzecz biorąc, w przypadku matrycy ukośnej można łatwo odczytywać eigenvalues i eigenvectors. Eigenvalues są wszystkie liczby wyświetlane na przekątnej, a ich odpowiednie eigenvectors to wektory jednostek z jednym wpisem równym $1 $, a pozostałe wpisy równe $0 $.
 
-Zwróć uwagę, że w powyższym przykładzie $D eigenvectors $ jest podstawą dla wektorów $3 $-wymiarowe. Podstawą jest zestaw wektorów, tak że każdy wektor może być zapisany jako liniowa kombinacja. Dokładniej, $v _1 $, $v _2 $, i $v _3 $ tworzą podstawę, jeśli dowolny wektor $v $ można napisać jako $v = A_1 v_1 + a_2 v_2 + a_3 v_3 $ dla niektórych liczb $a _1 $, $a _2 $ i $a _3 $.
+Zwróć uwagę, że w powyższym przykładzie $D eigenvectors $ jest podstawą dla wektorów $3 $-wymiarowe. Podstawą jest zestaw wektorów, tak że każdy wektor może być zapisany jako liniowa kombinacja. Dokładniej, $v _1 $, $v _2 $ i $v _3 $ tworzą podstawę, jeśli dowolny wektor $v $ można napisać jako $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ dla niektórych liczb $a _1 $, $a _2 $ i $a _3 $.
 
 Należy przypomnieć, że macierz hermitian (nazywana również własnym) jest złożoną jednostkową tablicą równą jej własnej złożonej sprzężonej, podczas gdy macierz jednostkowa to złożona macierz kwadratowa, której odwrotność jest równa jego złożonej sprzężonej.
-W przypadku hermitian i macierzy jednostkowych, które zasadniczo są jedynymi macierzami napotykanymi w ramach obliczeń opartych na usłudze Quantum, istnieje ogólny wynik, znany jako [*widmo theorem*](https://en.wikipedia.org/wiki/Spectral_theorem), które potwierdzają następujące kwestie: dla każdej hermitian lub macierzy jednostkowej $M $, istnieje $U jednostkowe $ to $M = U ^ \dagger D U $ dla niektórych przekątnych macierzy $D $. Ponadto, ukośne wpisy $D $ będą eigenvalues $M $.
+W przypadku hermitian i macierzy jednostkowych, które zasadniczo są jedynymi macierzami wykrytymi w ramach obliczeń opartych na usłudze Quantum, istnieje ogólny wynik, znany jako [*widmo theorem*](https://en.wikipedia.org/wiki/Spectral_theorem), które potwierdzają następujące: dla każdej Hermitianej lub macierzy jednostkowej $M $, istnieje $U jednostkowa $, która $M = u ^ \Dagger D u $ w przypadku niektórych przekątnych $D $. Ponadto, ukośne wpisy $D $ będą eigenvalues $M $.
 
 Wiemy już, jak obliczyć eigenvalues i eigenvectors macierzy ukośnej $D $. Korzystając z tej theorem, wiemy, że jeśli $v $ jest eigenvectorem $D $ z eigenvalue $c $, tj., $Dv = CV $, wówczas $U ^ \dagger v $ będzie eigenvector $M $ z eigenvalue $c $. Dzieje się tak, ponieważ
 

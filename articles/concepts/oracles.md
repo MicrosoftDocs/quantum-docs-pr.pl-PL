@@ -1,24 +1,24 @@
 ---
-title: Bazy danych Quantum Oracle | Microsoft Docs
-description: Bazy danych Quantum Oracle
+title: Wyrocznie kwantowe
+description: Dowiedz się, jak korzystać z i definiować bazy danych Quantum Oracle, czarne pola, które są używane jako dane wejściowe w innym algorytmie.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184716"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904931"
 ---
 # <a name="quantum-oracles"></a>Bazy danych Quantum Oracle
 
 Oracle $O $ jest operacją "Black Box", która jest używana jako dane wejściowe w innym algorytmie.
 Często takie operacje są definiowane przy użyciu klasycznej funkcji $f: \\{0, 1\\} ^ n \to \\{0, 1\\} ^ m $, które pobiera $n $-bitowy binarny dane wejściowe i tworzy $m $-bitowy binarne dane wyjściowe.
 W tym celu należy wziąć pod uwagę określone dane wejściowe danych binarnych $x = (x_{0}, x_{1}, \dots, x_ {n-1}) $.
-Możemy etykietować Stany qubit jako $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}} $.
+Możemy etykietować Stany qubit jako $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_ {n-1}} $.
 
 Możemy najpierw spróbować zdefiniować $O $, aby $O \ket{x} = \ket{f (x)} $, ale ma to kilka problemów.
 Po pierwsze, $f $ może mieć inny rozmiar danych wejściowych i wyjściowych ($n \ne m $), takie jak zastosowanie $O $ spowoduje zmianę liczby qubits w rejestrze.
@@ -43,16 +43,16 @@ Następuje to bezpośrednio od faktu, że $O $, podobnie jak wszystkie operacje 
 Rozważmy operację Hadamard, na przykład, która jest definiowana przez $H \ket{0} = \ket{+} $ i $H \ket{1} = \ket{-}$.
 Jeśli chcielibyśmy dowiedzieć się, jak $H $ działa na $ \ket{+} $, możemy użyć tego $H $ jest liniowy,
 
-$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ KET {+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
+$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
 \end{align} $ $
 
 W przypadku definiowania naszej bazy danych Oracle $O $ można w podobny sposób użyć, aby wszystkie Stany $ \ket{\psi} $ w $n + m $ qubits mogły być zapisywane jako
 
-$ $ \begin{align} \ket{\psi} & = \sum_{x \In \\{0, 1\\} ^ n, y \In \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \ket{y} \end{align} $ $
+$ $ \begin{align} \ket{\psi} & = \ sum_ {x \In \\{0, 1\\} ^ n, y \In \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \ket{y} \end{align} $ $
 
 gdzie $ \Alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ m \to \mathbb{C} $ reprezentuje współczynniki stanu $ \ket{\psi} $. Dział
 
-$ $ \begin{align} O \ket{\psi} & = O \sum_{x \In \\{0, 1\\} ^ n, y \In \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \ket{y} \\\\ & = \sum_{x \In \\{0 , 1\\} ^ n, t \In \\{0, 1\\} ^ m} \Alpha (x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x \In \\{0, 1\\} ^ n, y \In \\{0 , 1\\} ^ m} \Alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
+$ $ \begin{align} O \ket{\psi} & = O \ sum_ {x \In \\{0, 1\\} ^ n, y \In \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \ket{y} \\\\ & = \ sum_ {x \In \\{0, 1\\} ^ n, y \In \\{0, 1\\} ^ m} \Alpha (x, y) O \ket{x} \ket{y} \\\\ & = \ sum_ {x \In \\{0, 1\\} ^ n , y \In \\{0, 1\\} ^ m} \Alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
 \end{align} $ $
 
 ## <a name="phase-oracles"></a>Fazy Oracle
@@ -60,8 +60,8 @@ Alternatywnie możemy kodować $f $ do $O Oracle $ przez zastosowanie _fazy_ w o
 Na przykład możemy zdefiniować $O $ w taki sposób, aby $ $ \begin{align} O \ket{x} = (-1) ^ {f (x)} \ket{x}.
 \end{align} $ $ Jeśli faza Oracle działa na bieżąco z rejestrem w stanie wyliczenia $ \ket{x} $, to faza jest globalnym etapem i dlatego nie jest zauważalna.
 Jednak taka Oracle może być bardzo wydajnym zasobem, jeśli jest stosowana do nadpozycji lub jako kontrolowanej operacji.
-Rozważmy na przykład fazę orcale $O _F $ dla funkcji Single-qubit $f $.
-Następnie $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f ( 0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
+Rozważmy na przykład fazę orcale $O _f $ dla funkcji pojedynczej qubit $f $.
+Następnie $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
 \end{align} $ $
 
 Ogólnie rzecz biorąc, oba widoki rozwiązań firmy Oracle można rozszerzyć, aby reprezentować funkcje klasyczne, które zwracają liczby rzeczywiste, a nie tylko jeden bit.

@@ -1,17 +1,17 @@
 ---
-title: Wiele qubits | Microsoft Docs
-description: Wiele kubitów
+title: Wiele kubitów
+description: Dowiedz się, jak wykonywać operacje na co najmniej dwóch qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863220"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907549"
 ---
 # <a name="multiple-qubits"></a>Wiele Qubits
 
@@ -27,7 +27,7 @@ Te narzędzia są absolutnie niezbędne do zrozumienia zestawów bram, które s�
 
 ## <a name="representing-two-qubits"></a>Reprezentuje dwa Qubits
 Główną różnicą między jednym i dwuqubitowym stanem jest to, że dwa qubit Stany są cztery wymiarowe, a nie dwa wymiarowe.
-Wynika to z faktu, że podstawa obliczeniowa dla dwóch qubit Stanów jest tworzona przez produkty dwustronne z qubit Stanów.  Na przykład mamy \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
+Wynika to z faktu, że podstawa obliczeniowa dla dwóch qubit Stanów jest tworzona przez produkty dwustronne z qubit Stanów.  Na przykład mamy \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 Łatwiej jest zobaczyć, że bardziej ogólnie jest stan Quantum $n $ qubits jest reprezentowany przez wektor jednostki wymiaru $2 ^ n $ przy użyciu tej konstrukcji.  Wektor
@@ -59,7 +59,7 @@ $$
 
 Możliwe jest również zmierzenie tylko jednego qubita z dwuqubitnym stanem Quantum. W przypadkach, gdy mierzy się tylko jeden z qubits, wpływ pomiaru jest nieco różny, ponieważ cały stan nie jest zwijany do stanu podstawy, a raczej jest zwinięty tylko w jednym podsystemie.  Innymi słowy w takich przypadkach pomiary tylko jednego qubit zwija tylko jeden z podsystemów, ale nie wszystkich.  
 
-Aby to sprawdzić, należy rozważyć zmierzenie pierwszego qubitu tego stanu, który jest tworzony przez zastosowanie przekształcenia Hadamard $H $ na dwóch qubits początkowo ustawionych jako "0": $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ & 1 &-1 & \\1 \\ 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ End {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ End {bmatrix} \mapsto \begin{Cases}\Text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{Outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
+Aby to sprawdzić, należy rozważyć zmierzenie pierwszego qubitu tego stanu, który jest tworzony przez zastosowanie przekształcenia Hadamard $H $ na dwóch qubits początkowo ustawionych jako "0": $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ & 1 &-1 & \\1 \\ 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ End {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ End {bmatrix} \mapsto \begin{Cases}\Text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{Outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.\\\\
 $ $ Oba wyniki mają 50% prawdopodobieństwa wystąpienia.  Wynik o wartości 50% prawdopodobieństwa dla obu tych możliwości można zależeć od faktu, że początkowa wektora stanu Quantum jest niezmienna w przypadku wymiany $0 $ z $1 $ na pierwszej qubit.
 
 Reguła matematyczna służąca do mierzenia pierwszych lub sekund qubit jest prosta.  Jeśli możemy $e _k $ być $k ^ {\RM th} $ i pozwól $S $ być zestawem wszystkich $e _k $ w taki sposób, że qubit w danej sytuacji przyjmuje wartość $1 $ dla tej wartości $k $.  Na przykład jeśli interesuje Cię pomiar pierwszej qubit, $S $ będzie składać się z $e _2 \ equiv $10 i $e _3 \ equiv $11.  Podobnie, Jeśli interesuje Cię drugi qubit $S $ powinien składać się z $e _1 \ equiv $1 i $e _3 \equiv $11.  Następnie prawdopodobieństwo mierzenia wybranych qubit do $1 $ jest dla wektora stanu $ \psi $
@@ -103,15 +103,15 @@ Możemy również utworzyć bramy dwuqubitowe, stosując bramy jednoqubitowe na 
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-oraz
+i
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 
-odpowiednio do pierwszej i drugiej qubits jest to równoznaczne z zastosowaniem jednostki dwuqubitowej dostarczonej przez jej iloczyn dwuskładnikowy: $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} \otimes \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} = \begin{bmatrix} AE \ AF \ to \ \\\\ ce \ CF \ de \ DF \\\\ CG \ ch \ DG \ DH \end{bmatrix}. $ $, dzięki czemu możemy utworzyć bramę z dwoma qubitami, pobierając iloczyn dwukrotnego z bram o pojedynczej qubit. Niektóre przykłady bram z dwoma qubitmi obejmują $H \otimes H $, $X \otimes \boldone $ i $X \otimes Z $.
+odpowiednio do pierwszej i drugiej qubits jest to równoznaczne z zastosowaniem jednostki dwuqubitowej dostarczonej przez jej iloczyn dwuskładnikowy: $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} \otimes \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} = \begin{bmatrix} AE \ AF \ to \ \\\\ ce \ CF \ de \ DF \\\\ CG \ ch \ DG \ DH \end{bmatrix}. $ $, dzięki czemu możemy utworzyć bramę z dwoma qubitami, pobierając iloczyn dwukrotnego z bram o pojedynczej qubit.\\\\ Niektóre przykłady bram z dwoma qubitmi obejmują $H \otimes H $, $X \otimes \boldone $ i $X \otimes Z $.
 
 Należy pamiętać, że chociaż dwie bramy pojedynczej qubit definiują bramę dwuqubitową przez przejmowanie jej iloczynu, to nie jest spełniony. Nie wszystkie bramy dwuqubitowe mogą być napisywane jako iloczyn dwuskładnikowego bram pojedynczej qubit.  Taka Brama jest nazywana bramą *Entangling* . Przykładem bramy Entangling jest brama CNOT.
 
-Intuition za bramą typu kontrolowanego nie można uogólnionie do dowolnych bram.  Kontrolowana Brama ogólnie jest bramą, która działa jako tożsamość (IE nie ma żadnej akcji), chyba że określony qubit to $1 $.  Należy zauważyć, że kontrolowane jednostki są kontrolowane w tym przypadku na qubit z $x etykietą $ \Lambda\_x (U) $.  Przykładowo $ \ Lambda_0 (U) e\_{1}\otimes {\psi} = e\_{1}\otimes U {\psi} $ i $ \Lambda\_0 (U) e\_{0}\otimes {\psi} = e\_{0}\otimes{\psi} $, gdzie $e\_$0 i $e\_$1 to wektory obliczeniowe dla pojedynczego qubit odpowiadające wartościom $0 $ i $1 $.  Rozważmy na przykład następujące kontrolowane $Z $ bramę, a następnie można to wyrazić jako $ $ \Lambda\_0 (Z) = \begin{bmatrix}1 & 0 & 0 & 0\\\\0 & 1 & 0 & 0\\\\0 & 0 & 1 \operatorname{CNOT} (\boldone\otimes h).
+Intuition za bramą typu kontrolowanego nie można uogólnionie do dowolnych bram.  Kontrolowana Brama ogólnie jest bramą, która działa jako tożsamość (IE nie ma żadnej akcji), chyba że określony qubit to $1 $.  Należy zauważyć, że kontrolowane jednostki są kontrolowane w tym przypadku na qubit z $x etykietą $ \Lambda\_x (U) $.  Przykładowo $ \ Lambda_0 (U) e\_{1}\otimes {\psi} = e\_{1}\otimes U {\psi} $ i $ \Lambda\_0 (U) e\_{0}\otimes {\psi} = e\_{0}\otimes{\psi} $, gdzie $e\_$0 i $e\_$1 to wektory obliczeniowe dla pojedynczego qubit odpowiadające wartościom $0 $ i $1 $.  Rozważmy na przykład następujące kontrolowane $Z $ bramę, a następnie można to wyrazić jako $ $ \Lambda\_0 (Z) = \begin{bmatrix}1 & 0 & 0 & 0\\\\0 & 1 & 0 & 0\\\\0 & 0 & 1 \operatorname{CNOT} (\boldone\otimes h).\\\\
 $$
 
 Kompilowanie kontrolowanej unitaries w efektywny sposób jest ważnym wyzwaniem.  Najprostszym sposobem wdrożenia tego wymagania jest tworzenie bazy danych z kontrolowanymi wersjami bram i zastępowanie każdej bramy podstawowej w pierwotnej operacji jednostkowej z kontrolowanym odpowiednikiem.  Jest to często dość wasteful i sprytne Insights często można użyć do zastępowania kilku bram z kontrolowanymi wersjami, aby osiągnąć ten sam wpływ.  Z tego powodu firma Microsoft udostępnia w naszym środowisku algorytmie metodę kontroli lub zezwala użytkownikowi na definiowanie kontrolowanej wersji jednostki, jeśli znana jest zoptymalizowana wersja.

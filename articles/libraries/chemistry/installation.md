@@ -1,17 +1,17 @@
 ---
-title: Instalowanie i sprawdzanie poprawności biblioteki chemicznej | Microsoft Docs
-description: Instalowanie i sprawdzanie poprawności biblioteki chemicznej
+title: 'Instalacja i weryfikacja biblioteki Chemij Microsoft Q #'
+description: Dowiedz się, jak zainstalować bibliotekę chemii Microsoft Quantum i korzystać z niej z NWChem obliczeniową platformą chemiczną.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036478"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907362"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Instalowanie i sprawdzanie poprawności biblioteki chemicznej
 
@@ -21,25 +21,25 @@ Podobnie jak w przypadku innych pakietów NuGet, Dodawanie biblioteki chemii do 
 **Program Visual Studio 2019:** Jeśli używasz programu Visual Studio 2019, możesz dodać pakiety chemii Quantum przy użyciu Menedżera pakietów NuGet.
 Aby otworzyć Menedżera pakietów, kliknij prawym przyciskiem myszy projekt, do którego chcesz dodać bibliotekę chemii, i wybierz pozycję "Zarządzaj pakietami NuGet...", jak na poniższym zrzucie ekranu.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![Korzystanie z Menedżera pakietów NuGet w programie Visual Studio 2019](~/media/vs2017-nuget-manage-packages.png)
 
 Na karcie Przeglądaj Wyszukaj nazwę pakietu "Microsoft. Quantum. Chemia".
 
 > [!NOTE]
 > Upewnij się, że jest to znacznik "Uwzględnij wersję wstępną".
 
-![](~/media/vs2017-nuget-package-search.png)
+![Pole wyboru Uwzględnij wersję wstępną](~/media/vs2017-nuget-package-search.png)
 
 Spowoduje to wyświetlenie listy pakietów dostępnych do pobrania.
 Kliknij pozycję "Microsoft. Quantum. Chemia w okienku po lewej stronie, wybierz najnowszą wersję wstępną w okienku po prawej stronie, a następnie kliknij pozycję" Zainstaluj ":
 
-![](~/media/vs2017-nuget-select-chem.png)
+![Zainstaluj najnowszy pakiet Microsoft. Quantum. chemii](~/media/vs2017-nuget-select-chem.png)
 
 Aby uzyskać więcej informacji, zobacz [Przewodnik po interfejsie użytkownika Menedżera pakietów](https://docs.microsoft.com/nuget/tools/package-manager-ui).
 
 Alternatywnie można użyć konsoli Menedżera pakietów, aby dodać bibliotekę chemii Quantum do projektu za pomocą interfejsu wiersza polecenia.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![Korzystanie z konsoli Menedżera pakietów z poziomu wiersza polecenia](~/media/vs2017-nuget-console-menu.png)
 
 W konsoli Menedżera pakietów Uruchom następujące polecenie:
 

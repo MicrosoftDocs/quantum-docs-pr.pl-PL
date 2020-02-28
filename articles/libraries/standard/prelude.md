@@ -1,17 +1,17 @@
 ---
-title: Standardowe biblioteki Q-Preludium | Microsoft Docs
-description: 'Standardowe biblioteki Q # — Preludium'
+title: Wewnętrzne operacje i funkcje w QDK
+description: Dowiedz się więcej na temat wewnętrznych operacji i funkcji w QDK, w tym funkcji klasycznych, operacji związanych z jednostką, rotacją i pomiarem.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183237"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907209"
 ---
 # <a name="the-prelude"></a>Preludium #
 
@@ -27,7 +27,7 @@ Operacje wewnętrzne zdefiniowane w bibliotece standardowej w przybliżeniu nale
 - Operacje implementujące pomiary.
 
 Ze względu na to, że zestaw bram Clifford + $T $ jest [uniwersalny](xref:microsoft.quantum.concepts.multiple-qubits) dla przetwarzania Quantum, te operacje wystarczą do około wdrożenia dowolnego algorytmu Quantum w ramach niewielkiego błędu.
-Dostarczając również rotacje, program Q # umożliwia programistom współpracę w ramach jednej biblioteki bramy qubit i CNOT. Ta biblioteka jest znacznie łatwiejsza do zaopiniowania, ponieważ nie wymaga od programisty bezpośredniego wyrażania dekompozycji Clifford + $T $ i ponieważ istnieją wysoce wydajne metody kompilowania jednego qubit unitaries do Clifford i $T $ bramy (patrz [tutaj](xref:microsoft.quantum.more-information) Więcej informacji.
+Dostarczając również rotacje, program Q # umożliwia programistom współpracę w ramach jednej biblioteki bramy qubit i CNOT. Ta biblioteka jest znacznie łatwiejsza, ponieważ nie wymaga od programisty bezpośredniego wyrażenia Clifford + $T $ dekompozycji i ponieważ istnieją wysoce wydajne metody kompilowania jednego qubit unitaries do Clifford i $T $ (zobacz [tutaj](xref:microsoft.quantum.more-information) , aby uzyskać więcej informacji).
 
 Tam, gdzie to możliwe, operacje zdefiniowane w Preludium, które działają na qubits zezwala na stosowanie wariantu `Controlled`, w taki sposób, że maszyna docelowa wykona odpowiednią dekompozycję.
 
@@ -101,7 +101,7 @@ Ma `(Qubit => Unit is Adj + Ctl)`podpisu i odpowiada jednemu z jednostek qubit:
 Oprócz powyższych operacji Pauli i Clifford, Q # Preludium oferuje różne sposoby wyrażania rotacji.
 Zgodnie z opisem w [operacjach pojedynczego qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), możliwość rotacji jest niezwykle ważna dla algorytmów Quantum.
 
-Zaczynamy od tego, że możemy wyrazić jakąkolwiek operację qubit za pomocą bram $H $ i $T $, gdzie $H $ jest operacją Hadamard i gdzie \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: Ta funkcja obecnie używa czterech z nich. /Swagger/docs/v1.
+Zaczynamy od tego, że możemy wyrazić jakąkolwiek operację qubit za pomocą bram $H $ i $T $, gdzie $H $ jest operacją Hadamard i gdzie \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME
 0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} to jest pierwiastek kwadratowy operacji <xref:microsoft.quantum.intrinsic.s>, taki, który $T ^ 2 = S $.
 Brama $T $ jest zaimplementowana przez operację <xref:microsoft.quantum.intrinsic.t> i ma `(Qubit => Unit is Adj + Ctl)`sygnatury, co oznacza, że jest operacją jednostkową na jednym qubit.
 
@@ -155,7 +155,7 @@ Poniżej przedstawiono przykład operacji obrotu (wokół osi Pauli $Z $, w tym 
 
 Oprócz operacji pojedynczych qubit, Preludium także definiuje kilka operacji qubit.
 
-Najpierw operacja <xref:microsoft.quantum.intrinsic.cnot> wykonuje standardową bramę sterowaną`NOT`, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}.
+Najpierw operacja <xref:microsoft.quantum.intrinsic.cnot> wykonuje standardowe, kontrolowane bramy`NOT`, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & \end{bmatrix}.
 \end{Equation} ma sygnaturę `((Qubit, Qubit) => Unit is Adj + Ctl)`, co oznacza, że $ \operatorname{CNOT} $ działa unitarily na dwóch poszczególnych qubitsach.
 `CNOT(q1, q2)` jest taka sama jak `(Controlled X)([q1], q2)`.
 Ponieważ `Controlled` Funktor umożliwia kontrolę nad rejestrem, używamy literału Array `[q1]`, aby wskazać, że chcemy tylko jedną kontrolkę.
@@ -176,7 +176,7 @@ Oznacza to, że implementuje macierz jednostkową \begin{Equation} \operatorname
 > Brama przełączenia kontrolowanego, znana także jako brama Fredkin, jest wystarczająco wydajna, aby obejmowała wszystkie klasyczne obliczenia.
 
 Na koniec Preludium zawiera dwie operacje do reprezentowania wykładniczych operatorów wieloqubitowych Pauli.
-Operacja <xref:microsoft.quantum.intrinsic.exp> wykonuje rotację na podstawie iloczynu dwuetapowego macierzy Pauli, reprezentowanego przez wieloqubitd \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \sigma_0 \otimes \sigma_1 \otimes \ cdots \otimes \sigma_n \right), \end{Equation} gdzie $ \vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n) $ to sekwencja jednoqubitych operatorów Pauli i gdzie $ \phi $ jest kątem.
+Operacja <xref:microsoft.quantum.intrinsic.exp> wykonuje rotację na podstawie iloczynu Pauli macierzy. reprezentowane przez wieloqubitne \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), \end{Equation} WHERE $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ jest sekwencją operatorów pojedyncze-qubit Pauli i gdzie $ \phi $ jest kątem.
 Obrót `Exp` reprezentuje $ \vec{\sigma} $ jako tablicę elementów `Pauli`, tak że ma `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`sygnatur.
 
 Operacja <xref:microsoft.quantum.intrinsic.expfrac> wykonuje ten sam obrót przy użyciu notacji dyadic ułamków opisanej powyżej.
@@ -204,8 +204,8 @@ Jeśli macierz Pauli i tablica qubit mają różne długości, operacja kończy 
 Należy zauważyć, że wspólne pomiary nie są takie same jak pomiary każdego qubit indywidualnie.
 Rozważmy na przykład stan $ \ket{11} = \ket{1} \otimes \ket{1} = X\otimes X \ket{00}$.
 Pomiary $Z _0 $ i $Z _1 $ osobno, uzyskujemy wyniki $r _0 = $1 i $r _1 = $1.
-Pomiar $Z _0 Z_1 $, ale otrzymamy pojedynczy wynik $r _ {\textrm{joint}} = $0, co oznacza, że para $ \ket{11}$ jest dodatnia.
-Umieść w inny sposób: $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $.
+Pomiar $Z _0 Z_1 $, jednak pobieramy pojedynczy wynik $r _ {\textrm{joint}}d = $0, co oznacza, że para $ \ket{11}$ jest dodatnia.
+Umieść inaczej: $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $.
 Ze względu na to, że pouczymy się *tylko* o parzystości z tego pomiaru, wszystkie informacje o Quantum, które są reprezentowane w rozłożeniu między 2 2 qubit Stanów pozytywnej parzystości, $ \ket{00}$ i $ \ket{11}$, są zachowywane.
 Ta właściwość będzie istotna w przyszłości, ponieważ omawiamy korekcję błędów.
 

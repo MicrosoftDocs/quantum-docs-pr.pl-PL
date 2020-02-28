@@ -1,24 +1,24 @@
 ---
-title: Szacowania zasobów zestawu Quantum Development Kit | Microsoft Docs
-description: Omówienie zasobów zestawu Quantum Development Kit firmy Microsoft szacowania
+title: Szacowania zasobów zestawu Quantum Development Kit
+description: 'Dowiedz się więcej o zasobach szacowania, które szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze z systemem Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820865"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907056"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>Maszyna docelowa ResourcesEstimator
 
 Jak nazywa się, `ResourcesEstimator` szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze Quantum.
 Jest to realizowane przez wykonywanie operacji Quantum bez faktycznego symulowania stanu komputera Quantum; z tego powodu można oszacować zasoby dla operacji Q #, które używają tysięcy qubits.
 
-## <a name="usage"></a>Użycie
+## <a name="usage"></a>Sposób użycia
 
 `ResourcesEstimator` jest tylko innym typem maszyny docelowej, dlatego może służyć do uruchamiania dowolnej operacji Q #. 
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 Gdy `ResourcesEstimator` napotka `AssertProb`, nastąpi zapisanie `PauliZ` pomiaru na `source` i `q` należy otrzymać wynik `Zero` z prawdopodobieństwem 0,5. Gdy zostanie on wykonany `M` później, będzie znajdował zarejestrowane wartości prawdopodobieństwa wyniku i `M` zwróci `Zero` lub `One` z prawdopodobieństwem 0,5.
 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 `ResourcesEstimator` jest tworzona na podstawie [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)komputerów z systemem Quantum, który zapewnia bogatszy zestaw metryk, możliwość raportowania metryk w pełnym wywołaniu grafu i funkcji, takich jak [odrębne dane wejściowe](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) , aby ułatwić znajdowanie usterek w programach Q #. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 

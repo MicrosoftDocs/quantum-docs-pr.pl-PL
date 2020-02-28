@@ -1,17 +1,17 @@
 ---
-title: Struktura plików | Microsoft Docs
-description: 'Struktura pliku Q #'
+title: 'Struktura pliku Q #'
+description: 'Dowiedz się, jak struktury przestrzeni nazw, operacji, funkcji i deklaracji typu zdefiniowanego przez użytkownika w programie Q # programy i biblioteki.'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821086"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907396"
 ---
 # <a name="file-structure"></a>Struktura plików
 
@@ -66,7 +66,7 @@ W szczególności nie istnieje Automatyczna konwersja między wartościami dwóc
 
 Deklaracja typu zdefiniowanego przez użytkownika składa się ze słowa kluczowego `newtype`, po którym następuje nazwa typu zdefiniowanego przez użytkownika, `=`, prawidłowej specyfikacji typu i kończącego się średnika.
 
-Przykład:
+Na przykład:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -90,7 +90,7 @@ Treść deklaracji operacji obejmuje domyślną implementację lub listę specja
 Implementację domyślną można określić bezpośrednio w deklaracji, jeśli tylko implementacja specjalizacji treści domyślnej musi być określona jawnie.
 W takim przypadku Adnotacja z charakterystyką operacji w deklaracji jest przydatna do zapewnienia, że kompilator automatycznie generuje inne specjalizacje na podstawie domyślnej implementacji. 
 
-Na przykład: 
+Na przykład 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 

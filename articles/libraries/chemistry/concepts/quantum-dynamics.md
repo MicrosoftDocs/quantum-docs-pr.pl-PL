@@ -1,17 +1,17 @@
 ---
-title: Quantum Dynamics | Microsoft Docs
-description: Dokumentacja koncepcji systemu Quantum Dynamics
+title: Dynamics Quantum
+description: Poznaj podobieństwa i różnice między elementami Quantum Dynamics i klasyczną dynamiką.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185345"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904489"
 ---
 # <a name="quantum-dynamics"></a>Dynamics Quantum
 
@@ -22,7 +22,7 @@ Przed kontynuowaniem wyjaśniania systemu Quantum Dynamics warto wykonać krok z
 W klasycznej usłudze Dynamics wiemy, że firma Microsoft wie od firmy Kowalski, że pozycja cząsteczek powstała w oparciu o $F (x, t) = No= m\frac {\ DD ^ 2} {\dd t ^ 2} {x} (t) $, gdzie $F (x, t) $ to siła, $m $ jest masą, a $a $ to przyspieszenie.
 Następnie, uwzględniając początkową pozycję $x (0) $, czas ewolucji $t $, i opis sił, które działają na cząsteczek, możemy znaleźć $x (t) $, rozwiązując równanie różnicowe określone przez równania Kowalski dla $x (t) $.
 Określenie sił w ten sposób jest nieco bólu.
-Dlatego często wyrażamy siły pod względem potencjalnej energii systemu, która daje nam $-\partial_x V (x, t) = m \frac{\dd ^ 2} {\dd t ^ 2} {x} (t) $.
+Dlatego często wyrażamy siły pod względem potencjalnej energii systemu, która daje nam $-\ partial_x V (x, t) = m \frac{\dd ^ 2} {\dd t ^ 2} {x} (t) $.
 W tym przypadku, w przypadku cząsteczek, dynamika systemu jest określana tylko przez potencjalną funkcję energetyczną, masę cząsteczek i czas ewolucji.
 
 Szerszy język jest często wprowadzany dla klasycznej usługi Dynamics, która wykracza poza $F = ma $.
@@ -30,7 +30,7 @@ Jednym sformułowaniem, który jest szczególnie przydatny w Mechanics Quantum, 
 W hamiltonian Mechanics, całkowita energia systemu i (uogólnione) pozycje i momentu, dają wszystkie informacje, które są konieczne do opisania ruchu dowolnego klasycznego obiektu.
 W celu $f (x, p, t) $ to niektóre funkcje uogólnionych pozycji $x $ i $p $ w systemie i let $H (x, p, t) $ to funkcja hamiltonian.
 Na przykład, jeśli przyjmujemy $f (x, p, t) = x (t) $ i $H (x, p, t) = p ^ 2 (t)/2m-V (x, t) $, odzyskamy powyższe przypadki newtonian Dynamics.
-Ogólnie rzecz biorąc, \begin{align} \frac{d}{DT} f & = \partial_t f-(\partial_x H\partial_p f + \partial_p H\partial_x f)\\\\ & \defeq \partial_t f + \\{f, H\\}.
+Ogólnie rzecz biorąc, \begin{align} \frac{d}{DT} f & = \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f)\\\\ & \defeq \ partial_t f + \\{f, H\\}.
 \end{align} tutaj $\\{f, H\\} $ jest nazywana [nawiasem Poissona](https://en.wikipedia.org/wiki/Poisson_bracket) i pojawia się ogólnie w klasycznej dynamiki ze względu na rolę centralną, którą odgrywa w definiowaniu dynamiki.
 
 Dynamics Quantum można opisać przy użyciu dokładnie tego samego języka.
@@ -47,13 +47,13 @@ Gwarantuje to, że eigenvalues macierzy są prawdziwe; warunek, który nakładam
 Podobnie jak analogiczne pozycje i pędu w Mechanics Quantum muszą zostać zastąpione przez operatory, funkcja hamiltonian musi być w podobny sposób zastępowana przez operator.
 Na przykład w przypadku cząstki w wolnym miejscu mamy $H (x, p) = p ^ 2/2 mln $ w ramach Quantum Mechanics operator hamiltonian $ \hat{H} $ to $ \hat{H} = \hat{p} ^ 2/2 mln $, gdzie $ \hat{p} $ jest operatorem h.
 Z tej perspektywy przechodzenie z klasycznego do Quantum Dynamics tylko obejmuje zastąpienie zmiennych używanych w zwykłych Dynamics z operatorami.
-Po zbudowaniu operatora hamiltonian przez przetłumaczenie zwykłej klasycznej hamiltonian na język Quantum, możemy przedstawić dynamikę dowolnej ilości mechanicznej jednostki Quantum (tj. operatora Quantum mechaniczne) $ \hat{f} (t) $ Via \begin{ align} \frac{d}{DT} \hat{f} = \partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} gdzie $ [f, H] = fH-HF $ jest znany jako commutator.
+Po zbudowaniu operatora hamiltonian przez przetłumaczenie zwykłej klasycznej hamiltonian na język Quantum, możemy przedstawić dynamikę dowolnej ilości mechanicznej jednostki Quantum (tj. operatora Quantum mechaniczne) $ \hat{f} (t) $ Via \begin{ align} \frac{d}{DT} \hat{f} = \ partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} WHERE $ [f, H] = fH-HF $ jest znany jako commutator.
 To wyrażenie jest dokładnie takie samo jak w przypadku klasycznego wyrażenia podanego powyżej z różnicą, że w nawiasie Poissona $\\{f, H\\} $ jest zastępowana commutator między $f $ i $H $.
 Ten proces wykonywania klasycznej hamiltonian i używania go do znajdowania hamiltonian Quantum jest znany w Quantum żargon jako podziału kanoniczny.
 
 Jakie operatory $f $ są najbardziej interesujące?  Odpowiedź na ten temat zależy od problemu, który ma zostać rozwiązany.
 Prawdopodobnie najbardziej przydatną ilością do znalezienia jest operator stanu Quantum, który został omówiony w poprzedniej dokumentacji koncepcyjnej, można użyć do wyodrębnienia wszystkich informacji o usłudze Dynamics.
-Po wykonaniu tej czynności (i uproszczeniu wyniku w przypadku, gdy ma on czysty stan), znaleziono Schrödinger równanie dla stanu Quantum \begin{align} i\partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)}.
+Po wykonaniu tej czynności (i uproszczeniu wyniku w przypadku, gdy ma on czysty stan), znaleziono Schrödinger równanie dla stanu Quantum \begin{align} i \ partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)}.
 \end{align}
 
 To równanie, ale być może mniej intuicyjne niż powyższy, daje, że najprostsze wyrażenie dla zrozumienie, jak symulować dynamikę Quantum na komputerze Quantum lub klasycznym.

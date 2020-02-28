@@ -1,24 +1,24 @@
 ---
-title: Symmetries całk molekularnych | Microsoft Docs
-description: Symmetries ze koncepcyjną dokumentacją cząsteczkową
+title: Symmetries całk molekularnych
+description: 'Dowiedz się więcej o używaniu typu Q # OrbitalIntegral do wyliczania symmetries molekularnych.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442383"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904472"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries całk molekularnych
 
-Podstawą symetrii Coulomb — hamiltonian, która jest hamiltonian podaną w [modelach Quantum dla systemów elektronicznych](xref:microsoft.quantum.chemistry.concepts.quantummodels), która opisuje Electrons, ze sobą współdziałanie elektrycznie i z jądrem, prowadzi do kilku symmetries, które mogą być wykorzystane do skompresowania warunków w hamiltonian.
-Ogólnie rzecz biorąc, jeśli nie zostaną wykonane żadne dalsze założenia dotyczące funkcji podstawy $ \psi_j $, mamy tylko, że \begin{Equation} H_ {pqrs} = H_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation}, które mogą być od siebie od całek w [modelach Quantum dla Systemy elektroniczne](xref:microsoft.quantum.chemistry.concepts.quantummodels) z uwzględnieniem, że ich wartości pozostają takie same, jeśli $p, q $ i $r, s $ są zamiennie zmieniane z ochrony.
+Nieodłączne symetria Coulomb — hamiltonian, który jest Hamiltoniany w [modelach Quantum dla systemów elektronicznych](xref:microsoft.quantum.chemistry.concepts.quantummodels), który opisuje Electrons współdziałanie elektrycznie ze sobą i z jądrem, prowadzi do kilku symmetries, które mogą być wykorzystywane do kompresowania warunków w hamiltonian.
+Ogólnie rzecz biorąc, jeśli nie zostaną wykonane żadne dalsze założenia dotyczące funkcji podstawy $ \ psi_j $, mamy tylko ten \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation}, które mogą być od siebie dostępne od całkowitych [modeli Quantum dla systemów elektronicznych](xref:microsoft.quantum.chemistry.concepts.quantummodels) , z uwzględnieniem, że ich wartości pozostają takie same, jeśli $p, q $ i $r, s $, są zamiennie zmieniane od firmy.
 
-Jeśli założono, że orbitals jest prawdziwe (jak w przypadku podstaw dwukierunkowych), możemy jeszcze \begin{Equation} H_ {pqrs} = H_ {qpsr} = H_ {srqp} = H_ {rspq} = H_ {rqps} = H_ {psrq} = H_ {} SPQR {★} H_: qrsp} .\tag równanie} uwzględniając takie założenia, można użyć powyższej symmetries, aby zmniejszyć ilość danych potrzebnych do przechowywania elementów macierzy hamiltonian przez współczynnik $8 $; Chociaż taka metoda sprawia, że importowanie danych jest w spójny sposób nieco trudniejsze.
+Jeśli założono, że orbitals jest wartością rzeczywistą (jak dla podstaw dwukierunkowych), możemy jeszcze \begin{Equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = H_ {rqps} psrq {h_} SPQR: qrsp} .\tag równanie} uwzględniając takie założenia, można użyć powyższej symmetries, aby zmniejszyć ilość danych potrzebnych do przechowywania elementów macierzy hamiltonian przez współczynnik $8 $; Chociaż taka metoda sprawia, że importowanie danych jest w spójny sposób nieco trudniejsze.
 Na szczęście Biblioteka symulacji hamiltonian ma podprocedury, których można użyć do zaimportowania plików całkowitych z [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) lub bezpośrednio z poziomu [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
 
 Dwuczęściowe całki molekularne (tj. $h\_{pq} $ i $h\_{pqrs} $ terms), takich jak te, są reprezentowane przy użyciu typu `OrbitalIntegral`, który zapewnia wiele przydatnych funkcji do wyrażania tego symetrii.

@@ -1,17 +1,17 @@
 ---
-title: Uzyskiwanie szacunków poziomu energii | Microsoft Docs
-description: Uzyskiwanie dokumentów szacunków poziomu energii
+title: Uzyskiwanie szacunkowych poziomów energii
+description: 'Zapoznaj się z przykładowym programem Q #, który szacuje wartości poziomu energii wodoru.'
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442580"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907311"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Uzyskiwanie szacunkowych poziomów energii
 Oszacowanie wartości poziomów energii jest jednym z głównych zastosowań chemii Quantum. W tym miejscu tworzymy konspekt, w jaki sposób można wykonać w przypadku kanonicznego przykładu wodoru. Przykład przywoływany w tej sekcji jest `MolecularHydrogen` w repozytorium próbek chemii. Przykładem bardziej wizualizacji, który wykreśla dane wyjściowe, jest Demonstracja `MolecularHydrogenGUI`.

@@ -1,16 +1,17 @@
 ---
 title: Broombridge — schemat chemii Quantum
+description: Przegląd schematu chemii Broombridge Quantum używany do modelowania rzeczywistych problemów biochemicznych z Microsoft Quantum Development Kit.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185328"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907821"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Schemat chemii Quantum Broombridge # 
 
@@ -23,9 +24,8 @@ YAML, Broombridge to strukturalna, czytelna i przez człowieka Metoda reprezento
 - Stany terenowe i przyjemnością mogą być prezentowane przy użyciu sekwencji tworzenia.
 - Można określić górne i dolne granice poziomów energii.
 
-Format danych można generować z NWChem z łatwością prostoty: wiele metod jest dostępnych w zakresie od pełnej instalacji NWChem do uruchamiania pokładów chemii, takich jak podane [tutaj](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) i wyjściowe Broombridge w ramach przebiegu, na platformie Docker obraz NWchem, który może być również używany do generowania Broombridge z pokładów chemicznych. Na koniec Metoda wizualizacji, która pozwala szybko rozpocząć pracę z chemią obliczeniową bez konieczności instalowania jakiegokolwiek oprogramowania chemicznego, jest dostarczany przez interfejs [strzałek EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) do NWChem. 
+Format danych może być generowany z NWChem z bezproblemową prostotą: różne metody są dostępne w zakresie od pełnej instalacji NWChem do uruchamiania pokładów chemii, takich jak podane [tutaj](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) i wyjściowe Broombridge w ramach przebiegu, na podstawie obrazu platformy Docker NWChem, który może być również używany do generowania Broombridge z pokładów chemicznych. Na koniec Metoda wizualizacji, która pozwala szybko rozpocząć pracę z chemią obliczeniową bez konieczności instalowania jakiegokolwiek oprogramowania chemicznego, jest dostarczany przez interfejs [strzałek EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) do NWChem. 
 
-Na wysokim poziomie współpraca między NWChem i Microsoft Quantum Development Kit można wizualizować w następujący sposób: ![stos chemii](~/media/broombridge.png) niebiesko cieniowane pole reprezentuje schemat Broombridge, różne szare pola reprezentują inne wewnętrzne reprezentacje danych, które zostały wybrane do reprezentowania i przetwarzania algorytmów Quantum dla chemii obliczeniowej na podstawie rzeczywistych problemów biochemicznych. 
+Na wysokim poziomie współpraca między NWChem i Microsoft Quantum Development Kit mogą być wizualizowane w następujący sposób: ![stos chemii](~/media/broombridge.png) niebiesko cieniowane pole reprezentuje schemat Broombridge, różne wyszarzone pola reprezentują inne wewnętrzne reprezentacje danych, które zostały wybrane do reprezentowania i przetwarzania algorytmów Quantum dla chemii obliczeniowej na podstawie rzeczywistych problemów chemicznych. 
 
 W [tym miejscu](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)są podane liczne reprezentacje chemiczne zdefiniowane przy użyciu schematu Broombridge.
-

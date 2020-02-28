@@ -1,17 +1,17 @@
 ---
-title: 'Umieszczenie ich razem — techniki Q # | Microsoft Docs'
-description: 'Umieszczenie ich razem — techniki Q #'
+title: 'Techniki Q # — umieszczanie ich razem'
+description: 'Zapoznaj się z podstawowym programem Q #, który pokazuje teleportowanie Quantum.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820168"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906835"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Wszystkie razem: teleportowanie #
 Wróćmy do przykładowego obwodu teleportowego zdefiniowanego w [obwodach Quantum](xref:microsoft.quantum.concepts.circuits). Zamierzamy użyć tego przykładu do zilustrowania koncepcji, które już poznasz. W przypadku osób, które nie znają tego teorii, należy zapoznać się z opisem teleportów Quantum, a następnie wskazówki dotyczące implementacji kodu w Q #. 

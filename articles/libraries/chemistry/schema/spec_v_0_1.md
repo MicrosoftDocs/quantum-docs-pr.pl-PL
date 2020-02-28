@@ -1,16 +1,17 @@
 ---
-title: Specyfikacja schematu Broombridge
+title: Specyfikacja schematu Broombridge (ver 0,1)
+description: Szczegóły specyfikacji dla schematu chemii Broombridge Quantum v dla biblioteki chemii Microsoft Quantum.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
-ms.openlocfilehash: a950e04d44e5de8091b034214258d2c2fa663f58
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 618892b6cb01855d17522b06e47f72f68595ab38
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185362"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906427"
 ---
 # <a name="broombridge-specification-v01"></a>Specyfikacja Broombridge v 0,1 #
 
@@ -129,20 +130,20 @@ Wartość `metadata` może być pustym obiektem JSON (czyli `{}`) lub może zawi
 
 ### <a name="hamiltonian-section"></a>Sekcja hamiltonian ###
 
-#### <a name="overview"></a>Przegląd ####
+#### <a name="overview"></a>Omówienie ####
 
 Ta sekcja jest informacyjna.
 
 Właściwość `hamiltonian` każdego obiektu zestawu całkowitego zawiera opis hamiltonian dla konkretnego problemu chemii Quantum przez wymienienie jednego z tych warunków i dwóch treści jako rozrzedzonych tablic liczb rzeczywistych.
 Operatory hamiltonian opisane przez każdy obiekt zestawu całkowitego przyjmują formularz
 
-$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \downarrow\\}} H\_\{IJ\} ^\{\dagger\}\_{i \sigma}\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} h\_{IJKL} a ^ \dagger\_{i , \sigma} ^ \dagger\_{k, \rho}\_{l, \rho} a\_{j, \sigma}, $ $
+$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \downarrow\\}} H\_\{IJ\} ^\{\dagger\}\_{i, \sigma}\_{j, \sigma} \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}}\_{IJKL} a ^ \dagger\_{i , \sigma} ^ \dagger\_{k, \rho}\_{l, \rho} a\_{j, \sigma}, $ $
 
 tutaj $h _ {IJKL} = (IJ | KL) $ w Konwencji Mulliken.
 
 W przypadku przejrzystości okres jednorazowy to
 
-$ $ H_ {IJ} = \int {\mathrm d} x \psi ^ *\_i (x) \left (\frac{1}{2}\nabla ^ 2 + \sum\_{A} \frac{Z\_A} {| x-x\_A |}  \right) \psi\_j (x), $ $
+$ $ h_ {IJ} = \int {\mathrm d} x \psi ^ *\_i (x) \left (\frac{1}{2}\nabla ^ 2 + \sum\_{A} \frac{Z\_A} {| x-x\_A |}  \right) \psi\_j (x), $ $
 
 i dwuletni okres jest
 
@@ -152,7 +153,7 @@ $$
 Jak wspomniano w opisie [właściwości`basis_set`](#basis-set-object) każdego elementu właściwości `integral_sets`, zdecydowanie jawnie założono, że używane funkcje podstawowe są wartościami rzeczywistymi.
 Pozwala to na użycie następujących symmetries między postanowieniami w celu skompresowania reprezentacji hamiltonian.
 
-$ $ H_ {IJKL} = H_ {ijlk} = H_ {jikl} = H_ {jilk} = H_ {klij} = H_ {klji} = H_ {lkij} = H_ {LKJI}.
+$ $ h_ {IJKL} = h_ {ijlk} = h_ {jikl} = h_ {jilk} = h_ {klij} = H_ {klji} = h_ {lkij} = h_ {LKJI}.
 $$
 
 
@@ -172,14 +173,14 @@ Ta sekcja jest normatywna.
 Właściwość `one_electron_integrals` obiektu hamiltonian musi być liczbą tablicy rozrzedzonej, której indeksy są dwoma liczbami całkowitymi i których wartości są liczbami.
 Każdy termin musi mieć indeksy `[i, j]` gdzie `i >= j`.
 
-> KORYGUJĄC Odzwierciedla to symetrię, która $h _ {IJ} = H_ {ji} $, która jest konsekwencją faktu, że hamiltonian to hermitian.
+> KORYGUJĄC Odzwierciedla to symetrię, która $h _ {IJ} = h_ {ji} $, która jest konsekwencją faktu, że hamiltonian to hermitian.
 
 
 ###### <a name="example"></a>Przykład ######
 
 Ta sekcja jest informacyjna.
 
-Następująca liczba macierzy rozrzedzonych reprezentuje hamiltonian $ $ H = \left (-5,0 (a ^\{\dagger\}\_{1 \uparrow}\_{1, \uparrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{1 , \downarrow}) + 0,17 (^\{\dagger\}\_{2, \uparrow}\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, \uparrow} + a ^\{\dagger\}\_{2 , \downarrow}\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow}\_{2, \downarrow}) \right)\\, \mathrm{Ha}.
+Następująca liczba macierzy rozrzedzonych reprezentuje hamiltonian $ $ H = \left (-5,0 (a ^\{\dagger\}\_{1, \uparrow}\_{1, \uparrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{1, \downarrow}) + 0,17 (a ^\{\dagger\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, \uparrow} + a ^\{\dagger\}\_{2 , \downarrow}\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow}\_{2, \downarrow}) \right)\\, \mathrm{Ha}.
 $$
 
 ```yaml
@@ -204,7 +205,7 @@ Każdy element wartości `two_electron_integrals` musi mieć cztery indeksy.
 
 Każda właściwość `two_electron_integrals` musi mieć Właściwość `index_convention`.
 Wartość właściwości `index_convention` musi być jedną z dozwolonych wartości wymienionych w tabeli 1.
-Jeśli wartość `index_convention` jest `mulliken`, a następnie dla każdego elementu `two_electron_integrals` liczby macierzy rozrzedzonych, parser ładujący dokument Broombridge musi utworzyć wystąpienie hamiltonian terminu równego operatorowi dwuskładnikowego, $h _ {i, j, k, l} a ^ \dagger_i a ^ \dagger_j a_k a_l $ , gdzie $i $, $j $, $k $, i $l $ muszą być liczbami całkowitymi w łącznym zakresie od 1 do liczby Electrons określonych przez właściwość `n_electrons` obiektu zestawu całkowitego i gdzie $h _ {i, j, k, l} $ jest elementem `[i, j, k, l, h(i, j, k, l)]` liczby tablic rozrzedzonych.
+Jeśli wartość `index_convention` jest `mulliken`, a następnie dla każdego elementu `two_electron_integrals` liczby macierzy rozrzedzonych, parser ładujący dokument Broombridge musi utworzyć wystąpienie hamiltonian terminu równego operatorowi dwuskładnikowego, $h _ {i, j, k, l} a ^ \ dagger_i a ^ \ dagger_j a_k a_l $, gdzie $i $, $j $, $k $, i $l $ muszą być liczbami całkowitymi w łącznym zakresie od 1 do liczby Electrons określonych przez właściwość `n_electrons` obiektu zestawu całkowitego i gdzie $h _ {i, j , k, l} $ jest elementem `[i, j, k, l, h(i, j, k, l)]` ilości tablicy rozrzedzonej.
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -232,7 +233,7 @@ Ta sekcja jest informacyjna.
 
 Poniższy obiekt Określa hamiltonian
 
-$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} \Biggr (1,6 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{6 , \sigma} ^ {\dagger}\_{1, \rho}\_{3, \rho}\_{2, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2, \rho} a\_{3 , \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho}\_{2 \rho}\_{3, \sigma} $ $ $ $-0,1 a ^ {\dagger}\_{3, \sigma} {{\dagger}\_{2, \rho} a\_{6, \rho}\_{1, \sigma}-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2 \rho}\_{1, \rho}\_{6, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho}\_{1, \sigma}-0,1 a ^ {\dagger}\_{2 , \sigma} ^ {\dagger}\_{3, \rho}\_{1, \rho}\_{6, \sigma}\Biggr\\), \textrm{Ha}.
+$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} \Biggr (1,6 a ^ {\dagger}\_{1, \sigma} ^ {\dagger}\_{1, \rho}\_{1, \rho}\_{1, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} \rho}\_{3, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} ^ {\dagger}\_{6, \rho} a\_{2, \rho} a\_{3, \sigma} $ $ $ $-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho}\_{1, \sigma}-0,1 a ^ {\dagger}\_{3 , \sigma} ^ {\dagger}\_{2, \rho}\_{1, \rho}\_{6, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho}\_{1, \rho}\_{6, \sigma}\Biggr)\\, \textrm{Ha}.\_\_
 $$
 
 ```yaml
@@ -269,7 +270,7 @@ Obiekt initial_state_suggestion określa początkowe Stany Quantum, które są i
 
 Każdy stan reprezentuje pozycję zajętej orbitals. Każdy obiekt stanu musi mieć Właściwość `label` zawierającą ciąg. Każdy obiekt stanu musi mieć Właściwość `superposition` zawierającą tablicę Stanów bazowych i ich nieznormalizowane amplitudy.
 
-Na przykład początkowy stan $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1 , \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0,2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0,1 | ^ 2 + | 0,2 | ^ 2}} \ket{0} $ $ reprezentowane przez
+Na przykład początkowy stan $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0,2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0,1 | ^ 2 + | 0,2 | ^ 2}} \ket{0} $ $ są reprezentowane naciskając
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
     - state:

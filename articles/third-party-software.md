@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software | Microsoft Docs
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software
+description: Microsoft Quantum Development Kit powiadomienia i informacje dotyczące oprogramowania innych firm.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Nie dodawaj ani nie edytuj słów kluczowych bez konsultacji z ekspertem SEO.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184376"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906818"
 ---
 # <a name="third-party-software-notices-and-information"></a>POWIADOMIENIA I INFORMACJE DOTYCZĄCE OPROGRAMOWANIA INNYCH FIRM
 
@@ -20,7 +20,7 @@ Ten plik jest oparty na materiałach lub zakupionych w nim z projektów wymienio
 
 1. YamlDotNet. podpisanej wersji 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. rozszerzalność. wykonywanie 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. rozszerzalność. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -39,7 +39,7 @@ Ten plik jest oparty na materiałach lub zakupionych w nim z projektów wymienio
 ---------------------------------------
 Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry i współautorzy
 
-Do każdej osoby, która uzyska kopię tego oprogramowania i skojarzonych z nim plików dokumentacji ("oprogramowanie"), nie ma uprawnień, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, Publikowanie, rozpowszechnianie, podjęcie licencji i/lub sprzedawanie kopii oprogramowania oraz Zezwalanie osobom, do których to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
+Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprogramowania i powiązane pliki dokumentacji ("oprogramowanie"). Aby zaradzić oprogramowaniu bez ograniczeń, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, publikowania, rozpowszechniania, podlicencji i/lub sprzedawania kopii oprogramowania, oraz do zezwalania osobom, które to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
 
 Powyższe informacje o prawach autorskich i informacje o uprawnieniach zostaną uwzględnione we wszystkich kopiach lub znaczących częściach oprogramowania.
 
@@ -180,7 +180,7 @@ Warunki "reprodukowanie", "reprodukcja", "" pochodne działania "i" dystrybucja 
 
 (A) przyznanie praw autorskich, które podlegają postanowieniom niniejszej licencji, w tym warunki i ograniczenia licencyjne w sekcji 3, każdy współautor przyzna Licencjobiorcy niewyłączną, ogólnoświatową i nieodpłatną licencję na prawa autorskie do odtworzenia swojego wkładu, przygotowania pochodne pracuje nad jego udziałem oraz dystrybuuje jego udział lub wszystkie utworzone przez Ciebie działania zależne.
 
-(B) przyznanie patentu — podlegające postanowieniom niniejszej licencji, w tym warunki i ograniczenia licencyjne w sekcji 3, każdy współautor przyzna Licencjobiorcy, w ramach licencjonowanych patentów licencję na korzystanie z nich, w przypadku których wykorzystano, wystawcy, sprzedaż, oferta sprzedaż, importowanie i/lub usuwanie w inny sposób jego udziału w oprogramowaniu lub programie zależnym od udziału w oprogramowaniu.
+(B) przyznanie patentu — podlegające postanowieniom tej licencji wraz z postanowieniami licencyjnymi i ograniczeniami w sekcji 3 każdy współautor udziela Licencjobiorcy niewyłącznej, ogólnoświatowej i nieodpłatnej licencji w ramach licencjonowanych patentów, aby móc wprowadzać, wykorzystywać, sprzedawać, oferować oferty do sprzedaży, importować i/lub w inny sposób zbywać swój udział w oprogramowaniu lub instrumentach zależnych od udziału w oprogramowaniu.
 
 3. Warunki i ograniczenia
 
@@ -192,7 +192,7 @@ Warunki "reprodukowanie", "reprodukcja", "" pochodne działania "i" dystrybucja 
 
 (D) w przypadku dystrybucji dowolnej części oprogramowania w postaci kodu źródłowego możesz to zrobić tylko w ramach tej licencji, dołączając pełną kopię tej licencji do dystrybucji. W przypadku dystrybucji dowolnej części oprogramowania w postaci skompilowanej lub w postaci kodu obiektu można to zrobić tylko w ramach licencji zgodnej z tą licencją.
 
-(E) oprogramowanie jest licencjonowane "w takiej postaci, w jakiej jest". Wszelkie ryzyko związane z korzystaniem z oprogramowania ponosi Licencjobiorca. Współautorzy nie udzielają żadnych wyraźnych rękojmi, gwarancji ani warunków. Licencjobiorca może mieć dodatkowe prawa konsumenta zgodnie z obowiązującym prawem lokalnym, którego nie można zmienić. W zakresie dozwolonym przez prawo, współautorzy nie wykluczają domniemanej rękojmi z tytułu wartości handlowej, przydatności do określonego celu oraz braku naruszenia.
+(E) oprogramowanie jest licencjonowane "w takiej postaci, w jakiej jest". Użytkownik ponosi ryzyko związane z jego używaniem. Współautorzy nie udzielają żadnych wyraźnych rękojmi, gwarancji ani warunków. Licencjobiorca może mieć dodatkowe prawa konsumenta zgodnie z obowiązującym prawem lokalnym, którego nie można zmienić. W zakresie dozwolonym przez prawo, współautorzy nie wykluczają domniemanej rękojmi z tytułu wartości handlowej, przydatności do określonego celu oraz braku naruszenia.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core — uwagi i informacje
 ---------------------------------------
@@ -201,7 +201,7 @@ Licencja MIT (MIT)
 Prawa autorskie (c) Microsoft Corporation.
 Wszelkie prawa zastrzeżone.
 
-Do każdej osoby, która uzyska kopię tego oprogramowania i skojarzonych z nim plików dokumentacji ("oprogramowanie"), nie ma uprawnień, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, Publikowanie, rozpowszechnianie, podjęcie licencji i/lub sprzedawanie kopii oprogramowania oraz Zezwalanie osobom, do których to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
+Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprogramowania i powiązane pliki dokumentacji ("oprogramowanie"). Aby zaradzić oprogramowaniu bez ograniczeń, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, publikowania, rozpowszechniania, podlicencji i/lub sprzedawania kopii oprogramowania, oraz do zezwalania osobom, które to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
 
 Powyższe informacje o prawach autorskich i informacje o uprawnieniach zostaną uwzględnione we wszystkich kopiach lub znaczących częściach oprogramowania.
 
@@ -213,7 +213,7 @@ Licencja MIT (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
-Do każdej osoby, która uzyska kopię tego oprogramowania i skojarzonych z nim plików dokumentacji ("oprogramowanie"), nie ma uprawnień, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, Publikowanie, rozpowszechnianie, podjęcie licencji i/lub sprzedawanie kopii oprogramowania oraz Zezwalanie osobom, do których to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
+Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprogramowania i powiązane pliki dokumentacji ("oprogramowanie"). Aby zaradzić oprogramowaniu bez ograniczeń, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, publikowania, rozpowszechniania, podlicencji i/lub sprzedawania kopii oprogramowania, oraz do zezwalania osobom, które to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
 
 Powyższe informacje o prawach autorskich i informacje o uprawnieniach zostaną uwzględnione we wszystkich kopiach lub znaczących częściach oprogramowania.
 
@@ -226,7 +226,7 @@ Licencja MIT (MIT)
 
 Copyright (c) 2012 Oystein Bjorke
 
-Do każdej osoby, która uzyska kopię tego oprogramowania i skojarzonych z nim plików dokumentacji ("oprogramowanie"), nie ma uprawnień, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, Publikowanie, rozpowszechnianie, podjęcie licencji i/lub sprzedawanie kopii oprogramowania oraz Zezwalanie osobom, do których to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
+Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprogramowania i powiązane pliki dokumentacji ("oprogramowanie"). Aby zaradzić oprogramowaniu bez ograniczeń, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, publikowania, rozpowszechniania, podlicencji i/lub sprzedawania kopii oprogramowania, oraz do zezwalania osobom, które to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
 
 Powyższe informacje o prawach autorskich i informacje o uprawnieniach zostaną uwzględnione we wszystkich kopiach lub znaczących częściach oprogramowania.
 
@@ -244,7 +244,7 @@ Redystrybucja i użycie w formularzach źródłowych i binarnych, z lub bez mody
 * Redystrybucje w postaci binarnej muszą odwzorować powyższe informacje o prawach autorskich, tę listę warunków oraz następujące oświadczenie dotyczące dokumentacji i/lub innych materiałów dostarczonych z dystrybucją.
 * Nazwy FsCheck i nazwiska współautorów mogą służyć do zatwierdzania lub promowania produktów pochodzących z tego oprogramowania bez konieczności wcześniejszego pisemnego zezwolenia.
 
-TO OPROGRAMOWANIE JEST DOSTARCZANE PRZEZ POSIADACZY PRAW AUTORSKICH I WSPÓŁAUTORÓW "AS IS" I WSZELKIE GWARANCJE EKSPRESOWE LUB DOMNIEMANE, W TYM, ALE NIE OGRANICZONE DO, DOMNIEMANE GWARANCJE WARTOŚCI HANDLOWEJ I PRZYDATNOŚCI DO OKREŚLONEGO CELU SĄ ODJMOWANE. W ŻADNYM WYPADKU WŁAŚCICIEL LUB WSPÓŁAUTORZY PRAW AUTORSKICH NIE PONOSI ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK SZKODY BEZPOŚREDNIE, POŚREDNIE, PRZYPADKOWE, SPECJALNE, RETORSYJNE LUB WYNIKOWE (W TYM, ALE NIE OGRANICZONE DO ZAKUPU LUB USŁUG ZAMIENNYCH). UTRATA UŻYCIA, DANE LUB ZYSKI; LUB PRZERWA DZIAŁAJĄCE W FIRMIE) JEDNAK I W JAKIEJKOLWIEK KARZE ODPOWIEDZIALNOŚCI, NIEZALEŻNIE OD TEGO, CZY JEST TO UMOWA, ŚCISŁA ODPOWIEDZIALNOŚĆ CZY NIEDOZWOLONE (W TYM ZANIEDBANIE LUB W INNY SPOSÓB) WYNIKAJĄCE Z KORZYSTANIA Z TEGO OPROGRAMOWANIA, NAWET W PRZYPADKU, GDY ZALECISZ TAKIE SZKODY.
+TO OPROGRAMOWANIE JEST DOSTARCZANE PRZEZ POSIADACZY I WSPÓŁPOSIADACZY PRAW AUTORSKICH W STANIE „TAKIM, JAKIM JEST” BEZ ŻADNYCH GWARANCJI, BEZPOŚREDNICH LUB DOMNIEMANYCH, W TYM M.IN. DOMNIEMANYCH GWARANCJI WARTOŚCI HANDLOWEJ ORAZ PRZYDATNOŚCI DO OKREŚLONEGO CELU. W ŻADNYM WYPADKU WŁAŚCICIEL LUB WSPÓŁAUTORZY PRAW AUTORSKICH NIE PONOSI ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK SZKODY BEZPOŚREDNIE, POŚREDNIE, PRZYPADKOWE, SPECJALNE, RETORSYJNE LUB WYNIKOWE (W TYM, ALE NIE OGRANICZONE DO ZAKUPU LUB USŁUG ZAMIENNYCH). UTRATA UŻYCIA, DANE LUB ZYSKI; LUB PRZERWA DZIAŁAJĄCE W FIRMIE) JEDNAK I W JAKIEJKOLWIEK KARZE ODPOWIEDZIALNOŚCI, NIEZALEŻNIE OD TEGO, CZY JEST TO UMOWA, ŚCISŁA ODPOWIEDZIALNOŚĆ CZY NIEDOZWOLONE (W TYM ZANIEDBANIE LUB W INNY SPOSÓB) WYNIKAJĄCE Z KORZYSTANIA Z TEGO OPROGRAMOWANIA, NAWET W PRZYPADKU, GDY ZALECISZ TAKIE SZKODY.
 
 ## <a name="argu-notices-and-information"></a>POWIADOMIENIA i informacje
 ---------------------------------------
@@ -252,7 +252,7 @@ Licencja MIT (MIT)
 
 Copyright (c) 2016 Eirik Tsarpalis
 
-Do każdej osoby, która uzyska kopię tego oprogramowania i skojarzonych z nim plików dokumentacji ("oprogramowanie"), nie ma uprawnień, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, Publikowanie, rozpowszechnianie, podjęcie licencji i/lub sprzedawanie kopii oprogramowania oraz Zezwalanie osobom, do których to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
+Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprogramowania i powiązane pliki dokumentacji ("oprogramowanie"). Aby zaradzić oprogramowaniu bez ograniczeń, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, publikowania, rozpowszechniania, podlicencji i/lub sprzedawania kopii oprogramowania, oraz do zezwalania osobom, które to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
 
 Powyższe informacje o prawach autorskich i informacje o uprawnieniach zostaną uwzględnione we wszystkich kopiach lub znaczących częściach oprogramowania.
 

@@ -1,21 +1,21 @@
 ---
-title: Korzystanie z biblioteki liczbowej | Microsoft Docs
-description: Korzystanie z biblioteki liczb
+title: 'Korzystanie z biblioteki liczbowej Microsoft Q #'
+description: Dowiedz się więcej o typach i operacjach dostępnych w bibliotece liczb Quantum firmy Microsoft.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821035"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907260"
 ---
 # <a name="using-the-numerics-library"></a>Korzystanie z biblioteki liczb
 
-## <a name="overview"></a>Przegląd
+## <a name="overview"></a>Omówienie
 
 Biblioteka liczbowa składa się z trzech składników
 
@@ -36,7 +36,7 @@ Biblioteka liczb obsługuje następujące typy:
 1. **`SignedLittleEndian`** : taka sama jak `LittleEndian`, z tą różnicą, że reprezentuje cyfrową liczbę całkowitą przechowywaną w uzupełnieniu dwóch.
 1. **`FixedPoint`** : reprezentuje liczbę rzeczywistą składającą się z `qArr2 : Qubit[]` tablicy qubit i położenia punktu binarnego `pos`, która zlicza liczbę cyfr binarnych po lewej stronie punktu binarnego. `qArr2` są przechowywane w taki sam sposób co `SignedLittleEndian`.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operacje
 
 Dla każdego z trzech powyższych typów dostępne są różne operacje:
 

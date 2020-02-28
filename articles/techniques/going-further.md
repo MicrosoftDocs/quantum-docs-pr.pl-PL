@@ -1,17 +1,17 @@
 ---
-title: 'Dalsze techniki-Q # | Microsoft Docs'
-description: 'Dalsze techniki-Q #'
+title: Dalsze wprowadzenie do technik pytań i odpowiedzi
+description: 'Zapoznaj się z tematami dotyczącymi zaawansowanych tematów w sekcji Q #, takich jak tworzenie ogólnych funkcji i pożyczanie qubits.'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.going-further
-ms.openlocfilehash: 41713827a93d2cc97e198fa4ad377012c846cf8b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 46ebf544c1d6e56f152a06d06151305fa972011a
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036240"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906903"
 ---
 # <a name="going-further"></a>Dalsze przechodzenie #
 

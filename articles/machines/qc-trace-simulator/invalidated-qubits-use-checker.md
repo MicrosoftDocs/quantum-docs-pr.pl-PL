@@ -1,17 +1,17 @@
 ---
-title: Unieważniony qubits użycia narzędzia sprawdzania poprawności | Symulator śledzenia komputerów Quantum | Microsoft Docs
-description: Omówienie symulatora śledzenia komputera kwantowego
+title: Narzędzie do sprawdzania użycia unieważnionych kubitów
+description: Dowiedz się więcej na temat programu Microsoft QDK unieważniony Qubits użycia narzędzia sprawdzania poprawności, które sprawdza kod Q dla potencjalnie nieprawidłowej Qubits.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820882"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907073"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Unieważniony Qubits użycia
 
@@ -58,6 +58,6 @@ namespace Quantum.MyProgram
 
 Klasa `QCTraceSimulatorConfiguration` przechowuje konfigurację symulatora śledzenia komputerów z Quantum i może być określona jako argument dla konstruktora `QCTraceSimulator`. Gdy `useInvalidatedQubitsUseChecker` ma wartość true, `Invalidated Qubits Use Checker` jest włączona. Aby uzyskać więcej informacji, zobacz dokumentację interfejsu API w systemach [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) i [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) .
 
-## <a name="see-also"></a>Zobacz także ##
+## <a name="see-also"></a>Zobacz też ##
 
 - Omówienie [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro) komputerów z interfejsem Quantum.

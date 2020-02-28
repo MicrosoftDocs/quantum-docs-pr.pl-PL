@@ -1,17 +1,17 @@
 ---
-title: Otwieranie żądań ściągnięcia | Microsoft Docs
-description: Otwieranie żądań ściągnięcia
+title: Otwieranie żądań ściągnięcia
+description: Dowiedz się, jak przesłać żądanie ściągnięcia w usłudze GitHub, gdy wszystko jest gotowe do współtworzenia kodu lub dokumentacji do Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183730"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907464"
 ---
 # <a name="opening-pull-requests"></a>Otwieranie żądań ściągnięcia #
 
@@ -42,19 +42,19 @@ Często będą rysowane diagramy, w których zatwierdzenia są rysowane jako okr
 Załóżmy, że rozpoczęto udział w _gałęzi_ o nazwie `feature`.
 Następnie rozwidlenie **firmy Microsoft/Quantum** może wyglądać następująco:
 
-![](~/media/git-workflow-step0.png)
+![Gałąź robocza w usłudze GitHub](~/media/git-workflow-step0.png)
 
 Jeśli wprowadzisz zmiany w lokalnym repozytorium, możesz _ściągnąć_ zmiany z innego repozytorium, aby przechwycić wszystkie zmiany, które wystąpiły.
 
-![](~/media/git-workflow-step1.png)
+![Ściąganie i scalanie zmian z repozytorium nadrzędnego](~/media/git-workflow-step1.png)
 
 Żądania ściągnięcia działają w ten sam sposób, ale w odwrocie: po otwarciu żądania ściągnięcia zostanie poproszony o repozytorium nadrzędne, aby ściągnąć swój udział w programie.
 
-![](~/media/git-workflow-step2.png)
+![Żądanie ściągnięcia zmian z powrotem do oryginalnego repozytorium](~/media/git-workflow-step2.png)
 
 Gdy otworzysz żądanie ściągnięcia do jednego z naszych repozytoriów, w serwisie GitHub zostanie wyświetlona szansa dla innych osób w społeczności, aby zobaczyć podsumowanie Twoich zmian oraz dodać do nich komentarze i sugestie dotyczące tego, jak pomóc Ci jeszcze lepszym udostępnieniu.
 
-![](~/media/pull-request-header.png)
+![Zrzut ekranu żądania ściągnięcia w usłudze GitHub](~/media/pull-request-header.png)
 
 Dzięki temu procesowi firma Microsoft może korzystać z funkcji usługi GitHub w celu ulepszania udziałów i zapewnienia wysokiej jakości produktu dla społeczności programistycznej usługi Quantum.
 

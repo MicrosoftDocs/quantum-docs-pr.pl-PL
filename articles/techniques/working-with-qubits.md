@@ -1,17 +1,17 @@
 ---
 title: Praca z Qubits
-description: 'Praca z technikami Qubits-Q #'
+description: Dowiedz się, jak alokować qubits, używać ich w operacjach i funkcjach oraz mierzyć wyniki.
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: dc6db93dadc37534aece9624fe516125d919f8cd
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1aa2432996dda61d099e3b5bb4db78379ce43d97
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819998"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907651"
 ---
 # <a name="working-with-qubits"></a>Praca z Qubits
 

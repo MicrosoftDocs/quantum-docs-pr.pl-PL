@@ -1,17 +1,17 @@
 ---
-title: Licznik szerokości | Symulator śledzenia komputerów Quantum | Microsoft Docs
-description: Omówienie symulatora śledzenia komputera kwantowego
+title: Licznik szerokości
+description: Dowiedz się więcej o liczniku szerokości QDK firmy Microsoft, który zlicza qubits przydzielone i pożyczone przez poszczególne operacje w programie Quantum.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820372"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907090"
 ---
 # <a name="width-counter"></a>Licznik szerokości
 
@@ -57,6 +57,6 @@ Na koniec w celu wygenerowania wszystkich statystyk zbieranych przez licznik sze
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Zobacz także ##
+## <a name="see-also"></a>Zobacz też ##
 
 - Omówienie [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro) komputerów z interfejsem Quantum.

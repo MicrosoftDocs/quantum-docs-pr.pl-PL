@@ -1,17 +1,17 @@
 ---
-title: Jordania-Wigner reprezentacja | Microsoft Docs
-description: Jordania — dokumentacja koncepcji reprezentacji Wigner
+title: Jordania — reprezentacja Wigner
+description: Zapoznaj się z reprezentacją Jordania-Wigner, która mapuje operatory hamiltonian na macierze jednostkowe, które można łatwiej zaimplementować na komputerze Quantum.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820542"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904523"
 ---
 # <a name="jordan-wigner-representation"></a>Jordania — reprezentacja Wigner
 

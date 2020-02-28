@@ -1,17 +1,17 @@
 ---
-title: Sprawdzanie odrębnych wejść | Symulator śledzenia komputerów Quantum | Microsoft Docs
-description: Omówienie symulatora śledzenia komputera kwantowego
+title: Sprawdzanie odrębnych wejść
+description: Dowiedz się więcej na temat narzędzia sprawdzania danych wejściowych programu Microsoft QDK, które sprawdza kod Q, aby uzyskać potencjalne konflikty z współdzielonym qubits.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820967"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907107"
 ---
 # <a name="distinct-inputs-checker"></a>Sprawdzanie odrębnych wejść
 
@@ -71,6 +71,6 @@ namespace Quantum.MyProgram
 
 Klasa `QCTraceSimulatorConfiguration` przechowuje konfigurację symulatora śledzenia komputerów z Quantum i może być określona jako argument dla konstruktora `QCTraceSimulator`. Gdy `useDistinctInputsChecker` ma wartość true, `Distinct Inputs Checker` jest włączona. Aby uzyskać więcej informacji, zobacz dokumentację interfejsu API w systemach [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) i [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - Omówienie [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro) komputerów z interfejsem Quantum.

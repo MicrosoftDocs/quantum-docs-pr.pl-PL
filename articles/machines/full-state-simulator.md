@@ -1,17 +1,17 @@
 ---
-title: Symulator pełnego stanu zestawu Quantum Development Kit | Microsoft Docs
-description: Omówienie symulatora pełnego stanu zestawu Quantum Development Kit firmy Microsoft
+title: Symulator stanu pełnego
+description: 'Dowiedz się, jak uruchamiać programy Q # na Microsoft Quantum Development Kit symulatorze pełnego stanu.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 12/7/2017
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: ab0e65765d27e301a59948d7c02105a523022e68
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184682"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906121"
 ---
 # <a name="quantum-development-kit-full-state-simulator"></a>Symulator trybu pełnego stanu zestawu Quantum Development Kit
 
@@ -32,7 +32,7 @@ Ten symulator Quantum jest udostępniany za pośrednictwem klasy `QuantumSimulat
 
 Klasa `QuantumSimulator` implementuje <xref:System.IDisposable>, dlatego Metoda `Dispose` powinna być wywoływana, gdy wystąpienie symulatora nie jest już używane. Najlepszym sposobem jest otoczenie symulatora w instrukcji `using`, jak w powyższym przykładzie.
 
-## <a name="seed"></a>Sadzenia
+## <a name="seed"></a>sadzenia
 
 `QuantumSimulator` używa generatora liczb losowych w celu symulowania losowości Quantum. W celach testowych czasami warto mieć deterministyczne wyniki. Można to osiągnąć przez udostępnienie inicjatora dla generatora liczb losowych w konstruktorze `QuantumSimulator`za pośrednictwem parametru `randomNumberGeneratorSeed`:
 
@@ -44,7 +44,7 @@ Klasa `QuantumSimulator` implementuje <xref:System.IDisposable>, dlatego Metoda 
     }
 ```
 
-## <a name="threads"></a>Wątk
+## <a name="threads"></a>Wątki
 
-`QuantumSimulator` używa [OpenMP](http://www.openmp.org/) do zrównoleglanie algebry liniowy. Domyślnie OpenMP korzysta ze wszystkich dostępnych wątków sprzętowych, co oznacza, że programy z niewielką liczbą qubits często działają wolniej, ponieważ wymagana jest koordynacja Dwarf rzeczywistej pracy. Można to naprawić przez ustawienie zmiennej środowiskowej `OMP_NUM_THREADS` na małą liczbę. Bardzo niewielką zasadą jest, że 1 wątek jest dobry dla maksymalnie 4 qubits, a następnie dodatkowy wątek na qubit jest dobry, chociaż jest to wysoce zależny od algorytmu.
+`QuantumSimulator` używa [OpenMP](http://www.openmp.org/) do zrównoleglanie algebry liniowy. Domyślnie interfejs OpenMP korzysta ze wszystkich dostępnych wątków sprzętowych, co oznacza, że programy z niewielką liczbą kubitów często działają wolniej, ponieważ wymóg koordynacji powoduje spowolnienie rzeczywistej pracy. Można to naprawić przez ustawienie zmiennej środowiskowej `OMP_NUM_THREADS` na małą liczbę. Można kierować się zasadą, że w przybliżeniu 1 wątek jest wystarczający dla około 4 kubitów. Następnie na jeden kubit powinien przypadać jeden dodatkowy wątek. Jest to jednak szacowanie wysoce zależne od konkretnego algorytmu.
 

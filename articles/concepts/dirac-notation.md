@@ -1,17 +1,17 @@
 ---
-title: Notacja Dirac | Microsoft Docs
-description: Notacja Dirac
+title: Notacja Diraca
+description: Dowiedz się więcej o używaniu notacji Dirac do reprezentowania Stanów Quantum i symulowania operacji Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184767"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907566"
 ---
 # <a name="dirac-notation"></a>Notacja Dirac
 
@@ -36,7 +36,7 @@ $$
 
 Poniższy zapis jest często używany do opisywania Stanów, które wynikają z zastosowania bramy Hadamard do $ \ket{0}$ i $ \ket{1}$ (które odpowiadają wektorom jednostki w kierunkach $ + x $ i $-x $ w sferze Bloch):
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-} .
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}.
 $$
 
 Te Stany można również rozszerzyć przy użyciu notacji Dirac jako kwoty $ \ket{0}$ i $ \ket{1}$:
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \psi}\big | ^ 2 = \left | \frac{3}{5}\braket{1 | 1} + \fr
 ### <a name="tensor-product-notation"></a>Notacja iloczynu
 Notacja Dirac obejmuje również niejawną strukturę produktu w ramach tego programu.  Jest to ważne, ponieważ w przypadku przetwarzania Quantum wektor stanu opisany przez dwa nieskorelowane rejestry Quantum jest iloczynów dwustanowych.  Zwięzłe opisywanie struktury produktu dwuczęściowego lub jego braku, jest istotne, jeśli chcesz wyjaśnić obliczenia Quantum.  Struktura iloczynu dwuetapowego oznacza, że możemy napisać $ \psi \otimes \phi $ dla każdego dwóch wektorów stanu Quantum $ \phi $ i $ \psi $ jako $ \ket{\psi} \ket{\phi} $, czasami jawnie napisane jako $ \ket{\psi} \otimes \ket{\phi} $, jednak przez Konwencję piszące $ \otimes $ między wektorami jest zbędna.  Na przykład stan z dwoma qubits zainicjowany do stanu zero jest określony przez
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ otimes \ket{0}= \ket{0} \ket{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
 $$
 
 Analogicznie, stan $ \ket{p} $ dla liczby całkowitej $p $ reprezentuje stan Quantum, który koduje reprezentację binarną w postaci liczby całkowitej $p $.  Jeśli na przykład chcemy wyrazić liczbę $5 $ przy użyciu kodowania binarnego bez znaku, możemy to samo wyrazić jako
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Przykład: Opisywanie nadpozycji z notacją Dirac
 Innym przykładem, jak można użyć notacji Dirac do opisania stanu Quantum, należy wziąć pod uwagę następujące równoważne sposoby pisania stanu Quantum, który jest równej nadpozycji dla każdego możliwego ciągu bitowego o długości $n $
 
-$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 W tym miejscu możesz zazastanawiać się, dlaczego suma prowadzi od $0 $ do $2 ^ {n}-$1 dla $n $ BITS.  Najpierw należy zauważyć, że istnieje następująca liczba konfiguracji: $2 ^ {n} $, które $n $ BITS.  Można to sprawdzić przez zanotowanie, że jeden bit może przyjmować $2 $ wartości, ale dwa bity mogą przyjmować $4 $ wartości i tak dalej. Ogólnie rzecz biorąc, oznacza to, że istnieją $2 ^ n $ inne możliwe ciągi bitowe, ale największa wartość zakodowana w dowolnym z nich $1 \ cdots 1 = 2 ^ n-$1 i dlatego jest górnym limitem sumy.
@@ -95,7 +95,7 @@ Wektory bra są zgodne z podobną Konwencją do KET wektorów.  Na przykład wek
 
 Załóżmy na przykład, że chcemy obliczyć prawdopodobieństwo mierzenia stanu $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ przy użyciu programu Quantum do mierzenia Stanów na wartość $ \ket{+} $ lub $ \ket{-}$. Następnie prawdopodobieństwo, że dane urządzenie będzie miało wartość $ \ket{-}$ to 
 
-$ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} \frac{4}{5} \ket{0}) \right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \right | ^ 2 = \frac{1}{50}. $ $
+$ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \right | ^ 2 = \frac{1}{50}. $ $
 
 Fakt, że znak ujemny pojawia się w obliczeniach prawdopodobieństwa, jest manifestem wpływów Quantum, który jest jednym z mechanizmów, za pomocą których przetwarzanie Quantum uzyskuje korzyści w porównaniu do klasycznego przetwarzania danych.
 
@@ -132,7 +132,7 @@ $$
 
 Możemy zobaczyć, że jest to zgodne z dyskusjami dotyczącymi prawdopodobieństwa pomiaru dla Stanów multiqubit przy użyciu notacji wektorów kolumn:
 
-$ $ P (\Text{First qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \ Dagger \psi | ^ 2, $ $
+$ $ P (\Text{First qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \dagger \psi | ^ 2, $ $
 
 który pasuje do dyskusji o pomiarach wieloqubitowych.  Uogólnienie tego wyniku w przypadku wielu qubit, jednak jest nieco bardziej bezpośrednie do wyrażania przy użyciu notacji Dirac niż notacja wektora kolumn i jest całkowicie równoważne poprzedniej obróbce.
 
@@ -146,4 +146,3 @@ W przypadku interesującego czytnika zalecamy odczytanie jednej z książek refe
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>Sekwencje Q # bram równoważne z Stanami Quantum
 Punkt końcowy, który stanowi podstawę dla notacji Quantum i języka programowania Q #: na początku tego dokumentu stwierdzamy, że jest to podstawowy obiekt informacji w ramach przetwarzania Quantum.  Może to być niespodziewane, że w Q # nie ma pojęcia dotyczącego elementu Quantum.  Zamiast tego wszystkie stany są opisane tylko przez operacje używane do ich przygotowania.  Poprzedni przykład jest doskonałym ilustracją.  Zamiast wyznaczać jednolite nadpozycja w każdym ciągu bitowym Quantum w rejestrze, możemy przedstawić wynik jako $H ^ {\otimes n} \ket{0}$.  Ten wykładniczy, krótszy opis stanu nie tylko ma zaletę, że możemy z niej skorzystać, ale również zwięzłie definiuje operacje, które są niezbędne do propagowania przez stos oprogramowania w celu wdrożenia algorytmu.  Z tego powodu polecenie Q # jest przeznaczone do emitowania sekwencji bram zamiast Stanów Quantum; jednak na poziomie teoretycznym dwie perspektywy są równoważne.
-

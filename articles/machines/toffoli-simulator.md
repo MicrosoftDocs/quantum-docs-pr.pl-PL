@@ -1,17 +1,17 @@
 ---
-title: Zestaw Quantum Development Kit Toffoli symulator | Microsoft Docs
-description: Przegląd zestawu Microsoft Quantum Development Kit Toffoli symulator
+title: Zestaw Quantum Development Kit Toffoli symulator
+description: Dowiedz się więcej o symulatorze Microsoft QDK Toffoli, w specjalnym symulatorze Quantum, który może być używany z milionami qubits.
 author: alan-geller
 ms.author: ageller@microsoft.com
 ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 26940d1a8fe31f1035e2d23a68940cd999517c6b
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442346"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907022"
 ---
 # <a name="quantum-development-kit-toffoli-simulator"></a>Zestaw Quantum Development Kit Toffoli symulator
 
