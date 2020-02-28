@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.inferredlabels
+name: InferredLabels
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Dana tablica prawdopodobieństwa klasyfikacji i bias zwraca etykietę wywnioskowaną z każdego prawdopodobieństwa.
+syntax: 'function InferredLabels (bias : Double, probabilities : Double[]) : Int[]'
+input:
+  content: '(bias : Double, probabilities : Double[])'
+  types:
+  - name: bias
+    summary: Różnica między dwiema klasami, zazwyczaj wynikiem szkolenia klasyfikatora.
+    isPrimitive: true
+    uid: Double
+  - name: probabilities
+    summary: Tablica prawdopodobieństwa klasyfikacji dla zestawu próbek, typowa wynikających z oszacowania częstotliwości klasyfikacji.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int[]
+  types:
+  - summary: Etykieta wywnioskowana z każdego prawdopodobieństwa klasyfikacji.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+metadata:
+  ms.openlocfilehash: 97bb7f29df4f66fc54166cdd54f168bf1f02a67c
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909300"

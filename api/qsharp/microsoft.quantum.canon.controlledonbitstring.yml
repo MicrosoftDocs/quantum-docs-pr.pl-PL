@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Zwraca operator jednostki, który stosuje platformę Oracle w rejestrze docelowym, jeśli stan rejestru sterowania odpowiada określonej masce bitów.
+  Zwraca operację jednostkową, która stosuje platformę Oracle w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada określonej masce bitów.
 
 
-  Dane wyjściowe tej funkcji mogą być reprezentowane przez transformację jednostkową $U $, która \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\\\ \ket{\psi} & \textrm{Otherwise} \end{cases}, \end{align}, gdzie $V $ to transformacja jednostkowa, która reprezentuje akcję `oracle`.
+  Wynikiem tej funkcji jest operacja, która może być reprezentowana przez transformację jednostkową $U $, która \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\\\ \ket{\psi} & \textrm{Otherwise} \end{cases}, \end{align}, gdzie $V $ to transformacja jednostkowa, która reprezentuje akcję `oracle`.
 remarks: >-
   Długość `bits` i `controlRegister` musi być taka sama.
 
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: Ciąg bitowy, który kontroluje dany operator jednostkowy.
+    summary: Ciąg bitowy, który kontroluje daną operację jednostkową na.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Operator jednostkowy do zastosowania w rejestrze docelowym.
+    summary: Operacja jednostkowa do zastosowania w rejestrze docelowym.
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Operator jednostkowy, który ma zastosowanie `oracle` w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada masce bitowej `bits`.
+  - summary: Operacja jednostkowa, która stosuje `oracle` w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada masce bitowej `bits`.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441053"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906529"
