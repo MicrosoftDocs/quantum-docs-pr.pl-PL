@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442208"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906733"
 ---
 # <a name="quantum-basics-with-q"></a>Podstawy obliczeń kwantowych w języku Q#
 
@@ -30,7 +30,7 @@ Możesz też przeczytać opis, nie instalując zestawu QDK, przeglądając omów
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Demonstrowanie zachowania kubitów przy użyciu języka Q#
 
-Przypomnijmy prostą [definicję kubitu](xref:microsoft.quantum.overview.what#the-qubit).  Bity klasyczne przechowują jedną wartość binarną, taką jak 0 lub 1, natomiast kubit może być w stanie **superpozycji** wartości 0 i 1 równocześnie.  Koncepcyjnie kubit można uważać za kierunek w przestrzeni (nazywany też wektorem).  Kubit może mieć dowolny z możliwych kierunków. Dwa **stany klasyczne** są dwoma określonymi kierunkami — reprezentującymi stuprocentową szansę zmierzenia wartości 0 i stuprocentową szansę zmierzenia wartości 1.  Tę reprezentację można też bardziej formalnie zwizualizować za pomocą [sfery Blocha](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Przypomnijmy prostą [definicję kubitu](xref:microsoft.quantum.overview.what#the-qubit).  Bity klasyczne przechowują jedną wartość binarną, taką jak 0 lub 1, natomiast kubit może być w stanie **superpozycji** wartości 0 i 1 równocześnie.  Koncepcyjnie kubit można uważać za kierunek w przestrzeni (nazywany też wektorem).  Kubit może mieć dowolny z możliwych kierunków. Dwa **stany klasyczne** są dwoma określonymi kierunkami — reprezentującymi stuprocentową szansę zmierzenia wartości 0 i stuprocentową szansę zmierzenia wartości 1.  Tę reprezentację można też bardziej formalnie zwizualizować za pomocą [sfery Blocha](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 Pomiar pozwala uzyskać wynik binarny i zmienia stan kubitu. Wynikiem pomiaru jest wartość binarna 0 lub 1.  Kubit przechodzi z superpozycji (dowolny kierunek) do jednego ze stanów klasycznych.  Następne powtórzenia tego samego pomiaru bez wykonywania żadnych pośrednich interwencji dają taki sam wynik binarny.  
@@ -46,7 +46,7 @@ Aplikacje opracowane za pomocą zestawu Quantum Development Kit firmy Microsoft 
 1. Co najmniej jednego algorytmu kwantowego zaimplementowanego przy użyciu języka programowania kwantowego Q#.
 1. Programu hosta zaimplementowanego w języku programowania takim jak Python lub C#, który służy jako główny punkt wejścia i wywołuje operacje języka Q# w celu wykonania algorytmu kwantowego.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Wybieranie lokalizacji dla aplikacji
 
@@ -54,7 +54,7 @@ Aplikacje opracowane za pomocą zestawu Quantum Development Kit firmy Microsoft 
 
 1. Utwórz plik o nazwie `host.py`. Ten plik będzie zawierać kod hosta w języku Python.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[Wiersz polecenia języka C#](#tab/tabid-csharp).
+#### <a name="c-command-line"></a>[Wiersz polecenia języka C#](#tab/tabid-csharp).
 
 1. Utwórz nowy projekt języka Q#:
 
@@ -71,7 +71,7 @@ Aplikacje opracowane za pomocą zestawu Quantum Development Kit firmy Microsoft 
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Program Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Program Visual Studio](#tab/tabid-vs2019)
 
 1. Tworzenie nowego projektu
 
@@ -177,7 +177,7 @@ Instrukcja `using` jest również szczególna dla języka Q#. Służy do przydzi
 
 ## <a name="create-the-host-application-code"></a>Tworzenie kodu aplikacji hosta
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Otwórz plik `host.py` i dodaj następujący kod:
 
@@ -195,7 +195,7 @@ Instrukcja `using` jest również szczególna dla języka Q#. Służy do przydzi
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. Zastąp zawartość pliku `Driver.cs` następującym kodem:
 
@@ -237,7 +237,7 @@ Instrukcja `using` jest również szczególna dla języka Q#. Służy do przydzi
 
 ### <a name="about-the-host-application-code"></a>Informacje o kodzie aplikacji hosta
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 Aplikacja hosta w języka Python ma trzy części:
 
@@ -245,7 +245,7 @@ Aplikacja hosta w języka Python ma trzy części:
 * Uruchamia algorytm kwantowy, wywołując metodę `simulate()` zaimportowanej operacji języka Q#.
 * Przetwarza wynik operacji. W przykładzie zmienna `res` otrzymuje wynik operacji. Tutaj wynik jest krotką liczby zer (`num_zeros`) i liczby jedynek (`num_ones`) zmierzonych przez symulator. Rozdzielamy krotkę, aby uzyskać dwa pola, i drukujemy wyniki.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 Aplikacja hosta w języku C# ma cztery części:
 
@@ -260,7 +260,7 @@ Aplikacja hosta w języku C# ma cztery części:
 
 ## <a name="build-and-run"></a>Kompilowanie i uruchamianie
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Uruchom następujące polecenie w terminalu:
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-csharp)
 
 1. Uruchom następujące polecenie w terminalu:
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Program Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Program Visual Studio](#tab/tabid-vs2019)
 
 1. Po prostu naciśnij klawisz `F5`, a program powinien zostać skompilowany i uruchomiony.
 
@@ -445,7 +445,7 @@ Jeśli ją uruchomimy, uzyskamy dokładnie taki sam wynik 50%-50% jak poprzednio
 
 Nowa wartość zwracana (`agree`) śledzi przypadki, gdy pomiar pierwszego kubitu jest zgodny z pomiarem drugiego kubitu. Należy także odpowiednio zaktualizować aplikację hosta:
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())

@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820355"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906954"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Szybki start: Implementowanie algorytmu wyszukiwania Grovera w języku Q#
 
@@ -43,7 +43,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
 1. Dodaj następujący kod do pliku `Operations.qs` w nowym projekcie:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. Aby zdefiniować przeszukiwaną listę, utwórz nowy plik `Reflections.qs` i wklej następujący kod:
 
@@ -53,7 +53,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
 1. Następnie uruchom nowy program języka Q#, aby znaleźć element oznaczony przez element `ReflectAboutMarked`.
 
-    ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Język Python z programem Visual Studio Code lub wierszem polecenia](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Język Python z programem Visual Studio Code lub wierszem polecenia](#tab/tabid-python)
 
     Aby uruchomić nowy program języka Q# z poziomu środowiska Python, zapisz następujący kod jako `host.py`:
 
@@ -71,7 +71,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
     [0, 1, 0, 1, 0]
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[Język C# z programem Visual Studio Code lub wierszem polecenia](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Język C# z programem Visual Studio Code lub wierszem polecenia](#tab/tabid-csharp)
 
     Aby uruchomić nowy program języka Q# z poziomu środowiska C#, zmodyfikuj element `Driver.cs` tak, aby zawierał następujący kod języka C#:
 
@@ -90,7 +90,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
     Press any key to continue...
     ```
 
-    ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[Język C# w programie Visual Studio 2019](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[Język C# w programie Visual Studio 2019](#tab/tabid-vs2019)
 
     Aby uruchomić nowy program języka Q# z poziomu środowiska C# w programie Visual Studio, zmodyfikuj element `Driver.cs` tak, aby zawierał następujący kod języka C#:
 
