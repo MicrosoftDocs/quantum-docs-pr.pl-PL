@@ -1,17 +1,17 @@
 ---
 title: Informacje o wersji zapoznawczej zestawu Quantum Development Kit
-description: Informacje o wersji zapoznawczej zestawu Quantum Development Kit
+description: Uzyskaj informacje o najnowszych aktualizacjach zestawu Microsoft Quantum Development Kit (wersja zapoznawcza).
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441033"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906937"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -22,18 +22,32 @@ Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.q
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
 
 
+## <a name="version-01020022610"></a>Wersja 0.10.2002.2610
+
+*Data wydania: 27 lutego 2020 r.*
+
+To wydanie zawiera następujące elementy:
+
+- Nowa biblioteka Quantum Machine Learning; więcej informacji zawiera [strona z dokumentacją biblioteki QML](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)
+- Poprawki błędów IQ#, skutkujące zwiększeniem wydajności o nawet 10–20x przy ładowaniu pakietów NuGet
+
+Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## <a name="version-01020012831"></a>Wersja 0.10.2001.2831
 
 *Data wydania: 29 stycznia 2020 r.*
 
 To wydanie zawiera następujące elementy:
 
-- Nowy pakiet NuGet Microsoft.Quantum.SDK
+- Nowy pakiet NuGet Microsoft.Quantum.SDK, który zastąpi pakiet NuGet Microsoft.Quantum.Development.Kit podczas tworzenia nowych projektów. Pakiet NuGet Microsoft.Quantum.Development.Kit będzie nadal obsługiwany dla istniejących projektów. 
+- Obsługa rozszerzeń kompilatora języka Q#, włączonych przez nowy pakiet NuGet Microsoft.Quantum.SDK; więcej informacji zawiera [dokumentacja w usłudze GitHub](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), [przykład rozszerzeń kompilatora](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) oraz [blog Q# Dev Blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
 - Dodano obsługę platformy .NET Core 3.1; zdecydowanie zaleca się zainstalowanie wersji 3.1.100, ponieważ kompilowanie przy użyciu starszych wersji zestawu .NET Core SDK może powodować problemy
 - Nowe przekształcenia kompilatorów są dostępne w ramach elementu Microsoft.Quantum.QsCompiler.Experimental
 - Nowa funkcja uwidaczniająca wyjściowe wektory stanu jako kod HTML w jądrze IQ#
 - Dodano obsługę elementu EstimateFrequencyA do przestrzeni nazw Microsoft.Quantum.Characterization dla testów Hadamard i SWAP
 - Przestrzeń nazw AmplitudeAmplification używa teraz przewodnika dotyczącego stylu języka Q#
+
+Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01019120501"></a>Wersja 0.10.1912.0501
 

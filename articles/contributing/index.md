@@ -1,17 +1,17 @@
 ---
-title: Wpółtworzenie zestawu Quantum Development Kit | Microsoft Docs
-description: Wpółtworzenie zestawu Quantum Development Kit
+title: Współtworzenie zestawu Microsoft Quantum Development Kit
+description: Dowiedz się, jak współtworzyć zestaw Microsoft Quantum Development Kit i zostać częścią społeczności deweloperów piszących programy kwantowe.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 3f27f7502c83574e6bd8f950d7e17ee481e44a3c
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819862"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904880"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Wpółtworzenie zestawu Quantum Development Kit #
 
@@ -79,4 +79,3 @@ Jeśli chcesz dowiedzieć się więcej na temat współtworzenia, przejdź do je
 
 > [!div class="nextstepaction"]
 > [Dowiedz się, jak otwierać żądania ściągnięcia](xref:microsoft.quantum.contributing.pulls)
-

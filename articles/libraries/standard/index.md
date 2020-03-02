@@ -1,17 +1,17 @@
 ---
-title: Wprowadzenie do bibliotek standardowych języka Q# | Microsoft Docs
-description: Wprowadzenie do bibliotek standardowych języka Q#
+title: Wprowadzenie do bibliotek standardowych języka Microsoft Q#
+description: Dowiedz się więcej o bibliotekach standardowych języka Microsoft Q#, które definiują operacje, funkcje i typy danych używane w programach kwantowych.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: 547f4f6066e3ead627cd2a5970b1555999e988bb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 820ad885e7134aa723116d4c9f853d88210a5514
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056379"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907158"
 ---
 # <a name="introduction-to-the-q-standard-libraries"></a>Wprowadzenie do bibliotek standardowych języka Q# #
 

@@ -1,17 +1,17 @@
 ---
-title: Wprowadzenie do pakietu Quantum Chemistry | Microsoft Docs
-description: Wprowadzenie do pakietu Quantum Chemistry
+title: Wprowadzenie do biblioteki Quantum Chemistry
+description: Poznaj bibliotekę Microsoft Quantum Chemistry i zobacz, jak jest używana do symulowania problemów związanych ze strukturą elektroniczną na komputerach kwantowych.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.intro
-ms.openlocfilehash: e5a9dd70874f1ae0baf4b781346278195a980a7e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4268eafa5e53c0a026d179503ac6db88652a8f90
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960420"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907328"
 ---
 # <a name="introduction-to-the-quantum-chemistry-library"></a>Wprowadzenie do biblioteki Quantum Chemistry
 
