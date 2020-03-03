@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441072"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906988"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Szybki start: Implementowanie kwantowego generatora liczb losowych w języku Q#
 Prostym przykładem kwantowego algorytmu napisanego w języku Q# jest kwantowy generator liczb losowych. Ten algorytm wykorzystuje zjawiska mechaniki kwantowej, aby utworzyć liczbę losową. 
@@ -44,17 +44,18 @@ Po cofnięciu przydziału elementu `Qubit` należy z powrotem jawnie ustawić dl
 
 Na sferze Blocha biegun północny reprezentuje wartość klasyczną **0**, a biegun południowy reprezentuje wartość klasyczną **1**. Każdą superpozycję można przedstawić jako punkt na sferze (reprezentowany przez strzałkę). Im bliżej od końca strzałki do bieguna, tym większe jest prawdopodobieństwo, że przy pomiarze kubit ulegnie kolapsowi do wartości klasycznej przypisanej do tego bieguna. Na przykład stan kubitu reprezentowany przez czerwoną strzałkę poniżej ma większe prawdopodobieństwo zwrócenia wartości **0** przy pomiarze.
 
-<img src="~/media/qrng-Bloch.png" width="175">
+<img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
 Ta reprezentacja może posłużyć do wizualizacji działania kodu:
 
 * Zaczniemy od kubitu zainicjowanego w stanie **0** i zastosujemy funkcję `H`, aby utworzyć superpozycję, w której prawdopodobieństwa wartości **0** i **1** są jednakowe.
 
-<img src="~/media/qrng-H.png" width="450">
+<img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
+
 
 * Następnie zmierzymy kubit i zapiszemy dane wyjściowe:
 
-<img src="~/media/qrng-meas.png" width="450">
+<img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 Ponieważ wynik pomiaru jest całkowicie losowy, uzyskaliśmy losowy bit. Możemy wywołać tę operację kilka razy, aby utworzyć liczby całkowite. Jeśli na przykład wywołamy operację trzykrotnie w celu uzyskania trzech losowych bitów, możemy utworzyć losowe liczby 3-bitowe (czyli liczbę losową z zakresu od 0 do 7).
 

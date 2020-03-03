@@ -1,19 +1,19 @@
 ---
 title: Jak nauczyć się wykonywania obliczeń kwantowych w języku Q#?
-description: ''
+description: Zasoby dotyczące podstawowej wiedzy matematycznej i fizycznej, które ułatwiają rozpoczęcie pracy z obliczeniami kwantowymi.
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 17fc4e7a73f93a86d981996bf8b59309bccb6e67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529961"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907753"
 ---
-# <a name="how-to-learn-quantum-computing"></a>Jak nauczyć się wykonywania obliczeń kwantowych?
+# <a name="how-to-learn-about-quantum-computing"></a>Jak dowiedzieć się więcej na temat obliczeń kwantowych?
 
 Zapoznaj się ze wskazówkami dotyczącymi obliczeń kwantowych i pisania swoich pierwszych programów. Nie jest to wyczerpujący przewodnik, ale raczej dobre miejsce, aby zacząć.
 
