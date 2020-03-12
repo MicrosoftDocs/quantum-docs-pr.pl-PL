@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906512"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022490"
 ---
 # <a name="end-to-end-with-nwchem"></a>Kompleksowe rozwiązanie z NWChem #
 
-Na tej stronie przedstawiono przykład uzyskiwania liczby bram dla symulacji chemicznej Quantum, rozpoczynając od pokładu wejściowego [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) .
+W tym artykule przedstawiono przykład uzyskiwania liczby bram dla symulacji chemicznej Quantum, rozpoczynając od pokładu wejściowego [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) .
 Przed kontynuowaniem tego przykładu upewnij się, że zainstalowano platformę Docker, postępując zgodnie z [przewodnikiem instalacji i weryfikacji](xref:microsoft.quantum.chemistry.concepts.installation).
 
 Więcej informacji:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Następnie zaimportujemy polecenie `Get-GateCount` dostarczone z przykładem **GetGateCount** .
-Aby uzyskać szczegółowe informacje, zobacz [instrukcje dostarczone z przykładem](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+Aby uzyskać szczegółowe informacje, zobacz [instrukcje dostarczone z przykładem](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
 Następnie uruchom następujące polecenie, podstawiając `<runtime>` z `win10-x64`, `osx-x64`lub `linux-x64`, w zależności od systemu operacyjnego:
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>Produkowanie i zużywanie danych wyjściowych Broombridge z NWChem ##
 
-Mamy teraz wszystko, czego potrzebujemy do tworzenia i używania dokumentów Broombridge.
+Masz teraz wszystko, czego potrzebujesz, aby tworzyć i korzystać z dokumentów Broombridge.
 Aby uruchomić program NWChem i utworzyć dokument Broombridge dla `h4_sto6g_0.000.nw` wejściowego, uruchom `Convert-NWChemToBroombridge`:
 
 > [!NOTE]
@@ -123,7 +123,7 @@ Aby uruchomić program NWChem i utworzyć dokument Broombridge dla `h4_sto6g_0.0
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-Spowoduje to wygenerowanie dokumentu Broombridge o nazwie `h4_sto6g_0.000.yaml`, którego możemy użyć z `Get-GateCount`:
+Spowoduje to wygenerowanie dokumentu Broombridge o nazwie `h4_sto6g_0.000.yaml`, którego można użyć z `Get-GateCount`:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ Istnieje wiele rzeczy, które należy wykonać w tym miejscu:
 - Wypróbuj różne wstępnie zdefiniowane talie wejściowe, np. przez zmianę parametru `alpha` w `h4_sto6g_alpha.nw`, 
 - Spróbuj zmodyfikować talie, edytując talie NWChem bezpośrednio, np. Eksplorowanie modeli `STO-nG` w różnych wyborach n, 
 - Wypróbuj inne wstępnie zdefiniowane pokłady wejściowe NWChem, które są dostępne w `nwchem/qa/chem_library_tests`,
-- Wypróbuj pakiet wstępnie zdefiniowanych testów porównawczych Broombridge YAML, które zostały wygenerowane z NWChem i są dostępne jako część [repozytorium Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML). Te testy porównawcze obejmują: 
+- Wypróbuj pakiet wstępnie zdefiniowanych testów porównawczych Broombridge YAML, które zostały wygenerowane z NWChem i są dostępne jako część [repozytorium Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Te testy porównawcze obejmują: 
     - małe cząsteczek, takie jak wodór wodoru (H2), beryl (hydride), litu (LiH),
     - większe cząsteczek, takie jak ozon (O3), beta-karoten, cytosine i wiele innych. 
 - Wypróbuj graficzną [strzałkę EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) frontonu, która oferuje interfejs do Microsoft Quantum Development Kit. 

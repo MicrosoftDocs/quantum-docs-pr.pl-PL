@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907481"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022466"
 ---
-# <a name="contributing-code"></a>Zasady współtworzenia #
+# <a name="contributing-code"></a>Zasady współtworzenia
 
 Oprócz zgłaszania problemów i ulepszania dokumentacji, współdziałanie kodu z zestawem SDK Development Kit może być bardzo bezpośrednim sposobem, aby pomóc swoim partnerom w społeczności programowania Quantum.
 Dzięki objęcie kodu możesz pomóc w rozwiązywaniu problemów, dostarczeniu nowych przykładów, Ułatw korzystanie z istniejących bibliotek, a nawet dodawać zupełnie nowe funkcje.
 
 W tym przewodniku zawarto szczegółowe informacje o tym, czego szukamy, gdy sprawdzimy żądania ściągnięcia, aby pomóc Ci w Twoim udostępnieniu.
 
-## <a name="what-we-look-for"></a>Czego szukamy ##
+## <a name="what-we-look-for"></a>Czego szukamy
 
 Idealny udział w kodzie kompiluje się w istniejącej pracy w repozytorium Quantum Development Kit, aby rozwiązać problemy, rozwinąć istniejące funkcje lub dodać nowe funkcje, które znajdują się w zakresie repozytorium.
 Gdy akceptujemy wkład kodu, jest on częścią zestawu Quantum Development Kit, w taki sposób, że nowe funkcje zostaną wydane, utrzymane i opracowane w taki sam sposób jak w pozostałej części zestawu Quantum Development Kit.
 W ten sposób jest przydatne, gdy funkcje dodane przez wkład są dobrze przetestowane i są udokumentowane.
 
-### <a name="unit-tests"></a>Testy jednostkowe ###
+### <a name="unit-tests"></a>Testy jednostkowe
 
 Funkcje Q #, operacje i typy zdefiniowane przez użytkownika, które tworzą biblioteki, takie jak Canon, są automatycznie testowane w ramach opracowywania w repozytorium [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Gdy zostanie otwarte nowe żądanie ściągnięcia, na przykład nasza konfiguracja [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) sprawdzi, czy zmiany w żądaniu ściągnięcia nie podzielą żadnych istniejących funkcji, od których zależy społeczność programowania Quantum.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 Bardziej skomplikowane warunki można sprawdzić przy użyciu technik w [sekcji Testowanie](xref:microsoft.quantum.libraries.diagnostics) w przewodniku biblioteki standardowe.
 Na przykład następujące testy testu, które `H(q); X(q); H(q);` jak wywołane przez <xref:microsoft.quantum.canon.applywith>, są takie same jak `Z(q)`.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ Lokalnie testy jednostkowe można uruchomić za pomocą Eksploratora testów pro
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Gdy odrzucimy żądanie ściągnięcia ##
+
+## <a name="when-well-reject-a-pull-request"></a>Gdy odrzucimy żądanie ściągnięcia
 
 Czasami odrzucimy żądanie ściągnięcia dla udziału.
 W takim przypadku nie oznacza to, że jest ona zła, ponieważ istnieje kilka powodów, dla których firma Microsoft może nie być w stanie zaakceptować określonego udziału.
@@ -98,10 +99,15 @@ Na koniec nie można zatwierdzić wkładów, które powodują szkody dla społec
 Chcemy mieć pewność, że wkłady pełnią rolę całej społeczności obliczeniowej usługi Quantum, zarówno w swojej bieżącej różnorodności, jak i w przyszłości, gdy rośnie, aby jeszcze bardziej włączać.
 Dziękujemy za pomoc w realizacji tego celu.
 
-## <a name="next-steps"></a>Następne kroki ##
+## <a name="next-steps"></a>Następne kroki
 
 Dziękujemy za pomoc w opracowaniu zestawu Quantum Development Kit doskonałego zasobu dla całej społeczności programistycznej usługi Quantum.
 Aby dowiedzieć się więcej, przejdź do poniższego przewodnika dotyczącego stylu Q #.
 
 > [!div class="nextstepaction"]
 > [Dowiedz się więcej na temat wytycznych dotyczących stylu Q #](xref:microsoft.quantum.contributing.style)
+
+W zależności od rodzaju kodu, w którym się wnosisz, może być konieczne dodatkowe zagadnienia, które mogą pomóc Ci zapewnić, że udział będzie tak dobry dla społeczności.
+
+> [!div class="nextstepaction"]
+> [Dowiedz się więcej na temat tworzenia próbek](xref:microsoft.quantum.contributing.samples)

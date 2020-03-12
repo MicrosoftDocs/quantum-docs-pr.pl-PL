@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904897"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022636"
 ---
-# <a name="improving-documentation"></a>Ulepszanie dokumentacji #
+# <a name="improving-documentation"></a>Ulepszanie dokumentacji
 
 Dokumentacja zestawu Quantum Development Kit obejmuje kilka różnych formularzy, takich jak informacje są łatwo dostępne dla deweloperów Quantum.
 
@@ -28,7 +28,7 @@ W ten sposób każda forma dokumentacji różni się nieco w zależności od szc
 - **Dokumentacja interfejsu API** to zestaw stron dla każdej funkcji Q #, operacji i typu zdefiniowanego przez użytkownika, który jest publikowany w https://docs.microsoft.com/qsharp/api/. Te strony dokumentują dane wejściowe i operacje do każdego z nich, a także przykłady i linki do dodatkowych informacji. Odwołanie do interfejsu API jest automatycznie wyodrębniane z małych dokumentów DFM w kodzie kodu źródłowego Q # jako część każdej wersji.
 - Pliki **readme<!---->. MD** dołączone do każdego przykładu i Kata opisują, jak używać tego przykładu lub Kata jest używany, co obejmuje, i w jaki sposób odnosi się do reszty zestawu Quantum Development Kit. Te pliki są zapisywane przy użyciu [promocji (GFM) usługi GitHub](https://github.github.com/gfm/), która jest bardziej lekkim rozwiązaniem alternatywnym dla dołączania dokumentacji bezpośrednio do repozytoriów kodu.
 
-## <a name="contributing-to-the-conceptual-documentation"></a>Współtworzenie dokumentacji koncepcyjnej ##
+## <a name="contributing-to-the-conceptual-documentation"></a>Współtworzenie dokumentacji koncepcyjnej
 
 Aby przyczynić się do usprawnienia dokumentacji koncepcyjnej lub Readme, rozpoczyna się od żądania ściągnięcia do [**MicrosoftDocs/Quantum-docs-PR**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 ), [**Microsoft/Quantum**](https://github.com/Microsoft/Quantum)lub [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas), zgodnie z potrzebami.
@@ -41,7 +41,18 @@ Opiszemy więcej informacji na temat żądań ściągnięcia poniżej, ale teraz
 - Wielu członków społeczności programowania Quantum to badacze akademickie i są rozpoznawane głównie przez cytaty dla ich wkładu do społeczności. Oprócz ułatwienia czytelnikom znajdowania dodatkowych materiałów, dzięki czemu warto prawidłowo zamieszczać dane naukowe, takie jak dokumenty, rozmowy, wpisy w blogu i narzędzia programowe, mogą pomóc akademickim współautorom w prowadzeniu najlepszych zadań do ulepszania społeczności.
 - Społeczność programowania Quantum jest szeroką i bardzo różnorodną społecznością. Korzystanie z teoretycznych rzeczowników w przykładach innych osób (np.: "Jeśli użytkownik..., będzie..."), może przełączać się, a nie uwzględnić. Firma Cognizant nazwiska osób w cytatach i łączach, a poprawna dołączenie znaków nienależących do zestawu ASCII może zapewnić różnorodność społeczności, wskazując jej składowe. Podobnie wiele wyrazów w języku angielskim jest często używanych w hateful, w taki sposób, że ich użycie w dokumentacji technicznej może spowodować szkody zarówno dla indywidualnych czytelników, jak i dla społeczności.
 
-## <a name="contributing-to-the-api-references"></a>Współtworzenie odwołań do interfejsów API ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>Odwołuje się do przykładowego kodu z artykułu koncepcyjnego
+
+Jeśli chcesz dołączyć kod z [repozytorium przykładów](https://github.com/Microsoft/Quantum), możesz to zrobić przy użyciu specjalnego DocFXej promocji z nieprawidłowymi wersjami:
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+To polecenie spowoduje zaimportowanie wierszy od 4 do 8 [pliku`Game.qs` z przykładu `chsh-game`](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs), oznaczenie ich jako kodu Q na potrzeby wyróżniania składni.
+Za pomocą tego polecenia można uniknąć duplikowania kodu między artykułami koncepcyjnymi i repozytorium przykładów, aby kod przykładowy w dokumentacji był zawsze aktualny, jak to możliwe.
+
+## <a name="contributing-to-the-api-references"></a>Współtworzenie odwołań do interfejsów API
 
 Aby współtworzyć udoskonalenia odwołań do interfejsów API, warto otworzyć żądanie ściągnięcia bezpośrednio na udokumentowanym kodzie.
 Każda funkcja, operacja lub typ zdefiniowany przez użytkownika obsługuje komentarz do dokumentacji (oznaczone `///` zamiast `//`).
@@ -123,6 +134,7 @@ Na przykład `ControlledOnBitString`można napisać coś w następujący sposób
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 Możesz zobaczyć wyrenderowaną wersję kodu powyżej w [dokumentacji interfejsu API dla funkcji `ControlledOnBitString`](xref:microsoft.quantum.canon.controlledonbitstring).
 
 Oprócz ogólnych metod pisania dokumentacji, w opisie komentarzy dokumentacji interfejsu API pomocne jest zachowanie kilku rzeczy:
