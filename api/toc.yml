@@ -1,9 +1,14 @@
 - name: Dokumentacja interfejsu API
   items:
+    - name: Dokumentacja interfejsu API
+      href: index.md
     - name: 'Biblioteki języka Q#'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: Biblioteki platformy .NET
       items:
+        - name: Biblioteki platformy .NET
+          href: dot-net-libraries.md
         - name: Symulator śledzenia
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: Chemia kwantowa

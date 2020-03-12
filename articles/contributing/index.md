@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904880"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022480"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Wpółtworzenie zestawu Quantum Development Kit #
+# <a name="contributing-to-the-quantum-development-kit"></a>Wpółtworzenie zestawu Quantum Development Kit
 
 Zestaw Quantum Development Kit to więcej niż kolekcja narzędzi do pisania programów kwantowych.
 Jest częścią szerokiej społeczności, której członkowie odkrywają przetwarzanie kwantowe, prowadzą badania nad algorytmami kwantowymi, opracowują nowe aplikacje dla urządzeń kwantowych i w inny sposób działają w celu jak najlepszego wykorzystania programowania kwantowego.
@@ -23,7 +23,7 @@ Jesteśmy bardzo wdzięczni za Twój wkład i za możliwość współpracy z Tob
 
 W tym przewodniku przedstawiono kilka wskazówek na temat sposobu, w jaki możesz uczynić swój wkład najbardziej przydatnym dla szerszej społeczności programowania kwantowego.
 
-## <a name="building-community"></a>Budowanie społeczności ##
+## <a name="building-community"></a>Budowanie społeczności
 
 Pierwszą zasadą współtworzenia jest to, że zawsze trzeba mieć na względzie społeczność, do której wnosisz własny wkład.
 Działając w sposób profesjonalny i z szacunkiem wobec swoich kolegów oraz wszystkich członków społeczności programowania kwantowego, możesz pomóc zadbać o to, aby Twoje działania tworzyły możliwie najlepszą i najbardziej przyjazną społeczność.
@@ -31,7 +31,7 @@ Działając w sposób profesjonalny i z szacunkiem wobec swoich kolegów oraz ws
 W ramach tych wysiłków wszystkie projekty zestawu Quantum Development Kit przyjęły [Kodeks postępowania oprogramowania Open Source firmy Microsoft](https://opensource.microsoft.com/codeofconduct/).
 Aby uzyskać więcej informacji, zobacz [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Często zadawane pytania dotyczące kodeksu postępowania) lub wyślij wiadomość e-mail na adres [opencode@microsoft.com](mailto:opencode@microsoft.com) w przypadku jakichkolwiek dodatkowych pytań lub komentarzy.
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Jakie rodzaje wkładu pomagają społeczności? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Jakie rodzaje wkładu pomagają społeczności?
 
 Poprzez swój wkład możesz pomagać społeczności programowania kwantowego na bardzo wiele różnych sposobów.
 W tym przewodniku skoncentrujemy się na trzech z nich, szczególnie istotnych dla zestawu Quantum Development Kit.
@@ -45,7 +45,7 @@ Na pewno nie jest to wyczerpująca lista — zachęcamy do eksplorowania innych 
 Wszystkie te różne rodzaje wkładów są niezmiernie wartościowe i bardzo doceniane.
 W pozostałej części przewodnika oferujemy porady dotyczące przekazywania poszczególnych rodzajów wkładu.
 
-## <a name="where-do-contributions-go"></a>Gdzie są przekazywane wkłady? ##
+## <a name="where-do-contributions-go"></a>Gdzie są przekazywane wkłady?
 
 Zestaw Quantum Development Kit zawiera wiele różnych elementów, które współpracują ze sobą, aby zrealizować możliwości platformy do pisania programów kwantowych.
 Każdy z tych elementów znajduje się w innym repozytorium, więc jedną z pierwszych rzeczy, które należy uporządkować, jest określenie, gdzie każdy wkład będzie najlepiej pasował.
@@ -66,7 +66,7 @@ Istnieje również kilka innych, bardziej wyspecjalizowanych repozytoriów, któ
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Obsługa formatowania LaTeX dla składni języka Q#.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): Samouczek IQ# Notebook for Deutsch–Jozsa przedstawiony na warsztatach intern workshop 2019 (warsztaty dla stażystów).
 
-## <a name="next-steps"></a>Następne kroki ##
+## <a name="next-steps"></a>Następne kroki
 
 Dziękujemy za uczestnictwo w społeczności zestawu Quantum Development Kit, czekamy na Twój wkład!
 Jeśli chcesz dowiedzieć się więcej na temat współtworzenia, przejdź do jednego z poniższych przewodników.
