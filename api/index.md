@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056960"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022511"
 ---
-# <a name="q-standard-libraries"></a>Standardowe biblioteki języka Q# #
+# <a name="q-api-reference"></a>Dokumentacja interfejsu API języka Q# #
 
-Język Q# jest obsługiwany przez szereg różnych użytecznych operacji, funkcji i typów zdefiniowanych przez użytkownika, które składają się na *standardową bibliotekę* języka Q#.
-Standardowa biblioteka języka Q# jest podzielona na dwie główne części:
+Ta dokumentacja interfejsu API obejmuje standardową bibliotekę języka Q# i trzy biblioteki, które zostały utworzone na jej podstawie — biblioteki z zakresu chemii, liczb i uczenia maszynowego. Dla języka Q# są również dostępne biblioteki platformy .NET i języka Python.
 
-- **Preludium**: operacje i funkcje zdefiniowane jako część maszyny docelowej i kompilatora, zwykle w klasycznym natywnym kodzie platformy .NET.
-  Ogólnie rzecz biorąc, różne maszyny docelowe mogą mieć różne implementacje preludium odpowiednie dla systemu.
-- **Kanon**: operacje i funkcje zdefiniowane w języku Q# oparte na logice zdefiniowanej w preludium.
-  Implementacja kanonu jest niezależna od maszyn docelowych.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Biblioteki języka Q#](xref:microsoft.quantum.qsharplibintro)
+- [Biblioteki platformy .NET](xref:microsoft.quantum.dotnetlibsintro)
+- [Biblioteki języka Python](https://docs.microsoft.com/python/qsharp)
+
+Aby uzyskać więcej informacji o bibliotekach języka Q#, zobacz <xref:microsoft.quantum.libraries>.
