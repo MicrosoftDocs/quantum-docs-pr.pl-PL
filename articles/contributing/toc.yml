@@ -6,5 +6,9 @@
   href: pull-requests.md
 - name: Zasady współtworzenia
   href: code.md
+- name: Przykłady współtworzenia
+  href: samples.md
 - name: Przewodnik dotyczący stylu
   href: style-guide.md
+- name: Zasady projektowania interfejsów API
+  href: api-design-principles.md
