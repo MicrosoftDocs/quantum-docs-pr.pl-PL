@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907243"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402854"
 ---
 # <a name="quantum-algorithms"></a>Algorytmy Quantum #
 
@@ -77,9 +77,9 @@ $ $ Jeśli definiujemy $ $ \ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0}
 $ $ Ścieżka do wykonania obiektu dodającego zostaje wyczyszczona po zaobserwowaniu, że suma danych wejściowych może być zapisywana jako $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 (a + b)} \otimes \cdots \otimes \ket{\phi\_n (a + b)}.
 $ $ Liczby całkowite $b $ i $a $ można następnie dodać przez przeprowadzenie rotacji kontrolowanej fazy na każdym z qubits w dekompozycji przy użyciu bitów $b $ as Controls.
 
-To rozwinięcie może być dodatkowo uproszczone przez zanotowanie, że dla dowolnej liczby całkowitej $j $ i liczby rzeczywistej $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Wynika to z faktu, że w przypadku rotacji $360 ^ {\circ} $ stopni ($ 2 \ pi $ RADIANS) w okręgu zostanie precyzyjnie dokończyć pracę.  Jedyną istotną częścią $x $ dla $e ^ {i2\pi x} $ jest w związku z tym ułamkowa część $x $.  W przypadku, gdy mamy rozwinięcie binarne formularza $x = t +0. x\_0x\_2 \ ldots x\_n $, $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $, w związku z czym $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ oznacza to, że w przypadku, gdy wykonamy Dodawanie przez zwiększenie każdego z czynniki dwustopniowe w rozwinięciu transformacji Fouriera $ \ket{a} $ następnie liczba obrotów maleje w miarę $k $ zmniejsza.  Znacznie zmniejsza liczbę bram Quantum wymaganych w dodającej.  Notujemy transformację Fouriera, Dodawanie faz i odwrotne kroki transformacji Fouriera, które składają się na Draper dodające jako $ \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. Poniżej można zobaczyć obwód Quantum, który używa tego uproszczenia do implementacji całego procesu.
+To rozwinięcie może być dodatkowo uproszczone przez zanotowanie, że dla dowolnej liczby całkowitej $j $ i liczby rzeczywistej $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Wynika to z faktu, że w przypadku rotacji $360 ^ {\circ} $ stopni ($ 2 \ pi $ RADIANS) w okręgu zostanie precyzyjnie dokończyć pracę.  Jedyną istotną częścią $x $ dla $e ^ {i2\pi x} $ jest w związku z tym ułamkowa część $x $.  W przypadku, gdy mamy rozwinięcie binarne formularza $x = t +0. x\_0x\_2 \ ldots x\_n $, $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $, w związku z czym $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ oznacza to, że jeśli wykonujemy Dodawanie przez zwiększenie każdego ze współczynników dwuetapowych w rozwinięciu przekształcenia Fouriera $ \ket{a} $ then Liczba obrotów jest zmniejszana w miarę $k $ maleje.  Znacznie zmniejsza liczbę bram Quantum wymaganych w dodającej.  Notujemy transformację Fouriera, Dodawanie faz i odwrotne kroki transformacji Fouriera, które składają się na Draper dodające jako $ \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. Poniżej można zobaczyć obwód Quantum, który używa tego uproszczenia do implementacji całego procesu.
 
-![Drapere, które są wyświetlane jako diagram obwodu](~/media/draper.png)
+![Drapere, które są wyświetlane jako diagram obwodu](~/media/draper.svg)
 
 Każda kontrolowana Brama $e ^ {I2 \ pi/k} $ w obwodzie odwołuje się do bramy sterowanej fazy.  Takie bramy mają właściwość, która znajduje się na parze qubits, w której działają, $ \ket{00}\mapsto \ket{00}$, ale $ \ket{11}\mapsto e ^ {I2 \ pi/k} \ KET{11}$.  Obwód ten pozwala nam wykonać Dodawanie przy użyciu żadnych dodatkowych qubits poza tymi, które są konieczne do przechowywania danych wejściowych i wyjściowych.
 
@@ -92,7 +92,7 @@ $$
 
 Funkcja Beauregard do dopełnienia używa dodającego Draper lub dokładniej $ \phi\\\!\operatorname{ADD} $, aby dodać $a $ i $b $ w fazie.  Następnie używa tej samej operacji, aby określić, czy $a + b < N $ przez odjęcie $N $ i testowanie, jeśli $a + b-N < 0 $.  Obwód przechowuje te informacje w pomocniczej qubit, a następnie dodaje $N $ back a, jeśli $a + b < N $.  Następnie zwalnia ten bit pomocniczy (ten krok jest niezbędny, aby zapewnić, że po wywołaniu funkcji dodającej Ancilla można cofnąć alokację).  Poniżej przedstawiono obwód dla Beauregard.
 
-![Beauregarde, które są wyświetlane jako diagram obwodu](~/media/beau.png)
+![Beauregarde, które są wyświetlane jako diagram obwodu](~/media/beau.svg)
 
 W tym miejscu Brama $ \Phi\\\!\operatorname{ADD} $ przyjmuje taką samą formę jak $ \Phi\\\!\operatorname{ADD} $, z wyjątkiem tego w tym kontekście dane wejściowe są klasyczne zamiast Quantum.  Dzięki temu kontrolowane fazy w $ \Phi\\\!\operatorname{ADD} $ do zamienienia na bramy faz, które następnie można kompilować w mniejszej liczbie operacji, aby zmniejszyć liczbę qubits i liczbę bram potrzebnych do dodającego.
 
@@ -111,7 +111,7 @@ Inaczej mówiąc, efekt zastosowania $V $ jest dokładnie taki sam jak zastosowa
 W związku z tym w pozostałej części tej dyskusji będziemy omawiać oszacowania fazy pod względem $R _1 (\phi) $, który implementuje się przy użyciu tak zwanej *fazy KickBack*.
 
 Ponieważ kontrolka i rejestr docelowy pozostają untangled po tym procesie, możemy ponownie użyć $ \ket{\phi} $ jako elementu docelowego kontrolowanej aplikacji $U ^ $2, aby przygotować drugi formant qubit w stanie $R _1 (2 \phi) \ket{+} $.
-W ten sposób możemy uzyskać rejestr w formie \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, gdzie $n $ to liczba wymaganych elementów dokładności, a tam, gdzie użyto ${} \propto {}$, aby wskazać, że został pominięty współczynnik normalizacji $ 1/\sqrt{2 ^ n} $.
+W ten sposób możemy uzyskać rejestr w formie \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, gdzie $n $ to liczba wymaganych elementów dokładności, a tam, gdzie użyto ${} \propto {}$, aby wskazać, że został pominięty współczynnik normalizacji $1/\sqrt {2 ^ n} $.
 
 Jeśli przyjęto założenie, że $ \phi = 2 \pi p/2 ^ k $ dla liczby całkowitej $p $, rozpoznawamy to jako $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, gdzie $p _j $ to $j ^ {\textrm{th}} $ bit $2 \pi \phi $.
 W związku z zastosowaniem sąsiedniej transformacji Fouriera Quantum, firma Microsoft uzyskuje reprezentację binarną fazy zakodowanej jako stan Quantum.
