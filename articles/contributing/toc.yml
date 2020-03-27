@@ -1,6 +1,6 @@
 - name: Raportowanie usterek
   href: reporting-bugs.md
-- name: Dokumentacja dotycząca współtworzenia
+- name: Ulepszanie dokumentacji
   href: docs.md
 - name: Otwieranie żądań ściągnięcia
   href: pull-requests.md
