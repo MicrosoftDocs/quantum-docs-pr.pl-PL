@@ -5,6 +5,29 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca tablicę, która składa się z tych elementów, które spełniają predykat.
 remarks: Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i predykat `'T -> Bool` możemy filtrować elementy.
+examples: >-
+  Poniższy kod demonstruje funkcję "Filtered".
+
+  Predykat jest definiowany przy użyciu funkcji @"microsoft.quantum.logical.greaterthani":
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function FilteredDemo() : Unit {
+     let predicate = GreaterThanI(_, 5);
+     let filteredArray = Filtered(predicate, [2, 5, 9, 1, 8]);
+     Message($"{filteredArray}");
+  }
+
+  ```
+
+
+  Wynik powinien oczekiwać od tego przykładu, będzie tablicą liczb większą niż 5.
 syntax: "function Filtered (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -36,9 +59,9 @@ typeParameters:
 - uid: "'T"
   summary: Typ elementów `array`.
 metadata:
-  ms.openlocfilehash: f2749f204c6276a0a43ac67bdee9c4cda0de049e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218366"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320747"
