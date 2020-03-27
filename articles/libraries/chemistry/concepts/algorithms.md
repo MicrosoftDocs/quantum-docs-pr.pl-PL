@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904642"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320718"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Symulowanie hamiltonian Dynamics
 
@@ -28,14 +28,14 @@ Należy pamiętać, że jeśli $e ^ {-i H t} $ były zwykłą wartością wykła
 Ten błąd występuje, ponieważ $e ^ {-iHt} $ jest operatorem wykładniczym i w związku z tym występuje błąd podczas korzystania z tej formuły ze względu na fakt, że $H _j $ warunki nie współpracownicy (*tj.* $H _j H_k \ne H_k H_j $).
 
 Jeśli $t $ jest duże, Trotter — formuły Suzuki mogą być używane w celu dokładnego symulowania dynamiki przez podzielenie go na sekwencję krótkich etapów czasu.
-Niech $r $ to liczba kroków podejmowanych w czasie rozwoju.
-Następnie mamy $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, co oznacza, że jeśli $r $ skaluje się jako $m ^ 2 t ^ 2/1/Epsilon $, błąd może zostać wykonany z najwyżej $ \epsilon $ dla dowolnego $ \epsilon > 0 $.
+Niech $r $ to liczba kroków podejmowanych w trakcie rozwoju czasu, więc każdy krok czasu jest wykonywany dla czasu $t/r $. Następnie mamy $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, co oznacza, że jeśli $r $ skaluje się jako $m ^ 2 t ^ 2/1/Epsilon $, błąd może zostać wykonany z najwyżej $ \epsilon $ dla dowolnego $ \epsilon > 0 $.
 
 Dokładniejsze przybliżenia mogą być kompilowane przez konstruowanie sekwencji wykładniczych operatorów w taki sposób, że warunki błędu anulują się.
-Najprostsza taka formuła, symetryczna formuła Trotter lub podział Strang, przyjmuje postać $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3), $ $, które może być wykonane mniej niż $ \epsilon $ dla dowolnego $ \epsilon > 0 $ przez wybranie $r $ do skalowania jako $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
+Najprostsza taka formuła, druga Order Trotter-Suzuki Formula, przyjmuje postać $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ Right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ błąd, który można wprowadzić poniżej $ \epsilon $ dla dowolnego $ \epsilon > 0 $ przez wybranie $r $ do skalowania jako $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
 
-Nawet w przypadku formuł Trotter o wyższej kolejności można utworzyć na podstawie $U _1 $.
-Najprostszą jest następująca czwarta formuła Order, pierwotnie wprowadzone przez Suzuki: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5t ^ 5), $ $, gdzie $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+Nawet formuły wyższego rzędu, w tym ($ 2K $) kolejność jednokierunkowa dla $k > 0 $, można utworzyć rekursywnie: $ $ U_ {2K} (t) = [U_ {2K-2} (s_k\~ t)] ^ 2 U_ {2K-2} ([1-4s_k] t) [U_ {2K-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2K + 1}/r ^ {2K}), $ $ WHERE $s _k = (4-4 ^ {1/(2K-1)}) ^{-1}$.
+
+Najprostszą jest następująca czwarta kolejność ($k = $2), pierwotnie wprowadzona przez Suzuki: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5t ^ 5/r ^ 4), $ $ WHERE $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 Ogólnie rzecz biorąc, szybkie i wysoce uporządkowane formuły mogą być w podobny sposób skonstruowane. jednak koszty wynikające z używania bardziej złożonych integratorów często są większe niż w czwartej kolejności w przypadku większości praktycznych problemów.
 
 Aby powyższe strategie działały, musimy mieć metodę symulowania szerokiej klasy $e ^ {-iH_j t} $.

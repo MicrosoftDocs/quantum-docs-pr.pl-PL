@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 96de062bc6ce4edf94520bec449e8d95259c0f5c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907396"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320761"
 ---
 # <a name="file-structure"></a>Struktura plików
 
@@ -248,7 +248,7 @@ Poniżej definiuje operację teleport.
 ```qsharp
 // Entangle two qubits.
 // Assumes that both qubits are in the |0> state.
-operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
+operation PrepareEntangledPair (q1 : Qubit, q2 : Qubit) : Unit 
 is Adj + Ctl {
     H(q2);
     CNOT(q2, q1);
@@ -262,10 +262,10 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
     using (ancilla = Qubit())
     {
         // Create a Bell pair between the temporary and the target
-        EPR(target, ancilla);
+        PrepareEntangledPair(target, ancilla);
 
         // Do the teleportation
-        Adjoint EPR (ancilla, source);
+        Adjoint PrepareEntangledPair(ancilla, source);
 
         if (MResetZ(source) == One) {
             X(target);
@@ -304,3 +304,41 @@ function DotProduct(a : Double[], b : Double[]) : Double {
     return accum;
 }
 ```
+
+
+## <a name="internal-declarations"></a>Deklaracje wewnętrzne
+
+Typy zdefiniowane przez użytkownika, operacje i funkcje mogą być również deklarowane jako *wewnętrzne*.
+Oznacza to, że dostęp do nich można uzyskać tylko z poziomu projektu Q #, w którym są one zadeklarowane.
+Gdy projekt jest używany jako odwołanie, wszystkie jego *publiczne* deklaracje (inne niż wewnętrzne) są udostępniane, ale próba użycia wewnętrznej deklaracji z innego projektu spowoduje wystąpienie błędu.
+Deklaracje wewnętrzne są przydatne do pisania kodu modularnego, który może być używany przez inne części projektu, ale nadal można je później zmienić bez przerywania innych projektów, które mogą być od niego zależne.
+
+Wewnętrzny typ zdefiniowany przez użytkownika, operację lub funkcję można zadeklarować po prostu przez dodanie `internal` na początku deklaracji.
+Na przykład:
+
+```qsharp
+internal newtype PairOfQubits = (Qubit, Qubit);
+
+internal operation PrepareEntangledPair(pair : PairOfQubits) : Unit 
+is Adj + Ctl {
+    let (q1, q2) = pair!;
+    H(q2);
+    CNOT(q2, q1);
+}
+
+internal function DotProduct(a : Double[], b : Double[]) : Double {
+    ...
+}
+```
+
+> [!WARNING]
+> Typy wewnętrzne zdefiniowane przez użytkownika mogą być używane tylko w sygnaturach lub typach bazowych, jeśli odpowiadające im typy lub typ zdefiniowany przez użytkownika są również wewnętrzne.
+> Na przykład jeśli istnieje typ zdefiniowany przez użytkownika `InternalOptions`, który został zadeklarowany za pomocą słowa kluczowego `internal`, następujące deklaracje spowodują błędy:
+>
+> ```qsharp
+> // Error: Can't use InternalOptions as an output type of a public function.
+> function DefaultInternalOptions() : InternalOptions { ... }
+>
+> // Error: Can't use InternalOptions as an item in a public user-defined type.
+> newtype ExtendedOptions = (Internal : InternalOptions);
+> ```
