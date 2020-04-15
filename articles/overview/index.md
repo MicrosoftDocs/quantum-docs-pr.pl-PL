@@ -7,16 +7,16 @@ ms.date: 10/22/2019
 ms.topic: landing-page
 uid: microsoft.quantum.overview.index
 ms.openlocfilehash: a033ba09fa6d694f58be30b402503e130c8d3cd4
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77907039"
 ---
-# <a name="five-questions-about-quantum-computing"></a><span data-ttu-id="a034e-103">Pięć pytań dotyczących obliczeń kwantowych</span><span class="sxs-lookup"><span data-stu-id="a034e-103">Five questions about quantum computing</span></span>
+# <a name="five-questions-about-quantum-computing"></a><span data-ttu-id="74005-103">Pięć pytań dotyczących obliczeń kwantowych</span><span class="sxs-lookup"><span data-stu-id="74005-103">Five questions about quantum computing</span></span>
 
-* [<span data-ttu-id="a034e-104">Co to są obliczenia kwantowe?</span><span class="sxs-lookup"><span data-stu-id="a034e-104">What is quantum computing?</span></span>](xref:microsoft.quantum.overview.what)
-* [<span data-ttu-id="a034e-105">Co mogą robić komputery kwantowe?</span><span class="sxs-lookup"><span data-stu-id="a034e-105">What can quantum computers do?</span></span>](xref:microsoft.quantum.overview.computers)
-* [<span data-ttu-id="a034e-106">Dlaczego warto uczyć się wykonywania obliczeń kwantowych?</span><span class="sxs-lookup"><span data-stu-id="a034e-106">Why learn quantum computing?</span></span>](xref:microsoft.quantum.overview.why)
-* [<span data-ttu-id="a034e-107">Co to jest język Q#?</span><span class="sxs-lookup"><span data-stu-id="a034e-107">What is Q#?</span></span>](xref:microsoft.quantum.overview.qsharp)
-* [<span data-ttu-id="a034e-108">Jak nauczyć się wykonywania obliczeń kwantowych w języku Q#?</span><span class="sxs-lookup"><span data-stu-id="a034e-108">How to learn quantum computing with Q#?</span></span>](xref:microsoft.quantum.overview.learn)
+* [<span data-ttu-id="74005-104">Co to są obliczenia kwantowe?</span><span class="sxs-lookup"><span data-stu-id="74005-104">What is quantum computing?</span></span>](xref:microsoft.quantum.overview.what)
+* [<span data-ttu-id="74005-105">Co mogą robić komputery kwantowe?</span><span class="sxs-lookup"><span data-stu-id="74005-105">What can quantum computers do?</span></span>](xref:microsoft.quantum.overview.computers)
+* [<span data-ttu-id="74005-106">Dlaczego warto uczyć się wykonywania obliczeń kwantowych?</span><span class="sxs-lookup"><span data-stu-id="74005-106">Why learn quantum computing?</span></span>](xref:microsoft.quantum.overview.why)
+* [<span data-ttu-id="74005-107">Co to jest język Q#?</span><span class="sxs-lookup"><span data-stu-id="74005-107">What is Q#?</span></span>](xref:microsoft.quantum.overview.qsharp)
+* [<span data-ttu-id="74005-108">Jak nauczyć się wykonywania obliczeń kwantowych w języku Q#?</span><span class="sxs-lookup"><span data-stu-id="74005-108">How to learn quantum computing with Q#?</span></span>](xref:microsoft.quantum.overview.learn)
