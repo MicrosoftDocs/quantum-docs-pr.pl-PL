@@ -1,40 +1,40 @@
 ---
-title: 'Testowanie i debugowanie p # programów'
-description: Dowiedz się, jak korzystać z testów jednostkowych, faktów i potwierdzeń oraz funkcji zrzutów do testowania i debugowania programów Quantum.
+title: Testowanie i debugowanie programów Q#
+description: Dowiedz się, jak używać testów jednostkowych, faktów i potwierdzeń oraz funkcji zrzutu do testowania i debugowania programów kwantowych.
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 8131c2ec9320b5075c37370e12ad39a4df5bd3d5
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: caf15b7273b7efed1da87a2edd62c06cd4357593
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022859"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030586"
 ---
 # <a name="testing-and-debugging"></a>Testowanie i debugowanie
 
-Podobnie jak w przypadku klasycznego programowania, konieczna jest możliwość sprawdzenia, czy programy Quantum działają zgodnie z oczekiwaniami, i aby można było zdiagnozować program Quantum, który jest nieprawidłowy.
-W tej sekcji omówiono narzędzia oferowane przez Q # do testowania i debugowania programów Quantum.
+Podobnie jak w przypadku programowania klasycznego, ważne jest, aby móc sprawdzić, czy programy kwantowe działają zgodnie z przeznaczeniem, i być w stanie zdiagnozować program kwantowy, który jest nieprawidłowy.
+W tej sekcji omówimy narzędzia oferowane przez Q# do testowania i debugowania programów kwantowych.
 
 ## <a name="unit-tests"></a>Testy jednostkowe
 
-Typowym podejściem do testowania klasycznych programów jest pisanie małych programów o nazwie *testy jednostkowe* , które uruchamiają kod w bibliotece i porównując dane wyjściowe z nieoczekiwanymi wynikami.
-Na przykład firma Microsoft może chcieć upewnić się, że `Square(2)` zwraca `4`, ponieważ *wiemy, że* $2 ^ 2 = $4.
+Jednym z typowych podejść do testowania klasycznych programów jest pisanie małych programów zwanych *testami jednostkowymi,* które uruchamiają kod w bibliotece i porównuje jego dane wyjściowe z oczekiwanymi wyjściami.
+Na przykład możemy chcieć `Square(2)` zapewnić, że zwraca `4`, ponieważ wiemy *a priori,* że $2^2 = 4$.
 
-Polecenie Q # obsługuje tworzenie testów jednostkowych dla programów Quantum i które mogą być wykonywane jako testy w ramach struktury testów jednostkowych [xUnit](https://xunit.github.io/) .
+Q# obsługuje tworzenie testów jednostkowych dla programów kwantowych i które mogą być wykonywane jako testy w ramach testowania [jednostki xUnit.](https://xunit.github.io/)
 
 ### <a name="creating-a-test-project"></a>Tworzenie projektu testowego
 
-#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Open Visual Studio 2019. Przejdź do menu `File` i wybierz pozycję `New` > `Project...`.
-W prawym górnym rogu Wyszukaj pozycję `Q#`i wybierz szablon `Q# Test Project`.
+Otwórz program Visual Studio 2019. Przejdź do `File` menu `New`  >  `Project...`i wybierz opcję .
+W prawym górnym rogu `Q#`wyszukaj `Q# Test Project` i wybierz szablon.
 
 #### <a name="command-line--visual-studio-code"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
-W ulubionym wierszu polecenia Uruchom następujące polecenie:
+W ulubionym wierszu polecenia uruchom następujące polecenie:
 ```bash
 $ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
@@ -43,8 +43,8 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-Nowy projekt będzie miał `Tests.qs`jednego pliku, który stanowi wygodne miejsce do zdefiniowania nowych testów.
-Początkowo ten plik zawiera jeden przykładowy test jednostkowy `AllocateQubit`, który sprawdza, czy nowo przydzieloną qubit znajduje się w stanie $ \ket{0}$ i drukuje komunikat:
+Nowy projekt będzie miał `Tests.qs`jeden plik, który zapewnia wygodne miejsce do definiowania nowych testów jednostkowych Q#.
+Początkowo ten plik zawiera `AllocateQubit` jeden przykładowy test jednostkowy, który sprawdza,{0}czy nowo przydzielony kubit jest w stanie $\ket $ i drukuje komunikat:
 
 ```qsharp
     @Test("QuantumSimulator")
@@ -58,39 +58,39 @@ Początkowo ten plik zawiera jeden przykładowy test jednostkowy `AllocateQubit`
     }
 ```
 
-: New: Każda operacja Q # lub funkcja, która przyjmuje argument typu `Unit` i zwraca `Unit` może być oznaczona jako test jednostkowy za pośrednictwem atrybutu `@Test("...")`. Argument tego atrybutu, `"QuantumSimulator"` powyżej, określa obiekt docelowy, na którym wykonywany jest test. Pojedynczy test można wykonać na wielu celach. Na przykład Dodaj atrybut `@Test("ResourcesEstimator")` powyżej `AllocateQubit`. 
+:new: Każda operacja lub funkcja Q#, `Unit` która `Unit` przyjmuje argument typu i `@Test("...")` zwraca, może być oznaczona jako test jednostkowy za pomocą atrybutu. Argument do tego atrybutu, `"QuantumSimulator"` powyżej, określa cel, na którym test jest wykonywany. Pojedynczy test może być wykonany na wielu obiektów docelowych. Na przykład dodaj atrybut `@Test("ResourcesEstimator")` `AllocateQubit`powyżej . 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
     operation AllocateQubit () : Unit {
         ...
 ```
-Zapisz plik i wykonaj wszystkie testy. Teraz powinny być dwa testy jednostkowe, jeden, gdzie AllocateQubit jest wykonywany w QuantumSimulator i jeden, gdzie jest wykonywany w ResourceEstimator. 
+Zapisz plik i wykonaj wszystkie testy. Teraz powinny być dwa testy jednostkowe, jeden, gdzie AllocateQubit jest wykonywany na QuantumSimulator i jeden, gdzie jest wykonywany w ResourceEstimator. 
 
-Kompilator Q # rozpoznaje wbudowane elementy docelowe "QuantumSimulator", "ToffoliSimulator" i "ResourcesEstimator" jako prawidłowe cele wykonywania dla testów jednostkowych. Istnieje również możliwość określenia dowolnej w pełni kwalifikowanej nazwy, aby zdefiniować niestandardowy cel wykonania. 
+Kompilator Q# rozpoznaje wbudowane obiekty docelowe "QuantumSimulator", "ToffoliSimulator" i "ResourcesEstimator" jako prawidłowe cele wykonania dla testów jednostkowych. Istnieje również możliwość określenia dowolnej w pełni kwalifikowanej nazwy, aby zdefiniować niestandardowy cel wykonania. 
 
-### <a name="running-q-unit-tests"></a>Uruchamianie testów jednostkowych Q #
+### <a name="running-q-unit-tests"></a>Uruchamianie testów jednostkowych Q#
 
-#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Jako jednorazowe skonfigurowanie poszczególnych rozwiązań przejdź do menu `Test` i wybierz `Test Settings` > `Default Processor Architecture` > `X64`.
+Jako jednorazowa konfiguracja na rozwiązanie `Test` przejdź do `Test Settings`  >  `Default Processor Architecture`  >  `X64`menu i wybierz opcję .
 
 > [!TIP]
-> Domyślne ustawienie architektury procesora dla programu Visual Studio jest przechowywane w pliku opcji rozwiązania (`.suo`) dla każdego rozwiązania.
-> W przypadku usunięcia tego pliku należy ponownie wybrać `X64` jako architekturę procesora.
+> Domyślne ustawienie architektury procesora dla programu Visual`.suo`Studio jest przechowywane w pliku opcji rozwiązania ( ) dla każdego rozwiązania.
+> Jeśli usuniesz ten plik, `X64` musisz ponownie wybrać jako architekturę procesora.
 
-Skompiluj projekt, przejdź do menu `Test` i wybierz pozycję `Windows` > `Test Explorer`. `AllocateQubit` zostanie wyświetlona na liście testów w grupie `Not Run Tests`. Wybierz `Run All` lub Uruchom ten test indywidualny, który powinien zostać przekazany!
+Zbuduj projekt, przejdź `Test` do menu `Windows`  >  `Test Explorer`i wybierz . `AllocateQubit`pojawi się na liście testów `Not Run Tests` w grupie. Wybierz `Run All` lub uruchom ten indywidualny test, a powinien on przejść!
 
 #### <a name="command-line--visual-studio-code"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
-Aby uruchomić testy, przejdź do folderu projektu (folder, który zawiera `Tests.csproj`), a następnie wykonaj polecenie:
+Aby uruchomić testy, przejdź do folderu `Tests.csproj`projektu (folderu, który zawiera) i wykonaj polecenie:
 
 ```bash
 $ dotnet restore
 $ dotnet test
 ```
 
-Powinny zostać wyświetlone dane wyjściowe podobne do następujących:
+Powinieneś uzyskać dane wyjściowe podobne do następujących:
 
 ```
 Build started, please wait...
@@ -111,7 +111,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-Testy jednostkowe można filtrować według ich nazwy i/lub celu wykonania:
+Testy jednostkowe mogą być filtrowane zgodnie z ich nazwą i/lub celem wykonania:
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -121,26 +121,26 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ***
 
-Funkcja wewnętrzna <xref:microsoft.quantum.intrinsic.message> ma typ `(String -> Unit)` i umożliwia tworzenie komunikatów diagnostycznych.
+Funkcja <xref:microsoft.quantum.intrinsic.message> wewnętrzna ma typ `(String -> Unit)` i umożliwia tworzenie komunikatów diagnostycznych.
 
-#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Po wykonaniu testu w Eksploratorze testów i kliknięciu testu zostanie wyświetlony panel z informacjami o wykonywaniu testów: stanie zakończonych niepowodzeniem, czas, który upłynął, i link "output". Kliknięcie linku "output" spowoduje otwarcie danych wyjściowych testu w nowym oknie.
+Po wykonaniu testu w Eksploratorze testów i kliknięciu testu pojawi się panel z informacjami o wykonaniu testu: Stan przekazany/Nieudany, czas, który upłynął i łącze "Dane wyjściowe". Jeśli klikniesz łącze "Dane wyjściowe", dane wyjściowe testu otworzą się w nowym oknie.
 
-![dane wyjściowe testu](~/media/unit-test-output.png)
+![wyjście testowe](~/media/unit-test-output.png)
 
 #### <a name="command-line--visual-studio-code"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
-Stan przekazywania/niepowodzenia dla każdego testu jest drukowany w konsoli programu przez `dotnet test`.
-W przypadku niepowodzeń testów są one również drukowane w konsoli programu w celu ułatwienia zdiagnozowania błędu.
+Stan przebiegu/niepowodzenia dla każdego testu jest `dotnet test`drukowany na konsoli przez .
+W przypadku testów, które nie po awarii są również drukowane na konsoli, aby ułatwić diagnozowanie awarii.
 
 ***
 
-## <a name="facts-and-assertions"></a>Fakty i potwierdzenia
+## <a name="facts-and-assertions"></a>Fakty i twierdzenia
 
-Ponieważ funkcje w pytaniach Q # nie mają _logicznych_ efektów ubocznych, wszelkie _Inne rodzaje_ efektów wykonywania funkcji, której typem danych wyjściowych jest pusta `()` krotka, nie można nigdy zaobserwować w programie Q #.
-Oznacza to, że komputer docelowy może nie wykonywać żadnej funkcji, która zwraca `()` z gwarancją, że to pominięcie nie zmodyfikuje zachowania żadnego z następujących kodów Q #.
-Dzięki temu funkcje zwracają `()` (tj. `Unit`) przydatne narzędzie do osadzania potwierdzeń i logiki debugowania do programów Q #. 
+Ponieważ funkcje w Q# nie mają _żadnych skutków_ ubocznych logiczne, wszelkie inne `()` _rodzaje_ efektów wykonywania funkcji, których typ wyjściowy jest pustą krotki nigdy nie można zaobserwować z poziomu programu Q#.
+Oznacza to, że komputer docelowy może zdecydować `()` się nie wykonywać żadnej funkcji, która zwraca z gwarancją, że to pominięcie nie zmodyfikuje zachowanie żadnego następującego kodu Q#.
+To sprawia, `()` że funkcje `Unit`zwracające (tj. ) przydatne narzędzie do osadzania potwierdzeń i debugowania logiki w programach Q#. 
 
 Rozważmy prosty przykład:
 
@@ -154,18 +154,18 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-W tym miejscu słowo kluczowe `fail` wskazuje, że obliczenia nie powinny być wykonywane, a na komputerze docelowym z uruchomionym programem Q # nie należy przechodzić.
-Według definicji nie można zaobserwować błędu tego rodzaju z poziomu Q #, ponieważ po osiągnięciu instrukcji `fail` nie jest uruchamiany żaden dodatkowy kod Q #.
-W takim przypadku, jeśli będziemy przełączać się do `PositivityFact`, możemy zapewnić, że jego dane wejściowe były dodatnie.
+W tym `fail` miejscu słowo kluczowe wskazuje, że obliczenia nie powinny być kontynuowane, zgłaszając wyjątek na komputerze docelowym z uruchomionym programem Q#.
+Z definicji nie można zaobserwować błędu tego rodzaju z poziomu Q#, `fail` ponieważ po osiągnięciu instrukcji nie jest uruchamiany żaden kod Q#.
+Tak więc, jeśli przejdziemy `PositivityFact`obok wezwania do , możemy być pewni, że jego wkład był pozytywny.
 
-Należy pamiętać, że można zaimplementować takie samo zachowanie, jak `PositivityFact` przy użyciu funkcji [`Fact`](xref:microsoft.quantum.diagnostics.fact) z przestrzeni nazw <xref:microsoft.quantum.diagnostics>:
+Należy zauważyć, że możemy `PositivityFact` zaimplementować takie samo zachowanie jak przy użyciu [`Fact`](xref:microsoft.quantum.diagnostics.fact) funkcji z obszaru <xref:microsoft.quantum.diagnostics> nazw:
 
 ```qsharp
-    Fact(value <= 0, "Expected a positive number.");
+    Fact(value > 0, "Expected a positive number.");
 ```
 
-Z drugiej strony, *potwierdzenia*są używane podobnie do faktów, ale mogą być zależne od stanu maszyny docelowej. Są one odpowiednio zdefiniowane jako operacje, a fakty są definiowane jako funkcje (jak powyżej).
-Aby zrozumieć rozróżnienie, należy rozważyć następujące użycie faktu w ramach potwierdzenia:
+*Twierdzenia*, z drugiej strony, są używane podobnie do faktów, ale mogą być zależne od stanu maszyny docelowej. Odpowiednio, są one definiowane jako operacje, podczas gdy fakty są definiowane jako funkcje (jak powyżej).
+Aby zrozumieć rozróżnienie, należy wziąć pod uwagę następujące użycie faktu w asercji:
 
 ```qsharp
 operation AssertQubitsAreAvailable() : Unit
@@ -174,13 +174,13 @@ operation AssertQubitsAreAvailable() : Unit
 }
 ```
 
-W tym miejscu używamy operacji <xref:microsoft.quantum.environment.getqubitsavailabletouse>, aby zwrócić liczbę qubits dostępnych do użycia.
-Ponieważ to wyraźnie zależy od stanu globalnego programu i jego środowiska wykonawczego, definicja `AssertQubitsAreAvailable` musi być operacją.
-Można jednak użyć tego stanu globalnego do uzyskania prostej wartości `Bool` jako dane wejściowe do funkcji `Fact`.
+W tym miejscu używamy <xref:microsoft.quantum.environment.getqubitsavailabletouse> operacji, aby zwrócić liczbę kubitów dostępnych do użycia.
+Ponieważ to wyraźnie zależy od globalnego stanu programu i jego `AssertQubitsAreAvailable` środowiska wykonywania, nasza definicja musi być również operacją.
+Jednak możemy użyć tego stanu globalnego, `Bool` aby uzyskać `Fact` prostą wartość jako dane wejściowe do funkcji.
 
-W oparciu o te pomysły [Preludium](xref:microsoft.quantum.libraries.standard.prelude) oferuje dwa szczególnie przydatne potwierdzenia, <xref:microsoft.quantum.intrinsic.assert> i <xref:microsoft.quantum.intrinsic.assertprob> oba modeluje jako operacje na `()`. Każdy z tych zatwierdzeń przyjmuje operatora Pauli opisujące konkretną miarę zainteresowania, rejestr Quantum, na którym ma zostać wykonane pomiary, i hipotetyczny wynik.
-Na komputerach docelowych, które współpracują przez symulację, nie są one powiązane z [theoremem bez klonowania](https://en.wikipedia.org/wiki/No-cloning_theorem)i mogą wykonywać takie pomiary bez zakłócania rejestracji przesłanej do takich potwierdzeń.
-Symulator może następnie wyglądać podobnie do powyższej funkcji `PositivityFact`, przerywanie obliczeń, jeśli hipotetyczny wynik nie zostanie zaobserwowany w praktyce:
+Opierając się na tych pomysłach, [preludium](xref:microsoft.quantum.libraries.standard.prelude) <xref:microsoft.quantum.intrinsic.assertprob> oferuje dwa szczególnie `()`przydatne twierdzenia, <xref:microsoft.quantum.intrinsic.assert> a oba wzorowane na operacjach na . Twierdzenia te obejmują operatora Pauliego opisującego konkretny pomiar zainteresowania, rejestr kwantowy, na którym ma być wykonany pomiar, oraz hipotetyczny wynik.
+Na maszynach docelowych, które działają za pomocą symulacji, nie jesteśmy związani [twierdzeniem o braku klonowania](https://en.wikipedia.org/wiki/No-cloning_theorem)i możemy wykonywać takie pomiary bez zakłócania rejestru przekazywanego do takich twierdzeń.
+Symulator może następnie, podobnie `PositivityFact` jak funkcja powyżej, przerwać obliczenia, jeśli hipotetyczny wynik nie będzie przestrzegany w praktyce:
 
 ```qsharp
 using (register = Qubit()) 
@@ -193,17 +193,17 @@ using (register = Qubit())
 }
 ```
 
-Na fizycznym sprzęcie Quantum, gdzie theorem bez klonowania uniemożliwia badanie stanu Quantum, operacje `Assert` i `AssertProb` po prostu zwracają `()` bez żadnego skutku.
+Na fizycznym sprzęcie kwantowym, gdzie teoria o braku `Assert` klonowania uniemożliwia badanie stanu kwantowego, operacje i `AssertProb` operacje po prostu wracają `()` bez innego efektu.
 
-Przestrzeń nazw <xref:microsoft.quantum.diagnostics> zawiera kilka więcej funkcji rodziny `Assert`, co pozwala nam sprawdzić bardziej zaawansowane warunki. 
+Obszar <xref:microsoft.quantum.diagnostics> nazw oferuje kilka innych `Assert` funkcji rodziny, które pozwalają nam sprawdzić bardziej zaawansowane warunki. 
 
 ## <a name="dump-functions"></a>Funkcje zrzutu
 
-Aby ułatwić rozwiązywanie problemów z programami Quantum, przestrzeń nazw <xref:microsoft.quantum.diagnostics> oferuje dwie funkcje, które mogą zrzutować do pliku bieżący stan maszyny docelowej: <xref:microsoft.quantum.diagnostics.dumpmachine> i <xref:microsoft.quantum.diagnostics.dumpregister>. Wygenerowane dane wyjściowe każdego z nich są zależne od maszyny docelowej.
+Aby ułatwić rozwiązywanie problemów <xref:microsoft.quantum.diagnostics> z programami kwantowymi, obszar nazw oferuje dwie funkcje, które mogą zrzucić do pliku bieżący stan komputera docelowego: <xref:microsoft.quantum.diagnostics.dumpmachine> i <xref:microsoft.quantum.diagnostics.dumpregister>. Wygenerowane dane wyjściowe każdego zależy od maszyny docelowej.
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-Kompleksowy symulator Quantum dystrybuowany w ramach zestawu Quantum Development Kit zapisuje w pliku [funkcję Wave](https://en.wikipedia.org/wiki/Wave_function) całego systemu Quantum jako tablicę jednowymiarową liczb zespolonych, w której każdy element reprezentuje amplitudę prawdopodobieństwa pomiaru stanu podstawy obliczeniowej $ \ket{n} $, gdzie $ \ket{n} = \ket{b_ {n-1}... b_1b_0} $ dla usługi BITS $\{b_i\}$. Na przykład na komputerze z tylko dwoma qubits przydzielonymi i w stanie Quantum $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ wywołując <xref:microsoft.quantum.diagnostics.dumpmachine> generuje te dane wyjściowe:
+Pełnostanowy symulator kwantowy dystrybuowany jako część Quantum Development Kit zapisuje w pliku [funkcję fali](https://en.wikipedia.org/wiki/Wave_function) całego systemu kwantowego, jako jednowymiarową tablicę liczb zespolonych, w której każdy element reprezentuje amplitudę prawdopodobieństwa pomiaru stanu podstawy obliczeniowej $\ket{n}$, gdzie $\ket{n} = \ket{b_{n-1}... b_1b_0}$ dla bitów\{$ b_i\}$. Na przykład na komputerze z przydzielonymi tylko dwoma kubitami i w stanie kwantowym $$ \begin{align} \ket{\psi}{1}= \frac {\sqrt{2}} \ket{00} - \frac{(1 + i)}{2} \ket{10}, \end{align} $$ wywołanie <xref:microsoft.quantum.diagnostics.dumpmachine> generuje to dane wyjściowe:
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -213,18 +213,18 @@ Kompleksowy symulator Quantum dystrybuowany w ramach zestawu Quantum Development
 ∣3❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-Pierwszy wiersz zawiera komentarz z identyfikatorami odpowiednich qubits w ich znaczącej kolejności.
-Pozostała część wierszy zawiera opis amplitudy prawdopodobieństwa pomiaru wektora stanu \ket{n} $ w obu formatach kartezjańskiego i biegunowych. Szczegółowo dla pierwszego wiersza:
+Pierwszy wiersz zawiera komentarz z identyfikatorami odpowiednich kubitów w ich znaczącej kolejności.
+W pozostałych wierszach opisano amplitudę prawdopodobieństwa pomiaru wektora stanu podstawy $\ket{n}$ zarówno w formacie kartezjańskim, jak i biegunowym. W szczegółach dla pierwszego rzędu:
 
-* **`∣0❭:`** ten wiersz odnosi się do `0` stanu podstawy obliczeń
-* **`0.707107 +  0.000000 i`** : amplituda prawdopodobieństwa w formacie kartezjańskiego.
-* **` == `** : znak `equal` oddzieli obie równoważne reprezentacje.
-* **`**********  `** : graficzna reprezentacja rozmiaru, liczba `*` jest proporcjonalna do prawdopodobieństwa mierzenia tego wektora stanu.
-* **`[ 0.500000 ]`** : wartość liczbowa wielkości
-* **`    ---`** : graficzna reprezentacja fazy amplitudy (patrz poniżej).
-* **`[ 0.0000 rad ]`** : wartość liczbowa fazy (w radianach).
+* **`∣0❭:`** ten wiersz odpowiada `0` obliczonemu stanowi podstawy
+* **`0.707107 +  0.000000 i`**: amplituda prawdopodobieństwa w formacie kartezjańskim.
+* **` == `**: `equal` znak oddziela obie równoważne reprezentacje.
+* **`**********  `**: Graficzna reprezentacja wielkości, liczba `*` jest proporcjonalna do prawdopodobieństwa pomiaru tego wektora stanu.
+* **`[ 0.500000 ]`**: wartość liczbowa wielkości
+* **`    ---`**: graficzna reprezentacja fazy amplitudy (patrz poniżej).
+* **`[ 0.0000 rad ]`**: wartość liczbową fazy (w radianach).
 
-Obie wartości i fazy są wyświetlane ze graficzną reprezentacją. Reprezentacja wielkości jest prosta do przodu: pokazuje pasek `*`, tym większe prawdopodobieństwo powyższego poziomu paska. Dla fazy pokazywane są następujące symbole reprezentujące kąt na podstawie zakresów:
+Zarówno wielkość, jak i faza są wyświetlane z graficzną reprezentacją. Reprezentacja wielkości jest prosta: pokazuje pasek `*`, im większe prawdopodobieństwo, tym większe będzie pasek. Dla fazy pokazujemy następujące symbole reprezentujące kąt na podstawie zakresów:
 
 ```
 [ -π/16,   π/16)       ---
@@ -246,7 +246,7 @@ Obie wartości i fazy są wyświetlane ze graficzną reprezentacją. Reprezentac
 [31π/16,   π/16)       ---
 ```
 
-W poniższych przykładach przedstawiono `DumpMachine` niektórych typowych stanów:
+Poniższe przykłady `DumpMachine` pokazują dla niektórych wspólnych stanów:
 
 ### `∣0❭`
 
@@ -282,37 +282,37 @@ W poniższych przykładach przedstawiono `DumpMachine` niektórych typowych stan
 
 
   > [!NOTE]
-  > Identyfikator qubit jest przypisywany w czasie wykonywania i nie musi być wyrównany do kolejności, w której został przydzielony qubit lub jej pozycji w rejestrze qubit.
+  > Identyfikator kubitu jest przypisywany w czasie wykonywania i nie jest koniecznie wyrównany z kolejnością, w której kubit został przydzielony lub jego położeniem w rejestrze kubitów.
 
 
-#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
-  > Identyfikator qubit można ustalić w programie Visual Studio, umieszczając punkt przerwania w kodzie i sprawdzając wartość zmiennej qubit, na przykład:
+  > Można wymyślić identyfikator kubitu w programie Visual Studio, umieszczając punkt przerwania w kodzie i sprawdzając wartość zmiennej kubitowej, na przykład:
   > 
-  > ![Pokaż identyfikator qubit w programie Visual Studio](~/media/qubit_id.png)
+  > ![pokaż identyfikator kubitu w programie Visual Studio](~/media/qubit_id.png)
   >
-  > qubit z indeksem `0` na `register2` ma identyfikator =`3`, qubit z indeksem `1` ma identyfikator =`2`.
+  > kubit z `0` indeksem na `register2` `3`has id= `1` , kubit`2`z indeksem ma id = .
 
 #### <a name="command-line--visual-studio-code"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > Identyfikator qubit można ustalić przy użyciu funkcji <xref:microsoft.quantum.intrinsic.message> i przekazywać zmienną qubit w komunikacie, na przykład:
+  > Możesz wymyślić identyfikator kubitu za <xref:microsoft.quantum.intrinsic.message> pomocą funkcji i przekazując zmienną kubitową w wiadomości, na przykład:
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
   > ```
   > 
-  > który może generować następujące dane wyjściowe:
+  > które mogłyby wygenerować ten wynik:
   >```
   > 0=q:3; 1=q:2
   >```
-  > co oznacza, że qubit z indeksem `0` na `register2` ma identyfikator =`3`, qubit z indeksem `1` ma identyfikator =`2`.
+  > co `0` oznacza, że kubit `register2` z indeksem na ma id =`3`, kubit z indeksem `1` ma id =`2`.
 
 
 ***
 
-<xref:microsoft.quantum.diagnostics.dumpmachine> jest częścią <xref:microsoft.quantum.diagnostics> przestrzeni nazw, dlatego aby można było jej używać, należy dodać instrukcję `open`:
+<xref:microsoft.quantum.diagnostics.dumpmachine>jest częścią <xref:microsoft.quantum.diagnostics> obszaru nazw, więc aby go użyć, `open` należy dodać instrukcję:
 
 ```qsharp
 namespace Samples {
@@ -331,9 +331,9 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister> działa jak <xref:microsoft.quantum.diagnostics.dumpmachine>, z tą różnicą, że pobiera również tablicę qubits w celu ograniczenia ilości informacji tylko do odpowiednich qubits.
+<xref:microsoft.quantum.diagnostics.dumpregister>działa <xref:microsoft.quantum.diagnostics.dumpmachine>jak , z wyjątkiem to również wymaga tablicy kubitów, aby ograniczyć ilość informacji tylko do tych istotnych dla odpowiednich kubitów.
 
-Podobnie jak w przypadku <xref:microsoft.quantum.diagnostics.dumpmachine>, informacje generowane przez <xref:microsoft.quantum.diagnostics.dumpregister> są zależne od maszyny docelowej. W przypadku kompleksowego symulatora Quantum zapisuje w pliku funkcję Wave do globalnej fazy podsystemu Quantum wygenerowanego przez podaną qubits w tym samym formacie co <xref:microsoft.quantum.diagnostics.dumpmachine>.  Na przykład należy ponownie wykonać maszynę z tylko dwoma qubits przydzielonymi i w stanie Quantum $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ Pi/4} ((\frac{1}{\sqrt{2}} \ket{0}-\frac{(1 + i)}{2} \ket{1}) \otimes \frac{-(1 + i)} {\sqrt{2}} \ket{0}) \end{align} $ $ wywołujący <xref:microsoft.quantum.diagnostics.dumpregister> dla `qubit[0]` generuje te dane wyjściowe :
+Podobnie <xref:microsoft.quantum.diagnostics.dumpmachine>jak w , <xref:microsoft.quantum.diagnostics.dumpregister> informacje generowane przez zależy od maszyny docelowej. Dla pełnego stanu symulator kwantowy zapisuje do pliku funkcji fali do globalnej fazy sub-systemu kwantowego generowane przez <xref:microsoft.quantum.diagnostics.dumpmachine>dostarczone kubity w tym samym formacie co .  Na{1}przykład, weź ponownie maszynę z przydzielonymi tylko dwoma kubitami i w stanie kwantowym $$ \begin{align}{2}\ket{\psi} = \frac {\sqrt }{00} \ket - \frac{(1 +{2} i)} \ket{10} = - e^{-i\pi/4} ( (\frac{1}{\sqrt{2}} \ket{0} - \frac{(1 + i)} `qubit[0]` {2} \ket{1} ) \otimes \frac{-(1 + i)}{\sqrt{2}} \ket{0} ) , \end{align} $$ wywołanie <xref:microsoft.quantum.diagnostics.dumpregister> generuje to dane wyjściowe:
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -341,7 +341,7 @@ Podobnie jak w przypadku <xref:microsoft.quantum.diagnostics.dumpmachine>, infor
 ∣1❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-i wywołanie <xref:microsoft.quantum.diagnostics.dumpregister> dla `qubit[1]` generuje następujące dane wyjściowe:
+i <xref:microsoft.quantum.diagnostics.dumpregister> wzywając `qubit[1]` do generuje ten wynik:
 
 ```
 # wave function for qubits with ids (least to most significant): 1
@@ -349,13 +349,13 @@ i wywołanie <xref:microsoft.quantum.diagnostics.dumpregister> dla `qubit[1]` ge
 ∣1❭:    -0.500000 + -0.500000 i  ==     ***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-Ogólnie rzecz biorąc, stan rejestru Entangled z innym rejestrem jest stanem mieszanym, a nie czystym. W takim przypadku <xref:microsoft.quantum.diagnostics.dumpregister> wyświetla następujący komunikat:
+Ogólnie rzecz biorąc stan rejestru, który jest uwikłany w inny rejestr jest stan mieszany, a nie czysty. W takim <xref:microsoft.quantum.diagnostics.dumpregister> przypadku wysyła następujący komunikat:
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-Poniższy przykład pokazuje, jak można użyć obu <xref:microsoft.quantum.diagnostics.dumpregister> i <xref:microsoft.quantum.diagnostics.dumpmachine> w kodzie Q:
+Poniższy przykład pokazuje, jak <xref:microsoft.quantum.diagnostics.dumpregister> można <xref:microsoft.quantum.diagnostics.dumpmachine> używać zarówno w kodzie Q#:
 
 ```qsharp
 namespace app
@@ -382,6 +382,6 @@ namespace app
 
 ## <a name="debugging"></a>Debugowanie
 
-W oparciu o `Assert` i `Dump` funkcje i operacje, funkcja Q # obsługuje podzbiór standardowych możliwości debugowania programu Visual Studio: [ustawianie punktów przerwania](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [Przechodzenie przez kod przy użyciu](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) klawisza F10 i [Sprawdzanie wartości zmiennych klasycznych](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) jest możliwe podczas wykonywania kodu w symulatorze.
+Na początku `Assert` `Dump` i funkcje i operacje, Q# obsługuje podzbiór standardowych funkcji debugowania programu Visual Studio: [ustawianie punktów przerwania linii, przechodzenie](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints) [przez kod przy użyciu F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) i sprawdzanie wartości [zmiennych klasycznych](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) są możliwe podczas wykonywania kodu w symulatorze.
 
-Debugowanie w Visual Studio Code wykorzystuje funkcje debugowania udostępniane przez program C# for Visual Studio Code Extension obsługiwane przez OmniSharp i wymagające zainstalowania [najnowszej wersji](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). 
+Debugowanie w programie Visual Studio Code wykorzystuje możliwości debugowania udostępniane przez rozszerzenie kodu programu Visual Studio c# obsługiwane przez omnisharp i wymaga zainstalowania [najnowszej wersji.](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) 
