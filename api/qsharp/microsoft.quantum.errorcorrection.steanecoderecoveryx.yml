@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.ErrorCorrection
 summary: Dekoder dla X części grupy stabilizatorów ⟦ 7, 1, 3 ⟧ Steane w kodzie Quantum.
 remarks: Wybrany dekoder używa właściwości CSS kodu ⟦ 7, 1, 3 ⟧ Steane Code, tj. poprawia liczbę błędów X i Z. Właściwość kodu jest, że lokalizacja X, odpowiednio, korekta z, ma zostać zastosowana, jest kodowaniem 3-bitowym X, odpowiednio, Z Syndrome, gdy jest traktowana jako liczba całkowita.
 syntax: 'function SteaneCodeRecoveryX (syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome) : Pauli[]'
-references: '- D. Gottesman, "kody stabilizujące i Korekcja błędów Quantum", "Ph.D., Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "kody stabilizujące i Korekcja błędów Quantum", "Ph.D., Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome)'
   types:
@@ -16,7 +16,7 @@ input:
 output:
   content: Pauli[]
   types:
-  - summary: Tablica operacji Pauli, która w przypadku zastosowania do zakodowanego systemu Quantum, rozwiązuje błąd odpowiadający `syndrome`.
+  - summary: Tablica operacji Pauli, która w przypadku zastosowania do zakodowanego systemu Quantum, koryguje błąd odpowiadający `syndrome`.
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -24,9 +24,9 @@ seeAlso:
 - steanecoderecoveryx
 - steanecoderecoveryfns
 metadata:
-  ms.openlocfilehash: 7805284f29bfcbb6d4ba56f616f492b2f2126f7b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b644842eb7ddfe9d44d5288ee5e34e097c00f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232289"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682972"

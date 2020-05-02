@@ -12,17 +12,17 @@ output:
   content: Int
   types:
   - summary: >-
-      Liczba qubits, które mogą zostać przydzieloną w instrukcji `using`.
+      Liczba qubits, które mogą zostać przydzieloną w `using` instrukcji.
 
-      Jeśli używana maszyna docelowa nie zawiera tych informacji, zostanie zwrócona `-1`.
+      Jeśli używana maszyna docelowa nie dostarcza tych informacji, `-1` zostanie zwrócona wartość.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 1cb1331aa26ec9755a9e379336f46387b61bb0ae
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230470"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682396"

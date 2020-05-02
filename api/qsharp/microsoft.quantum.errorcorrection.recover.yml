@@ -3,16 +3,16 @@ uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez typ `QECC`.
+summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez `QECC` typ.
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Błąd QUANTUM — poprawianie kodu jako typu `QECC`, w którym opisano kodowanie i dekodowanie danych Quantum oraz sposób mierzenia błędów Syndromes.
+    summary: Błąd QUANTUM — poprawianie kodu w pakiecie jako `QECC` Typ opisuje kodowanie i dekodowanie danych Quantum oraz sposób mierzenia błędu Syndromes.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: '`RecoveryFn`, który mapuje każdy błąd Syndrome na operacje `Pauli[]`, które poprawiają wykryte błędy.'
+    summary: A `RecoveryFn` , który mapuje każdy błąd Syndrome `Pauli[]` na operacje, które poprawiają wykryte błędy.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Tablica qubits, w której jest zdefiniowany kod stabilizatorów.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: baaa5862dd189a04667081d762900931e6b5e766
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220355"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682290"

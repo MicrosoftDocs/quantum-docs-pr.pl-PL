@@ -3,19 +3,19 @@ uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez typ `CSS`.
+summary: Wykonuje pojedynczą rundę korekcji błędów przez kod Quantum opisany przez `CSS` typ.
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Błąd w kodzie CSS Quantum — poprawianie kodu w formie `CSS` Typ opisuje kodowanie i dekodowanie danych Quantum oraz sposób mierzenia błędów Syndromes.
+    summary: Błąd w formacie CSS Quantum — poprawianie kodu w pakiecie `CSS` jako typ opisuje kodowanie i dekodowanie danych Quantum oraz sposób mierzenia błędu Syndromes.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: '`RecoveryFn`, który mapuje każdy $X $ Error Syndrome na operacje `Pauli[]`, które korygują wykryte błędy.'
+    summary: A `RecoveryFn` , który mapuje każdy $X $ Error Syndrome `Pauli[]` do operacji, które korygują wykryty błąd.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: '`RecoveryFn`, który mapuje każdy $Z $ Error Syndrome na operacje `Pauli[]`, które korygują wykryte błędy.'
+    summary: A `RecoveryFn` , który mapuje każdy $Z $ Error Syndrome `Pauli[]` do operacji, które korygują wykryty błąd.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Tablica qubits, w której jest zdefiniowany kod stabilizatorów.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220270"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682273"

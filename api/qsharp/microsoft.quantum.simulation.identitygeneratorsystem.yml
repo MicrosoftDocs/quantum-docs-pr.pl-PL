@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.identitygeneratorsystem
 name: IdentityGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Zwraca System generatora spójny z `H = 0`hamiltonian zero, który odpowiada operacji ewolucji tożsamości.
+summary: Zwraca System generatora spójny z zerem hamiltonian `H = 0`, który odpowiada operacji ewolucji tożsamości.
 syntax: 'function IdentityGeneratorSystem () : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: ()
@@ -14,9 +14,9 @@ output:
   - summary: System generatora reprezentujący ewolucję w hamiltonian $H = $0.
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: c15d81a712c144f891a5a92fc56d859162049a6a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5b4ace024d7a327959d7358c4b8b8cc17febba33
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216224"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683035"

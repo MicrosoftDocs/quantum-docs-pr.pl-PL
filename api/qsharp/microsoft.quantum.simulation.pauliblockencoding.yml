@@ -8,13 +8,13 @@ summary: >-
 
 
   Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ jest opisywany przez sumę Pauliych warunków $P _j $, każdy z rzeczywistym czynnikiem $ \ alpha_j $.
-remarks: Jest on uzyskiwany przez przygotowanie i cofnięcie przygotowania stanu $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ i konstruowanie <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> jednostek i <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>sterowanych przez mnożenie.
+remarks: Jest on uzyskiwany przez przygotowanie i cofnięcie przygotowania stanu $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ i skonstruowanie kontrolowanego jednostkowo jednostki <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> i. <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: '`GeneratorSystem`, który opisuje $H $ jako sumę Pauli warunków'
+    summary: A `GeneratorSystem` , który opisuje $H $ jako sumę Pauli warunków
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -29,15 +29,15 @@ output:
       ## <a name="second-parameter"></a>Drugi parametr
 
 
-      `BlockEncodingReflection` jednostki $U $ hamiltonian $H $. Ponieważ ta jednostka jest taka sama jak $U ^ 2 = I $, jest również odbiciem.
+      `BlockEncodingReflection` Jednostkowa $U $ hamiltonian $H $. Ponieważ ta jednostka jest taka sama jak $U ^ 2 = I $, jest również odbiciem.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216139"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682540"
