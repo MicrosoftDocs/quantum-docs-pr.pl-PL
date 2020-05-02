@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Zwraca wartość logiczną, która powoduje odłączenie dwóch wartości.
 remarks: >-
-  W przeciwieństwie do operatora `or` ta funkcja nie jest krótka, tak aby oba dane wejściowe były w pełni oceniane.
+  W przeciwieństwie `or` do operatora, ta funkcja nie jest krótka obwód, tak że oba dane wejściowe są w pełni oceniane.
 
 
   W przypadku zachowania do krótkiego obwodu następujące elementy są równoważne:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`, jeśli i tylko wtedy, gdy `a` lub `b` są `true`.'
+  - summary: '`true`if i tylko wtedy, `a` gdy `b` lub `true`są.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235162"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683559"
