@@ -7,7 +7,7 @@ summary: >-
   Konwertuje daną tablicę wartości logicznych na równoważną dużą liczbę całkowitą.
 
   Element 0 tablicy jest najmniej znaczącym bitem dużej liczby całkowitej.
-remarks: Aby uzyskać więcej informacji, zobacz [ C# Konstruktor BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) .
+remarks: Aby uzyskać więcej informacji, zobacz [Konstruktor BigInteger języka C#](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) .
 syntax: 'function BoolArrayAsBigInt (a : Bool[]) : BigInt'
 input:
   content: '(a : Bool[])'
@@ -22,9 +22,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 40a263976361a3322142d17213c28b2b8ec7d81d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 770b565a3137085ff6af3ea3d4a1ad3ff5938f6d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227478"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82661967"
