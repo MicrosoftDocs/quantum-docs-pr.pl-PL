@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Dana tablica operatorów Pauli `[P0, ..., Pn]`, funkcja ta zwraca liczbę całkowitą z rozszerzeniem binarnym, łącząc mapowania każdego operatora Pauli w `bits(Pn) ... bits(P0)`kolejności big-endian.
+  Dana tablica operatorów `[P0, ..., Pn]`Pauli, ta funkcja zwraca liczbę całkowitą z rozszerzeniem binarnym, łącząc mapowania każdego operatora Pauli w kolejności `bits(Pn) ... bits(P0)`big-endian.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Liczba całkowita, która jednoznacznie identyfikuje `paulis`, zgodnie z poniższym opisem.
+  - summary: Unikatowa identyfikacja `paulis`liczby całkowitej, zgodnie z poniższym opisem.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230759"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677391"

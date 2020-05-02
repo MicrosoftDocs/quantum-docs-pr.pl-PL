@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Na podstawie przygotowań, które są przylegające i pomiarowe, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+summary: Na podstawie przygotowania, które jest sąsiednie i pomiarowe, szacuje częstotliwość, z jaką ten pomiar zakończy się powodzeniem (zwraca `Zero`), wykonując daną liczbę prób.
 remarks: W przypadku operacji współdziałania niektóre założenia mogą zostać wykonane, takie jak wywołanie operacji, przygotuje qubits do tego samego stanu, co umożliwi maszynom docelowym wykonywanie niektórych optymalizacji wydajności.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Oszacowanie $ \hat{p} $ częstotliwości, z którą $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zwraca `Zero`, uzyskany przy użyciu nieobciążonego dwumianu, szacowania $ \hat{p} = n\_{\uparrow}/n\_{\Text{measurements}} $, gdzie $n\_{\ pozostała liczba zaobserwowanych wyników to z prze`Zero`.
+  - summary: Oszacowanie $ \hat{p} $ częstotliwości, z którą $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ zwraca `Zero`, uzyskany przy użyciu nieobciążonego dwumianu, szacowania $ \hat{p}\_= n {\uparrow}\_/n {\Text{measurements}} $,\_gdzie $n {\uparrow} $ to liczba `Zero` zaobserwowanych wyników.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229178"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677704"
