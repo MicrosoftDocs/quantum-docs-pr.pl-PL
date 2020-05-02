@@ -7,7 +7,7 @@ summary: Oblicza moduł między dwoma liczbami rzeczywistymi.
 remarks: >-
   Ta funkcja oblicza moduł rzeczywisty, zawijając linię rzeczywistą wokół okręgu jednostki, a następnie wyszukując kąt w okręgu jednostki odpowiadającym danym wejściowym.
 
-  Dane wejściowe `minValue` następnie skutecznie określają, gdzie należy wyciąć okrąg jednostkowy.
+  Następnie `minValue` dane wejściowe określają, gdzie należy wyciąć okrąg jednostkowy.
 examples: >-
   ```qsharp
       // Returns 3 π / 2.
@@ -38,9 +38,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 9430ce172fec2bf10d64aa111d5a788c574a9566
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0a35628198ae5d496b093b98542daeac16aced9b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232374"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681494"
