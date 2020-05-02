@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: Zwraca zdefiniowaną wartość końcową danego zakresu, która nie musi być ostatnim elementem w sekwencji.
 remarks: >-
-  Pierwszy element wyrażenia zakresu jest `start`, jego drugi element jest `start+step`, trzeci element jest `start+step+step`itd., dopóki nie zostanie przeniesiona `end`.
+  Pierwszy element wyrażenia zakresu `start`to, jego drugi element `start+step`jest, trzeci element jest `start+step+step`itd., do do. `end`
 
 
   Należy zauważyć, że zdefiniowana wartość końcowa zakresu może różnić się od ostatniego elementu w sekwencji określonej przez zakres; na przykład, w zakresie 0.. 2.. 5 ostatni element to 4, ale wartość końcowa to 5.
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066646"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657638"

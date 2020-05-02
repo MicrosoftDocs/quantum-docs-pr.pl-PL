@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: Zwraca zdefiniowaną wartość początkową danego zakresu.
 remarks: >-
-  Pierwszy element wyrażenia zakresu jest `start`, jego drugi element jest `start+step`, trzeci element jest `start+step+step`itd., dopóki nie zostanie przeniesiona `end`.
+  Pierwszy element wyrażenia zakresu `start`to, jego drugi element `start+step`jest, trzeci element jest `start+step+step`itd., do do. `end`
 
 
   Należy zauważyć, że zdefiniowana wartość początkowa zakresu jest taka sama jak pierwszy element sekwencji, chyba że zakres określa pustą sekwencję (na przykład 2.. 1).
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231762"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657254"
