@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
 name: EstimateEnergyWithAdiabaticEvolution
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Wykonuje przygotowanie stanu, stosując `statePrepUnitary` na automatycznie przydzielonym stanie danych wejściowych, a następnie przygotowanie stanu adiabatic przy użyciu `adiabaticUnitary`, a wreszcie oszacowania fazy w odniesieniu do `qpeUnitary`na stanie uzyskanym przy użyciu `phaseEstAlgorithm`.
+summary: '`statePrepUnitary` Wykonuje przygotowanie stanu przez zastosowanie na podstawie automatycznie przydzielonego stanu danych wejściowych, a następnie przygotowania stanu adiabatic `adiabaticUnitary`przy użyciu, i wreszcie szacowania fazy, `qpeUnitary`w odniesieniu do stanu `phaseEstAlgorithm`uzyskanego przy użyciu.'
 syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Firma Oracle reprezentująca operator jednostkowy $U $ reprezentujący ewolucję czasu $ \delta t $ w generatorze dynamicznym ze stanem ziemi $ \ket{\phi} $ i energią stanu ziemi $E = \phi\\\delta t $.
+    summary: Firma Oracle reprezentująca operator jednostkowy $U $ reprezentujący ewolucję czasu $ \delta t $ w generatorze dynamicznym ze stanem ziemi $ \ket{\phi} $ i energią stanu ziemi\\$E = \phi, \delta t $.
     isOperation: true
     input:
       types:
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: a5c97bb34307c5216720f82c5cf91ca21cf90739
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ffab30daf3028c12768d9c9f4cd16a8011a7931f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223296"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655184"

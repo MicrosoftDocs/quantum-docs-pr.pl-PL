@@ -11,12 +11,12 @@ summary: >-
 remarks: >-
   > [!WARNING]
 
-  > Interpretacja `GeneratorIndex` nie jest zdefiniowana, z wyjątkiem odwołania do określonego zestawu generatorów.
+  > Interpretacja elementu `GeneratorIndex` nie jest zdefiniowana, z wyjątkiem odwołania do określonego zestawu generatorów.
 
 
   ### <a name="examples"></a>Przykłady
 
-  Przy użyciu <xref:microsoft.quantum.simulation.paulievolutionset>operator $ \pi X_2 X_5 Y_9 $ jest reprezentowany jako:
+  Przy <xref:microsoft.quantum.simulation.paulievolutionset>użyciu, operator $ \pi X_2 X_5 Y_9 $ jest reprezentowany jako:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067054"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655159"
