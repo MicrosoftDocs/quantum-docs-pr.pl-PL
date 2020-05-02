@@ -3,14 +3,14 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1}\_PR ^ {z}\_p) Z\_{p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In\{0, 1\}$ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_z PR ^ {z}\_p) Z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $
+summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1}\_z PR ^ {z}\_p) z\_{p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In\{0, 1\}$ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1\_} z PR ^ {\_Z} p\_) z {p-1}... Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- Kodowanie elektronicznych widm w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Neven https://arxiv.org/abs/1805.03662'
+references: '- Kodowanie elektronicznego spektrum w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: Gdy qubit jest w stanie $ \ket{0}$, $X $ jest zastosowany. Gdy jest w stanie $ \ket{1}$, $Y $ jest zastosowany.
+    summary: Gdy qubit jest w stanie $ \ket{0}$, zostanie zastosowany $X $. Gdy jest w stanie $ \ket{1}$, zostanie zastosowany $Y $.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228464"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665302"
