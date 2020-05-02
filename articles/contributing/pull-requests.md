@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907464"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686854"
 ---
 # <a name="opening-pull-requests"></a>Otwieranie żądań ściągnięcia #
 
@@ -60,9 +60,9 @@ Dzięki temu procesowi firma Microsoft może korzystać z funkcji usługi GitHub
 
 ## <a name="how-to-make-a-pull-request"></a>Jak utworzyć żądanie ściągnięcia ##
 
-Istnieją dwa podstawowe sposoby tworzenia żądania ściągnięcia.
-W przypadku małych zmian, które mają wpływ tylko na pojedynczy plik, interfejs sieci Web GitHub może służyć do przepełnienia żądania ściągnięcia w trybie online.
-W przypadku bardziej skomplikowanych udziałów często łatwiej jest użyć komputera lokalnego do przygotowania żądania ściągnięcia.
+Istnieją dwa podstawowe sposoby tworzenia żądania ściągnięcia.  
+W przypadku małych zmian, które mają wpływ tylko na pojedynczy plik, interfejs sieci Web GitHub może służyć do przepełnienia żądania ściągnięcia w trybie online. Po prostu przejdź do pliku, który chcesz edytować, i użyj ikony edycji.  
+W przypadku bardziej skomplikowanych udziałów często łatwiej jest sklonować repozytorium na komputerze lokalnym, aby najpierw przygotować żądanie ściągnięcia.
 
 <!--
 ### Using the Web Interface ###

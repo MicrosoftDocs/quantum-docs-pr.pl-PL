@@ -4,11 +4,11 @@ name: BlockEncodingReflectionByLCU
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Koduje operatora zainteresowania w `BlockEncodingReflection`.
+  Koduje operatora zainteresowania `BlockEncodingReflection`.
 
 
-  To konstruuje `BlockEncodingReflection` jednostkowego $U = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowania stanu, taką jak $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, i $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
-remarks: Ta `BlockEncoding` implementacja udostępnia właściwości `BlockEncodingReflection`.
+  To konstruuje `BlockEncodingReflection` $U jednostkowe = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowań stanu, taką jak $P{0}\_\ket a \ sum_j \sqrt{\ alpha_j\|/\|\_\vec\alpha 2}\_\ket{j} a $, i $V = \ sum_ {j}\_\ket{j}\bra{j} a\otimes U_j $.
+remarks: Ta `BlockEncoding` implementacja zapewnia właściwości `BlockEncodingReflection`.
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Jednostkowy $U $ działa wspólnie przy rejestrowaniu `a` i `s` tym, że zablokuje $H $, i spełnia $U "^{-1} = U $.
+  - summary: Jednostkowe $U $ działające wspólnie z rejestrami `a` i `s` zakodowaniami bloków $H $ i spełniają $U "^{-1} = U $.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219165"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687097"

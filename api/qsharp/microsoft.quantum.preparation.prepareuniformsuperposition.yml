@@ -4,10 +4,10 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Tworzy jednolity nadpozycja w stosunku do Stanów, które kodują od 0 do `nIndices`.
+  Tworzy jednolity nadpozycja w stosunku do Stanów, `nIndices`które kodują od 0 do.
 
 
-  Oznacza to, że ta jednostka $U $ tworzy jednolity nadpozycja dla wszystkich stanów $0 $ do $M-$1, z uwzględnieniem stanu wejściowego $ \ket{0\cdots 0} $. Innymi słowy, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Oznacza to, że ta jednostka $U $ tworzy jednolity nadpozycja dla wszystkich stanów $0 $ do $M-$1, z uwzględnieniem stanu wejściowego $ \ket{0\cdots 0} $. Innymi słowy, $ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      Rejestr qubit, który przechowuje liczbę stanów w formacie `LittleEndian`.
+      Rejestr qubit, który przechowuje liczbę stanów w `LittleEndian` formacie.
 
       Ten rejestr musi być w stanie przechowywać liczbę $M-$1 i założono, że zostanie zainicjowany w stanie $ \ket{0\cdots 0} $.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226492"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686523"

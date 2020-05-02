@@ -7,12 +7,12 @@ summary: >-
   Reprezentuje zestaw bram, które mogą być łatwo zaimplementowane i używane do implementowania algorytmów symulacji.
 
 
-  Elementy w zestawie są indeksowane przez <xref:microsoft.quantum.simulation.generatorindex>, a każdy zestaw jest opisany przez funkcję z `GeneratorIndex` do <xref:microsoft.quantum.simulation.evolutionunitary>, które są operacjami sparametryzowanymi o liczbie rzeczywistej reprezentującej czas
+  Elementy w zestawie są indeksowane przez <xref:microsoft.quantum.simulation.generatorindex>, a każdy zestaw jest opisany przez funkcję z `GeneratorIndex` do <xref:microsoft.quantum.simulation.evolutionunitary>, które są operacjami sparametryzowanymi przez wartość rzeczywistą reprezentującą czas
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211090"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687003"
