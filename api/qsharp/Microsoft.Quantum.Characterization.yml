@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Wykonuje pojedynczą iterację algorytmu szacowania fazy iteracyjnej (kontrolowanej w sposób klasyczny) przy użyciu wartości całkowitych dla jednostki firmy Oracle.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Mając na celu przygotowanie i pomiar, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+  summary: Mając na celu przygotowanie i pomiar, szacuje częstotliwość, z jaką pomiar zakończy się `Zero`powodzeniem (zwraca), wykonując daną liczbę prób.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Na podstawie przygotowań, które są przylegające i pomiarowe, szacuje częstotliwość pomyślnych pomiarów (zwraca `Zero`), wykonując daną liczbę prób.
+  summary: Na podstawie przygotowania, które jest sąsiednie i pomiarowe, szacuje częstotliwość, z jaką ten pomiar zakończy się powodzeniem (zwraca `Zero`), wykonując daną liczbę prób.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: Dwie operacje, które każda przygotowuje kopie stanu, oceniają część urojoną nakładania się między Stanami przygotowanymi przez poszczególne operacje.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: Dwie operacje, które każdy przygotują kopie stanu, szacują rzeczywistą część nakładania się między Stanami przygotowanymi przez poszczególne operacje.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMeasureAllZ jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.measurement.measureallz\".\nUżyj @\"microsoft.quantum.measurement.measureAllZ\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMeasureAllZ jest przestarzała. Użyj @\"microsoft.quantum.measurement.measureallz\" zamiast tego.\nUżyj @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mierzy operator tożsamości w rejestrze qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Wykonuje algorytm szacowania fazy Quantum dla danego `U` i `targetState`Oracle, odczytując fazę do rejestru Quantum big-endian.
+  summary: Wykonuje algorytm szacowania fazy Quantum dla danego programu Oracle `U` i `targetState`odczytuje fazę do rejestru Quantum big-endian.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Wykonuje niezawodny nieiteracyjny algorytm szacowania fazy Quantum dla danego `U` i eigenstate firmy Oracle, a także zapewnia jednolite oszacowanie fazy z skalowaniem wartości Heisenberg.
+  summary: Wykonuje niezawodny nieiteracyjny algorytm szacowania fazy Quantum dla danego oprogramowania Oracle `U` i eigenstate, a następnie dostarcza jeden szacunkowy szacunek fazy z skalowaniem wariancji przy limicie Heisenberg.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Wykonuje pojedynczy qubit proces pomiaru Tomography w bazie Pauli, z uwzględnieniem konkretnego kanału zainteresowania.
 metadata:
-  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870685"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673355"

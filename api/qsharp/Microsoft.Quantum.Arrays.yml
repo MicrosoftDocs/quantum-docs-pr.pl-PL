@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca tablicę, która składa się z tych elementów, które spełniają predykat.
 - uid: microsoft.quantum.arrays.fold
-  summary: Iteruje funkcję `f` za pomocą `array`tablicy, zwracając `f(f(f(initialState, array[0]), array[1]), ...)`.
+  summary: Iteruje funkcję `f` za pomocą tablicy `array`, zwracając. `f(f(f(initialState, array[0]), array[1]), ...)`
 - uid: microsoft.quantum.arrays.head
   summary: Zwraca pierwszy element tablicy.
 - uid: microsoft.quantum.arrays.indexof
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dana tablica i operacja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w ramach operacji.
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320737"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673394"

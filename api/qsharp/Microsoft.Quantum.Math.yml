@@ -31,35 +31,35 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Oblicza odwrotny tangens hiperboliczny liczby.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Zwraca fazę złożonej liczby `Complex`.
+  summary: Zwraca fazę złożonej liczby typów `Complex`.
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Zwraca fazę złożonej liczby `ComplexPolar`.
+  summary: Zwraca fazę złożonej liczby typów `ComplexPolar`.
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    W przypadku nieujemnej liczby całkowitej `a`zwraca liczbę bitów wymaganych do reprezentowania `a`.
+    Dla nieujemnej liczby całkowitej `a`zwraca liczbę bitów wymaganych do reprezentowania `a`.
 
 
     Oznacza to, że program zwraca najmniejszy $n $, który $a < 2 ^ n $.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    W przypadku nieujemnej liczby całkowitej `a`zwraca liczbę bitów wymaganych do reprezentowania `a`.
+    Dla nieujemnej liczby całkowitej `a`zwraca liczbę bitów wymaganych do reprezentowania `a`.
 
 
     Oznacza to, że program zwraca najmniejszy $n $, który $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
   summary: Zwraca najmniejszą liczbę całkowitą większą lub równą podanej liczbie.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Konwertuje złożoną liczbę `Complex` typu na złożoną liczbę `ComplexPolar`.
+  summary: Konwertuje liczbę zespoloną typu `Complex` na liczbę zespoloną typu. `ComplexPolar`
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Konwertuje złożoną liczbę `ComplexPolar` typu na złożoną liczbę `Complex`.
+  summary: Konwertuje liczbę zespoloną typu `ComplexPolar` na liczbę zespoloną typu. `Complex`
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nComplexPolarToComplex jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.math.complexpolarascomplex\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nComplexPolarToComplex jest przestarzała. Użyj @\"microsoft.quantum.math.complexpolarascomplex\" zamiast tego."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nComplexToComplexPolar jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.math.complexascomplexpolar\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nComplexToComplexPolar jest przestarzała. Użyj @\"microsoft.quantum.math.complexascomplexpolar\" zamiast tego."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Znajduje Convergent ciągłej części zbliżonej do `fraction` z mianownikiem mniejszym lub równym `denominatorBound`
+  summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Znajduje Convergent ciągłej części zbliżonej do `fraction` z mianownikiem mniejszym lub równym `denominatorBound`
+  summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Zwraca cosinus określonego kąta.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +145,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Wykonuje dzielenie modularne na liczbę podniesioną do potęgi innej liczby.
 - uid: microsoft.quantum.math.modulusi
-  summary: Oblicza pozostałą liczbę kanonicznych postanowień `value` modulo `modulus`.
+  summary: Oblicza pozostałą postać `value` kanoniczną `modulus`modulo.
 - uid: microsoft.quantum.math.modulusl
-  summary: Oblicza pozostałą liczbę kanonicznych postanowień `value` modulo `modulus`.
+  summary: Oblicza pozostałą postać `value` kanoniczną `modulus`modulo.
 - uid: microsoft.quantum.math.negationc
   summary: Zwraca jednoargumentową negację danych wejściowych.
 - uid: microsoft.quantum.math.negationcp
@@ -177,13 +177,13 @@ functions:
     Zwraca `L(p)` normę wektora `Double`s.
 
 
-    Oznacza to, że dana tablica $x $ typu `Double[]`, spowoduje to zwrócenie $p $-norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+    Oznacza to, że dana tablica `Double[]`$x $ typu zwraca $p $-norma $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normalizuje wektor `Double`s w normach `L(p)`.
+    Normalizuje wektor `Double`s w `L(p)` normie.
 
 
-    Oznacza to, że dana tablica $x $ typu `Double[]`, to zwraca tablicę, w której wszystkie elementy są podzielone przez $p $-norma $\|x\|_p $.
+    Oznacza to, że dana tablica $x $ typu `Double[]`zwraca tablicę, w której wszystkie elementy są podzielone przez $p $-norma $\|x\|_p $.
 - uid: microsoft.quantum.math.powc
   summary: Zwraca liczbę podniesioną do danej potęgi.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +230,7 @@ functions:
   summary: Oblicza integralną część liczby.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Przedstawia liczbę racjonalną `p/q`formularza. Liczba całkowita `p` jest pierwszym elementem krotki, a `q` jest drugim elementem krotki.
+  summary: Reprezentuje liczbę racjonalną formularza `p/q`. Liczba `p` całkowita jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Reprezentuje liczbę zespoloną przez jej składniki rzeczywiste i urojone.
@@ -243,7 +243,7 @@ newtypes:
 
     Reprezentacja biegunowa liczby zespolonej jest $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: Przedstawia liczbę racjonalną `p/q`formularza. Liczba całkowita `p` jest pierwszym elementem krotki, a `q` jest drugim elementem krotki.
+  summary: Reprezentuje liczbę racjonalną formularza `p/q`. Liczba `p` całkowita jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera klasyczne funkcje matematyczne i typy danych."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Zwraca jeden z jednoqubitowych operatorów Pauli jednolicie losowo.
 metadata:
-  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905832"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673154"
