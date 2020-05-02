@@ -11,10 +11,10 @@ summary: >-
 
   Może to być przydatne, gdy oczekiwano danych wejściowych typu operacji, ale nie powinno być podejmowane żadne działanie.
 
-  Na przykład jeśli określony Syndrome korekcji błędów wskazuje, że nie wystąpił żaden błąd, `NoOp<Qubit[]>` może być poprawną procedurą odzyskiwania.
+  Na przykład jeśli określony Syndrome korekcji błędów wskazuje, że nie wystąpił błąd, `NoOp<Qubit[]>` może to być poprawna procedura odzyskiwania.
 
   Podobnie, jeśli operacja oczekuje procedury przygotowania stanu jako dane wejściowe, `NoOp<Qubit[]>` może służyć do przygotowania stanu $ \ket{0 \cdots 0} $.
-remarks: We wszystkich przypadkach należy jawnie określić parametr typu dla `NoOp`. Na przykład `NoOp<Qubit>` jest taka sama jak <xref:microsoft.quantum.intrinsic.i>.
+remarks: We wszystkich przypadkach należy jawnie określić parametr typu dla `NoOp` . Na przykład `NoOp<Qubit>` jest taka sama jak <xref:microsoft.quantum.intrinsic.i>.
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222684"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678720"
