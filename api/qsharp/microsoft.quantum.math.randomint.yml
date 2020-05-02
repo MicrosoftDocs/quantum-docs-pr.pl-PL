@@ -4,7 +4,7 @@ name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: Generuje jednolitie losową liczbę całkowitą większą lub równą zero i mniejszą od podanej górnej granicy.
-remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, więc jej losowość zależy od implementacji `Random`.
+remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, aby jej losowość zależała od implementacji `Random`.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
@@ -16,13 +16,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Liczba całkowita $x $ na losowo z danego interwału; oznacza to, że z $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
+  - summary: Liczba całkowita $x $ na losowo z danego interwału; oznacza to, że z $ \Pr (x) ={1}\Frac {\texttt{maxInt}} $.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220032"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682753"

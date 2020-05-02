@@ -9,19 +9,19 @@ input:
   content: '(idx : Int)'
   types:
   - name: idx
-    summary: Liczba całkowita w zakresie `0..3` do przekonwertowania na operatory Pauli.
+    summary: Liczba całkowita z zakresu `0..3` do przekonwertowania na operatory Pauli.
     isPrimitive: true
     uid: Int
 output:
   content: Pauli
   types:
-  - summary: Operator `Pauli` określony przez `[PauliI, PauliX, PauliY, PauliZ][idx]`.
+  - summary: '`Pauli` Operator określony przez `[PauliI, PauliX, PauliY, PauliZ][idx]`.'
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: ca2ed56364d9fee748ac53b3f7f0aa40a96475b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 92d9d1e29d85c57d22cb0d7b9867986bf0768bc5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065490"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682590"
