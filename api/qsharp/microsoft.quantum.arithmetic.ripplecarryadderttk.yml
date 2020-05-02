@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych.
 
-  W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys`i qubit, operacja oblicza sumę dwóch liczb całkowitych, w których $n $ najmniej znaczące bity wyniku są przechowywane w `ys`, a bit wychodzący jest XORed do qubit `carry`.
+  W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych `xs` w `ys`rejestrach LittleEndian i, a qubit, operacja oblicza sumę dwóch liczb całkowitych, w `ys` których $n $ najmniej znaczące bity wyniku są przechowywane, a bit przeprowadzenia jest XORed do qubit. `carry`
 remarks: Ta operacja ma takie same funkcje jak RippleCarryAdderD i, RippleCarryAdderCDKM, ale nie używa żadnych qubits Ancilla.
 syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9c27164d8245c587b03c43606acebd0d156626bd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c1d67c4ffb7d2f75d70bc02be958fd08b6c6b14
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214490"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676660"
