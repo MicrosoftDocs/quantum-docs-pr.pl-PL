@@ -12,16 +12,16 @@ summary: >-
 
   - $A rejestru Ancilla $ $O $.
 
-  - System rejestruje $s $, na którym jest zastosowana żądana jednostka $U $, po wybraniu rejestracji $a $ w stanie $ \ket{t}\_$.
+  - System rejestruje $s $, na którym jest zastosowana żądana jednostka $U $, po wybraniu rejestracji $a $ w stanie $ \ket{t}\_a $.
 remarks: >-
-  Ta Oracle zdefiniowana przez $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ działa na stan Ancilla $ \ket{s}\_a $, aby zaimplementować $U jednostki $ na dowolnym stanie systemu $ \ket{\psi}\_s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{t}\_a $.
+  Ta Oracle zdefiniowana przez $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ działa w stanie Ancilla $ \ket{s}\_a $, aby zaimplementować jednostkę $U $ na dowolnym stanie systemu $ \ket{\psi}\_s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{t}\_a $.
 
   Pierwszy parametr jest rejestrem qubit $ \ket{s}\_a $. Drugi parametr jest rejestrem qubit $ \ket{\psi}\_s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231065"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681256"

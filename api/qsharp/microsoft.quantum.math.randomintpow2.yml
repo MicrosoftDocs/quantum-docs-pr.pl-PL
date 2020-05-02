@@ -4,7 +4,7 @@ name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: Generuje losową liczbę całkowitą równomiernie próbkowaną ze wszystkich liczb całkowitych, które mogą być reprezentowane w danej liczbie bitów.
-remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, więc jej losowość zależy od implementacji `Random`.
+remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, aby jej losowość zależała od implementacji `Random`.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
@@ -16,13 +16,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Liczba całkowita $x $ jest jednolicie losowo z wartości $ [0, 2 ^ {\texttt{maxBits}}-1] $; oznacza to, że z $ \Pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $.
+  - summary: Liczba całkowita $x $ jest jednolicie losowo z wartości $ [0, 2 ^ {\texttt{maxBits}}-1] $; oznacza to, że przy użyciu wartości $ \Pr (x{1}) = \frac {2 ^ {\texttt{maxBits}}} $.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dec46f725da2f805839f7c03306853c851700027
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219981"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681540"

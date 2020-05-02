@@ -3,30 +3,30 @@ uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Konwertuje Oracle typu `StateOracle`, aby `DeterministicStateOracle`.
+summary: Konwertuje Oracle typu `StateOracle` na `DeterministicStateOracle`.
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: 'Indeks do flagi qubit `stateOracle` $A $, który jawnie działa w dwóch rejestrach: Flaga $f $ i system $s $, np. $A \ket{0}\_f\ket {\ psi}\_s $.'
+    summary: 'Indeks qubita `stateOracle` flagi $A $, która jawnie działa w dwóch rejestrach: Flaga $f $ i system $s $, np. $A{0}\_\ket f\ket {\ psi}\_s $.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: Przygotowanie stanu programu Oracle $A $ typu `StateOracle`.
+    summary: Przygotowanie stanu $A $ typu `StateOracle`programu Oracle.
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: To samo przygotowanie stanu $A $, ale teraz typu `DeterministicStateOracle`, dlatego działa na rejestrze, gdzie $a, s $ nie jest już jawnie odrębny, np.  $A \ket{0\psi}\_{AS} $.
+  - summary: Ten sam zbiór danych o stanie Oracle $A $, ale teraz `DeterministicStateOracle`, działa na rejestrze, gdzie $a, s $ nie jest już jawnie odrębny, np.  $A \ket{0\psi}\_{AS} $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231099"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681286"
