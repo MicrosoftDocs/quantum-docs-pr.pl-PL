@@ -7,12 +7,12 @@ summary: >-
   Reprezentuje Generator dynamiczny zależny od czasu.
 
 
-  `Double` parametr jest harmonogramem w $ [0, 1] $.
+  `Double` Parametr jest harmonogramem w $ [0, 1] $.
 syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double -> Microsoft.Quantum.Simulation.GeneratorSystem));
 metadata:
-  ms.openlocfilehash: 44cbb1c42fa60219ed3125a41752cd8867d1a764
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 99e49eb5e118dc64f8fab3a8ef75a796651c3734
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211107"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655137"
