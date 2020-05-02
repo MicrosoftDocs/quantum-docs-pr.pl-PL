@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Dana funkcja i operacja zwracają nową operację, której dane wejściowe są przekształcane przez daną funkcję.
 examples: >-
-  Poniższe wywołanie używa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" do przekształcenia operacji przeznaczonej do @"Microsoft.Quantum.Arithmetic.BigEndian" wejść do operacji akceptującej dane wejściowe typu @"Microsoft.Quantum.Arithmetic.LittleEndian":
+  Poniższe wywołanie używa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" do przekształcenia operacji przeznaczonej do @"Microsoft.Quantum.Arithmetic.BigEndian" wprowadzania danych wejściowych do operacji akceptującej dane wejściowe typu @"Microsoft.Quantum.Arithmetic.LittleEndian":
 
 
   ```qsharp
@@ -45,7 +45,7 @@ input:
 output:
   content: ('U => Unit is Adj + Ctl)
   types:
-  - summary: Nowa operacja tbat wywołuje `fn` ze swoimi danymi wejściowymi, a następnie przekazuje wynikowe dane wyjściowe do `op`.
+  - summary: Nowa operacja tbat wywołania `fn` z danymi wejściowymi, a następnie przekazuje wynikowe dane `op`wyjściowe do.
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 4383a28fa6cae8e36438b6c4ba8262f60edbf025
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 95f2233ae50f404ec3a6e137470150fc77ae2406
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217040"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678019"

@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: Mierzy operator tożsamości w rejestrze qubits.
 remarks: >-
-  Ponieważ $ \boldone $ ma tylko eigenvalue $1 $ i nie ma negatywnej eigenvalue, ta operacja zawsze zwraca `Zero`, odpowiadającą eigenvalue $ + 1 = (-1) ^ 0 $, i nie powoduje zwinięcia stanu `register`.
+  Ponieważ $ \boldone $ ma tylko eigenvalue $1 $ i nie ma negatywnej eigenvalue, ta operacja zawsze zwraca wartość `Zero`odpowiadającą eigenvalue $ + 1 = (-1) ^ 0 $ i nie powoduje zwinięcia stanu. `register`
 
 
   Ta operacja nie jest przydatna, ale jest przydatna w kontekście Tomography procesu, ponieważ zawiera informacje na temat zachowywania śledzenia procesów Quantum.
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Wartość wyniku `Zero`.
+  - summary: Wartość `Zero`wyniku.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229127"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677638"

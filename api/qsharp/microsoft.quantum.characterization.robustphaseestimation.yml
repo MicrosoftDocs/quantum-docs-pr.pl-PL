@@ -3,10 +3,10 @@ uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Wykonuje niezawodny nieiteracyjny algorytm szacowania fazy Quantum dla danego `U` i eigenstate firmy Oracle, a także zapewnia jednolite oszacowanie fazy z skalowaniem wartości Heisenberg.
+summary: Wykonuje niezawodny nieiteracyjny algorytm szacowania fazy Quantum dla danego oprogramowania Oracle `U` i eigenstate, a następnie dostarcza jeden szacunkowy szacunek fazy z skalowaniem wariancji przy limicie Heisenberg.
 remarks: W limicie dużej liczby zapytań, Cramer-Rao Dolna granica dla odchylenia standardowego oszacowania $ \phi $ spełniają $ \sigma \ge 2 \pi/\Text{# z zapytań} $.
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: "- Niezawodna Kalibracja uniwersalnej bramy qubit, która jest ustawiana za pośrednictwem solidnej fazy szacowania Shelby Kimmel, Guang przerywają Hao Low, powieści Theodore'a dreisera J. Yoder https://arxiv.org/abs/1502.02677"
+references: "- Niezawodna Kalibracja uniwersalnej bramy qubit, która jest ustawiana za pośrednictwem solidnej fazy szacowania Shelby Kimmel, Guang przerywają Hao Low, powieści Theodore'a dreisera J. Yoderhttps://arxiv.org/abs/1502.02677"
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229059"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677600"
