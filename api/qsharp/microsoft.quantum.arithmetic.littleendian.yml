@@ -4,12 +4,12 @@ name: LittleEndian
 type: newtype
 namespace: Microsoft.Quantum.Arithmetic
 summary: Zarejestruj, który koduje liczbę całkowitą bez znaku w kolejności little-endian. Qubit z indeksem `0` koduje najniższy bit liczby całkowitej bez znaku.
-remarks: Skracamy `LittleEndian` jak `LE` w dokumentacji.
+remarks: Skracamy `LittleEndian` `LE` się w dokumentacji.
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: 6431500dfe67b46cab590f0fc31953d9fb80f9af
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de24c79091da80c2f5e9cbeecc8fe9e4bfb9cb89
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218825"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676833"

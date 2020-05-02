@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dana dwie tablice tego samego typu i predykatu, który jest zdefiniowany dla par elementów tablic, sprawdza, czy tablice są równe.
 remarks: >-
-  Ta funkcja jest definiowana dla typów ogólnych; oznacza to, że jeśli mamy dwie `'T[]` tablice i `equal: ('T, 'T) -> Bool`funkcji, ta funkcja zwraca wartość `Bool`, która wskazuje, czy tablice są równe.
+  Ta funkcja jest definiowana dla typów ogólnych; oznacza to, że za każdym razem, `'T[]` gdy mamy dwie `equal: ('T, 'T) -> Bool`tablice i funkcję, ta `Bool` funkcja zwraca wartość wskazującą, czy tablice są równe.
 
   W przypadku dwóch tablic, które mają być uznawane za równe, muszą one mieć równą długość i elementy w tych samych położeniach w tablicach muszą być równe.
 examples: >-
@@ -59,7 +59,7 @@ output:
   content: Bool
   types:
   - summary: >-
-      Wartość `true` if i tylko wtedy, gdy `array1` i `array2` są równe.
+      Wartość `true` Jeśli i tylko wtedy, `array1` gdy `array2` i są równe.
 
       Oznacza to, że jeśli obie tablice mają tę samą długość, a wszystkie elementy są równe zdefiniowane przez `equal`.
     isPrimitive: true
@@ -68,9 +68,9 @@ typeParameters:
 - uid: "'T"
   summary: Typ elementów każdej tablicy.
 metadata:
-  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80321610"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676500"

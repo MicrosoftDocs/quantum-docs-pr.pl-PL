@@ -7,11 +7,11 @@ summary: >-
   Stosuje operację przylegającej do stanu na klasycznym.
 
 
-  Po `op` operacji i `bit`wartość bitowa stosuje `op` do `target`, jeśli `bit` jest `true`. Jeśli `false`, nic się nie dzieje z `target`.
+  Dana operacja `op` i wartość `bit`bitowa mają zastosowanie `op` do elementu `target` if `bit` is. `true` Jeśli `false`nie, nic się nie `target`dzieje z.
 
-  Sufiks `A` wskazuje, że operacja ma zostać zastosowana jest sąsiedni.
+  Sufiks `A` wskazuje, że operacja, która ma zostać zastosowana, to przylegający.
 examples: >-
-  Poniżej przygotowuje się rejestr qubits do stanu podstawy obliczeniowej reprezentowanego przez klasyczny ciąg bitowy wyrażony jako tablica wartości `Bool`:
+  Poniżej przygotowuje się rejestr qubits do stanu podstawy obliczeniowej reprezentowanego przez klasyczny ciąg bitowy wyrażony jako tablica `Bool` wartości:
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 2c62617251d7795f19fa67f7de01859679c94313
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fca10f4a39c8cdc3941d9a7d06e47e1c6dfefa74
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213878"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676336"

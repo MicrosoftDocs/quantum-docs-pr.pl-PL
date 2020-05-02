@@ -21,9 +21,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214881"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676772"

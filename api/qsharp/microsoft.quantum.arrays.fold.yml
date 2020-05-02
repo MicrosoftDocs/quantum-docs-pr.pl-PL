@@ -3,7 +3,7 @@ uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Iteruje funkcję `f` za pomocą `array`tablicy, zwracając `f(f(f(initialState, array[0]), array[1]), ...)`.
+summary: Iteruje funkcję `f` za pomocą tablicy `array`, zwracając. `f(f(f(initialState, array[0]), array[1]), ...)`
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: Końcowy stan zwrócony przez folder po przeprowadzeniu iteracji we wszystkich elementach `array`.
+  - summary: Końcowy stan zwrócony przez folder po przeprowadzeniu iteracji dla `array`wszystkich elementów.
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: Typ Stanów, w których działa funkcja `folder`, czyli akceptuje jako pierwszy argument i zwraca.
+  summary: Typ Stanów, w `folder` których działa funkcja, tj., akceptuje jako pierwszy argument i zwraca.
 - uid: "'T"
-  summary: Typ elementów `array`.
+  summary: Typ `array` elementów.
 metadata:
-  ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214354"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676444"

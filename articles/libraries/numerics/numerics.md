@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907260"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677105"
 ---
 # <a name="using-the-numerics-library"></a>Korzystanie z biblioteki liczb
 
@@ -23,42 +23,42 @@ Biblioteka liczbowa składa się z trzech składników
 1. **Funkcja całkowita wysokiego poziomu** , która jest oparta na podstawowej funkcji; obejmuje mnożenie, dzielenie, inwersję itp.  w przypadku liczb całkowitych ze znakiem i bez znaku.
 1. **Funkcja arytmetyczna stałego punktu** z inicjalizacją, dodawaniem, mnożeniem, wzajemnym, wieloznacznym, oceną wielomianu i pomiarem.
 
-Dostęp do wszystkich tych składników można uzyskać przy użyciu jednej instrukcji `open`:
+Dostęp do wszystkich tych składników można uzyskać przy użyciu jednej `open` instrukcji:
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Typy
+## <a name="types"></a>Types
 
 Biblioteka liczb obsługuje następujące typy:
 
-1. **`LittleEndian`** : tablica qubit `qArr : Qubit[]`, która reprezentuje liczbę całkowitą, w której `qArr[0]` oznacza najmniej znaczący bit.
-1. **`SignedLittleEndian`** : taka sama jak `LittleEndian`, z tą różnicą, że reprezentuje cyfrową liczbę całkowitą przechowywaną w uzupełnieniu dwóch.
-1. **`FixedPoint`** : reprezentuje liczbę rzeczywistą składającą się z `qArr2 : Qubit[]` tablicy qubit i położenia punktu binarnego `pos`, która zlicza liczbę cyfr binarnych po lewej stronie punktu binarnego. `qArr2` są przechowywane w taki sam sposób co `SignedLittleEndian`.
+1. **`LittleEndian`**: Tablica `qArr : Qubit[]` qubit, która reprezentuje liczbę całkowitą, `qArr[0]` gdzie wskazuje najmniejszy znaczący bit.
+1. **`SignedLittleEndian`**: Taka sama `LittleEndian` jak z tą różnicą, że reprezentuje ze znakiem liczbę całkowitą przechowywaną w uzupełnieniu dwóch.
+1. **`FixedPoint`**: Reprezentuje liczbę rzeczywistą składającą się z tablicy `qArr2 : Qubit[]` qubit i pozycji `pos`punktu binarnego, która zlicza liczbę cyfr binarnych po lewej stronie punktu binarnego. `qArr2`jest przechowywany w taki sam sposób jak `SignedLittleEndian`w przypadku programu.
 
 ## <a name="operations"></a>Operacje
 
 Dla każdego z trzech powyższych typów dostępne są różne operacje:
 
 1. **`LittleEndian`**
-    - Dodatkowo
+    - Dodawanie
     - Porównanie
-    - Mnożenia
+    - Mnożenie
     - Podniesienie
     - Dzielenie (z resztą)
 
 1. **`SignedLittleEndian`**
-    - Dodatkowo
+    - Dodawanie
     - Porównanie
     - Uzupełnienie od 1 do wersji 2
-    - Mnożenia
+    - Mnożenie
     - Podniesienie
 
 1. **`FixedPoint`**
     - Przygotowanie/inicjowanie do klasycznych wartości
     - Dodawanie (klasyczna stała lub inna stała Quantum)
     - Porównanie
-    - Mnożenia
+    - Mnożenie
     - Podniesienie
     - Ocena wielomianowa z specjalizacją dla funkcji parzystych i nieparzystych
     - Wzajemne (1/x)
@@ -75,8 +75,8 @@ Korzystając z zestawu Quantum Development Kit, tę operację można zastosować
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>Przykład: ocenianie funkcji gładkich
 
-Aby oszacować funkcje gładkie, takie jak $ \sin (x) $ na komputerze z systemem Quantum, gdzie $x $ jest typem Quantum `FixedPoint`, Biblioteka elementów Quantum Development Kit zawiera operacje `EvaluatePolynomialFxP` i `Evaluate[Even/Odd]PolynomialFxP`.
+Aby oszacować niezakłócone funkcje, takie jak $ \sin (x) $ na komputerze z systemem Quantum, gdzie $x `FixedPoint` $ jest numerem Quantum, biblioteka liczbowa zestawu SDK rozszerzenia Quantum `EvaluatePolynomialFxP` udostępnia `Evaluate[Even/Odd]PolynomialFxP`operacje i.
 
-Pierwszy `EvaluatePolynomialFxP`, umożliwia ocenę wielomianu formularza $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, gdzie $d $ oznacza *stopień*. W tym celu wystarczy, że są to współczynniki wielomianowe `[a_0,..., a_d]` (typu `Double[]`), `x : FixedPoint` wejściowe i `y : FixedPoint` wyjściowych (początkowo zero):
+Pierwszy, `EvaluatePolynomialFxP`,, umożliwia ocenę wielomianu formularza $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, gdzie $d $ oznacza *stopień*. W tym `[a_0,..., a_d]` celu wystarczy, że są to współczynniki wielomianu (typu `Double[]`), dane wejściowe `x : FixedPoint` i wyjściowe `y : FixedPoint` (początkowo zero):
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-Wynik, $P (x) = 1 + 2x $, będzie przechowywany w `yFxP`.
+Wyniki, $P (x) = 1 + 2x $, będą przechowywane w `yFxP`.
 
-Drugi, `EvaluateEvenPolynomialFxP`i trzeci, `EvaluateOddPolynomialFxP`, są specjalizacjami dla przypadków funkcji parzystych i nieparzystych. Oznacza to, że dla funkcji parzystej/nieparzystej $f (x) $ i $ $ P_ {nawet} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, symbol $ $ $f (x) $ jest dobrze zbliżony do $P _ {nawet} (x) $ lub $P _ {nieparzysta} (x): = x\cdot P_ {nawet} (x) $, odpowiednio.
+Drugi, `EvaluateEvenPolynomialFxP`, i trzeci, `EvaluateOddPolynomialFxP`, są specjalizacjami dla przypadków funkcji parzystych i nieparzystych. Oznacza to, że dla funkcji parzystej/nieparzystej $f (x) $ i $ $ P_ {nawet} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, symbol $ $ $f (x) $ jest dobrze zbliżony do $P _ {nawet} (x) $ lub $P _ {nieparzysta} (x): = x\cdot P_ {nawet} (x) $, odpowiednio.
 W Q # te dwa przypadki mogą być obsługiwane w następujący sposób:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -113,14 +113,14 @@ który szacuje $P _ {unparzysty} (x) = x + 2x ^ 3 $.
 
 Więcej przykładów można znaleźć w [repozytorium głównych przykładów](https://github.com/Microsoft/Quantum).
 
-Aby rozpocząć, Sklonuj repozytorium i Otwórz podfolder `Numerics`:
+Aby rozpocząć, Sklonuj repozytorium i Otwórz `Numerics` podfolder:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-Następnie `cd` do jednego z przykładowych folderów i uruchomić przykład za pomocą
+Następnie `cd` do jednego z przykładowych folderów i uruchomienia przykładu za pośrednictwem
 
 ```bash
 dotnet run

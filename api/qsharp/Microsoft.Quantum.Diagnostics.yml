@@ -34,21 +34,21 @@ functions:
   summary: Potwierdza, że klasyczna wartość zmiennoprzecinkowa ma oczekiwaną wartość do małej tolerancji o wartości 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Potwierdzenie, że podano qubits wszystkie w $ \ket{0}$ State.
+  summary: Potwierdzenie, że dany qubits są wszystkie w stanie{0}$ \ket $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Potwierdzenie, że qubits są wszystkie w $ \ket{0}$ stanu do danej tolerancji.
+  summary: Potwierdzenie, że podano qubits, są w{0}stanie $ \ket $ do danej tolerancji.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Dwie operacje, potwierdzają, że działają identycznie dla wszystkich stanów wejściowych.
 
 
-    To potwierdzenie jest implementowane przez sprawdzenie działania operacji we wszystkich stanach formularza $V _0 \otimes... \otimes V_ {n-1} $, gdzie $V _k $ to jeden z Stanów $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ i $ \ket{i} $ (+ 1 eigenstate-operator Pauli).
+    To potwierdzenie jest implementowane przez sprawdzenie działania operacji we wszystkich stanach formularza $V _0 \otimes... \otimes v_ {n-1} $, gdzie $V _k $ jest jednym z Stanów $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ i $ \ket{i} $ (+ 1 eigenstate-Pauli-operator).
 
 
     To potwierdzenie używa $n $ qubits i wymaga wielu wywołań operacji, które są porównywane.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Sprawdza, czy operacja `givenU` jest równa operacji `expectedU` dla danego rozmiaru danych wejściowych przez sprawdzenie działania operacji tylko dla wektorów z podstawy obliczeniowej.
+    Sprawdza, czy operacja `givenU` jest równa operacji `expectedU` względem danego rozmiaru danych wejściowych przez sprawdzenie działania operacji tylko dla wektorów z podstawy obliczeniowej.
 
     Jest to niezbędne, ale nie wystarczające, warunek dla równości dwóch unitaries.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     To potwierdzenie może służyć do upewnienia się, że na przykład, że zoptymalizowana wersja operacji działa identycznie z implementacją algorytmie, lub że operacja, która działa w zakresie danych wejściowych innych niż Quantum, zgadza się ze znanymi przypadkami.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Potwierdza, że `q` qubit znajduje się w oczekiwanej eigenstate operatora Pauli Z.
+  summary: Potwierdza, że qubit `q` znajduje się w oczekiwanej Eigenstate operatora Pauli z.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Potwierdza, że element qubit w oczekiwanym stanie.
 
 
-    `expected` reprezentuje złożony wektor, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected`reprezentuje złożony wektor, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     Pierwszy element spójnych krotek reprezentuje każdy z $a $, $b $ jest rzeczywistą częścią liczby zespolonej, a druga jest częścią urojoną.
 
     Ostatni argument definiuje tolerancję, z którą jest wykonywane potwierdzenie.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Potwierdza, że `q` qubit znajduje się w oczekiwanej eigenstate operatora Pauli Z do danej tolerancji.
+  summary: Potwierdza, że qubit `q` znajduje się w oczekiwanej Eigenstate operatora Pauli z do danej tolerancji.
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: Rozpoznany atrybut kompilatora, za pomocą którego można zdefiniować alternatywną nazwę, która może być używana podczas ładowania typu lub do celów testowych.
 - uid: microsoft.quantum.diagnostics.test
   summary: Rozpoznany atrybut kompilatora używany do oznaczania testu jednostkowego.
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje przydatne do celów diagnostycznych, w tym operacje potwierdzania i funkcje roszczeń."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905917"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676953"

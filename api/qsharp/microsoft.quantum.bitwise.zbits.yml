@@ -4,7 +4,7 @@ name: ZBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: Zwraca liczbę całkowitą reprezentującą bity Z tablicy operatorów Pauli.
-remarks: Funkcja zgłosi, jeśli długość tablicy `paulis` jest większa niż 63.
+remarks: Funkcja zgłosi, jeśli długość `paulis` tablicy jest większa niż 63.
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Liczba całkowita $x $ z reprezentacją binarną $ (p_{62}\,p_{61}\,\dots\,p_0) $, gdzie $p _i = $0, jeśli `paulis[i]` jest `PauliI` lub `PauliX` i gdzie $p _i = $1, jeśli `paulis[i]` jest `PauliY` lub `PauliZ`.
+  - summary: Liczba całkowita $x $ z reprezentacją binarną{62}\,${61}\,(\,p_ p_ \dots p_0) $, gdzie $p _i `paulis[i]` = `PauliI` $0 `PauliX` , jeśli jest lub i gdzie $p `paulis[i]` _i `PauliY` = `PauliZ`$1, jeśli jest lub.
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217703"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676423"

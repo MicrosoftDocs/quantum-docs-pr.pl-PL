@@ -31,7 +31,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Tablica `output` taka, która `output[0]` jest pierwszym elementem `array` którego indeks nie pojawia się w `remove`, tak że `output[1]` jest drugim tym elementem i tak dalej.
+  - summary: Tablica `output` , taka jak `output[0]` pierwszy element, `array` którego indeks nie pojawia się w, na `remove`przykład `output[1]` to drugi element, i tak dalej.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: Typ elementów tablicy.
 metadata:
-  ms.openlocfilehash: 624021333e156a4da58509186bffa3074cf44f85
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214303"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676477"
