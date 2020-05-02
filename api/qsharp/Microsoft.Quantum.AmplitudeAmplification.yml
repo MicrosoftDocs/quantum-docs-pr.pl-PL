@@ -1,24 +1,24 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
 name: Microsoft.Quantum.AmplitudeAmplification
-summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje do wykonywania wzmocnienia amplitudy.\n\n # <a name=\"description\"></a>Opis\n Wzmocnienie amplitudy Oblivious z częściowym odbiciem stanowi najbardziej ogólną formę wzmocnienia amplitudy wdrożonego w tym miejscu.\n\n Jest to wywoływane przez operację AmpAmpObliviousByReflectionPhases.\n\n Ma dwa rejestry: `ancillaRegister` i `systemRegister`.\n\n Akceptuje to dwie Oracle dla tych odniesień typu `ReflectionOracle` które działają tylko w rejestrze `ancillaRegister`.\n\n Jest to akceptowane przez firmę Oracle specjalna do Oblivious wzmocnienia amplitudy typu `ObliviousOracle`, który działa wspólnie zarówno w przypadku obu rejestrów.\n\n Przyjmuje się, że stan wejściowy `ancillaRegister` jest unikatowy eigenstate $-$1 pierwszego operatora odbicia $I-2 \\ KET {s} \\ bra {s} $.\n\n Odbicia w docelowym stanie Quantum są często implementowane przez założenie dostępu do bazy danych Oracle, która przygotowuje ten stan od podstaw obliczeniowej $ \\ket{0\\cdots 0} $.\n\n Nasza Konwencja dla tych systemów Oracle wymaga dwóch rejestrów: `flagQubit` qubit Rejestracja jednokrotna i rejestr dla wszystkiego innego w rejestrze ancillaRegister.\n\n Oracle typu `StateOracle` działa wspólnie z obydwoma rejestrami w celu utworzenia stanu docelowego oflagowanego przez $ \\ket{1}$ w `flagQubit` rejestrze z rzeczywistą amplitudą.\n\n `ReflectionOracle` odbicia na temat tego stanu flagi jest generowany przez operację `TargetStateReflectionOracle`.\n\n Odbicie `ReflectionOracle` informacji o stanie wprowadzania do `ancillaRegister` jest generowana przez odwracanie StateOracle, a następnie odzwierciedlenia wartości $ \\ket{0\\cdots 0} $ with ReflectionStart ().\n\n Oracle typu `DeterministicStateOracle` działa w rejestrach `qubitState`, aby utworzyć stan docelowy dokładnie bez flagi.\n\n `AmpAmpObliviousByOraclePhases` to wersja wzmocnienia amplitudy Oblivious, która akceptuje bazy danych Oracle `StateOracle` i `ObliviousOracle` zamiast odbić.\n\n Należy zauważyć, że wzmocnienie amplitudy jest szczególnym przypadkiem wzmocnienia amplitudy Oblivious, gdzie `ObliviousOracle` jest operatorem tożsamości i nie istnieje system qubits, tj. `systemRegister` jest pusty.\n\n Jest to wywoływane przez operację `AmpAmByReflectionPhases` i `AmpAmpByOraclePhases`.\n\n Fazy dla częściowego odbicia w standardowym przypadku wyszukiwania Grover są dostarczane przez funkcję AmpAmpPhasesStandard.\n\n Na przykład mamy następujące zależności: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje do wykonywania wzmocnienia amplitudy.\n\n # <a name=\"description\"></a>Opis\n Wzmocnienie amplitudy Oblivious z częściowym odbiciem stanowi najbardziej ogólną formę wzmocnienia amplitudy wdrożonego w tym miejscu.\n\n Jest to wywoływane przez operację AmpAmpObliviousByReflectionPhases.\n\n Ma dwa rejestry: `ancillaRegister` i `systemRegister`.\n\n Akceptuje to dwie Oracle dla tych odniesień typu `ReflectionOracle` , które działają tylko w `ancillaRegister` rejestrze.\n\n Jest to akceptowane przez firmę Oracle specjalna do Oblivious wzmocnienia amplitudy typu `ObliviousOracle` , który działa wspólnie w obu rejestrach.\n\n Przyjęto, że `ancillaRegister` stan wejściowy jest unikatowy eigenstate $-$1 pierwszego operatora odbicia $I-2 \\ KET {s} \\ bra {s} $.\n\n Odbicia w docelowym stanie Quantum są często implementowane przez założenie dostępu do bazy danych Oracle, która przygotowuje ten stan od podstaw obliczeniowej $ \\ket{0\\cdots 0} $.\n\n Nasza Konwencja dla tych systemów Oracle wymaga dwóch rejestrów: rejestracji jednoqubitowej `flagQubit` i rejestru dla wszystkiego innego w rejestrze ancillaRegister.\n\n Oracle typu `StateOracle` działa wspólnie z obydwoma rejestrami, aby utworzyć stan docelowy oflagowany przez $ \\ket{1}$ w `flagQubit` rejestrze z rzeczywistą amplitudą.\n\n Odbicie `ReflectionOracle` dotyczące tego stanu flagi jest generowane przez operację `TargetStateReflectionOracle`.\n\n Odbicie `ReflectionOracle` stanu danych wejściowych `ancillaRegister` jest generowane przez odwrócone StateOracle, a następnie odzwierciedlające około $ \\ket{0\\cdots 0} $ with ReflectionStart ().\n\n Oracle typu `DeterministicStateOracle` działa w `qubitState` rejestrach, aby utworzyć stan docelowy dokładnie bez flagi.\n\n `AmpAmpObliviousByOraclePhases`jest wersją wzmocnienia amplitudy Oblivious, która akceptuje firmy Oracle `StateOracle` , `ObliviousOracle` a nie odbicia.\n\n Należy zauważyć, że wzmocnienie amplitudy jest szczególnym przypadkiem wzmocnienia `ObliviousOracle` amplitudy Oblivious, gdzie jest operatorem tożsamości i nie istnieje system `systemRegister` qubits, który jest pusty.\n\n Jest to wywoływane przez operację `AmpAmByReflectionPhases` i. `AmpAmpByOraclePhases`\n\n Fazy dla częściowego odbicia w standardowym przypadku wyszukiwania Grover są dostarczane przez funkcję AmpAmpPhasesStandard.\n\n Na przykład mamy następujące zależności: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByOracle jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\".\nUżyj @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByOracle jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByOraclePhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\".\nUżyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByOraclePhases jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByReflectionPhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\".\nUżyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpByReflectionPhases jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpObliviousByOraclePhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\".\nUżyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpObliviousByOraclePhases jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpObliviousByReflectionPhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\".\nUżyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpObliviousByReflectionPhases jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpPhasesFixedPoint jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\".\nUżyj @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpPhasesFixedPoint jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpPhasesStandard jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\".\nUżyj @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpPhasesStandard jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpRotationToReflectionPhases jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\".\nUżyj @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpRotationToReflectionPhases jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
   summary: Wzmocnienie amplitudy poprzez częściowe odbicia.
 - uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
@@ -39,13 +39,13 @@ functions:
   summary: Oblicza częściowe fazy odbicia w przypadku wzmocnienia amplitudy standardowej.
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
-    Konstruuje `ReflectionOracle` o stanie docelowym jednoznacznie oznaczony przez flagę qubit.
+    Konstruuje `ReflectionOracle` informacje o stanie docelowym jednoznacznie oznaczone przez flagę qubit.
 
 
-    Stan docelowy ma jeden qubit ustawiony na 1, a wszystkie pozostałe 0: $ \ket{1}_f $.
+    Stan docelowy ma jeden qubit ustawiony na 1, a wszystkie pozostałe 0: $ \ket{1}_F $.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpRUSByOracle jest przestarzała. Zamiast tego użyj @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\".\nUżyj @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAmpAmpRUSByOracle jest przestarzała. Użyj @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\" zamiast tego.\nUżyj @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"."
 - uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
   summary: Stosuje wzmocnienie amplitudy w danym rejestrze, korzystając z danego zestawu faz i Oracle w celu odzwierciedlenia stanu początkowego i końcowego.
 - uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
@@ -58,9 +58,9 @@ newtypes:
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: Fazy dla sekwencji rotacji z pojedynczą qubitą w wzmocnienie amplitudy.
 metadata:
-  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7f8b98826812e842a582d7940c5dc892a056e1fa
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870386"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675508"
