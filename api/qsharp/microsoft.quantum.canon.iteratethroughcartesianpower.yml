@@ -7,9 +7,9 @@ summary: >-
   Stosuje operację dla każdego indeksu w Kartezjańskiegoej liczbie całkowitej.
 
 
-  Iteracyjnie stosuje operację dla każdego elementu kartezjańskiego `0..(bound - 1)`zakresu.
+  Iteracyjnie stosuje operację dla każdego elementu Kartezjańskiegoego zakresu `0..(bound - 1)`.
 examples: >-
-  Po `op`operacji następujące dwa fragmenty kodu są równoważne:
+  Po danej operacji `op`następujące dwa fragmenty kodu są równoważne:
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: Kartezjańskiego, do której ma zostać zgłoszony zakres `0..(bound - 1)`.
+    summary: Kartezjańskiego, do którego ma zostać zgłoszony `0..(bound - 1)` zakres.
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870941"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679059"
