@@ -7,9 +7,9 @@ summary: >-
   Stosuje operację przylegającej do wartości wynikowej dla klasycznego wyniku równego zero.
 
 
-  Po `op` operacji i `result`wartość wyniku stosuje `op` do `target`, jeśli `result` jest `Zero`. Jeśli `One`, nic się nie dzieje z `target`.
+  Dana operacja `op` i wartość `result`wynikowa mają zastosowanie `op` do elementu `target` if `result` is. `Zero` Jeśli `One`nie, nic się nie `target`dzieje z.
 
-  Sufiks `A` wskazuje, że operacja ma zostać zastosowana jest sąsiedni.
+  Sufiks `A` wskazuje, że operacja, która ma zostać zastosowana, to przylegający.
 syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b8b85714f173e10d3121d6f012fefa76b956686e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220729"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672615"

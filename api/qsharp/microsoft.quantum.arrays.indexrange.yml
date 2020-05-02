@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dana tablica zwraca zakres przez indeksy tej tablicy, odpowiedni do użycia w pętli for.
 examples: >-
-  Następujące pętle `for` są równoważne:
+  Następujące `for` pętle są równoważne:
 
 
   ```Q#
@@ -34,9 +34,9 @@ typeParameters:
 - uid: "'TElement"
   summary: Typ elementów tablicy.
 metadata:
-  ms.openlocfilehash: a70935980fc49a3f8c155fe1901b13da923caaee
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6c3135e07c65ddf6b7c61a4b9f412f5156e48e73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218162"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672788"

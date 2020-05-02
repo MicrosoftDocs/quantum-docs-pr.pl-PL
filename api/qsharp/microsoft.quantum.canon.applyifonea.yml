@@ -7,9 +7,9 @@ summary: >-
   Stosuje operację sąsiedniego wyniku dla klasycznej wartości wynikowej.
 
 
-  Po `op` operacji i `result`wartość wyniku stosuje `op` do `target`, jeśli `result` jest `One`. Jeśli `Zero`, nic się nie dzieje z `target`.
+  Dana operacja `op` i wartość `result`wynikowa mają zastosowanie `op` do elementu `target` if `result` is. `One` Jeśli `Zero`nie, nic się nie `target`dzieje z.
 
-  Sufiks `A` wskazuje, że operacja ma zostać zastosowana jest sąsiedni.
+  Sufiks `A` wskazuje, że operacja, która ma zostać zastosowana, to przylegający.
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217414"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672681"

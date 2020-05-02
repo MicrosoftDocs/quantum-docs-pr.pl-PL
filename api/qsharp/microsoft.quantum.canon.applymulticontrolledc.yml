@@ -23,7 +23,7 @@ input:
 
       Pierwszy qubit w argumencie operacji przyjmuje się, że jest formantem, a reszta przyjmuje wartość Target qubits.
 
-      `ApplyMultiControlled` zawsze wywołuje `singlyControlledOp` z argumentem o długości co najmniej 1.
+      `ApplyMultiControlled`zawsze wywołuje `singlyControlledOp` z argumentem o długości co najmniej 1.
     isOperation: true
     input:
       types:
@@ -39,14 +39,14 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      Qubits, które mają być kontrolowane przez `singlyControlledOp`.
+      Qubits, które `singlyControlledOp` mają być kontrolowane.
 
-      Długość `controls` musi wynosić co najmniej 1.
+      Długość `controls` musi być równa co najmniej 1.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: Qubits docelowy, na którym `singlyControlledOp`.
+    summary: Docelowy qubits, na `singlyControlledOp` którym działa.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -60,9 +60,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledca
 metadata:
-  ms.openlocfilehash: 0c6f30505081f3b5f449a72a10bac89815c3bf14
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3b4398dd3845d8767842acb23da3b7c67c210b78
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217346"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672546"

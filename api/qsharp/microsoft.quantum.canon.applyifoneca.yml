@@ -7,9 +7,9 @@ summary: >-
   Stosuje operację jednostkową warunkową dla klasycznej wartości wynikowej.
 
 
-  Po `op` operacji i `result`wartość wyniku stosuje `op` do `target`, jeśli `result` jest `One`. Jeśli `Zero`, nic się nie dzieje z `target`.
+  Dana operacja `op` i wartość `result`wynikowa mają zastosowanie `op` do elementu `target` if `result` is. `One` Jeśli `Zero`nie, nic się nie `target`dzieje z.
 
-  Sufiks `CA` wskazuje, że operacja ma być zastosowana, jest jednostką (sterowaną i sąsiednią).
+  Sufiks `CA` wskazuje, że operacja ma zostać zastosowana, jest jednostką (sterowaną i sąsiednią).
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217397"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672651"

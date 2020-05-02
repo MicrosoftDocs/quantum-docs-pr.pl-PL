@@ -5,9 +5,9 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Wzmocnienie amplitudy Oblivious, określając częściowe odbicie.
 remarks: >-
-  Dane określonego pomocniczego stanu uruchomienia $ \ket{\Text{Start}}\_a $, określony pomocniczy stan elementu docelowego $ \ket{\Text{Target}}\_a $ i wszystkie Stany systemu $ \ket{\psi}\_s $, Załóżmy, że \begin{align} O\ket {\ Text {Start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp}\_a\cdots \end{align} dla niektórych jednostek $U $.
+  Mając określony pomocniczy stan uruchomienia $ \ket{\Text{Start}}\_a $, określony pomocniczy stan docelowy $ \ket{\Text{Target}}\_a $ i dowolny stan systemu $ \ket{\psi}\_s $, Załóżmy, że \begin{align} O\ket {\ Text {Start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp}\_a\cdots \end{align} dla niektórych jednostek $U $.
 
-  Przez sekwencję odbić o stanie początkowym i docelowym w rejestrze pomocniczym przeplatanym przez aplikacje `signalOracle` i jego sąsiednie prawdopodobieństwo sukcesu zastosowania U może ulec zmianie.
+  Przez sekwencję odbić o stanie początkowym i docelowym w odniesieniu do rejestru pomocniczego, w którym są `signalOracle` stosowane aplikacje i jej sąsiadujące, prawdopodobieństwo sukcesu zastosowania U może ulec zmianie.
 
 
   W większości przypadków `auxiliaryRegister` jest inicjowany w stanie $ \ket{\Text{Start}}\_a $.
@@ -32,7 +32,7 @@ input:
     summary: Operator odbicia dotyczący stanu docelowego rejestru pomocniczego
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Jednostkowa firma Oracle $O $ typu `ObliviousOracle`, która działa wspólnie z rejestrami pomocniczymi i systemowymi.
+    summary: Jednostkowa Oracle $O $ typu `ObliviousOracle` , który działa wspólnie z rejestrami pomocniczymi i systemowymi.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Rejestr pomocniczy
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872550"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672962"

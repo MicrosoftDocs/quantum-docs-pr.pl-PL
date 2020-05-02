@@ -7,9 +7,9 @@ summary: >-
   Stosuje operację z możliwością kontrolowania dla klasycznej wartości wynikowej.
 
 
-  Po `op` operacji i `result`wartość wyniku stosuje `op` do `target`, jeśli `result` jest `One`. Jeśli `Zero`, nic się nie dzieje z `target`.
+  Dana operacja `op` i wartość `result`wynikowa mają zastosowanie `op` do elementu `target` if `result` is. `One` Jeśli `Zero`nie, nic się nie `target`dzieje z.
 
-  Sufiks `C` wskazuje, że operacja ma być stosowana, można ją sterować.
+  Sufiks `C` wskazuje, że operacja do zastosowania jest sterowana.
 syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 51388c63a15b9f8244b49cc145297faef11bf5cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e42bb11c3f3f8cf740bbd619b4388f23c77ed8a5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220780"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672670"
