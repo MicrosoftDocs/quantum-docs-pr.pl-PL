@@ -3,7 +3,7 @@ uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Dla danej tabeli operacji Pauli w danym rejestrze qubits, ta funkcja zwraca obiekt typu `RecoveryFn`, który zawiera wszystkie informacje, które są konieczne do wykonania dekodowania wyszukiwania w tabeli w odniesieniu do danej tablicy operacji Pauli.
+summary: Dla danej tabeli operacji Pauli w danym rejestrze qubits, ta funkcja zwraca obiekt typu `RecoveryFn` , który zawiera wszystkie informacje, które są konieczne do wykonania dekodowania wyszukiwania w tabeli w odniesieniu do danej tablicy operacji Pauli.
 syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: '(table : Pauli[][])'
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Obiekt typu `RecoveryFn`, czyli mapa `Syndrome -> Pauli[]`, która jest skojarzona z daną tablicą Syndrome odpowiednią operacją Pauli.
+  - summary: Obiekt typu `RecoveryFn`, czyli mapa `Syndrome -> Pauli[]` , która jest skojarzona z daną tablicą Syndrome odpowiednią operacją korekcji Pauli.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: cd84c24f5a50574a9bc2ab189832ada6516f12a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 20400c4afb1819225192ea695e4cc525e0b2f22b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232221"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684807"

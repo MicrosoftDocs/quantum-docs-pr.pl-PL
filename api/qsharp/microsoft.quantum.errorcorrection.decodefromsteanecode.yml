@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.ErrorCorrection
 summary: Operacja kodowania odwrotnego, która mapuje niezakodowany rejestr Quantum na zakodowany rejestr Quantum w ⟦ 7, 1, 3 ⟧ Steane Quantum.
 remarks: Wybrany dekoder używa właściwości CSS kodu ⟦ 7, 1, 3 ⟧ Steane Code, tj. poprawia liczbę błędów X i Z. Właściwość kodu jest, że lokalizacja X, odpowiednio, korekta z, ma zostać zastosowana, jest kodowaniem 3-bitowym X, odpowiednio, Z Syndrome, gdy jest traktowana jako liczba całkowita.
 syntax: 'operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
-references: '- D. Gottesman, "kody stabilizujące i Korekcja błędów Quantum", "Ph.D., Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "kody stabilizujące i Korekcja błędów Quantum", "Ph.D., Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
@@ -29,9 +29,9 @@ seeAlso:
 - steanecodedecoder
 - logicalregister
 metadata:
-  ms.openlocfilehash: 9aba61580f2ee13df71c3150cb3ffb89ea0793cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0256c1bf847009b6ea6f712aece34219f5c5ff8d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234669"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685054"
