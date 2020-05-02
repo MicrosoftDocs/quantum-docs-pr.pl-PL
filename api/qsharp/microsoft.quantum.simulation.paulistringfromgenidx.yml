@@ -9,12 +9,12 @@ input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: Typ `GeneratorIndex`, który koduje termin Pauli.
+    summary: '`GeneratorIndex`Typ, który koduje termin Pauli.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: Pauli ciąg terminu opisanego przez `GeneratorIndex`i indeksów do qubits, nad którym działa.
+  - summary: Pauli ciąg terminu opisanego przez `GeneratorIndex`, i indeksów do qubits, na którym działa.
     types:
     - isArray: true
       isPrimitive: true
@@ -23,9 +23,9 @@ output:
       isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: e94fd2ddf1b6c18890cc0e4c82cef9d648808661
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 585cac037696e370f3fc3ca4364db6f753b2c642
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221664"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687031"

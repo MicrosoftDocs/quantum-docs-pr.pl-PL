@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.modulusl
 name: ModulusL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Oblicza pozostałą liczbę kanonicznych postanowień `value` modulo `modulus`.
-remarks: 'Ta funkcja zachowuje się różnie w zależności od zachowania `%` operatora C# i Q # AS w wyniku jest zawsze dodatnią liczbą całkowitą z zakresu od 0 do `modulus - 1`, nawet jeśli wartość jest ujemna.'
+summary: Oblicza pozostałą postać `value` kanoniczną `modulus`modulo.
+remarks: 'Ta funkcja zachowuje się inaczej, jak działa operator `%` w C# i Q # AS w wyniku jest zawsze dodatnią liczbą całkowitą z zakresu od 0 do `modulus - 1`, nawet jeśli wartość jest ujemna.'
 syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, modulus : BigInt)'
@@ -20,13 +20,13 @@ input:
 output:
   content: BigInt
   types:
-  - summary: Liczba całkowita $r $ między 0 i `modulus - 1` taka, która `value - r` jest podzielna przez moduł
+  - summary: Liczba całkowita $r $ między 0 `modulus - 1` i taka `value - r` , która jest podzielna przez moduł
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 14ef3669e4c59912129c9ffac6ecbf1a2ed25534
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c4a9403cc5c2bf62e43b5cc248fb9502f15818e8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232459"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686630"
