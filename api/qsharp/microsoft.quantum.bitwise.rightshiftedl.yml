@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: Liczba bitów, przez które `value` ma zostać przesunięta w prawo.
+    summary: Liczba bitów, przez którą `value` ma zostać przesunięta w prawo.
     isPrimitive: true
     uid: Int
 output:
@@ -34,9 +34,9 @@ output:
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 4c370d859eefdcff5fc844cf55e17adad7b5df86
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c6a61d838141e86d831bb341a1e077927e580dcc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213861"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680590"

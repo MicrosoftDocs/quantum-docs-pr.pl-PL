@@ -4,13 +4,13 @@ name: Mapped
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dana tablica i funkcja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w funkcji.
-remarks: "Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i funkcję `mapper: 'T -> 'U` możemy zmapować elementy tablicy i utworzyć nową tablicę typu `'U[]`."
+remarks: "Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i funkcję `mapper: 'T -> 'U` , możemy zmapować elementy tablicy i utworzyć nową tablicę typu. `'U[]`"
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Funkcja od `'T` do `'U`, która jest używana do mapowania elementów.
+    summary: Funkcja z `'T` do `'U` , która jest używana do mapowania elementów.
     isFunction: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Tablica elementów na `'T`.
+    summary: Tablica elementów `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`'U[]` tablicy elementów, które są mapowane przez funkcję `mapper`."
+  - summary: Tablica `'U[]` elementów, które są mapowane przez `mapper` funkcję.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Typ elementów `array`.
+  summary: Typ `array` elementów.
 - uid: "'U"
-  summary: Typ wyniku funkcji `mapper`.
+  summary: Typ wyniku `mapper` funkcji.
 metadata:
-  ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218128"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680947"

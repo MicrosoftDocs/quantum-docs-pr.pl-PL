@@ -15,7 +15,7 @@ examples: >-
   ```
 
 
-  oraz
+  i
 
 
   ```qsharp
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Funkcja od `(Int, 'T)` do `'U`, która jest używana do mapowania elementów i ich indeksów.
+    summary: Funkcja z `(Int, 'T)` do `'U` , która jest używana do mapowania elementów i ich indeksów.
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Tablica elementów na `'T`.
+    summary: Tablica elementów `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`'U[]` tablicy elementów, które są mapowane przez funkcję `mapper`."
+  - summary: Tablica `'U[]` elementów, które są mapowane przez `mapper` funkcję.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Typ elementów `array`.
+  summary: Typ `array` elementów.
 - uid: "'U"
-  summary: Typ wyniku funkcji `mapper`.
+  summary: Typ wyniku `mapper` funkcji.
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214286"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680931"
