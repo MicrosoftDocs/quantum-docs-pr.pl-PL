@@ -7,11 +7,11 @@ summary: >-
   Stosuje operację z możliwością kontrolowania dla klasycznego bitu.
 
 
-  Po `op` operacji i `bit`wartość bitowa stosuje `op` do `target`, jeśli `bit` jest `true`. Jeśli `false`, nic się nie dzieje z `target`.
+  Dana operacja `op` i wartość `bit`bitowa mają zastosowanie `op` do elementu `target` if `bit` is. `true` Jeśli `false`nie, nic się nie `target`dzieje z.
 
-  Sufiks `C` wskazuje, że operacja ma być stosowana, można ją sterować.
+  Sufiks `C` wskazuje, że operacja do zastosowania jest sterowana.
 examples: >-
-  Poniżej przygotowuje się rejestr qubits do stanu podstawy obliczeniowej reprezentowanego przez klasyczny ciąg bitowy wyrażony jako tablica wartości `Bool`:
+  Poniżej przygotowuje się rejestr qubits do stanu podstawy obliczeniowej reprezentowanego przez klasyczny ciąg bitowy wyrażony jako tablica `Bool` wartości:
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217584"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680491"

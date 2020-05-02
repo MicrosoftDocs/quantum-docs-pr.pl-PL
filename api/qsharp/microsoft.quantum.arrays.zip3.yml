@@ -26,7 +26,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3)[]
   types:
-  - summary: Tablica zawierająca 3-krotek formularza `(first[idx], second[idx], third[idx])` dla każdej `idx`. Jeśli trzy tablice nie mają równej długości, dane wyjściowe będą tak długo jak krótsze dane wejściowe.
+  - summary: Tablica zawierająca 3-krotek formularza `(first[idx], second[idx], third[idx])` dla każdej z nich. `idx` Jeśli trzy tablice nie mają równej długości, dane wyjściowe będą tak długo jak krótsze dane wejściowe.
     isArray: true
     types:
     - uid: "'T1"
@@ -46,9 +46,9 @@ seeAlso:
 - zip
 - zip4
 metadata:
-  ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 899066b309e41df3a1bb2bdce93382ff58de2662
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214184"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680753"

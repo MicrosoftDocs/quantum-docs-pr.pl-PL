@@ -1,36 +1,36 @@
 ---
-title: 'Programowanie za pomocą narzędzia Q # + Python'
+title: Programowanie przy użyciu języków Q# i Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 1e40c2dddeaf4fad41693c976493f10fffffa139
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831005"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680144"
 ---
-# <a name="develop-with-q--python"></a>Programowanie za pomocą narzędzia Q # + Python
+# <a name="develop-with-q--python"></a>Programowanie przy użyciu języków Q# i Python
 
 Zainstaluj program QDK w celu opracowania programów do obsługi hostów języka Python w celu wywołania operacji Q #.
 
 1. Wymagania wstępne
 
-    - Środowisko [Python](https://www.python.org/downloads/) 3.6 lub nowsze
+    - [Python](https://www.python.org/downloads/) 3,6 lub nowszy
     - Menedżer pakietów języka Python narzędzia [PIP](https://pip.pypa.io/en/stable/installing)
     - [Zestaw .NET Core SDK 3,1 lub nowszy](https://www.microsoft.com/net/download)
 
 
-1. Zainstaluj pakiet `qsharp`, pakiet języka Python, który umożliwia współdziałanie między elementami Q # i Python.
+1. Zainstaluj `qsharp` pakiet, pakiet języka Python, który umożliwia współdziałanie między elementami Q # i Python.
 
     ```bash
     pip install qsharp
     ```
 
-1. Zainstaluj `iqsharp`, jądro używane przez Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i wykonywania operacji Q #.
+1. Zainstaluj IQ #, jądro używane przez Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i wykonywania operacji Q #.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp

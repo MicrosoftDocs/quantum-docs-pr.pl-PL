@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Zwraca pierwszy indeks pierwszego elementu w tablicy, który spełnia określony predykat. Jeśli taki element nie istnieje, zwraca wartość-1.
 examples: >-
-  Załóżmy, że `IsEven : Int -> Bool` jest funkcją, która zwraca `true` if i tylko wtedy, gdy jej dane wejściowe są parzyste. Następnie można go użyć z `IndexOf`, aby znaleźć pierwszy element parzysty w tablicy:
+  Załóżmy, że `IsEven : Int -> Bool` jest funkcją, która zwraca `true` wartość, jeśli i tylko wtedy, gdy jej dane wejściowe są parzyste. Następnie można go użyć w `IndexOf` celu znalezienia pierwszego elementu parzystego w tablicy:
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Najmniejszy indeks `idx` taki, `predicate(arr[idx])` ma wartość true lub-1, jeśli taki element nie istnieje.
+  - summary: Najmniejszy indeks `idx` taki, który `predicate(arr[idx])` ma wartość true, lub-1, jeśli taki element nie istnieje.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218196"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681001"

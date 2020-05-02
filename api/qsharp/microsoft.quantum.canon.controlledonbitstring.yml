@@ -7,22 +7,22 @@ summary: >-
   Zwraca operację jednostkową, która stosuje platformę Oracle w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada określonej masce bitów.
 
 
-  Wynikiem tej funkcji jest operacja, która może być reprezentowana przez transformację jednostkową $U $, która \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\\\ \ket{\psi} & \textrm{Otherwise} \end{cases}, \end{align}, gdzie $V $ to transformacja jednostkowa, która reprezentuje akcję `oracle`.
+  Wynikiem tej funkcji jest operacja, która może być reprezentowana przez transformację jednostkową $U $, która \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\ \\ \ket{\psi} & \textrm{Otherwise} \end{cases}, \end{align}, gdzie $V $ to transformacja jednostkowa, która reprezentuje akcję `oracle` operacji.
 remarks: >-
   Długość `bits` i `controlRegister` musi być taka sama.
 
 
-  Dana tablica logiczna `bits` i operacja jednostkowa `oracle`, dane wyjściowe tej funkcji to operacja, która wykonuje następujące kroki:
+  Dana tablica `bits` logiczna i operacja `oracle`jednostkowa są wynikiem operacji, która wykonuje następujące czynności:
 
 
-  * Zastosuj `X` operacji do każdej qubit rejestru kontroli, która odnosi się do `false` elementu `bits`;
+  * Zastosuj `X` operację do każdego qubitu rejestru kontroli, który odnosi się do `false` elementu `bits`;
 
   * Zastosuj `Controlled oracle` do rejestrów kontrolki i celu;
 
-  * Zastosuj `X` operacji do każdego qubit rejestru kontroli, który odnosi się do `false` elementu `bits` ponownie, aby przywrócić pierwotny stan.
+  * Zastosuj `X` operację do każdego qubitu rejestru kontroli, który odnosi się do `false` elementu `bits` ponownie, aby przywrócić pierwotny stan.
 
 
-  Dane wyjściowe `Controlled` Funktor są szczególnym przypadkiem `ControlledOnBitString`, gdzie `bits` jest równa `[true, ..., true]`.
+  Dane wyjściowe `Controlled` Funktor są szczególnym przypadkiem, `ControlledOnBitString` gdzie `bits` jest równe. `[true, ..., true]`
 examples: >-
   Następujące fragmenty kodu są równoważne:
 
@@ -48,7 +48,7 @@ examples: >-
   ```
 
 
-  Poniższy kod przygotowuje stan $ \frac{1}{2}(\ket{00}-\ket{01} + \ket{10} + \ket{11}) $:
+  {1}{2}Poniższy kod przygotowuje stan $ \frac (\ket{00} -\ket{01} + \ket{10} + \ket{11}) $:
 
 
   ```qsharp
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Operacja jednostkowa, która stosuje `oracle` w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada masce bitowej `bits`.
+  - summary: Operacja jednostkowa stosowana `oracle` w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada masce `bits`bitów.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906529"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680354"

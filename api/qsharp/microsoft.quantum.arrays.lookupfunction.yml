@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dana tablica zwraca funkcję, która zwraca elementy tej tablicy.
-remarks: Ta funkcja jest głównie przydatna do współdziałania z funkcjami i operacjami, które przyjmują `Int -> 'T` funkcje jako ich argumenty. Jest to typowe, na przykład w bibliotece reprezentacji generatora, gdzie funkcje są używane, aby uniknąć konieczności rejestrowania całej tablicy w pamięci.
+remarks: Ta funkcja jest głównie przydatna do współdziałania z funkcjami i operacjami `Int -> 'T` , które przyjmują funkcje jako argumenty. Jest to typowe, na przykład w bibliotece reprezentacji generatora, gdzie funkcje są używane, aby uniknąć konieczności rejestrowania całej tablicy w pamięci.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: Funkcja `f` taka, `f(idx) == f[idx]`.
+  - summary: Funkcja `f` , która `f(idx) == f[idx]`.
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: Typ elementów tablicy reprezentowanej jako funkcja wyszukiwania.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218111"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680968"

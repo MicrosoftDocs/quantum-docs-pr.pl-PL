@@ -7,10 +7,10 @@ summary: >-
   Odwraca daną wartość docelową qubit, jeśli i tylko wtedy, gdy oba kontrolki qubits znajdują się w stanie 1, przy użyciu miary do wykonania sąsiedniej operacji.
 
 
-  Odwraca `target`, jeśli są i tylko wtedy, gdy oba kontrolki są 1, ale założono, że `target` jest w stanie 0.  Operacja ma wartość T-Count 4, T-Głębokość 2 i nie wymaga pomocnika qubit. w związku z tym może być zalecana operacja CCNOT, jeśli `target` jest znany jako 0.  Sąsiadująco z tą operacją jest oparte na pomiarach i nie wymaga żadnych bram T.
+  Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, `target` ale zakłada, że jest w stanie 0.  Operacja ma wartość T-Count 4, T-Głębokość 2 i nie wymaga pomocnika qubit. w związku z tym może być preferowana operacja CCNOT, `target` jeśli jest ona znana jako 0.  Sąsiadująco z tą operacją jest oparte na pomiarach i nie wymaga żadnych bram T.
 
 
-  Kontrolowana aplikacja tej operacji nie wymaga pomocnika qubit, `2^c` `Rz` bram i nie jest zoptymalizowana pod kątem głębokości, gdzie `c` jest liczbą ogólnych formantów qubits, w tym z dwoma kontrolkami z `ApplyAnd` operacji.  Aplikacja z możliwością współdziałania wymaga `2^c - 1` bram `Rz` (z kątem dwukrotnego rozmiaru niesąsiadującej operacji), bez pomocnika qubit i nie jest zoptymalizowana pod kątem głębokości.
+  Kontrolowana aplikacja tej operacji nie wymaga pomocnika `2^c` `Rz` qubit, bram i nie jest zoptymalizowana pod kątem głębokości, `c` gdzie jest liczbą ogólnych formantów qubits, łącznie z dwoma kontrolkami z `ApplyAnd` operacji.  Aplikacja z możliwością współdziałania wymaga `2^c - 1` `Rz` bram (o kącie o podwójnym rozmiarze niesąsiadującej operacji), nie qubit pomocnika i nie jest zoptymalizowana pod kątem głębokości.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Nowak: "Nowa konstrukcja dla bramy Toffoli odpornej na uszkodzenia", biorev. obr. A 87, 022328, 2013 [ArXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872992"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680541"
