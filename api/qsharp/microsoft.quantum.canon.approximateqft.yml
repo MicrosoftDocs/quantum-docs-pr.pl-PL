@@ -22,7 +22,7 @@ input:
       Przybliżony parametr, który określa, na którym poziomie kontrolowane są obroty Z osi Z, które występują w obwodzie QFT.
 
 
-      Parametr przybliżenia a określa poziom oczyszczania obrotów Z, czyli ∈ {0.. n} i wszystkie rotacje Z 2π/2K, gdzie k > a są usuwane z obwodu QFT. Wiadomo, że w przypadku k > = log ₂ (n) + log ₂ (1/ε) + 3 jeden może być powiązany | | QFT-AQFT | | < ε.
+      Parametr przybliżenia a określa poziom oczyszczania obrotów Z, czyli ∈ {0.. n} i wszystkie rotacje Z 2π/2K, gdzie k>a są usuwane z obwodu QFT. Wiadomo, że w przypadku k >= log ₂ (n) + log ₂ (1/ε) + 3 jeden może być powiązany | | QFT-AQFT | |<ε.
     isPrimitive: true
     uid: Int
   - name: qs
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212535"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674407"

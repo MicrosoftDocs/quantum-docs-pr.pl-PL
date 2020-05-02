@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Zwraca wartość logiczną koniunkcji dwóch wartości.
 remarks: >-
-  W przeciwieństwie do operatora `and` ta funkcja nie jest krótka, tak aby oba dane wejściowe były w pełni oceniane.
+  W przeciwieństwie `and` do operatora, ta funkcja nie jest krótka obwód, tak że oba dane wejściowe są w pełni oceniane.
 
 
   W przypadku zachowania do krótkiego obwodu następujące elementy są równoważne:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`, jeśli i tylko wtedy, gdy `a` i `b` są obu `true`.'
+  - summary: '`true`if i tylko wtedy `a` , `b` gdy i `true`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 22e884f8041ecd66aba875c38f0b8af234aee0e5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233377"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674085"

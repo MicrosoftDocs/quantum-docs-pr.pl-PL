@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Zwraca jedną z dwóch wartości, w zależności od wartości warunku logicznego.
 remarks: >-
-  W przeciwieństwie do operatora `?|` ta funkcja nie jest krótka, tak aby oba dane wejściowe były w pełni oceniane.
+  W przeciwieństwie `?|` do operatora, ta funkcja nie jest krótka obwód, tak że oba dane wejściowe są w pełni oceniane.
 
 
   W przypadku zachowania do krótkiego obwodu następujące elementy są równoważne:
@@ -37,13 +37,13 @@ input:
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue`, jeśli `condition` jest `true`i `ifFalse` w inny sposób.'
+  - summary: '`ifTrue`Jeśli `condition` jest `true`, i `ifFalse` w inny sposób.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233343"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674078"
