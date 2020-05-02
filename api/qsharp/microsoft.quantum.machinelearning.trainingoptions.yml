@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.MachineLearning
 summary: Kolekcja opcji do użycia w szkoleniach klasyfikatora Quantum.
 remarks: >-
-  Tego UDT nie należy tworzyć bezpośrednio, ale należy określić, wywołując @"microsoft.quantum.machinelearning.defaulttrainingoptions", a następnie używając operatora `w/`, aby zastąpić inne wartości domyślne.
+  Tego UDT nie należy tworzyć bezpośrednio, ale raczej należy określić przez wywołanie @"microsoft.quantum.machinelearning.defaulttrainingoptions" , a następnie użycie `w/` operatora w celu zastąpienia różnych wartości domyślnych.
 
 
   Na przykład, aby użyć 100 000 pomiarów i maksymalnie 8 epoki szkoleniowej:
@@ -20,9 +20,9 @@ remarks: >-
 syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
 references: '- [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: adc7056880a32c369a0fc594b68f5f2d9f4015f5
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: b8a24b0a9e036c0a6c1eea229ca76d62e400fde8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909028"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684339"

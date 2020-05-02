@@ -15,14 +15,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Funkcja typu `RecoveryFn`, która przyjmuje `Result[]` pomiaru Syndrome i zwraca operatory `Pauli[]`, które korygują wykryty błąd.
+  - summary: Funkcja typu `RecoveryFn` , która przyjmuje pomiar `Result[]` Syndrome i zwraca `Pauli[]` operatory, które korygują wykryty błąd.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
 metadata:
-  ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8de748ddaf446cfcf7b8694079bd84bfc171211c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211634"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684897"

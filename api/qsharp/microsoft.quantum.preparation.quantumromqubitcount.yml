@@ -3,7 +3,7 @@ uid: microsoft.quantum.preparation.quantumromqubitcount
 name: QuantumROMQubitCount
 type: function
 namespace: Microsoft.Quantum.Preparation
-summary: Zwraca łączną liczbę qubits, które muszą zostać przydzielone do operacji zwróconej przez `QuantumROM`.
+summary: Zwraca łączną liczbę qubits, które muszą zostać przydzielone do operacji zwróconej `QuantumROM`przez.
 syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
 input:
   content: '(targetError : Double, nCoeffs : Int)'
@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Double
   - name: nCoeffs
-    summary: Liczba współczynników, które są określone w `QuantumROM`.
+    summary: Liczba współczynników określonych w `QuantumROM`.
     isPrimitive: true
     uid: Int
 output:
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Pierwszy parametr
 
 
-      `(x,(y,z))` krotek, gdzie `x = y + z` jest łączna liczba przyznanych qubits, `y` jest liczbą qubits dla rejestru `LittleEndian`, a `z` to liczba qubits elementów bezużytecznych.
+      Krotka `(x,(y,z))` , `x = y + z` gdzie jest łączna liczba przydzieloną qubits, `y` jest liczbą qubits dla `LittleEndian` rejestru i `z` jest liczbą qubits elementów bezużytecznych.
     types:
     - isPrimitive: true
       uid: Int
@@ -33,9 +33,9 @@ output:
       - isPrimitive: true
         uid: Int
 metadata:
-  ms.openlocfilehash: fdc1d18f088cd5d07558a6fac28b92af6c9884d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 717de1097641dcbabf6441424e88d77b71e05738
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226390"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685117"
