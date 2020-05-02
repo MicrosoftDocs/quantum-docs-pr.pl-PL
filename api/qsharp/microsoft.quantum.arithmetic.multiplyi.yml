@@ -3,11 +3,11 @@ uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Pomnóż liczbę całkowitą `xs` przez liczbę całkowitą `ys` i Zapisz wynik w `result`, który musi być początkowo zerem.
+summary: Pomnóż liczbę `xs` całkowitą przez `ys` liczbę całkowitą i Zapisz wynik `result`w, który musi być początkowy od zera.
 remarks: >-
   Używa standardowego podejścia Shift-and-Add do implementowania mnożenia.
 
-  Kontrolowana wersja została ulepszona przez skopiowanie $x _i $ do Ancilla qubit warunkowego na qubits kontrolki, a następnie kontrolowanie dodawania na Ancilla qubit.
+  Kontrolowana wersja została ulepszona przez skopiowanie $x _i $ do Ancilla qubit warunku na qubits sterowania, a następnie kontrolowanie dodawania na Ancilla qubit.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -19,7 +19,7 @@ input:
     summary: mnożnik $n $-bitowy (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: wynik $2n $-bit (LittleEndian) musi znajdować się w stanie $ \ket{0}$.
+    summary: wynik $2n $-bit (LittleEndian) musi być w stanie $ \ket{0}$.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218740"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679484"

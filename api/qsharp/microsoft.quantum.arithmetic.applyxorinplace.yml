@@ -7,10 +7,10 @@ summary: >-
   Stosuje operacje bitowe-XOR między klasyczną liczbą całkowitą i liczbą całkowitą reprezentowaną przez rejestr qubits.
 
 
-  Stosuje `X` operacji do qubits w rejestrze little-endian w oparciu o 1 bity w postaci liczby całkowitej.
+  Stosuje `X` operacje do qubits w rejestrze little-endian w oparciu o 1 bity w postaci liczby całkowitej.
 
 
-  Poinformuj nas o tym, `value` przez i pozwól y być liczbą całkowitą bez znaku zakodowaną w `target`, a następnie `InPlaceXorLE` wykonuje operację określoną przez następującą mapę: $ \ket{y}\rightarrow \ket{y\oplus a} $, gdzie $ \oplus $ jest operatorem wyłącznym or.
+  Poinformuj nas `value` o tym, że i pozwól y być liczbą całkowitą bez znaku `target`, a `InPlaceXorLE` następnie wykonuje operację określoną przez następującą mapę: $ \ket{y}\rightarrow \ket{y\oplus a} $, gdzie $ \oplus $ jest operatorem wyłącznym or.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Rejestr Quantum służący do przechowywania `value` w kodowaniu little-endian.
+    summary: Rejestr Quantum używany do przechowywania `value` w kodowaniu little-endian.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871179"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679909"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Pomnóż `xs` ze znakami całkowitymi przez zapisaną liczbę całkowitą `ys` i Zapisz wynik w `result`, który musi być początkowo zerem.
+summary: Pomnóż liczbę całkowitą `xs` ze znakiem `ys` , która została ze znakiem liczb całkowitych i Zapisz wynik w `result`, który musi być początkowy od zera.
 syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
@@ -15,7 +15,7 @@ input:
     summary: mnożnik n-bitowy (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: wynik 2n-bitowy (SignedLittleEndian) musi znajdować się w stanie $ \ket{0}$.
+    summary: wynik 2n-bitowy (SignedLittleEndian) musi być w stanie $ \ket{0}$.
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 154e870416e47547a115fcc5533d187b3ed67213
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b8710ecce1986b43e50a8b0567ae4746bda1589e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214813"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679451"

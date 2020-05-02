@@ -7,11 +7,11 @@ summary: Wzmocnienie amplitudy Oblivious przez firmy Oracle dla częściowych od
 remarks: >-
   Stanowi to bardziej rygorystyczne warunki na formularzu pomocniczych Stanów początkowych i docelowych niż w `AmpAmpObliviousByReflectionPhases`.
 
-  Przyjęto założenie, że $A \ket{0}\_f\ket{0}\_A = \ket{\Text{Start}}\_{FA} $ przygotuje pomocniczy stan uruchomienia $ \ket{\Text{Start}}\_{FA} $ ze względu na podstawę obliczeniową $ \ket{0}\_f\ket{0}$.
+  Przyjęto założenie, że $A{0}\_\ket{0}\_f\ket A =\_\ket{\Text{Start}} {FA} $ przygotowuje pomocniczy stan uruchomienia\_$ \ket{\Text{Start}} {FA} $ z podstawy obliczeniowej ${0}\_\ket{0}f\ket $.
 
   Przyjęto założenie, że stan docelowy jest oznaczony przez $ \ket{1}\_f $.
 
-  Przyjęto założenie, że \begin{align} O\ket {\ Text {Start}}\_{FA} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ tekst {cokolwiek}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} dla niektórych jednostek $U $.
+  Przyjęto założenie, że \begin{align} O\ket {\ Text {Start}\_} {FA}\_\ket{\psi} s ={1}\_\lambda\ket f\ket {\ Text {cokolwiek}\_} a\ket {\ Text {Target}\_} s U\_\ket{\psi} s + \sqrt{1-| \lambda | ^ 2}{0}\_\ket f\cdots, \end{align} dla niektórych jednostek $U $.
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -23,7 +23,7 @@ input:
     summary: Jednostkowa baza danych Oracle $A $, która przygotowuje stan pomocniczego uruchamiania
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Jednostkowa firma Oracle $O $ typu `ObliviousOracle`, która działa wspólnie z rejestrem pomocniczym i systemem
+    summary: Jednostkowa Oracle $O $ typu `ObliviousOracle` , który działa wspólnie z rejestrem pomocniczym i systemowym
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
     summary: Indeksuj do rejestru flagi pojedynczego qubit
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872448"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680137"

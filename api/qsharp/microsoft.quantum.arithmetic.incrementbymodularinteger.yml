@@ -7,13 +7,13 @@ summary: >-
   Wykonuje modularny przyrost qubit rejestru przez stałą całkowitą.
 
 
-  Poczekaj, aż `increment` przez $a $, `modulus` przez $N $ i Integer zakodowane w `target` przez $y $.
+  Poinformuj nas `increment` o $a $, `modulus` przez $N $ i integer zakodowane w `target` $y $.
 
   Następnie operacja wykonuje następujące przekształcenia: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} INTEGERS są kodowane w formacie little-endian.
 remarks: >-
   Przyjęto, że początkowa wartość docelowa jest mniejsza niż $N $ i że przyrost $a $ jest mniejszy niż $N $.
 
-  Należy zauważyć, że <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> implementuje tę samą operację na `PhaseLittleEndian`.
+  Należy pamiętać <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> , że implementuje tę samą operację `PhaseLittleEndian` na podstawie.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -27,7 +27,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Liczba całkowita $y $ w formacie `LittleEndian`, który `increment` $a $ jest dodawany do.
+    summary: Liczba całkowita $y $ `LittleEndian` w formacie `increment` , który $a $ jest dodawany do.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 975d4548eadbc61f8174b6719d067ffed32797dd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 53faa65d67629d0e4c73efc03724cb4b4b30675d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871604"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679542"
