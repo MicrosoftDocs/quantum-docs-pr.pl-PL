@@ -17,15 +17,7 @@
     - name: Rozpoczynanie pracy z zestawem QDK
       href: welcome.md
     - name: Instalowanie zestawu QDK
-      items:
-        - name: Omówienie instalacji
-          href: install-guide/index.md
-        - name: 'Q# i C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# i Python'
-          href: install-guide/pyinstall.md
-        - name: 'Notesy programu Jupyter dla języka Q#'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: Aktualizowanie zestawu QDK
       href: install-guide/update.md
     - name: 'Jak utworzyć projekt języka Q#'
