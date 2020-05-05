@@ -1,0 +1,28 @@
+- href: chemistry.broombridge.md
+  name: '%chemistry.broombridge, polecenie magic'
+- href: chemistry.encode.md
+  name: '%chemistry.encode, polecenie magic'
+- href: chemistry.fh.add_terms.md
+  name: '%chemistry.fh.add_terms, polecenie magic'
+- href: chemistry.fh.load.md
+  name: '%chemistry.fh.load, polecenie magic'
+- href: chemistry.inputstate.load.md
+  name: '%chemistry.inputstate.load, polecenie magic'
+- href: config.md
+  name: '%config, polecenie magic'
+- href: estimate.md
+  name: '%estimate, polecenie magic'
+- href: lsmagic.md
+  name: '%lsmagic, polecenie magic'
+- href: package.md
+  name: '%package, polecenie magic'
+- href: performance.md
+  name: '%performance, polecenie magic'
+- href: simulate.md
+  name: '%simulate, polecenie magic'
+- href: toffoli.md
+  name: '%toffoli, polecenie magic'
+- href: who.md
+  name: '%who, polecenie magicand'
+- href: workspace.md
+  name: '%workspace, polecenie magic'

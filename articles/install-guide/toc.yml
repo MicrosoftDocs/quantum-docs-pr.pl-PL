@@ -1,0 +1,13 @@
+items:
+  - name: Omówienie instalacji
+    href: index.md
+  - name: 'Aplikacje wiersza polecenia dla języka Q#'
+    href: standalone.md
+  - name: 'Notesy programu Jupyter dla języka Q#'
+    href: qjupyter.md
+  - name: 'Używanie Q# z innymi językami'
+    items:
+      - name: 'Używanie Q# z językiem Python'
+        href: pyinstall.md
+      - name: 'Używanie Q# z platformą .NET'
+        href: csinstall.md

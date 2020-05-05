@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030603"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677090"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -20,6 +20,21 @@ Ten artykuł zawiera informacje dotyczące poszczególnych wersji zestawu Quantu
 Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.quantum.install).
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
+
+## <a name="version-01120042825"></a>Wersja 0.11.2004.2825
+
+*Data wydania: 30 kwietnia 2020 r.*
+
+To wydanie zawiera następujące elementy:
+
+- Nowa obsługa aplikacji wiersza polecenia dla języka Q#, które nie wymagają już pliku hosta języka C# ani Python. Aby uzyskać więcej informacji na temat rozpoczynania pracy z aplikacjami wiersza polecenia dla języka Q#, zobacz [tutaj](xref:microsoft.quantum.install.standalone).
+- Zaktualizowano przewodnik Szybki start kwantowego generatora liczb losowych, aby nie wymagał już pliku hosta języka C# ani Python. Zobacz zaktualizowany przewodnik [Szybki start](xref:microsoft.quantum.quickstarts.qrng)
+- Usprawnienia wydajności obrazów IQ# platformy Docker
+
+> [!NOTE]
+> Aplikacje wiersza polecenia dla języka Q# korzystające z nowego atrybutu [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) nie mogą aktualnie być wywoływane z poziomu programów hosta języków Python i .NET.
+> Więcej informacji można znaleźć w przewodnikach współdziałania z językiem [Python](xref:microsoft.quantum.install.python) i platformą [.NET](xref:microsoft.quantum.install.cs).
+
 
 ## <a name="version-01120033107"></a>Wersja 0.11.2003.3107
 
