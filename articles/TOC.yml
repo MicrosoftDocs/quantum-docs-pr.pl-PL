@@ -1,6 +1,6 @@
 - name: Dokumentacja rozwiązania Microsoft Quantum
   href: index.yml
-- name: Wprowadzenie do obliczeń kwantowych
+- name: Omówienie
   items:
     - name: Co to są obliczenia kwantowe?
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: Jak mogę dowiedzieć się więcej?
       href: overview/how-to-learn-quantum-computing.md
-- name: Pobierz zestaw Quantum Development Kit
+- name: Przewodniki Szybki start
   items:
     - name: Rozpoczynanie pracy z zestawem QDK
       href: welcome.md
@@ -22,21 +22,19 @@
       href: install-guide/update.md
     - name: 'Jak utworzyć projekt języka Q#'
       href: how-to-guides/create-qsharp-project.md
-- name: 'Zasoby szkoleniowe dla języka Q#'
+- name: Samouczki
   items:
-    - name: Przewodniki Szybki start
-      items:
-        - name: Kwantowy generator liczb losowych
-          href: quickstarts/qrng.md
-        - name: 'Eksplorowanie splątania przy użyciu języka Q#'
-          href: quickstart.md
-        - name: Implementowanie algorytmu wyszukiwania Grovera
-          href: quickstarts/search.md
+    - name: Kwantowy generator liczb losowych
+      href: quickstarts/qrng.md
+    - name: 'Eksplorowanie splątania przy użyciu języka Q#'
+      href: quickstart.md
+    - name: Implementowanie algorytmu wyszukiwania Grovera
+      href: quickstarts/search.md
     - name: 'Uczenie się języka Q# z ćwiczeń Quantum Kata'
       href: intro-to-katas.md
     - name: 'Przykłady kodu w języku C#'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Szczegóły zestawu QDK
+- name: 'Podręcznik użytkownika języka Q#'
   items:
     - name: Techniki projektowania kwantowego
       topicHref: techniques/index.md
@@ -46,15 +44,21 @@
       href: language/toc.yml
     - name: Symulatory kwantowe i narzędzia do szacowania zasobów
       href: machines/toc.yml
-- name: 'Biblioteki języka Q#'
-  href: libraries/toc.yml
-- name: Pojęcia związane z obliczeniami kwantowymi
-  href: concepts/toc.yml
-- name: Dodatkowe informacje
-  href: for-more-info.md
-- name: Współtworzenie zestawu QDK
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: Informacje o wersji zestawu QDK
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Pojęcia
+  items:
+    - name: Pojęcia związane z obliczeniami kwantowymi
+      href: concepts/toc.yml
+    - name: 'Biblioteki języka Q#'
+      href: libraries/toc.yml
+- name: Zasoby
+  items:
+    - name: Słownik
+      href: concepts/Glossary.md
+    - name: Współtworzenie zestawu QDK
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Informacje o wersji zestawu QDK
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Dodatkowe informacje
+      href: for-more-info.md
