@@ -28,7 +28,7 @@ Dostęp do wszystkich tych składników można uzyskać przy użyciu jednej `ope
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Types
+## <a name="types"></a>Typy
 
 Biblioteka liczb obsługuje następujące typy:
 
