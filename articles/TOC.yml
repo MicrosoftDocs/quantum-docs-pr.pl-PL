@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: Aktualizowanie zestawu QDK
       href: install-guide/update.md
-    - name: 'Jak utworzyć projekt języka Q#'
-      href: how-to-guides/create-qsharp-project.md
 - name: Samouczki
   items:
     - name: Kwantowy generator liczb losowych
