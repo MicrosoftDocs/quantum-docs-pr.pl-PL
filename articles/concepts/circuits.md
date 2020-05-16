@@ -6,25 +6,25 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022755"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426624"
 ---
 # <a name="quantum-circuits"></a>Obwody Quantum
-Rozważ chwilę przekształcenie jednostkowe $ \Text{CNOT} _{01}(H\otimes 1) $.
+Rozważ chwilową transformację jednostkową $ \Text{CNOT} _ {01} (H\otimes 1) $.
 Ta sekwencja bram ma podstawowe znaczenie dla przetwarzania Quantum, ponieważ tworzy stan Maximally Entangled dwa qubit:
 
-$ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right), $ $
+$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
 
 Operacje o tej lub większej złożoności są powszechnie stosowane w algorytmach Quantum i korekcji błędów Quantum, dlatego powinna być to świetna, że istnieje prosta metoda dla wizualizacji zwanej *diagramem obwodu Quantum*.
 Diagram obwodu do przygotowywania tego stanu Maximally Entangled Quantum to:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-Diagram obwodu ![dla stanu Maximally Entangled dwa qubit](~/media/1.svg)
+![Diagram obwodu dla stanu Maximally Entangled dwa qubit](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Konwencje diagramu obwodu Quantum
 Ten język wizualny dla operacji Quantum może być bardziej digestible niż zapisanie odpowiedniej macierzy po zrozumieniu Konwencji dla wyrażenia Quantum.
@@ -37,7 +37,7 @@ Na przykład symbol
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-Symbol ![dla operacji Hadamard działającej na rejestrze z jednym qubit](~/media/2.svg)
+![Symbol operacji Hadamard działającej w rejestrze jednoqubitnym](~/media/2.svg)
 
 jest operacją [Hadamard](xref:microsoft.quantum.intrinsic.h) działającą na rejestrze z jednym qubitem.
 
@@ -47,7 +47,7 @@ To znaczy
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagram bram Quantum stosuje się od lewej do prawej](~/media/3.svg)
+![Diagram bram Quantum jest stosowany od lewej do prawej](~/media/3.svg)
 
 jest macierzą jednostkową $CBA $.
 Mnożenie macierzy przestrzega konwencji przeciwległej: najpierw zastosowano najbardziej odpowiednią macierz. W przypadku diagramów obwodów Quantum należy najpierw zastosować bramę z lewej strony.
@@ -65,27 +65,27 @@ Przykładowo można zdefiniować operację jednostkową dwuqubitą, $B $ (H S\ot
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-Diagram obwodu ![operacji jednostki dwuqubitowej](~/media/4.svg)
+![Diagram obwodu operacji jednostki dwuqubitowej](~/media/4.svg)
 
 Można również wyświetlić $B $ jako mające na celu działanie w jednym rejestrze z dwoma qubit zamiast rejestrów 2 1-qubit w zależności od kontekstu, w którym jest używany obwód. Prawdopodobnie najbardziej przydatną właściwością takich diagramów obwodów abstrakcyjnych jest umożliwienie opisywania skomplikowanych algorytmów Quantum na wysokim poziomie bez konieczności kompilowania ich na podstawowe bramy.
 Oznacza to, że można uzyskać Intuition o przepływie danych dla dużego algorytmu Quantum bez konieczności zrozumienia wszystkich szczegółowych informacji o sposobie działania poszczególnych podprocedur w algorytmie.
 
 ## <a name="controlled-gates"></a>Kontrolowane bramy
 Druga konstrukcja, która jest wbudowana w wieloqubit diagramy obwodu Quantum jest formantem.
-Działanie bramki Quantum pojedynczo sterowanej, oznaczona jako $ \Lambda (G) $, gdzie wartość jednej qubit kontroluje zastosowanie $G $, można zrozumieć, przeglądając następujący przykład danych wejściowych stanu produktu $ \Lambda (G) (\Alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \Alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
+Działanie bramy Quantum pojedynczo kontrolowanej, oznaczona jako $ \Lambda (G) $, gdzie wartość jednej qubit kontroluje zastosowanie $G $, można zrozumieć, przeglądając następujący przykład danych wejściowych stanu produktu $ \Lambda (G) (\Alpha \ket {0} + \beta \ket {1} ) \ket{\psi} = \Alpha \ket {0} \ket{\psi} + \beta \ket {1} G\ket {\ psi} $.
 Oznacza to, że kontrolowana brama ma zastosowanie $G $ do rejestru zawierającego $ \psi $ if i tylko wtedy, gdy kontrolka qubit przyjmuje wartość $1 $.
 Ogólnie rzecz biorąc, firma Microsoft opisuje takie kontrolowane operacje na diagramach obwodów jako
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagram obwodu bramy z pojedynczą kontrolą](~/media/5.svg)
+![Diagram obwodu bramy z pojedynczą kontrolą](~/media/5.svg)
 
 W tym miejscu czarne kółko oznacza bit Quantum, na którym Brama jest kontrolowana, a przewod pionowy oznacza jednostkę, która jest stosowana, gdy kontrolka qubit przyjmuje wartość $1 $.
 W przypadku specjalnych przypadków, w których $G = X $ i $G = Z $ wprowadzamy następującą notację do opisywania kontrolowanej wersji bram (należy zauważyć, że brama sterowana X jest [bramą $CNOT $](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagram obwodu dla specjalnych przypadków bram z kontrolą](~/media/6.svg)
+![Diagram obwodu dla specjalnych przypadków sterowanych bram](~/media/6.svg)
 
 Polecenie Q # udostępnia metody automatycznego generowania kontrolowanej wersji operacji, która polega na tym, że programista nie ma konieczności ręcznego wykonywania kodu. Poniżej przedstawiono przykład:
 
@@ -104,7 +104,7 @@ W związku z tym, taki obwód jest podobny do:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-Symbol ![reprezentujący operację pomiaru](~/media/7.svg)
+![Symbol reprezentujący operację pomiaru](~/media/7.svg)
 
 Q # implementuje [operator miary](xref:microsoft.quantum.intrinsic.measure) do tego celu.
 Zapoznaj się z [sekcją pomiary](xref:microsoft.quantum.libraries.standard.prelude#measurements) , aby uzyskać więcej informacji.
@@ -113,16 +113,16 @@ Analogicznie, podobwód
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-Diagram obwodu ![reprezentujący kontrolowane operacje](~/media/8.svg)
+![Diagram obwodu reprezentujący operację kontrolowana](~/media/8.svg)
 
 zapewnia zarządzaną w trybie klasycznym bramę, w której zastosowano $G $ w warunku na klasycznej kontrolce o wartości $1 $.
 
 ## <a name="teleportation-circuit-diagram"></a>Diagram obwodu teleportowego
-[Teleportowanie Quantum](xref:microsoft.quantum.techniques.puttingittogether) jest prawdopodobnie najlepszym algorytmem Quantum dla zilustrowania tych składników.
-Teleportowanie Quantum to metoda przenoszenia danych na komputerze z systemem Quantum (lub nawet między odległymi komputerami Quantum w sieci Quantum) za pomocą Entanglement i pomiaru.
+Teleportowanie Quantum jest prawdopodobnie najlepszym algorytmem Quantum dla zilustrowania tych składników.
+Możesz poznać praktyczne użycie odpowiedniej teleport Quantum [Kata](xref:microsoft.quantum.overview.katas) Quantum, jest metodą przenoszenia danych na komputerze z systemem Quantum (lub nawet między odległymi komputerami Quantum w sieci Quantum) za pomocą Entanglement i pomiaru.
 Z tego względu można w rzeczywistości przenieść stan Quantum, wypowiedzieć wartość w danym qubit, od jednego qubit do innego, bez znajomości wartości qubit.
 Jest to niezbędne do działania protokołu zgodnie z przepisami Mechanics Quantum.
 Poniżej znajduje się obwód transportowy Quantum. Udostępniamy również dodaną do adnotacji wersję obwodu, która ilustruje sposób odczytywania obwodu Quantum.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![obwodu teleportowego Quantum](~/media/tp2.svg)
+![Obwód teleportowy Quantum](~/media/tp2.svg)

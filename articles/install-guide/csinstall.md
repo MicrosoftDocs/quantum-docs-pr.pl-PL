@@ -1,19 +1,19 @@
 ---
-title: Programowanie przy użyciu języków Q# i C#
+title: Tworzenie zawartości za pomocą języka Q# i platformy .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680161"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426500"
 ---
-# <a name="using-q-with-c-and-f"></a>Używanie Q # z C\# i F\#
+# <a name="develop-with-q-and-net"></a>Tworzenie zawartości za pomocą języka Q# i platformy .NET
 
 Program Q # jest zbudowany z użyciem języków .NET, takich jak C# i F #.
 W tym przewodniku pokazano, jak używać Q # z programem hosta zapisaną w języku .NET.
@@ -29,7 +29,7 @@ Pierwszym krokiem jest utworzenie projektów dla biblioteki Q # oraz dla hosta .
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Utwórz nową bibliotekę Q #
-  - Przejdź do **pliku** -> **Nowy** -> **projekt**
+  - Przejdź do **pliku**  ->  **Nowy**  ->  **projekt**
   - Wpisz "Q #" w polu wyszukiwania
   - Wybierz **bibliotekę Q #**
   - Wybierz pozycję **dalej**
@@ -84,9 +84,9 @@ Na przykład przykład [współdziałania z platformą .NET](https://github.com/
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Aby wywołać tę operację z platformy .NET w symulatorze Quantum, można użyć `Run` metody klasy `RunAlgorithm` .NET wygenerowanej przez kompilator Q #:
+Aby wywołać tę operację z platformy .NET w symulatorze Quantum, można użyć `Run` metody `RunAlgorithm` klasy .NET wygenerowanej przez kompilator Q #:
 
-### <a name="c"></a>[S #](#tab/tabid-csharp)
+### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 :::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
@@ -96,6 +96,6 @@ Aby wywołać tę operację z platformy .NET w symulatorze Quantum, można uży�
 
 ***
     
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
 
-Teraz, gdy zestaw Quantum Development Kit jest skonfigurowany dla programów wiersza polecenia Q # i dla współdziałania z platformą .NET można napisać i uruchomić [pierwszy program Quantum](xref:microsoft.quantum.write-program).
+Teraz, gdy zestaw Quantum Development Kit jest skonfigurowany dla programów wiersza polecenia Q # i dla współdziałania z platformą .NET można napisać i uruchomić [pierwszy program Quantum](xref:microsoft.quantum.quickstarts.qrng).

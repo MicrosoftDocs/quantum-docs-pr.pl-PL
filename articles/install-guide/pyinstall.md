@@ -1,19 +1,19 @@
 ---
-title: Programowanie przy użyciu języków Q# i Python
+title: 'Programowanie przy użyciu języka Q # i języka Python'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680144"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426362"
 ---
-# <a name="develop-with-q--python"></a>Programowanie przy użyciu języków Q# i Python
+# <a name="develop-with-q-and-python"></a>Programowanie przy użyciu języka Q # i języka Python
 
 Zainstaluj program QDK w celu opracowania programów do obsługi hostów języka Python w celu wywołania operacji Q #.
 
@@ -83,6 +83,6 @@ Zainstaluj program QDK w celu opracowania programów do obsługi hostów języka
 > [!NOTE]
 > * Za pomocą notesów Jupyter języka Python można także napisać klasyczny program Python i wywołać operacje Q # z komórek. Kod języka Python jest tylko zwykłym programem w języku Python.
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
 
-Po zainstalowaniu zestawu Quantum Development Kit w preferowanym środowisku możesz napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.write-program).
+Po zainstalowaniu zestawu Quantum Development Kit w preferowanym środowisku możesz napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).

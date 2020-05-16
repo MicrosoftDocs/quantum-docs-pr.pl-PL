@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: b7276f9b273f601f30e4938018398353b6a9102d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831073"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426377"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Tworzenie za pomocą notesów Q # Jupyter
 
@@ -22,11 +22,11 @@ Notesy Jupyter umożliwiają wykonywanie kodu w miejscu wraz z instrukcjami, not
 IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używane głównie w środowiskach Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i symulowania operacji języka Q#.
 
 > [!NOTE]
-> * W notesach Q # Jupyter można uruchomić tylko kod Q #, a operacji nie można wywołać z zewnętrznych programów hosta (np. Python lub C# plików). To środowisko nie jest odpowiednie, jeśli celem jest połączenie zewnętrznego klasycznego programu hosta z programem Quantum.
+> * W notesach Q # Jupyter można uruchomić tylko kod Q #, a operacji nie można wywołać z zewnętrznych programów hosta (np. plików Python lub C#). To środowisko nie jest odpowiednie, jeśli celem jest połączenie zewnętrznego klasycznego programu hosta z programem Quantum.
 
 1. Wymagania wstępne
 
-    - Środowisko [Python](https://www.python.org/downloads/) 3.6 lub nowsze
+    - [Python](https://www.python.org/downloads/) 3,6 lub nowszy
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
     - [Zestaw .NET Core SDK 3,1 lub nowszy](https://www.microsoft.com/net/download)
 
@@ -62,12 +62,12 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
         W danych wyjściowych komórki powinien zostać wyświetlony element `SayHello`. W przypadku uruchamiania w notesach Jupyter kod języka Q# jest kompilowany, a notes zwraca w danych wyjściowych nazwę znalezionych operacji.
 
 
-    - W nowej komórce wykonaj właśnie utworzoną operację (w symulatorze) za pomocą polecenia `%simulate`:
+    - W nowej komórce wykonaj właśnie utworzoną operację (w symulatorze) za pomocą `%simulate` polecenia:
 
         ![Komórka notesu Jupyter z poleceniem magic %simulate](~/media/install-guide-jupyter-simulate.png)
 
-        Powinien zostać wyświetlony komunikat wydrukowany na ekranie wraz z wynikiem wywołanej operacji (w tym miejscu zostanie wyświetlona pusta krotka `()`, ponieważ operacja po prostu zwróci typ `Unit`).
+        Powinien zostać wyświetlony komunikat wydrukowany na ekranie wraz z wynikiem wywołanej operacji (w tym miejscu zostanie wyświetlona pusta krotka, `()` ponieważ operacja po prostu zwraca `Unit` Typ).
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
 
-Po zainstalowaniu zestawu Quantum Development Kit w preferowanym środowisku możesz napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.write-program).
+Po zainstalowaniu zestawu Quantum Development Kit w preferowanym środowisku możesz napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).
