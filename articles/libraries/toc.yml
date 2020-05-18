@@ -1,3 +1,5 @@
+- name: Omówienie
+  href: index.md
 - name: Biblioteki standardowe
   topicHref: standard/index.md
   href: standard/toc.yml
