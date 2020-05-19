@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82677090"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426776"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -48,7 +48,7 @@ Ta wersja zawiera poprawki niewielkich usterek występujących w wersji 0.11.200
 
 To wydanie zawiera następujące elementy:
 
-- Nowa obsługa modyfikatorów dostępu w języku Q#; aby uzyskać więcej informacji, zobacz [Struktury plików](xref:microsoft.quantum.language.file-structure#internal-declarations)
+- Nowa obsługa modyfikatorów dostępu w języku Q#; aby uzyskać więcej informacji, zobacz [Struktury plików](xref:microsoft.quantum.guide.filestructure)
 - Aktualizacja do zestawu .NET Core SDK 3.1
 
 Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -86,7 +86,7 @@ Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliot
 
 To wydanie zawiera następujące elementy:
 
-- Nowy atrybut testu na potrzeby testowania jednostkowego Q#; zobacz zaktualizowaną dokumentację interfejsu API [w tym miejscu](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) oraz zaktualizowany przewodnik po testowaniu i debugowaniu [tutaj](xref:microsoft.quantum.techniques.testing-and-debugging)
+- Nowy atrybut testu na potrzeby testowania jednostkowego Q#; zobacz zaktualizowaną dokumentację interfejsu API [w tym miejscu](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) oraz zaktualizowany przewodnik po testowaniu i debugowaniu [tutaj](xref:microsoft.quantum.guide.testingdebugging)
 - Dodano ślad stosu w przypadku błędu wykonywania programu Q#
 - Obsługa punktów przerwania w programie Visual Studio Code dzięki aktualizacji [rozszerzenia OmniSharp C# programu Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -133,7 +133,7 @@ Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliot
 
 To wydanie zawiera następujące elementy:
 
-- Nowa obsługa [instrukcji sprzężeń](xref:microsoft.quantum.language.statements#conjugations) w języku Q#
+- Nowa obsługa [instrukcji sprzężeń](xref:microsoft.quantum.guide.operationsfunctions#conjugations) w języku Q#
 - Nowe akcje kodu w kompilatorze, takie jak „zamień na”, „dodaj dokumentację” i prosta aktualizacja elementu tablicy
 - Dodano szablon instalacji i nowe polecenia projektu do rozszerzenia edytora Visual Studio Code
 - Dodano nowe odmiany kombinatora ApplyIf, takie jak [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -150,7 +150,7 @@ Podsumowano zmiany i przedstawiono instrukcje uaktualniania istniejących progra
 
 To wydanie zawiera następujące elementy:
 
-- Nowe lokalizacje indeksowania dla tablic wycinków. [Zobacz informacje dotyczące języka](xref:microsoft.quantum.language.expressions#array-slices), aby uzyskać więcej informacji.
+- Nowe lokalizacje indeksowania dla tablic wycinków. [Zobacz informacje dotyczące języka](xref:microsoft.quantum.guide.expressions#array-slices), aby uzyskać więcej informacji.
 - Dodano obsługę pliku Dockerfile hostowanego w usłudze [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry). Zobacz [repozytorium IQ#, aby uzyskać więcej informacji](https://github.com/microsoft/iqsharp/blob/master/README.md)
 - Zmiana powodująca niezgodność dotycząca [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro), aktualizacja ustawień konfiguracji, zmiany nazw. Zobacz [Przeglądarka interfejsów API na platformie .NET — zaktualizowanie nazwy](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
@@ -171,10 +171,10 @@ Podsumowano zmiany i przedstawiono instrukcje uaktualniania istniejących progra
 
 ### <a name="q-language-syntax"></a>Składnia języka Q#
 W tej wersji dodano nowe elementy składni języka Q#:
-* Dodano nazwane elementy dla [typów zdefiniowanych przez użytkownika](xref:microsoft.quantum.language.type-model#user-defined-types).  
+* Dodano nazwane elementy dla [typów zdefiniowanych przez użytkownika](xref:microsoft.quantum.guide.types#user-defined-types).  
 * Konstruktory typów zdefiniowanych przez użytkownika mogą być teraz używane jako funkcje.
-* W typach zdefiniowanych przez użytkownika dodano obsługę wyrażeń [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) oraz [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)).
-* Blok naprawy dla pętli [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) jest teraz opcjonalny.
+* W typach zdefiniowanych przez użytkownika dodano obsługę wyrażeń [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) oraz [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols).
+* Blok naprawy dla pętli [repeat-until-success](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) jest teraz opcjonalny.
 * Obsługa pętli while w funkcjach (nie w operacjach).
 
 ### <a name="library"></a>Biblioteka 
@@ -202,10 +202,10 @@ Podsumowano zmiany i przedstawiono instrukcje uaktualniania istniejących progra
 
 ### <a name="q-language-syntax"></a>Składnia języka Q#
 W tej wersji dodano nowe elementy składni języka Q#:
-* Dodano [skrócony sposób wyrażania specjalizacji operacji kwantowych](xref:microsoft.quantum.language.type-model#functors) (kontroli i dołączania) za pomocą operatorów `+`.  Stara składnia jest przestarzała.  Programy używające starej składni (np. `: adjoint`) będą nadal działać, ale zostanie wygenerowane ostrzeżenie dotyczące czasu kompilacji.  
-* Dodano nowy operator dla wyrażenia [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions). W celu wyrażenia tworzenia tablicy jako modyfikacji istniejącej tablicy można używać operatora `w/`.
-* Dodano wspólną [instrukcję apply-and-upate](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols), np. `+=`, `w/=`.
-* Dodano sposób określania krótkiej nazwy przestrzeni nazw w [otwartych dyrektywach](xref:microsoft.quantum.language.file-structure#open-directives).
+* Dodano [skrócony sposób wyrażania specjalizacji operacji kwantowych](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (kontroli i dołączania) za pomocą operatorów `+`.  Stara składnia jest przestarzała.  Programy używające starej składni (np. `: adjoint`) będą nadal działać, ale zostanie wygenerowane ostrzeżenie dotyczące czasu kompilacji.  
+* Dodano nowy operator dla wyrażenia [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions). W celu wyrażenia tworzenia tablicy jako modyfikacji istniejącej tablicy można używać operatora `w/`.
+* Dodano wspólną [instrukcję apply-and-update](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols), np. `+=`, `w/=`.
+* Dodano sposób określania krótkiej nazwy przestrzeni nazw w [otwartych dyrektywach](xref:microsoft.quantum.guide.filestructure#open-directives).
 
 W tej wersji nie zezwalamy już na określanie elementu tablicy po lewej stronie instrukcji ustawiania.  Wynika to z faktu, że składnia implikuje, że tablice są modyfikowalne, a w rzeczywistości wynikiem operacji zawsze było utworzenie nowej tablicy z modyfikacją.  Zamiast tego będzie generowany błąd kompilatora z sugestią użycia nowego operatora copy-and-update, `w/`, w celu osiągnięcia tego samego wyniku.  
 
@@ -280,7 +280,7 @@ To wydanie zawiera następujące elementy:
 
 - Poprawka usterki dla problemu DumpRegister zgłoszonego przez społeczność ([nr 148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Dodano możliwość powrotu z [instrukcji using](xref:microsoft.quantum.language.statements).
+- Dodano możliwość powrotu z [instrukcji using](xref:microsoft.quantum.guide.qubits#allocating-qubits).
 
 - Odnowiono [przewodnik Wprowadzenie](xref:microsoft.quantum.install).
 
@@ -303,7 +303,7 @@ To wydanie zawiera następujące elementy:
 
 To wydanie zawiera następujące elementy:
 
-- Dodano obsługę nowego typu pierwotnego BigInt, który reprezentuje liczbę całkowitą ze znakiem o dowolnym rozmiarze.  Dowiedz się więcej na temat [typu BigInt](xref:microsoft.quantum.language.type-model).
+- Dodano obsługę nowego typu pierwotnego BigInt, który reprezentuje liczbę całkowitą ze znakiem o dowolnym rozmiarze.  Dowiedz się więcej na temat [typu BigInt](xref:microsoft.quantum.guide.types).
 - Dodano nowy symulator Toffoli będący szybkim symulatorem specjalnego przeznaczenia, który może symulować operacje X, CNOT i kontrolowane wielokrotnie operacje kwantowe X na bardzo dużych liczbach kubitów.  Dowiedz się więcej na temat [symulatora Toffoli](xref:microsoft.quantum.machines.toffoli-simulator).
 - Dodano prosty estymator zasobów, który szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q# na komputerze kwantowym.  Dowiedz się więcej o [estymatorze zasobów](xref:microsoft.quantum.machines.resources-estimator).
 
@@ -427,7 +427,7 @@ W tej aktualizacji dodano nowe funkcje debugowania:
 * W programie Visual Studio prawdopodobieństwo mierzenia wartości $\ket{1}$ na pojedynczym kubicie jest teraz automatycznie wyświetlane w oknie debugowania dla maszyny docelowej QuantumSimulator.
 * W programie Visual Studio ulepszono wyświetlanie właściwości zmiennych w oknach debugowania **Automatyczne** i **Elementy lokalne**. 
 
-Dowiedz się więcej na temat [testowania i debugowania](xref:microsoft.quantum.techniques.testing-and-debugging).
+Dowiedz się więcej na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging).
 
 ### <a name="community-contributions"></a>Współtworzenie w ramach społeczności
 
