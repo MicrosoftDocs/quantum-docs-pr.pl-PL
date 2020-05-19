@@ -1,10 +1,10 @@
 - name: Omówienie
   href: index.md
-- name: Symulator kwantowy
+- name: Symulator pełnego stanu
   href: full-state-simulator.md
 - name: Narzędzie do szacowania zasobów
   href: resources-estimator.md
-- name: Symulator śledzenia komputera kwantowego
+- name: Symulator śledzenia
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Symulator Toffoli
