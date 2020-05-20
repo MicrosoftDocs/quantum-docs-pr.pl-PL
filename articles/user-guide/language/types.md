@@ -1,19 +1,19 @@
 ---
-title: 'Typy w Q #'
+title: Typy w języku Q#
 description: 'Dowiedz się więcej na temat różnych typów używanych w języku programowania Q #.'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431142"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609145"
 ---
-# <a name="types-in-q"></a>Typy w Q #
+# <a name="types-in-q"></a>Typy w języku Q#
 
 Na tej stronie przedstawiono model typu Q # i opisano składnię służącą do określania typów i pracy z typami.
 Następna strona, [wyrażenia typu](xref:microsoft.quantum.guide.expressions), szczegóły dotyczące tworzenia i operowania wyrażeniami tych typów.
@@ -35,7 +35,7 @@ Język Q # zawiera kilka *typów pierwotnych*, z których można utworzyć inne 
    Wprowadź.
 - `Double`Typ reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji, np.: `0.0` , `-1.3` , `4e-7` .
 - `Bool`Typ reprezentuje wartość logiczną, która może być `true` lub `false` .
-- `Range`Typ reprezentuje sekwencję liczb całkowitych, wskazywane przez `start..step..stop` , gdzie oznacza to opcje. 
+- `Range`Typ reprezentuje sekwencję liczb całkowitych, oznaczaną przez `start..step..stop` , gdzie oznacza to, że ten krok jest opcjonalny. 
    Odpowiada to `start .. stop` `start..1..stop` , a np. `1..2..7` reprezentuje sekwencję $ \{ 1, 3, 5, 7 \} $.
 - `String`Typ jest sekwencją znaków Unicode, które są nieprzezroczyste dla użytkownika po utworzeniu.
   Ten typ służy do zgłaszania komunikatów do klasycznego hosta w przypadku błędu lub zdarzenia diagnostycznego.
@@ -125,7 +125,7 @@ Nazywamy tę właściwość jako _równoważność spójnej kolekcji_.
 
 Deklaracja typu zdefiniowanego przez użytkownika składa się ze słowa kluczowego `newtype` , po którym następuje nazwa typu zdefiniowanego przez użytkownika, elementu `=` , prawidłowej specyfikacji typu i kończącego się średnika.
 
-Przykład:
+Na przykład:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
