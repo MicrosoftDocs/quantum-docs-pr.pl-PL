@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430938"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327547"
 ---
 # <a name="working-with-qubits"></a>Praca z kubitami
 
@@ -30,7 +30,7 @@ Instrukcja składa się ze słowa kluczowego `using` , po którym następuje otw
 Powiązanie jest zgodne z tym samym wzorcem co `let` : pojedynczym symbolem lub krotką symboli, po którym następuje znak równości `=` oraz jedną wartością lub zgodną krotką *inicjatorów*.
 
 Inicjatory są dostępne dla jednego qubit, wskazanego jako `Qubit()` lub tablicy qubits, `Qubit[n]` , gdzie `n` jest `Int` wyrażeniem.
-Na przykład:
+Na przykład
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -59,7 +59,7 @@ Te qubits zazwyczaj nie są w stanie czystym, tzn. nie muszą być inicjowane w 
 Są one często określane jako "zanieczyszczone" qubits, ponieważ ich stan jest nieznany i może nawet być Entangled z innymi częściami pamięci komputera Quantum.
 
 Powiązanie jest zgodne z tym samym wzorcem i regułami, co w `using` instrukcji.
-Na przykład:
+Na przykład
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -221,5 +221,6 @@ Przyczyną tego jest fakt, że wiemy ze struktury obwodu, jak łatwo dodać dals
 
 Należy poinstruować o porównaniu tego kodu z inną funkcją firmy Canon, `MultiControlledXClean` która osiąga ten sam cel implementacji `X` operacji mnożenia, ale używa kilku czystych qubits przy użyciu `using` mechanizmu. 
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
+
 Więcej informacji na temat [przepływu sterowania](xref:microsoft.quantum.guide.controlflow) w programie Q #.

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431159"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327326"
 ---
 # <a name="q-basics"></a>Podstawowe informacje o numerze Q
 
@@ -106,8 +106,7 @@ Instrukcje oceny wyrażeń wymagają zakończenia średnika.
 Niemal każdy aspekt programu Q # jest kompilowany przy użyciu instrukcji, więc żadna pojedyncza strona nie może obejmować wszystkich informacji odnoszących się do nich.
 Jednak ich struktury i formatowanie leksykalne są opisane na stronie [struktury plików q #](xref:microsoft.quantum.guide.filestructure) , przypisanie powiązania symboli i zakres w [zmiennych w q #](xref:microsoft.quantum.guide.variables)i pętle przepływu sterowania, takie jak `for` w [przepływie sterowania w kontrolce q #](xref:microsoft.quantum.guide.controlflow).
 
-
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
 W pozostałej części tego przewodnika pokazano, jak używać funkcji Q # do konstruowania złożonych programów Quantum za pośrednictwem podstawowych bloków konstrukcyjnych operacji, funkcji i typów.
 
 Aby rozpocząć, możesz rozpocząć uczenie się o [typach w Q #](xref:microsoft.quantum.guide.types).

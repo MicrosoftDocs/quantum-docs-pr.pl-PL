@@ -3,7 +3,11 @@ uid: microsoft.quantum.measurement.mresetz
 name: MResetZ
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Mierzy pojedynczy qubit na `Z` podstawie i resetuje go do standardowego stanu podstawy | 0 〉 po pomiarze.
+summary: >-
+  Mierzy pojedynczy qubit w bazie Z i resetuje go do ustalonego stanu początkowego po pomiar.
+
+
+  Wykonuje pomiar pojedynczej qubit na podstawie $Z $ i zapewnia, że qubit jest zwracany do $ \ket {0} $ po pomiarze.
 syntax: 'operation MResetZ (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
@@ -19,9 +23,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28b0de7e447156d327e165f4db01bdf625e984d6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02f9e22522e9562068c9e0aea9293c93fc5d4644
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681383"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84327394"

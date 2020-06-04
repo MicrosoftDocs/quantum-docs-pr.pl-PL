@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431210"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327309"
 ---
 # <a name="type-expressions-in-q"></a>Wyrażenia typu w Q #
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Literał tablicowy jest sekwencją co najmniej jednego wyrażenia elementu, rozdzielonych przecinkami, ujęty w `[` i `]` .
 Wszystkie elementy muszą być zgodne z tym samym typem.
 
-
 Mając daną dwie tablice tego samego typu, operator binarny `+` może służyć do tworzenia nowej tablicy, która jest połączeniem dwóch tablic.
 Na przykład `[1,2,3] + [4,5,6]` ma `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Na przykład `[1,2,3] + [4,5,6]` ma `[1,2,3,4,5,6]` .
 
 Uwzględniając typ i `Int` wyrażenie, `new` operator może służyć do przydzielenia nowej tablicy o danym rozmiarze.
 Na przykład `new Int[i + 1]` przydzieli nową `Int` tablicę z `i + 1` elementami.
+
+Puste literały tablicowe, `[]` , są niedozwolone.
+Zamiast używać `new ★[0]` , gdzie `★` jest jako symbol zastępczy dla odpowiedniego typu, umożliwia utworzenie odpowiedniej tablicy o długości zero.
 
 Elementy nowej tablicy są inicjowane z wartością domyślną zależną od typu.
 W większości przypadków jest to pewna odmiana zero.
@@ -373,8 +375,7 @@ Na przykład jeśli `Op1` , `Op2` , i `Op3` wszystkie są `Qubit[] => Unit` , al
 - `[Op1, Op3]`jest tablicą `(Qubit[] => Unit is Adj)` operacji.
 - `[Op2, Op3]`jest tablicą `(Qubit[] => Unit is Ctl)` operacji.
 
-Puste literały tablicowe, `[]` , są niedozwolone.
-Zamiast używać `new ★[0]` , gdzie `★` jest jako symbol zastępczy dla odpowiedniego typu, umożliwia utworzenie odpowiedniej tablicy o długości zero.
+Jednak chociaż `(Qubit[] => Unit is Adj)` `(Qubit[] => Unit is Ctl)` operacje mają wspólny typ podstawowy `(Qubit[] => Unit)` , należy pamiętać, że tablice tych operatorów *of* nie mają wspólnego typu podstawowego. Na przykład `[[Op1], [Op2]]` obecnie zgłaszany jest błąd, ponieważ próbuje on utworzyć tablicę niezgodnych typów tablicy `(Qubit[] => Unit is Adj)[]` i `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Wyrażenia warunkowe
@@ -477,20 +478,21 @@ Operator | Większa | Opis | Typy operandów
 ---------|----------|---------|---------------
  końcowe`!` | Jednoargumentowy | Unwrap | Dowolny typ zdefiniowany przez użytkownika
  `-`, `~~~`, `not` | Jednoargumentowy | Cyfra ujemna, dopełnienie bitowe, Negacja logiczna | `Int`, `BigInt` lub `Double` dla `-` , `Int` dla `BigInt` `~~~` `Bool``not`
- `^` | plików binarnych | Moc całkowita | `Int`lub `BigInt` dla podstawy `Int` dla wykładnika
- `/`, `*`, `%` | plików binarnych | Dzielenie, mnożenie, moduł całkowity | `Int`, `BigInt` lub `Double` dla `/` i `*` , `Int` lub `BigInt` dla`%`
- `+`, `-` | plików binarnych | Dodawanie lub łączenie ciągów i tablic, odejmowanie | `Int`, `BigInt` or `Double` , dodatkowo `String` lub dowolnego typu tablicy dla`+`
- `<<<`, `>>>` | plików binarnych | Lewy Shift, prawy Shift | `Int` lub `BigInt`
- `<`, `<=`, `>`, `>=` | plików binarnych | Mniejsze niż, mniejsze niż lub równe, większe niż, większe niż lub równe | `Int``BigInt`lub`Double`
- `==`, `!=` | plików binarnych | porównania równe, nierówne | dowolny typ pierwotny
- `&&&` | plików binarnych | Bitowe ORAZ | `Int` lub `BigInt`
- `^^^` | plików binarnych | Bitowe XOR | `Int` lub `BigInt`
- <code>\|\|\|</code> | plików binarnych | Bitowe OR | `Int` lub `BigInt`
- `and` | plików binarnych | AND logiczne | `Bool`
- `or` | plików binarnych | OR logiczne | `Bool`
+ `^` | Binarne | Moc całkowita | `Int`lub `BigInt` dla podstawy `Int` dla wykładnika
+ `/`, `*`, `%` | Binarne | Dzielenie, mnożenie, moduł całkowity | `Int`, `BigInt` lub `Double` dla `/` i `*` , `Int` lub `BigInt` dla`%`
+ `+`, `-` | Binarne | Dodawanie lub łączenie ciągów i tablic, odejmowanie | `Int`, `BigInt` or `Double` , dodatkowo `String` lub dowolnego typu tablicy dla`+`
+ `<<<`, `>>>` | Binarne | Lewy Shift, prawy Shift | `Int` lub `BigInt`
+ `<`, `<=`, `>`, `>=` | Binarne | Mniejsze niż, mniejsze niż lub równe, większe niż, większe niż lub równe | `Int``BigInt`lub`Double`
+ `==`, `!=` | Binarne | porównania równe, nierówne | dowolny typ pierwotny
+ `&&&` | Binarne | Bitowe ORAZ | `Int` lub `BigInt`
+ `^^^` | Binarne | Bitowe XOR | `Int` lub `BigInt`
+ <code>\|\|\|</code> | Binarne | Bitowe OR | `Int` lub `BigInt`
+ `and` | Binarne | Logiczne AND | `Bool`
+ `or` | Binarne | Logiczne OR | `Bool`
  `..` | Plik binarny/Trzyelementowy | Operator zakresu | `Int`
  `?` `|` | Trójargumentowy | Warunkowe | `Bool`po lewej stronie
 `w/` `<-` | Trójargumentowy | Kopiuj i Aktualizuj | Zobacz [wyrażenia kopiowania i aktualizowania](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
+
 Teraz, gdy można korzystać z wyrażeń w Q #, można [odstawić do operacji i funkcji w q #](xref:microsoft.quantum.guide.operationsfunctions) , aby dowiedzieć się, jak definiować i wywoływać operacje i funkcje.

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 407b4ff3570816eb7bdc323a5c5b77dac2d951af
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430904"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327785"
 ---
 # <a name="variables-in-q"></a>Zmienne w Q #
 
@@ -55,7 +55,7 @@ Tutaj udostępniamy niektóre możliwe przykłady technik rebind instrukcji
 
 ### <a name="apply-and-reassign-statements"></a>Instrukcje Apply i Reassign
 
-Szczególnym rodzajem `set` instrukcji, do których odwołuje się jako instrukcja *apply-and-Reassign* , stanowi wygodny sposób łączenia, jeśli prawa strona składa się z aplikacji operatora binarnego, a wynik jest przełączany do lewego argumentu operatora. Na przykład:
+Szczególnym rodzajem `set` instrukcji, do których odwołuje się jako instrukcja *apply-and-Reassign* , stanowi wygodny sposób łączenia, jeśli prawa strona składa się z aplikacji operatora binarnego, a wynik jest przełączany do lewego argumentu operatora. Na przykład
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -232,5 +232,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
+
 Dowiedz się więcej na temat [pracy z Qubits w usłudze](xref:microsoft.quantum.guide.qubits) Q #.

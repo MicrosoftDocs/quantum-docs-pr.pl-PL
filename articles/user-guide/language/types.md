@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609145"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327292"
 ---
 # <a name="types-in-q"></a>Typy w języku Q#
 
@@ -63,7 +63,8 @@ W drugim przykładzie należy zauważyć, że reprezentuje to potencjalnie niere
 Usługa Q # nie zapewnia obsługi prostokątnych tablic wielowymiarowych.
 
 Wartość tablicy można napisać w kodzie źródłowym Q # przy użyciu nawiasów kwadratowych wokół elementów tablicy, jak w `[PauliI, PauliX, PauliY, PauliZ]` .
-Typ literału tablicy jest określany przez wspólny typ podstawowy wszystkich elementów w tablicy. 
+Typ literału tablicy jest określany przez wspólny typ podstawowy wszystkich elementów w tablicy. W związku z tym próba skonstruowania tablicy z elementami, które nie mają wspólnego typu podstawowego, spowoduje wystąpienie błędu.  
+Zapoznaj się z [tablicami](xref:microsoft.quantum.guide.expressions#arrays-of-callables) żądanych przykładów.
 
 > [!WARNING]
 > Elementy tablicy nie mogą być zmieniane po utworzeniu tablicy.
@@ -125,7 +126,7 @@ Nazywamy tę właściwość jako _równoważność spójnej kolekcji_.
 
 Deklaracja typu zdefiniowanego przez użytkownika składa się ze słowa kluczowego `newtype` , po którym następuje nazwa typu zdefiniowanego przez użytkownika, elementu `=` , prawidłowej specyfikacji typu i kończącego się średnika.
 
-Na przykład:
+Przykład:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -291,7 +292,8 @@ W przypadku wywołania sparametryzowanego typu, wszystkie argumenty, które maj�
 
 Funkcja Q # nie udostępnia mechanizmu ograniczenia możliwych typów, które mogą zostać zastąpione dla parametru typu.
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
+
 Teraz, gdy wykorzystano wszystkie typy, które składają się na język Q #, można umieścić [wyrażenia w polu q #](xref:microsoft.quantum.guide.expressions) , aby zobaczyć, jak tworzyć i manipulować wyrażeniami różnych typów.
 
 

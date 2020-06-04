@@ -4,13 +4,13 @@ name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje używane do spójnej obliczeń arytmetycznych."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  summary: Konwertuje rejestr `BigEndian` qubit na rejestr `LittleEndian` qubit przez odwrócenie kolejności qubit.
+  summary: Konwertuje `BigEndian` Rejestr qubit na `LittleEndian` Rejestr qubit przez odwrócenie kolejności qubit.
 - uid: microsoft.quantum.arithmetic.identicalformatfactfxp
   summary: Potwierdź, że wszystkie liczby stałych punktów w podanej tablicy mają identyczne położenia punktów i numery qubit.
 - uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
   summary: Potwierdź, że wszystkie liczby stałych punktów w podanej tablicy mają identyczne położenia punktów podczas zliczania z najmniej znaczącego bitu. Oznacza to, że liczba pozycji punktu minusa bity musi być stała dla wszystkich liczb stałych punktów w tablicy.
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  summary: Konwertuje rejestr `LittleEndian` qubit na rejestr `BigEndian` qubit przez odwrócenie kolejności qubit.
+  summary: Konwertuje `LittleEndian` Rejestr qubit na `BigEndian` Rejestr qubit przez odwrócenie kolejności qubit.
 - uid: microsoft.quantum.arithmetic.reversedopbe
   summary: W przypadku operacji pobierającej dane wejściowe big-endian funkcja zwraca nową operację, która przyjmuje dane wejściowe w postaci little-endian.
 - uid: microsoft.quantum.arithmetic.reversedopbea
@@ -33,19 +33,19 @@ operations:
 - uid: microsoft.quantum.arithmetic.addfxp
   summary: Dodaje dwie stałe numery przechowywane w rejestrach Quantum.
 - uid: microsoft.quantum.arithmetic.addi
-  summary: Program automatycznie wybiera między dodawaniem i bez, w zależności od rozmiaru rejestru `ys`.
+  summary: Program automatycznie wybiera między dodawaniem i bez, w zależności od rozmiaru rejestru `ys` .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> rejestr jako dane wejściowe w docelowym rejestrze typu. <xref:microsoft.quantum.arithmetic.littleendian>
+  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> Rejestr jako dane wejściowe w docelowym rejestrze typu <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> rejestr jako dane wejściowe w docelowym rejestrze typu. <xref:microsoft.quantum.arithmetic.littleendian>
+  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> Rejestr jako dane wejściowe w docelowym rejestrze typu <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> rejestr jako dane wejściowe w docelowym rejestrze typu. <xref:microsoft.quantum.arithmetic.littleendian>
+  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> Rejestr jako dane wejściowe w docelowym rejestrze typu <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> rejestr jako dane wejściowe w docelowym rejestrze typu. <xref:microsoft.quantum.arithmetic.littleendian>
+  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.phaselittleendian> Rejestr jako dane wejściowe w docelowym rejestrze typu <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applymajorityinplace
   summary: Stosuje qubit większość operacji w miejscu rejestracji qubits.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
-  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.littleendian> rejestr jako dane wejściowe w docelowym rejestrze typu. <xref:microsoft.quantum.arithmetic.phaselittleendian>
+  summary: Stosuje operację, która pobiera <xref:microsoft.quantum.arithmetic.littleendian> Rejestr jako dane wejściowe w docelowym rejestrze typu <xref:microsoft.quantum.arithmetic.phaselittleendian> .
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
@@ -71,34 +71,29 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyxorinplace
   summary: Stosuje operacje bitowe-XOR między klasyczną liczbą całkowitą i liczbą całkowitą reprezentowaną przez rejestr qubits.
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
-  summary: Funkcja pomocnika, która pozwala na potwierdzenie, że liczba stałych punktów Quantum jest inicjowana na zero, tj. wszystkie qubits są w{0}stanie $ \ket $.
+  summary: Funkcja pomocnika, która pozwala na potwierdzenie, że liczba stałych punktów Quantum jest inicjowana na zero, tj. wszystkie qubits są w stanie $ \ket {0} $.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
   summary: Potwierdza, że najbardziej znaczący qubit rejestru qubit reprezentujący liczbę całkowitą bez znaku jest w określonym stanie.
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
-  summary: Potwierdza, że `number` zakodowany w PhaseLittleEndian jest mniejszy niż `value`.
+  summary: Potwierdza, że `number` zakodowany w PhaseLittleEndian jest mniejszy niż `value` .
 - uid: microsoft.quantum.arithmetic.assertprobint
   summary: Potwierdza, że prawdopodobieństwo określonego stanu rejestru Quantum ma oczekiwaną wartość.
 - uid: microsoft.quantum.arithmetic.carry
-  summary: Implementuje bramę przenoszące odwracalnie. `carryIn` Nadano bit przenoszenia zakodowany w qubit i dwie summand bity zakodowane w `summand1` i `summand2`, oblicza bitową XOR `carryIn`, `summand1` a `summand2` w qubit `summand2` i przeprowadzenie jest XORed do qubit. `carryOut`
-- uid: microsoft.quantum.arithmetic.cascadeccnot
-  summary: >-
-    Implementuje kaskadowe bramy CCNOT kontrolowane na odpowiednich bitach dwóch rejestrów qubit, działając na następnym qubit jednego z rejestrów.
-
-    Począwszy od qubits na pozycji 0 w obu rejestrach jako kontrolki, CCNOT jest zastosowany do qubit na pozycji 1 rejestru docelowego, a następnie kontrolowane przez qubits na pozycji 1 działającej na qubit w pozycji 2 w rejestrze docelowym itd., kończąc z akcją na docelowym qubit na pozycji `Length(nQubits)-1`.
+  summary: Implementuje bramę przenoszące odwracalnie. Nadano bit przenoszenia zakodowany w qubit `carryIn` i dwie summand bity zakodowane w `summand1` i `summand2` , oblicza bitową XOR `carryIn` , `summand1` a `summand2` w qubit `summand2` i przeprowadzenie jest XORed do qubit `carryOut` .
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: Porównuje dwie stałe numery przechowywane w rejestrach Quantum i kontroluje odbicie w wyniku.
 - uid: microsoft.quantum.arithmetic.comparegti
-  summary: Otoka dla porównania liczb `result = x > y`całkowitych:.
+  summary: 'Otoka dla porównania liczb całkowitych: `result = x > y` .'
 - uid: microsoft.quantum.arithmetic.comparegtsi
-  summary: Otoka dla porównań ze `result = xs > ys`znakiem liczby całkowitej:.
+  summary: 'Otoka dla porównań ze znakiem liczby całkowitej: `result = xs > ys` .'
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
   summary: Ta operacja sprawdza, czy liczba całkowita reprezentowana przez rejestr qubits jest większa niż inna liczba całkowita, stosując XOR wyniku do qubit wyjściowego.
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
   summary: Oblicza wartość $1/x $ dla ustalonej liczby $x $.
 - uid: microsoft.quantum.arithmetic.computereciprocali
-  summary: Oblicza odwrotność 1/x dla nieoznaczonej liczby całkowitej x przy użyciu dzielenia liczb całkowitych. Wynikiem jest interpretowana jako liczba całkowita `floor(2^(2*n-1) / x)`.
+  summary: Oblicza odwrotność 1/x dla nieoznaczonej liczby całkowitej x przy użyciu dzielenia liczb całkowitych. Wynikiem jest interpretowana jako liczba całkowita `floor(2^(2*n-1) / x)` .
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  summary: Kopiuje najbardziej znaczący bit rejestru `from` qubit reprezentujący liczbę całkowitą bez znaku w qubit. `target`
+  summary: Kopiuje najbardziej znaczący bit rejestru qubit `from` reprezentujący liczbę całkowitą bez znaku w qubit `target` .
 - uid: microsoft.quantum.arithmetic.dividei
   summary: Dzieli dwie liczby całkowite jednostek Quantum.
 - uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
@@ -124,7 +119,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.measurefxp
   summary: Zmierz liczbę stałych punktów, zwraca jej wartość jako podwójną i resetuje wszystkie rejestry do zera.
 - uid: microsoft.quantum.arithmetic.measureinteger
-  summary: Mierzy zawartość rejestru Quantum i konwertuje ją na liczbę całkowitą. Pomiary są wykonywane w odniesieniu do standardowej obliczeń, tj. eigenbasis `PauliZ`.
+  summary: Mierzy zawartość rejestru Quantum i konwertuje ją na liczbę całkowitą. Pomiary są wykonywane w odniesieniu do standardowej obliczeń, tj. eigenbasis `PauliZ` .
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
   summary: Wykonuje modułowe mnożenie i Dodawanie przez stałe wartości całkowite w rejestrze qubit.
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
@@ -134,9 +129,9 @@ operations:
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: Mnoży dwie liczby stałe w rejestrach Quantum.
 - uid: microsoft.quantum.arithmetic.multiplyi
-  summary: Pomnóż liczbę `xs` całkowitą przez `ys` liczbę całkowitą i Zapisz wynik `result`w, który musi być początkowy od zera.
+  summary: Pomnóż liczbę całkowitą `xs` przez liczbę całkowitą `ys` i Zapisz wynik w `result` , który musi być początkowy od zera.
 - uid: microsoft.quantum.arithmetic.multiplysi
-  summary: Pomnóż liczbę całkowitą `xs` ze znakiem `ys` , która została ze znakiem liczb całkowitych i Zapisz wynik w `result`, który musi być początkowy od zera.
+  summary: Pomnóż liczbę całkowitą ze znakiem, `xs` która została ze znakiem liczb całkowitych `ys` i Zapisz wynik w `result` , który musi być początkowy od zera.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Zainicjuj liczbę stałych punktów Quantum do klasycznej stałej.
 - uid: microsoft.quantum.arithmetic.reflectaboutinteger
@@ -147,22 +142,22 @@ operations:
   summary: >-
     Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych.
 
-    W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych `xs` w `ys`rejestrach LittleEndian i, a qubit, operacja oblicza sumę dwóch liczb całkowitych, w `ys` których $n $ najmniej znaczące bity wyniku są przechowywane, a bit przeprowadzenia jest XORed do qubit. `carry`
+    W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys` , a qubit, operacja oblicza sumę dwóch liczb całkowitych, w których $n $ najmniej znaczące bity wyniku są przechowywane, `ys` a bit przeprowadzenia jest XORed do qubit `carry` .
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   summary: Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych bez przeprowadzenia.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych.
 
-    W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych `xs` w `ys`rejestrach LittleEndian i, a qubit, operacja oblicza sumę dwóch liczb całkowitych, w `ys` których $n $ najmniej znaczące bity wyniku są przechowywane, a bit przeprowadzenia jest XORed do qubit. `carry`
+    W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys` , a qubit, operacja oblicza sumę dwóch liczb całkowitych, w których $n $ najmniej znaczące bity wyniku są przechowywane, `ys` a bit przeprowadzenia jest XORed do qubit `carry` .
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: Kwadraty o stałej liczbie punktów.
 - uid: microsoft.quantum.arithmetic.squarei
-  summary: Oblicza kwadrat liczby całkowitej `xs` w `result`, która musi być początkowo zerowa.
+  summary: Oblicza kwadrat liczby całkowitej `xs` w `result` , która musi być początkowo zerowa.
 - uid: microsoft.quantum.arithmetic.squaresi
-  summary: Kwadratowa liczba `xs` całkowita ze znakiem i `result`przechowywanie wyniku, który musi być początkowy od zera.
+  summary: Kwadratowa liczba całkowita ze znakiem `xs` i przechowywanie wyniku `result` , który musi być początkowy od zera.
 - uid: microsoft.quantum.arithmetic.sum
-  summary: Implementuje bramę sum odwracalnych. Nadawana jest `carryIn` zakodowana w qubit i dwie summand bity zakodowane w `summand1` i `summand2`, które oblicza bitowe XOR `carryIn` `summand1` i `summand2` w qubit. `summand2`
+  summary: Implementuje bramę sum odwracalnych. Nadawana jest zakodowana w qubit `carryIn` i dwie summand bity zakodowane w `summand1` i `summand2` , które oblicza bitowe XOR `carryIn` `summand1` i `summand2` w qubit `summand2` .
 newtypes:
 - uid: microsoft.quantum.arithmetic.bigendian
   summary: Zarejestruj, który koduje liczbę całkowitą bez znaku w kolejności big-endian. Qubit z indeksem `0` koduje największą liczbę liczb całkowitych bez znaku.
@@ -179,9 +174,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Typ liczby całkowitej ze znakiem zapisanej w little endian (zobacz LittleEndian).
 metadata:
-  ms.openlocfilehash: eda1d6d9037caecd7a2f0d91acdc0e59d34efe41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e43f31c738b48413ead40e16fbbfe4185b8a57d
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675490"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326731"

@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426707"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327615"
 ---
 # <a name="quantum-computing-glossary"></a>Słownik przetwarzania Quantum
 
@@ -55,7 +55,7 @@ Współczynnik, przez który rozmiary [eigenvector](xref:microsoft.quantum.gloss
 
 Wektor, którego kierunek jest niezmieniony przez daną transformację i którego wielkość jest zmieniana przez współczynnik odpowiadający [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)tego wektora. W przypadku macierzy kwadratowej $M $ i eigenvalue $c $, a następnie $Mv = CV $, gdzie $v $ jest eigenvector macierzy i może być złożoną liczbą dowolnego argumentu. Aby uzyskać więcej informacji, zobacz [zaawansowane koncepcje dotyczące macierzy](xref:microsoft.quantum.concepts.matrix-advanced).
 
-## <a name="entanglement"></a>Entanglement
+## <a name="entanglement"></a>Splątanie
 
 Cząstki Quantum, takie jak [qubits](xref:microsoft.quantum.glossary#qubit), mogą być połączone lub *Entangled* w taki sposób, że nie mogą być opisane niezależnie od siebie. Wyniki pomiarów są skorelowane nawet wtedy, gdy są oddzielone nieskończonie. Entanglement jest niezbędne do [mierzenia](xref:microsoft.quantum.glossary#measurement) [stanu](xref:microsoft.quantum.glossary#quantum-state) qubit.  Aby uzyskać więcej informacji, zobacz [zaawansowane koncepcje dotyczące macierzy](xref:microsoft.quantum.concepts.matrix-advanced).
 
@@ -120,7 +120,11 @@ Zestaw trzech 2 x 2 macierzy jednostkowych znanych jako `X` `Y` `Z` operacje Qua
 
 ## <a name="quantum-circuit-diagram"></a>Diagram obwodu Quantum
 
-Metoda graficznego reprezentowania sekwencji [operacji](xref:microsoft.quantum.glossary#operation) (lub [bram](xref:microsoft.quantum.glossary#gate)) dla prostych programów Quantum, np. przykładowego ![ diagramu obwodu ](~/media/qpe.png) . Aby uzyskać więcej informacji, zobacz [obwodów Quantum](xref:microsoft.quantum.concepts.circuits).
+Metoda graficznego reprezentowania sekwencji [operacji](xref:microsoft.quantum.glossary#operation) (lub [bram](xref:microsoft.quantum.glossary#gate)) dla prostych programów Quantum, na przykład 
+
+![Przykładowy diagram obwodu](~/media/qpe.png). 
+
+Aby uzyskać więcej informacji, zobacz [obwodów Quantum](xref:microsoft.quantum.concepts.circuits).
 
 ## <a name="quantum-libraries"></a>Biblioteki Quantum
 
@@ -144,7 +148,7 @@ Algorytm Quantum, który probabilistically się pomyślnie. W przypadku niepowod
 
 ## <a name="superposition"></a>Nadpozycja
 
-Koncepcja w ramach przetwarzania Quantum polega na tym, że [qubit](xref:microsoft.quantum.glossary#qubit) jest kombinacją liniową dwóch stanów, $ \ket{\0} $ i $ \ket{\1} $, dopóki nie zostanie ona [zmierzona](xref:microsoft.quantum.glossary#measurement).  Aby uzyskać więcej informacji, zobacz [Omówienie przetwarzania Quantum](xref:microsoft.quantum.overview.understanding).
+Koncepcja w ramach przetwarzania Quantum polega na tym, że [qubit](xref:microsoft.quantum.glossary#qubit) jest kombinacją liniową dwóch stanów, $ \ket {0} $ i $ \ket {1} $, dopóki nie zostanie ona [zmierzona](xref:microsoft.quantum.glossary#measurement).  Aby uzyskać więcej informacji, zobacz [Omówienie przetwarzania Quantum](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Maszyna docelowa
 

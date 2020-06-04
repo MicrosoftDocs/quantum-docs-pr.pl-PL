@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca tablicę, która składa się z tych elementów, które spełniają predykat.
 - uid: microsoft.quantum.arrays.fold
-  summary: Iteruje funkcję `f` za pomocą tablicy `array`, zwracając. `f(f(f(initialState, array[0]), array[1]), ...)`
+  summary: Iteruje funkcję `f` za pomocą tablicy `array` , zwracając `f(f(f(initialState, array[0]), array[1]), ...)` .
 - uid: microsoft.quantum.arrays.head
   summary: Zwraca pierwszy element tablicy.
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: Dana tablica zwraca zakres przez indeksy tej tablicy, odpowiedni do użycia w pętli for.
 - uid: microsoft.quantum.arrays.isempty
   summary: Zwraca wartość true, jeśli i tylko wtedy, gdy tablica jest pusta.
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: Zwraca wartość PRAWDA, jeśli i tylko wtedy, gdy dana tablica reprezentuje permutację.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: Dana tablica zwraca funkcję, która zwraca elementy tej tablicy.
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dana tablica i operacja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w ramach operacji.
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673394"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326714"

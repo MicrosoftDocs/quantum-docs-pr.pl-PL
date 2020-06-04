@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430955"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326544"
 ---
 # <a name="control-flow-in-q"></a>Przepływ sterowania w p #
 
@@ -44,7 +44,7 @@ Jeśli oryginalny warunek if i wszystkie klauzule else-if mają wartość false,
 Należy zauważyć, że każdy blok jest wykonywany we własnym zakresie.
 Powiązania wykonane wewnątrz elementu `if` , `elif` lub `else` bloku nie są widoczne po jego zakończeniu.
 
-Na przykład:
+Na przykład
 
 ```qsharp
 if (result == One) {
@@ -174,7 +174,7 @@ Możliwe do zwrócenia wszystkie inne typy wymagają końcowej instrukcji return
 W obrębie operacji nie ma maksymalnej liczby instrukcji return.
 Kompilator może emitować ostrzeżenie, jeśli instrukcje są zgodne z instrukcją Return w bloku.
 
-Na przykład:
+Na przykład
 ```qsharp
 return 1;
 ```
@@ -196,7 +196,7 @@ Ten ciąg jest zwracany do klasycznego sterownika jako komunikat o błędzie.
 W obrębie operacji nie ma ograniczeń dotyczących liczby instrukcji zakończonych niepowodzeniem.
 Kompilator może emitować ostrzeżenie, jeśli instrukcje obserwują instrukcję Fail w bloku.
 
-Na przykład:
+Na przykład
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -329,5 +329,6 @@ Istotne funkcje programistyczne przedstawione w tej operacji to bardziej skompli
 Więcej informacji na temat operacji i można znaleźć w temacie [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
 
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
+
 Więcej informacji na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging) w programie Q #.
