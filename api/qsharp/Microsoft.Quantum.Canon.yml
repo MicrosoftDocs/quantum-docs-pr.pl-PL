@@ -2,38 +2,8 @@
 uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
-- uid: microsoft.quantum.canon.asqubitarray
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAsQubitArray jest przestarzała.\nTa funkcja została usunięta."
-- uid: microsoft.quantum.canon.assertalmostequal
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAlmostEqual jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.nearequalityfactd\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" zamiast tego."
-- uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAlmostEqualTol jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" zamiast tego."
-- uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertBoolArrayEqual jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.allequalityfactb\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" zamiast tego."
-- uid: microsoft.quantum.canon.assertboolequal
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertBoolEqual jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.equalityfactb\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" zamiast tego."
-- uid: microsoft.quantum.canon.assertintequal
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertIntEqual jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.equalityfacti\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" zamiast tego."
-- uid: microsoft.quantum.canon.assertresultequal
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertResultEqual jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.equalityfactr\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" zamiast tego."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBigEndianToLittleEndian jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
-- uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPowiązanie zostało zaniechane. Użyj @\"microsoft.quantum.canon.bound\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.bound\"."
-- uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPowiązanie jest przestarzałe. Użyj @\"microsoft.quantum.canon.bounda\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.bounda\"."
-- uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBindC jest przestarzała. Użyj @\"microsoft.quantum.canon.boundc\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.boundc\"."
-- uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBindCA jest przestarzała. Użyj @\"microsoft.quantum.canon.boundca\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.boundca\"."
-- uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBitSize jest przestarzała. Użyj @\"microsoft.quantum.math.bitsizei\" zamiast tego.\nUżyj @\"microsoft.quantum.math.bitsizei\"."
-- uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBoolArrFromPositiveInt jest przestarzała. Użyj @\"microsoft.quantum.convert.intasboolarray\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.intasboolarray\"."
-- uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBoolArrFromResultArr jest przestarzała. Użyj @\"microsoft.quantum.convert.resultarrayasboolarray\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.resultarrayasboolarray\"."
-- uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBoolFromResult jest przestarzała. Użyj @\"microsoft.quantum.convert.resultasbool\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.resultasbool\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBigEndianToLittleEndian jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
 - uid: microsoft.quantum.canon.bound
   summary: Dana tablica operacji działających na pojedynczym wejściu tworzy nową operację, która wykonuje każdą daną operację w sekwencji.
 - uid: microsoft.quantum.canon.bounda
@@ -52,20 +22,20 @@ functions:
 
     Modyfikator `CA` wskazuje, że wszystkie operacje w tablicy są sąsiadujące i kontrolowane.
 - uid: microsoft.quantum.canon.ccontrolled
-  summary: Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false`nie, nic się nie dzieje.
+  summary: Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false` nie, nic się nie dzieje.
 - uid: microsoft.quantum.canon.ccontrolleda
   summary: >-
-    Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false`nie, nic się nie dzieje.
+    Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false` nie, nic się nie dzieje.
 
     Modyfikator `A` wskazuje, że operacja jest sąsiedni.
 - uid: microsoft.quantum.canon.ccontrolledc
   summary: >-
-    Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false`nie, nic się nie dzieje.
+    Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false` nie, nic się nie dzieje.
 
     Modyfikator `C` wskazuje, że operacja jest sterowana.
 - uid: microsoft.quantum.canon.ccontrolledca
   summary: >-
-    Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false`nie, nic się nie dzieje.
+    Po podaniu operacji operacja zwraca nową operację, która stosuje tę wartość, jeśli jest spełniony parametr klasycznej kontrolki. Jeśli `false` nie, nic się nie dzieje.
 
     Modyfikator `CA` wskazuje, że operacja jest sterowana i sąsiadująca.
 - uid: microsoft.quantum.canon.compose
@@ -78,8 +48,6 @@ functions:
   summary: Dana operacja zewnętrzna i wewnętrzna zwraca nową operację, która jest sprzężona z operacją wewnętrzną przez operację zewnętrzną.
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: Dana operacja zewnętrzna i wewnętrzna zwraca nową operację, która jest sprzężona z operacją wewnętrzną przez operację zewnętrzną.
-- uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nContinuedFractionConvergent jest przestarzała. Użyj @\"microsoft.quantum.math.continuedfractionconvergenti\" zamiast tego.\nUżyj @\"microsoft.quantum.math.continuedfractionconvergenti\"."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Zwraca operację jednostkową, która stosuje platformę Oracle w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada określonej masce bitów.
 - uid: microsoft.quantum.canon.controlledonint
@@ -90,8 +58,6 @@ functions:
 
 
     Oznacza to, że w wyniku operacji z dwoma danymi wejściowymi ta funkcja stosuje curry isomorphism $f (x, y) \equiv f (x) (y) $, aby zwrócić operację jednego danych wejściowych, która zwraca operację jednego danych wejściowych.
-- uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCurryOp jest przestarzała. Użyj @\"microsoft.quantum.canon.curriedop\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.curriedop\"."
 - uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: Zwraca operację implementującą Integrator Trotter – Suzuki dla danej operacji.
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
@@ -106,44 +72,16 @@ functions:
   summary: Zwraca operację, która stosuje daną operację z danym argumentem.
 - uid: microsoft.quantum.canon.embedpauli
   summary: Za pomocą pojedynczego operatora Pauli qubit i indeksu qubit, zwraca wieloqubity operator Pauli z danym operatorem Single-qubit w tym indeksie i `PauliI` w każdym innym indeksie.
-- uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nExpMod jest przestarzała. Użyj @\"microsoft.quantum.math.expmodi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.expmodi\"."
-- uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nExtendedGCD jest przestarzała. Użyj @\"microsoft.quantum.math.extendedgreatestcommondivisori\" zamiast tego.\nUżyj @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
-- uid: microsoft.quantum.canon.filter
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nFiltr jest przestarzały. Użyj @\"microsoft.quantum.arrays.filtered\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.Filtered\" zamiast tego."
-- uid: microsoft.quantum.canon.forall
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nForAll jest przestarzała. Użyj @\"microsoft.quantum.arrays.all\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.All\" zamiast tego."
-- uid: microsoft.quantum.canon.forany
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nForAny jest przestarzała. Użyj @\"microsoft.quantum.arrays.any\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.Any\" zamiast tego."
 - uid: microsoft.quantum.canon.fst
   summary: Dana para zwraca swój pierwszy element.
-- uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nGCD jest przestarzała. Użyj @\"microsoft.quantum.math.greatestcommondivisori\" zamiast tego.\nUżyj @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.ignore
   summary: Ignoruje dane wyjściowe operacji lub funkcji.
-- uid: microsoft.quantum.canon.intabs
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nTabulatory są przestarzałe. Użyj @\"microsoft.quantum.math.absi\" zamiast tego.\nTa funkcja została usunięta."
-- uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIntArrayFromRange jest przestarzała. Użyj @\"microsoft.quantum.convert.rangeasintarray\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.rangeasintarray\"."
-- uid: microsoft.quantum.canon.intmax
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIntMax jest przestarzała. Użyj @\"microsoft.quantum.math.maxi\" zamiast tego.\nTa funkcja została usunięta."
-- uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nInverseMod jest przestarzała. Użyj @\"microsoft.quantum.math.inversemodi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.inversemodi\"."
-- uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIsCoprime jest przestarzała. Użyj @\"microsoft.quantum.math.iscoprimei\" zamiast tego.\nUżyj @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.isresultone
-  summary: Testuje, czy dana wartość wynikowa jest `One`równa.
+  summary: Testuje, czy dana wartość wynikowa jest równa `One` .
 - uid: microsoft.quantum.canon.isresultzero
-  summary: Testuje, czy dana wartość wynikowa jest `Zero`równa.
+  summary: Testuje, czy dana wartość wynikowa jest równa `Zero` .
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLittleEndianToBigEndian jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.littleendianasbigendian\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
-- uid: microsoft.quantum.canon.map
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMapa jest przestarzała. Użyj @\"microsoft.quantum.arrays.mapped\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.Mapped\" zamiast tego."
-- uid: microsoft.quantum.canon.mapindex
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMapIndex jest przestarzała. Użyj @\"microsoft.quantum.arrays.mappedbyindex\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.MappedByIndex\" zamiast tego."
-- uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModuł został uznany za przestarzały. Użyj @\"microsoft.quantum.math.modulusi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.modulusi\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLittleEndianToBigEndian jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.littleendianasbigendian\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     Zwraca przemnożoną operację jednostkową $U $, która stosuje $V jednostkowe _j $, gdy jest to kontrolowane przez n-qubit Number State $ \ket{j} $.
@@ -156,8 +94,6 @@ functions:
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-- uid: microsoft.quantum.canon.nearequalityfact
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nNearEqualityFact jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.nearequalityfactd\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" zamiast tego."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Wywołuje operację do potęgi.
@@ -188,16 +124,6 @@ functions:
 
 
     Oznacza to, że w wyniku operacji reprezentującej bramę $U $, zwraca nową operację $U ^ m $ dla $m potęgi $.
-- uid: microsoft.quantum.canon.pad
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nKonsola jest przestarzała. Użyj @\"microsoft.quantum.arrays.padded\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.Padded\" zamiast tego."
-- uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPauliFromBitString jest przestarzała. Użyj @\"microsoft.quantum.convert.boolarrayaspauli\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.boolarrayaspauli\"."
-- uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPNormalize jest przestarzała. Użyj @\"microsoft.quantum.math.pnormalized\" zamiast tego.\nUżyj @\"microsoft.quantum.math.pnormalized\"."
-- uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPositiveIntFromBoolArr jest przestarzała. Użyj @\"microsoft.quantum.convert.boolarrayasint\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.boolarrayasint\"."
-- uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPositiveIntFromResultArr jest przestarzała. Użyj @\"microsoft.quantum.convert.resultarrayasint\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.resultarrayasint\"."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Ogranicza operację do tablicy indeksów rejestru, tj. podrejestru.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -215,26 +141,8 @@ functions:
     Ogranicza operację do tablicy indeksów rejestru, tj. podrejestru.
 
     Modyfikator `CA` wskazuje, że operacja jest sterowana i sąsiadująca.
-- uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRestrictToSubregister jest przestarzała. Użyj @\"microsoft.quantum.canon.restrictedtosubregister\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.restrictedtosubregister\"."
-- uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRestrictToSubregisterA jest przestarzała. Użyj @\"microsoft.quantum.canon.restrictedtosubregistera\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.restrictedtosubregistera\"."
-- uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRestrictToSubregisterC jest przestarzała. Użyj @\"microsoft.quantum.canon.restrictedtosubregisterc\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
-- uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRestrictToSubregisterCA jest przestarzała. Użyj @\"microsoft.quantum.canon.restrictedtosubregisterca\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
-- uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nResultArrFromBoolArr jest przestarzała. Użyj @\"microsoft.quantum.convert.boolarrayasresultarray\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.resultarrayasboolarray\"."
-- uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nResultAsInt jest przestarzała. Użyj @\"microsoft.quantum.convert.resultarrayasint\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.resultarrayasint\"."
-- uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nResultFromBool jest przestarzała. Użyj @\"microsoft.quantum.convert.boolasresult\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.boolasresult\"."
-- uid: microsoft.quantum.canon.reverse
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nWycofanie jest przestarzałe. Użyj @\"microsoft.quantum.arrays.reversed\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.Reversed\" zamiast tego."
 - uid: microsoft.quantum.canon.snd
   summary: Dana para zwraca jego drugi element.
-- uid: microsoft.quantum.canon.splitarray
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSplitArray jest przestarzała. Użyj @\"microsoft.quantum.arrays.partitioned\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arrays.Partitioned\" zamiast tego."
 - uid: microsoft.quantum.canon.stackcapacity
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nStackCapacity jest przestarzała."
 - uid: microsoft.quantum.canon.stacklength
@@ -247,8 +155,6 @@ functions:
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nStackPop jest przestarzała."
 - uid: microsoft.quantum.canon.stackpush
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nStackPush jest przestarzała."
-- uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToOperation jest przestarzała. Użyj @\"microsoft.quantum.convert.functionasoperation\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.functionasoperation\"."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: Dana funkcja i operacja zwracają nową operację, której dane wejściowe są przekształcane przez daną funkcję.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -274,25 +180,20 @@ functions:
     Dana funkcja, która zwraca operacje, zwraca nową operację, która pobiera dane wejściowe jako krotki.
 
     Modyfikator `CA` wskazuje, że operacje są kontrolowane i sąsiadujące.
-- uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nUncurryOp jest przestarzała. Użyj @\"microsoft.quantum.canon.uncurriedop\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.uncurriedop\"."
-- uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nUncurryOpA jest przestarzała. Użyj @\"microsoft.quantum.canon.uncurriedopa\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.uncurriedopa\"."
-- uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nUncurryOpC jest przestarzała. Użyj @\"microsoft.quantum.canon.uncurriedopc\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.uncurriedopc\"."
-- uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nUncurryOpCA jest przestarzała. Użyj @\"microsoft.quantum.canon.uncurriedopca\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.uncurriedopca\"."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Zwraca tablicę wszystkich operatorów Pauli wagi 1 w danej liczbie qubits.
 - uid: microsoft.quantum.canon.xor
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nXOR jest przestarzała. Użyj @\"microsoft.quantum.logical.xor\" zamiast tego.\nUżyj @\"microsoft.quantum.logical.xor\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nXOR jest przestarzała. Użyj @\"microsoft.quantum.logical.xor\" zamiast tego.\nUżywaj @\"microsoft.quantum.logical.xor\"."
 operations:
-- uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAdiabaticStateEnergyUnitary jest przestarzała. Użyj @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" zamiast tego.\nUżyj @\"microsoft.quantum.simuilation.pnormalized\"."
 - uid: microsoft.quantum.canon.andladder
   summary: Wykonuje kontrolowane "i drabinę" w rejestrze docelowej qubits.
 - uid: microsoft.quantum.canon.applyand
   summary: Odwraca daną wartość docelową qubit, jeśli i tylko wtedy, gdy oba kontrolki qubits znajdują się w stanie 1, przy użyciu miary do wykonania sąsiedniej operacji.
+- uid: microsoft.quantum.canon.applyccnotchain
+  summary: >-
+    Implementuje kaskadowe bramy CCNOT kontrolowane na odpowiednich bitach dwóch rejestrów qubit, działając na następnym qubit jednego z rejestrów.
+
+    Począwszy od qubits na pozycji 0 w obu rejestrach jako kontrolki, CCNOT jest zastosowany do qubit na pozycji 1 rejestru docelowego, a następnie kontrolowane przez qubits na pozycji 1 działającej na qubit w pozycji 2 w rejestrze docelowym itd., kończąc z akcją na docelowym qubit na pozycji `Length(nQubits)-1` .
 - uid: microsoft.quantum.canon.applycnotchain
   summary: Oblicza parzystość rejestru qubits w miejscu.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
@@ -367,30 +268,20 @@ operations:
   summary: Stosuje operator Pauli na każdym qubit w tablicy, jeśli odpowiedni bit tablicy logicznej jest zgodny z danymi wejściowymi.
 - uid: microsoft.quantum.canon.applyquantumfouriertransform
   summary: Wykonuje transformację Quantum Fouriera na rejestrze Quantum zawierającym liczbę całkowitą w reprezentacji little-endian.
-- uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyQuantumFourierTransformBE jest przestarzała. Zamiast tego należy użyć @ \"applyquantumfouriertransform (bigendianaslittleendian (QS))\".\nTa operacja została usunięta."
-- uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyQuantumFourierTransformLE jest przestarzała. Użyj @\"microsoft.quantum.canon.applyquantumfouriertransform\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
-- uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndian jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbe\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndianA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbea\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndianA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbea\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndianC jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbec\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndianC jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbec\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndianCA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbeca\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
-- uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndian jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedople\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpBigEndianCA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopbeca\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndianA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedoplea\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndianA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedoplea\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndianC jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedoplec\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndianC jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedoplec\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndianCA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopleca\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
-- uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyRippleCarryComparatorBE jest przestarzała. Zamiast tego należy użyć @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), Output)\".\nTa operacja została usunięta."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyReversedOpLittleEndianCA jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applyreversedopleca\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyRippleCarryComparatorLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.compareusingripplecarry\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nApplyRippleCarryComparatorLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.compareusingripplecarry\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Stosuje listę operacji Ops i ich obiekty docelowe sekwencyjnie na tablicy.
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -551,25 +442,23 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: Zastosuj przybliżoną transformację Quantum Fouriera (AQFT) do rejestru Quantum.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertHighestBit jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertHighestBit jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertLessThanPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.assertphaselessthan\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertLessThanPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.assertphaselessthan\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Potwierdza, że faza równego stanu nadpozycji ma oczekiwaną wartość.
 
 
-    W celu potwierdzenia, że faza $ \phi $ stanu Quantum, która może być wyrażona jako $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ KET{0} + e ^ {-i\phi} \ KET{1}) $ dla niektórych dowolnego elementu Real t ma oczekiwaną wartość.
-- uid: microsoft.quantum.canon.assertprobintbe
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertProbIntBE jest przestarzała. Zamiast tego należy użyć wartości @ \"assertprobint (stateindex, Probe, bigendianaslittleendian (qubits), tolerancja)\".\nTa operacja została usunięta."
+    W celu potwierdzenia, że faza $ \phi $ stanu Quantum, która może być wyrażona jako $ \frac{e ^ {i t}} {\sqrt {2} } (e ^ {i\phi} \ KET {0} + e ^ {-i\phi} \ KET {1} ) $ dla niektórych dowolnego elementu Real t ma oczekiwaną wartość.
+- uid: microsoft.quantum.canon.cascadeccnot
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCascadeCCNOT jest przestarzała. Użyj @\"microsoft.quantum.canon.applyccnotchain\" zamiast tego."
 - uid: microsoft.quantum.canon.cascadecnot
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCascadeCNOT jest przestarzała. Użyj @\"microsoft.quantum.canon.applycnotchain\" zamiast tego.\nUżyj @\"microsoft.quantum.canon.applycnotchain\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCascadeCNOT jest przestarzała. Użyj @\"microsoft.quantum.canon.applycnotchain\" zamiast tego.\nUżywaj @\"microsoft.quantum.canon.applycnotchain\"."
 - uid: microsoft.quantum.canon.cnotchain
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nCNOTChain jest przestarzała. Użyj @\"microsoft.quantum.canon.applycnotchain\" zamiast tego."
 - uid: microsoft.quantum.canon.cnotchaintarget
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nCNOTChainTarget jest przestarzała. Użyj @\"microsoft.quantum.canon.applycnotchainwithtarget\" zamiast tego."
-- uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCopyMostSignificantBitLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.copymostsignificantbit\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     Stosuje bramę z kontrolą X (CX) do pary qubits.
@@ -604,35 +493,33 @@ operations:
     Przekształcanie Hadamard Y $H _Y = S H $ na jednym qubit to:
 
 
-    \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ i &-i \end{bmatrix}.
+    \begin{align} H_Y \mathrel{: =} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ i &-i \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nInPlaceMajority jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applymajorityinplace\" zamiast tego.\nUżyj @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nInPlaceMajority jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.applymajorityinplace\" zamiast tego.\nUżywaj @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nInPlaceXorBE jest przestarzała. Zamiast tego należy użyć @ \"applyreversedopleca (wartość, _), Target)\".\nTa operacja została usunięta."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nInPlaceXorLE jest przestarzała. Użyj @\"microsoft.quantum.measurement.applyxorinplace\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nInPlaceXorLE jest przestarzała. Użyj @\"microsoft.quantum.measurement.applyxorinplace\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIntegerIncrementLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.incrementbyinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIntegerIncrementLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.incrementbyinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIntegerIncrementPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIntegerIncrementPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: Stosuje operację dla każdego indeksu w Kartezjańskiegoej liczbie całkowitej.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   summary: Stosuje operację dla każdego indeksu w kartezjańskiego produktu kilku zakresów.
-- uid: microsoft.quantum.canon.measureintegerbe
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMeasureIntegerBE jest przestarzała. Zamiast tego należy użyć @ \"measureinteger (bigendianaslittleendian (target))\".\nTa operacja została usunięta."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularAddProductLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularAddProductLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularAddProductPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularAddProductPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularIncrementLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularIncrementLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularIncrementPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularIncrementPhaseLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularMultiplyByConstantLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModularMultiplyByConstantLE jest przestarzała. Użyj @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" zamiast tego.\nUżywaj @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     Stosuje tablicę operacji sterowaną przez tablicę liczb Stanów.
@@ -680,23 +567,15 @@ operations:
     $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Używa bram wymiany do odwrócenia kolejności qubits w rejestrze.
-- uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nProgram with został uznany za przestarzały. Użyj @\"microsoft.quantum.canon.applywith\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Canon.ApplyWith\"."
-- uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nZ i został uznany za przestarzały. Użyj @\"microsoft.quantum.canon.applywitha\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Canon.ApplyWithA\"."
-- uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nWithC jest przestarzała. Użyj @\"microsoft.quantum.canon.applywithc\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Canon.ApplyWithC\"."
-- uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nWithCA jest przestarzała. Użyj @\"microsoft.quantum.canon.applywithca\" zamiast tego.\nUżyj @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: Typ sygnatury bramy CCNOT.
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nResultStack jest przestarzała."
 metadata:
-  ms.openlocfilehash: a38f0267c2caefba7acc63e8e36d96a1b8c08d91
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677061"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326680"

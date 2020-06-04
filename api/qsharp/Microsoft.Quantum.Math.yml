@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Zwraca wartość bezwzględną złożonej liczby typu `Complex`.
+  summary: Zwraca wartość bezwzględną złożonej liczby typu `Complex` .
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Zwraca wartość bezwzględną złożonej liczby typu `ComplexPolar`.
+  summary: Zwraca wartość bezwzględną złożonej liczby typu `ComplexPolar` .
 - uid: microsoft.quantum.math.absd
   summary: Zwraca wartość bezwzględną liczby zmiennoprzecinkowej o podwójnej precyzji.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Zwraca wartość bezwzględną dużej liczby całkowitej.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Zwraca kwadratową wartość bezwzględną złożonej liczby typu `Complex`.
+  summary: Zwraca kwadratową wartość bezwzględną złożonej liczby typu `Complex` .
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Zwraca kwadratową wartość bezwzględną złożonej liczby typu `ComplexPolar`.
+  summary: Zwraca kwadratową wartość bezwzględną złożonej liczby typu `ComplexPolar` .
 - uid: microsoft.quantum.math.arccos
   summary: Zwraca kąt, którego cosinus jest równy podanej liczbie.
 - uid: microsoft.quantum.math.arccosh
@@ -31,31 +31,27 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Oblicza odwrotny tangens hiperboliczny liczby.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Zwraca fazę złożonej liczby typów `Complex`.
+  summary: Zwraca fazę złożonej liczby typów `Complex` .
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Zwraca fazę złożonej liczby typów `ComplexPolar`.
+  summary: Zwraca fazę złożonej liczby typów `ComplexPolar` .
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Dla nieujemnej liczby całkowitej `a`zwraca liczbę bitów wymaganych do reprezentowania `a`.
+    Dla nieujemnej liczby całkowitej `a` zwraca liczbę bitów wymaganych do reprezentowania `a` .
 
 
     Oznacza to, że program zwraca najmniejszy $n $, który $a < 2 ^ n $.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Dla nieujemnej liczby całkowitej `a`zwraca liczbę bitów wymaganych do reprezentowania `a`.
+    Dla nieujemnej liczby całkowitej `a` zwraca liczbę bitów wymaganych do reprezentowania `a` .
 
 
     Oznacza to, że program zwraca najmniejszy $n $, który $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
   summary: Zwraca najmniejszą liczbę całkowitą większą lub równą podanej liczbie.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Konwertuje liczbę zespoloną typu `Complex` na liczbę zespoloną typu. `ComplexPolar`
+  summary: Konwertuje liczbę zespoloną typu `Complex` na liczbę zespoloną typu `ComplexPolar` .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Konwertuje liczbę zespoloną typu `ComplexPolar` na liczbę zespoloną typu. `Complex`
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nComplexPolarToComplex jest przestarzała. Użyj @\"microsoft.quantum.math.complexpolarascomplex\" zamiast tego."
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nComplexToComplexPolar jest przestarzała. Użyj @\"microsoft.quantum.math.complexascomplexpolar\" zamiast tego."
+  summary: Konwertuje liczbę zespoloną typu `ComplexPolar` na liczbę zespoloną typu `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
@@ -145,9 +141,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Wykonuje dzielenie modularne na liczbę podniesioną do potęgi innej liczby.
 - uid: microsoft.quantum.math.modulusi
-  summary: Oblicza pozostałą postać `value` kanoniczną `modulus`modulo.
+  summary: Oblicza pozostałą postać kanoniczną `value` modulo `modulus` .
 - uid: microsoft.quantum.math.modulusl
-  summary: Oblicza pozostałą postać `value` kanoniczną `modulus`modulo.
+  summary: Oblicza pozostałą postać kanoniczną `value` modulo `modulus` .
 - uid: microsoft.quantum.math.negationc
   summary: Zwraca jednoargumentową negację danych wejściowych.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +170,16 @@ functions:
   summary: Zwraca sumę dwóch danych wejściowych.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    Zwraca `L(p)` normę wektora `Double`s.
+    Zwraca `L(p)` normę wektora `Double` s.
 
 
-    Oznacza to, że dana tablica `Double[]`$x $ typu zwraca $p $-norma $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+    Oznacza to, że dana tablica $x $ typu `Double[]` zwraca $p $-norma $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normalizuje wektor `Double`s w `L(p)` normie.
+    Normalizuje wektor `Double` s w `L(p)` normie.
 
 
-    Oznacza to, że dana tablica $x $ typu `Double[]`zwraca tablicę, w której wszystkie elementy są podzielone przez $p $-norma $\|x\|_p $.
+    Oznacza to, że dana tablica $x $ typu `Double[]` zwraca tablicę, w której wszystkie elementy są podzielone przez $p $-norma $ \| x \| _p $.
 - uid: microsoft.quantum.math.powc
   summary: Zwraca liczbę podniesioną do danej potęgi.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +226,7 @@ functions:
   summary: Oblicza integralną część liczby.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Reprezentuje liczbę racjonalną formularza `p/q`. Liczba `p` całkowita jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
+  summary: Reprezentuje liczbę racjonalną formularza `p/q` . Liczba całkowita `p` jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Reprezentuje liczbę zespoloną przez jej składniki rzeczywiste i urojone.
@@ -243,7 +239,7 @@ newtypes:
 
     Reprezentacja biegunowa liczby zespolonej jest $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: Reprezentuje liczbę racjonalną formularza `p/q`. Liczba `p` całkowita jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
+  summary: Reprezentuje liczbę racjonalną formularza `p/q` . Liczba całkowita `p` jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera klasyczne funkcje matematyczne i typy danych."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Zwraca jeden z jednoqubitowych operatorów Pauli jednolicie losowo.
 metadata:
-  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673154"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326500"

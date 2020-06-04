@@ -7,8 +7,8 @@ summary: >-
   Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych.
 
 
-  W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych `xs` w `ys`rejestrach LittleEndian i, a qubit, operacja oblicza sumę dwóch liczb całkowitych, w `ys` których $n $ najmniej znaczące bity wyniku są przechowywane, a bit przeprowadzenia jest XORed do qubit. `carry`
-remarks: Ta operacja ma takie same funkcje jak RippleCarryAdderD, ale używa tylko jednego Ancilla qubit zamiast $n $.
+  W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys` , a qubit, operacja oblicza sumę dwóch liczb całkowitych, w których $n $ najmniej znaczące bity wyniku są przechowywane, `ys` a bit przeprowadzenia jest XORed do qubit `carry` .
+remarks: Ta operacja ma takie same funkcje jak RippleCarryAdderD, ale używa tylko jednej pomocniczej qubit zamiast $n $.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A New Quantum Ripple-przenieść obwód dodawania", 2004.
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a72b9fe01846bbdb0b3cb6079a681104904747df
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675135"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326509"
