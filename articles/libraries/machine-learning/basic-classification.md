@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327649"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422176"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Podstawowa Klasyfikacja: klasyfikowanie danych za pomocą QDK
 
@@ -86,7 +86,7 @@ Zapiszemy następujący kod w pliku o nazwie `Training.qs` .
 Najważniejsze funkcje i operacje zdefiniowane w powyższym kodzie są następujące:
 
 - `ClassifierStructure() : ControlledRotation[]`: w tej funkcji ustawimy strukturę modelu obwodu przez dodanie warstw kontrolowanej bramy. Ten krok jest analogiczny do deklaracji warstw neurons w modelu uczenia głębokiego.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: Ta operacja jest podstawową częścią kodu i definiuje szkolenie. Tutaj ładujemy przykłady z zestawu danych zawartego w bibliotece, ustawimy parametry funkcji Hyper-i początkowe parametry szkolenia i zaczniemy szkolenie przez wywołanie operacji `TrainSequentialClassifier` zawartej w bibliotece. Zwraca parametry i bias określające klasyfikatora.
+- `TrainHalfMoonModel() : (Double[], Double)`: Ta operacja jest podstawową częścią kodu i definiuje szkolenie. Tutaj ładujemy przykłady z zestawu danych zawartego w bibliotece, ustawimy parametry funkcji Hyper-i początkowe parametry szkolenia i zaczniemy szkolenie przez wywołanie operacji `TrainSequentialClassifier` zawartej w bibliotece. Zwraca parametry i bias określające klasyfikatora.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: Ta operacja definiuje proces walidacji w celu oszacowania modelu. Tutaj ładujemy próbki do walidacji, liczbę pomiarów na próbkę i tolerancję. Zwraca liczbę błędów klasyfikacji na wybranej partii próbek do walidacji.
 
 ## <a name="next-steps"></a>Następne kroki

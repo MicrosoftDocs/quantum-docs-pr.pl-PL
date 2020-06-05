@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328599"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422244"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Samouczek: pisanie i symulowanie programów qubit na poziomie w funkcji Q\#
 
@@ -386,7 +386,7 @@ Szczegółowo dla pierwszego wiersza naszego stanu danych wejściowych $ \ket {0
 * **`    ---`**: Graficzna reprezentacja fazy amplitudy.
 * **`[ 0.0000 rad ]`**: wartość liczbowa fazy (w radianach).
 
-Obie wartości i fazy są wyświetlane ze graficzną reprezentacją. Reprezentacja wielkości jest prosta: pokazuje pasek `*` , a im wyższe prawdopodobieństwo, tym większy jest pasek. W przypadku fazy należy zapoznać się z sekcją DumpMachine w [tym miejscu](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) , aby poznać możliwe reprezentacje symboli na podstawie zakresów kątów.
+Obie wartości i fazy są wyświetlane ze graficzną reprezentacją. Reprezentacja wielkości jest prosta: pokazuje pasek `*` , a im wyższe prawdopodobieństwo, tym większy jest pasek. W przypadku fazy należy zapoznać się z tematem [testowanie i debugowanie: funkcje zrzutu](xref:microsoft.quantum.guide.testingdebugging#dump-functions) dla możliwych reprezentacji symboli w oparciu o zakresy kątów.
 
 
 W wyniku tego drukowane dane wyjściowe pokazują, że nasze bramy zaprogramowane są przekształcone w nasz stan z
