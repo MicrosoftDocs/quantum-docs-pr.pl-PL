@@ -3,15 +3,15 @@ title: Eksplorowanie splątania przy użyciu języka Q#
 description: Dowiedz się, jak napisać program kwantowy w języku Q#. Opracowywanie aplikacji stanu Bella za pomocą zestawu QDK (Quantum Development Kit)
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426838"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327377"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Samouczek: Eksplorowanie splątania przy użyciu języka Q\#
 
@@ -25,28 +25,27 @@ Nazwisko Bell odnosi się do stanów Bella — specyficznych stanów kwantowych 
 
 Gdy wszystko będzie gotowe do rozpoczęcia kodowania, wykonaj następujące kroki przed kontynuowaniem: 
 
-* [Zainstaluj](xref:microsoft.quantum.install) zestaw Quantum Development Kit przy użyciu preferowanego języka i środowiska programistycznego.
+* Zainstaluj zestaw Quantum Development Kit dla języka [Python](xref:microsoft.quantum.install.python) lub platformy [.NET](xref:microsoft.quantum.install.cs).
 * Jeśli masz już zainstalowany zestaw QDK, upewnij się, że [zaktualizowano](xref:microsoft.quantum.update) go do najnowszej wersji.
 
 Możesz też przeczytać opis, nie instalując zestawu QDK, przeglądając omówienia języka programowania Q# i pierwsze koncepcje obliczeń kwantowych.
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Demonstrowanie zachowania kubitów przy użyciu języka Q#
 
-Przypomnijmy prostą [definicję kubitu](xref:microsoft.quantum.overview.understanding).  Bity klasyczne przechowują jedną wartość binarną, taką jak 0 lub 1, natomiast kubit może być w stanie **superpozycji** wartości 0 i 1 równocześnie.  Koncepcyjnie kubit można uważać za kierunek w przestrzeni (nazywany też wektorem).  Kubit może mieć dowolny z możliwych kierunków. Dwa **stany klasyczne** są dwoma określonymi kierunkami — reprezentującymi stuprocentową szansę zmierzenia wartości 0 i stuprocentową szansę zmierzenia wartości 1.  Tę reprezentację można też bardziej formalnie zwizualizować za pomocą [sfery Blocha](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
+Przypomnijmy prostą [definicję kubitu](xref:microsoft.quantum.overview.understanding).  Bity klasyczne przechowują jedną wartość binarną, taką jak 0 lub 1, natomiast [kubit](xref:microsoft.quantum.glossary#qubit) może być w stanie **superpozycji** wartości 0 i 1.  Koncepcyjnie kubit można uważać za kierunek w przestrzeni (nazywany też wektorem).  Kubit może mieć dowolny z możliwych kierunków. Dwa **stany klasyczne** są dwoma określonymi kierunkami — reprezentującymi stuprocentową szansę zmierzenia wartości 0 i stuprocentową szansę zmierzenia wartości 1.  Tę reprezentację można też bardziej formalnie zwizualizować za pomocą [sfery Blocha](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 Pomiar pozwala uzyskać wynik binarny i zmienia stan kubitu. Wynikiem pomiaru jest wartość binarna 0 lub 1.  Kubit przechodzi z superpozycji (dowolny kierunek) do jednego ze stanów klasycznych.  Następne powtórzenia tego samego pomiaru bez wykonywania żadnych pośrednich interwencji dają taki sam wynik binarny.  
 
-Wiele kubitów może być **splątanych**. Gdy mierzymy jeden ze splątanych kubitów, powoduje to również aktualizację naszej wiedzy o stanie pozostałych kubitów.
+Wiele kubitów może być [**splątanych**](xref:microsoft.quantum.glossary#entanglement). Gdy mierzymy jeden ze splątanych kubitów, powoduje to również aktualizację naszej wiedzy o stanie pozostałych kubitów.
 
 Teraz wszystko jest gotowe do zademonstrowania, jak wyrazić to zachowanie w języku Q#.  Rozpoczniesz od najprostszego możliwego programu i rozbudujesz go w celu zademonstrowania zjawisk superpozycji kwantowej i splątania kwantowego.
 
 ## <a name="setup"></a>Konfigurowanie
 
-Aplikacje opracowane za pomocą zestawu Quantum Development Kit firmy Microsoft składają się z dwóch części:
+Ten samouczek używa programów hosta i składa się z dwóch części:
 
-1. Co najmniej jednego algorytmu kwantowego zaimplementowanego przy użyciu języka programowania kwantowego Q#.
-1. Programu hosta zaimplementowanego w języku programowania takim jak Python lub C#, który służy jako główny punkt wejścia i wywołuje operacje języka Q# w celu wykonania algorytmu kwantowego.
+1. Seria algorytmów kwantowych zaimplementowanych przy użyciu języka programowania kwantowego Q#.
+1. Program hosta zaimplementowany w języku Python lub C#, który służy jako główny punkt wejścia i wywołuje operacje języka Q# w celu wykonania algorytmów kwantowych.
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Jak podano w omówieniu, nasze dane statystyczne dotyczące pierwszego kubitu ni
 
 Gratulacje, udało Ci się napisać swój pierwszy program kwantowy!
 
-## <a name="whats-next"></a>Co dalej?
+## <a name="next-steps"></a>Następne kroki
 
 W samouczku [Wyszukiwanie Grovera](xref:microsoft.quantum.quickstarts.search) przedstawiono tworzenie i uruchamianie wyszukiwania Grovera — jednego z najpopularniejszych algorytmów obliczeń kwantowych — oraz podano ciekawy przykład programu języka Q#, którego można użyć do rozwiązywania rzeczywistych problemów obliczeń kwantowych.  
 
 Artykuł [Wprowadzenie do zestawu Quantum Development Kit](xref:microsoft.quantum.welcome) zawiera więcej zalecanych sposobów uczenia się języka Q# i programowania kwantowego.
-

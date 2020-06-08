@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430853"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327598"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Algebra liniowa na potrzeby obliczeń kwantowych
 
@@ -67,7 +67,7 @@ $$
 
 Wynikiem jest czterowymiarowa macierz, której każdy element reprezentuje prawdopodobieństwo. Na przykład $ac$ to prawdopodobieństwo, że dwa kubity zostaną zwinięte do stanu 0 i 0, $ad$ jest prawdopodobieństwem stanów 0 i 1 itd. 
 
-Podobnie jak stan 1 kubitu $\begin{bmatrix} a \\\\  b \end{bmatrix}$ musi spełniać wymaganie $|a|^2 + |b|^2 = 1$, aby reprezentować stan kwantowy, stan 2 kubitów $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ musi spełniać wymaganie $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+Podobnie jak stan 1 kubitu $\begin{bmatrix} a \\\\  b \end{bmatrix}$ musi spełniać wymaganie $|a|^2 + |b|^2 = 1$, aby reprezentować stan kwantowy, stan 2 kubitów $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ musi spełniać wymaganie $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## <a name="summary"></a>Podsumowanie
 
@@ -75,5 +75,4 @@ Algebra liniowa jest standardowym językiem do opisywania obliczeń kwantowych i
 
 ## <a name="next-steps"></a>Następne kroki
 
-> [!div class="nextstepaction"]
-> [Instalowanie zestawu QDK](xref:microsoft.quantum.install)
+[Instalowanie zestawu QDK](xref:microsoft.quantum.install)
