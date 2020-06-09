@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660757"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577824"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Programowanie przy użyciu notesów Jupyter w języku Q#
 
@@ -32,7 +32,7 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
 
 1. Instalowanie pakietu `iqsharp`
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -41,7 +41,7 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
 
     - Uruchom następujące polecenie, aby uruchomić serwer notesów:
 
-        ```bash
+        ```
         jupyter notebook
         ```
 

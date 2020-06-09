@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660729"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578168"
 ---
 # <a name="develop-with-q-and-python"></a>Programowanie przy użyciu języka Q # i języka Python
 
@@ -26,13 +26,13 @@ Zainstaluj program QDK w celu opracowania programów do obsługi hostów języka
 
 1. Zainstaluj `qsharp` pakiet, pakiet języka Python, który umożliwia współdziałanie między elementami Q # i Python.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Zainstaluj IQ #, jądro używane przez Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i wykonywania operacji Q #.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,15 +69,15 @@ Zainstaluj program QDK w celu opracowania programów do obsługi hostów języka
 
     - Uruchom program:
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - Sprawdź dane wyjściowe. Program powinien zwrócić następujące wiersze:
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]
