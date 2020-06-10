@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: 4899336f437c1b7712a7831b97fd6ec1431b59a2
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909725"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630242"
 ---
 # <a name="design-your-own-classifier"></a>Projektowanie własnego klasyfikatora
 
@@ -25,9 +25,9 @@ Podobnie jak w przypadku klasycznej uczenia głębokiego, nie ma żadnej ogólne
 
 ## <a name="how-to-build-a-classifier-with-q"></a>Jak utworzyć klasyfikator przy użyciu Q\#
 
-Aby skompilować klasyfikator, zamierzamy połączyć kontrolowane rotacje w modelu obwodu. Aby to zrobić, można użyć typu [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) zdefiniowanego w bibliotece Machine Learning Quantum. Ten typ akceptuje cztery argumenty, które określają: indeks elementu docelowego qubit, tablicę indeksów qubits kontrolki, oś obrotu i indeks skojarzonego parametru w tablicy parametrów definiujących model.
+Aby skompilować klasyfikator, zamierzamy połączyć kontrolowane rotacje w modelu obwodu. Aby to zrobić, można użyć typu [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) zdefiniowanego w bibliotece Quantum Machine Learning. Ten typ akceptuje cztery argumenty, które określają: indeks elementu docelowego qubit, tablicę indeksów qubits kontrolki, oś obrotu i indeks skojarzonego parametru w tablicy parametrów definiujących model.
 
-Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)możemy znaleźć następujący klasyfikator zdefiniowany w pliku `Training.qs`.
+Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)możemy znaleźć następujący klasyfikator zdefiniowany w pliku `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {
@@ -44,7 +44,7 @@ Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://githu
     }
  ```
 
-Co definiujemy w tym miejscu jest funkcja, która zwraca tablicę elementów `ControlledRotation`, które razem z tablicą parametrów i bias definiują nasze [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel). Ten typ jest fundamentalny w bibliotece Machine Learning Quantum i definiuje klasyfikatora. Obwód zdefiniowany w funkcji powyżej jest częścią klasyfikatora, w którym każda próbka zestawu danych zawiera dwie funkcje. W związku z tym potrzebujemy tylko dwóch qubits. Graficzna reprezentacja obwodu to:
+To, co definiujemy w tym miejscu, jest funkcja, która zwraca tablicę `ControlledRotation` elementów, która razem z tablicą parametrów i odchylenia będzie definiować nasze [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Ten typ jest fundamentalny w bibliotece Machine Learning Quantum i definiuje klasyfikatora. Obwód zdefiniowany w funkcji powyżej jest częścią klasyfikatora, w którym każda próbka zestawu danych zawiera dwie funkcje. W związku z tym potrzebujemy tylko dwóch qubits. Graficzna reprezentacja obwodu to:
 
  ![Przykład modelu obwodu](~/media/circuit_model_1.PNG)
 
@@ -54,8 +54,8 @@ Załóżmy, że mamy zestaw danych o 784 funkcjach na wystąpienie, np. obrazy 2
 
  ![Warstwa obrotów lokalnych](~/media/local_rotations_layer.PNG)
 
-Zalecamy zapoznanie się z [interfejsem API referenece biblioteki Quantum Machine Learning](xref:microsoft.quantum.machinelearning) , aby odnaleźć wszystkie narzędzia dostępne do usprawnienia projektowania obwodu.
+Zalecamy zapoznanie się z [biblioteką interfejsów API Machine Learning Quantum](xref:microsoft.quantum.machinelearning) , aby poznać wszystkie narzędzia dostępne do usprawnienia projektowania obwodu.
 
 ## <a name="next-steps"></a>Następne kroki
 
- Wypróbuj różne struktury w przykładach dostarczonych przez przykłady. Czy widzisz zmiany w wydajności modelu? W następnym samouczku [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load)dowiesz się, jak ładować zestawy danych, aby próbować i eksplorować nowe architektury klasyfikatorów.
+ Wypróbuj różne struktury w przykładach dostarczonych przez przykłady. Czy widzisz zmiany w wydajności modelu? W następnym samouczku [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) dowiesz się, jak ładować zestawy danych, aby próbować i eksplorować nowe architektury klasyfikatorów.

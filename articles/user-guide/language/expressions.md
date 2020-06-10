@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327309"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629996"
 ---
 # <a name="type-expressions-in-q"></a>Wyrażenia typu w Q #
 
@@ -201,7 +201,7 @@ Oprócz literałów jedynymi wyrażeniami typu zdefiniowanego przez użytkownika
 W Q # operator rozwinięcia jest końcowym wykrzyknikiem `!` .
 Na przykład, jeśli `IntPair` jest typem zdefiniowanym przez użytkownika z typem źródłowym `(Int, Int)` i `s` była zmienną z wartością `IntPair(2, 3)` , wówczas `s!` zostałby `(2, 3)` .
 
-Dla typów zdefiniowanych przez użytkownika, zdefiniowanych w warunkach innych typów zdefiniowanych przez użytkownika. operatora rozwinięcia można powtórzyć; na przykład `s!!` wskazuje podwójnie nieopakowaną wartość `s` .
+Dla typów zdefiniowanych przez użytkownika, zdefiniowanych w warunkach innych typów zdefiniowanych przez użytkownika, można powtórzyć operator rozwinięcia. na przykład `s!!` wskazuje podwójnie nieopakowaną wartość `s` .
 W takim przypadku, jeśli `WrappedPair` jest typem zdefiniowanym przez użytkownika z typem źródłowym `IntPair` i `t` jest zmienną z wartością `WrappedPair(IntPair(1,2))` , wówczas `t!!` zostałby `(1,2)` .
 
 `!`Operator ma wyższy priorytet niż wszystkie inne operatory inne niż `[]` dla indeksowania tablicy i dzielenia.

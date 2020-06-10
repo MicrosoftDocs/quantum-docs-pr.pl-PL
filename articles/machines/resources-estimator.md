@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426876"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630132"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Maszyna docelowa szacowania zasobów
 
 Jako że nazwa oznacza, `ResourcesEstimator` szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze z systemem Quantum.
 Jest to realizowane przez wykonywanie operacji Quantum bez faktycznego symulowania stanu komputera Quantum; z tego powodu można oszacować zasoby dla operacji Q #, które używają tysięcy qubits, jeśli klasyczna część kodu może być uruchamiana w rozsądnym czasie.
 
-## <a name="usage"></a>Sposób użycia
+## <a name="usage"></a>Użycie
 
 `ResourcesEstimator`Jest to tylko inny typ maszyny docelowej, dlatego może służyć do uruchamiania dowolnej operacji Q #. 
 
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-Jak pokazano w przykładzie, `ResourcesEstimator` zapewnia `ToTSV()` metodę generowania tabeli z wartościami rozdzielanymi znakami tabulacji (tsv), które można zapisać w pliku lub zapisywanych w konsoli na potrzeby analizy. Dane wyjściowe powyższego programu powinny wyglądać następująco:
+Jak pokazano w przykładzie, `ResourcesEstimator` zapewnia `ToTSV()` metodę generowania tabeli z wartościami rozdzielanymi znakami tabulacji (tsv), które można zapisać w pliku lub zapisaniem w konsoli programu na potrzeby analizy. Dane wyjściowe powyższego programu powinny wyglądać następująco:
 
 ```Output
 Metric          Sum

@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630025"
 ---
 # <a name="testing-and-debugging"></a>Testowanie i debugowanie
 
@@ -27,7 +27,7 @@ Polecenie Q # obsługuje tworzenie testów jednostkowych dla programów Quantum 
 
 ### <a name="creating-a-test-project"></a>Tworzenie projektu testowego
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
 
 Otwórz program Visual Studio 2019. Przejdź do `File` menu i wybierz opcję `New`  >  `Project...` .
 W prawym górnym rogu Wyszukaj `Q#` i wybierz `Q# Test Project` szablon.
@@ -71,7 +71,7 @@ Kompilator Q # rozpoznaje wbudowane elementy docelowe "QuantumSimulator", "Toffo
 
 ### <a name="running-q-unit-tests"></a>Uruchamianie testów jednostkowych Q #
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
 
 Jako jednorazowe skonfigurowanie poszczególnych rozwiązań przejdź do `Test` menu i wybierz opcję `Test Settings`  >  `Default Processor Architecture`  >  `X64` .
 
@@ -123,7 +123,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 Wewnętrzna funkcja <xref:microsoft.quantum.intrinsic.message> ma typ `(String -> Unit)` i umożliwia tworzenie komunikatów diagnostycznych.
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
 
 Po wykonaniu testu w Eksploratorze testów i kliknięciu testu zostanie wyświetlony panel z informacjami o wykonywaniu testów: stanie zakończonych niepowodzeniem, czas, który upłynął, i link "output". Kliknięcie linku "output" spowoduje otwarcie danych wyjściowych testu w nowym oknie.
 
@@ -218,7 +218,7 @@ Pozostała część wierszy zawiera opis amplitudy prawdopodobieństwa pomiaru w
 
 * **`∣0❭:`** Ten wiersz odnosi się do `0` stanu podstawy obliczeń
 * **`0.707107 +  0.000000 i`**: amplituda prawdopodobieństwa w formacie kartezjańskiego.
-* **` == `**: znak oddzieli `equal` obie równoważne reprezentacje.
+* **` == `**: `equal` znak oddziela obie równoważne reprezentacje.
 * **`**********  `**: Graficzna reprezentacja rozmiaru, liczba `*` jest proporcjonalna do prawdopodobieństwa mierzenia tego wektora stanu.
 * **`[ 0.500000 ]`**: wartość liczbowa wielkości
 * **`    ---`**: Graficzna reprezentacja fazy amplitudy (patrz poniżej).
@@ -285,7 +285,7 @@ W poniższych przykładach przedstawiono `DumpMachine` niektóre typowe Stany:
   > Identyfikator qubit jest przypisywany w czasie wykonywania i nie musi być wyrównany do kolejności, w której został przydzielony qubit lub jej pozycji w rejestrze qubit.
 
 
-#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Program Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > Identyfikator qubit można ustalić w programie Visual Studio, umieszczając punkt przerwania w kodzie i sprawdzając wartość zmiennej qubit, na przykład:
