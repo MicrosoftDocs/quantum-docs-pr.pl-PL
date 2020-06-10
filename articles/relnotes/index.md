@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422227"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578138"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -25,6 +25,12 @@ Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](x
 
 *Data wydania: 4 czerwca 2020 r.*
 
+W tej wersji usunięto błąd wpływający na kompilację projektów w języku Q#.
+
+## <a name="version-0112006207"></a>Wersja 0.11.2006.207
+
+*Data wydania: 3 czerwca 2020*
+
 To wydanie zawiera następujące elementy:
 
 - Notesy języka Q# i programy hostujące język Python nie będą już ulegać awarii, gdy będzie dostępny punkt wejścia języka Q#
@@ -33,6 +39,9 @@ To wydanie zawiera następujące elementy:
 - Kilka przestarzałych funkcji i operacji zostało usuniętych zgodnie z harmonogramem opisanym w naszych [zasadach dotyczących interfejsu API](xref:microsoft.quantum.contributing.api-design). Biblioteki i programy języka Q# kompilujące bez ostrzeżeń w wersji 0.11.2004.2825 będą nadal działać bez modyfikacji.
 
 Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> Ta wersja zawiera błąd wpływający na kompilację projektów w języku Q#. Zalecamy uaktualnienie do nowszej wersji.
 
 ## <a name="version-01120042825"></a>Wersja 0.11.2004.2825
 
