@@ -1,0 +1,4 @@
+- name: Instalacja i walidacja
+  href: installation.md
+- name: Korzystanie z biblioteki liczbowej
+  href: numerics.md
