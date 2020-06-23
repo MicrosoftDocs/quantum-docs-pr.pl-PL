@@ -1,0 +1,10 @@
+- name: Wprowadzenie do kwantowego uczenia maszynowego
+  href: introduction.md
+- name: Podstawowa klasyfikacja
+  href: basic-classification.md
+- name: Projektowanie własnego klasyfikatora
+  href: design.md
+- name: Ładowanie własnych zestawów danych
+  href: load.md
+- name: Słownik (QML)
+  href: glossary-qml.md

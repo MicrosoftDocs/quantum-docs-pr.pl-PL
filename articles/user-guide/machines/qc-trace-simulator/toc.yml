@@ -1,0 +1,10 @@
+- name: Licznik głębokości
+  href: depth-counter.md
+- name: Narzędzie do sprawdzania odrębnych danych wejściowych
+  href: distinct-inputs-checker.md
+- name: Narzędzie do sprawdzania użycia unieważnionych kubitów
+  href: invalidated-qubits-use-checker.md
+- name: Licznik operacji pierwotnych
+  href: primitive-operations-counter.md
+- name: Licznik szerokości
+  href: width-counter.md

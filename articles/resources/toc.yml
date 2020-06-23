@@ -1,0 +1,9 @@
+- name: Słownik
+  href: glossary.md
+- name: Współtworzenie zestawu QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: Informacje o wersji zestawu QDK
+  href: relnotes.md
+- name: Dodatkowe informacje
+  href: further-reading.md

@@ -1,0 +1,14 @@
+- name: Omówienie
+  href: index.md
+- name: Biblioteki standardowe
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: Biblioteka dla chemii kwantowej
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: Biblioteka dla kwantowego uczenia maszynowego
+  topicHref: machine-learning/index.md
+  href: machine-learning/toc.yml
+- name: Biblioteka dla liczb kwantowych
+  topicHref: numerics/index.md
+  href: numerics/toc.yml
