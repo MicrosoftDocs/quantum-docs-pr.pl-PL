@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327360"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630110"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Samouczek: implementowanie kwantowego generatora liczb losowych w języku Q\#
 
