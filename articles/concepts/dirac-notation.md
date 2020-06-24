@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630381"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269510"
 ---
 # <a name="dirac-notation"></a>Notacja Dirac
 
@@ -123,7 +130,7 @@ $$
 
 Przykładem notacji Dirac jest rozważenie klasy hamulca $ \braket{0 | 1 } $, która jest wewnętrznym produktem od $0 $ do $1 $ .  Może być zapisany jako 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 Wskazuje to, że $ \ket{0 } $ i $ \ket{1 } $ są wektorami prostopadłymi, co oznacza, że $ \braket{0 | 1 } = \braket{1 | 0 } = 0 $ .  Również według definicji $ \braket{0 | 0 } = \braket{1 | 1 } = 1 $ , co oznacza, że dwa wektory obliczeniowe mogą być również wywołane *orthonormal*.
 Te właściwości orthonormal będą przydatne w poniższym przykładzie. Jeśli mamy stan $ \ket { \psi } = {\frac{3 } {5 } } \ket{1 } + {\frac{4 } {5 } } \ket{0 } $, ponieważ $ \braket{1 | 0 } = 0 $ prawdopodobieństwo pomiaru $1 $ jest  
@@ -173,7 +180,7 @@ Fakt, że znak ujemny pojawia się w obliczeniach prawdopodobieństwa, jest mani
 ## <a name="ketbra-or-outer-product"></a>ketbra lub zewnętrzny produkt
 Ostatni element omawiany w notacji Dirac jest produktem *ketbra* lub zewnętrznym.  Zewnętrzny produkt jest reprezentowany w notacjach Dirac jako $ \ket { \psi } \bra { \phi } $ i czasami nazywa się ketbras, ponieważ Bras i kets występuje w kolejności odwrotnej jako brakets.  Produkt zewnętrzny jest definiowany za pośrednictwem mnożenia macierzy jako $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ dla wektorów stanu Quantum $ \psi $ i $ \phi $ .  Najprostszym i raczej najbardziej typowym przykładem tego zapisu jest
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end{bmatrix} \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 Ketbras są często nazywane projektorami, ponieważ projektuje stan Quantum do ustalonej wartości.  Ponieważ te operacje nie są jednostkowymi jednostkami (i nie zachowują nawet normy wektora), nie powinny być niezależne, że komputer Quantum nie może w sposób jednoznaczny zastosować projektora.  Jednak projektory wykonują atrakcyjne zadanie opisujące akcję, którą mierzy w stanie Quantum.  Na przykład jeśli mierzy się stan $ \ket { \psi } $ to $0 $ , wynikowa transformacja, którą stan środowiska w wyniku pomiaru wynosi

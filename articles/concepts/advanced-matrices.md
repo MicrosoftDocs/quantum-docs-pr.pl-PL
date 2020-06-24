@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630150"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269460"
 ---
 # <a name="advanced-matrix-concepts"></a>Zaawansowane koncepcje macierzy #
 
@@ -104,7 +114,7 @@ $$
 
 Wektory
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ \end{ bmatrix } , \begin{ bmatrix } 0, \\ \\ \\ \\ 0 \end { bmatrix } i \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ \end{bmatrix} i \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 są eigenvectors tej macierzy z eigenvalues $d _1 $ , $d _2 $ i $d _3 $ . Jeśli $d _1 $ , $d _2 $ i $d _3 $ to odrębne liczby, wówczas te wektory (i ich wielokrotność) są jedynymi eigenvectorsami $D macierzy $ . Ogólnie rzecz biorąc, w przypadku matrycy ukośnej można łatwo odczytywać eigenvalues i eigenvectors. Eigenvalues są wszystkie liczby wyświetlane na przekątnej, a ich odpowiednie eigenvectors to wektory jednostek z jednym wpisem równym $1, $ a pozostałe wpisy są równe $0 $ .
 
