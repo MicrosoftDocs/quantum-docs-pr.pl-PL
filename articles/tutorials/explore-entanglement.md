@@ -1,152 +1,192 @@
 ---
 title: Eksplorowanie splątania przy użyciu języka Q#
 description: Dowiedz się, jak napisać program kwantowy w języku Q#. Opracowywanie aplikacji stanu Bella za pomocą zestawu QDK (Quantum Development Kit)
-author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+author: geduardo
+ms.author: v-edsanc@microsoft.com
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 294366b884da93f11c60cfdbdce9b40cf5202b0d
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 16c93b3dd17363c06602529cb34e8fc84aadc7a8
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275306"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415426"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Samouczek: Eksplorowanie splątania przy użyciu języka Q\#
 
 W tym samouczku pokazano, jak napisać program języka Q#, który manipuluje kubitami, mierzy je oraz przedstawia efekty superpozycji i splątania.
-Przewodnik obejmuje instalowanie zestawu QDK, tworzenie programu i uruchamianie go na symulatorze kwantowym.  
 
 Napiszesz aplikację o nazwie Bell, aby zademonstrować splątanie kwantowe.
 Nazwisko Bell odnosi się do stanów Bella — specyficznych stanów kwantowych dwóch kubitów, które są używane do reprezentowania najprostszych przykładów superpozycji i splątania kwantowego.
 
-## <a name="prerequisites"></a>Wymagania wstępne
+## <a name="pre-requisites"></a>Wymagania wstępne
 
 Gdy wszystko będzie gotowe do rozpoczęcia kodowania, wykonaj następujące kroki przed kontynuowaniem: 
 
-* Zainstaluj zestaw Quantum Development Kit dla języka [Python](xref:microsoft.quantum.install.python) lub platformy [.NET](xref:microsoft.quantum.install.cs).
+* [Zainstaluj](xref:microsoft.quantum.install) zestaw Quantum Development Kit przy użyciu preferowanego języka i środowiska programistycznego.
 * Jeśli masz już zainstalowany zestaw QDK, upewnij się, że [zaktualizowano](xref:microsoft.quantum.update) go do najnowszej wersji.
 
-Możesz też przeczytać opis, nie instalując zestawu QDK, przeglądając omówienia języka programowania Q# i pierwsze koncepcje obliczeń kwantowych.
+Możesz również wykonać czynności opisane w opisie, nie instalując QDK, przeglądając omówienia języka programowania Q # i pierwsze koncepcje przetwarzania Quantum.
 
-## <a name="demonstrating-qubit-behavior-with-q"></a>Demonstrowanie zachowania kubitów przy użyciu języka Q#
+## <a name="in-this-tutorial-youll-learn-how-to"></a>Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
-Przypomnijmy prostą [definicję kubitu](xref:microsoft.quantum.overview.understanding).  Bity klasyczne przechowują jedną wartość binarną, taką jak 0 lub 1, natomiast [kubit](xref:microsoft.quantum.glossary#qubit) może być w stanie **superpozycji** wartości 0 i 1.  Koncepcyjnie kubit można uważać za kierunek w przestrzeni (nazywany też wektorem).  Kubit może mieć dowolny z możliwych kierunków. Dwa **stany klasyczne** są dwoma określonymi kierunkami — reprezentującymi stuprocentową szansę zmierzenia wartości 0 i stuprocentową szansę zmierzenia wartości 1.  Tę reprezentację można też bardziej formalnie zwizualizować za pomocą [sfery Blocha](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+> [!div class="checklist"]
+> * Tworzenie i łączenie operacji w p\#
+> * Twórz operacje w celu umieszczenia qubits w położeniu, entangle i mierzenia ich.
+> * Zademonstrowanie Entanglement Quantum przy użyciu programu Q # uruchamianego w symulatorze. 
 
-Pomiar pozwala uzyskać wynik binarny i zmienia stan kubitu. Wynikiem pomiaru jest wartość binarna 0 lub 1.  Kubit przechodzi z superpozycji (dowolny kierunek) do jednego ze stanów klasycznych.  Następne powtórzenia tego samego pomiaru bez wykonywania żadnych pośrednich interwencji dają taki sam wynik binarny.  
+## <a name="demonstrating-qubit-behavior-with-the-qdk"></a>Prezentowanie zachowania qubit z QDK
 
-Wiele kubitów może być [**splątanych**](xref:microsoft.quantum.glossary#entanglement). Gdy mierzymy jeden ze splątanych kubitów, powoduje to również aktualizację naszej wiedzy o stanie pozostałych kubitów.
+Bity klasyczne przechowują jedną wartość binarną, taką jak 0 lub 1, natomiast [kubit](xref:microsoft.quantum.glossary#qubit) może być w stanie **superpozycji** wartości 0 i 1.  Koncepcyjnie, stan qubit można traktować jako kierunek w przestrzeni abstrakcyjnej (znanej również jako wektor).  Stan qubit może być w dowolnym z możliwych instrukcji. Dwa **stany klasyczne** są dwoma określonymi kierunkami — reprezentującymi stuprocentową szansę zmierzenia wartości 0 i stuprocentową szansę zmierzenia wartości 1.
+
+Pomiar pozwala uzyskać wynik binarny i zmienia stan kubitu.
+Pomiar tworzy wartość binarną, 0 lub 1.  Kubit przechodzi z superpozycji (dowolny kierunek) do jednego ze stanów klasycznych.  Następne powtórzenia tego samego pomiaru bez wykonywania żadnych pośrednich interwencji dają taki sam wynik binarny.  
+
+Wiele kubitów może być [**splątanych**](xref:microsoft.quantum.glossary#entanglement).  Gdy mierzymy jeden ze splątanych kubitów, powoduje to również aktualizację naszej wiedzy o stanie pozostałych kubitów.
 
 Teraz wszystko jest gotowe do zademonstrowania, jak wyrazić to zachowanie w języku Q#.  Rozpoczniesz od najprostszego możliwego programu i rozbudujesz go w celu zademonstrowania zjawisk superpozycji kwantowej i splątania kwantowego.
 
-## <a name="setup"></a>Konfigurowanie
+## <a name="creating-a-q-project"></a>Tworzenie projektu Q #
 
-Ten samouczek używa programów hosta i składa się z dwóch części:
+Pierwszą czynnością, którą należy wykonać, jest utworzenie nowego projektu Q #. W tym samouczku zamierzamy używać środowiska na podstawie [aplikacji wiersza polecenia z vs Code](xref:microsoft.quantum.install.standalone).
 
-1. Seria algorytmów kwantowych zaimplementowanych przy użyciu języka programowania kwantowego Q#.
-1. Program hosta zaimplementowany w języku Python lub C#, który służy jako główny punkt wejścia i wywołuje operacje języka Q# w celu wykonania algorytmów kwantowych.
+Aby utworzyć nowy projekt, w VS Code: 
 
-#### <a name="python"></a>[Python](#tab/tabid-python)
+1. Kliknij pozycję **View** -> **Command Palette**, a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).
+2. Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).
+3. Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).
+4. Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.
 
-1. Wybieranie lokalizacji dla aplikacji
+W takim przypadku nazywamy projektem `Bell` . Spowoduje to wygenerowanie dwóch plików: `Bell.csproj` , pliku projektu i `Program.qs` szablonu aplikacji Q #, która zostanie użyta do zapisania naszej aplikacji. Zawartość `Program.qs` powinna być:
 
-1. Utwórz plik o nazwie `Bell.qs`. Ten plik będzie zawierać kod Q#.
+```qsharp
+   namespace Bell {
 
-1. Utwórz plik o nazwie `host.py`. Ten plik będzie zawierać kod hosta w języku Python.
+      open Microsoft.Quantum.Canon;
+      open Microsoft.Quantum.Intrinsic;
+    
 
-#### <a name="c-command-line"></a>[Wiersz polecenia języka C#](#tab/tabid-csharp).
+      @EntryPoint()
+      operation HelloQ() : Unit {
+          Message("Hello quantum world!");
+      }
+   }
+```
 
-1. Utwórz nowy projekt języka Q#:
+## <a name="write-the-q-application"></a>Napisz aplikację Q \#
+ 
+Naszym celem jest przygotowanie dwóch kubitów w określonym stanie kwantowym, aby zademonstrować sposób wykonywania operacji na kubitach za pomocą języka Q# w celu zmieniania ich stanu, a także zademonstrować efekty superpozycji i splątania. Utworzymy ten element, aby wprowadzić qubit Stany, operacje i pomiary.
 
-    ```
-    dotnet new console -lang Q# --output Bell
-    cd Bell
-    ```
+### <a name="initialize-qubit-using-measurement"></a>Inicjowanie qubit przy użyciu miary
 
-    Powinien być widoczny plik `.csproj`, plik kodu Q# o nazwie `Operations.qs` i plik programu hosta o nazwie `Driver.cs`
+W pierwszym poniższym kodzie pokazujemy, jak pracować z kubitami w języku Q#.  Wprowadzimy dwie operacje [`M`](xref:microsoft.quantum.intrinsic.m) i [`X`](xref:microsoft.quantum.intrinsic.x) przekształciją stan qubit. W tym fragmencie kodu jest definiowana operacja `SetQubitState`, która przyjmuje parametr w postaci kubitu i kolejny parametr `desired`, reprezentujący stan, w który należy wprowadzić kubit.  Operacja `SetQubitState` wykonuje pomiar kubitu za pomocą operacji `M`.  W polu Q # pomiar qubit zawsze zwraca wartość `Zero` lub `One` .  Jeśli pomiar zwraca wartość, która nie jest równa żądanej wartości, `SetQubitState` "Przerzuć" qubit, czyli wykonuje `X` operację, która zmienia stan qubit na nowy stan, w którym prawdopodobieństwa zwracająca `Zero` wynik pomiaru i `One` jest odwrócona. W ten sposób `SetQubitState` zawsze umieszcza docelowy qubit w żądanym stanie.
 
-1. Zmiana nazwy pliku kodu Q#
-
-    ```
-    mv Operation.qs Bell.qs
-    ```
-
-#### <a name="visual-studio"></a>[Program Visual Studio](#tab/tabid-vs2019)
-
-1. Tworzenie nowego projektu
-
-   * Otwórz program Visual Studio.
-   * Przejdź do menu **Plik**, a następnie wybierz pozycję **Nowy** -> **Projekt...** .
-   * W eksploratorze szablonów projektów wpisz `Q#` w polu wyszukiwania i wybierz szablon `Q# Application`
-   * Nadaj projektowi nazwę `Bell`.
-
-1. Zmiana nazwy pliku kodu Q#
-
-   * Przejdź do **Eksploratora rozwiązań**.
-   * Kliknij prawym przyciskiem myszy plik `Operations.qs`.
-   * Zmień jego nazwę na `Bell.qs`.
-
-* * *
-
-## <a name="write-a-q-operation"></a>Tworzenie operacji w języku Q#
-
-Naszym celem jest przygotowanie dwóch kubitów w określonym stanie kwantowym, aby zademonstrować sposób wykonywania operacji na kubitach za pomocą języka Q# w celu zmieniania ich stanu, a także zademonstrować efekty superpozycji i splątania. Zrobimy to krok po kroku, aby przedstawić stany, operacje i pomiary kubitów.
-
-**Omówienie:**  W pierwszym poniższym kodzie pokazujemy, jak pracować z kubitami w języku Q#.  Wprowadzimy dwie operacje (`M` i `X`), które przekształcają stan kubitu. 
-
-W tym fragmencie kodu jest definiowana operacja `Set`, która przyjmuje parametr w postaci kubitu i kolejny parametr `desired`, reprezentujący stan, w który należy wprowadzić kubit.  Operacja `Set` wykonuje pomiar kubitu za pomocą operacji `M`.  W języku Q# pomiar kubitu zawsze zwraca wartość `Zero` lub `One`.  Jeśli pomiar zwróci wartość, która nie jest równa żądanej wartości, operacja Set „przerzuci” kubit, tzn. wykona operację `X`, która zmienia stan kubitu na nowy stan, w którym prawdopodobieństwa zwrócenia wartości `Zero` i `One` są odwrócone.  Aby zademonstrować efekt operacji `Set`, dodawana jest następnie operacja `TestBellState`.  Ta operacja przyjmuje jako dane wejściowe wartość `Zero` lub `One` i wywołuje operację `Set` pewną liczbę razy z tymi danymi wejściowymi, a także oblicza, ile razy została zwrócona wartość `Zero` z pomiaru kubitu i ile razy została zwrócona wartość `One`. Oczywiście w tej pierwszej symulacji operacji `TestBellState` oczekujemy, że dane wyjściowe będą wskazywać, iż wszystkie pomiary kubitu z ustawionym parametrem wejściowym `Zero` będą zwracać wartość `Zero`, a wszystkie pomiary kubitu z ustawionym parametrem wejściowym `One` będą zwracać wartość `One`.  Następnie dodamy kod do elementu `TestBellState` w celu zademonstrowania superpozycji i splątania.
+Zastąp zawartość `Program.qs` następującym kodem:
 
 
-### <a name="q-operation-code"></a>Kod operacji języka Q#
+```qsharp
+   namespace Bell {
+       open Microsoft.Quantum.Intrinsic;
+       open Microsoft.Quantum.Canon;
 
-1. Zastąp zawartość pliku Bell.qs następującym kodem:
+       operation SetQubitState(desired : Result, q1 : Qubit) : Unit {
+           if (desired != M(q1)) {
+               X(q1);
+           }
+       }
+   }
+```
 
-    ```qsharp
-    namespace Quantum.Bell {
-        open Microsoft.Quantum.Intrinsic;
-        open Microsoft.Quantum.Canon;
+Można teraz wywołać tę operację, aby ustawić dla kubitu stan klasyczny, powodujący zwracanie wartości `Zero` przez 100% czasu lub zwracanie wartości `One` przez 100% czasu.
+Wartości `Zero` i `One` są stałymi, które reprezentują dwa możliwe wyniki pomiaru kubitu.
 
-        operation Set(desired : Result, q1 : Qubit) : Unit {
-            if (desired != M(q1)) {
-                X(q1);
-            }
-        }
-    }
-    ```
+Operacja `SetQubitState` mierzy kubit. Jeśli kubit jest w żądanym stanie, operacja `SetQubitState` pozostawia go bez zmian; w przeciwnym razie zmieniamy stan kubitu na żądany, wykonując operację `X`.
 
-    Można teraz wywołać tę operację, aby ustawić dla kubitu stan klasyczny, powodujący zwracanie wartości `Zero` przez 100% czasu lub zwracanie wartości `One` przez 100% czasu.  Wartości `Zero` i `One` są stałymi, które reprezentują dwa możliwe wyniki pomiaru kubitu.
+#### <a name="about-q-operations"></a>Informacje o operacjach języka Q#
 
-    Operacja `Set` mierzy kubit.
-    Jeśli kubit jest w żądanym stanie, operacja `Set` pozostawia go bez zmian; w przeciwnym razie zmieniamy stan kubitu na żądany, wykonując operację `X`.
-
-### <a name="about-q-operations"></a>Informacje o operacjach języka Q#
-
-Operacja języka Q# jest podprocedurą kwantową. Oznacza to, że jest ona procedurą zawierającą operacje kwantowe.
+Operacja języka Q# jest podprocedurą kwantową. Oznacza to, że jest to wywoływana procedura, która zawiera wywołania innych operacji Quantum.
 
 Argumenty operacji są przekazywane za pomocą krotki (w nawiasach).
 
-Zwracany typ operacji jest określony po dwukropku. W tym przypadku operacja `Set` nie zwraca wartości, więc jest oznaczona jako zwracająca wartość `Unit`. W języku Q# jest to odpowiednik wartości `unit` języka F#, która jest w przybliżeniu analogiczna do wartości `void` w języku C# i pustej krotki (`Tuple[()]`) w języku Python.
+Zwracany typ operacji jest określony po dwukropku. W tym przypadku operacja `SetQubitState` nie zwraca wartości, więc jest oznaczona jako zwracająca wartość `Unit`. W języku Q# jest to odpowiednik wartości `unit` języka F#, która jest w przybliżeniu analogiczna do wartości `void` w języku C# i pustej krotki (`Tuple[()]`) w języku Python.
 
 W pierwszej operacji języka Q# użyto dwóch operacji kwantowych:
 
-* Operacja [M](xref:microsoft.quantum.intrinsic.m), która mierzy stan kubitu
-* Operacja [X](xref:microsoft.quantum.intrinsic.x), która przerzuca stan kubitu
+* [`M`](xref:microsoft.quantum.intrinsic.m)Operacja, która mierzy stan qubit
+* [`X`](xref:microsoft.quantum.intrinsic.x)Operacja, która przerzuca stan qubit
 
 Operacja kwantowa przekształca stan kubitu. Czasami mówi się o bramkach kwantowych zamiast operacji, analogicznie do klasycznych bramek logicznych. Bierze się to z wczesnej epoki obliczeń kwantowych, gdy algorytmy stanowiły tylko konstrukcje teoretyczne i były wizualizowane jako diagramy, podobnie do diagramów obwodów w obliczeniach klasycznych.
 
-### <a name="add-q-test-code"></a>Dodawanie kodu testowego Q#
+### <a name="counting-measurement-outcomes"></a>Obliczanie wyników pomiaru
 
-1. Dodaj następującą operację do pliku `Bell.qs` wewnątrz przestrzeni nazw po operacji `Set`:
+Aby zademonstrować efekt operacji `SetQubitState`, dodawana jest następnie operacja `TestBellState`. Ta operacja przyjmuje jako dane wejściowe wartość `Zero` lub `One` i wywołuje operację `SetQubitState` pewną liczbę razy z tymi danymi wejściowymi, a także oblicza, ile razy została zwrócona wartość `Zero` z pomiaru kubitu i ile razy została zwrócona wartość `One`. Oczywiście w tej pierwszej symulacji operacji `TestBellState` oczekujemy, że dane wyjściowe będą wskazywać, iż wszystkie pomiary kubitu z ustawionym parametrem wejściowym `Zero` będą zwracać wartość `Zero`, a wszystkie pomiary kubitu z ustawionym parametrem wejściowym `One` będą zwracać wartość `One`. Dodatkowo dodamy kod do `TestBellState` przedstawienia do przedłożenia i Entanglement.
 
-    ```qsharp
+Dodaj następującą operację do pliku `Bell.qs` wewnątrz przestrzeni nazw po operacji `SetQubitState`:
+
+```qsharp
+   operation TestBellState(count : Int, initial : Result) : (Int, Int) {
+
+       mutable numOnes = 0;
+       using (qubit = Qubit()) {
+
+           for (test in 1..count) {
+               SetQubitState(initial, qubit);
+               let res = M(qubit);
+
+               // Count the number of ones we saw:
+               if (res == One) {
+                   set numOnes += 1;
+               }
+           }
+            
+           SetQubitState(Zero, qubit);
+       }
+
+       // Return number of times we saw a |0> and number of times we saw a |1>
+       Message("Test results (# of 0s, # of 1s): ");
+       return (count - numOnes, numOnes);
+   }
+```
+Należy pamiętać, że dodaliśmy wiersz przed przystąpieniem `return` do drukowania komunikatu wyjaśniającego w konsoli programu za pomocą funkcji ( `Message` ) [Microsoft. Quantum. wewnętrzna. Message]
+
+Ta operacja (`TestBellState`) wykona `count` iteracji pętli, ustawi określoną wartość `initial` dla kubitu, a następnie zmierzy (`M`) wynik. Zbierze ona dane statystyczne dotyczące zmierzonej liczby zer i jedynek oraz zwróci je do obiektu wywołującego. Wykona także jedną inną wymaganą operację. Zresetuje kubit do znanego stanu (`Zero`) przed jego zwróceniem, co umożliwi innym przydzielenie tego kubitu w znanym stanie. Jest to wymagane przez instrukcję `using`.
+
+#### <a name="about-variables-in-q"></a>Informacje o zmiennych w Q\#
+
+Domyślnie zmienne w języku Q# są niezmienialne — ich wartości nie można zmienić po powiązaniu. Słowo kluczowe `let` jest używane do wskazania powiązania zmiennej niezmienialnej. Argumenty operacji są zawsze niezmienialne.
+
+Jeśli potrzebujesz zmiennej, której wartość można zmienić, takiej jak `numOnes` w przykładzie, możesz zadeklarować zmienną za pomocą słowa kluczowego `mutable`. Wartość zmiennej modyfikowalnej zmienia się przy użyciu instrukcji `setQubitState`.
+
+W obu przypadkach typ zmiennej jest wnioskowany przez kompilator. Język Q# nie wymaga żadnych adnotacji typu dla zmiennych.
+
+#### <a name="about-using-statements-in-q"></a>`using`Instrukcje w temacie Q\#
+
+Instrukcja `using` jest również szczególna dla języka Q#. Służy do przydzielania kubitów do użycia w bloku kodu. W języku Q# wszystkie kubity są dynamicznie przydzielane i zwalniane — nie są stałymi zasobami w całym okresie istnienia złożonego algorytmu. Instrukcja `using` przydziela zestaw kubitów na początku bloku i zwalnia te kubity na jego końcu.
+
+## <a name="execute-the-code-from-the-command-line"></a>Wykonywanie kodu z wiersza polecenia
+
+Aby uruchomić kod, musimy określić kompilator, *który* jest wywoływany do uruchomienia, gdy zostanie podane `dotnet run` polecenie. Jest to wykonywane z prostą zmianą w pliku Q #, dodając wiersz `@EntryPoint()` bezpośrednio poprzedzający możliwy do `TestBellState` przeprowadzenia: operację w tym przypadku. Pełny kod powinien:
+
+```qsharp
+namespace Bell {
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
+
+    operation SetQubitState(desired : Result, target : Qubit) : Unit {
+        if (desired != M(target)) {
+            X(target);
+        }
+    }
+
+    @EntryPoint()
     operation TestBellState(count : Int, initial : Result) : (Int, Int) {
 
         mutable numOnes = 0;
         using (qubit = Qubit()) {
 
             for (test in 1..count) {
-                Set(initial, qubit);
+                SetQubitState(initial, qubit);
                 let res = M(qubit);
 
                 // Count the number of ones we saw:
@@ -154,171 +194,45 @@ Operacja kwantowa przekształca stan kubitu. Czasami mówi się o bramkach kwant
                     set numOnes += 1;
                 }
             }
-            Set(Zero, qubit);
+
+            SetQubitState(Zero, qubit);
         }
 
-        // Return number of times we saw a |0> and number of times we saw a |1>
-        return (count-numOnes, numOnes);
+    // Return number of times we saw a |0> and number of times we saw a |1>
+    Message("Test results (# of 0s, # of 1s): ");
+    return (count - numOnes, numOnes);
     }
-    ```
-
-    Ta operacja (`TestBellState`) wykona `count` iteracji pętli, ustawi określoną wartość `initial` dla kubitu, a następnie zmierzy (`M`) wynik. Zbierze ona dane statystyczne dotyczące zmierzonej liczby zer i jedynek oraz zwróci je do obiektu wywołującego. Wykona także jedną inną wymaganą operację. Zresetuje kubit do znanego stanu (`Zero`) przed jego zwróceniem, co umożliwi innym przydzielenie tego kubitu w znanym stanie. Jest to wymagane przez instrukcję `using`.
-
-### <a name="about-variables-in-q"></a>Informacje o zmiennych w języku Q#
-
-Domyślnie zmienne w języku Q# są niezmienialne — ich wartości nie można zmienić po powiązaniu. Słowo kluczowe `let` jest używane do wskazania powiązania zmiennej niezmienialnej. Argumenty operacji są zawsze niezmienialne.
-
-Jeśli potrzebujesz zmiennej, której wartość można zmienić, takiej jak `numOnes` w przykładzie, możesz zadeklarować zmienną za pomocą słowa kluczowego `mutable`. Wartość zmiennej modyfikowalnej zmienia się przy użyciu instrukcji `set`.
-
-W obu przypadkach typ zmiennej jest wnioskowany przez kompilator. Język Q# nie wymaga żadnych adnotacji typu dla zmiennych.
-
-### <a name="about-using-statements-in-q"></a>Informacje o instrukcjach `using` w języku Q#
-
-Instrukcja `using` jest również szczególna dla języka Q#. Służy do przydzielania kubitów do użycia w bloku kodu. W języku Q# wszystkie kubity są dynamicznie przydzielane i zwalniane — nie są stałymi zasobami w całym okresie istnienia złożonego algorytmu. Instrukcja `using` przydziela zestaw kubitów na początku bloku i zwalnia te kubity na jego końcu.
-
-## <a name="create-the-host-application-code"></a>Tworzenie kodu aplikacji hosta
-
-#### <a name="python"></a>[Python](#tab/tabid-python)
-
-1. Otwórz plik `host.py` i dodaj następujący kod:
-
-    ```python
-    import qsharp
-
-    from qsharp import Result
-    from Quantum.Bell import TestBellState
-
-    initials = (Result.Zero, Result.One)
-
-    for i in initials:
-      res = TestBellState.simulate(count=1000, initial=i)
-      (num_zeros, num_ones) = res
-      print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
-    ```
-
-#### <a name="c"></a>[C#](#tab/tabid-csharp)
-
-1. Zastąp zawartość pliku `Driver.cs` następującym kodem:
-
-    ```csharp
-    using System;
-
-    using Microsoft.Quantum.Simulation.Core;
-    using Microsoft.Quantum.Simulation.Simulators;
-
-    namespace Quantum.Bell
-    {
-        class Driver
-        {
-            static void Main(string[] args)
-            {
-                using (var qsim = new QuantumSimulator())
-                {
-                    // Try initial values
-                    Result[] initials = new Result[] { Result.Zero, Result.One };
-                    foreach (Result initial in initials)
-                    {
-                        var res = TestBellState.Run(qsim, 1000, initial).Result;
-                        var (numZeros, numOnes) = res;
-                        System.Console.WriteLine(
-                            $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4}");
-                    }
-                }
-
-                System.Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
-            }
-        }
-    }
-    ```
-
-#### [](#tab/tabid-vs2019)
-
-* * *
-
-### <a name="about-the-host-application-code"></a>Informacje o kodzie aplikacji hosta
-
-#### <a name="python"></a>[Python](#tab/tabid-python)
-
-Aplikacja hosta w języka Python ma trzy części:
-
-* Oblicza wszystkie argumenty wymagane dla algorytmu kwantowego. W przykładzie zmienna `count` ma stałą wartość 1000, a zmienna `initial` to wartość początkowa kubitu.
-* Uruchamia algorytm kwantowy, wywołując metodę `simulate()` zaimportowanej operacji języka Q#.
-* Przetwarza wynik operacji. W przykładzie zmienna `res` otrzymuje wynik operacji. Tutaj wynik jest krotką liczby zer (`num_zeros`) i liczby jedynek (`num_ones`) zmierzonych przez symulator. Rozdzielamy krotkę, aby uzyskać dwa pola, i drukujemy wyniki.
-
-#### <a name="c"></a>[C#](#tab/tabid-csharp)
-
-Aplikacja hosta w języku C# ma cztery części:
-
-* Konstruuje symulator kwantowy. W przykładzie element `qsim` jest symulatorem.
-* Oblicza wszystkie argumenty wymagane dla algorytmu kwantowego. W przykładzie zmienna `count` ma stałą wartość 1000, a zmienna `initial` to wartość początkowa kubitu.
-* Uruchamia algorytm kwantowy. Każda operacja języka Q# generuje klasę języka C# o tej samej nazwie. Ta klasa ma metodę `Run`, która **asynchronicznie** wykonuje operację. Wykonanie jest asynchroniczne, ponieważ wykonanie na rzeczywistym sprzęcie będzie asynchroniczne. Ponieważ metoda `Run` jest asynchroniczna, pobieramy właściwość `Result`. To blokuje wykonywanie do momentu zakończenia zadania i powoduje synchronicznie zwrócenie wyniku.
-* Przetwarza wynik operacji. W przykładzie zmienna `res` otrzymuje wynik operacji. Tutaj wynik jest krotką liczby zer (`numZeros`) i liczby jedynek (`numOnes`) zmierzonych przez symulator. Jest on zwracany jako element ValueTuple w języku C#. Rozdzielamy krotkę, aby uzyskać dwa pola, drukujemy wyniki i czekamy na naciśnięcie klawisza.
-
-#### [](#tab/tabid-vs2019)
-
-* * *
-
-## <a name="build-and-run"></a>Kompilowanie i uruchamianie
-
-#### <a name="python"></a>[Python](#tab/tabid-python)
-
-1. Uruchom następujące polecenie w terminalu:
-
-    ```
-    python host.py
-    ```
-
-    To polecenie uruchamia aplikację hosta, która symuluje operację języka Q#.
-
-Wyniki powinny być następujące:
-
-```Output
-Init:0    0s=1000 1s=0   
-Init:1    0s=0    1s=1000
+}
 ```
 
-#### <a name="command-line--visual-studio-code"></a>[Wiersz polecenia/program Visual Studio Code](#tab/tabid-csharp)
+Aby uruchomić program, musimy określić `count` argumenty i `initial` z wiersza polecenia. Wybierzmy na przykład `count = 1000` i `initial = One` . Wprowadź następujące polecenie:
 
-1. Uruchom następujące polecenie w terminalu:
-
-    ```dotnetcli
-    dotnet run
-    ```
-
-    To polecenie spowoduje automatyczne pobranie wszystkich wymaganych pakietów, skompilowanie aplikacji, a następnie uruchomienie jej w wierszu polecenia.
-
-1. Alternatywnie naciśnij klawisz **F1**, aby otworzyć paletę poleceń, i wybierz polecenie **Debuguj: Uruchom bez debugowania**.
-Może zostać wyświetlony monit o utworzenie nowego pliku ``launch.json`` opisującego sposób uruchamiania programu.
-Domyślny plik ``launch.json`` powinien wystarczyć dla większości aplikacji.
-
-Wyniki powinny być następujące:
-
-```Output
-Init:Zero 0s=1000 1s=0
-Init:One  0s=0    1s=1000
-Press any key to continue...
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
 
-#### <a name="visual-studio"></a>[Program Visual Studio](#tab/tabid-vs2019)
+I należy obserwować następujące dane wyjściowe:
 
-1. Po prostu naciśnij klawisz `F5`, a program powinien zostać skompilowany i uruchomiony.
-
-Wyniki powinny być następujące:
-
-```Output
-Init:Zero 0s=1000 1s=0
-Init:One  0s=0    1s=1000
-Press any key to continue...
+```output
+Test results (# of 0s, # of 1s):
+(0, 1000)
 ```
 
-Program zostanie zakończony po naciśnięciu klawisza.
+Jeśli spróbujesz `initial = Zero` :
 
-* * *
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+```output
+Test results (# of 0s, # of 1s):
+(1000, 0)
+```
 
 ## <a name="prepare-superposition"></a>Przygotowanie superpozycji
 
-**Przegląd** Teraz przyjrzyjmy się, jak w języku Q# można wyrazić wprowadzanie kubitów w stan superpozycji.  Przypomnijmy, że kubit może być w stanie superpozycji wartości 0 i 1.  Użyjemy operacji `Hadamard`, aby go uzyskać. Jeśli kubit znajduje się w dowolnym ze stanów klasycznych (gdy pomiar zwraca zawsze wartość `Zero` lub zawsze wartość `One`), operacja `Hadamard` lub `H` wprowadzi kubit w stan, w którym pomiar kubitu będzie zwracać wartość `Zero` przez 50% czasu i zwracać wartość `One` przez 50% czasu.  Koncepcyjnie kubit można uważać za będący w połowie między wartościami `Zero` i `One`.  Gdy teraz zasymulujemy operację `TestBellState`, zwracane wyniki będą zawierać w przybliżeniu równą liczbę wartości `Zero` i `One` po pomiarze.  
+Teraz przyjrzyjmy się sposobom, w jaki Q # Express ma na celu umieszczanie qubits w położeniu.  Przypomnijmy, że kubit może być w stanie superpozycji wartości 0 i 1.  Użyjemy operacji `Hadamard`, aby go uzyskać. Jeśli kubit znajduje się w dowolnym ze stanów klasycznych (gdy pomiar zwraca zawsze wartość `Zero` lub zawsze wartość `One`), operacja `Hadamard` lub `H` wprowadzi kubit w stan, w którym pomiar kubitu będzie zwracać wartość `Zero` przez 50% czasu i zwracać wartość `One` przez 50% czasu.  Koncepcyjnie kubit można uważać za będący w połowie między wartościami `Zero` i `One`.  Gdy teraz zasymulujemy operację `TestBellState`, zwracane wyniki będą zawierać w przybliżeniu równą liczbę wartości `Zero` i `One` po pomiarze.  
+
+### <a name="x-flips-qubit-state"></a>`X`Przerzucanie stanu qubit
 
 Najpierw spróbujemy przerzucić kubit (jeśli kubit jest w stanie `Zero`, przerzucimy go do stanu `One` i na odwrót). Wykonuje się to za pomocą operacji `X` przed wykonaniem pomiaru w operacji `TestBellState`:
 
@@ -327,14 +241,30 @@ X(qubit);
 let res = M(qubit);
 ```
 
-Teraz wyniki (po naciśnięciu klawisza `F5`) są odwrócone:
+Teraz wyniki są wycofane:
 
-```Output
-Init:Zero 0s=0    1s=1000
-Init:One  0s=1000 1s=0
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
 
-Jednak wszystko, co zobaczyliśmy dotychczas, jest „klasyczne”. Uzyskajmy wynik kwantowy. Wszystko, co należy zrobić, to zastąpić operację `X` w poprzednim uruchomieniu operacją Hadamarda `H`. Zamiast przerzucać kubit całkowicie z wartości 0 do wartości 1, przerzucimy go tylko w połowie. Zastąpione wiersze w operacji `TestBellState` teraz wyglądają następująco:
+```output
+Test results (# of 0s, # of 1s):
+(1000, 0)
+```
+
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+```output
+Test results (# of 0s, # of 1s):
+(0, 1000)
+```
+
+Teraz przyjrzyjmy się właściwościom Quantum klasy qubits.
+
+### <a name="h-prepares-superposition"></a>`H`przygotowuje nałożenie
+
+Wszystko, co należy zrobić, to zastąpić operację `X` w poprzednim uruchomieniu operacją Hadamarda `H`. Zamiast przerzucać kubit całkowicie z wartości 0 do wartości 1, przerzucimy go tylko w połowie. Zastąpione wiersze w operacji `TestBellState` teraz wyglądają następująco:
 
 ```qsharp
 H(qubit);
@@ -343,18 +273,33 @@ let res = M(qubit);
 
 Nowe wyniki są bardziej interesujące:
 
-```Output
-Init:Zero 0s=484  1s=516
-Init:One  0s=522  1s=478
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
 
-Przy każdym wykonaniu pomiaru żądamy wartości klasycznej, lecz kubit jest w stanie przejściowym między wartościami 0 i 1, więc otrzymamy (statystycznie) wartość 0 w połowie przypadków i wartość 1 w pozostałych przypadkach. Jest to zjawisko __superpozycji__, które daje nam po raz pierwszy wgląd w rzeczywisty stan kwantowy.
+```output
+Test results (# of 0s, # of 1s):
+(496, 504)
+```
+
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+
+```output
+Test results (# of 0s, # of 1s):
+(506, 494)
+```
+
+Przy każdym wykonaniu pomiaru żądamy wartości klasycznej, lecz kubit jest w stanie przejściowym między wartościami 0 i 1, więc otrzymamy (statystycznie) wartość 0 w połowie przypadków i wartość 1 w pozostałych przypadkach.
+Jest to zjawisko **superpozycji**, które daje nam po raz pierwszy wgląd w rzeczywisty stan kwantowy.
 
 ## <a name="prepare-entanglement"></a>Przygotowanie splątania
 
-**Omówienie:**  Teraz zobaczmy, jak można wyrażać splątanie w języku Q#.  Najpierw ustawiamy pierwszy kubit w stanie początkowym, a następnie wprowadzamy go w stan superpozycji za pomocą operacji `H`.  Następnie, przed pomiarem pierwszego kubitu, używamy nowej operacji (`CNOT`), czyli Controlled-Not.  Wynikiem wykonania tej operacji na dwóch kubitach jest przerzucenie drugiego kubitu, jeśli pierwszy kubit ma wartość `One`.  Teraz oba kubity są splątane.  Nasze dane statystyczne dotyczące pierwszego kubitu nie uległy zmianie (szansa 50%-50% dla wartości `Zero` i `One` po pomiarze), ale teraz pomiar drugiego kubitu jest __zawsze__ taki sam jak pierwszego kubitu. Bramka `CNOT` splątała dwa kubity — cokolwiek dzieje się z jednym z nich, to samo dzieje się z drugim. W przypadku odwrócenia pomiarów (drugi kubit przed pierwszym) będzie dziać się to samo. Pierwsza miara będzie losowa, a druga zablokowana na wartości pierwszej.
+Teraz zobaczmy, jak można wyrażać splątanie w języku Q#.
+Najpierw ustawiamy pierwszy kubit w stanie początkowym, a następnie wprowadzamy go w stan superpozycji za pomocą operacji `H`.  Następnie przed pomiarem pierwszego qubit używamy nowej operacji ( `CNOT` ), która oznacza, że nie jest to kontrolowane.  Wynikiem wykonania tej operacji na dwóch kubitach jest przerzucenie drugiego kubitu, jeśli pierwszy kubit ma wartość `One`.  Teraz oba kubity są splątane.  Nasze dane statystyczne dotyczące pierwszego kubitu nie uległy zmianie (szansa 50%-50% dla wartości `Zero` i `One` po pomiarze), ale teraz pomiar drugiego kubitu jest __zawsze__ taki sam jak pierwszego kubitu. Bramka `CNOT` splątała dwa kubity — cokolwiek dzieje się z jednym z nich, to samo dzieje się z drugim. W przypadku odwrócenia pomiarów (drugi kubit przed pierwszym) będzie dziać się to samo. Pierwsza miara będzie losowa, a druga zablokowana na wartości pierwszej.
 
-Pierwsza rzecz do zrobienia to przydzielenie 2 kubitów zamiast jednego w operacji `TestBellState`:
+Najpierw należy przydzielić dwie qubits zamiast jednego w `TestBellState` :
 
 ```qsharp
 using ((q0, q1) = (Qubit(), Qubit())) {
@@ -363,21 +308,21 @@ using ((q0, q1) = (Qubit(), Qubit())) {
 Pozwoli to dodać nową operację (`CNOT`) przed wykonaniem pomiaru (`M`) w operacji `TestBellState`:
 
 ```qsharp
-Set(initial, q0);
-Set(Zero, q1);
+SetQubitState(initial, q0);
+SetQubitState(Zero, q1);
 
 H(q0);
 CNOT(q0, q1);
 let res = M(q0);
 ```
 
-Dodaliśmy kolejną operację `Set`, aby zainicjować pierwszy kubit w celu zapewnienia, że jest zawsze w stanie `Zero` podczas uruchamiania.
+Dodaliśmy kolejną operację `SetQubitState`, aby zainicjować pierwszy kubit w celu zapewnienia, że jest zawsze w stanie `Zero` podczas uruchamiania.
 
 Musimy też zresetować drugi kubit przed jego zwolnieniem.
 
 ```qsharp
-Set(Zero, q0);
-Set(Zero, q1);
+SetQubitState(Zero, q0);
+SetQubitState(Zero, q1);
 ```
 
 Pełna procedura wygląda teraz następująco:
@@ -388,8 +333,8 @@ Pełna procedura wygląda teraz następująco:
         mutable numOnes = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set (initial, q0);
-                Set (Zero, q1);
+                SetQubitState(initial, q0);
+                SetQubitState(Zero, q1);
 
                 H(q0);
                 CNOT(q0,q1);
@@ -400,9 +345,9 @@ Pełna procedura wygląda teraz następująco:
                     set numOnes += 1;
                 }
             }
-            
-            Set(Zero, q0);
-            Set(Zero, q1);
+
+            SetQubitState(Zero, q0);
+            SetQubitState(Zero, q1);
         }
 
         // Return number of times we saw a |0> and number of times we saw a |1>
@@ -418,8 +363,8 @@ Jeśli ją uruchomimy, uzyskamy dokładnie taki sam wynik 50%-50% jak poprzednio
         mutable agree = 0;
         using ((q0, q1) = (Qubit(), Qubit())) {
             for (test in 1..count) {
-                Set(initial, q0);
-                Set(Zero, q1);
+                SetQubitState(initial, q0);
+                SetQubitState(Zero, q1);
 
                 H(q0);
                 CNOT(q0, q1);
@@ -435,67 +380,35 @@ Jeśli ją uruchomimy, uzyskamy dokładnie taki sam wynik 50%-50% jak poprzednio
                 }
             }
             
-            Set(Zero, q0);
-            Set(Zero, q1);
+            SetQubitState(Zero, q0);
+            SetQubitState(Zero, q1);
         }
 
-        // Return number of times we saw a |0> and number of times we saw a |1>
+        // Return times we saw |0>, times we saw |1>, and times measurements agreed
+        Message("Test results (# of 0s, # of 1s, # of agreements)");
         return (count-numOnes, numOnes, agree);
     }
 ```
 
-Nowa wartość zwracana (`agree`) śledzi przypadki, gdy pomiar pierwszego kubitu jest zgodny z pomiarem drugiego kubitu. Należy także odpowiednio zaktualizować aplikację hosta:
+Nowa wartość zwracana (`agree`) śledzi przypadki, gdy pomiar pierwszego kubitu jest zgodny z pomiarem drugiego kubitu.
 
-#### <a name="python"></a>[Python](#tab/tabid-python)
+Uruchamianie kodu, który uzyskamy:
 
-```python
-import qsharp
-
-from qsharp import Result
-from Quantum.Bell import TestBellState
-
-initials = {Result.Zero, Result.One} 
-
-for i in initials:
-    res = TestBellState.simulate(count=1000, initial=i)
-    (num_zeros, num_ones, agree) = res
-    print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
+```dotnetcli
+dotnet run --count 1000 --initial One
 ```
-
-#### <a name="c"></a>[C#](#tab/tabid-csharp)
-
-```csharp
-            using (var qsim = new QuantumSimulator())
-            {
-                // Try initial values
-                Result[] initials = new Result[] { Result.Zero, Result.One };
-                foreach (Result initial in initials)
-                {
-                    var res = TestBellState.Run(qsim, 1000, initial).Result;
-                    var (numZeros, numOnes, agree) = res;
-                    System.Console.WriteLine(
-                        $"Init:{initial,-4} 0s={numZeros,-4} 1s={numOnes,-4} agree={agree,-4}");
-                }
-            }
-            
-            System.Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+```output
+(505, 495, 1000)
 ```
-
-#### [](#tab/tabid-vs2019)
-
-* * *
-
-Teraz po uruchomieniu otrzymujemy coś zdumiewającego:
-
-```Output
-Init:Zero 0s=499  1s=501  agree=1000
-Init:One  0s=490  1s=510  agree=1000
+```dotnetcli
+dotnet run --count 1000 --initial Zero
+```
+```output
+Test results (# of 0s, # of 1s, # of agreements)
+(507, 493, 1000)
 ```
 
 Jak podano w omówieniu, nasze dane statystyczne dotyczące pierwszego kubitu nie uległy zmianie (szansa 50%-50% dla wartości 0 i 1), ale teraz pomiar drugiego kubitu jest __zawsze__ taki sam jak pierwszego kubitu, ponieważ są one splątane!
-
-Gratulacje, udało Ci się napisać swój pierwszy program kwantowy!
 
 ## <a name="next-steps"></a>Następne kroki
 

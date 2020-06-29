@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275546"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415265"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Maszyna docelowa szacowania zasobów
 
@@ -98,8 +98,8 @@ Poniżej znajduje się lista metryk szacowanych przez `ResourcesEstimator` :
 * __Miara__: liczba wykonanych pomiarów.
 * __R__: liczba wykonanych pojedynczych rotacji qubit, z wyjątkiem bram T, Clifford i Pauli.
 * __T__: liczba bram t i ich sprzężenia, łącznie z bramą t, T_x = H. T. H i T_y = HY. t. HY, wykonane.
-* __Głębokość__: Głębokość obwodu Quantum wykonywanego przez operację Q #. Domyślnie tylko bramy T są zliczane na głębokości, szczegóły można znaleźć w temacie [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: Maksymalna liczba qubits przypisana podczas wykonywania operacji Q #.
+* __Głębokość__: Dolna granica głębokości obwodu Quantum wykonywanego przez operację Q #. Domyślnie tylko bramy T są zliczane na głębokości, szczegóły można znaleźć w temacie [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
+* __Width__: Dolna granica dla maksymalnej liczby qubits przydzieloną podczas wykonywania operacji Q #. Jednocześnie może nie być możliwe równoczesne osiąganie __głębokości__ i dolnej granicy __szerokości__ .
 * __BorrowedWidth__: Maksymalna liczba qubits została zapożyczone w ramach operacji Q #.
 
 

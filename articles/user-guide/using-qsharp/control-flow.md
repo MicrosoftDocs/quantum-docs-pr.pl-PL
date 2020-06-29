@@ -6,43 +6,41 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326544"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415307"
 ---
 # <a name="control-flow-in-q"></a>Przepływ sterowania w p #
 
-W ramach operacji lub funkcji każda instrukcja jest wykonywana w kolejności, podobnie jak w przypadku najczęściej używanych języków klasycznych.
-Ten przepływ sterowania można jednak zmodyfikować na trzy różne sposoby:
+W ramach operacji lub funkcji każda instrukcja jest uruchamiana w kolejności, podobnie jak w przypadku innych typowych języków, których to dotyczy.
+Można jednak zmodyfikować przepływ kontroli na trzy różne sposoby:
 
-- `if`zatwierdzeni
-- `for`pętli
-- `repeat`-`until`pętli
+* `if`zatwierdzeni
+* `for`pętli
+* `repeat-until-success`pętli
 
-W dalszej części [znajdziesz poniższe](#repeat-until-success-loop)Omówienie.
-`if` `for` Konstrukcje przepływu sterowania i są jednak bardziej zrozumiałe dla większości klasycznych języków programowania.
+`if` `for` Konstrukcje przepływu sterowania i są realizowane w dobrze znanym znaczeniu dla większości klasycznych języków programowania. [`Repeat-until-success`](#repeat-until-success-loop)pętle zostały omówione w dalszej części tego artykułu.
 
-Należy pamiętać, że `for` pętle i `if` instrukcje mogą być nawet używane w operacjach, dla których specjalizacje są generowane automatycznie. W takim przypadku sąsiadująca `for` Pętla odwraca kierunek i przyjmuje sąsiadujące poszczególne iteracje.
-Ta zasada jest zgodna z zasadą "buty i-SOCKS": Jeśli chcesz cofnąć umieszczanie w ramach SOCKS, a następnie odbuty, musisz cofnąć umieszczanie na butów, a następnie cofnąć umieszczenie w usłudze SOCKS.
-Decidedly mniej dobrze, aby wypróbować i podjąć Twoje SOCKS, gdy będziesz nadal korzystać z swoich oddziałów.
+Należy pamiętać, że `for` pętle i `if` instrukcje mogą być używane w operacjach, dla których [specjalizacje](xref:microsoft.quantum.guide.operationsfunctions) są generowane automatycznie. W tym scenariuszu sąsiadująca `for` Pętla odwraca kierunek i przyjmuje sąsiadujące poszczególne iteracje.
+Ta akcja jest zgodna z zasadą "buty i-SOCKS": Jeśli chcesz cofnąć umieszczenie w usłudze SOCKS, a następnie kliknij pozycję Wycofaj w odniesieniu do butów, a następnie Cofnij umieszczenie w obszarze SOCKS. 
 
 ## <a name="if-else-if-else"></a>If, Else-IF, else
 
 `if`Instrukcja obsługuje wykonywanie warunkowe.
-Składa się ze słowa kluczowego `if` , otwartego nawiasu, `(` wyrażenia logicznego, nawiasu zamykającego `)` i bloku instrukcji (bloku _then_ ).
-Może to być dowolna liczba klauzul innych niż, z których każda składa się ze słowa kluczowego `elif` , otwierającego nawiasu `(` , wyrażenia logicznego, zamykającego nawiasu `)` i bloku instrukcji (bloku _else-if_ ).
+Składa się ze słowa kluczowego `if` , wyrażenia logicznego w nawiasach i bloku instrukcji (bloku _then_ ).
+Opcjonalnie można wykonać dowolną liczbę klauzul else-IF, z których każdy składa się ze słowa kluczowego `elif` , wyrażenia logicznego w nawiasach i bloku instrukcji (bloku _else-if_ ).
 Na koniec instrukcja może opcjonalnie zakończyć z klauzulą else, która składa się ze słowa kluczowego, `else` po którym następuje inny blok instrukcji (blok _else_ ).
 
-`if`Warunek jest obliczany, a jeśli ma wartość true, zostaje wykonany blok then.
-Jeśli warunek ma wartość false, zostanie obliczony pierwszy warunek else-if; Jeśli wartość jest równa true, ten blok else-IF jest wykonywany.
-W przeciwnym razie drugi blok else-if zostanie przetestowany, a następnie trzeci i tak dalej, dopóki nie zostanie napotkana klauzula z prawdziwym warunkiem lub nie ma żadnych klauzul else-IF.
-Jeśli oryginalny warunek if i wszystkie klauzule else-if mają wartość false, blok else jest wykonywany, jeśli został podany.
+`if`Warunek jest obliczany, a jeśli ma *wartość true*, blok *then* jest uruchamiany.
+Jeśli warunek ma *wartość false*, zostanie obliczony pierwszy warunek else-if; Jeśli ma wartość true, blok *else-if* jest uruchamiany.
+W przeciwnym razie drugi blok else-IF jest obliczany, a następnie trzeci i tak dalej, dopóki nie zostanie napotkana klauzula z prawdziwym warunkiem lub nie ma żadnych klauzul else-IF.
+Jeśli oryginalny warunek *if* i wszystkie klauzule else-if mają *wartość false*, blok *else* jest uruchamiany, jeśli jest podany.
 
-Należy zauważyć, że każdy blok jest wykonywany we własnym zakresie.
-Powiązania wykonane wewnątrz elementu `if` , `elif` lub `else` bloku nie są widoczne po jego zakończeniu.
+Należy zauważyć, że w zależności od tego, czy blokowane są uruchomienia, działa w ramach własnego zakresu.
+Powiązania wykonane wewnątrz elementu `if` , `elif` lub `else` bloku nie są widoczne po zakończeniu bloku.
 
 Na przykład
 
@@ -69,18 +67,18 @@ if (i == 1) {
 
 ## <a name="for-loop"></a>Pętla for
 
-`for`Instrukcja obsługuje iterację w zakresie liczb całkowitych lub za pośrednictwem tablicy.
-Instrukcja składa się ze słowa kluczowego `for` , otwartego nawiasu `(` , po którym występuje krotka symbol lub symbol, słowo kluczowe `in` , wyrażenie typu `Range` lub tablicy, nawias zamykający `)` i blok instrukcji.
+`for`Instrukcja obsługuje iterację w zakresie liczb całkowitych lub tablicy.
+Instrukcja składa się ze słowa kluczowego `for` , po którym następuje symbol lub krotka symboli, słowo kluczowe `in` i wyrażenie typu `Range` lub tablicy, wszystkie w nawiasach i bloku instrukcji.
 
-Blok instrukcji (treść pętli) jest wykonywany wielokrotnie ze zdefiniowanymi symbolami (zmienne pętli) powiązane z każdą wartością w zakresie lub tablicy.
-Należy pamiętać, że jeśli wyrażenie zakresu szacuje pusty zakres lub tablicę, treść nie zostanie wykonana.
-Wyrażenie jest w pełni oceniane przed wprowadzeniem pętli i nie zmienia się podczas wykonywania pętli.
+Blok instrukcji (treść pętli) jest uruchamiany wielokrotnie, ze zdefiniowanym symbolem (zmienna pętli) powiązaną z każdą wartością z zakresu lub tablicy.
+Należy zauważyć, że jeśli wyrażenie zakresu szacuje pusty zakres lub tablicę, treść nie jest w ogóle uruchomiona.
+Wyrażenie jest w pełni oceniane przed wprowadzeniem pętli i nie zmienia się w czasie wykonywania pętli.
 
-Zmienna pętla jest powiązana z każdym wejściem do treści pętli i niezależna na końcu treści.
-W szczególności zmienna Loop nie jest powiązana po zakończeniu pętli for.
-Powiązanie zadeklarowanych symboli jest niezmienne i zgodne z tymi samymi regułami, co inne powiązania zmiennych. 
+Zmienna pętla jest powiązana z każdym wejściem do treści pętli i jest niepowiązana na końcu treści.
+Zmienna Loop nie jest powiązana po zakończeniu pętli for.
+Powiązanie zmiennej pętli jest niezmienne i jest zgodne z tymi samymi regułami, co inne powiązania zmiennych. 
 
-W przypadku niektórych przykładów Załóżmy, że `qubits` jest to rejestr qubits (tj. typu `Qubit[]` ), 
+W tych przykładach `qubits` jest rejestrem qubits (tj. typu `Qubit[]` ), 
 
 ```qsharp
 // ...
@@ -101,15 +99,15 @@ for ((index, measured) in results) { // iterates over the tuple values in result
     }
 }
 ```
-Należy pamiętać, że na końcu wykorzystujemy operator binarny z przesunięciem w lewo, `<<<` szczegóły, które można znaleźć w [wyrażeniach liczbowych](xref:microsoft.quantum.guide.expressions#numeric-expressions) .
 
+Należy pamiętać, że na końcu wykorzystujemy operator binarny z przesunięciem w lewo z lewej strony `<<<` . Aby uzyskać więcej informacji, zobacz [wyrażenia liczbowe](xref:microsoft.quantum.guide.expressions#numeric-expressions).
 
 ## <a name="repeat-until-success-loop"></a>Pętla REPEAT-until-Success
 
 Język Q # zezwala, aby klasyczny przepływ sterowania był zależny od wyników pomiaru qubits.
 Ta funkcja z kolei umożliwia wdrażanie zaawansowanych probabilistyczneych gadżetów, które mogą zmniejszyć koszt obliczeniowy wdrożenia unitaries.
-Przykładowo można łatwo zaimplementować wzorce " *REPEAT-until-Success* " (jednostek ru) w programie Q #.
-Te wzorce jednostek ru są programami probabilistyczne, które mają *przewidywane* niskie koszty w zakresie bram elementarnych, ale dla których rzeczywisty koszt zależy od rzeczywistego przebiegu i rzeczywiste odchodzenie między różnymi możliwymi gałęziami.
+Przykładami są wzorce *powtarzające się do sukcesu* (jednostek ru) w Q #.
+Te wzorce jednostek ru są programami probabilistyczne, które mają *przewidywane* niskie koszty w zakresie bram elementarnych; poniesiony koszt zależy od rzeczywistego przebiegu i przeplotu wielu możliwych rozgałęzień.
 
 Aby ułatwić wzorce powtarzania do sukcesu (jednostek ru), Q # obsługuje konstrukcje
 
@@ -124,33 +122,35 @@ fixup {
 ```
 
 gdzie `expression` jest dowolnym prawidłowym wyrażeniem, którego wynikiem jest wartość typu `Bool` .
-Zostanie wykonana treść pętli, a następnie warunek jest obliczany.
-Jeśli warunek ma wartość true, instrukcja zostanie zakończona; w przeciwnym razie nastąpi wykonanie naprawy, a instrukcja jest wykonywana ponownym uruchomieniem, rozpoczynając od treści pętli.
+Zostanie uruchomiona pętla, a następnie warunek jest obliczany.
+Jeśli warunek ma wartość true, instrukcja zostanie zakończona; w przeciwnym razie przebiega naprawy i instrukcja zostanie ponownie uruchomiona, rozpoczynając od treści pętli.
 
-Wszystkie trzy części pętli REPEAT/until (treść, test i naprawa) są traktowane jako pojedynczy zakres *dla każdego powtórzenia*, dlatego symbole, które są powiązane z treścią, są dostępne w teście i w naprawie.
-Jednak Kończenie wykonywania naprawy kończy zakres instrukcji, tak aby powiązania symboli wykonane podczas treści lub naprawy nie były dostępne w kolejnych powtórzeniach.
+Wszystkie trzy części pętli jednostek ru (treść, test i naprawa) są traktowane jako pojedynczy zakres *dla każdego powtórzenia*, dlatego symbole, które są powiązane w treści są dostępne zarówno w teście, jak i w naprawie.
+Jednak wykonanie naprawy kończy zakres instrukcji, tak aby powiązania symboli wykonane w trakcie treści lub naprawy nie były dostępne w kolejnych powtórzeniach.
 
 Ponadto `fixup` instrukcja jest często przydatna, ale nie zawsze jest konieczna.
 W przypadkach, gdy nie jest to konieczne, konstrukcja
+
 ```qsharp
 repeat {
     // do stuff
 }
 until (expression);
 ```
+
 jest również prawidłowym wzorcem jednostek ru.
 
-W dolnej części tej strony przedstawiamy kilka [przykładów pętli jednostek ru](#repeat-until-success-examples).
+Aby uzyskać więcej przykładów i szczegółów, zobacz [przykłady powtarzania do sukcesu](#repeat-until-success-examples) w tym artykule.
 
 > [!TIP]   
-> Unikaj używania pętli REPEAT-until-Success wewnątrz funkcji. Odpowiednie funkcje są udostępniane przez pętle w funkcjach. 
+> Unikaj używania pętli REPEAT-until-Success wewnątrz funkcji. Użyj *while* pętle, aby zapewnić odpowiednie funkcje wewnątrz funkcji. 
 
 ## <a name="while-loop"></a>While — pętla
 
-Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum. Są one powszechnie używane w określonych klasach algorytmów Quantum — a tym samym — dedykowana konstrukcja języka w Q #. Jednak pętle, które są przerywane w zależności od warunku, a długość wykonywania jest w tym przypadku nieznana w czasie kompilacji, muszą być obsługiwane z uwzględnieniem szczególnych informacji w środowisku uruchomieniowym Quantum. Ich użycie w ramach funkcji z drugiej strony jest nieproblematyczne, ponieważ tylko zawierają kod, który będzie wykonywany na konwencjonalnym sprzęcie (innym niż Quantum). 
+Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum. Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego też dedykowana konstrukcja języka w Q #. Jednak pętle, które są przerywane w zależności od warunku, a długość wykonywania jest w tym przypadku nieznana w czasie kompilacji, są obsługiwane z uwzględnieniem szczególnej opieki w środowisku uruchomieniowym Quantum. Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum). 
 
-W związku z tym funkcja Q # obsługuje używanie pętli while tylko wewnątrz funkcji. `while`Instrukcja składa się ze słowa kluczowego `while` , otwartego nawiasu `(` , warunku (tj. wyrażenia logicznego), zamykającego nawiasu `)` i bloku instrukcji.
-Blok instrukcji (treść pętli) jest wykonywany tak długo, jak warunek jest obliczany `true` .
+W związku z tym funkcja Q # obsługuje używanie pętli while tylko w obrębie funkcji. `while`Instrukcja składa się z słowa kluczowego `while` , wyrażenia logicznego w nawiasach i bloku instrukcji.
+Blok instrukcji (treść pętli) działa tak długo, jak warunek zostanie obliczony `true` .
 
 ```qsharp
 // ...
@@ -161,18 +161,10 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-
 ## <a name="return-statement"></a>Return, instrukcja
 
-Instrukcja return kończąca wykonywanie operacji lub funkcji i zwraca wartość do obiektu wywołującego.
+Instrukcja return zamyka przebieg operacji lub funkcji i zwraca wartość do obiektu wywołującego.
 Składa się ze słowa kluczowego `return` , po którym następuje wyrażenie odpowiedniego typu i kończącego się średnika.
-
-Wywoływany, który zwraca pustą krotkę, nie `()` wymaga instrukcji return.
-Jeśli pożądane jest wczesne wyjście, można `return ()` go użyć w tym przypadku.
-Możliwe do zwrócenia wszystkie inne typy wymagają końcowej instrukcji return.
-
-W obrębie operacji nie ma maksymalnej liczby instrukcji return.
-Kompilator może emitować ostrzeżenie, jeśli instrukcje są zgodne z instrukcją Return w bloku.
 
 Na przykład
 ```qsharp
@@ -180,23 +172,27 @@ return 1;
 ```
 lub
 ```qsharp
-return ();
-```
-lub
-```qsharp
 return (results, qubits);
 ```
 
+* Wywoływany, który zwraca pustą krotkę, nie `()` wymaga instrukcji return.
+* Aby określić wczesne wyjście z operacji lub funkcji, użyj polecenia `return ();` .
+Możliwe do zwrócenia wszystkie inne typy wymagają końcowej instrukcji return.
+* W obrębie operacji nie ma maksymalnej liczby instrukcji return.
+Kompilator może emitować ostrzeżenie, jeśli instrukcje są zgodne z instrukcją Return w bloku.
+
+   
 ## <a name="fail-statement"></a>Instrukcja zakończony niepowodzeniem
 
 Instrukcja Fail kończy wykonywanie operacji i zwraca wartość błędu do obiektu wywołującego.
 Składa się ze słowa kluczowego `fail` , po którym następuje ciąg i kończący się średnik.
-Ten ciąg jest zwracany do klasycznego sterownika jako komunikat o błędzie.
+Instrukcja zwraca ciąg do klasycznego sterownika jako komunikat o błędzie.
 
 W obrębie operacji nie ma ograniczeń dotyczących liczby instrukcji zakończonych niepowodzeniem.
 Kompilator może emitować ostrzeżenie, jeśli instrukcje obserwują instrukcję Fail w bloku.
 
 Na przykład
+
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -207,9 +203,9 @@ fail $"Syndrome {syn} is incorrect";
 
 ## <a name="repeat-until-success-examples"></a>Przykłady powtarzania do sukcesu
 
-### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Wzorzec jednostek ru dla pojedynczego obrotu qubit o osi niewymiernej 
+### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Wzorzec jednostek ru dla obrotu pojedynczej qubit o osi niewymiernej 
 
-W typowym przypadku użycia Następująca operacja Q # implementuje obrót wokół osi niewymiernej $ (I + 2i Z)/\sqrt {5} $ w sferze Bloch. Jest to realizowane przy użyciu znanego wzorca jednostek ru:
+W typowym przypadku użycia Następująca operacja Q # implementuje obrót wokół osi niewymiernej $ (I + 2i Z)/\sqrt {5} $ w sferze Bloch. Implementacja używa znanego wzorca jednostek ru:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -232,7 +228,7 @@ operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
 }
 ```
 
-### <a name="rus-loop-with-mutable-variable-in-scope"></a>Pętla jednostek ru z modyfikowalną zmienną w zakresie
+### <a name="rus-loop-with-a-mutable-variable-in-scope"></a>Pętla jednostek ru z zmienną modyfikowalną w zakresie
 
 Ten przykład pokazuje użycie zmiennej modyfikowalnej, `finished` która znajduje się w zakresie całej pętli REPEAT-until-Naprawa i która zostaje zainicjowana przed pętlą i zaktualizowaną w kroku naprawy.
 
@@ -251,7 +247,7 @@ fixup {
 
 ### <a name="rus-without-fixup"></a>JEDNOSTEK ru bez`fixup`
 
-Na przykład poniższy kod jest obwodem usługi probabilistyczne, który implementuje ważną bramę rotacji $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ przy `H` użyciu `T` bram i.
+Ten przykład pokazuje pętlę jednostek ru bez kroku naprawy. Kod jest obwodem usługi probabilistyczne, który implementuje ważną bramę rotacji $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ przy użyciu `H` `T` bram i.
 Pętla kończy się na wartościach $ \frac {8} {5} $.
 Zobacz [*powtarzanie-do-sukces: Niedeterministyczny dekompozycja qubit unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick i Svore, 2014), aby uzyskać więcej szczegółów.
 
@@ -277,8 +273,14 @@ using (qubit = Qubit()) {
 
 ### <a name="rus-to-prepare-a-quantum-state"></a>JEDNOSTEK ru przygotowania stanu Quantum
 
-Na koniec pokazujemy przykład wzorca jednostek ru, aby przygotować stan Quantum $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, rozpoczynając od stanu $ \ket{+} $.
-Zobacz również [przykład testowania jednostkowego w standardowej bibliotece](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Na koniec przedstawiono przykład wzorca jednostek ru, aby przygotować stan Quantum $ \frac {1} {\sqrt {3} } \left (\sqrt {2} \ket {0} + \ket {1} \right) $, rozpoczynając od stanu $ \ket{+} $.
+
+Istotne funkcje programistyczne wyświetlane w tej operacji to:
+
+* Bardziej złożona `fixup` część pętli, która obejmuje operacje Quantum. 
+* Użycie `AssertProb` instrukcji w celu ustalenia prawdopodobieństwa mierzenia stanu Quantum w określonych punktach w programie.
+
+Aby uzyskać więcej informacji na [`Assert`](xref:microsoft.quantum.intrinsic.assert) temat [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operacji i, zobacz [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -325,9 +327,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Istotne funkcje programistyczne przedstawione w tej operacji to bardziej skomplikowana `fixup` część pętli, która obejmuje operacje Quantum i użycie `AssertProb` instrukcji w celu ustalenia prawdopodobieństwa mierzenia stanu Quantum w określonych punktach w programie.
-Więcej informacji na temat operacji i można znaleźć w temacie [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging) [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
-
+Aby uzyskać więcej informacji, zobacz [przykładowe testy jednostkowe dostępne w bibliotece standardowej](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Następne kroki
 
