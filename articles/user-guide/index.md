@@ -6,60 +6,59 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: f535aaedbe6ce181375d48f7023409ad8212c702
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c5611f3e2907791f2dfc1644be0a45515d50dfd7
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430615"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415372"
 ---
 # <a name="the-q-user-guide"></a>Podręcznik użytkownika języka Q#
 
 Podręcznik użytkownika języka Q# — Zapraszamy! 
 
-Opisano tutaj szczegółowo podstawowe pojęcia dotyczące języka Q# oraz wszystkie informacje potrzebne do pisania programów kwantowych.
+W poszczególnych tematach tego przewodnika opisano szczegółowo podstawowe pojęcia dotyczące języka Q# oraz wszystkie informacje potrzebne do pisania programów kwantowych.
 
 ## <a name="user-guide-contents"></a>Zawartość podręcznika użytkownika
 
-- [Podstawy języka Q# ](xref:microsoft.quantum.guide.basics): omówienie wprowadzające dotyczące przeznaczenia i funkcjonalności języka programowania Q#. 
+- [Podstawy języka Q#](xref:microsoft.quantum.guide.basics): Wprowadzające omówienie dotyczące przeznaczenia i funkcjonalności języka programowania Q#. 
 
 ### <a name="q-language"></a>Język Q#
 
-- [Typy w języku Q#](xref:microsoft.quantum.guide.types): sekcja określa model typu języka Q# i opisuje składnię służącą do określania typów i pracy z nimi.
+- [Typy w języku Q#](xref:microsoft.quantum.guide.types): Opis modelu typów języka Q# oraz składni służącej do określania typów i pracy z nimi.
 
-- [Wyrażenia typu](xref:microsoft.quantum.guide.expressions): w sekcji znajdują się szczegóły dotyczące określania, odwoływania, łączenia i wykonywania operacji na wartościach każdego typu w języku Q#. 
+- [Wyrażenia typów](xref:microsoft.quantum.guide.expressions): Szczegóły dotyczące określania, odwoływania się, łączenia i wykonywania operacji w przypadku wartości poszczególnych typów w języku Q#. 
 
 ### <a name="using-q"></a>Korzystanie z języka Q#
 
-- [Struktura plików języka Q#](xref:microsoft.quantum.guide.filestructure): w tej sekcji opisano strukturę i składnię pliku języka Q# `*.qs`.
+- [Struktura plików języka Q#](xref:microsoft.quantum.guide.filestructure): Opis struktury i składni pliku języka Q# `*.qs`.
 
-- [Operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions): sekcja zawiera szczegóły dwóch wywoływalnych typów w języku Q#: *operacji*, które obejmują akcje względem rejestrów kubitów oraz *funkcji*, które współpracują wyłącznie z informacjami klasycznymi. 
+- [Operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions): Szczegóły dwóch wywoływalnych typów w języku Q#: *operacji*, które obejmują akcje dotyczące rejestrów kubitów, oraz *funkcji*, które współpracują wyłącznie z informacjami klasycznymi. 
     W tym miejscu opisano, jak je definiować i wywoływać, łącznie ze sprzężonymi i kontrolowanymi wersjami operacji kwantowych.
 
-- [Zmienne lokalne](xref:microsoft.quantum.guide.variables): sekcja opisuje rolę zmiennych w programach w języku Q# oraz sposób ich skutecznego używania. 
-    Na przykład można znaleźć informacje na temat zakresów powiązań, a także różnice między zmiennymi, których nie można modyfikować, i tymi, które można modyfikować, oraz dowiesz się, jak je przypisywać i przypisywać ponownie.
+- [Zmienne](xref:microsoft.quantum.guide.variables): Opis roli zmiennych w programach języka Q# oraz sposobu ich skutecznego używania. 
+    Na przykład dostępne są informacje o zakresach powiązań, różnicach między zmiennymi, których nie można modyfikować, i tymi, które można modyfikować, a także o sposobie ich przypisywania i ponownego przypisywania.
 
-- [Praca z kubitami](xref:microsoft.quantum.guide.qubits): sekcja zawiera opis funkcji języka Q# używanych do obsługi pojedynczych kubitów i systemów kubitów. 
-    W szczególności oznacza to ich alokację, wykonywanie na nich operacji oraz, ostatecznie, ich pomiar. 
+- [Praca z kubitami](xref:microsoft.quantum.guide.qubits): Opis funkcji języka Q# używanych do adresowania poszczególnych kubitów i systemów kubitów, w szczególności do alokowania ich, wykonywania operacji na nich i mierzenia ich. 
 
-- [Przepływ sterowania](xref:microsoft.quantum.guide.controlflow): sekcja zawiera szczegóły programowania wzorców przepływu sterowania dostępne w języku Q#, które obejmują wiele standardowych technik (wykonywanie warunkowe, pętle for, pętle while itp.), a także wzorzec specyficzny dla programów kwantowych „Repeat-Until-Success”.
+- [Przepływ sterowania](xref:microsoft.quantum.guide.controlflow): Szczegóły programowania wzorców przepływu sterowania dostępnych w języku Q#, które obejmują wiele standardowych technik (wykonywanie warunkowe, pętle for, pętle while itp.), a także wzorzec specyficzny dla programów kwantowych „Repeat-Until-Success”.
 
-- [Testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging): w sekcji opisano szczegóły niektórych technik służących do upewniania się, że kod działa zgodnie z oczekiwaniami. 
+- [Testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging): Szczegóły niektórych technik służących do upewniania się, że kod działa zgodnie z oczekiwaniami. 
     Ze względu na ogólną nieprzezroczystość informacji kwantowych debugowanie programu kwantowego może wymagać wyspecjalizowanych technik. 
-    Na szczęście język Q# obsługuje wiele klasycznych technik debugowania, do których programiści są przyzwyczajeni, a także tych, które są specyficzne dla programów kwantowych. Obejmuje to tworzenie/uruchamianie testów jednostkowych w języku Q#, osadzanie *asercji* dotyczących wartości i prawdopodobieństwa w kodzie oraz funkcje `Dump`, które wyprowadzają stan maszyny docelowej. 
-    Tych ostatnich funkcji można używać wraz z naszym symulatorem pełnego stanu do debugowania niektórych części obliczeń przez ominięcie pewnych ograniczeń kwantowych (np. twierdzenia o braku klonowania).
+    Na szczęście język Q# obsługuje wiele klasycznych technik debugowania, które są znane programistom, a także tych, które są specyficzne dla programów kwantowych. Obejmuje to tworzenie i uruchamianie testów jednostkowych w języku Q#, osadzanie *asercji* dotyczących wartości i prawdopodobieństwa w kodzie oraz funkcje `Dump`, które wyprowadzają stan maszyn docelowych. 
+    Tych ostatnich funkcji można używać wraz z naszym symulatorem pełnego stanu do debugowania niektórych części obliczeń przez ominięcie pewnych ograniczeń kwantowych (np. [twierdzenia o braku klonowania](xref:microsoft.quantum.concepts.pauli)).
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Symulatory kwantowe i narzędzia do szacowania zasobów
 
-- [Symulatory kwantowe i aplikacje hosta](xref:microsoft.quantum.machines): sekcja zawiera przegląd różnych dostępnych symulatorów, a także ogólny model wykonywania między programem hosta a maszynami docelowymi.
+- [Symulatory kwantowe i aplikacje hosta](xref:microsoft.quantum.machines): Omówienie różnych dostępnych symulatorów oraz ogólnego modelu wykonywania między programami hosta a maszynami docelowymi.
 
-- [Symulator pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator): maszyna docelowa, która symuluje pełny stan kwantowy. Przydatne do pełnego uruchomienia lub debugowania programów o mniejszej skali (mniej niż kilkadziesiąt kubitów)
+- [Symulator pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator): Maszyna docelowa, która symuluje pełny stan kwantowy. Przydatne do pełnego uruchomienia lub debugowania programów o mniejszej skali (mniej niż kilkadziesiąt kubitów)
 
-- [Narzędzie do szacowania zasobów](xref:microsoft.quantum.machines.resources-estimator): szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji w języku Q# na komputerze kwantowym.
+- [Narzędzie do szacowania zasobów](xref:microsoft.quantum.machines.resources-estimator): Szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji w języku Q# na komputerze kwantowym.
 
-- [Symulator śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro): umożliwia wykonywanie programu kwantowego bez faktycznego symulowania stanu komputera kwantowego i w związku z tym może wykonywać programy kwantowe korzystające z tysięcy kubitów. Przydatne do debugowania kodu klasycznego w ramach programu kwantowego, a także do oszacowania wymaganych zasobów.
+- [Symulator śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro): Umożliwia wykonywanie programu kwantowego bez faktycznego symulowania stanu komputera kwantowego i w związku z tym może wykonywać programy kwantowe korzystające z tysięcy kubitów. Przydatne do debugowania kodu klasycznego w ramach programu kwantowego, a także do oszacowania wymaganych zasobów.
 
-- [Symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator): symulator kwantowy specjalnego przeznaczenia, który może być używany z milionami kubitów, ale tylko w przypadku programów z ograniczonym zestawem operacji kwantowych (mianowicie X, CNOT i kontrolowanych wielokrotnie operacji X).
+- [Symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator): Symulator kwantowy specjalnego przeznaczenia, który może być używany z milionami kubitów, ale tylko w przypadku programów z ograniczonym zestawem operacji kwantowych (X, CNOT i kontrolowanych wielokrotnie operacji X).
 
 ### <a name="quick-reference-pages"></a>Strony skróconej dokumentacji
 
