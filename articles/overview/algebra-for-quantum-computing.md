@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327598"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415445"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Algebra liniowa na potrzeby obliczeń kwantowych
 
@@ -62,8 +62,7 @@ W powyższych przykładach stan jednego kubitu został opisany przy użyciu jedn
 
 Należy pamiętać, że każdy kubit jest przestrzenią wektorową, więc nie można ich tylko przemnożyć. Zamiast tego należy użyć **iloczynu tensorowego**, który jest operacją powiązaną tworzącą nową przestrzeń wektorową z pojedynczych obszarów wektorowych i jest reprezentowany przez symbol $\otimes$. Na przykład jest obliczany iloczyn tensorowy stanów dwóch kubitów $\begin{bmatrix} a \\\\ b \end{bmatrix}$ i $\begin{bmatrix} c \\\\ d \end{bmatrix}$
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}.
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
 Wynikiem jest czterowymiarowa macierz, której każdy element reprezentuje prawdopodobieństwo. Na przykład $ac$ to prawdopodobieństwo, że dwa kubity zostaną zwinięte do stanu 0 i 0, $ad$ jest prawdopodobieństwem stanów 0 i 1 itd. 
 
