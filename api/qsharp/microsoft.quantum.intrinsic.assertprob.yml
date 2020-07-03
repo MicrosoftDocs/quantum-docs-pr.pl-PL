@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Potwierdzenia, które mierzą podaną qubits w danej Pauli, będą miały wynik z określonym prawdopodobieństwem, w granicach tolerancji.
-remarks: Należy zauważyć, że sąsiadujące i kontrolowane wersje tej operacji nie będą sprawdzać warunku.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: AssertProb jest przestarzała. Użyj @"microsoft.quantum.diagnostics.assertmeasurementprobability" zamiast tego.
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Efekt pomiaru, który pozwala uzyskać prawdopodobieństwo wystąpienia wartości, wyrażony jako operator qubit Pauli.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Rejestr, na którym należy wykonać potwierdzenie.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Oczekiwany wynik `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: Prawdopodobieństwo, z którym jest oczekiwany dany wynik.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Komunikat, który ma być raportowany, jeśli potwierdzenie nie powiedzie się.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674158"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885720"

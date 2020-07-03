@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.drawmany
+name: DrawMany
+type: operation
+namespace: Microsoft.Quantum.Arrays
+summary: Powtarza operację dla danej liczby próbek, zbierając wyniki wyjściowe w tablicy.
+examples: >-
+  Następujące przykłady są liczbami całkowitymi, w przypadku operacji, która próbkuje pojedynczy bit w danym momencie.
+
+
+  ```Q#
+
+  let randomInteger = BoolArrayAsInt(DrawMany(SampleRandomBit, 16, ()));
+
+  ```
+syntax: "operation DrawMany (op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput) : 'TOutput[]"
+input:
+  content: "(op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: Operacja, która ma być wywoływana wielokrotnie.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - uid: "'TOutput"
+        isLocal: true
+  - name: nSamples
+    summary: Liczba próbek wywołujących `op` do zebrania.
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: Dane wejściowe do przesłania `op` .
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: TInput
+  summary: Typ danych wejściowych oczekiwanych przez `op` .
+- uid: TOutput
+  summary: Typ danych wyjściowych zwracanych przez `op` .
+seeAlso:
+- microsoft.quantum.canon.repeat
+metadata:
+  ms.openlocfilehash: 8ed96fbb8b543cf8f9f167304e45e5f4fd82ad44
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887301"

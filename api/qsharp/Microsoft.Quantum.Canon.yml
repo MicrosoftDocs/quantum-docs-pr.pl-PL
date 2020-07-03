@@ -198,6 +198,10 @@ operations:
   summary: Oblicza parzystość rejestru qubits w miejscu.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Oblicza parzystość tablicy qubits w docelowym qubit.
+- uid: microsoft.quantum.canon.applycontrolledonbitstring
+  summary: Stosuje operacje jednostkowe na rejestrze docelowym, kontrolowane na podstawie stanu określonego przez daną maskę bitową.
+- uid: microsoft.quantum.canon.applycontrolledonint
+  summary: Stosuje operacje jednostkowe w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada określonej dodatniej liczbie całkowitej.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: Stosuje tablicę złożonych faz do numerycznych Stanów rejestru qubits.
 - uid: microsoft.quantum.canon.applyfermionicswap
@@ -565,6 +569,14 @@ operations:
 
 
     $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.repeat
+  summary: Powtarza operację określoną liczbę razy.
+- uid: microsoft.quantum.canon.repeata
+  summary: Powtarza operację określoną liczbę razy.
+- uid: microsoft.quantum.canon.repeatc
+  summary: Powtarza operację określoną liczbę razy.
+- uid: microsoft.quantum.canon.repeatca
+  summary: Powtarza operację określoną liczbę razy.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Używa bram wymiany do odwrócenia kolejności qubits w rejestrze.
 newtypes:
@@ -573,9 +585,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nResultStack jest przestarzała."
 metadata:
-  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326680"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884679"

@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje do tworzenia tablic danych i manipulowania nimi."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, i sprawdza, czy wszystkie elementy tablicy spełniają predykat.
@@ -67,13 +66,16 @@ functions:
   summary: Podano trzy tablice, zwraca nową tablicę 3-krotek, tak że każda 3-krotka zawiera element z każdej oryginalnej tablicy.
 - uid: microsoft.quantum.arrays.zip4
   summary: W przypadku czterech tablic funkcja zwraca nową tablicę składającą się z 4 krotek, tak że każda 4-krotka zawiera element z każdej oryginalnej tablicy.
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje do tworzenia tablic danych i manipulowania nimi."
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: Powtarza operację dla danej liczby próbek, zbierając wyniki wyjściowe w tablicy.
 - uid: microsoft.quantum.arrays.foreach
   summary: Dana tablica i operacja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w ramach operacji.
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326714"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884683"

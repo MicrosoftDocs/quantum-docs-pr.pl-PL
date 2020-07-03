@@ -9,20 +9,22 @@ summary: >-
 
   Wynikiem tej funkcji jest operacja, która może być reprezentowana przez transformację jednostkową $U $, która \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\ \\ \ket{\psi} & \textrm{Otherwise} \end{cases}, \end{align}, gdzie $V $ to transformacja jednostkowa, która reprezentuje akcję `oracle` operacji.
 remarks: >-
-  Długość `bits` i `controlRegister` musi być taka sama.
+  Wzorzec określony przez `bits` może być krótszy niż `controlRegister` , w którym to przypadku dodatkowe qubits kontroli są ignorowane (to nie jest ani kontrolowane w $ \ket {0} $ ani $ \ket {1} $).
+
+  Jeśli `bits` jest dłuższa niż `controlRegister` , zostanie zgłoszony błąd.
 
 
-  Dana tablica `bits` logiczna i operacja `oracle`jednostkowa są wynikiem operacji, która wykonuje następujące czynności:
+  Dana tablica logiczna `bits` i operacja jednostkowa `oracle` są wynikiem operacji, która wykonuje następujące czynności:
 
 
-  * Zastosuj `X` operację do każdego qubitu rejestru kontroli, który odnosi się do `false` elementu `bits`;
+  * Zastosuj `X` operację do każdego qubitu rejestru kontroli, który odnosi się do `false` elementu `bits` ;
 
   * Zastosuj `Controlled oracle` do rejestrów kontrolki i celu;
 
-  * Zastosuj `X` operację do każdego qubitu rejestru kontroli, który odnosi się do `false` elementu `bits` ponownie, aby przywrócić pierwotny stan.
+  * Zastosuj `X` operację do każdego qubitu rejestru kontroli, który odnosi się do `false` elementu ponownie, `bits` Aby przywrócić pierwotny stan.
 
 
-  Dane wyjściowe `Controlled` Funktor są szczególnym przypadkiem, `ControlledOnBitString` gdzie `bits` jest równe. `[true, ..., true]`
+  Dane wyjściowe `Controlled` Funktor są szczególnym przypadkiem, `ControlledOnBitString` gdzie `bits` jest równe `[true, ..., true]` .
 examples: >-
   Następujące fragmenty kodu są równoważne:
 
@@ -34,7 +36,7 @@ examples: >-
   ```
 
 
-  i
+  oraz
 
 
   ```qsharp
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  {1}{2}Poniższy kod przygotowuje stan $ \frac (\ket{00} -\ket{01} + \ket{10} + \ket{11}) $:
+  Poniższy kod przygotowuje stan $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) $:
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Operacja jednostkowa stosowana `oracle` w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada masce `bits`bitów.
+  - summary: Operacja jednostkowa stosowana `oracle` w rejestrze docelowym, jeśli stan rejestru kontroli odpowiada masce bitów `bits` .
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680354"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885518"
