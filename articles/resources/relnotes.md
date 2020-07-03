@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415459"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885041"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -20,6 +20,27 @@ Ten artykuł zawiera informacje dotyczące poszczególnych wersji zestawu Quantu
 Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.quantum.install).
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
+
+## <a name="version-01220070124"></a>0.12.20070124 wersja
+
+*Data wydania: 2 lipca, 2020*
+
+To wydanie zawiera następujące elementy:
+
+- Nowe `qdk-chem` Narzędzie do konwertowania starszej wersji formatu serializacji problemu ze strukturą elektroniczną (np.: FCIDUMP) do [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
+- Nowe funkcje i operacje w [ `Microsoft.Quantum.Synthesis` przestrzeni nazw](xref:microsoft.quantum.synthesis) spójnie stosują klasyczne firmy Oracle przy użyciu algorytmów syntezy opartej na transformacjach i dekompozycji.
+- IQ # umożliwia teraz stosowanie argumentów do `%simulate` , `%estimate` i innych poleceń Magic. Aby uzyskać więcej informacji, zobacz [ `%simulate` dokumentacja poleceń Magic](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
+- Opcje wyświetlania nowej fazy w programie IQ #. Aby uzyskać więcej informacji, zobacz [ `%config` dokumentacja poleceń Magic](xref:microsoft.quantum.iqsharp.magic-ref.config) .
+- Iteracja # i `qsharp` pakiet języka Python są teraz udostępniane za pośrednictwem pakietów Conda ([qsharp](https://anaconda.org/quantum-engineering/qsharp) i [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) w celu uproszczenia instalacji lokalnej funkcji Q # Jupyter i języka Python w środowisku Conda. Aby uzyskać więcej informacji, zobacz artykuły dotyczące [notesów q # Jupyter](xref:microsoft.quantum.install.jupyter) i [q # ze](xref:microsoft.quantum.install.python) wskazówkami dotyczącymi instalacji języka Python.
+- W przypadku korzystania z symulatora qubits nie musi być w stanie | 0 ⟩ w momencie wydania, ale można je zresetować automatycznie, jeśli zostały zmierzone bezpośrednio przed zwolnieniem.
+- Aktualizacje ułatwiające korzystanie z pakietów bibliotek z różnymi wersjami programu IQ # QDK wymagające dopasowania tylko do wersji głównych &
+- Usunięto przestarzałą `Microsoft.Quantum.Primitive.*` przestrzeń nazw
+- Przeniesiono operacje:
+  - `Microsoft.Quantum.Intrinsic.Assert`jest teraz`Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb`jest teraz`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Poprawki błędów 
+
+Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0112006403"></a>Wersja 0.11.2006.403
 
@@ -425,7 +446,7 @@ Ta wersja to tylko szybka poprawka [problemu nr 48 raportowanego w witrynie GitH
 
 *Data wydania: 22 czerwca 2018 r.*
 
-Ta wersja zawiera kilka elementów współtworzonych przez społeczność, a także oferuje ulepszone środowisko debugowania i lepszą wydajność.  Są to:
+Ta wersja zawiera kilka elementów współtworzonych przez społeczność, a także oferuje ulepszone środowisko debugowania i lepszą wydajność.  W szczególności:
 
 * Ulepszenia wydajności dotyczące zarówno małych, jak i dużych symulacji dla maszyny docelowej QuantumSimulator.
 * Ulepszono funkcję debugowania.

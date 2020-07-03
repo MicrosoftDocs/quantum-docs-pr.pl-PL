@@ -6,23 +6,23 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327785"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885284"
 ---
 # <a name="variables-in-q"></a>Zmienne w Q #
 
-Polecenie Q # rozróżnia symbole modyfikowalne i zmienne, czyli "zmienne", które są powiązane/przypisane do wyrażeń.
+Polecenie Q # rozróżnia symbole modyfikowalne i niezmienne, czyli *zmienne*, które są powiązane/przypisane do wyrażeń.
 Ogólnie rzecz biorąc, zaleca się użycie niezmiennych symboli, ponieważ umożliwia kompilatorowi wykonywanie większej optymalizacji.
 
 Lewa strona powiązania składa się z krotki symboli i prawej strony wyrażenia.
 
 ## <a name="immutable-variables"></a>Zmienne niezmienne
 
-Wartość dowolnego typu w Q # można przypisać do zmiennej do ponownego użycia w ramach operacji lub funkcji za pomocą `let` słowa kluczowego.
+Można przypisać wartość dowolnego typu w Q # do zmiennej do ponownego użycia w ramach operacji lub funkcji za pomocą `let` słowa kluczowego. 
 
 Niezmienne powiązanie składa się ze słowa kluczowego `let` , a po nim symbolu lub krotki symboli, znaku równości `=` , wyrażenia służącego do powiązania symboli z i kończącego się średnika.
 
@@ -35,27 +35,28 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 Przypisuje określoną tablicę operatorów Pauli do nazwy zmiennej (lub "symbol"), `measurementOperator` .
 
 > [!NOTE]
-> Nie trzeba jawnie określać typu naszej nowej zmiennej, ponieważ wyrażenie po prawej stronie `let` instrukcji jest niejednoznaczne i typ jest wnioskowany przez kompilator. 
+> W poprzednim przykładzie nie ma potrzeby jawnego określania typu nowej zmiennej, ponieważ wyrażenie po prawej stronie `let` instrukcji jest niejednoznaczne, a kompilator wnioskuje właściwy typ. 
 
-Zmienne zdefiniowane przy użyciu `let` są *niezmienne*, co oznacza, że po jego zdefiniowaniu nie można już zmieniać w jakikolwiek sposób.
-Pozwala to na kilka optymalizacji, w tym optymalizację klasycznej logiki działającej na zmienne, które mają być zmieniane w celu zastosowania `Adjoint` wariantu operacji.
+Zmienne zdefiniowane przy użyciu `let` są *niezmienne*, co oznacza, że po jego zdefiniowaniu nie można już zmieniać w żaden sposób.
+Pozwala to na kilka optymalizacji, w tym optymalizację klasycznej logiki, która działa na zmiennych do zmiany kolejności w przypadku zastosowania `Adjoint` wariantu operacji.
 
 ## <a name="mutable-variables"></a>Zmienne modyfikowalne
 
-Alternatywnie, aby utworzyć zmienną za pomocą `let` `mutable` słowa kluczowego, zostanie utworzona zmienna modyfikowalna, którą *można* ponownie powiązać po jej początkowym utworzeniu za pomocą `set` słowa kluczowego.
+Jako alternatywę do tworzenia zmiennej przy użyciu `let` `mutable` słowa kluczowego tworzy zmienną modyfikowalną, którą *można* powiązać po jej początkowym utworzeniu za pomocą `set` słowa kluczowego.
 
-Symbole zadeklarowane i powiązane jako część `mutable` instrukcji mogą być ponownie powiązane z inną wartością w kodzie. Jeśli symbol zostanie powiązana później w kodzie, jego typ nie ulegnie zmianie, a nowo związana wartość musi być zgodna z tym typem.
+Można ponownie powiązać symbole zadeklarowane i powiązane jako część `mutable` instrukcji z inną wartością w dalszej części kodu. Jeśli symbol zostanie powiązana później w kodzie, jego typ nie zmieni się, a nowo związana wartość musi być zgodna z tym typem.
 
 ### <a name="rebinding-of-mutable-symbols"></a>Ponowne wiązanie modyfikowalnych symboli
 
-Zmienna modyfikowalna może być powiązana przy użyciu `set` instrukcji.
+Można ponownie powiązać modyfikowalną zmienną przy użyciu `set` instrukcji.
 Takie ponowne powiązanie składa się ze słowa kluczowego `set` , po którym następuje ciąg lub krotka symboli, znak równości `=` , wyrażenie służące do ponownego powiązania symboli z i kończący średnik.
 
-Tutaj udostępniamy niektóre możliwe przykłady technik rebind instrukcji
+Poniżej przedstawiono kilka przykładów technik rebind instrukcji.
 
-### <a name="apply-and-reassign-statements"></a>Instrukcje Apply i Reassign
+#### <a name="apply-and-reassign-statements"></a>Instrukcje Apply i Reassign
 
-Szczególnym rodzajem `set` instrukcji, do których odwołuje się jako instrukcja *apply-and-Reassign* , stanowi wygodny sposób łączenia, jeśli prawa strona składa się z aplikacji operatora binarnego, a wynik jest przełączany do lewego argumentu operatora. Na przykład
+Szczególnym rodzajem instrukcji `set` , instrukcja *apply-and-Reassign* , zapewnia wygodny sposób łączenia, jeśli po prawej stronie składa się operator binarny, a wynik ma zostać Przewiązany do lewego argumentu operatora. Na przykład
+
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -63,7 +64,8 @@ for (i in 1 .. 2 .. 10) {
     // ...
 }
 ```
-zwiększa wartość licznika `counter` w każdej iteracji `for` pętli. Powyższy kod jest równoważny z 
+zwiększa wartość licznika `counter` w każdej iteracji `for` pętli. Poprzedni kod jest równoważny z 
+
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -72,9 +74,9 @@ for (i in 1 .. 2 .. 10) {
 }
 ```
 
-Podobne instrukcje są dostępne dla wszystkich operatorów binarnych, w których typ po lewej stronie jest zgodny z typem wyrażenia. Pozwala to na przykład wygodny sposób na gromadzenie wartości.
+Podobne instrukcje są dostępne dla wszystkich operatorów binarnych, w których typ lewej strony jest zgodny z typem wyrażenia. Te instrukcje zapewniają wygodny sposób na gromadzenie wartości.
 
-Załóżmy na przykład, że `qubits` jest to REGSITER qubits:
+Załóżmy na przykład, że `qubits` jest to rejestr qubits:
 ```qsharp
 mutable results = new Result[0];   // results is an empty array of type Result[]
 for (q in qubits) {
@@ -84,7 +86,7 @@ for (q in qubits) {
 ...                                // results contains the measurement outcomes from the whole register
 ```
 
-### <a name="update-and-reassign-statements"></a>Instrukcje Update-and-Reassign
+#### <a name="update-and-reassign-statements"></a>Instrukcje Update-and-Reassign
 
 Podobne łączenie istnieje dla [wyrażeń Copy-and-Update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) po prawej stronie.
 Istnieją odpowiednie instrukcje *Update-and-Reassign* dla *nazwanych elementów* w typach zdefiniowanych przez użytkownika, a także dla *elementów tablicy*.  
@@ -105,7 +107,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-W przypadku tablic [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) w naszych bibliotekach standardowych dostępne są niezbędne narzędzia do wykonywania wielu typowych operacji inicjowania tablic i manipulowania nimi, co pozwala uniknąć konieczności aktualizowania elementów tablicy w pierwszym miejscu. 
+W przypadku tablic [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) w standardowej bibliotece Q # dostępne są niezbędne narzędzia do obsługi wielu typowych operacji inicjowania tablic i manipulowania nimi, co pozwala uniknąć konieczności aktualizowania elementów tablicy w pierwszym miejscu. 
 
 Instrukcje Update-and-Reassign oferują alternatywę w razie konieczności:
 
@@ -130,7 +132,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Za pomocą narzędzi biblioteki dla tablic dostępnych w programie [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) możemy na przykład łatwo zdefiniować funkcję zwracającą tablicę Paul, gdzie Pauli przy indeksie `i` przyjmuje daną wartość, a wszystkie inne wpisy są tożsamością.
+Za pomocą narzędzi biblioteki dla tablic dostępnych w programie [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) można na przykład łatwo zdefiniować funkcję zwracającą tablicę `Pauli` typów, w których element w indeksie `i` przyjmuje daną `Pauli` wartość, a wszystkie inne wpisy są tożsamością ( `PauliI` ).
 
 Poniżej przedstawiono dwie definicje takich funkcji, a drugie korzystanie z narzędzi na tym etapie.
 
@@ -139,13 +141,13 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
     mutable pauliArray = new Pauli[length];             // initialize pauliArray of given length
     for (index in 0 .. length - 1) {                    // iterate over the integers in the length range
         set pauliArray w/= index <-                     // change the value at index to input pauli or PauliI
-            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli or PauliI dep. on whether index==location
+            index == location ? pauli | PauliI;         // cond. expression evaluating to pauli if index==location and PauliI if not
     }    
     return pauliArray;
 }
 ```
 
-Zamiast przeiterować każdy indeks w tablicy i warunkowo ustawić go na `PauliI` lub `Pauli` , zamiast tego można użyć `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) do tworzenia tablicy `PauliI` , a następnie po prostu zwrócić wyrażenie Copy-and-Update, w którym zmieniono wartość specifc w indeksie `location` :
+Zamiast przeiterować każdy indeks w tablicy i warunkowo ustawić go na `PauliI` lub dane `pauli` , można zamiast tego użyć z programu, `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Aby utworzyć tablicę `PauliI` typów, a następnie po prostu zwrócić wyrażenie Copy-and-Update, w którym zmieniono określoną wartość przy indeksie `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
@@ -155,10 +157,10 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 
 ## <a name="tuple-deconstruction"></a>Dekonstrukcja krotki
 
-Oprócz przypisywania pojedynczej zmiennej `let` i `mutable` słów kluczowych---lub w rzeczywistości każda inna konstrukcja powiązania, taka jak `set` opisana poniżej),---również zezwalać na rozpakowywanie zawartości [typu krotki](xref:microsoft.quantum.guide.types#tuple-types).
+Oprócz przypisywania pojedynczej zmiennej można użyć `let` `mutable` słów kluczowych i innych konstrukcji powiązań, takich jak `set` — do rozpakowania zawartości [typu krotki](xref:microsoft.quantum.guide.types#tuple-types).
 Przypisanie tego formularza jest określane w celu *odtworzenia* elementów tej krotki.
 
-Jeśli po prawej stronie powiązania jest krotka, ta krotka może zostać rozbudowana po przypisaniu.
+Jeśli po prawej stronie powiązania jest krotka, można ją dekonstruować po przypisaniu.
 Takie dekonstrukcji mogą dotyczyć krotek zagnieżdżonych, a każda pełna lub częściowa dekonstrukcja jest prawidłowa, o ile kształt krotki po prawej stronie jest zgodny z kształtem krotki symboli.
 
 Przykład:
@@ -177,14 +179,14 @@ Ogólnie rzecz biorąc, powiązania symboli wykraczają poza zakres i stają si�
 Istnieją dwa wyjątki od tej reguły:
 
 - Powiązanie zmiennej pętli `for` pętli jest w zakresie dla treści pętli for, ale nie po końcu pętli.
-- Wszystkie trzy części `repeat` / `until` pętli (treść, test i naprawa) są traktowane jako pojedynczy zakres, dlatego symbole, które są powiązane z treścią, są dostępne w teście i w naprawie.
+- Wszystkie trzy części `repeat` / `until` pętli (treść, test i naprawa) działają jako pojedynczy zakres, dlatego symbole, które są powiązane z treścią są dostępne w teście i naprawie.
 
-W przypadku obu typów pętli każdy przechodzi przez pętlę do własnego zakresu, dlatego powiązania z wcześniejszych przebiegów nie są dostępne w późniejszym przebiegu.
-Szczegółowe informacje o tych pętlach można znaleźć w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow).
+W przypadku obu typów pętli każdy przebieg przez pętlę działa we własnym zakresie, dlatego powiązania z wcześniejszego przebiegu nie są dostępne w późniejszym przebiegu.
+Aby uzyskać więcej informacji na temat tych pętli, zobacz [Flow Control](xref:microsoft.quantum.guide.controlflow).
 
-Powiązania symboli z bloków zewnętrznych są dziedziczone przez bloki wewnętrzne.
-Symbol może być powiązany tylko raz na blok; nie można zdefiniować symbolu o takiej samej nazwie jak inny symbol znajdujący się w zakresie (bez "przesłaniania").
-Następujące sekwencje byłyby dozwolone:
+Bloki wewnętrzne dziedziczą powiązania symboli z bloków zewnętrznych.
+Można powiązać symbol tylko raz na blok; nie można zdefiniować symbolu o takiej samej nazwie jak inny symbol znajdujący się w zakresie (bez "przesłaniania").
+Następujące sekwencje są dozwolone:
 
 ```qsharp
 if (a == b) {

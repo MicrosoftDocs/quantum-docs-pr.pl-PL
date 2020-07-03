@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275370"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884152"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Więcej zasobów szkoleniowych dotyczących przetwarzania Quantum
 
@@ -24,6 +24,14 @@ Ta sekcja zawiera wybrane odwołania do głębokiego pokrycia zagadnień związa
 + Kitaev, A. Y., Wieczorek, A., & Vyalyi, M. N. (2002). Obliczenia klasyczne i Quantum (vol. 47). Providence: amerykańskie społeczeństwo matematyczne.
 + Kaye, P., Laflamme, R., & Mosca, M. (2007). Wprowadzenie do przetwarzania Quantum. Oxford University.
 + Rieffel, E. G., & Polak, W. H. (2011). Przetwarzanie Quantum: łagodne wprowadzenie. MIT Press.
++ Sarah C. Kaiser i Christopher E. granade (obsadzone program wczesnego dostępu, który rozpoczął publikację z kwietnia 2019 w 2020). [Poznaj przetwarzanie Quantum przy użyciu języka Python i Q # — podejścia praktycznego](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## <a name="online-courses"></a>Kursy online ##
+
++ [Informacje o modułach przetwarzania Quantum](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). Samouczek wklej-by-Step dotyczący pojęć i koncepcji przetwarzania Quantum. 
++ [Przetwarzanie Quantum — doskonały kurs](https://brilliant.org/courses/quantum-computing/). Dowiedz się, jak tworzyć algorytmy Quantum od podstaw za pomocą komputera Quantum symulowanego w przeglądarce.
++ [Wprowadzenie do przetwarzania Quantum — uczenie LinkedIn](https://www.linkedin.com/learning/introduction-to-quantum-computing). Wprowadzenie do wideo 1h25m. 
++ [Przetwarzanie Quantum za za poorednictwem komiksu](https://hackaday.io/project/168554-introduction-to-quantum-computing). Jednotygodniowa, w niedzielę — Klasa społeczności. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>Podstawowe techniki tworzenia bram sterowanych ##
 

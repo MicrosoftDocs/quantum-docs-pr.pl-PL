@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275381"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884196"
 ---
 # <a name="q-style-guide"></a>Przewodnik po stylu Q # #
 ## <a name="general-conventions"></a>Konwencje ogólne ##
@@ -105,6 +105,31 @@ Sugerujemy:
 | ☑ | `newtype GeneratorTerm` | Użycie frazy rzeczownik jasno odwołuje się do wyniku wywołania konstruktora UDT. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | Użycie wyrażenia orzeczenia sugeruje, że Konstruktor UDT jest operacją. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | Użycie frazy rzeczownik komunikuje się z użyciem atrybutu. |
+
+***
+
+### <a name="entry-points"></a>Punkty wejścia
+
+Podczas definiowania punktu wejścia do programu Q # kompilator Q # rozpoznaje [ `@EntryPoint()` atrybut](xref:microsoft.quantum.core.entrypoint) , a nie wymaga, aby punkty wejścia miały określoną nazwę (np.: `main` , `Main` lub `__main__` ).
+Oznacza to, że w perspektywie Q # Developer punkty wejścia to zwykłe operacje opatrzone adnotacją `@EntryPoint()` .
+Ponadto punkty wejścia Q # mogą być punktami wejścia dla całej aplikacji (tj. w przypadku autonomicznych plików wykonywalnych Q #) lub mogą być interfejsem między programem Q # a programem hosta dla aplikacji (tj. przy użyciu Q # z Python lub .NET), w taki sposób, że nazwa "główna" może być myląca w przypadku zastosowania do punktu wejścia Q #.
+
+Sugerujemy używanie punktów wejścia nazw w celu odzwierciedlenia użycia `@EntryPoint()` atrybutu przy użyciu ogólnej porady dotyczącej nazw operacji wymienionych powyżej.
+
+
+# <a name="guidance"></a>[Wskazówki](#tab/guidance)
+
+Sugerujemy:
+
+- Nie należy nazywać operacji punktu wejścia jako "Main".
+- Wprowadzanie nazw operacji punktu wejścia jako zwykłych operacji.
+
+# <a name="examples"></a>[Przykłady](#tab/examples)
+
+|   | Nazwa | Opis |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Jasno komunikuje przeznaczenie punktu wejścia przez nazwę operacji. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | Użycie `Main` nie jest jasno przekazane do celów punktu wejścia i jest nadmiarowe z `@EntryPoint()` atrybutem. |
 
 ***
 
