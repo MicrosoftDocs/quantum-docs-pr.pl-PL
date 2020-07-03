@@ -7,17 +7,17 @@ summary: >-
   Odwraca daną wartość docelową qubit, jeśli i tylko wtedy, gdy oba kontrolki qubits znajdują się w stanie 1, przy użyciu miary do wykonania sąsiedniej operacji.
 
 
-  Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, `target` ale zakłada, że jest w stanie 0.  Operacja ma wartość T-Count 4, T-Głębokość 2 i nie wymaga pomocnika qubit. w związku z tym może być preferowana operacja CCNOT, `target` jeśli jest ona znana jako 0.  Sąsiadująco z tą operacją jest oparte na pomiarach i nie wymaga żadnych bram T.
+  Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, ale zakłada, że `target` jest w stanie 0.  Operacja ma wartość T-Count 4, T-Głębokość 2 i nie wymaga pomocnika qubit. w związku z tym może być preferowana operacja CCNOT, jeśli `target` jest ona znana jako 0.  Sąsiadująco z tą operacją jest oparte na pomiarach i nie wymaga żadnych bram T.
 
 
-  Kontrolowana aplikacja tej operacji nie wymaga pomocnika `2^c` `Rz` qubit, bram i nie jest zoptymalizowana pod kątem głębokości, `c` gdzie jest liczbą ogólnych formantów qubits, łącznie z dwoma kontrolkami z `ApplyAnd` operacji.  Aplikacja z możliwością współdziałania wymaga `2^c - 1` `Rz` bram (o kącie o podwójnym rozmiarze niesąsiadującej operacji), nie qubit pomocnika i nie jest zoptymalizowana pod kątem głębokości.
+  Kontrolowana aplikacja tej operacji nie wymaga pomocnika qubit, `2^c` `Rz` bram i nie jest zoptymalizowana pod kątem głębokości, gdzie `c` jest liczbą ogólnych formantów qubits, łącznie z dwoma kontrolkami z `ApplyAnd` operacji.  Aplikacja z możliwością `2^c - 1` `Rz` współdziałania wymaga bram (o kącie o podwójnym rozmiarze niesąsiadującej operacji), nie qubit pomocnika i nie jest zoptymalizowana pod kątem głębokości.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Nowak: "Nowa konstrukcja dla bramy Toffoli odpornej na uszkodzenia", biorev. obr. A 87, 022328, 2013 [ArXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
 
   - Craig Gidney: "Halving kosztów dodawania jednostek Quantum 2, strona 74, 2018 [ArXiv: 1709.06648](https://arxiv.org/abs/1709.06648) DOI: 10.1103/PhysRevA. 85.044302
 
-  - Mathias Soeken: "usługi Quantum Oracle obwodów i wzorzec dla Boże Narodzenie", [artykuł w blogu z Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (Uwaga: wyjaśnienie dotyczące wielu kontrolowanej konstrukcji)
+  - Mathias Soeken: "usługi Quantum Oracle obwodów i wzorzec dla Boże Narodzenie", [artykuł w blogu z 19 grudnia 2019](https://msoeken.github.io/blog_qac.html) (Uwaga: wyjaśnienie dotyczące wielu kontrolowanej konstrukcji)
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Docelowa Auxillary qubit; musi być w stanie 0
+    summary: Docelowa qubit pomocnicza; musi być w stanie 0
     isPrimitive: true
     uid: Qubit
 output:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680541"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884586"

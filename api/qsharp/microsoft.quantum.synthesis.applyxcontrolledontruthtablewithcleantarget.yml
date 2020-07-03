@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+name: ApplyXControlledOnTruthTableWithCleanTarget
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Stosuje @"microsoft.quantum.intrinsic.x" operację na `target` , jeśli funkcja logiczna `func` zwróci wartość true dla klasycznego przypisania w `controlRegister` .
+
+
+  Ta operacja implementuje szczególny przypadek @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" , w którym element docelowy qubit jest znany jako w stanie $ \ket {0} $.
+
+
+  Implementacja wykorzystuje @"microsoft.quantum.intrinsic.cnot" @"microsoft.quantum.intrinsic.r1" bramy i.  Implementacja sąsiedniej operacji jest zoptymalizowana i używa obliczeń opartych na pomiarach.
+syntax: 'operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
+input:
+  content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
+  types:
+  - name: func
+    summary: Tabela wartości logicznych prawdy reprezentowana jako duża liczba całkowita
+    isPrimitive: true
+    uid: BigInt
+  - name: controlRegister
+    summary: Rejestr kontroli qubits
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Element docelowy qubit (musi być w stanie $ \ket {0} $)
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applyxcontrolledontruthtable
+metadata:
+  ms.openlocfilehash: c779acd9dfcebd3b9a71ba53c66d9e07c19f792b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886563"

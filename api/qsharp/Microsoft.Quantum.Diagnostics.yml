@@ -39,6 +39,10 @@ operations:
   summary: Potwierdzenie, że dany qubits są wszystkie w stanie $ \ket {0} $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: Potwierdzenie, że podano qubits, są w {0} stanie $ \ket $ do danej tolerancji.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Potwierdzenia, które mierzą podaną qubits w danej Pauli, będą mieć zawsze określony wynik.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Potwierdzenia, które mierzą podaną qubits w danej Pauli, będą miały wynik z określonym prawdopodobieństwem, w granicach tolerancji.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Dwie operacje, potwierdzają, że działają identycznie dla wszystkich stanów wejściowych.
@@ -79,14 +83,14 @@ operations:
   summary: Potwierdza, że qubit `q` znajduje się w oczekiwanej eigenstate operatora Pauli z do danej tolerancji.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: Rozpoznany atrybut kompilatora, za pomocą którego można zdefiniować alternatywną nazwę, która może być używana podczas ładowania typu lub do celów testowych.
+  summary: Rozpoznany przez kompilator atrybut, za pomocą którego można zdefiniować alternatywną nazwę, która może być używana podczas ładowania typu lub do celów testowych.
 - uid: microsoft.quantum.diagnostics.test
-  summary: Rozpoznany atrybut kompilatora używany do oznaczania testu jednostkowego.
+  summary: Atrybut rozpoznany przez kompilator używany do oznaczania testu jednostkowego.
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje przydatne do celów diagnostycznych, w tym operacje potwierdzania i funkcje roszczeń."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326595"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884570"

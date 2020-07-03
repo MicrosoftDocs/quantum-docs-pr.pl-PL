@@ -7,7 +7,7 @@ summary: >-
   Odwraca podaną wartość docelową qubit, jeśli i tylko wtedy, gdy oba kontrolki qubits są w stanie 1, z głębokością T 1, przy użyciu miary do wykonania sąsiedniej operacji.
 
 
-  Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, `target` ale zakłada, że jest w stanie 0.  Operacja ma wartość T-Count 4, T-głębokość 1 i wymaga jednego pomocnika qubit i dlatego może być zalecana dla operacji CCNOT, jeśli `target` jest znana jako 0.  Sąsiednia operacja jest oparta na pomiarach i nie wymaga żadnych bram T i nie qubit pomocnika.
+  Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, ale zakłada, że `target` jest w stanie 0.  Operacja ma wartość T-Count 4, T-głębokość 1 i wymaga jednego pomocnika qubit i dlatego może być zalecana dla operacji CCNOT, jeśli `target` jest znana jako 0.  Sąsiednia operacja jest oparta na pomiarach i nie wymaga żadnych bram T i nie qubit pomocnika.
 syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Nowak: "Nowa konstrukcja dla bramy Toffoli odpornej na uszkodzenia", biorev. obr. A 87, 022328, 2013 [ArXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328
@@ -25,7 +25,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Docelowa Auxillary qubit; musi być w stanie 0
+    summary: Docelowa qubit pomocnicza; musi być w stanie 0
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 14f70cf11cad542f137cee99d5d2a62cedeb4e72
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c0858443420741968865298e6179c81b8d23ef4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672562"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885821"
