@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884280"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Tworzenie aplikacji wiersza polecenia w języku Q#
 
@@ -23,7 +23,7 @@ Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku h
 
 ## <a name="installation"></a>Instalacja
 
-Chociaż aplikacje wiersza polecenia w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE dla aplikacji języka Q#. Te narzędzia programistyczne zapewniają dostęp do rozbudowanych funkcji.
+Chociaż aplikacje wiersza polecenia w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE dla aplikacji języka Q#. Programowanie w tych środowiskach obejmuje bogate funkcje rozszerzenia QDK, takie jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych.
 
 Aby skonfigurować program VS Code:
 
@@ -35,8 +35,17 @@ Aby skonfigurować program Visual Studio:
 1. Pobierz i zainstaluj program [Visual Studio](https://visualstudio.microsoft.com/downloads/) w wersji 16.3 lub nowszej z włączonym pakietem roboczym Tworzenie aplikacji dla wielu platform w środowisku .NET Core.
 2. Pobierz i zainstaluj [zestaw Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
+Aby zainstalować zestaw QDK dla innego środowiska, wprowadź w wierszu polecenia:
 
-## <a name="develop-with-q-using-vs-code"></a>Programowanie w języku Q# przy użyciu programu VS Code
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Programowanie przy użyciu języka Q#
+
+Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku.
+
+### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
 
 Zainstaluj szablony projektów języka Q#:
 
@@ -64,7 +73,7 @@ Aby uruchomić aplikację:
 > [!NOTE]
 > Obszary robocze z wieloma folderami głównymi nie są obecnie obsługiwane przez rozszerzenie programu VS Code dla języka Q#. Jeśli masz wiele projektów w jednym obszarze roboczym programu VS Code, wszystkie projekty muszą znajdować się w tym samym folderze głównym.
 
-## <a name="develop-with-q-using-visual-studio"></a>Programowanie w języku Q# w programie Visual Studio
+### <a name="visual-studio"></a>[Program Visual Studio](#tab/tabid-vs)
 
 Zweryfikuj instalację programu Visual Studio, tworząc aplikację `Hello World` w języku Q#.
 
@@ -83,6 +92,30 @@ Aby uruchomić aplikację:
 > [!NOTE]
 > Jeśli masz wiele projektów w jednym rozwiązaniu programu Visual Studio, wszystkie projekty zawarte w rozwiązaniu muszą znajdować się w tym samym folderze co rozwiązanie lub w jednym z jego podfolderów.  
 
+### <a name="other-editors-with-the-command-line"></a>[Inne edytory z wierszem polecenia](#tab/tabid-cmdline)
+
+Zweryfikuj instalację, tworząc aplikację `Hello World` w języku Q#.
+
+1. Tworzenie nowej aplikacji:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Przechodzenie do katalogu aplikacji:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    Ten katalog powinien teraz zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli. Ten szablon można zmodyfikować za pomocą edytora tekstów i zastąpić go własnymi aplikacjami kwantowymi. 
+
+3. Uruchom program:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. Powinien zostać wyświetlony następujący tekst: `Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>Następne kroki
 
