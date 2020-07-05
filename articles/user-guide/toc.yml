@@ -2,6 +2,8 @@
   href: index.md
 - name: Podstawy języka Q#
   href: basics.md
+- name: Sposoby uruchamiania programu w języku Q#
+  href: host-programs.md
 - name: Język Q#
   href: language/toc.yml
 - name: Użycie języka Q#
