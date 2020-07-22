@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275706"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870638"
 ---
 # <a name="diagnostics"></a>Diagnostyka #
 
@@ -61,19 +61,19 @@ Biblioteki Q # Standard zapewniają kilka różnych funkcji służących do repr
 
 W praktyce potwierdzenia opierają się na faktach, że klasyczne symulacje Quantum Mechanics nie muszą przestrzegać [theorem bez klonowania](https://arxiv.org/abs/quant-ph/9607018), tak że firma Microsoft może wprowadzać niefizyczne pomiary i potwierdzenia przy użyciu symulatora dla naszej maszyny docelowej.
 W ten sposób można testować poszczególne operacje w klasycznym symulatorze przed wdrożeniem na sprzęcie.
-Na komputerach docelowych, które nie pozwalają na ocenę potwierdzeń, wywołania <xref:microsoft.quantum.intrinsic.assert> można bezpiecznie zignorować.
+Na komputerach docelowych, które nie pozwalają na ocenę potwierdzeń, wywołania <xref:microsoft.quantum.diagnostics.assertmeasurement> można bezpiecznie zignorować.
 
-Ogólnie rzecz biorąc, <xref:microsoft.quantum.intrinsic.assert> potwierdzenie operacji, które mierzą podaną qubits na podstawie podaną wartość Pauli, będzie zawsze mieć dany wynik.
+Ogólnie rzecz biorąc, <xref:microsoft.quantum.diagnostics.assertmeasurement> potwierdzenie operacji, które mierzą podaną qubits na podstawie podaną wartość Pauli, będzie zawsze mieć dany wynik.
 Jeśli potwierdzenie nie powiedzie się, wykonywanie kończy się przez wywołanie `fail` z podanym komunikatem.
 Domyślnie ta operacja nie jest zaimplementowana. symulatory, które mogą ją obsługiwać, powinny dostarczyć implementację, która przeprowadza sprawdzanie środowiska uruchomieniowego.
-`Assert`ma sygnaturę `((Pauli[], Qubit[], Result, String) -> ())` .
-Ponieważ `Assert` jest funkcją z pustą krotką jako typem danych wyjściowych, żadne skutki z wywołania nie `Assert` są zauważalne w ramach programu Q #.
+`AssertMeasurement`ma sygnaturę `((Pauli[], Qubit[], Result, String) -> ())` .
+Ponieważ `AssertMeasurement` jest funkcją z pustą krotką jako typem danych wyjściowych, żadne skutki z wywołania nie `AssertMeasurement` są zauważalne w ramach programu Q #.
 
-<xref:microsoft.quantum.intrinsic.assertprob>Wyniki funkcji operacji, które mierzą podaną qubits w danej Pauli, będą miały wynik z danym prawdopodobieństwem, w ramach pewnej tolerancji.
+<xref:microsoft.quantum.diagnostics.assertmeasurementprobability>Wyniki funkcji operacji, które mierzą podaną qubits w danej Pauli, będą miały wynik z danym prawdopodobieństwem, w ramach pewnej tolerancji.
 Tolerancja jest dodatkiem (np. `abs(expected-actual) < tol` ).
 Jeśli potwierdzenie nie powiedzie się, wykonywanie kończy się przez wywołanie `fail` z podanym komunikatem.
 Domyślnie ta operacja nie jest zaimplementowana. symulatory, które mogą ją obsługiwać, powinny dostarczyć implementację, która przeprowadza sprawdzanie środowiska uruchomieniowego.
-`AssertProb`ma sygnaturę `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Pierwszy z `Double` parametrów daje odpowiednie prawdopodobieństwo wyniku, a druga na tolerancję.
+`AssertMeasurementProbability`ma sygnaturę `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Pierwszy z `Double` parametrów daje odpowiednie prawdopodobieństwo wyniku, a druga na tolerancję.
 
 Możemy wykonać więcej niż potwierdzenie pojedynczej miary przy użyciu, że klasyczne informacje używane przez symulator do reprezentowania wewnętrznego stanu qubit są możliwe do skopiowania, dzięki czemu nie ma potrzeby faktycznego przeprowadzenia pomiaru w celu przetestowania naszej potwierdzenia.
 W szczególności pozwala nam przyczynić się do *niezgodności* pomiarów, które byłyby niemożliwe na rzeczywistym sprzęcie.
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 Zwykle jednak firma Microsoft może nie mieć dostępu do potwierdzeń o stanach, które nie pokrywają się z eigenstates operatorów Pauli.
-Na przykład $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $ nie jest eigenstateem żadnego operatora Pauli, w taki sposób, że nie można użyć, <xref:microsoft.quantum.intrinsic.assertprob> Aby jednoznacznie określić, że stan $ \ket{\psi '} $ jest równy $ \ket{\psi} $.
+Na przykład $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $ nie jest eigenstateem żadnego operatora Pauli, w taki sposób, że nie można użyć, <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Aby jednoznacznie określić, że stan $ \ket{\psi '} $ jest równy $ \ket{\psi} $.
 Zamiast tego musimy rozłożyć potwierdzenie $ \ket{\psi '} = \ket{\psi} $ do założeń, które mogą być testowane bezpośrednio przy użyciu elementów podstawowych obsługiwanych przez nasz symulator.
 W tym celu pozwól $ \ket{\psi} = \Alpha \ket {0} + \beta \ket {1} $ dla liczb zespolonych $ \Alpha = a i \_ \_ $ i $ \beta $.
 Należy zauważyć, że to wyrażenie wymaga czterech liczb rzeczywistych $ \{ a \_ r, a \_ i, b \_ r, b \_ i \} $ do określenia, ponieważ każda liczba zespolona może być wyrażona jako suma części rzeczywistej i urojonej.

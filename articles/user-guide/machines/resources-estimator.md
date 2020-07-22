@@ -1,28 +1,33 @@
 ---
-title: Szacowania zasobów zestawu Quantum Development Kit
-description: 'Dowiedz się więcej o zasobach szacowania, które szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze z systemem Quantum.'
+title: Zasoby Quantum szacowania-Quantum Development Kit
+description: 'Dowiedz się więcej o programie Microsoft QDKe szacowania, który szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze z systemem Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 1/22/2019
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415265"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870548"
 ---
-# <a name="the-resources-estimator-target-machine"></a>Maszyna docelowa szacowania zasobów
+# <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
-Jako że nazwa oznacza, `ResourcesEstimator` szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze z systemem Quantum.
-Jest to realizowane przez wykonywanie operacji Quantum bez faktycznego symulowania stanu komputera Quantum; z tego powodu można oszacować zasoby dla operacji Q #, które używają tysięcy qubits, jeśli klasyczna część kodu może być uruchamiana w rozsądnym czasie.
+Jak nazywa się, `ResourcesEstimator` Klasa szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze Quantum. Jest to realizowane przez wykonywanie operacji Quantum bez faktycznego symulowania stanu komputera Quantum; z tego powodu szacuje zasoby dla operacji Q #, które używają tysięcy qubits, pod warunkiem, że klasyczna część kodu jest uruchamiana w rozsądnym czasie.
 
-## <a name="usage"></a>Użycie
+Szacowania zasobów jest oparty na [symulatorze śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro), który zapewnia bogatszy zestaw metryk i narzędzi ułatwiających debugowanie programów Q #.
 
-`ResourcesEstimator`Jest to tylko inny typ maszyny docelowej, dlatego może służyć do uruchamiania dowolnej operacji Q #. 
+## <a name="invoking-and-running-the-resources-estimator"></a>Wywoływanie i uruchamianie zasobów szacowania
 
-Innymi maszynami docelowymi, aby użyć ich w programie hosta C# i utworzyć wystąpienie i przekazać je jako pierwszy parametr `Run` metody operacji:
+Możesz użyć szacowania zasobów do uruchomienia dowolnej operacji Q #. Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania programu Q #](xref:microsoft.quantum.guide.host-programs).
+
+### <a name="invoking-the-resources-estimator-from-c"></a>Wywoływanie zasobów szacowania z języka C # 
+
+Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie `ResourceEstimator` klasy, a następnie przekazać je jako pierwszy parametr `Run` metody operacji.
+
+Należy pamiętać, że w przeciwieństwie do `QuantumSimulator` klasy `ResourceEstimator` Klasa nie implementuje <xref:System.IDisposable> interfejsu, dlatego nie trzeba go umieszczać w `using` instrukcji.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,9 +47,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-Jak pokazano w przykładzie, `ResourcesEstimator` zapewnia `ToTSV()` metodę generowania tabeli z wartościami rozdzielanymi znakami tabulacji (tsv), które można zapisać w pliku lub zapisaniem w konsoli programu na potrzeby analizy. Dane wyjściowe powyższego programu powinny wyglądać następująco:
+Jak pokazano w przykładzie, `ResourcesEstimator` zapewnia `ToTSV()` metodę, która generuje tabelę z wartościami rozdzielonymi tabulatorami (tsv). Tabelę można zapisać w pliku lub wyświetlić w konsoli programu na potrzeby analizy. Poniżej przedstawiono przykładowe dane wyjściowe z poprzedniego programu:
 
-```Output
+```output
 Metric          Sum
 CNOT            1000
 QubitClifford   1000
@@ -57,15 +62,37 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> Nie `ResourcesEstimator` resetuje obliczeń dla każdego przebiegu, jeśli to samo wystąpienie jest używane do wykonania kolejnej operacji, spowoduje to zachowanie agregowania liczników na podstawie istniejących wyników.
-> Jeśli musisz zresetować obliczenia między przebiegami, Utwórz nowe wystąpienie dla każdego wykonania.
+> `ResourcesEstimator`Wystąpienie nie resetuje obliczeń dla każdego przebiegu. Jeśli używasz tego samego wystąpienia do uruchomienia innej operacji, agreguje nowe wyniki z istniejącymi wynikami. Jeśli musisz zresetować obliczenia między przebiegami, Utwórz nowe wystąpienie dla każdego przebiegu.
 
+### <a name="invoking-the-resources-estimator-from-python"></a>Wywoływanie zasobów szacowania z języka Python
+
+Użyj metody [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną operacją Q #:
+
+```python
+qubit_result = myOperation.estimate_resources()
+```
+
+### <a name="invoking-the-resources-estimator-from-the-command-line"></a>Wywoływanie zasobów szacowania z wiersza polecenia
+
+Podczas uruchamiania programu Q # z wiersza polecenia, użyj parametru **--symulatora** (lub **-s** skrótu), aby określić `ResourcesEstimator` maszynę docelową. Następujące polecenie uruchamia program przy użyciu szacowania zasobów: 
+
+```dotnetcli
+dotnet run -s ResourcesEstimator
+```
+
+### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>Wywoływanie zasobów szacowania z notesów Juptyer
+
+Użyj polecenia IQ # Magic [% oszacowanie](xref:microsoft.quantum.iqsharp.magic-ref.simulate) , aby uruchomić operację Q #.
+
+```
+%estimate myOperation
+```
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>Programowe pobieranie szacowanych danych
 
-Oprócz tabeli TSV, szacowane zasoby mogą być pobierane programowo za pośrednictwem `ResourcesEstimator` `Data` właściwości. `Data`oferuje `System.DataTable` wystąpienie z dwiema kolumnami: `Metric` i `Sum` , indeksowane przez nazwy metryk.
+Oprócz tabeli TSV można programowo pobrać zasoby szacowane podczas wykonywania przez `Data` Właściwość zasobów szacowania. `Data`Właściwość zawiera `System.DataTable` wystąpienie z dwiema kolumnami: `Metric` i `Sum` , indeksowane przez nazwy metryk.
 
-Poniższy kod pokazuje, jak pobrać i wydrukować łączną liczbę `QubitClifford` `T` `CNOT` bram używanych przez operację Q #:
+Poniższy kod pokazuje, jak pobrać i wydrukować łączną liczbę `QubitClifford` `T` `CNOT` operacji oraz operacje używane przez operację Q #:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,46 +118,25 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>Zgłoszone metryki
 
-Poniżej znajduje się lista metryk szacowanych przez `ResourcesEstimator` :
+Szacowania zasobów śledzi następujące metryki:
 
-* __CNOT__: liczba wykonanych bram CNOT (znanych także jako kontrolowane bramy Pauli X).
-* __QubitClifford__: liczba wykonanych pojedynczej bramy qubit Clifford i Pauli.
-* __Miara__: liczba wykonanych pomiarów.
-* __R__: liczba wykonanych pojedynczych rotacji qubit, z wyjątkiem bram T, Clifford i Pauli.
-* __T__: liczba bram t i ich sprzężenia, łącznie z bramą t, T_x = H. T. H i T_y = HY. t. HY, wykonane.
-* __Głębokość__: Dolna granica głębokości obwodu Quantum wykonywanego przez operację Q #. Domyślnie tylko bramy T są zliczane na głębokości, szczegóły można znaleźć w temacie [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Width__: Dolna granica dla maksymalnej liczby qubits przydzieloną podczas wykonywania operacji Q #. Jednocześnie może nie być możliwe równoczesne osiąganie __głębokości__ i dolnej granicy __szerokości__ .
-* __BorrowedWidth__: Maksymalna liczba qubits została zapożyczone w ramach operacji Q #.
+|Metryka|Opis|
+|----|----|
+|__CNOT__    |Liczba uruchomień `CNOT` operacji (znanych także jako kontrolowane operacje Pauli X).|
+|__QubitClifford__ |Liczba uruchomień pojedynczego qubit Clifford i Pauli operacji.|
+|__miara__    |Liczba uruchomień pomiarów.  |
+|__R__    |Liczba uruchomień wszystkich rotacji qubit, z wyjątkiem `T` operacji Clifford i Pauli.  |
+|__T__    |Liczba uruchomień `T` operacji i ich sprzężenia, w tym `T` operacje, T_x = H. T. H i T_y = HY. T. HY.  |
+|__Ścisł__|Dolna granica głębokości obwodu Quantum przebiegu przez operację Q #. Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__    |Dolna granica maksymalnej liczby qubits przydzieloną podczas przebiegu operacji Q #. Jednocześnie może nie być możliwe równoczesne osiąganie __głębokości__ i dolnej granicy __szerokości__ .  |
+|__BorrowedWidth__    |Maksymalna liczba qubits zaciągniętych w ramach operacji Q #.  |
 
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Zapewnianie prawdopodobieństwa wyników pomiarów
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Podawanie prawdopodobieństwa wyników pomiarów
+Możesz użyć <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> z <xref:microsoft.quantum.diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-<xref:microsoft.quantum.intrinsic.assertprob>z <xref:microsoft.quantum.intrinsic> przestrzeni nazw można korzystać w celu podania informacji o oczekiwanym prawdopodobieństwie pomiaru, aby ułatwić wykonanie programu Q #. Zostało to przedstawione w poniższym przykładzie:
+## <a name="see-also"></a>Zobacz także
 
-```qsharp
-operation Teleport(source : Qubit, target : Qubit) : Unit {
-
-    using (qubit = Qubit()) {
-
-        H(q);
-        CNOT(qubit, target);
-
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(qubit) == One) { X(target); X(qubit); }
-    }
-}
-```
-
-Gdy `ResourcesEstimator` napotkają, `AssertProb` nastąpi zapisanie tego, że pomiar jest `PauliZ` włączony `source` i `q` powinien zostać uzyskany wynik `Zero` prawdopodobieństwa 0,5. Gdy zostanie on wykonany `M` później, znajdzie zarejestrowane wartości prawdopodobieństwa wyniku i `M` zwróci `Zero` lub `One` z prawdopodobieństwem 0,5.
-
-
-## <a name="see-also"></a>Zobacz też
-
-`ResourcesEstimator`Jest zbudowany na podstawie [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)komputerów z systemem Quantum, który zapewnia bogatszy zestaw metryk, możliwość zgłaszania metryk w całym grafie wywołań i funkcji, takich jak [różne dane wejściowe](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) , aby pomóc w znalezieniu usterek w programach Q #. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
-
+- [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [Symulator Toffoli Quantum](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Symulator pełnego stanu Quantum](xref:microsoft.quantum.machines.full-state-simulator) 

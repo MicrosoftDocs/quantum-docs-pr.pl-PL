@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415307"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870995"
 ---
 # <a name="control-flow-in-q"></a>Przepływ sterowania w p #
 
@@ -42,7 +42,7 @@ Jeśli oryginalny warunek *if* i wszystkie klauzule else-if mają *wartość fal
 Należy zauważyć, że w zależności od tego, czy blokowane są uruchomienia, działa w ramach własnego zakresu.
 Powiązania wykonane wewnątrz elementu `if` , `elif` lub `else` bloku nie są widoczne po zakończeniu bloku.
 
-Na przykład
+Przykład:
 
 ```qsharp
 if (result == One) {
@@ -166,7 +166,7 @@ while (index < Length(arr) && item < 0) {
 Instrukcja return zamyka przebieg operacji lub funkcji i zwraca wartość do obiektu wywołującego.
 Składa się ze słowa kluczowego `return` , po którym następuje wyrażenie odpowiedniego typu i kończącego się średnika.
 
-Na przykład
+Przykład:
 ```qsharp
 return 1;
 ```
@@ -191,7 +191,7 @@ Instrukcja zwraca ciąg do klasycznego sterownika jako komunikat o błędzie.
 W obrębie operacji nie ma ograniczeń dotyczących liczby instrukcji zakończonych niepowodzeniem.
 Kompilator może emitować ostrzeżenie, jeśli instrukcje obserwują instrukcję Fail w bloku.
 
-Na przykład
+Przykład:
 
 ```qsharp
 fail $"Impossible state reached";
@@ -278,9 +278,9 @@ Na koniec przedstawiono przykład wzorca jednostek ru, aby przygotować stan Qua
 Istotne funkcje programistyczne wyświetlane w tej operacji to:
 
 * Bardziej złożona `fixup` część pętli, która obejmuje operacje Quantum. 
-* Użycie `AssertProb` instrukcji w celu ustalenia prawdopodobieństwa mierzenia stanu Quantum w określonych punktach w programie.
+* Użycie `AssertMeasurementProbability` instrukcji w celu ustalenia prawdopodobieństwa mierzenia stanu Quantum w określonych punktach w programie.
 
-Aby uzyskać więcej informacji na [`Assert`](xref:microsoft.quantum.intrinsic.assert) temat [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operacji i, zobacz [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging).
+Aby uzyskać więcej informacji na [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) temat [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operacji i, zobacz [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -289,10 +289,10 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
         repeat {
             // We expect the target and auxiliary qubits to each be in
             // the |+> state.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+> state", 1e-10 );
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 1.0,
                 "auxiliary qubit should be in the |+> state", 1e-10 );
 
@@ -302,7 +302,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
             // The probability of measuring |+> state on the auxiliary qubit
             // is 3/4.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 3. / 4.,
                 "Error: the probability to measure |+> in the first
                 auxiliary must be 3/4",

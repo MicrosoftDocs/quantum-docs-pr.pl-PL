@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884196"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871386"
 ---
 # <a name="q-style-guide"></a>Przewodnik po stylu Q # #
 ## <a name="general-conventions"></a>Konwencje ogólne ##
@@ -49,7 +49,7 @@ Takie rozróżnienie sugeruje, że nazwy operacji są nazywane czasownikami i fu
 > W tej perspektywie typy zdefiniowane przez użytkownika powinny być nazwane jako rzeczowniki, tak aby oba typy i funkcje konstruktora miały spójne nazwy.
 
 W odpowiednim przypadku upewnij się, że nazwy operacji zaczynają się od czasowników jasno wskazujących wpływ operacji.
-Przykład:
+Na przykład:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -66,7 +66,7 @@ Inne zlecenia mogą być również przydatne w tym przypadku, jak w `IterateThro
 | Assert | Hipoteza dotycząca wyniku możliwego pomiaru Quantum jest sprawdzana przez symulator |
 | Szacowanie | Wartość jest zwracana, reprezentująca oszacowanie pobrane z co najmniej jednego pomiaru |
 | Measure | Pomiar Quantum jest wykonywany, a jego wynik jest zwracany do użytkownika |
-| Przygotowanie | Dana Rejestracja qubits jest inicjowana w określonym stanie |
+| Przygotowywanie | Dana Rejestracja qubits jest inicjowana w określonym stanie |
 | Przykład | Wartość klasyczna jest zwracana losowo z pewnej dystrybucji |
 
 W przypadku funkcji sugerujemy unikanie korzystania z czasowników na rzecz typowych rzeczowników (Zobacz wskazówki dotyczące odpowiednich rzeczowników poniżej) lub przymiotników:
@@ -386,9 +386,8 @@ Kompilator dostarczany z zestawem SDK Quantum wyodrębnia te komentarze i korzys
 Podobnie serwer językowy dostarczony z zestawem Quantum Development Kit używa tych komentarzy, aby zapewnić użytkownikom Pomoc po umieszczeniu wskaźnika myszy na symbolach w kodzie Q.
 Korzystanie z komentarzy do dokumentacji może ułatwić użytkownikom zrozumienie kodu przez udostępnienie przydatnego odwołania do szczegółów, które nie są łatwo wyrażone przy użyciu innych konwencji zawartych w tym dokumencie.
 
-<div class="nextstepaction">
-    [Odwołanie do składni komentarzy do dokumentacji](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Odwołanie do składni komentarza do dokumentacji](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Aby efektywnie korzystać z tej funkcji w celu ułatwienia użytkownikom, zalecamy zachowywanie kilku rzeczy podczas pisania komentarzy do dokumentacji.
 

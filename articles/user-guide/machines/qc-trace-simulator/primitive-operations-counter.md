@@ -1,21 +1,37 @@
 ---
-title: Licznik operacji pierwotnych
-description: Dowiedz się więcej o liczniku operacji programu Microsoft QDKe pierwotne, który śledzi liczbę wykonań pierwotnych używanych przez operacje w programie Quantum.
+title: Licznik operacji pierwotnych-Quantum Development Kit
+description: 'Dowiedz się więcej o liczniku operacji programu Microsoft QDKe pierwotnego, który korzysta z symulatora śledzenia Quantum do śledzenia wykonywania pierwotnego używanych przez operacje w programie Q #.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275557"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871029"
 ---
-# <a name="primitive-operations-counter"></a>Licznik operacji pierwotnych  
+# <a name="quantum-trace-simulator-primitive-operations-counter"></a>Symulator śledzenia Quantum: licznik operacji pierwotnych
 
-`Primitive Operations Counter`Jest częścią [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)komputerów z systemem Quantum. Liczy liczbę wykonań pierwotnych używanych przez każdą operację wywoływaną w programie Quantum. Wszystkie operacje z `Microsoft.Quantum.Intrinsic` są wyrażane w odniesieniu do pojedynczych qubitych obrotów, bram T, pojedynczej bramy Clifford qubit, bram CNOT i pomiarów wieloqubit Pauli observables. Zebrane dane statystyczne są agregowane na krawędziach grafu wywołań operacji. Pozwól nam teraz obliczyć liczbę `T` bram potrzebnych do zaimplementowania `CCNOT` operacji. 
+Licznik operacji pierwotnej jest częścią [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)zestawu Quantum Development Kit. Liczy liczbę wykonań pierwotnych używanych przez każdą operację wywoływaną w programie Quantum. 
+
+Wszystkie <xref:microsoft.quantum.intrinsic> operacje są wyrażane w odniesieniu do rotacji qubit, operacji T, operacji qubit Clifford, operacji CNOT i pomiarów wieloqubit Pauli observables. Licznik operacji pierwotnych agreguje i zbiera dane statystyczne na temat wszystkich krawędzi [grafu wywołania](https://en.wikipedia.org/wiki/Call_graph)operacji.
+
+## <a name="invoking-the-primitive-operation-counter"></a>Wywoływanie licznika operacji pierwotnej
+
+Aby uruchomić symulator śledzenia Quantum z licznikiem operacji pierwotnej, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UsePrimitiveOperationsCounter` Właściwość na **true**, a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie za pomocą `QCTraceSimulatorConfiguration` jako parametru.
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UsePrimitiveOperationsCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Używanie licznika operacji pierwotnej w programie hosta C#
+
+Przykład w języku C# opisany w tej sekcji liczy liczbę <xref:microsoft.quantum.intrinsic.t> operacji potrzebnych do zaimplementowania <xref:microsoft.quantum.intrinsic.ccnot> operacji w oparciu o następujący przykładowy kod Q #:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -24,19 +40,17 @@ operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
-    } 
+    }
 }
 ```
 
-## <a name="using-the-primitive-operations-counter-within-a-c-program"></a>Korzystanie z licznika operacji pierwotnych w programie w języku C#
-
-Aby sprawdzić, czy w `CCNOT` rzeczywistości wymagane `T` są 7 bram i które `ApplySampleWithCCNOT` wykonuje 8 `T` bram, możemy użyć następującego kodu w języku C#:
+Aby sprawdzić, czy program `CCNOT` wymaga siedmiu `T` operacji `ApplySampleWithCCNOT` , które uruchamiają osiem `T` operacji, użyj następującego kodu w języku C#:
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 // using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.usePrimitiveOperationsCounter = true;
+config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -44,25 +58,23 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-Zostanie wykonana pierwsza część programu `ApplySampleWithCCNOT` . W drugiej części używamy metody, `QCTraceSimulator.GetMetric` Aby uzyskać liczbę bram T wykonywanych przez `ApplySampleWithCCNOT` : 
+Zostanie uruchomiona pierwsza część programu `ApplySampleWithCCNOT` . Druga część używa [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) metody do pobierania liczby `T` operacji wykonywanych przez `ApplySampleWithCCNOT` : 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
+W przypadku wywołania `GetMetric` z dwoma parametrami typu zwraca wartość metryki skojarzonej z daną krawędzią grafu wywołania. W poprzednim przykładzie program wywołuje `Primitive.CCNOT` operację w ramach `ApplySampleWithCCNOT` i dlatego wykres wywołań zawiera krawędź `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
 
-Gdy `GetMetric` jest wywoływana z dwoma parametrami typu, zwraca wartość metryki skojarzonej z daną krawędzią grafu wywołania. W naszej przykładowej operacji `Primitive.CCNOT` jest wywoływana wewnątrz `ApplySampleWithCCNOT` i dlatego wykres wywołań zawiera krawędź `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
-
-Aby uzyskać liczbę `CNOT` używanych bram, można dodać następujący wiersz:
+Aby pobrać liczbę `CNOT` używanych operacji, Dodaj następujący wiersz:
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-Na koniec w celu wygenerowania wszystkich statystyk zbieranych przez licznik bram w formacie CSV można użyć następujących instrukcji:
+Na koniec można wyprowadzić wszystkie dane statystyczne zebrane przez licznik operacji pierwotnych w formacie CSV, korzystając z następujących elementów:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Zobacz też ##
+## <a name="see-also"></a>Zobacz także
 
-- Omówienie [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro) komputerów z interfejsem Quantum.
+- Omówienie zestawu Quantum Development Kit [Quantum Trace symulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>Dokumentacja interfejsu API.
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>Dokumentacja interfejsu API.
+- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames>Dokumentacja interfejsu API.

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885041"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871557"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -21,6 +21,17 @@ Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.q
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
 
+
+## <a name="version-01220072031"></a>0.12.20072031 wersja
+
+*Data wydania: 21 lipca, 2020*
+
+To wydanie zawiera następujące elementy:
+
+- Otwarte przestrzenie nazw w notesach Q # są teraz dostępne dla wszystkich przyszłych wykonań komórek. Dzięki temu można na przykład otwierać obszary nazw raz w komórce w górnej części notesu zamiast otwierać odpowiednie przestrzenie nazw w każdej komórce kodu. Nowe `%lsopen` polecenie Magic wyświetla listę obecnie otwartych przestrzeni nazw.
+
+Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatora](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) i [samouczków Kata](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## <a name="version-01220070124"></a>0.12.20070124 wersja
 
 *Data wydania: 2 lipca, 2020*
@@ -28,7 +39,7 @@ Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](x
 To wydanie zawiera następujące elementy:
 
 - Nowe `qdk-chem` Narzędzie do konwertowania starszej wersji formatu serializacji problemu ze strukturą elektroniczną (np.: FCIDUMP) do [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- Nowe funkcje i operacje w [ `Microsoft.Quantum.Synthesis` przestrzeni nazw](xref:microsoft.quantum.synthesis) spójnie stosują klasyczne firmy Oracle przy użyciu algorytmów syntezy opartej na transformacjach i dekompozycji.
+- Nowe funkcje i operacje w [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) przestrzeni nazw spójnie stosują klasyczne firmy Oracle przy użyciu algorytmów syntezy opartej na transformacjach i dekompozycji.
 - IQ # umożliwia teraz stosowanie argumentów do `%simulate` , `%estimate` i innych poleceń Magic. Aby uzyskać więcej informacji, zobacz [ `%simulate` dokumentacja poleceń Magic](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
 - Opcje wyświetlania nowej fazy w programie IQ #. Aby uzyskać więcej informacji, zobacz [ `%config` dokumentacja poleceń Magic](xref:microsoft.quantum.iqsharp.magic-ref.config) .
 - Iteracja # i `qsharp` pakiet języka Python są teraz udostępniane za pośrednictwem pakietów Conda ([qsharp](https://anaconda.org/quantum-engineering/qsharp) i [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) w celu uproszczenia instalacji lokalnej funkcji Q # Jupyter i języka Python w środowisku Conda. Aby uzyskać więcej informacji, zobacz artykuły dotyczące [notesów q # Jupyter](xref:microsoft.quantum.install.jupyter) i [q # ze](xref:microsoft.quantum.install.python) wskazówkami dotyczącymi instalacji języka Python.
