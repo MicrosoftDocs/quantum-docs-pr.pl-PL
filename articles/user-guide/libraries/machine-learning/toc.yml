@@ -1,5 +1,5 @@
 - name: Wprowadzenie do kwantowego uczenia maszynowego
-  href: introduction.md
+  href: intro.md
 - name: Podstawowa klasyfikacja
   href: basic-classification.md
 - name: Projektowanie własnego klasyfikatora
