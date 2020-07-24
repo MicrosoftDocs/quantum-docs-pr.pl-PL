@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273722"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871420"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Wpółtworzenie zestawu Quantum Development Kit
 
@@ -61,10 +61,9 @@ Każdy z tych elementów znajduje się w innym repozytorium, więc jedną z pier
 > [!NOTE]
 > Niestety, w tej chwili nie możemy akceptować współtworzenia kodu i dokumentacji w repozytorium [**microsoft/QuantumNC**](https://github.com/microsoft/Quantum-NC), ale nadal będziemy bardzo wdzięczni za raporty o usterkach.
 
-Istnieje również kilka innych, bardziej wyspecjalizowanych repozytoriów, które koncentrują się na różnych zdarzeniach lub pomocniczych funkcjach związanych z zestawem Quantum Development Kit.
+Istnieje również kilka innych, bardziej wyspecjalizowanych repozytoriów, które koncentrują się na pomocniczych funkcjach związanych z zestawem Quantum Development Kit.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Obsługa formatowania LaTeX dla składni języka Q#.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): Samouczek IQ# Notebook for Deutsch–Jozsa przedstawiony na warsztatach intern workshop 2019 (warsztaty dla stażystów).
 
 ## <a name="next-steps"></a>Następne kroki
 

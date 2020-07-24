@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273971"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871352"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>Wprowadzenie do biblioteki dla liczb kwantowych
 
@@ -33,9 +33,10 @@ To dlatego zestaw Quantum Development Kit zapewnia obsługę dużej liczby funkc
 
 Oprócz obliczeń arytmetycznych na liczbach całkowitych, które zostały już omówione, biblioteka liczbowa oferuje:
 
- - Funkcjonalność liczb całkowitych ze znakiem/bez znaku (mnożenie, podnoszenie do kwadratu, dzielenie z resztą, inwersja) z danymi wejściowymi w postaci jednej lub dwóch kwantowych liczb całkowitych
- - Funkcjonalność liczb stałoprzecinkowych (dodawanie/odejmowanie, mnożenie, podnoszenie do kwadratu, 1/x, obliczanie wartości wielomianu) z danymi wejściowymi w postaci jednej lub dwóch kwantowych liczb stałoprzecinkowych
+- Funkcjonalność liczb całkowitych ze znakiem/bez znaku (mnożenie, podnoszenie do kwadratu, dzielenie z resztą, inwersja) z danymi wejściowymi w postaci jednej lub dwóch kwantowych liczb całkowitych
+- Funkcjonalność liczb stałoprzecinkowych (dodawanie/odejmowanie, mnożenie, podnoszenie do kwadratu, 1/x, obliczanie wartości wielomianu) z danymi wejściowymi w postaci jednej lub dwóch kwantowych liczb stałoprzecinkowych
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-Aby rozpocząć pracę z biblioteką liczbową, zapoznaj się z [przewodnikiem instalacji](xref:microsoft.quantum.numerics.installation), gdzie znajdziesz więcej informacji na temat [korzystania z biblioteki liczbowej](xref:microsoft.quantum.numerics.usage).
+> [!div class="nextstepaction"]
+> [Dowiedz się więcej o korzystaniu z biblioteki liczbowej](xref:microsoft.quantum.numerics.usage)

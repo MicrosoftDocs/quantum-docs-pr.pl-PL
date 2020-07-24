@@ -1,5 +1,18 @@
+---
+title: Polecenia magic IQ#
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870706"
+---
 # <a name="iq-magic-commands"></a>Polecenia magic IQ#
-
 | Polecenia magic | Podsumowanie |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Nawiązuje połączenie z obszarem roboczym usługi Azure Quantum lub wyświetla bieżący stan połączenia. |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Uruchamia daną funkcję lub operację na maszynie docelowej ResourcesEstimator. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Wykonuje pojedynczy test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Zwraca listę wszystkich aktualnie dostępnych poleceń magic. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Wyświetla listę aktualnie otwartych przestrzeni nazw i ich aliasów. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Zapewnia możliwość załadowania pakietu NuGet. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Raportuje bieżące metryki wydajności dla tego jądra. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Uruchamia daną funkcję lub operację na maszynie docelowej QuantumSimulator. |
