@@ -1,161 +1,54 @@
 ---
-title: Symulatory kwantowe i aplikacje hosta | Microsoft Docs
-description: Opis tworzenia symulatorów kwantowych przy użyciu klasycznego języka platformy .NET (zazwyczaj C# lub Q#).
+title: Symulatory kwantowe i programy w języku Q#
+description: Opisuje symulatory kwantowe dostępne jako maszyny docelowe dla programów w języku Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
-ms.date: 12/11/2017
+ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273804"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871165"
 ---
-# <a name="quantum-simulators-and-host-applications"></a><span data-ttu-id="16fa4-103">Symulatory kwantowe i aplikacje hosta</span><span class="sxs-lookup"><span data-stu-id="16fa4-103">Quantum simulators and host applications</span></span>
+# <a name="quantum-simulators"></a><span data-ttu-id="7f0fe-103">Symulatory kwantowe</span><span class="sxs-lookup"><span data-stu-id="7f0fe-103">Quantum simulators</span></span>
 
-## <a name="what-youll-learn"></a><span data-ttu-id="16fa4-104">Zawartość</span><span class="sxs-lookup"><span data-stu-id="16fa4-104">What You'll Learn</span></span>
-
-> [!div class="checklist"]
-> * <span data-ttu-id="16fa4-105">Jak są wykonywane algorytmy kwantowe</span><span class="sxs-lookup"><span data-stu-id="16fa4-105">How quantum algorithms are executed</span></span>
-> * <span data-ttu-id="16fa4-106">Jakie symulatory kwantowe są zawarte w tej wersji</span><span class="sxs-lookup"><span data-stu-id="16fa4-106">What quantum simulators are included in this release</span></span>
-> * <span data-ttu-id="16fa4-107">Jak napisać sterownik C# dla algorytmu kwantowego</span><span class="sxs-lookup"><span data-stu-id="16fa4-107">How to write a C# driver for your quantum algorithm</span></span>
-
-## <a name="the-quantum-development-kit-execution-model"></a><span data-ttu-id="16fa4-108">Model wykonywania zestawu Quantum Development Kit</span><span class="sxs-lookup"><span data-stu-id="16fa4-108">The Quantum Development Kit Execution Model</span></span>
-
-<span data-ttu-id="16fa4-109">W artykule [Pisanie programu kwantowego](xref:microsoft.quantum.write-program) algorytm kwantowy był wykonywany przez przekazanie obiektu `QuantumSimulator` do metody `Run` klasy algorytmu.</span><span class="sxs-lookup"><span data-stu-id="16fa4-109">In [Writing a quantum program](xref:microsoft.quantum.write-program), we executed our quantum algorithm by passing a `QuantumSimulator` object to the algorithm class's `Run` method.</span></span>
-<span data-ttu-id="16fa4-110">Klasa `QuantumSimulator` umożliwia wykonanie algorytmu kwantowego dzięki pełnej symulacji wektora stanu kwantowego, który doskonale nadaje się do uruchamiania i testowania przykładu `Teleport`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-110">The `QuantumSimulator` class executes the quantum algorithm by fully simulating the quantum state vector, which is perfect for running and testing `Teleport`.</span></span>
-<span data-ttu-id="16fa4-111">Aby uzyskać więcej informacji na temat wektorów stanów kwantowych, zobacz [Przewodnik po pojęciach](xref:microsoft.quantum.concepts.intro).</span><span class="sxs-lookup"><span data-stu-id="16fa4-111">See the [Concepts guide](xref:microsoft.quantum.concepts.intro) for more on quantum state vectors.</span></span>
-
-<span data-ttu-id="16fa4-112">Algorytm kwantowy można uruchamiać na innych maszynach docelowych.</span><span class="sxs-lookup"><span data-stu-id="16fa4-112">Other target machines may be used to run a quantum algorithm.</span></span>
-<span data-ttu-id="16fa4-113">Maszyna zapewnia implementacje kwantowych typów pierwotnych algorytmu.</span><span class="sxs-lookup"><span data-stu-id="16fa4-113">The machine is responsible for providing implementations of quantum primitives for the algorithm.</span></span>
-<span data-ttu-id="16fa4-114">Obejmują one operacje pierwotne, takie jak H, CNOT i Measure, a także śledzenie kubitów i zarządzanie nimi.</span><span class="sxs-lookup"><span data-stu-id="16fa4-114">This includes primitive operations such as H, CNOT, and Measure, as well as qubit management and tracking.</span></span>
-<span data-ttu-id="16fa4-115">Poszczególne klasy maszyn kwantowych reprezentują różne modele wykonywania tego samego algorytmu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="16fa4-115">Different classes of quantum machines represent different execution models for the same quantum algorithm.</span></span>
-
-<span data-ttu-id="16fa4-116">Każdy typ maszyny kwantowej może udostępniać odrębną implementację typów pierwotnych.</span><span class="sxs-lookup"><span data-stu-id="16fa4-116">Each type of quantum machine may provide different implementations of these primitives.</span></span>
-<span data-ttu-id="16fa4-117">Na przykład zawarty w zestawie deweloperskim symulator śledzenia komputera kwantowego nie służy do wykonywania symulacji.</span><span class="sxs-lookup"><span data-stu-id="16fa4-117">For instance, the quantum computer trace simulator included in the development kit doesn't do any simulation at all.</span></span>
-<span data-ttu-id="16fa4-118">Zamiast tego śledzi on użycie bramy, kubitów oraz innych zasobów.</span><span class="sxs-lookup"><span data-stu-id="16fa4-118">Rather, it tracks gate, qubit, and other resource usage for the algorithm.</span></span>
-
-### <a name="quantum-machines"></a><span data-ttu-id="16fa4-119">Maszyny kwantowe</span><span class="sxs-lookup"><span data-stu-id="16fa4-119">Quantum Machines</span></span>
-
-<span data-ttu-id="16fa4-120">W przyszłości zostaną zdefiniowane dodatkowe klasy maszyn kwantowych umożliwiające obsługę innych typów symulacji oraz wykonywanie na topologicznych komputerach kwantowych.</span><span class="sxs-lookup"><span data-stu-id="16fa4-120">In the future, we will define additional quantum machine classes to support other types of simulation and to support execution on topological quantum computers.</span></span>
-<span data-ttu-id="16fa4-121">Zapewnienie niezmienności algorytmu przy różnych bazowych implementacjach na maszynach ułatwia jego testowanie i debugowanie w symulacji, a następnie uruchamianie na używanym komputerze z poczuciem pewności, że nie został zmieniony.</span><span class="sxs-lookup"><span data-stu-id="16fa4-121">Allowing the algorithm to stay constant while varying the underlying machine implementation makes it easy to test and debug an algorithm in simulation and then run it on real hardware with confidence that the algorithm hasn't changed.</span></span>
-
-### <a name="whats-included-in-this-release"></a><span data-ttu-id="16fa4-122">Zawartość tej wersji</span><span class="sxs-lookup"><span data-stu-id="16fa4-122">What's Included in this Release</span></span>
-
-<span data-ttu-id="16fa4-123">Ta wersja zestawu Quantum Development Kit zawiera kilka klas maszyn kwantowych.</span><span class="sxs-lookup"><span data-stu-id="16fa4-123">This release of the quantum developer kit includes several quantum machine classes.</span></span>
-<span data-ttu-id="16fa4-124">Każda klasa jest zdefiniowana w przestrzeni nazw `Microsoft.Quantum.Simulation.Simulators`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-124">All of them are defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.</span></span>
-
-* <span data-ttu-id="16fa4-125">Klasa `QuantumSimulator`, [symulator wektora pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator).</span><span class="sxs-lookup"><span data-stu-id="16fa4-125">A [full state vector simulator](xref:microsoft.quantum.machines.full-state-simulator), the `QuantumSimulator` class.</span></span>
-* <span data-ttu-id="16fa4-126">Klasa `ResourcesEstimator`, [proste narzędzie do szacowania zasobów](xref:microsoft.quantum.machines.resources-estimator), umożliwia ogólną analizę zasobów wymaganych do uruchomienia algorytmu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="16fa4-126">A [simple resources estimator](xref:microsoft.quantum.machines.resources-estimator), the `ResourcesEstimator` class, it allows a top level analysis of the resources needed to run a quantum algorithm.</span></span>
-* <span data-ttu-id="16fa4-127">Klasa `QCTraceSimulator`, [oparte na śledzeniu narzędzie do szacowania zasobów](xref:microsoft.quantum.machines.qc-trace-simulator.intro), umożliwia zaawansowaną analizę zużycia zasobów dla całego grafu wywołań algorytmu.</span><span class="sxs-lookup"><span data-stu-id="16fa4-127">A [trace-based resource estimator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), the `QCTraceSimulator` class, it allows advanced analysis of resources consumptions for the algorithm's entire call-graph.</span></span>
-* <span data-ttu-id="16fa4-128">Klasa `ToffoliSimulator`, [symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator).</span><span class="sxs-lookup"><span data-stu-id="16fa4-128">A [Toffoli simulator](xref:microsoft.quantum.machines.toffoli-simulator), the `ToffoliSimulator` class.</span></span>
-
-## <a name="writing-a-host-application"></a><span data-ttu-id="16fa4-129">Pisanie aplikacji hosta</span><span class="sxs-lookup"><span data-stu-id="16fa4-129">Writing a host application</span></span>
-
-<span data-ttu-id="16fa4-130">W artykule [Pisanie programu kwantowego](xref:microsoft.quantum.write-program) napisaliśmy prosty sterownik w języku C# dla algorytmu teleportacji.</span><span class="sxs-lookup"><span data-stu-id="16fa4-130">In [Writing a quantum program](xref:microsoft.quantum.write-program), we wrote a simple C# driver for our teleport algorithm.</span></span> <span data-ttu-id="16fa4-131">Sterownik w języku C# ma 4 główne funkcje:</span><span class="sxs-lookup"><span data-stu-id="16fa4-131">A C# driver has 4 main purposes:</span></span>
-
-* <span data-ttu-id="16fa4-132">Konstruowanie maszyny docelowej</span><span class="sxs-lookup"><span data-stu-id="16fa4-132">Constructing the target machine</span></span>
-* <span data-ttu-id="16fa4-133">Obliczanie wszystkich argumentów wymaganych przez algorytm kwantowy</span><span class="sxs-lookup"><span data-stu-id="16fa4-133">Computing any arguments required for the quantum algorithm</span></span>
-* <span data-ttu-id="16fa4-134">Uruchamianie algorytmu kwantowego przy użyciu symulatora</span><span class="sxs-lookup"><span data-stu-id="16fa4-134">Running the quantum algorithm using the simulator</span></span>
-* <span data-ttu-id="16fa4-135">Przetwarzanie wyniku operacji</span><span class="sxs-lookup"><span data-stu-id="16fa4-135">Processing the result of the operation</span></span>
-
-<span data-ttu-id="16fa4-136">Poniżej szczegółowo omówiono poszczególne etapy.</span><span class="sxs-lookup"><span data-stu-id="16fa4-136">Here we'll discuss each step in more detail.</span></span>
-
-### <a name="constructing-the-target-machine"></a><span data-ttu-id="16fa4-137">Konstruowanie maszyny docelowej</span><span class="sxs-lookup"><span data-stu-id="16fa4-137">Constructing the Target Machine</span></span>
-
-<span data-ttu-id="16fa4-138">Maszyny kwantowe to normalne wystąpienia klas .NET, dlatego tworzy się je przez wywołanie konstruktora, tak jak w przypadku dowolnej klasy .NET.</span><span class="sxs-lookup"><span data-stu-id="16fa4-138">Quantum machines are instances of normal .NET classes, so they are created by invoking their constructor, just like any .NET class.</span></span>
-<span data-ttu-id="16fa4-139">Niektóre symulatory, w tym `QuantumSimulator`, implementują interfejs .NET <xref:System.IDisposable?displayProperty=nameWithType>, dlatego należy je umieścić w instrukcji `using` języka C#.</span><span class="sxs-lookup"><span data-stu-id="16fa4-139">Some simulators, including the `QuantumSimulator`, implement the .NET <xref:System.IDisposable?displayProperty=nameWithType> interface, and so should be wrapped in a C# `using` statement.</span></span>
-
-### <a name="computing-arguments-for-the-algorithm"></a><span data-ttu-id="16fa4-140">Obliczanie argumentów dla algorytmu</span><span class="sxs-lookup"><span data-stu-id="16fa4-140">Computing Arguments for the Algorithm</span></span>
-
-<span data-ttu-id="16fa4-141">W naszym przykładzie `Teleport` obliczyliśmy kilka względnie sztucznych argumentów przekazywanych do algorytmu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="16fa4-141">In our `Teleport` example, we computed some relatively artificial arguments to pass to our quantum algorithm.</span></span>
-<span data-ttu-id="16fa4-142">Zwykle jednak algorytm kwantowy wymaga znacznej ilości danych i najłatwiej je udostępnić z poziomu klasycznego sterownika.</span><span class="sxs-lookup"><span data-stu-id="16fa4-142">More typically, however, there is significant data required by the quantum algorithm, and it is easiest to provide it from the classical driver.</span></span>
-
-<span data-ttu-id="16fa4-143">Na przykład w przypadku symulacji chemicznych algorytm kwantowy wymaga dużej tabeli wartości całkowitych dotyczących orbitalnych interakcji molekuł.</span><span class="sxs-lookup"><span data-stu-id="16fa4-143">For instance, when doing chemical simulations, the quantum algorithm requires a large table of molecular orbital interaction integrals.</span></span>
-<span data-ttu-id="16fa4-144">Zazwyczaj informacje te są odczytywane z pliku, który jest dostarczany podczas uruchamiania algorytmu.</span><span class="sxs-lookup"><span data-stu-id="16fa4-144">Generally these are read in from a file that is provided when running the algorithm.</span></span>
-<span data-ttu-id="16fa4-145">Język Q# nie udostępnia mechanizmu uzyskiwania dostępu do systemu plików, dlatego najlepiej jest zebrać takie dane przy użyciu klasycznego sterownika, a następnie przekazać je do metody `Run` algorytmu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="16fa4-145">Since Q# does not have a mechanism for accessing the file system, this sort of data is best collected by the classical driver and then passed to the quantum algorithm's `Run` method.</span></span>
-
-<span data-ttu-id="16fa4-146">Klasyczny sterownik odgrywa również kluczową rolę w metodach zmiennych.</span><span class="sxs-lookup"><span data-stu-id="16fa4-146">Another case where the classical driver plays a key role is in variational methods.</span></span>
-<span data-ttu-id="16fa4-147">W tej klasie algorytmów na podstawie klasycznych parametrów przygotowuje się stan kwantowy, a następnie używa się go do obliczenia jakiejś wartości.</span><span class="sxs-lookup"><span data-stu-id="16fa4-147">In this class of algorithms, a quantum state is prepared based on some classical parameters, and that state is used to compute some value of interest.</span></span>
-<span data-ttu-id="16fa4-148">Parametry są dostosowywane na podstawie określonego algorytmu wspinaczki lub algorytmu uczenia maszynowego, a następnie algorytm kwantowy jest uruchamiany ponownie.</span><span class="sxs-lookup"><span data-stu-id="16fa4-148">The parameters are adjusted based on some type of hill climbing or machine learning algorithm and the quantum algorithm run again.</span></span>
-<span data-ttu-id="16fa4-149">Algorytm wspinaczki najlepiej jest zaimplementować jako czysto klasyczną funkcję, wywoływaną przez klasyczny sterownik. Wyniki procesu wspinaczki są następnie przekazywane do następnego przebiegu algorytmu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="16fa4-149">For such algorithms, the hill climbing algorithm itself is best implemented as a purely classical function that is called by the classical driver; the results of the hill climbing are then passed to the next execution of the quantum algorithm.</span></span>
-
-### <a name="running-the-quantum-algorithm"></a><span data-ttu-id="16fa4-150">Uruchamianie algorytmu kwantowego</span><span class="sxs-lookup"><span data-stu-id="16fa4-150">Running the Quantum Algorithm</span></span>
-
-<span data-ttu-id="16fa4-151">Ta część jest ogólnie bardzo prosta.</span><span class="sxs-lookup"><span data-stu-id="16fa4-151">This part is generally very straightforward.</span></span>
-<span data-ttu-id="16fa4-152">Każda operacja języka Q# jest powiązana ze skompilowaną klasą, która udostępnia metodę statyczną `Run`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-152">Each Q# operation is compiled into a class that provides a static `Run` method.</span></span>
-<span data-ttu-id="16fa4-153">Argumenty tej metody są udostępniane przez spłaszczoną krotkę argumentów samej operacji. Dodatkowy, pierwszy argument jest symulatorem umożliwiającym wykonywanie.</span><span class="sxs-lookup"><span data-stu-id="16fa4-153">The arguments to this method are given by the flattened argument tuple of the operation itself, plus an additional first argument which is the simulator to execute with.</span></span> <span data-ttu-id="16fa4-154">Spłaszczony odpowiednik operacji, która oczekuje nazwanej krotki typu `(a: String, (b: Double, c: Double))`, to `(String a, Double b, Double c)`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-154">For an operation that expects the named tuple of type `(a: String, (b: Double, c: Double))` its flattened counterpart is of type `(String a, Double b, Double c)`.</span></span>
+<span data-ttu-id="7f0fe-104">Symulatory kwantowe to programy działające na klasycznych komputerach pełniące rolę *maszyny docelowej* dla programu w języku Q# i umożliwiające uruchamianie oraz testowanie programów kwantowych w środowisku, które przewiduje, jak kubity będą reagować na różne operacje.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-104">Quantum simulators are software programs that run on classical computers and act as the *target machine* for a Q# program, making it possible to run and test quantum programs in an environment that predicts how qubits will react to different operations.</span></span> <span data-ttu-id="7f0fe-105">W tym artykule opisano, które symulatory kwantowe są dołączone do zestawu Quantum Development Kit (QDK), a także różne sposoby przekazywania programu w języku Q# do symulatorów kwantowych, na przykład za pośrednictwem wiersza polecenia lub przy użyciu kodu sterownika napisanego w języku klasycznym.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-105">This article describes which quantum simulators are included with the Quantum Development Kit (QDK), and different ways that you can pass a Q# program to the quantum simulators, for example, via the command line or by using driver code written in a classical language.</span></span>  
 
 
-<span data-ttu-id="16fa4-155">Przekazując argumenty do metody `Run`, trzeba pamiętać o kilku kwestiach:</span><span class="sxs-lookup"><span data-stu-id="16fa4-155">There are some subtleties when passing arguments to a `Run` method:</span></span>
 
-* <span data-ttu-id="16fa4-156">Tablice muszą być opakowane w obiekt `Microsoft.Quantum.Simulation.Core.QArray<T>`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-156">Arrays must be wrapped in a `Microsoft.Quantum.Simulation.Core.QArray<T>` object.</span></span>
-    <span data-ttu-id="16fa4-157">Klasa `QArray` ma konstruktor, który przyjmuje dowolną uporządkowaną kolekcję (`IEnumerable<T>`) odpowiednich obiektów.</span><span class="sxs-lookup"><span data-stu-id="16fa4-157">A `QArray` class has a constructor that can take any ordered collection (`IEnumerable<T>`) of appropriate objects.</span></span>
-* <span data-ttu-id="16fa4-158">Pusta krotka, `()` w języku Q#, jest reprezentowana przez element `QVoid.Instance` w języku C#.</span><span class="sxs-lookup"><span data-stu-id="16fa4-158">The empty tuple, `()` in Q#, is represented by `QVoid.Instance` in C#.</span></span>
-* <span data-ttu-id="16fa4-159">Niepuste krotki są reprezentowane jako wystąpienia `ValueTuple` programu .NET.</span><span class="sxs-lookup"><span data-stu-id="16fa4-159">Non-empty tuples are represented as .NET `ValueTuple` instances.</span></span>
-* <span data-ttu-id="16fa4-160">Zdefiniowane przez użytkownika typy języka Q# są przekazywane jako typy podstawowe.</span><span class="sxs-lookup"><span data-stu-id="16fa4-160">Q# user-defined types are passed as their base type.</span></span>
-* <span data-ttu-id="16fa4-161">Aby przekazać operację lub funkcję do metody `Run`, należy uzyskać wystąpienie klasy operacji lub funkcji przy użyciu metody `Get<>` symulatora.</span><span class="sxs-lookup"><span data-stu-id="16fa4-161">To pass an operation or a function to a `Run` method, you have to obtain an   instance of the operation's or function's class, using the simulator's `Get<>` method.</span></span>
+## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a><span data-ttu-id="7f0fe-106">Symulatory kwantowe zestawu Quantum Development Kit (QDK)</span><span class="sxs-lookup"><span data-stu-id="7f0fe-106">The Quantum Development Kit (QDK) quantum simulators</span></span>
 
-### <a name="processing-the-results"></a><span data-ttu-id="16fa4-162">Przetwarzanie wyników</span><span class="sxs-lookup"><span data-stu-id="16fa4-162">Processing the Results</span></span>
-
-<span data-ttu-id="16fa4-163">Wyniki algorytmu kwantowego są zwracane z metody `Run`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-163">The results of the quantum algorithm are returned from the `Run` method.</span></span>
-<span data-ttu-id="16fa4-164">Metoda `Run` jest wykonywana asynchronicznie, dlatego zwraca wystąpienie klasy <xref:System.Threading.Tasks.Task`1>.</span><span class="sxs-lookup"><span data-stu-id="16fa4-164">The `Run` method executes asynchronously thus it returns an instance of <xref:System.Threading.Tasks.Task`1>.</span></span>
-<span data-ttu-id="16fa4-165">Istnieje wiele sposobów uzyskiwania rzeczywistych wyników operacji.</span><span class="sxs-lookup"><span data-stu-id="16fa4-165">There are multiple ways to get the actual operation's results.</span></span> <span data-ttu-id="16fa4-166">Najprostszym z nich jest użycie właściwości [`Result`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result) klasy `Task`:</span><span class="sxs-lookup"><span data-stu-id="16fa4-166">The simplest is by using the `Task`'s [`Result` property](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result):</span></span>
-
-```csharp
-    var res = BellTest.Run(sim, 1000, initial).Result;
-```
-<span data-ttu-id="16fa4-167">Można jednak użyć innych technik, takich jak użycie metody [`Wait`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait) lub słowa kluczowego [`await`](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) języka C#.</span><span class="sxs-lookup"><span data-stu-id="16fa4-167">but other techniques, like using the [`Wait` method](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait) or C# [`await` keyword](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) will also work.</span></span>
-
-<span data-ttu-id="16fa4-168">Podobnie jak w przypadku argumentów, krotki języka Q# są reprezentowane jako wystąpienia `ValueTuple`, a tablice języka Q# są reprezentowane jako wystąpienia `QArray`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-168">As with arguments, Q# tuples are represented as `ValueTuple` instances and Q# arrays are represented as `QArray` instances.</span></span>
-<span data-ttu-id="16fa4-169">Typy zdefiniowane przez użytkownika są zwracane jako typy podstawowe.</span><span class="sxs-lookup"><span data-stu-id="16fa4-169">User-defined types are returned as their base types.</span></span>
-<span data-ttu-id="16fa4-170">Pusta krotka `()` jest zwracana jako wystąpienie klasy `QVoid`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-170">The empty tuple, `()`, is returned as an instance of the `QVoid` class.</span></span>
-
-<span data-ttu-id="16fa4-171">Wiele algorytmów kwantowych wymaga rozbudowanego przetwarzania końcowego w celu uzyskania użytecznych odpowiedzi.</span><span class="sxs-lookup"><span data-stu-id="16fa4-171">Many quantum algorithms require substantial post-processing to derive useful answers.</span></span>
-<span data-ttu-id="16fa4-172">Na przykład kwantowa część algorytmu Shora jest tylko początkiem obliczeń, które umożliwiają rozłożenie liczby na czynniki.</span><span class="sxs-lookup"><span data-stu-id="16fa4-172">For instance, the quantum part of Shor's algorithm is just the beginning of a computation that finds the factors of a number.</span></span>
-
-<span data-ttu-id="16fa4-173">W większości przypadków takie przetwarzanie końcowe najłatwiej jest zrealizować w klasycznym sterowniku.</span><span class="sxs-lookup"><span data-stu-id="16fa4-173">In most cases, it is simplest and easiest to do this sort of post-processing in the classical driver.</span></span>
-<span data-ttu-id="16fa4-174">Udostępnienie wyników użytkownikowi lub zapisanie ich na dysku jest możliwe tylko za pomocą klasycznego sterownika.</span><span class="sxs-lookup"><span data-stu-id="16fa4-174">Only the classical driver can report results to the user or write them to disk.</span></span>
-<span data-ttu-id="16fa4-175">Klasyczny sterownik ma dostęp do bibliotek analitycznych i innych funkcji matematycznych, które nie są dostępne w języku Q#.</span><span class="sxs-lookup"><span data-stu-id="16fa4-175">The classical driver will have access to analytical libraries and other mathematical functions that are not exposed in Q#.</span></span>
+<span data-ttu-id="7f0fe-107">Symulator kwantowy zapewnia implementacje kwantowych typów pierwotnych algorytmu.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-107">The quantum simulator is responsible for providing implementations of quantum primitives for an algorithm.</span></span> <span data-ttu-id="7f0fe-108">Obejmują one operacje pierwotne, takie jak `H`, `CNOT` i `Measure`, a także śledzenie kubitów i zarządzanie nimi.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-108">This includes primitive operations such as `H`, `CNOT`, and `Measure`, as well as qubit management and tracking.</span></span> <span data-ttu-id="7f0fe-109">Zestaw QDK zawiera różne klasy symulatorów kwantowych reprezentujące różne modele wykonywania dla tego samego algorytmu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-109">The QDK includes different classes of quantum simulators representing different execution models for the same quantum algorithm.</span></span> 
 
 
-## <a name="failures"></a><span data-ttu-id="16fa4-176">Błędy</span><span class="sxs-lookup"><span data-stu-id="16fa4-176">Failures</span></span>
+<span data-ttu-id="7f0fe-110">Każdy typ symulatora kwantowego może udostępniać odrębną implementację typów pierwotnych.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-110">Each type of quantum simulator can provide different implementations of these primitives.</span></span> <span data-ttu-id="7f0fe-111">Na przykład [symulator pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator) uruchamia algorytm kwantowy, w pełni symulując [wektor stanu kwantowego](xref:microsoft.quantum.glossary#quantum-state), podczas gdy [symulator śledzenia komputera kwantowego](xref:microsoft.quantum.machines.qc-trace-simulator.intro) w ogóle nie uwzględnia rzeczywistego stanu kwantowego.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-111">For example, the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator) runs the quantum algorithm by fully simulating the [quantum state vector](xref:microsoft.quantum.glossary#quantum-state), whereas the [quantum computer trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) doesn't consider the actual quantum state at all.</span></span> <span data-ttu-id="7f0fe-112">Zamiast tego śledzi on użycie bramy, kubitów oraz innych zasobów.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-112">Rather, it tracks gate, qubit, and other resource usage for the algorithm.</span></span>
 
-<span data-ttu-id="16fa4-177">Gdy podczas operacji nastąpi wykonywanie instrukcji `fail` języka Q#, zostanie zgłoszony wyjątek `ExecutionFailException`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-177">When the Q# `fail` statement is reached during the execution of an operation, an `ExecutionFailException` is thrown.</span></span>
+### <a name="quantum-machine-classes"></a><span data-ttu-id="7f0fe-113">Klasy maszyn kwantowych</span><span class="sxs-lookup"><span data-stu-id="7f0fe-113">Quantum machine classes</span></span>
 
-<span data-ttu-id="16fa4-178">Ze względu na użycie klasy `System.Task` w metodzie `Run` wyjątek zgłoszony w wyniku instrukcji `fail` zostanie opakowany w klasę `System.AggregateException`.</span><span class="sxs-lookup"><span data-stu-id="16fa4-178">Due to the use of `System.Task` in the `Run` method, the exception thrown as a result of a `fail` statement will be wrapped into a `System.AggregateException`.</span></span>
-<span data-ttu-id="16fa4-179">Aby znaleźć faktyczną przyczynę błędu, należy wykonać iterację we właściwości `AggregateException` 
-`InnerExceptions`, na przykład:</span><span class="sxs-lookup"><span data-stu-id="16fa4-179">To find the actual reason for the failure, you need to iterate into the `AggregateException` 
-`InnerExceptions`, for example:</span></span>
+<span data-ttu-id="7f0fe-114">W przyszłości w zestawie QDK zostaną zdefiniowane dodatkowe klasy maszyn kwantowych umożliwiające obsługę innych typów symulacji oraz wykonywanie na sprzęcie kwantowym.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-114">In the future, the QDK will define additional quantum machine classes to support other types of simulation and to support execution on quantum hardware.</span></span> <span data-ttu-id="7f0fe-115">Zapewnienie niezmienności algorytmu przy różnych bazowych implementacjach na maszynach ułatwia jego testowanie i debugowanie w symulacji, a następnie uruchamianie na używanym komputerze z poczuciem pewności, że nie został zmieniony.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-115">Allowing the algorithm to stay constant while varying the underlying machine implementation makes it easy to test and debug an algorithm in simulation and then run it on real hardware with confidence that the algorithm hasn't changed.</span></span>
 
-```csharp
+<span data-ttu-id="7f0fe-116">Zestaw QDK zawiera kilka klas maszyn kwantowych, z których wszystkie są zdefiniowane w przestrzeni nazw `Microsoft.Quantum.Simulation.Simulators`.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-116">The QDK includes several quantum machine classes, all defined in the `Microsoft.Quantum.Simulation.Simulators` namespace.</span></span>
 
-            try
-            {
-                using(var sim = new QuantumSimulator())
-                {
-                    /// call your operations here...
-                }
-            }
-            catch (AggregateException e)
-            {
-                // Unwrap AggregateException to get the message from Q# fail statement.
-                // Go through all inner exceptions.
-                foreach (Exception inner in e.InnerExceptions)
-                {
-                    // If the exception of type ExecutionFailException
-                    if (inner is ExecutionFailException failException)
-                    {
-                        // Print the message it contains
-                        Console.WriteLine($" {failException.Message}");
-                    }
-                }
-            }
-```
+|<span data-ttu-id="7f0fe-117">Symulator</span><span class="sxs-lookup"><span data-stu-id="7f0fe-117">Simulator</span></span> |<span data-ttu-id="7f0fe-118">Klasa</span><span class="sxs-lookup"><span data-stu-id="7f0fe-118">Class</span></span>|<span data-ttu-id="7f0fe-119">Opis</span><span class="sxs-lookup"><span data-stu-id="7f0fe-119">Description</span></span>|
+|-----|------|---|
+|[<span data-ttu-id="7f0fe-120">Symulator pełnego stanu</span><span class="sxs-lookup"><span data-stu-id="7f0fe-120">Full state simulator</span></span>](xref:microsoft.quantum.machines.full-state-simulator)| `QuantumSimulator` | <span data-ttu-id="7f0fe-121">Uruchamia oraz debuguje algorytmy kwantowe i jest ograniczony do około 30 kubitów.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-121">Runs and debugs quantum algorithms, and is limited to about 30 qubits.</span></span> |
+|[<span data-ttu-id="7f0fe-122">Proste narzędzie do szacowania zasobów</span><span class="sxs-lookup"><span data-stu-id="7f0fe-122">Simple resources estimator</span></span>](xref:microsoft.quantum.machines.resources-estimator)| `ResourcesEstimator` | <span data-ttu-id="7f0fe-123">Wykonuje ogólną analizę zasobów wymaganych do uruchomienia algorytmu kwantowego i obsługuje tysiące kubitów.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-123">Performs a top level analysis of the resources needed to run a quantum algorithm, and supports thousands of qubits.</span></span>|
+|[<span data-ttu-id="7f0fe-124">Oparte na śledzeniu narzędzie do szacowania zasobów</span><span class="sxs-lookup"><span data-stu-id="7f0fe-124">Trace-based resource estimator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)|  `QCTraceSimulator` |<span data-ttu-id="7f0fe-125">Uruchamia zaawansowaną analizę zużycia zasobów dla całego grafu wywołań algorytmu i obsługuje tysiące kubitów.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-125">Runs advanced analysis of resources consumptions for the algorithm's entire call-graph, and supports thousands of qubits.</span></span>|
+|[<span data-ttu-id="7f0fe-126">Symulator Toffoli</span><span class="sxs-lookup"><span data-stu-id="7f0fe-126">Toffoli simulator</span></span>](xref:microsoft.quantum.machines.toffoli-simulator)| `ToffoliSimulator` |<span data-ttu-id="7f0fe-127">Symuluje algorytmy kwantowe ograniczone do operacji `X` i `CNOT` oraz kontrolowanych wielokrotnie operacji kwantowych `X`; obsługuje tysiące kubitów.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-127">Simulates quantum algorithms that are limited to `X`, `CNOT`, and multi-controlled `X` quantum operations, and supports million of qubits.</span></span> |
 
-## <a name="other-classical-languages"></a><span data-ttu-id="16fa4-180">Inne języki klasyczne</span><span class="sxs-lookup"><span data-stu-id="16fa4-180">Other Classical Languages</span></span>
+## <a name="invoking-the-quantum-simulator"></a><span data-ttu-id="7f0fe-128">Wywoływanie symulatora kwantowego</span><span class="sxs-lookup"><span data-stu-id="7f0fe-128">Invoking the quantum simulator</span></span>
 
-<span data-ttu-id="16fa4-181">Podane przykłady zostały napisane w językach C#, F# i Python, ale zestaw Quantum Development Kit obsługuje także pisanie programów klasycznych hostów w innych językach.</span><span class="sxs-lookup"><span data-stu-id="16fa4-181">While the samples we have provided are in C#, F#, and Python, the Quantum Development Kit also supports writing classical host programs in other languages.</span></span>
-<span data-ttu-id="16fa4-182">[Można na przykład napisać](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net) program hosta w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="16fa4-182">For example, if you want to write a host program in Visual Basic, [it should work just fine](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net).</span></span>
+<span data-ttu-id="7f0fe-129">W sekcji [Sposoby uruchamiania programu w języku Q#](xref:microsoft.quantum.guide.host-programs) przedstawiono trzy sposoby przekazywania kodu w języku Q# do symulatora kwantowego:</span><span class="sxs-lookup"><span data-stu-id="7f0fe-129">In [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs), three ways of passing the Q# code to the quantum simulator are demonstrated:</span></span> 
+
+* <span data-ttu-id="7f0fe-130">Za pomocą wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="7f0fe-130">Using the command line</span></span>
+* <span data-ttu-id="7f0fe-131">Za pomocą programu hosta w języku Python</span><span class="sxs-lookup"><span data-stu-id="7f0fe-131">Using a Python host program</span></span>
+* <span data-ttu-id="7f0fe-132">Za pomocą programu hosta w języku C#</span><span class="sxs-lookup"><span data-stu-id="7f0fe-132">Using a C# host program</span></span>
+
+<span data-ttu-id="7f0fe-133">Maszyny kwantowe to normalne wystąpienia klas .NET, dlatego tworzy się je przez wywołanie konstruktora, tak jak w przypadku dowolnej klasy .NET.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-133">Quantum machines are instances of normal .NET classes, so they are created by invoking their constructor, just like any .NET class.</span></span> <span data-ttu-id="7f0fe-134">To, jak zostanie to zrobione, zależy sposobu uruchamiania programu w języku Q#.</span><span class="sxs-lookup"><span data-stu-id="7f0fe-134">How you do this depends on how you run the Q# program.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="7f0fe-135">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="7f0fe-135">Next steps</span></span>
+
+* <span data-ttu-id="7f0fe-136">Aby uzyskać szczegółowe informacje o sposobie wywoływania maszyn docelowych dla programów w języku Q# w różnych środowiskach, zobacz [Sposoby uruchamiania programu w języku Q#](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="7f0fe-136">For details about how to invoke target machines for Q# programs in different environments, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
