@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885155"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871403"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Aktualizowanie zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -53,7 +53,7 @@ Niezależnie od tego, czy hostujesz operacje języka Q# przy użyciu środowiska
 5. W każdym z plików .csproj określ zestaw SDK `Microsoft.Quantum.Sdk`, jak pokazano poniżej. Zwróć uwagę, że numer wersji powinien odpowiadać najnowszej dostępnej wersji — aby ją określić, sprawdź [informacje o wersji](https://docs.microsoft.com/quantum/relnotes/).
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. Zapisz i zamknij wszystkie pliki w rozwiązaniu.
@@ -93,7 +93,7 @@ Możesz teraz przejść do sekcji [Aktualizowanie rozszerzenia QDK dla programu 
     dotnet clean [project_name].csproj
     ```
 
-3. Określ bieżącą wersję zestawu QDK. Aby ją znaleźć, możesz sprawdzić [informacje o wersji](https://docs.microsoft.com/quantum/relnotes/). Wersja będzie miała format podobny do następującego: `0.11.2006.207`.
+3. Określ bieżącą wersję zestawu QDK. Aby ją znaleźć, możesz sprawdzić [informacje o wersji](https://docs.microsoft.com/quantum/relnotes/). Wersja będzie miała format podobny do następującego: `0.12.20072031`.
 
 4. W każdym z plików `.csproj` wykonaj następujące czynności:
 
@@ -108,7 +108,7 @@ Możesz teraz przejść do sekcji [Aktualizowanie rozszerzenia QDK dla programu 
     - Zmień odwołanie do zestawu SDK w definicji projektu. Upewnij się, że numer wersji odpowiada wartości określonej w **kroku 3**.
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - Usuń odwołanie do pakietu `Microsoft.Quantum.Development.Kit`, jeśli jest określone w następującym wpisie:
@@ -127,7 +127,7 @@ Możesz teraz przejść do sekcji [Aktualizowanie rozszerzenia QDK dla programu 
         Odwołania do pakietów mają następujący format:
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - Zapisz zaktualizowany plik.
@@ -194,7 +194,7 @@ Procedura aktualizacji zależy od tego, czy program został pierwotnie zainstalo
     Powinny zostać wyświetlone następujące dane wyjściowe:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -216,7 +216,7 @@ Procedura aktualizacji zależy od tego, czy program został pierwotnie zainstalo
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -267,7 +267,7 @@ Procedura aktualizacji zależy od tego, czy program został pierwotnie zainstalo
     Dane wyjściowe powinny być podobne do następujących:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -302,16 +302,19 @@ Teraz możesz używać zaktualizowanego jądra IQ# do uruchamiania w istniejący
     - Wybierz rozszerzenie **Microsoft Quantum Development Kit for Visual Studio Code**
     - Załaduj ponownie rozszerzenie
 
-2. Zaktualizuj szablony projektów kwantowych:
-
-   - Przejdź do pozycji **Widok** -> **Paleta poleceń**
-   - Wybierz pozycję **Q#: Instalowanie szablonów projektów**
-   - Po kilku sekundach powinno zostać wyświetlone okno podręczne z potwierdzeniem: „project templates installed successfully” (pomyślnie zainstalowano szablony projektów).
-
 ### <a name="c-using-the-dotnet-command-line-tool"></a>Język C# i narzędzie wiersza polecenia `dotnet`
 
 1. Zaktualizuj szablony projektów kwantowych dla platformy .NET
 
+    Za pomocą wiersza polecenia:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Alternatywnie, jeśli zamierzasz używać szablonów wiersza polecenia i masz już zainstalowane rozszerzenie QDK programu VS Code, możesz zaktualizować szablony projektu z poziomu samego rozszerzenia:
+
+   - [Aktualizowanie rozszerzenia QDK](#update-vs-code-qdk-extension)
+   - W programie VS Code przejdź do pozycji **View** -> **Command Palette** (Widok, Paleta poleceń).
+   - Wybierz pozycję **Q#: Install command line project templates (Q#: zainstaluj szablony projektu wiersza polecenia)**
+   - Po kilku sekundach powinno zostać wyświetlone okno podręczne z potwierdzeniem: „project templates installed successfully” (pomyślnie zainstalowano szablony projektów).

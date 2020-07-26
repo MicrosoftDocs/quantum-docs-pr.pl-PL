@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 8a878e8f930f4b898f4de35751e4a39cc8716cec
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884263"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871454"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
 
@@ -28,9 +28,9 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
 
 ### <a name="install-using-conda-recommended"></a>[Instalowanie przy użyciu środowiska conda (zalecane)](#tab/tabid-conda)
 
-1. Zainstaluj narzędzie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) lub [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Zainstaluj narzędzie [Miniconda](https://docs.conda.io/en/latest/miniconda.html) lub [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Uwaga:** Wymagana jest instalacja 64-bitowa.
 
-1. Otwórz monit narzędzia Anaconda.
+1. Otwórz program Anaconda Prompt.
 
    - Lub, jeśli wolisz używać programu PowerShell albo pwsh: otwórz powłokę, uruchom polecenie `conda init powershell`, a następnie zamknij i ponownie otwórz powłokę.
 
