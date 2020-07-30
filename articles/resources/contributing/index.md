@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871420"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436570"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Wpółtworzenie zestawu Quantum Development Kit
 
@@ -19,7 +19,7 @@ Zestaw Quantum Development Kit to więcej niż kolekcja narzędzi do pisania pro
 Jest częścią szerokiej społeczności, której członkowie odkrywają przetwarzanie kwantowe, prowadzą badania nad algorytmami kwantowymi, opracowują nowe aplikacje dla urządzeń kwantowych i w inny sposób działają w celu jak najlepszego wykorzystania programowania kwantowego.
 Jako element tej społeczności zestaw Quantum Development Kit ma na celu oferowanie deweloperom kwantowym dysponującym różną wiedzą i doświadczeniem funkcje, których potrzebują.
 Twój wkład we współtworzenie zestawu Quantum Development Kit pomaga w realizacji tego celu poprzez ulepszanie narzędzi używanych przez innych deweloperów kwantowych, sposobu dokumentowania tych narzędzi, a nawet poprzez tworzenie nowych funkcji i funkcjonalności, dzięki którym cała społeczność programowania kwantowego staje się lepszym miejscem do odkrywania i tworzenia.
-Jesteśmy bardzo wdzięczni za Twój wkład i za możliwość współpracy z Tobą w celu uczynienia naszej społeczności jak najlepszą.
+Jesteśmy bardzo wdzięczni za Twój wkład i za możliwość współpracy z Tobą w celu uczynienia naszej społeczności jak najlepszą. 
 
 W tym przewodniku przedstawiono kilka wskazówek na temat sposobu, w jaki możesz uczynić swój wkład najbardziej przydatnym dla szerszej społeczności programowania kwantowego.
 

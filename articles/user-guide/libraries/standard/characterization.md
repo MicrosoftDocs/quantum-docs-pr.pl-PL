@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275765"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436529"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -96,7 +96,7 @@ Dokładne wnioskowanie bayesowskie jest w sposób nieodpowiedniy do przeprowadze
 Aby wyświetlić ten obraz, chcielibyśmy poznać zmienną $n $-bitową $x $.
 Wcześniejsza dystrybucja $ \Pr (x) $ ma obsługę ponad $2 ^ n $ hipotetycznych wartości $x $.
 Oznacza to, że jeśli potrzebujemy wysoce dokładnego oszacowania $x $, szacowanie fazy bayesowskie może wymagać zabraniania pamięci i czasu przetwarzania.
-Chociaż w przypadku niektórych aplikacji, takich jak symulacja Quantum, wymagana dokładność limitted nie wyklucza takich metod inne aplikacje, takie jak skró, nie można użyć dokładnej bayesowskie wnioskowania w ramach etapu szacowania fazy.  Z tego powodu udostępniamy również implementacje przybliżonych metod bayesowskie, takich jak [szacowanie etapowych przeszukiwań (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) , a także inne podejścia niebayesowskieowe, takie jak [niezawodna Ocena faz](xref:microsoft.quantum.characterization.robustphaseestimation).
+Chociaż w przypadku niektórych aplikacji, takich jak symulacja Quantum, wymagana dokładność limitted nie wyklucza takich metod inne aplikacje, takie jak skró, nie można użyć dokładnej bayesowskie wnioskowania w ramach etapu szacowania fazy.  Z tego powodu udostępniamy również implementacje przybliżonych metod bayesowskie, takich jak [szacowanie etapowych przeszukiwań (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) , a także inne podejścia niebayesowskieowe, takie jak [niezawodna Ocena faz](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Niezawodna Ocena fazy ###
 
