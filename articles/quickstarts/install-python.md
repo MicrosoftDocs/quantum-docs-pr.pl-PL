@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871590"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436542"
 ---
 # <a name="develop-with-q-and-python"></a>Programowanie przy użyciu języków Q# i Python
 
@@ -97,7 +97,7 @@ Teraz możesz już zweryfikować instalację pakietu `qsharp` języka Python, pi
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. Ze środowiska utworzonego podczas instalacji (tj. środowiska conda lub środowiska języka Python, w którym zainstalowano element `qsharp`), uruchom program:
@@ -106,7 +106,7 @@ Teraz możesz już zweryfikować instalację pakietu `qsharp` języka Python, pi
     python host.py
     ```
 
-1. Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `Zero` lub `One`. W przypadku wielokrotnego uruchamiania programu każdy wynik powinien być wyświetlany przez w przybliżeniu połowę czasu.
+1. Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `0` lub `1`. W przypadku wielokrotnego uruchamiania programu każdy wynik powinien być wyświetlany przez w przybliżeniu połowę czasu.
 
 > [!NOTE]
 > * Ten kod języka Python to zwykły program w języku Python. Możesz użyć dowolnego środowiska języka Python, w tym notesów Jupyter Notebook opartych na języku Python, aby napisać program w języku Python i wywołać operacje języka Q#. Program w języku Python może zaimportować operacje języka Q# z dowolnych plików QS znajdujących się w tym samym folderze co sam kod języka Python.
