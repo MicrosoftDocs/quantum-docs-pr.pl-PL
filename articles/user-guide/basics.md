@@ -1,31 +1,34 @@
 ---
-title: Podstawowe informacje o numerze Q
-description: 'Podstawowe pojęcia dotyczące pytań i odpowiedzi #'
+title: Q#Nazwie
+description: Podstawowe pojęcia związane zQ#
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: 45e6f2f33dafc2aec177091d3cfa94aca14fbf0a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415367"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869651"
 ---
-# <a name="q-basics"></a>Podstawowe informacje o numerze Q
+# <a name="no-locq-basics"></a>Q#Nazwie
 
-W tym artykule przedstawiono krótkie wprowadzenie do podstawowych bloków konstrukcyjnych języka Q #.
+W tym artykule przedstawiono krótkie wprowadzenie do podstawowych bloków konstrukcyjnych Q# .
 
-Aby dowiedzieć się, co to jest funkcja Q # i gdzie jest ona zgodna ze składnikiem zestawu Quantum Development Kit, zobacz [co to jest q #?](xref:microsoft.quantum.overview.q-sharp). 
+Aby Q# dowiedzieć się, co to jest i gdzie mieści się w ramach podstawowego składnika zestawu Quantum Development Kit, zobacz [co to jest Q# ?](xref:microsoft.quantum.overview.q-sharp). 
 
 ## <a name="what-is-a-quantum-program"></a>Co to jest program Quantum?
 
 Z perspektywy technicznej, program Quantum jest określonym zestawem klasycznych podprocedur, które po wywołaniu należy wykonać pewne operacje w systemie Quantum.
-Ważnym wynikiem tego widoku jest to, że program Q # nie bezpośrednio modeluje qubits, ale raczej opisuje, jak klasyczny komputer współdziała z tymi qubitsami.
-Zgodnie z projektem, Q # nie definiuje bezpośrednio Stanów Quantum lub innych właściwości Mechanics Quantum.
+Istotną konsekwencją tego widoku jest to, że Q# program nie jest bezpośrednio modelem qubits, ale raczej opisuje, w jaki sposób klasyczny komputer współdziała z tymi qubitsami.
+Zgodnie z projektem, nie Q# definiuje bezpośrednio Stanów Quantum ani innych właściwości Mechanics Quantum.
 Na przykład rozważmy stan $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ omówiony w przewodniku [koncepcji obliczeniowej usługi Quantum](xref:microsoft.quantum.concepts.intro) .
-Aby przygotować ten stan w Q #, Zacznij od faktów, że qubits są inicjowane w stanie $ \ket {0} $ i że $ \ket{+} = H\ket {0} $, gdzie $H $ jest [przekształceniem Hadamard](xref:microsoft.quantum.glossary#hadamard), implementowanym przez [ `H` operację](xref:microsoft.quantum.intrinsic.h). Podstawowy kod Q #, aby zainicjować i przekształcić qubit, wygląda następująco:
+Aby przygotować ten stan w programie Q# , Zacznij od faktów, że qubits są inicjowane w stanie $ \ket {0} $ i że $ \ket{+} = H\ket {0} $, gdzie $H $ to [Hadamard Transform](xref:microsoft.quantum.glossary#hadamard), zaimplementowany przez [ `H` operację](xref:microsoft.quantum.intrinsic.h). Kod podstawowy Q# do zainicjowania i przekształcenia qubit jest następujący:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -36,42 +39,42 @@ using (qubit = Qubit()) {
 ```
 Aby uzyskać więcej informacji na temat inicjowania lub *alokowania*qubits, zobacz [Praca z qubits](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-q"></a>Stany Quantum w Q #
+## <a name="quantum-states-in-no-locq"></a>Stany Quantum wQ#
 
-Z tego powodu poprzedni program nie odwołuje się jawnie do stanu w odpowiedzi Q #, ale został *opisany w tym, jak* program przerobił stan.
+Z tego powodu poprzedni program nie odwołuje się jawnie do stanu w ramach Q# programu, ale opisano, w jaki sposób ten program *przekształca* stan.
 Korzystając z tej metody, można całkowicie niezależny od na temat tego, co stan Quantum *jest* nawet na każdej maszynie docelowej, co może mieć różne interpretacje w zależności od maszyny. 
 
-Program Q # nie może Introspect stanu qubit.
+Q#Program nie może Introspect stanu qubit.
 Zamiast tego program może wywoływać operacje, takie jak [`Measure`](xref:microsoft.quantum.intrinsic.measure) Aby poznać informacje z qubit i wywoływać operacje, takie jak [`X`](xref:microsoft.quantum.intrinsic.x) i [`H`](xref:microsoft.quantum.intrinsic.h) do działania na stanie qubit.
-Te *operacje są wykonywane* tylko w konkretnym miejscu przez maszynę docelową używaną do uruchamiania określonego programu Q #.
+Te *operacje są wykonywane* tylko w konkretnym miejscu przez maszynę docelową używaną do uruchamiania określonego Q# programu.
 Na przykład, jeśli uruchamiasz program w [symulatorze pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator), symulator wykonuje odpowiednie operacje matematyczne w symulowanym systemie Quantum.
-Jednak w przyszłości, gdy maszyna docelowa jest rzeczywistym komputerem z systemem Quantum, wywołanie takich operacji w Q # kieruje komputer Quantum do wykonywania odpowiednich *rzeczywistych* operacji na *rzeczywistym* systemie Quantum, na przykład precyzyjne impulsy laserowe.
+Jednak w przyszłości, gdy maszyna docelowa jest rzeczywistym komputerem z systemem Quantum, wywołanie takich operacji powoduje Q# kierowanie komputera Quantum do wykonywania odpowiednich *rzeczywistych* operacji na *rzeczywistym* systemie Quantum, na przykład precyzyjne impulsy laserowe.
 
-Program Q # ponownie łączy te operacje jako zdefiniowane przez maszynę docelową w celu utworzenia nowych, wyższych operacji na potrzeby obliczeń Quantum.
-W ten sposób Q # ułatwia wyrażanie logiki podstawowych algorytmów Quantum i hybrydowych procesów Quantum — klasycznych, a także ogólnie w odniesieniu do struktury maszyny docelowej lub symulatora.
+Q#Program ponownie łączy te operacje w sposób zdefiniowany przez maszynę docelową w celu utworzenia nowych, wyższych operacji do wyrażenia Quantum obliczeń.
+W ten sposób można Q# łatwo wyrażać logikę podstawowych algorytmów Quantum i hybrydowe, a także ogólnie w odniesieniu do struktury maszyny docelowej lub symulatora.
 
-## <a name="q-operations-and-functions"></a>Operacje i funkcje pytań i odpowiedzi
+## <a name="no-locq-operations-and-functions"></a>Q#operacje i funkcje
 
-W konkretnym przypadku program Q # obejmuje *operacje*, *funkcje*i wszelkie typy zdefiniowane przez użytkownika. 
+W konkretnym przypadku Q# program składa się z *operacji*, *funkcji*i wszystkich typów zdefiniowanych przez użytkownika. 
 
-Operacje są używane do opisywania transformacji systemów Quantum i są najbardziej podstawowymi blokami konstrukcyjnymi programów Q #. Każda operacja zdefiniowana w Q # może następnie wywołać dowolną liczbę innych operacji.
+Operacje są używane do opisywania transformacji systemów Quantum i są najbardziej podstawowymi blokami konstrukcyjnymi Q# programów. Każda operacja zdefiniowana w programie Q# może następnie wywołać dowolną liczbę innych operacji.
 
 W przeciwieństwie do operacji, funkcje są używane do opisywania przejrzystie *deterministycznych* zachowań klasycznych i nie mają żadnych efektów poza obliczaniem klasycznych wartości. Załóżmy na przykład, że chcesz zmierzyć qubits na końcu programu i dodać wyniki pomiarów do tablicy.
 W tym przypadku `Measure` jest *operacją* , która instruuje maszynę docelową, aby wykonywała pomiary w qubits (rzeczywista lub symulowana). W tym samym czasie *Funkcja* obsługuje klasyczny proces dodawania zwracanych wyników do tablicy.
 
-Razem operacje i funkcje są nazywane *możliwymi*do przełożenia. Ich podstawowa struktura i zachowanie są wprowadzane i szczegółowo opisane w [operacjach i funkcjach w Q #](xref:microsoft.quantum.guide.operationsfunctions).
+Razem operacje i funkcje są nazywane *możliwymi*do przełożenia. Ich podstawowa struktura i zachowanie są wprowadzane i szczegółowo opisane w temacie [operacje Q# i funkcje w ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="q-syntax-overview"></a>Omówienie składni Q #
+## <a name="no-locq-syntax-overview"></a>Q#Omówienie składni
 
 Składnia języka opisuje różne kombinacje symboli, które tworzą poprawny w składni program.
-W polu Q # elementy składni są klasyfikowane do trzech różnych grup: typów, wyrażeń i instrukcji.
+W programie Q# elementy składni są klasyfikowane do trzech różnych grup: typów, wyrażeń i instrukcji.
 
-### <a name="types"></a>Typy
-Q # to wulgarny język, w taki sposób, że staranne użycie typów może pomóc kompilatorowi zapewnić silne gwarancje dotyczące programów Q # w czasie kompilacji.
-Oprócz standardowych i opartych na Quantum typów pierwotnych, na przykład,,, `Int` `Bool` `Qubit` i `Result` , Q # zapewnia obsługę typów zdefiniowanych przez użytkownika.
+### <a name="types"></a>Types
+Q#jest językiem o jednoznacznie określonym typie, w taki sposób, że staranne użycie typów może pomóc kompilatorowi zapewnić mocne gwarancje dotyczące Q# programów w czasie kompilacji.
+Oprócz standardowych i opartych na Quantum typów pierwotnych, na przykład,,, `Int` `Bool` `Qubit` i `Result` , Q# zapewnia obsługę typów zdefiniowanych przez użytkownika.
 
-Aby zapoznać się z opisami wszystkich typów pierwotnych, szczegóły dotyczące typów tablic i krotek oraz kroki definiowania nowych typów w pliku Q #, zobacz [typy w Q #](xref:microsoft.quantum.guide.types).
+Aby zapoznać się z opisami wszystkich typów pierwotnych, szczegóły dotyczące typów tablic i krotek oraz kroki definiowania nowych typów w Q# pliku, zobacz [typy w Q# ](xref:microsoft.quantum.guide.types).
 
 ### <a name="expressions"></a>Wyrażenia
 Wyrażenie w języku programowania jest kombinacją jednej lub więcej stałych, zmiennych, operatorów i funkcji interpretowanych przez język programowania i obliczanych w określonej wartości.
@@ -81,12 +84,12 @@ Na przykład, `5` to `Int` literał (również wyrażenie typu `Int` ) i jeśli 
 Ponadto wyrażenie może składać się z innych wyrażeń połączonych przez niektóre operatory.
 Na przykład inne `Int` wyrażenie, którego wynikiem jest wartość `5` `2+3` .
 
-Aby uzyskać więcej informacji na temat wyrażeń i zgodnych operatorów w Q #, zobacz [wyrażenia typu w q #](xref:microsoft.quantum.guide.expressions). 
+Aby uzyskać więcej informacji na temat wyrażeń i zgodnych operatorów w Q# , zobacz [typu Expressions in Q# ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Instrukcje 
-Instrukcja jest jednostką składniową bezwzględnego języka programowania, która wyraża pewne działania do wykonania. Różnice instrukcji z wyrażeniami w tych instrukcjach nie zwracają wyników i są wykonywane wyłącznie dla ich efektów ubocznych. Wyrażenia, jednak zawsze zwracają wynik i często nie mają efektów ubocznych. W krótkim czasie są wykonywane instrukcje Q #, podczas gdy wyrażenia są oceniane.
+Instrukcja jest jednostką składniową bezwzględnego języka programowania, która wyraża pewne działania do wykonania. Różnice instrukcji z wyrażeniami w tych instrukcjach nie zwracają wyników i są wykonywane wyłącznie dla ich efektów ubocznych. Wyrażenia, jednak zawsze zwracają wynik i często nie mają efektów ubocznych. W krótkim Q# czasie są wykonywane instrukcje, podczas gdy wyrażenia są oceniane.
 
-Prosty przykład instrukcji w Q # przypisuje symbol do wyrażenia:
+Prosty przykład instrukcji w programie Q# przypisuje symbol do wyrażenia:
 ```qsharp
 let count = 5;
 ```
@@ -104,11 +107,11 @@ Można użyć dowolnego wyrażenia wywołania typu `Unit` ( `Unit` Typ nie zwrac
 Ten typ wyrażenia jest przydatny podczas wywoływania operacji na qubits, które zwracają, `Unit` ponieważ celem instrukcji jest zmodyfikowanie niejawnego stanu Quantum.
 Instrukcje oceny wyrażeń wymagają zakończenia średnika.
 
-Instrukcje służą do kompilowania niemal każdego aspektu programu Q # i żadna pojedyncza strona nie może obejmować wszystkich informacji odnoszących się do nich.
-Aby uzyskać więcej informacji na temat struktury i formatowania leksykalnego, zobacz [Q # File Structure](xref:microsoft.quantum.guide.filestructure); w przypadku przypisywania i zakresu powiązań symboli zobacz [zmienne w Q #](xref:microsoft.quantum.guide.variables); i w przypadku pętli przepływu sterowania, takich jak `for` , zobacz [przepływ sterowania w Q #](xref:microsoft.quantum.guide.controlflow).
+Instrukcje służą do kompilowania niemal każdego aspektu Q# programu, a żadna pojedyncza strona nie może obejmować wszystkich informacji odnoszących się do nich.
+Aby uzyskać więcej informacji na temat ich struktury i formatowania leksykalnego, zobacz [ Q# Struktura pliku](xref:microsoft.quantum.guide.filestructure); w przypadku przypisywania i zakresu powiązań symboli, patrz [zmienne w Q# ](xref:microsoft.quantum.guide.variables); i w przypadku pętli przepływu sterowania, takich jak `for` , zobacz [Flow Control in Q# ](xref:microsoft.quantum.guide.controlflow).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Rozpocznij uczenie o [typach w Q #](xref:microsoft.quantum.guide.types).
+Rozpocznij uczenie [na temat Q# typów w ](xref:microsoft.quantum.guide.types).
 
-Aby uzyskać więcej informacji o wykrytych i motywacji za Q #, zobacz [Dlaczego potrzebuję q #?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).
+Aby uzyskać więcej informacji o wykrytych i motywacji Q# , zobacz [dlaczego są potrzebne Q# ?](https://devblogs.microsoft.com/qsharp/why-do-we-need-q/).

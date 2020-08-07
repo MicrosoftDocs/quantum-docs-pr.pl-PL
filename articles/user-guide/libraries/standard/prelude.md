@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275669"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868444"
 ---
 # <a name="the-prelude"></a>Preludium #
 
-Kompilator Q # i maszyny docelowe dołączone do zestawu Quantum Development Kit zapewniają zestaw funkcji wewnętrznych i operacji, które mogą być używane podczas pisania programów Quantum w Q #.
+Q#Kompilator i maszyny docelowe dołączone do zestawu Quantum Development Kit zapewniają zestaw funkcji wewnętrznych i operacji, które mogą być używane podczas pisania programów Quantum w systemie Q# .
 
 ## <a name="intrinsic-operations-and-functions"></a>Operacje i funkcje wewnętrzne ##
 
@@ -27,11 +30,11 @@ Operacje wewnętrzne zdefiniowane w bibliotece standardowej w przybliżeniu nale
 - Operacje implementujące pomiary.
 
 Ze względu na to, że zestaw bram Clifford + $T $ jest [uniwersalny](xref:microsoft.quantum.concepts.multiple-qubits) dla przetwarzania Quantum, te operacje wystarczą do około wdrożenia dowolnego algorytmu Quantum w ramach niewielkiego błędu.
-Dostarczając również rotacje, program Q # umożliwia programistom współpracę w ramach jednej biblioteki bramy qubit i CNOT. Ta biblioteka jest znacznie łatwiejsza, ponieważ nie wymaga od programisty bezpośredniego wyrażenia Clifford + $T $ dekompozycji i ponieważ istnieją wysoce wydajne metody kompilowania jednego qubit unitaries do Clifford i $T $ (zobacz [tutaj](xref:microsoft.quantum.more-information) , aby uzyskać więcej informacji).
+Dostarczając również rotacje, Q# pozwala programistie na działanie w ramach jednej biblioteki bramy qubit i CNOT. Ta biblioteka jest znacznie łatwiejsza, ponieważ nie wymaga od programisty bezpośredniego wyrażenia Clifford + $T $ dekompozycji i ponieważ istnieją wysoce wydajne metody kompilowania jednego qubit unitaries do Clifford i $T $ (zobacz [tutaj](xref:microsoft.quantum.more-information) , aby uzyskać więcej informacji).
 
 Tam, gdzie to możliwe, operacje zdefiniowane w Preludium, które działają na qubits zezwala na stosowanie `Controlled` wariantu, w taki sposób, że maszyna docelowa wykona odpowiednią dekompozycję.
 
-Wiele funkcji i operacji zdefiniowanych w tej części Preludium znajdują się w @"microsoft.quantum.intrinsic" przestrzeni nazw, tak że większość plików źródłowych Q # będzie miała `open Microsoft.Quantum.Intrinsic;` dyrektywę natychmiast po wstępnej deklaracji przestrzeni nazw.
+Wiele funkcji i operacji zdefiniowanych w tej części Preludium znajdują się w @"microsoft.quantum.intrinsic" przestrzeni nazw, w taki sposób, że większość Q# plików źródłowych będzie miała `open Microsoft.Quantum.Intrinsic;` dyrektywę natychmiast po wstępnej deklaracji przestrzeni nazw.
 <xref:microsoft.quantum.core>Przestrzeń nazw jest automatycznie otwierana, dzięki czemu funkcje takie jak <xref:microsoft.quantum.core.length> mogą być używane bez `open` instrukcji.
 
 ### <a name="common-single-qubit-unitary-operations"></a>Typowe operacje jednostkowe pojedynczego qubit ###
@@ -96,9 +99,9 @@ Ma sygnaturę `(Qubit => Unit is Adj + Ctl)` i odpowiada jednemu qubitemu jednos
 \begin{Equation} \begin{bmatrix} 1 & 0 \\ \\ % fixme: obecnie używa to hakera quadwhack.
 0 & i \end{bmatrix} \end{Equation}
 
-#### <a name="rotations"></a>Obrotów ####
+#### <a name="rotations"></a>Rotacje ####
 
-Oprócz powyższych operacji Pauli i Clifford, Q # Preludium oferuje różne sposoby wyrażania rotacji.
+Oprócz operacji Pauli i Clifford powyżej, Q# Preludium oferuje różne sposoby wyrażania rotacji.
 Zgodnie z opisem w [operacjach pojedynczego qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), możliwość rotacji jest niezwykle ważna dla algorytmów Quantum.
 
 Zaczynamy od tego, że możemy wyrazić jakąkolwiek operację qubit za pomocą bram $H $ i $T $, gdzie $H $ jest operacją Hadamard, a gdzie \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % fixme: obecnie korzysta z platformy Quad back/Swagger/docs/v1..
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>Funkcje i operacje rozszerzenia ##
 
-Ponadto Preludium definiuje bogaty zestaw funkcji konwersji matematycznych i typów na poziomie platformy .NET do użycia w kodzie Q #.
+Ponadto Preludium definiuje bogaty zestaw funkcji konwersji matematycznych i typów na poziomie platformy .NET do użycia w Q# kodzie.
 Na przykład <xref:microsoft.quantum.math> przestrzeń nazw definiuje użyteczne operacje, takie jak <xref:microsoft.quantum.math.sin> i <xref:microsoft.quantum.math.log> .
 Implementacja udostępniona przez zestaw Quantum Development Kit używa klasycznej biblioteki klas .NET, co może wiązać się z dodatkową komunikacją między programami Quantum i ich klasycznymi sterownikami.
 Chociaż nie ma to problemu dla lokalnego symulatora, może to być problem z wydajnością w przypadku korzystania z zdalnego symulatora lub rzeczywistego sprzętu jako maszyny docelowej.
@@ -238,7 +241,7 @@ Ten sam komputer docelowy może wyeliminować ten wpływ na wydajność, zastęp
 ### <a name="math"></a>Math ###
 
 <xref:microsoft.quantum.math>Przestrzeń nazw zawiera wiele przydatnych funkcji z [ `System.Math` klasy](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)podstawowej biblioteki klas programu .NET.
-Te funkcje mogą być używane w taki sam sposób jak w przypadku innych funkcji Q #:
+Te funkcje mogą być używane w taki sam sposób jak inne Q# funkcje:
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-Gdzie metoda statyczna platformy .NET została przeciążona na podstawie typu argumentów, odpowiednia funkcja Q # ma adnotację z sufiksem wskazującym typ danych wejściowych:
+Gdzie metoda statyczna platformy .NET została przeciążona na podstawie typu argumentów, odpowiadająca Q# Funkcja jest oznaczona sufiksem wskazującym typ danych wejściowych:
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

@@ -1,32 +1,35 @@
 ---
-title: 'Zasady projektowania interfejsu API Q #'
-description: 'Zasady projektowania interfejsu API Q #'
+title: Q#Zasady projektowania interfejsu API
+description: Q#Zasady projektowania interfejsu API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275493"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866897"
 ---
-# <a name="q-api-design-principles"></a>Zasady projektowania interfejsu API Q #
+# <a name="no-locq-api-design-principles"></a>Q#Zasady projektowania interfejsu API
 
 ## <a name="introduction"></a>Wprowadzenie
 
-Jako język i jako platforma, Q # umożliwia użytkownikom pisanie, uruchamianie, poznawanie i eksplorowanie aplikacji Quantum.
-Aby zwiększyć możliwości użytkowników, podczas projektowania bibliotek Q # korzystamy z zestawu zasad projektowania interfejsu API, który będzie omawiał nasze projekty i aby pomóc nam w tworzeniu przydatnych bibliotek dla społeczności deweloperskiej usługi Quantum.
-W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiają stosowanie ich podczas projektowania interfejsów API pytań i odpowiedzi.
+Jako język i jako platforma, umożliwiają Q# użytkownikom pisanie, uruchamianie, poznawanie i eksplorowanie aplikacji Quantum.
+Aby zwiększyć możliwości użytkowników, podczas projektowania Q# bibliotek korzystamy z zestawu zasad projektowania interfejsu API do obsługi naszych projektów oraz do tworzenia przydatnych bibliotek dla społeczności deweloperskiej usługi Quantum.
+W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiają stosowanie ich podczas projektowania Q# interfejsów API.
 
 > [!TIP]
 > Jest to dość szczegółowy dokument, który jest przeznaczony do obsługi projektowania biblioteki i szczegółowego udziału w bibliotece.
-> Prawdopodobnie okaże się to przydatne, jeśli piszesz własne biblioteki w usłudze Q # lub jeśli chcesz uzyskać większe funkcje w [repozytorium bibliotek Q #](https://github.com/microsoft/QuantumLibraries).
+> Prawdopodobnie okaże się to przydatne, jeśli piszesz własne biblioteki w programie Q# , lub jeśli chcesz uzyskać większe funkcje do [ Q# repozytorium bibliotek](https://github.com/microsoft/QuantumLibraries).
 >
 > Z drugiej strony, jeśli chcesz dowiedzieć się, jak bardziej ogólnie współtworzyć pakiet Quantum Development Kit, zalecamy rozpoczęcie od [przewodnika po udziale](xref:microsoft.quantum.contributing).
-> Jeśli szukasz bardziej ogólnych informacji na temat sposobu, w jaki zalecamy formatowanie kodu Q #, możesz chcieć zaewidencjonować [Przewodnik po stylu](xref:microsoft.quantum.contributing.style).
+> Jeśli szukasz bardziej ogólnych informacji o tym, jak zalecamy formatowanie Q# kodu, możesz chcieć zaewidencjonować [Przewodnik po stylu](xref:microsoft.quantum.contributing.style).
 
 ## <a name="general-principles"></a>Zasady ogólne
 
@@ -81,7 +84,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ✅Twórz funkcje i **operacje projektowania w** celu tworzenia dobrze z innymi funkcjami i operacjami, zarówno w tym samym interfejsie API, jak i w wcześniej istniejących bibliotekach.
 
   *Przykłady:*
-  - @"microsoft.quantum.canon.delay"Operacja przyjmuje minimalny wpływ na dane wejściowe i w ten sposób może być używana do opóźniania aplikacji dla każdej operacji w standardowej bibliotece Q # lub zdefiniowanej przez użytkowników.
+  - @"microsoft.quantum.canon.delay"Operacja powoduje minimalny wpływ na dane wejściowe i w ten sposób może być używana do opóźniania aplikacji w ramach Q# standardowej biblioteki lub zdefiniowanej przez użytkowników.
     <!-- TODO: define bad example. -->
 
 - ✅W przypadku funkcji, a nie operacji, **należy** uwidocznić czysto zaklasyczną logikę.
@@ -246,12 +249,12 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 
   - **Rzeczowniki**:
 
-    - **Fakt**: warunek logiczny, który zależy tylko od danych wejściowych, a nie na stanie maszyny docelowej, jego środowisku lub stanu qubits maszyny. W przeciwieństwie do potwierdzenia fakt jest tylko wrażliwy na *wartości* podane dla tego faktu. Przykład:
+    - **Fakt**: warunek logiczny, który zależy tylko od danych wejściowych, a nie na stanie maszyny docelowej, jego środowisku lub stanu qubits maszyny. W przeciwieństwie do potwierdzenia fakt jest tylko wrażliwy na *wartości* podane dla tego faktu. Na przykład:
 
       *Przykłady:*
       - @"microsoft.quantum.diagnostics.equalityfacti": reprezentuje fakt dotyczący dwóch danych wejściowych z liczbą całkowitą; liczby całkowite podane jako dane wejściowe są równe siebie lub nie są niezależne od żadnego innego stanu programu.
 
-    - **Opcje:** Typ UDT zawierający kilka nazwanych elementów, które mogą działać jako argumenty opcjonalne do funkcji lub operacji. Przykład:
+    - **Opcje:** Typ UDT zawierający kilka nazwanych elementów, które mogą działać jako argumenty opcjonalne do funkcji lub operacji. Na przykład:
 
       *Przykłady:*
       - @"microsoft.quantum.machinelearning.trainingoptions"UDT zawiera nazwane elementy dla stawki szkoleniowej, rozmiar minibatch oraz inne konfigurowalne parametry szkolenia ml.

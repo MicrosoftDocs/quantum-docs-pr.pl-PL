@@ -1,29 +1,32 @@
 ---
-title: 'Wyrażenia typu w Q #'
-description: 'Dowiedz się, jak określać, odwoływać i łączyć stałe, zmienne, operatory, operacje i funkcje jako wyrażenia w Q #.'
+title: Wyrażenia wQ#
+description: Dowiedz się, jak określać, odwoływać i łączyć stałe, zmienne, operatory, operacje i funkcje jako wyrażenia w Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415392"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869617"
 ---
-# <a name="type-expressions-in-q"></a>Wyrażenia typu w Q #
+# <a name="expressions-in-no-locq"></a>Wyrażenia wQ#
 
 ## <a name="numeric-expressions"></a>Wyrażenia liczbowe
 
 Wyrażenia liczbowe są wyrażeniami typu `Int` , `BigInt` , lub `Double` .
 Oznacza to, że są to liczby całkowite lub zmiennoprzecinkowe.
 
-`Int`literały w Q # są zapisywane jako sekwencja cyfr.
+`Int`literały w Q# są zapisywane jako sekwencja cyfr.
 Szesnastkowe i binarne liczby całkowite są obsługiwane i zapisywane odpowiednio przy użyciu `0x` `0b` prefiksu i.
 
-`BigInt`literały w Q # mają kończyć się `l` `L` sufiksem lub.
+`BigInt`literały w Q# mają końcowy `l` `L` sufiks lub.
 Szesnastkowe duże liczby całkowite są obsługiwane i zapisywane z prefiksem "0x".
 W ten sposób wszystkie prawidłowe zastosowania `BigInt` literałów są następujące:
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`literały w Q # są liczbami zmiennoprzecinkowymi zapisanymi przy użyciu cyfr dziesiętnych.
+`Double`literały w Q# są liczbami zmiennoprzecinkowymi zapisanymi przy użyciu cyfr dziesiętnych.
 Mogą być napisywane z lub bez separatora dziesiętnego, `.` lub części wykładniczej wskazanej za pomocą znaku "e" lub "e" (po których dozwolone są tylko możliwe znaki minus i cyfry dziesiętne).
 Poniżej podano prawidłowe `Double` literały: `0.0` , `1.2e5` , `1e-5` .
 
@@ -86,7 +89,7 @@ Dwie `Bool` wartości literału są `true` i `false` .
 Uwzględniając wszystkie dwa wyrażenia tego samego typu pierwotnego, `==` Operatory i `!=` mogą być używane do konstruowania `Bool` wyrażenia.
 Wyrażenie ma wartość true, jeśli dwa wyrażenia są równe i FAŁSZ, jeśli nie.
 
-Wartości typów zdefiniowanych przez użytkownika mogą nie być porównywane. można porównać tylko ich nieopakowane wartości. Na przykład przy użyciu operatora "unotoka" `!` (szczegółowo wyjaśniono w [typach w Q #](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
+Wartości typów zdefiniowanych przez użytkownika mogą nie być porównywane. można porównać tylko ich nieopakowane wartości. Na przykład przy użyciu operatora "unotoka" `!` (szczegółowo wyjaśniono w [typach Q# w ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,9 +113,9 @@ Mając każde wyrażenie logiczne, `not` operator jednoargumentowy może służy
 
 ## <a name="string-expressions"></a>Wyrażenia ciągu
 
-Funkcja Q # umożliwia używanie ciągów w `fail` instrukcji (objaśnienie w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow#fail-statement)) i w [`Message`](xref:microsoft.quantum.intrinsic.message) funkcji standardowej. Takie zachowanie jest zależne od używanego symulatora, ale zazwyczaj zapisuje komunikat do konsoli hosta po wywołaniu w programie Q #.
+Q#zezwala na użycie ciągów w `fail` instrukcji (objaśnienie w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow#fail-statement)) i w [`Message`](xref:microsoft.quantum.intrinsic.message) funkcji standardowej. Takie zachowanie jest zależne od używanego symulatora, ale zazwyczaj zapisuje komunikat do konsoli hosta, gdy zostanie wywołana w trakcie działania Q# programu.
 
-Ciągi w Q # są literałami lub interpolowanymi ciągami.
+Ciągi w Q# są literałami lub interpolowanymi ciągami.
 
 Literały ciągu są podobne do prostych literałów ciągu w większości języków: sekwencji znaków Unicode ujętych w podwójne cudzysłowy `" "` .
 Wewnątrz ciągu Użyj znaku ukośnika odwrotnego, `\` Aby wypróbować znak podwójnego cudzysłowu ( `\"` ) lub wstawić nowy wiersz ( `\n` ), powrót karetki ( `\r` ) lub kartę ( `\t` ).
@@ -123,11 +126,11 @@ Na przykład:
 ```
 ### <a name="interpolated-strings"></a>Ciągi interpolowane
 
-Składnia Q # dla interpolacji ciągów jest podzbiorem składni języka C#. Poniżej przedstawiono kluczowe punkty, które odnoszą się do Q #:
+Q#Składnia interpolacji ciągów jest podzbiorem składni języka C#. Poniżej przedstawiono kluczowe punkty, w odniesieniu do których odnoszą się Q# :
 
 * Aby zidentyfikować literał ciągu jako ciąg interpolowany, poprzedź go `$` symbolem. Między `$` i `"` , które zaczyna się literałem ciągu znaków, nie może być odstępu.
 
-* Poniżej znajduje się podstawowy przykład, za pomocą którego [`Message`](xref:microsoft.quantum.intrinsic.message) można napisać wynik pomiaru do konsoli wraz z innymi wyrażeniami Q #.
+* Poniżej znajduje się podstawowy przykład, za pomocą którego [`Message`](xref:microsoft.quantum.intrinsic.message) można napisać wynik pomiaru do konsoli wraz z innymi Q# wyrażeniami.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ Składnia Q # dla interpolacji ciągów jest podzbiorem składni języka C#. Pon
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Dowolne prawidłowe wyrażenie Q # może pojawić się w ciągu interpolowanym.
+* Dowolne prawidłowe Q# wyrażenie może pojawić się w ciągu interpolowanym.
 
-* Wyrażenia wewnątrz ciągu interpolowanego są zgodne z składnią Q #, a nie składnią języka C#. Najbardziej istotną różnicą jest to, że Q # nie obsługuje ciągów interpolowanych Verbatim (wiele wierszy).
+* Wyrażenia wewnątrz ciągu interpolowanego są zgodne z Q# składnią, a nie składnią języka C#. Najbardziej istotną różnicą jest to, że nie Q# obsługuje ciągów interpolowanych Verbatim (wiele wierszy).
 
 Aby uzyskać więcej informacji na temat składni języka C#, zobacz [*interpolowane ciągi*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ Oprócz literałów jedynymi wyrażeniami typu zdefiniowanego przez użytkownika
 
 ## <a name="unwrap-expressions"></a>Odpakowywanie wyrażeń
 
-W Q # operator rozwinięcia jest końcowym wykrzyknikiem `!` .
+W programie Q# operator rozwinięcia jest końcowym wykrzyknikiem `!` .
 Na przykład jeśli `IntPair` jest typem zdefiniowanym przez użytkownika z typem źródłowym `(Int, Int)` i `s` jest zmienną o wartości `IntPair(2, 3)` , `s!` to `(2, 3)` .
 
 Dla typów zdefiniowanych przez użytkownika, zdefiniowanych w warunkach innych typów zdefiniowanych przez użytkownika, można powtórzyć operator rozwinięcia. Na przykład `s!!` wskazuje podwójnie nieopakowaną wartość `s` .
@@ -240,7 +243,7 @@ Tablice zawierające qubits lub elementy wywoływane muszą zostać zainicjowane
 
 Wartości domyślne dla każdego typu są następujące:
 
-Typ | Domyślne
+Typ | Domyślny
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -270,7 +273,7 @@ Na przykład jeśli `a` i `b` są obie tablice typu `Int` , element z łączenia
 (a + b)[13]
 ```
 
-Wszystkie tablice w Q # są oparte na zero.
+Wszystkie tablice w Q# są zależne od zera.
 Oznacza to, że pierwszy element tablicy `a` jest zawsze `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Wyrażenia kopiowania i aktualizowania
 
-Ponieważ wszystkie typy pytań i odpowiedzi są typami wartości (z qubitsą z pewnymi szczególnymi rolami), formularz "Copy" jest tworzony, gdy wartość jest powiązana z symbolem lub gdy jest on powiązany. Oznacza to, że zachowanie Q # jest takie samo, jak w przypadku utworzenia kopii przy użyciu operatora przypisania. 
+Ponieważ wszystkie Q# typy są typami wartości (z qubitsą podjęciem nieco specjalnej roli), formularz "Copy" jest tworzony, gdy wartość jest powiązana z symbolem lub gdy jest on powiązany. Oznacza to, że zachowanie Q# jest takie samo jak w przypadku utworzenia kopii przy użyciu operatora przypisania. 
 
 Oczywiście tylko odpowiednie fragmenty są ponownie tworzone w miarę potrzeb. Ma to wpływ na sposób kopiowania tablic, ponieważ nie jest możliwe aktualizowanie elementów tablicy. Aby zmodyfikować istniejącą tablicę, należy wykorzystać mechanizm *kopiowania i aktualizowania* .
 
@@ -381,7 +384,7 @@ Jednak chociaż operacje `(Qubit[] => Unit is Adj)` i `(Qubit[] => Unit is Ctl)`
 
 Na przykład `[[Op1], [Op2]]` obecnie zgłaszany jest błąd, ponieważ próbuje utworzyć tablicę dwóch niezgodnych typów tablicy `(Qubit[] => Unit is Adj)[]` i `(Qubit[] => Unit is Ctl)[]` .
 
-Aby uzyskać więcej informacji o wywoływaniu, zobacz temat wywoływane [wyrażenia](#callable-expressions) na tej stronie lub [operacjach i funkcjach w Q #](xref:microsoft.quantum.guide.operationsfunctions).
+Aby uzyskać więcej informacji o wywoływaniu, zobacz temat wywoływane [wyrażenia](#callable-expressions) na tej stronie lub [operacjach oraz funkcje w Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Wyrażenia warunkowe
 
@@ -446,7 +449,7 @@ W związku z tym, aby wywołać wynik wywołania `Builder` z poprzedniego akapit
 ```
 
 Podczas wywoływania [sparametryzowanego typu](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) , można określić rzeczywiste parametry typu w nawiasach kątowych `< >` po dodaniu wartości wyrażenia.
-Ta akcja jest zwykle zbędna, ponieważ kompilator Q # wnioskuje o rzeczywiste typy.
+Ta akcja jest zwykle zbędna, ponieważ Q# kompilator wnioskuje o rzeczywiste typy.
 Jednak *jest to* wymagane w przypadku [częściowej aplikacji](xref:microsoft.quantum.guide.operationsfunctions#partial-application) , jeśli argument typu sparametryzowanego nie został określony.
 Jest on również przydatny, gdy przekazywanie operacji przy użyciu różnych Funktor obsługuje wywoływany.
 
@@ -469,7 +472,7 @@ Specyfikacja typu jest wymagana, ponieważ `Op3` i `Op1` ma różne typy, więc 
 
 * Nawiasy dla wywołania operacji i funkcji są również powiązane przed dowolnym operatorem, ale po indeksowaniu tablicy i funktory.
 
-Operatory Q # według pierwszeństwa, od najwyższego do najniższego:
+Q#Operatory według pierwszeństwa, od najwyższego do najniższego:
 
 Operator | Większa | Opis | Typy operandów
 ---------|----------|---------|---------------
@@ -492,4 +495,4 @@ Operator | Większa | Opis | Typy operandów
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz, gdy możesz korzystać z wyrażeń w Q #, przejdź do [operacji i funkcji w q #](xref:microsoft.quantum.guide.operationsfunctions) , aby dowiedzieć się, jak definiować i wywoływać operacje i funkcje.
+Teraz, gdy możesz korzystać z wyrażeń w Q# , przejdź do [operacji i funkcji w programie Q# ](xref:microsoft.quantum.guide.operationsfunctions) , aby dowiedzieć się, jak definiować i wywoływać operacje i funkcje.

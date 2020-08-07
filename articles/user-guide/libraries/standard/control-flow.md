@@ -1,22 +1,25 @@
 ---
-title: 'Sterowanie przepływem w standardzie Q # libararies'
-description: Dowiedz się więcej o operacjach i funkcjach sterowania przepływem w standardowej bibliotece Q firmy Microsoft.
+title: Sterowanie przepływem w Q# standardowej libararies
+description: Dowiedz się więcej na temat operacji sterowania przepływem i funkcji w Q# bibliotece standardowej firmy Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275754"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868580"
 ---
 # <a name="higher-order-control-flow"></a>Przepływ sterowania wyższej kolejności #
 
 Jedną z podstawowych ról standardowej biblioteki jest ułatwienie bardziej szczegółowych rozwiązań algorytmów wysokiego poziomu jako [programów Quantum](https://en.wikipedia.org/wiki/Quantum_programming).
-W ten sposób funkcja Q # Canon udostępnia wiele różnych konstrukcji sterowania przepływem, z których każdy jest zaimplementowany przy użyciu częściowej aplikacji funkcji i operacji.
+W ten sposób Q# Canon oferuje różne różne konstrukcje sterowania przepływem, z których każdy jest zaimplementowany przy użyciu częściowego zastosowania funkcji i operacji.
 Przeskocz bezpośrednio do przykładu Rozważmy przypadek, w którym jeden chce utworzyć "CNOT drabinę" w rejestrze:
 
 ```qsharp
@@ -47,7 +50,7 @@ W pozostałej części tej sekcji udostępnimy kilka przykładów użycia różn
 
 Jednym z podstawowych streszczeń dostarczonych przez Canon jest iteracja.
 Na przykład rozważmy jednostkową część formularza $U \otimes U \otimes \cdots \otimes U $ dla $U jednostkowego dla jednej qubit $.
-W Q # firma Microsoft może użyć <xref:microsoft.quantum.arrays.indexrange> do reprezentowania tego jako pętli w `for` rejestrze:
+W programie Q# możemy użyć <xref:microsoft.quantum.arrays.indexrange> do reprezentowania tego jako `for` pętli w rejestrze:
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ Podobnie, <xref:microsoft.quantum.canon.applytoeachindex> jest przydatne do repr
 > Następnie `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` zastosuje kod korygujący błędów `code` i funkcję odzyskiwania `recoveryFn` do każdego bloku niezależnie.
 > Ta wartość jest przechowywana nawet dla klasycznych danych wejściowych: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` zastosuje obrót $ \pi/$2 o $X $, a po nim rotację $pi/$3 $Y $.
 
-Program Q # Canon również zapewnia obsługę klasycznych wzorców wyliczenia, które są znane do programowania funkcjonalnego.
+Q#Canon oferuje również obsługę klasycznych wzorców wyliczenia, które są znane do programowania funkcjonalnego.
 Na przykład <xref:microsoft.quantum.arrays.fold> implementuje wzorzec $f (f (f (s \_ {\Text{Initial}}, x \_ 0), x \_ 1), \dots) $, aby zmniejszyć funkcję na liście.
 Ten wzorzec może służyć do implementowania sum, produktów, wartości minimum, wartości maksymalnych i innych takich funkcji:
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Podobnie funkcje takie jak <xref:microsoft.quantum.arrays.mapped> i <xref:microsoft.quantum.arrays.mappedbyindex> mogą służyć do wyrażania funkcjonalne koncepcje programowania w Q #.
+Podobnie funkcje takie jak <xref:microsoft.quantum.arrays.mapped> i <xref:microsoft.quantum.arrays.mappedbyindex> mogą służyć do wyrażania funkcjonalnych koncepcji programowania w programie Q# .
 
 ## <a name="composing-operations-and-functions"></a>Tworzenie operacji i funkcji ##
 
@@ -170,7 +173,7 @@ Ten wzorzec iteracji jest implementowany przez <xref:microsoft.quantum.canon.dec
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-Sygnatura `DecomposeIntoTimeStepsCA` jest zgodna ze wspólnym wzorcem w języku Q #, gdzie kolekcje, które mogą być tworzone przez tablice lub przez elementy obliczeniowe na bieżąco, są reprezentowane przez krotki, których pierwsze elementy są `Int` wartościami wskazującymi ich długości.
+Sygnatura jest `DecomposeIntoTimeStepsCA` zgodna ze wspólnym wzorcem w Q# , gdzie kolekcje, których kopie zapasowe mogą być tworzone przez tablice lub przez elementy obliczeniowe na bieżąco, są reprezentowane przez krotki, których pierwsze elementy są `Int` wartościami wskazujące ich długości.
 
 ## <a name="putting-it-together-controlling-operations"></a>Umieszczenie go razem: kontrolowanie operacji ##
 
@@ -215,7 +218,7 @@ Spowoduje to pozostawienie w `ApplyWith` nawiasie klamrowym rejestracji kontrolk
 
 W tym momencie możemy to zrobić, ale jest to w jakiś sposób niezadowalający, że nasza nowa operacja nie "działa", jak zastosowanie `Controlled` Funktor.
 W tym celu możemy zdefiniować nasze nowe koncepcje przepływu sterowania, pisząc funkcję, która powoduje, że baza danych Oracle będzie kontrolowana i która zwraca nową operację.
-W ten sposób nasza nowa funkcja wygląda i czuje bardzo podobne `Controlled` , co oznacza, że można łatwo definiować zaawansowane nowe konstrukcje przepływu sterowania za pomocą Q # i firmy Canon razem:
+W ten sposób nasza nowa funkcja wygląda i czuje bardzo podobne `Controlled` , co oznacza, że można łatwo definiować zaawansowane nowe konstrukcje przepływu sterowania przy użyciu Q# i firmy Canon razem:
 
 ```qsharp
 function ControlledOnBitString(

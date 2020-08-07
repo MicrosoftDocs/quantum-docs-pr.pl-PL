@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275923"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869515"
 ---
 # <a name="jordan-wigner-representation"></a>Jordania — reprezentacja Wigner
 
@@ -28,7 +31,7 @@ Następnie będziemy $a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ i $a ^ \ dagger
 Można łatwo sprawdzić, czy \begin{align} a ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \end{bmatrix} = \frac{X_j-iY_j} {2} , \nonumber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j} {2} , \end{align}, gdzie $X _j $ i $Y _j $ to operatory Pauli-$X $ i-$Y $ działające na qubit $j $.
 
 >[!NOTE]
-> W Q # stan $ \ket {0} $ reprezentuje znak + 1 eigenstate operatora $Z $. W niektórych obszarach fizyki $ \ket {0} $ reprezentuje stan ziemi niskiego zużycia energii, a w rezultacie-1 eigenstate operatora $Z $. W związku z tym niektóre formuły mogą różnić się od popularnej literatury.
+> W Q# stanie $ \ket {0} $ reprezentuje wartość + 1 eigenstate operatora $Z $. W niektórych obszarach fizyki $ \ket {0} $ reprezentuje stan ziemi niskiego zużycia energii, a w rezultacie-1 eigenstate operatora $Z $. W związku z tym niektóre formuły mogą różnić się od popularnej literatury.
 
 W bibliotece chemii używamy $ \ket {0} $ do reprezentowania niezajętego kręgu.
 Pokazuje to, że w przypadku pojedynczego kręgu można łatwo reprezentować operatory tworzenia i Annihilation w odniesieniu do macierzy jednostkowych, które są rozpoznawane przez komputery Quantum.

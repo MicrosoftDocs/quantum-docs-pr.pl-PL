@@ -1,6 +1,8 @@
 ---
 title: Opis platformy Quantum Oracle: informacje na temat pracy z i definiowania Quantum Oracle, operacje czarnego pola, które są używane jako dane wejściowe w innym algorytmie.
 Autor: cgranade UID: Microsoft. Quantum. koncepcje. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. temat: artykuł No-Loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Teraz $ o = ^ \dagger $ przez konstrukcję, dlatego zostały rozwiązane oba poprzednie problemy.
 
 > [!TIP]
->Aby zobaczyć, że o $ = godzinie "o ^" { \dagger } $ , należy pamiętać, że $ ^ 2 = \boldone $ od $ \oplus b \oplus b = a $ dla wszystkich $ a, b \in \[ ! OP. Nie-LOC ({)] 0, 1 \[ ! OP. Nie-LOC (})] $ .
+>Aby zobaczyć, że o $ = godzinie "o ^" { \dagger } $ , należy pamiętać, że $ ^ 2 = \boldone $ od $ \oplus b \oplus b = a $ dla wszystkich $ a, b \in \: :: No-Loc ({)::: 0, 1 \: :: No-Loc (})::: $ .
 >W związku z tym $ o \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 Ważną kwestią jest zdefiniowanie Oracle w ten sposób w przypadku każdego stanu podstawy obliczeniowej $ \ket { x y, a } \ket { } $ także zdefiniowanie $ $ działań dla każdego innego stanu.

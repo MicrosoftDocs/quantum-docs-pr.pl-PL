@@ -1,17 +1,20 @@
 ---
 title: Symmetries całk molekularnych
-description: 'Dowiedz się więcej o używaniu typu Q # OrbitalIntegral do wyliczania symmetries molekularnych.'
+description: Dowiedz się więcej o używaniu Q# typu OrbitalIntegral w celu wyliczenia symmetries molekularnych.
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1f71c0ac8e2cd2781c0bc7b23d6c9222f3b9d18a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275253"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869447"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries całk molekularnych
 

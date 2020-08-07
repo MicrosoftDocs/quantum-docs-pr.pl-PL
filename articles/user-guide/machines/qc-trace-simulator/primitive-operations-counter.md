@@ -1,17 +1,20 @@
 ---
 title: Licznik operacji pierwotnych-Quantum Development Kit
-description: 'Dowiedz się więcej o liczniku operacji programu Microsoft QDKe pierwotnego, który korzysta z symulatora śledzenia Quantum do śledzenia wykonywania pierwotnego używanych przez operacje w programie Q #.'
+description: Dowiedz się więcej o liczniku operacji programu Microsoft QDKe podstawowe, który korzysta z symulatora śledzenia Quantum do śledzenia wykonań pierwotnych używanych przez operacje w Q# programie.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871029"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868240"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Symulator śledzenia Quantum: licznik operacji pierwotnych
 
@@ -31,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Używanie licznika operacji pierwotnej w programie hosta C#
 
-Przykład w języku C# opisany w tej sekcji liczy liczbę <xref:microsoft.quantum.intrinsic.t> operacji potrzebnych do zaimplementowania <xref:microsoft.quantum.intrinsic.ccnot> operacji w oparciu o następujący przykładowy kod Q #:
+Poniższy przykład kodu w języku C# jest częścią liczby <xref:microsoft.quantum.intrinsic.t> operacji potrzebnych do zaimplementowania <xref:microsoft.quantum.intrinsic.ccnot> operacji w oparciu o następujący Q# przykładowy kod:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275498"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866880"
 ---
 # <a name="improving-documentation"></a>Ulepszanie dokumentacji
 
@@ -25,7 +28,7 @@ Podobnie przyjmujemy bibliotekę [MathJax](https://www.mathjax.org/) , aby umoż
 W ten sposób każda forma dokumentacji różni się nieco w zależności od szczegółów:
 
 - **Dokumentacja dotycząca pojęć** składa się z zestawu artykułów opublikowanych w https://docs.microsoft.com/quantum programie i opisujących wszystkie informacje od podstaw obliczeń opartych na usłudze Quantum do specyfikacji technicznych dla formatów wymiany. Te artykuły są zapisywane w [DocFXej promocji (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), która jest używana do tworzenia rozbudowanych zestawów dokumentacji.
-- **Dokumentacja interfejsu API** to zestaw stron dla każdej funkcji Q #, operacji i typu zdefiniowanego przez użytkownika, opublikowanego w https://docs.microsoft.com/qsharp/api/ . Te strony dokumentują dane wejściowe i operacje do każdego z nich, a także przykłady i linki do dodatkowych informacji. Odwołanie do interfejsu API jest automatycznie wyodrębniane z małych dokumentów DFM w kodzie kodu źródłowego Q # jako część każdej wersji.
+- **Dokumentacja interfejsu API** to zestaw stron dla każdej Q# funkcji, operacji i typu zdefiniowanego przez użytkownika, który jest publikowany w https://docs.microsoft.com/qsharp/api/ . Te strony dokumentują dane wejściowe i operacje do każdego z nich, a także przykłady i linki do dodatkowych informacji. Dokumentacja interfejsu API jest automatycznie wyodrębniana z małych dokumentów DFM w Q# kodzie źródłowym jako część każdej wersji.
 - Pliki **README <!----> . MD** dołączone do każdego przykładu i Kata opisują sposób użycia tego przykładu lub Kata są używane, co obejmuje i w jaki sposób odnosi się do reszty zestawu Quantum Development Kit. Te pliki są zapisywane przy użyciu [promocji (GFM) usługi GitHub](https://github.github.com/gfm/), która jest bardziej lekkim rozwiązaniem alternatywnym dla dołączania dokumentacji bezpośrednio do repozytoriów kodu.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Współtworzenie dokumentacji koncepcyjnej
@@ -49,7 +52,7 @@ Jeśli chcesz dołączyć kod z [repozytorium przykładów](https://github.com/M
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-To polecenie spowoduje zaimportowanie wierszy 4 do 8 [ `Game.qs` pliku z `chsh-game` przykładu](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs), oznaczenie ich jako kodu Q # na potrzeby wyróżniania składni.
+To polecenie spowoduje zaimportowanie wierszy 4 do 8 [ `Game.qs` pliku z `chsh-game` przykładu](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)i oznaczenie ich jako Q# kodu na potrzeby wyróżniania składni.
 Za pomocą tego polecenia można uniknąć duplikowania kodu między artykułami koncepcyjnymi i repozytorium przykładów, aby kod przykładowy w dokumentacji był zawsze aktualny, jak to możliwe.
 
 ## <a name="contributing-to-the-api-references"></a>Współtworzenie odwołań do interfejsów API
@@ -64,7 +67,7 @@ Podczas kompilowania każdej wersji zestawu Quantum Development Kit te komentarz
 
 Rozważmy na przykład funkcję `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 Komentarz dokumentacji powinien pomóc użytkownikowi dowiedzieć się, jak interpretować `bits` i jak `oracle` i do czego służy funkcja.
-Każdą z tych informacji można dostarczyć do kompilatora Q # przez specjalną sekcję o nazwie promocji w komentarzu do dokumentacji.
+Każdą z tych informacji można dostarczyć do Q# kompilatora przez specjalną sekcję o nazwie promocji w komentarzu do dokumentacji.
 Przykładowo `ControlledOnBitString` możemy napisać coś w następujący sposób:
 
 ```qsharp
@@ -139,7 +142,7 @@ Możesz zobaczyć wyrenderowaną wersję kodu powyżej w [dokumentacji interfejs
 
 Oprócz ogólnych metod pisania dokumentacji, w opisie komentarzy dokumentacji interfejsu API pomocne jest zachowanie kilku rzeczy:
 
-- Format każdego komentarza do dokumentacji musi być zgodny z tym, co kompilator Q # oczekuje, że dokumentacja będzie poprawnie wyświetlana. Niektóre sekcje, takie jak `/// # Remarks` Zezwalaj na zawartość dowolnego kształtu, natomiast sekcje takie jak `/// # See Also` sekcja są bardziej restrykcyjne.
+- Format każdego komentarza dokumentacji musi być zgodny z Q# oczekiwaniami kompilatora, aby dokumentacja była poprawnie wyświetlana. Niektóre sekcje, takie jak `/// # Remarks` Zezwalaj na zawartość dowolnego kształtu, natomiast sekcje takie jak `/// # See Also` sekcja są bardziej restrykcyjne.
 - Czytelnik może odczytać dokumentację interfejsu API w głównej witrynie odniesienia interfejsu API, na podsumowanie dla każdej przestrzeni nazw, a nawet w środowisku IDE za pomocą informacji o aktywowaniu. Upewnienie się, że `/// # Summary` nie jest dłużej niż w przypadku zdania, ułatwia czytelnikowi szybkie sortowanie, czy muszą one zostać odczytane w innym miejscu i może pomóc w szybkim skanowaniu za pomocą podsumowań przestrzeni nazw.
 - Dokumentacja może być również w pełni zawracać do samego kodu, ale jest to prawidłowe! Nawet niewielki fragment kodu może mieć nieoczekiwane skutki dla użytkowników, którzy nie znają kontekstu, w którym ten kod istnieje. Dostarczając konkretne przykłady i jasne wyjaśnienia, możesz pomóc użytkownikom w najlepszym użyciu dostępnego dla nich kodu.
 

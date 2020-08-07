@@ -1,6 +1,8 @@
 ---
 title: zaawansowane pojęcia dotyczące macierzy: informacje na temat eigenvectors, eigenvalues i wykładniczych, podstawowych narzędzi służących do opisywania i symulowania algorytmów Quantum.
 Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Matrix — Advanced MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + \frac { a ^ 2 } { ! } + \frac { ^ 3 } { 3!}+\cdots
 $$
 
-Jest to ważne, ponieważ zmiana czasu mechanicznego Quantum jest opisana przez macierz jednostkową formularza $ e ^ { IB } $ dla hermitian macierzy $ B $ .  Z tego powodu wykonywanie wartości wykładniczych macierzy jest podstawową częścią obliczeniowej usługi Quantum i ponieważ ten Q # oferuje procedury wewnętrzne do opisywania tych operacji.
+Jest to ważne, ponieważ zmiana czasu mechanicznego Quantum jest opisana przez macierz jednostkową formularza $ e ^ { IB } $ dla hermitian macierzy $ B $ .  Z tego powodu wykonywanie wartości wykładniczych macierzy jest podstawową częścią obliczeniowych procesów Quantum, a jako takie Q# oferują procedury wewnętrzne umożliwiające opisywanie tych operacji.
 Istnieje wiele sposobów na rozliczenie matrycy wykładniczej na klasycznym komputerze i ogólnie numeryczne przybliżenie takiej wartości wykładniczej to fraught z Peril.  Zobacz [*Cleve Moler i Charles van. "Nineteen podejrzanych metody obliczeń wykładniczych macierzy". SIAM przegląd 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) , aby uzyskać więcej informacji na temat wyzwań.
 
 Najprostszym sposobem, aby zrozumieć, jak obliczyć wartość wykładniczą macierzy, za pomocą eigenvalues i eigenvectors tej macierzy.  W odniesieniu do theorem widma omówione powyżej mówi, że dla każdej hermitian lub macierzy jednostkowej $ $ istnieje macierz jednostkowa $ u $ i $ wielowarstwowa macierz D, $ taka jak $ = u \dagger $ .  Ze względu na właściwości unitarity mamy, że $ ^ 2 = u ^ \dagger d ^ 2 u $ i podobne dla każdej potęgi $ p $ $ ^ p = ^ \dagger d ^ p $ .  Jeśli ta funkcja zostanie zastąpiona definicją operatora operatora wykładniczego, uzyskujemy:

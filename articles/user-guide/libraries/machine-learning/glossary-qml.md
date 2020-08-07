@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276211"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868903"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Słownik Quantum Machine Learning
 
@@ -48,7 +51,7 @@ Jako zasada elementu kciuk liczba początkowych pomiarów może wynosić około 
 
 ### <a name="training-threads"></a>Wątki szkoleniowe
 
-Funkcja prawdopodobieństwa, która jest narzędziem szkoleniowym klasyfikatora, jest bardzo rzadko wypukła, co oznacza, że zwykle ma wiele Optima lokalnych w przestrzeni parametrów, które mogą się różnić w zależności od jakości. Ponieważ proces SGD może być zbieżny tylko z jednym określonym optymalnie, ważne jest, aby poznać wiele wektorów parametrów początkowych. Typowym sposobem uczenia maszynowego jest zainicjowanie takich wektorów uruchamiania losowo. Interfejs API szkolenia Q # akceptuje dowolną tablicę takich wektorów, ale kod źródłowy eksploruje je sekwencyjnie. Na komputerze z wieloma rdzeniami lub w systemie innym niż architektura obliczeń równoległych zaleca się wykonanie kilku wywołań interfejsu API szkolenia Q # równolegle z innymi inicjalizacjami parametrów w wywołaniach.
+Funkcja prawdopodobieństwa, która jest narzędziem szkoleniowym klasyfikatora, jest bardzo rzadko wypukła, co oznacza, że zwykle ma wiele Optima lokalnych w przestrzeni parametrów, które mogą się różnić w zależności od jakości. Ponieważ proces SGD może być zbieżny tylko z jednym określonym optymalnie, ważne jest, aby poznać wiele wektorów parametrów początkowych. Typowym sposobem uczenia maszynowego jest zainicjowanie takich wektorów uruchamiania losowo. Q#Interfejs API uczenia akceptuje dowolną tablicę takich wektorów, ale kod źródłowy eksploruje je sekwencyjnie. Na komputerze z wieloma rdzeniami lub w przypadku dowolnej architektury obliczeń równoległych zaleca się wykonanie kilku wywołań Q# interfejsu API szkolenia równolegle z innymi inicjalizacjami parametrów dla wywołań.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Jak zmodyfikować parametry
 

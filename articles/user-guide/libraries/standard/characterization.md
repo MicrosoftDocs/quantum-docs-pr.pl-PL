@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436529"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868631"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -19,7 +22,7 @@ Niezwykle ważne jest, aby mieć możliwość scharakteryzowania skutków operac
 Jest to trudne, ponieważ każde pomiary systemu Quantum daje maksymalnie jeden bit informacji.
 Aby uzyskać informacje o eigenvalue, powiadom sam stan Quantum, wyniki wielu pomiarów muszą być połączone, aby użytkownik mógł zgłębiać wiele informacji potrzebnych do reprezentowania tych koncepcji.
 Stany Quantum są szczególnie uciążliwych z powodu braku [klonowania theorem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) , że nie ma możliwości poznania dowolnego stanu Quantum z pojedynczej kopii stanu, ponieważ dzięki temu można tworzyć kopie stanu.
-To zamieszanie stanu Quantum od użytkownika jest odzwierciedlone w tym fakcie, że funkcja Q # nie ujawnia lub nawet definiuje, jakie *jest* stan dla programów Quantum.
+Ta zaciemnianie stanu Quantum od użytkownika jest odzwierciedlane w rzeczywistości, która Q# nie ujawnia ani nie definiuje stanu dla programów Quantum. *is*
 W ten sposób zbliżamy się do charakterystyki Quantum przez traktowanie operacji i Stanów jako czarnych. Ta metoda jest często wspólna w przypadku eksperymentalnej praktycznej charakterystyki Quantum, weryfikacji i weryfikacji (QCVV).
 
 Scharakteryzowanie różni się od wielu innych omawianych wcześniej bibliotek.
@@ -36,7 +39,7 @@ Jest to zalety, że wymaga tylko pojedynczej dodatkowej qubit do wykonania fazy 
 Każda z metod proponowanych poniżej używa innej strategii do projektowania eksperymentów i różnych metod przetwarzania danych w celu uzyskania informacji o fazie.  Każdy z nich ma unikatową korzyść w zakresie od uzyskania rygorystycznych powiązań błędów, do możliwości uwzględniania wcześniejszych informacji, tolerowania błędów lub uruchamiania w pamięci limitted klasyczne komputery.
 
 W omawianiu oszacowania fazy iteracyjnej będziemy rozważać $U jednostkowe $ podaną jako operację czerni.
-Zgodnie z opisem w sekcji dotyczącej rozwiązań firmy Oracle w [strukturach danych](xref:microsoft.quantum.libraries.data-structures), program Q # Canon modeluje takie operacje według <xref:microsoft.quantum.oracles.discreteoracle> typu zdefiniowanego przez użytkownika, zdefiniowanego przez typ krotki `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Zgodnie z opisem w sekcji dotyczącej rozwiązań firmy Oracle w [strukturach danych](xref:microsoft.quantum.libraries.data-structures)firmy Q# Canon modeluje takie operacje według <xref:microsoft.quantum.oracles.discreteoracle> typu zdefiniowanego przez użytkownika, zdefiniowanego przez typ krotki `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 W konkretnym przypadku, `U : DiscreteOracle` a następnie `U(m)` implementuje $U ^ m $ dla `m : Int` .
 
 W przypadku tej definicji, każdy krok iteracji fazy szacowania kontynuuje proces przygotowywania pomocniczej qubit w stanie $ \ket{+} $ wraz z początkowym stanem $ \ket{\phi} $ przyjętym przez nas jest [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) $U (m) $, tj. $U (m) \ket{\phi} = e ^ {im\phi} \ KET {\ Fi} $.  
@@ -47,7 +50,7 @@ Pomocnicza qubit używana jako kontrolka `U(m)` jest następnie mierzona na pods
 
 W tym momencie Rekonstruowanie fazy z `Result` wartości uzyskanych za pomocą szacowania fazy iteracyjnej jest klasycznym problemem statystycznym wnioskowania.
 Znalezienie wartości $m $, która maksymalizuje zdobyte informacje, z uwzględnieniem ustalonej metody wnioskowania, jest po prostu problemem w statystyce.
-Podkreślamy to, krótko opisując ocenę fazy iteracyjnej na poziomie teoretycznym w formalnym zakresie szacowania parametrów bayesowskie przed przystąpieniem do opisywania algorytmu statystycznego dostępnego w Q # Canon do rozwiązywania tego problemu.
+Podkreślamy to, krótko opisując ocenę fazy iteracyjnej na poziomie teoretycznym w formalnym zakresie szacowania parametrów bayesowskie przed przystąpieniem do opisywania algorytmu statystycznego dostępnego w firmie Q# Canon do rozwiązywania tego problemu.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Szacowanie fazy iteracyjnej bez Eigenstates ###
 
@@ -127,7 +130,7 @@ W rezultacie użycie szacowania fazy z ciągłymi zapytaniami pozwala nam pozna�
 
 ### <a name="random-walk-phase-estimation"></a>Szacowanie fazy losowego przeszukiwania ###
 
-Funkcja Q # zapewnia przydatne przybliżenie oceny fazy bayesowskie przeznaczonej do użycia w pobliżu urządzeń Quantum, które działają przez Kondycjonowanie losowego przeszukiwania rekordów danych uzyskanych z oszacowania fazy iteracyjnej.
+Q#zapewnia przydatne przybliżenie oceny fazy bayesowskie przeznaczonej do użycia w pobliżu urządzeń Quantum, które działają przez Kondycjonowanie losowego przeszukiwania rekordów danych uzyskanych z oszacowania fazy iteracyjnej.
 Ta metoda jest zarówno adaptacyjna, jak i całkowicie deterministyczna, co pozwala na niemal optymalne skalowanie błędów w szacowanej fazie $ \hat{\phi} $ z bardzo niewielką ilością pamięci.
 
 Protokół używa przybliżonej metody wnioskowania bayesowskie, która zakłada, że wcześniejsza dystrybucja to gaussowskie.
@@ -141,7 +144,7 @@ Możliwość przechodzenie do tyłu pozwala również algorytmowi dowiedzieć si
 
 ## <a name="calling-phase-estimation-algorithms"></a>Algorytmy szacowania fazy wywołania ##
 
-Każda operacja szacowania fazy dostarczana z użyciem Q # Canon przyjmuje inny zestaw danych wejściowych parametryzacja jakość, której potrzebujemy z końcowego oszacowania $ \hat{\phi} $.
+Każda operacja szacowania fazy dostarczana z użyciem firmy Q# Canon przyjmuje inny zestaw danych wejściowych parametryzacja jakość, której potrzebujemy z końcowego oszacowania $ \hat{\phi} $.
 Te różne dane wejściowe, jednak wspólnie współdzielą kilka danych wejściowych, takie jak częściowa aplikacja przez parametry jakości, skutkuje typowym podpisem.
 Na przykład <xref:microsoft.quantum.characterization.robustphaseestimation> operacja omówiona w następnej sekcji ma następujący podpis:
 

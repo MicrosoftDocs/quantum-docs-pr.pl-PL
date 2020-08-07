@@ -1,17 +1,20 @@
 ---
 title: Unieważniony qubits użycie modułu sprawdzania dla zestawu Quantum Development Kit
-description: 'Dowiedz się więcej na temat programu Microsoft QDK unieważniony qubits use test, który korzysta z symulatora śledzenia Quantum do sprawdzenia kodu Q # dla potencjalnie nieprawidłowego qubits.'
+description: Dowiedz się więcej na temat programu Microsoft QDK unieważniony qubits użycia narzędzia sprawdzania poprawności, które korzysta z symulatora śledzenia Quantum do sprawdzenia Q# kodu dla potencjalnie nieprawidłowego qubits.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871097"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868291"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Symulator śledzenia Quantum: unieważniony qubits użycia
 
@@ -19,7 +22,7 @@ Sprawdzanie poprawności użycia qubits jest częścią [symulatora śledzenia](
 
 ## <a name="invalid-qubits"></a>Nieprawidłowy qubits
 
-Rozważmy następujący fragment kodu Q #, aby zilustrować problemy wykryte przez unieważniony qubits użycia narzędzia sprawdzania poprawności:
+Rozważmy następujący fragment Q# kodu, aby zilustrować problemy wykryte przez unieważniony moduł sprawdzania poprawności qubits:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {

@@ -1,28 +1,31 @@
 ---
-title: 'Zmienne w Q #'
+title: Zmienne wQ#
 description: Opis wypełnienia
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885284"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867849"
 ---
-# <a name="variables-in-q"></a>Zmienne w Q #
+# <a name="variables-in-no-locq"></a>Zmienne wQ#
 
-Polecenie Q # rozróżnia symbole modyfikowalne i niezmienne, czyli *zmienne*, które są powiązane/przypisane do wyrażeń.
+Q#rozróżnia symbole modyfikowalne *i zmienne,* które są powiązane/przypisane do wyrażeń.
 Ogólnie rzecz biorąc, zaleca się użycie niezmiennych symboli, ponieważ umożliwia kompilatorowi wykonywanie większej optymalizacji.
 
 Lewa strona powiązania składa się z krotki symboli i prawej strony wyrażenia.
 
 ## <a name="immutable-variables"></a>Zmienne niezmienne
 
-Można przypisać wartość dowolnego typu w Q # do zmiennej do ponownego użycia w ramach operacji lub funkcji za pomocą `let` słowa kluczowego. 
+Można przypisać wartość dowolnego typu Q# do zmiennej do ponownego użycia w ramach operacji lub funkcji przy użyciu `let` słowa kluczowego. 
 
 Niezmienne powiązanie składa się ze słowa kluczowego `let` , a po nim symbolu lub krotki symboli, znaku równości `=` , wyrażenia służącego do powiązania symboli z i kończącego się średnika.
 
@@ -55,7 +58,7 @@ Poniżej przedstawiono kilka przykładów technik rebind instrukcji.
 
 #### <a name="apply-and-reassign-statements"></a>Instrukcje Apply i Reassign
 
-Szczególnym rodzajem instrukcji `set` , instrukcja *apply-and-Reassign* , zapewnia wygodny sposób łączenia, jeśli po prawej stronie składa się operator binarny, a wynik ma zostać Przewiązany do lewego argumentu operatora. Na przykład
+Szczególnym rodzajem instrukcji `set` , instrukcja *apply-and-Reassign* , zapewnia wygodny sposób łączenia, jeśli po prawej stronie składa się operator binarny, a wynik ma zostać Przewiązany do lewego argumentu operatora. Przykład:
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-W przypadku tablic [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) w standardowej bibliotece Q # dostępne są niezbędne narzędzia do obsługi wielu typowych operacji inicjowania tablic i manipulowania nimi, co pozwala uniknąć konieczności aktualizowania elementów tablicy w pierwszym miejscu. 
+W przypadku tablic [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) w Q# bibliotece standardowej dostępne są niezbędne narzędzia do wykonywania wielu typowych operacji inicjowania tablic i manipulowania nimi, co pozwala uniknąć konieczności aktualizowania elementów tablicy w pierwszym miejscu. 
 
 Instrukcje Update-and-Reassign oferują alternatywę w razie konieczności:
 
@@ -163,7 +166,7 @@ Przypisanie tego formularza jest określane w celu *odtworzenia* elementów tej 
 Jeśli po prawej stronie powiązania jest krotka, można ją dekonstruować po przypisaniu.
 Takie dekonstrukcji mogą dotyczyć krotek zagnieżdżonych, a każda pełna lub częściowa dekonstrukcja jest prawidłowa, o ile kształt krotki po prawej stronie jest zgodny z kształtem krotki symboli.
 
-Przykład:
+Na przykład:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Następne kroki
 
-Dowiedz się więcej na temat [pracy z Qubits w usłudze](xref:microsoft.quantum.guide.qubits) Q #.
+Dowiedz się więcej na temat [pracy z usługą Qubits](xref:microsoft.quantum.guide.qubits) w programie Q# .

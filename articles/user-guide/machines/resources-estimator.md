@@ -1,33 +1,36 @@
 ---
 title: Zasoby Quantum szacowania-Quantum Development Kit
-description: 'Dowiedz się więcej o programie Microsoft QDKe szacowania, który szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze z systemem Quantum.'
+description: Dowiedz się więcej o programie Microsoft QDKe szacowania, który szacuje zasoby wymagane do uruchomienia danego wystąpienia Q# operacji na komputerze z systemem Quantum.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870548"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868189"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
-Jak nazywa się, `ResourcesEstimator` Klasa szacuje zasoby wymagane do uruchomienia danego wystąpienia operacji Q # na komputerze Quantum. Jest to realizowane przez wykonywanie operacji Quantum bez faktycznego symulowania stanu komputera Quantum; z tego powodu szacuje zasoby dla operacji Q #, które używają tysięcy qubits, pod warunkiem, że klasyczna część kodu jest uruchamiana w rozsądnym czasie.
+Jak nazwa oznacza, `ResourcesEstimator` Klasa szacuje zasoby wymagane do uruchomienia danego wystąpienia Q# operacji na komputerze Quantum. Jest to realizowane przez wykonywanie operacji Quantum bez faktycznego symulowania stanu komputera Quantum; z tego powodu szacuje zasoby dla Q# operacji, które korzystają z tysięcy qubits, pod warunkiem, że klasyczna część kodu jest uruchamiana w rozsądnym czasie.
 
-Szacowania zasobów jest oparty na [symulatorze śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro), który zapewnia bogatszy zestaw metryk i narzędzi ułatwiających debugowanie programów Q #.
+Szacowania zasobów jest oparty na [symulatorze śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro), który zapewnia bogatszy zestaw metryk i narzędzi ułatwiających debugowanie Q# programów.
 
 ## <a name="invoking-and-running-the-resources-estimator"></a>Wywoływanie i uruchamianie zasobów szacowania
 
-Możesz użyć szacowania zasobów do uruchomienia dowolnej operacji Q #. Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania programu Q #](xref:microsoft.quantum.guide.host-programs).
+Możesz użyć szacowania zasobów do uruchomienia dowolnej Q# operacji. Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania Q# programu](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>Wywoływanie zasobów szacowania z języka C # 
 
-Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie `ResourceEstimator` klasy, a następnie przekazać je jako pierwszy parametr `Run` metody operacji.
+Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie klasy `ResourceEstimator`, a następnie przekazać je jako pierwszy parametr metody operacji `Run`.
 
-Należy pamiętać, że w przeciwieństwie do `QuantumSimulator` klasy `ResourceEstimator` Klasa nie implementuje <xref:System.IDisposable> interfejsu, dlatego nie trzeba go umieszczać w `using` instrukcji.
+Należy pamiętać, że w przeciwieństwie do klasy `QuantumSimulator` klasa `ResourceEstimator` nie implementuje interfejsu <xref:System.IDisposable>, dlatego nie trzeba go umieszczać w instrukcji `using`.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -66,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>Wywoływanie zasobów szacowania z języka Python
 
-Użyj metody [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną operacją Q #:
+Użyj metody [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -74,7 +77,7 @@ qubit_result = myOperation.estimate_resources()
 
 ### <a name="invoking-the-resources-estimator-from-the-command-line"></a>Wywoływanie zasobów szacowania z wiersza polecenia
 
-Podczas uruchamiania programu Q # z wiersza polecenia, użyj parametru **--symulatora** (lub **-s** skrótu), aby określić `ResourcesEstimator` maszynę docelową. Następujące polecenie uruchamia program przy użyciu szacowania zasobów: 
+Podczas uruchamiania Q# programu z wiersza polecenia należy użyć parametru **--symulatora** (lub **-s** ), aby określić `ResourcesEstimator` maszynę docelową. Następujące polecenie uruchamia program przy użyciu szacowania zasobów: 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
@@ -82,7 +85,7 @@ dotnet run -s ResourcesEstimator
 
 ### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>Wywoływanie zasobów szacowania z notesów Juptyer
 
-Użyj polecenia IQ # Magic [% oszacowanie](xref:microsoft.quantum.iqsharp.magic-ref.simulate) , aby uruchomić operację Q #.
+Q#Aby uruchomić operację, użyj polecenia I [oszacowania% oszacowanie](xref:microsoft.quantum.iqsharp.magic-ref.simulate) Q# .
 
 ```
 %estimate myOperation
@@ -92,7 +95,7 @@ Użyj polecenia IQ # Magic [% oszacowanie](xref:microsoft.quantum.iqsharp.magic-
 
 Oprócz tabeli TSV można programowo pobrać zasoby szacowane podczas wykonywania przez `Data` Właściwość zasobów szacowania. `Data`Właściwość zawiera `System.DataTable` wystąpienie z dwiema kolumnami: `Metric` i `Sum` , indeksowane przez nazwy metryk.
 
-Poniższy kod pokazuje, jak pobrać i wydrukować łączną liczbę `QubitClifford` `T` `CNOT` operacji oraz operacje używane przez operację Q #:
+Poniższy kod pokazuje, jak pobrać i wydrukować łączną liczbę `QubitClifford` `T` `CNOT` operacji oraz operacje wykonywane przez Q# operację:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -127,16 +130,16 @@ Szacowania zasobów śledzi następujące metryki:
 |__miara__    |Liczba uruchomień pomiarów.  |
 |__R__    |Liczba uruchomień wszystkich rotacji qubit, z wyjątkiem `T` operacji Clifford i Pauli.  |
 |__T__    |Liczba uruchomień `T` operacji i ich sprzężenia, w tym `T` operacje, T_x = H. T. H i T_y = HY. T. HY.  |
-|__Ścisł__|Dolna granica głębokości obwodu Quantum przebiegu przez operację Q #. Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__    |Dolna granica maksymalnej liczby qubits przydzieloną podczas przebiegu operacji Q #. Jednocześnie może nie być możliwe równoczesne osiąganie __głębokości__ i dolnej granicy __szerokości__ .  |
-|__BorrowedWidth__    |Maksymalna liczba qubits zaciągniętych w ramach operacji Q #.  |
+|__Ścisł__|Dolna granica głębokości obwodu Quantum uruchamianego przez Q# operację. Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__    |Dolna granica maksymalnej liczby qubits przydzieloną podczas uruchamiania Q# operacji. Jednocześnie może nie być możliwe równoczesne osiąganie __głębokości__ i dolnej granicy __szerokości__ .  |
+|__BorrowedWidth__    |Maksymalna liczba qubits zaciągniętych w ramach Q# operacji.  |
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Zapewnianie prawdopodobieństwa wyników pomiarów
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Podawanie prawdopodobieństwa wyników pomiarów
 
 Możesz użyć <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> z <xref:microsoft.quantum.diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
-- [Symulator Toffoli Quantum](xref:microsoft.quantum.machines.toffoli-simulator)
-- [Symulator pełnego stanu Quantum](xref:microsoft.quantum.machines.full-state-simulator) 
+- [Kwantowy symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Kwantowy symulator pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator) 

@@ -1,30 +1,33 @@
 ---
 title: Tworzenie kwantowego generatora liczb losowych
-description: Utwórz projekt języka Q# demonstrujący podstawowe koncepcje kwantowe, takie jak superpozycja, tworząc kwantowy generator liczb losowych.
+description: Utwórz Q# projekt, który pokazuje podstawowe koncepcje Quantum, takie jak Podpozycja, tworząc generator liczb losowych Quantum.
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275285"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869770"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Samouczek: implementowanie kwantowego generatora liczb losowych w języku Q\#
 
-Prostym przykładem kwantowego algorytmu napisanego w języku Q# jest kwantowy generator liczb losowych. Ten algorytm wykorzystuje zjawiska mechaniki kwantowej, aby utworzyć liczbę losową.
+Prosty przykład algorytmu Quantum zapisany w Q# jest generatorem liczb losowych Quantum. Ten algorytm wykorzystuje zjawiska mechaniki kwantowej, aby utworzyć liczbę losową.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 - Zestaw Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Utwórz projekt w języku Q#, aby [używać języka Q # z wiersza polecenia](xref:microsoft.quantum.install.standalone) lub z [programem hosta języka Python](xref:microsoft.quantum.install.python) albo [programem hosta języka C#](xref:microsoft.quantum.install.cs).
+- Utwórz Q# projekt do [użycia Q# z wiersza polecenia](xref:microsoft.quantum.install.standalone)lub programu [hosta Python](xref:microsoft.quantum.install.python) lub [programu hosta języka C#](xref:microsoft.quantum.install.cs).
 
-## <a name="write-a-q-operation"></a>Tworzenie operacji w języku Q#
+## <a name="write-a-no-locq-operation"></a>Napisz Q# operację
 
-### <a name="q-operation-code"></a>Kod operacji języka Q#
+### <a name="no-locq-operation-code"></a>Q#kod operacji
 
 1. Zastąp zawartość pliku Program.qs następującym kodem:
 
@@ -32,7 +35,7 @@ Prostym przykładem kwantowego algorytmu napisanego w języku Q# jest kwantowy g
 
 Jak wspomniano w artykule [Informacje na temat obliczeń kwantowych](xref:microsoft.quantum.overview.understanding), kubit jest jednostką informacji kwantowych, która może być w superpozycji. Przy pomiarze kubit może mieć tylko wartość 0 lub 1. Jednak podczas wykonywania stan kubitu reprezentuje prawdopodobieństwo odczytania wartości 0 lub 1 przy pomiarze. Ten stan probabilistyczny jest nazywany superpozycją. Przy użyciu tego prawdopodobieństwa można generować liczby losowe.
 
-W naszej operacji języka Q# wprowadzamy typ danych `Qubit` (natywny dla języka Q#). Element `Qubit` można przydzielić tylko za pomocą instrukcji `using`. Po przydzieleniu kubit jest zawsze w stanie `Zero`. 
+W naszej Q# operacji wprowadzamy `Qubit` Typ danych, natywny dla Q# . Element `Qubit` można przydzielić tylko za pomocą instrukcji `using`. Po przydzieleniu kubit jest zawsze w stanie `Zero`. 
 
 Za pomocą operacji `H` można wprowadzić element `Qubit` w stan superpozycji. Aby zmierzyć kubit i odczytać jego wartość, użyj operacji wewnętrznej `M`.
 
@@ -61,13 +64,13 @@ Ponieważ wynik pomiaru jest całkowicie losowy, uzyskaliśmy losowy bit. Możem
 
 ## <a name="creating-a-complete-random-number-generator"></a>Tworzenie kompletnego generatora liczb losowych
 
-Teraz, gdy mamy operację Q#, która generuje losowe bity, możemy jej użyć do utworzenia kompletnego kwantowego generatora liczb losowych. Możemy użyć aplikacji wiersza polecenia języka Q# lub programu hosta.
+Teraz, gdy mamy Q# operację generującą bity losowe, możemy użyć jej do utworzenia kompletnego generatora liczb losowych Quantum. Możemy użyć Q# aplikacji wiersza polecenia lub programu hosta.
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Aplikacje wiersza polecenia języka Q# w programie Visual Studio lub Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#aplikacje wiersza polecenia z programem Visual Studio lub Visual Studio Code](#tab/tabid-qsharp)
 
-Aby utworzyć kompletną aplikację wiersza polecenia języka Q#, dodaj następujący punkt wejścia do swojego programu w języku Q#. 
+Aby utworzyć pełną Q# aplikację wiersza polecenia, Dodaj następujący punkt wejścia do Q# programu: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Język Python z programem Visual Studio Code lub wierszem polecenia](#tab/tabid-python)
 
-Aby uruchomić nowy program języka Q# z poziomu środowiska Python, zapisz następujący kod jako `host.py`:
+Aby uruchomić nowy Q# program z języka Python, Zapisz następujący kod jako `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[Język C# w programie Visual Studio Code lub Visual Studio](#tab/tabid-csharp)
 
-Aby uruchomić nowy program języka Q# z poziomu środowiska C#, zmodyfikuj element `Driver.cs` tak, aby zawierał następujący kod języka C#:
+Aby uruchomić nowy Q# program w języku c#, zmodyfikuj, `Driver.cs` aby zawierał następujący kod w języku c#:
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

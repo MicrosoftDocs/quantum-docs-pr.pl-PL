@@ -1,21 +1,24 @@
 ---
-title: Eksplorowanie splątania przy użyciu języka Q#
-description: Dowiedz się, jak napisać program kwantowy w języku Q#. Opracowywanie aplikacji stanu Bella za pomocą zestawu QDK (Quantum Development Kit)
+title: Eksploruj Entanglement zQ#
+description: Dowiedz się, jak napisać program Quantum w Q# . Opracowywanie aplikacji stanu Bella za pomocą zestawu QDK (Quantum Development Kit)
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 16c93b3dd17363c06602529cb34e8fc84aadc7a8
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415426"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869702"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Samouczek: Eksplorowanie splątania przy użyciu języka Q\#
 
-W tym samouczku pokazano, jak napisać program języka Q#, który manipuluje kubitami, mierzy je oraz przedstawia efekty superpozycji i splątania.
+W tym samouczku pokazano, jak napisać Q# program, który manipuluje i mierzy qubits i pokazuje efekty nakładania się i Entanglement.
 
 Napiszesz aplikację o nazwie Bell, aby zademonstrować splątanie kwantowe.
 Nazwisko Bell odnosi się do stanów Bella — specyficznych stanów kwantowych dwóch kubitów, które są używane do reprezentowania najprostszych przykładów superpozycji i splątania kwantowego.
@@ -27,14 +30,14 @@ Gdy wszystko będzie gotowe do rozpoczęcia kodowania, wykonaj następujące kro
 * [Zainstaluj](xref:microsoft.quantum.install) zestaw Quantum Development Kit przy użyciu preferowanego języka i środowiska programistycznego.
 * Jeśli masz już zainstalowany zestaw QDK, upewnij się, że [zaktualizowano](xref:microsoft.quantum.update) go do najnowszej wersji.
 
-Możesz również wykonać czynności opisane w opisie, nie instalując QDK, przeglądając omówienia języka programowania Q # i pierwsze koncepcje przetwarzania Quantum.
+Możesz również wykonać czynności opisane w opisie, nie instalując QDK, przeglądając omówienia Q# języka programowania i pierwsze koncepcje przetwarzania Quantum.
 
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 > * Tworzenie i łączenie operacji w p\#
 > * Twórz operacje w celu umieszczenia qubits w położeniu, entangle i mierzenia ich.
-> * Zademonstrowanie Entanglement Quantum przy użyciu programu Q # uruchamianego w symulatorze. 
+> * Zademonstrowanie Entanglement Quantum przy użyciu Q# programu uruchamianego w symulatorze. 
 
 ## <a name="demonstrating-qubit-behavior-with-the-qdk"></a>Prezentowanie zachowania qubit z QDK
 
@@ -45,20 +48,20 @@ Pomiar tworzy wartość binarną, 0 lub 1.  Kubit przechodzi z superpozycji (dow
 
 Wiele kubitów może być [**splątanych**](xref:microsoft.quantum.glossary#entanglement).  Gdy mierzymy jeden ze splątanych kubitów, powoduje to również aktualizację naszej wiedzy o stanie pozostałych kubitów.
 
-Teraz wszystko jest gotowe do zademonstrowania, jak wyrazić to zachowanie w języku Q#.  Rozpoczniesz od najprostszego możliwego programu i rozbudujesz go w celu zademonstrowania zjawisk superpozycji kwantowej i splątania kwantowego.
+Teraz jesteśmy gotowi do zademonstrowania Q# tego zachowania.  Rozpoczniesz od najprostszego możliwego programu i rozbudujesz go w celu zademonstrowania zjawisk superpozycji kwantowej i splątania kwantowego.
 
-## <a name="creating-a-q-project"></a>Tworzenie projektu Q #
+## <a name="creating-a-no-locq-project"></a>Tworzenie Q# projektu
 
-Pierwszą czynnością, którą należy wykonać, jest utworzenie nowego projektu Q #. W tym samouczku zamierzamy używać środowiska na podstawie [aplikacji wiersza polecenia z vs Code](xref:microsoft.quantum.install.standalone).
+Pierwszą czynnością, którą należy wykonać, jest utworzenie nowego Q# projektu. W tym samouczku zamierzamy używać środowiska na podstawie [aplikacji wiersza polecenia z vs Code](xref:microsoft.quantum.install.standalone).
 
 Aby utworzyć nowy projekt, w VS Code: 
 
-1. Kliknij pozycję **View** -> **Command Palette**, a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).
+1. Kliknij pozycję **Wyświetl**  ->  **paletę poleceń** i wybierz pozycję ** Q# : Utwórz nowy projekt**.
 2. Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).
 3. Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).
 4. Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.
 
-W takim przypadku nazywamy projektem `Bell` . Spowoduje to wygenerowanie dwóch plików: `Bell.csproj` , pliku projektu i `Program.qs` szablonu aplikacji Q #, która zostanie użyta do zapisania naszej aplikacji. Zawartość `Program.qs` powinna być:
+W takim przypadku nazywamy projektem `Bell` . Spowoduje to wygenerowanie dwóch plików: `Bell.csproj` , pliku projektu i `Program.qs` szablonu Q# aplikacji, która zostanie użyta do zapisania naszej aplikacji. Zawartość `Program.qs` powinna być:
 
 ```qsharp
    namespace Bell {
@@ -76,11 +79,11 @@ W takim przypadku nazywamy projektem `Bell` . Spowoduje to wygenerowanie dwóch 
 
 ## <a name="write-the-q-application"></a>Napisz aplikację Q \#
  
-Naszym celem jest przygotowanie dwóch kubitów w określonym stanie kwantowym, aby zademonstrować sposób wykonywania operacji na kubitach za pomocą języka Q# w celu zmieniania ich stanu, a także zademonstrować efekty superpozycji i splątania. Utworzymy ten element, aby wprowadzić qubit Stany, operacje i pomiary.
+Naszym celem jest przygotowanie dwóch qubits w konkretnym stanie Quantum, pokazując, jak pracować na qubits z programem w Q# celu zmiany ich stanu i zademonstrować efekty nakładania się i Entanglement. Utworzymy ten element, aby wprowadzić qubit Stany, operacje i pomiary.
 
 ### <a name="initialize-qubit-using-measurement"></a>Inicjowanie qubit przy użyciu miary
 
-W pierwszym poniższym kodzie pokazujemy, jak pracować z kubitami w języku Q#.  Wprowadzimy dwie operacje [`M`](xref:microsoft.quantum.intrinsic.m) i [`X`](xref:microsoft.quantum.intrinsic.x) przekształciją stan qubit. W tym fragmencie kodu jest definiowana operacja `SetQubitState`, która przyjmuje parametr w postaci kubitu i kolejny parametr `desired`, reprezentujący stan, w który należy wprowadzić kubit.  Operacja `SetQubitState` wykonuje pomiar kubitu za pomocą operacji `M`.  W polu Q # pomiar qubit zawsze zwraca wartość `Zero` lub `One` .  Jeśli pomiar zwraca wartość, która nie jest równa żądanej wartości, `SetQubitState` "Przerzuć" qubit, czyli wykonuje `X` operację, która zmienia stan qubit na nowy stan, w którym prawdopodobieństwa zwracająca `Zero` wynik pomiaru i `One` jest odwrócona. W ten sposób `SetQubitState` zawsze umieszcza docelowy qubit w żądanym stanie.
+W pierwszym poniższym kodzie pokazano, jak korzystać z qubits w programie Q# .  Wprowadzimy dwie operacje [`M`](xref:microsoft.quantum.intrinsic.m) i [`X`](xref:microsoft.quantum.intrinsic.x) przekształciją stan qubit. W tym fragmencie kodu jest definiowana operacja `SetQubitState`, która przyjmuje parametr w postaci kubitu i kolejny parametr `desired`, reprezentujący stan, w który należy wprowadzić kubit.  Operacja `SetQubitState` wykonuje pomiar kubitu za pomocą operacji `M`.  W programie Q# pomiar qubit zawsze zwraca albo `Zero` `One` .  Jeśli pomiar zwraca wartość, która nie jest równa żądanej wartości, `SetQubitState` "Przerzuć" qubit, czyli wykonuje `X` operację, która zmienia stan qubit na nowy stan, w którym prawdopodobieństwa zwracająca `Zero` wynik pomiaru i `One` jest odwrócona. W ten sposób `SetQubitState` zawsze umieszcza docelowy qubit w żądanym stanie.
 
 Zastąp zawartość `Program.qs` następującym kodem:
 
@@ -103,15 +106,15 @@ Wartości `Zero` i `One` są stałymi, które reprezentują dwa możliwe wyniki 
 
 Operacja `SetQubitState` mierzy kubit. Jeśli kubit jest w żądanym stanie, operacja `SetQubitState` pozostawia go bez zmian; w przeciwnym razie zmieniamy stan kubitu na żądany, wykonując operację `X`.
 
-#### <a name="about-q-operations"></a>Informacje o operacjach języka Q#
+#### <a name="about-no-locq-operations"></a>Informacje o Q# operacjach
 
-Operacja języka Q# jest podprocedurą kwantową. Oznacza to, że jest to wywoływana procedura, która zawiera wywołania innych operacji Quantum.
+Q#Operacja jest podprocedurą Quantum. Oznacza to, że jest to wywoływana procedura, która zawiera wywołania innych operacji Quantum.
 
 Argumenty operacji są przekazywane za pomocą krotki (w nawiasach).
 
-Zwracany typ operacji jest określony po dwukropku. W tym przypadku operacja `SetQubitState` nie zwraca wartości, więc jest oznaczona jako zwracająca wartość `Unit`. W języku Q# jest to odpowiednik wartości `unit` języka F#, która jest w przybliżeniu analogiczna do wartości `void` w języku C# i pustej krotki (`Tuple[()]`) w języku Python.
+Zwracany typ operacji jest określony po dwukropku. W tym przypadku operacja `SetQubitState` nie zwraca wartości, więc jest oznaczona jako zwracająca wartość `Unit`. Jest to Q# odpowiednik w języku `unit` F #, który jest w przybliżeniu analogiczny do `void` języka C#, i pustej krotki ( `Tuple[()]` ) w Python.
 
-W pierwszej operacji języka Q# użyto dwóch operacji kwantowych:
+W pierwszej operacji użyto dwóch operacji Quantum Q# :
 
 * [`M`](xref:microsoft.quantum.intrinsic.m)Operacja, która mierzy stan qubit
 * [`X`](xref:microsoft.quantum.intrinsic.x)Operacja, która przerzuca stan qubit
@@ -154,19 +157,19 @@ Ta operacja (`TestBellState`) wykona `count` iteracji pętli, ustawi określoną
 
 #### <a name="about-variables-in-q"></a>Informacje o zmiennych w Q\#
 
-Domyślnie zmienne w języku Q# są niezmienialne — ich wartości nie można zmienić po powiązaniu. Słowo kluczowe `let` jest używane do wskazania powiązania zmiennej niezmienialnej. Argumenty operacji są zawsze niezmienialne.
+Domyślnie zmienne w Q# są niezmienne; ich wartości nie można zmienić po ich powiązaniu. Słowo kluczowe `let` jest używane do wskazania powiązania zmiennej niezmienialnej. Argumenty operacji są zawsze niezmienialne.
 
 Jeśli potrzebujesz zmiennej, której wartość można zmienić, takiej jak `numOnes` w przykładzie, możesz zadeklarować zmienną za pomocą słowa kluczowego `mutable`. Wartość zmiennej modyfikowalnej zmienia się przy użyciu instrukcji `setQubitState`.
 
-W obu przypadkach typ zmiennej jest wnioskowany przez kompilator. Język Q# nie wymaga żadnych adnotacji typu dla zmiennych.
+W obu przypadkach typ zmiennej jest wnioskowany przez kompilator. Q#nie wymaga żadnych adnotacji typu dla zmiennych.
 
 #### <a name="about-using-statements-in-q"></a>`using`Instrukcje w temacie Q\#
 
-Instrukcja `using` jest również szczególna dla języka Q#. Służy do przydzielania kubitów do użycia w bloku kodu. W języku Q# wszystkie kubity są dynamicznie przydzielane i zwalniane — nie są stałymi zasobami w całym okresie istnienia złożonego algorytmu. Instrukcja `using` przydziela zestaw kubitów na początku bloku i zwalnia te kubity na jego końcu.
+`using`Instrukcja jest również specjalna dla Q# . Służy do przydzielania kubitów do użycia w bloku kodu. W programie Q# wszystkie qubits są przydzielane i wydawane, a nie stałymi zasobami w całym okresie istnienia złożonego algorytmu. Instrukcja `using` przydziela zestaw kubitów na początku bloku i zwalnia te kubity na jego końcu.
 
 ## <a name="execute-the-code-from-the-command-line"></a>Wykonywanie kodu z wiersza polecenia
 
-Aby uruchomić kod, musimy określić kompilator, *który* jest wywoływany do uruchomienia, gdy zostanie podane `dotnet run` polecenie. Jest to wykonywane z prostą zmianą w pliku Q #, dodając wiersz `@EntryPoint()` bezpośrednio poprzedzający możliwy do `TestBellState` przeprowadzenia: operację w tym przypadku. Pełny kod powinien:
+Aby uruchomić kod, musimy określić kompilator, *który* jest wywoływany do uruchomienia, gdy zostanie podane `dotnet run` polecenie. Jest to wykonywane z prostą zmianą w Q# pliku, dodając wiersz `@EntryPoint()` bezpośrednio poprzedzający możliwy do `TestBellState` przeprowadzenia: operację w tym przypadku. Pełny kod powinien:
 
 ```qsharp
 namespace Bell {
@@ -230,7 +233,7 @@ Test results (# of 0s, # of 1s):
 
 ## <a name="prepare-superposition"></a>Przygotowanie superpozycji
 
-Teraz przyjrzyjmy się sposobom, w jaki Q # Express ma na celu umieszczanie qubits w położeniu.  Przypomnijmy, że kubit może być w stanie superpozycji wartości 0 i 1.  Użyjemy operacji `Hadamard`, aby go uzyskać. Jeśli kubit znajduje się w dowolnym ze stanów klasycznych (gdy pomiar zwraca zawsze wartość `Zero` lub zawsze wartość `One`), operacja `Hadamard` lub `H` wprowadzi kubit w stan, w którym pomiar kubitu będzie zwracać wartość `Zero` przez 50% czasu i zwracać wartość `One` przez 50% czasu.  Koncepcyjnie kubit można uważać za będący w połowie między wartościami `Zero` i `One`.  Gdy teraz zasymulujemy operację `TestBellState`, zwracane wyniki będą zawierać w przybliżeniu równą liczbę wartości `Zero` i `One` po pomiarze.  
+Teraz przyjrzyjmy się sposobom, w jaki Q# wyrażamy, jak można dołączać qubits.  Przypomnijmy, że kubit może być w stanie superpozycji wartości 0 i 1.  Użyjemy operacji `Hadamard`, aby go uzyskać. Jeśli kubit znajduje się w dowolnym ze stanów klasycznych (gdy pomiar zwraca zawsze wartość `Zero` lub zawsze wartość `One`), operacja `Hadamard` lub `H` wprowadzi kubit w stan, w którym pomiar kubitu będzie zwracać wartość `Zero` przez 50% czasu i zwracać wartość `One` przez 50% czasu.  Koncepcyjnie kubit można uważać za będący w połowie między wartościami `Zero` i `One`.  Gdy teraz zasymulujemy operację `TestBellState`, zwracane wyniki będą zawierać w przybliżeniu równą liczbę wartości `Zero` i `One` po pomiarze.  
 
 ### <a name="x-flips-qubit-state"></a>`X`Przerzucanie stanu qubit
 
@@ -296,7 +299,7 @@ Jest to zjawisko **superpozycji**, które daje nam po raz pierwszy wgląd w rzec
 
 ## <a name="prepare-entanglement"></a>Przygotowanie splątania
 
-Teraz zobaczmy, jak można wyrażać splątanie w języku Q#.
+Teraz przyjrzyjmy się sposobom, w jaki Q# wyrażamy możliwości entangle qubits.
 Najpierw ustawiamy pierwszy kubit w stanie początkowym, a następnie wprowadzamy go w stan superpozycji za pomocą operacji `H`.  Następnie przed pomiarem pierwszego qubit używamy nowej operacji ( `CNOT` ), która oznacza, że nie jest to kontrolowane.  Wynikiem wykonania tej operacji na dwóch kubitach jest przerzucenie drugiego kubitu, jeśli pierwszy kubit ma wartość `One`.  Teraz oba kubity są splątane.  Nasze dane statystyczne dotyczące pierwszego kubitu nie uległy zmianie (szansa 50%-50% dla wartości `Zero` i `One` po pomiarze), ale teraz pomiar drugiego kubitu jest __zawsze__ taki sam jak pierwszego kubitu. Bramka `CNOT` splątała dwa kubity — cokolwiek dzieje się z jednym z nich, to samo dzieje się z drugim. W przypadku odwrócenia pomiarów (drugi kubit przed pierwszym) będzie dziać się to samo. Pierwsza miara będzie losowa, a druga zablokowana na wartości pierwszej.
 
 Najpierw należy przydzielić dwie qubits zamiast jednego w `TestBellState` :
@@ -412,6 +415,6 @@ Jak podano w omówieniu, nasze dane statystyczne dotyczące pierwszego kubitu ni
 
 ## <a name="next-steps"></a>Następne kroki
 
-W samouczku [Wyszukiwanie Grovera](xref:microsoft.quantum.quickstarts.search) przedstawiono tworzenie i uruchamianie wyszukiwania Grovera — jednego z najpopularniejszych algorytmów obliczeń kwantowych — oraz podano ciekawy przykład programu języka Q#, którego można użyć do rozwiązywania rzeczywistych problemów obliczeń kwantowych.  
+W [poszukiwanym](xref:microsoft.quantum.quickstarts.search) samouczku Grover przedstawiono sposób kompilowania i uruchamiania wyszukiwania Grover, jednego z najpopularniejszych algorytmów przetwarzania Quantum i oferowania przykładowego Q# programu, który może służyć do rozwiązywania rzeczywistych problemów z przetwarzaniem Quantum.  
 
-Artykuł [Wprowadzenie do zestawu Quantum Development Kit](xref:microsoft.quantum.welcome) zawiera więcej zalecanych sposobów uczenia się języka Q# i programowania kwantowego.
+[Wprowadzenie do zestawu Quantum Development Kit](xref:microsoft.quantum.welcome) zaleca więcej sposobów uczenia się Q# i programowania Quantum.

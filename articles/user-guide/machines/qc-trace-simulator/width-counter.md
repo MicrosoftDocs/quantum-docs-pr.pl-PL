@@ -1,21 +1,24 @@
 ---
 title: Counter Width-Quantum Development Kit
-description: 'Dowiedz się więcej o liczniku szerokości QDK firmy Microsoft, który używa symulatora śledzenia Quantum, aby policzyć liczbę qubits przydzieloną i zaciągniętych przez operacje w programie Q #.'
+description: Dowiedz się więcej o liczniku szerokości QDK firmy Microsoft, który używa symulatora śledzenia Quantum do policzania liczby qubits przydzielonej i zapożyczonej przez operacje w Q# programie.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871524"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868206"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Symulator śledzenia Quantum: szerokość licznika
 
-Licznik width jest częścią [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)zestawu Quantum Development Kit. Można jej użyć do zliczenia liczby qubits przydzielone i zapożyczone przez każdą operację w programie Q #. Niektóre operacje pierwotne mogą przydzielić dodatkowe qubits, na przykład pomnóż `X` operacje kontrolowane lub `T` operacje kontrolowane.
+Licznik width jest częścią [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)zestawu Quantum Development Kit. Można jej użyć do zliczenia liczby qubits przydzielone i zapożyczone przez poszczególne operacje w Q# programie. Niektóre operacje pierwotne mogą przydzielić dodatkowe qubits, na przykład pomnóż `X` operacje kontrolowane lub `T` operacje kontrolowane.
 
 ## <a name="invoking-the-width-counter"></a>Wywoływanie licznika szerokości
 
@@ -29,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>Używanie licznika Width w programie hosta C#
 
-W poniższym przykładzie w języku C# jest obliczana liczba dodatkowych qubits przyznanych przez implementację <xref:microsoft.quantum.intrinsic.x> operacji mnożenia, na podstawie następującego przykładowego kodu Q #:
+W poniższym przykładzie w języku C# jest obliczana liczba dodatkowych qubits przyznanych przez implementację <xref:microsoft.quantum.intrinsic.x> operacji mnożenia, na podstawie następującego Q# przykładowego kodu:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

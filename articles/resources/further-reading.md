@@ -6,12 +6,15 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884152"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866846"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Więcej zasobów szkoleniowych dotyczących przetwarzania Quantum
 
@@ -24,7 +27,7 @@ Ta sekcja zawiera wybrane odwołania do głębokiego pokrycia zagadnień związa
 + Kitaev, A. Y., Wieczorek, A., & Vyalyi, M. N. (2002). Obliczenia klasyczne i Quantum (vol. 47). Providence: amerykańskie społeczeństwo matematyczne.
 + Kaye, P., Laflamme, R., & Mosca, M. (2007). Wprowadzenie do przetwarzania Quantum. Oxford University.
 + Rieffel, E. G., & Polak, W. H. (2011). Przetwarzanie Quantum: łagodne wprowadzenie. MIT Press.
-+ Sarah C. Kaiser i Christopher E. granade (obsadzone program wczesnego dostępu, który rozpoczął publikację z kwietnia 2019 w 2020). [Poznaj przetwarzanie Quantum przy użyciu języka Python i Q # — podejścia praktycznego](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
++ Sarah C. Kaiser i Christopher E. granade (obsadzone program wczesnego dostępu, który rozpoczął publikację z kwietnia 2019 w 2020). [Poznaj przetwarzanie Quantum przy użyciu języka Python i Q# -a praktyczne podejście](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
 
 ## <a name="online-courses"></a>Kursy online ##
 

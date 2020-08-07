@@ -1,17 +1,20 @@
 ---
 title: Uzyskiwanie szacunkowych poziomów energii
-description: 'Zapoznaj się z przykładowym programem Q #, który szacuje wartości poziomu energii wodoru.'
+description: Zapoznaj się z przykładowym Q# programem, który szacuje wartości poziomu energii wodoru.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871572"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869209"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Uzyskiwanie szacunkowych poziomów energii
 Oszacowanie wartości poziomów energii jest jednym z głównych zastosowań chemii Quantum. W tym artykule opisano, jak można wykonać to dla kanonicznego przykładu wodoru. Przykład przywoływany w tej sekcji znajduje się [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) w repozytorium próbek chemii. Jest to przykładowy przykład wizualizacji, który przedstawia dane wyjściowe [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) .
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Możesz teraz wywołać kod Q z programu hosta. Poniższy kod w języku C# tworzy symulator i uruchamia `GetEnergyByTrotterization` się w celu uzyskania energii stanu ziemi.
+Teraz można wywołać Q# kod z programu hosta. Poniższy kod w języku C# tworzy symulator i uruchamia `GetEnergyByTrotterization` się w celu uzyskania energii stanu ziemi.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

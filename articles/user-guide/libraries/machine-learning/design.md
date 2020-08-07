@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276036"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868948"
 ---
 # <a name="design-your-own-classifier"></a>Projektowanie własnego klasyfikatora
 
@@ -47,6 +50,8 @@ Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://githu
 To, co definiujemy w tym miejscu, jest funkcja, która zwraca tablicę `ControlledRotation` elementów, która razem z tablicą parametrów i odchylenia będzie definiować nasze [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Ten typ jest fundamentalny w bibliotece Machine Learning Quantum i definiuje klasyfikatora. Obwód zdefiniowany w funkcji powyżej jest częścią klasyfikatora, w którym każda próbka zestawu danych zawiera dwie funkcje. W związku z tym potrzebujemy tylko dwóch qubits. Graficzna reprezentacja obwodu to:
 
  ![Przykład modelu obwodu](~/media/circuit_model_1.PNG)
+
+Należy zauważyć, że domyślnie operacje biblioteki Quantum Machine Learning mierzą ostatni qubit rejestru w celu oszacowania prawdopodobieństwa klasyfikacji. Należy pamiętać o tym fakcie podczas projektowania obwodu.
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Używanie funkcji biblioteki do zapisywania warstw bram
 

@@ -1,21 +1,24 @@
 ---
-title: Uruchamianie algorytmu wyszukiwania Grovera w języku Q# — Quantum Development Kit
-description: Utwórz projekt języka Q#, który pokazuje algorytm Grovera, jeden z kanonicznych algorytmów kwantowych.
+title: Uruchom algorytm wyszukiwania Grover w Q# -Quantum Development Kit
+description: Kompiluj Q# projekt, który demonstruje algorytm Grover, jeden z kanonicznych algorytmów Quantum.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275269"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869668"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Samouczek: implementowanie algorytmu wyszukiwania Grovera w języku Q\#
 
-Z tego samouczka możesz dowiedzieć się, jak opracować i uruchomić wyszukiwanie Grovera w celu przyspieszenia wyszukiwania danych bez struktury.  Wyszukiwanie Grovera jest jednym z najpopularniejszych kwantowych algorytmów obliczeniowych, a ta stosunkowo niewielka implementacja w języku Q# umożliwia wstępne poznanie niektórych zalet programowania rozwiązań kwantowych za pomocą ogólnego języka programowania kwantowego Q# w celu tworzenia algorytmów kwantowych.  Na końcu przewodnika zobaczysz dane wyjściowe symulacji, przedstawiające pomyślne znalezienie określonego ciągu na liście nieuporządkowanych wpisów, w ułamku czasu, jaki zajęłoby przeszukanie całej listy na komputerze klasycznym.
+Z tego samouczka możesz dowiedzieć się, jak opracować i uruchomić wyszukiwanie Grovera w celu przyspieszenia wyszukiwania danych bez struktury.  Wyszukiwanie Grover jest jednym z najpopularniejszych algorytmów obliczeniowych, a ta stosunkowo mała Q# implementacja zapewnia pewne zalety programowania rozwiązań Quantum przy użyciu ogólnego Q# języka przetwarzania Quantum do wyrażenia Quantum.  Na końcu przewodnika zobaczysz dane wyjściowe symulacji, przedstawiające pomyślne znalezienie określonego ciągu na liście nieuporządkowanych wpisów, w ułamku czasu, jaki zajęłoby przeszukanie całej listy na komputerze klasycznym.
 
 Algorytm Grovera wyszukuje określone elementy na liście danych bez struktury. Na przykład pozwala odpowiedzieć na pytanie: czy karta wyciągnięta z talii to as kier? Etykieta określonego elementu jest nazywana _oznaczonymi danymi wejściowymi_.
 
@@ -39,7 +42,7 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
 ## <a name="write-the-code"></a>Tworzenie kodu
 
-1. Za pomocą zestawu Quantum Development Kit [utwórz nowy projekt w języku Q# dla aplikacji wiersza polecenia](xref:microsoft.quantum.install.standalone). Nadaj projektowi tytuł `Grover`.
+1. Za pomocą zestawu Quantum Development Kit [Utwórz nowy Q# projekt dla aplikacji wiersza polecenia](xref:microsoft.quantum.install.standalone). Nadaj projektowi tytuł `Grover`.
 
 1. Dodaj następujący kod do pliku `Program.qs` w nowym projekcie:
 
@@ -51,9 +54,9 @@ Liczba przyrostowych zwiększeń jest mniejsza niż liczba elementów na liście
 
     Operacja `ReflectAboutMarked` definiuje oznaczone dane wejściowe, które są wyszukiwane: ciąg naprzemiennych wartości 0 i 1. W tym przykładzie oznaczone dane wejściowe są na stałe umieszczone w kodzie. Przykład można rozszerzyć, aby wyszukać różne dane wejściowe, lub uogólnić, aby wyszukać dowolne dane wejściowe.
 
-1. Następnie uruchom nowy program języka Q#, aby znaleźć element oznaczony przez element `ReflectAboutMarked`.
+1. Następnie uruchom nowy program, Q# Aby znaleźć element oznaczony przez `ReflectAboutMarked` .
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Aplikacje wiersza polecenia języka Q# w programie Visual Studio lub Visual Studio Code
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#aplikacje wiersza polecenia z programem Visual Studio lub Visual Studio Code
 
 Plik wykonywalny uruchomi operację lub funkcję oznaczoną atrybutem `@EntryPoint()` w symulatorze lub estymatorze zasobów, w zależności od konfiguracji projektu i opcji wiersza polecenia.
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli ten samouczek Ci się podobał, zapoznaj się z poniższymi zasobami, aby dowiedzieć się więcej o tym, jak za pomocą języka Q# pisać własne aplikacje kwantowe:
+W przypadku korzystania z tego samouczka zapoznaj się z poniższymi zasobami, aby dowiedzieć się więcej na temat tworzenia Q# własnych aplikacji Quantum:
 
 - [Wróć do przewodnika Wprowadzenie do zestawu QDK](xref:microsoft.quantum.welcome)
 - Wypróbuj bardziej ogólny [przykład](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) algorytmu wyszukiwania Grover

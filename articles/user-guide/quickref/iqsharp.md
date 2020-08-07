@@ -1,18 +1,21 @@
 ---
-title: Polecenia magic IQ#
-description: 'Szybka Strona referencyjna dla poleceń IQ # Magic z notesami Q # Jupyter'
+title: I Q# polecenia Magic
+description: Szybka Strona referencyjna dla Q# poleceń Magic z Q# notesami Jupyter
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870547"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867985"
 ---
-# <a name="iq-magic-commands"></a>Polecenia magic IQ#
+# <a name="ino-locq-magic-commands"></a>I Q# polecenia Magic
 
 ### <a name="general"></a>Ogólne
 
@@ -23,7 +26,7 @@ ms.locfileid: "86870547"
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Zgłasza bieżące metryki wydajności dla tego jądra.
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Uruchamia daną funkcję lub operację na maszynie docelowej QuantumSimulator.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Uruchamia daną funkcję lub operację na maszynie docelowej ToffoliSimulator.
-- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Wyświetla listę operacji Q # dostępnych w bieżącej sesji.
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Wyświetla listę Q# operacji dostępnych w bieżącej sesji.
 - [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): Zawiera akcje związane z bieżącym obszarem roboczym.
 
 ### <a name="azure-quantum-integration"></a>Integracja z usługą Quantum platformy Azure
@@ -34,12 +37,12 @@ ms.locfileid: "86870547"
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Wyświetla wyniki zadania w bieżącym obszarze roboczym usługi Azure Quantum.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Wyświetla stan zadania w bieżącym obszarze roboczym usługi Azure Quantum.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Przesyła zadanie do obszaru roboczego usługi Azure Quantum.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Ustawia lub wyświetla aktywny cel wykonywania dla zadania Q # w obszarze roboczym usługi Azure Quantum.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Ustawia lub wyświetla aktywny cel wykonywania na potrzeby Q# przesłania zadania w obszarze roboczym usługi Azure Quantum.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chemia (z pakietu Microsoft. Quantum. chemii)
 
 - [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): Ładuje i zwraca reprezentację problemu struktury elektronicznej Broombridge z danego pliku YAML.
-- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Koduje Fermion hamiltonian do formatu, którego można używać za pomocą Q #.
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Koduje Fermion hamiltonian do formatu, którego można używać Q# .
 - [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Dodaje warunki do Fermion hamiltonian.
 - [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): Ładuje Fermion hamiltonian dla problemu ze strukturą elektroniczną. Problem jest ładowany z pliku lub przekazywany jako argument.
 - [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Ładuje problem struktury elektronicznej Broombridge i zwraca wybrany stan danych wejściowych.

@@ -7,12 +7,15 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906818"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869753"
 ---
 # <a name="third-party-software-notices-and-information"></a>POWIADOMIENIA I INFORMACJE DOTYCZĄCE OPROGRAMOWANIA INNYCH FIRM
 
@@ -20,8 +23,8 @@ Ten plik jest oparty na materiałach lub zakupionych w nim z projektów wymienio
 
 1. YamlDotNet. podpisanej wersji 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
-4. xUnit. rozszerzalność. wykonywanie 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
+3. xUnit. Runner. Console 2.3.1 ( https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+4. xunit.extensibility.execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. rozszerzalność. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
 7. xUnit. Assert 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
@@ -32,7 +35,7 @@ Ten plik jest oparty na materiałach lub zakupionych w nim z projektów wymienio
 12. FSharp. Core 4.2.3 (https://www.nuget.org/packages/FSharp.Core/4.2.3)
 13. FSharp. Charting 0.91.1 (https://www.nuget.org/packages/FSharp.Charting/0.91.1)
 14. FsCheck 2.10.4 (https://www.nuget.org/packages/FsCheck/2.10.4)
-15. 3\.7.0 (https://www.nuget.org/packages/Argu/3.7.0)
+15. 3.7.0 argumentował (https://www.nuget.org/packages/Argu/3.7.0)
 16. FParsec 1.0.3 (https://www.nuget.org/packages/FParsec/1.0.3)
 
 ## <a name="yamldotnetsigned-notices-and-information"></a>YamlDotNet. podpisane powiadomienia i informacje
@@ -75,7 +78,7 @@ Zobacz licencję dla określonego języka, w którym znajdują się uprawnienia 
 
 
 
-## <a name="xunitextensibilityexecution-notices-and-information"></a>xUnit. rozszerzalność. i informacje o wykonywaniu
+## <a name="xunitextensibilityexecution-notices-and-information"></a>xunit.extensibility.exepowiadomienia i informacje dotyczące cution
 ---------------------------------------
 Prawa autorskie (c) .NET Foundation i współautorzy wszystkie prawa zastrzeżone
 
@@ -178,7 +181,7 @@ Warunki "reprodukowanie", "reprodukcja", "" pochodne działania "i" dystrybucja 
 
 2. Przyznawanie praw
 
-(A) przyznanie praw autorskich, które podlegają postanowieniom niniejszej licencji, w tym warunki i ograniczenia licencyjne w sekcji 3, każdy współautor przyzna Licencjobiorcy niewyłączną, ogólnoświatową i nieodpłatną licencję na prawa autorskie do odtworzenia swojego wkładu, przygotowania pochodne pracuje nad jego udziałem oraz dystrybuuje jego udział lub wszystkie utworzone przez Ciebie działania zależne.
+(A) przyznanie praw autorskich, które podlegają postanowieniom niniejszej licencji, w tym warunki licencyjne i ograniczenia w sekcji 3, każdy współautor udziela Licencjobiorcy niewyłącznej, ogólnoświatowej, nieodpłatnej licencji na prawa autorskie w celu odtworzenia swojego wkładu, przygotowania zarządzenia zależnego od jego udziału oraz dystrybucji jego udziału lub wszelkich utworzonych instrumentów zależnych.
 
 (B) przyznanie patentu — podlegające postanowieniom tej licencji wraz z postanowieniami licencyjnymi i ograniczeniami w sekcji 3 każdy współautor udziela Licencjobiorcy niewyłącznej, ogólnoświatowej i nieodpłatnej licencji w ramach licencjonowanych patentów, aby móc wprowadzać, wykorzystywać, sprzedawać, oferować oferty do sprzedaży, importować i/lub w inny sposób zbywać swój udział w oprogramowaniu lub instrumentach zależnych od udziału w oprogramowaniu.
 
@@ -192,14 +195,14 @@ Warunki "reprodukowanie", "reprodukcja", "" pochodne działania "i" dystrybucja 
 
 (D) w przypadku dystrybucji dowolnej części oprogramowania w postaci kodu źródłowego możesz to zrobić tylko w ramach tej licencji, dołączając pełną kopię tej licencji do dystrybucji. W przypadku dystrybucji dowolnej części oprogramowania w postaci skompilowanej lub w postaci kodu obiektu można to zrobić tylko w ramach licencji zgodnej z tą licencją.
 
-(E) oprogramowanie jest licencjonowane "w takiej postaci, w jakiej jest". Użytkownik ponosi ryzyko związane z jego używaniem. Współautorzy nie udzielają żadnych wyraźnych rękojmi, gwarancji ani warunków. Licencjobiorca może mieć dodatkowe prawa konsumenta zgodnie z obowiązującym prawem lokalnym, którego nie można zmienić. W zakresie dozwolonym przez prawo, współautorzy nie wykluczają domniemanej rękojmi z tytułu wartości handlowej, przydatności do określonego celu oraz braku naruszenia.
+(E) oprogramowanie jest licencjonowane "w takiej postaci, w jakiej jest". Użytkownik ponosi ryzyko związane z ich użyciem. Współautorzy nie udzielają żadnych wyraźnych rękojmi, gwarancji ani warunków. Licencjobiorca może mieć dodatkowe prawa konsumenta zgodnie z obowiązującym prawem lokalnym, którego nie można zmienić. W zakresie dozwolonym przez prawo, współautorzy nie wykluczają domniemanej rękojmi z tytułu wartości handlowej, przydatności do określonego celu oraz braku naruszenia.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core — uwagi i informacje
 ---------------------------------------
 Licencja MIT (MIT)
 
-Prawa autorskie (c) Microsoft Corporation.
-Wszelkie prawa zastrzeżone.
+Copyright (c) Microsoft Corporation.
+All rights reserved.
 
 Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprogramowania i powiązane pliki dokumentacji ("oprogramowanie"). Aby zaradzić oprogramowaniu bez ograniczeń, w tym bez ograniczenia praw do używania, kopiowania, modyfikowania, scalania, publikowania, rozpowszechniania, podlicencji i/lub sprzedawania kopii oprogramowania, oraz do zezwalania osobom, które to oprogramowanie zostało dostarczone, z zastrzeżeniem następujących warunków:
 
@@ -218,7 +221,7 @@ Uprawnienia są udzielane bezpłatnie osobom, które uzyskują kopię tego oprog
 Powyższe informacje o prawach autorskich i informacje o uprawnieniach zostaną uwzględnione we wszystkich kopiach lub znaczących częściach oprogramowania.
 
 OPROGRAMOWANIE JEST DOSTARCZANE "W TAKIEJ POSTACI, W JAKIEJ JEST", BEZ GWARANCJI JAKIEGOKOLWIEK RODZAJU, WYRAŹNE LUB NIEJAWNE, W TYM MIĘDZY INNYMI GWARANCJE DOTYCZĄCE WŁASNOŚCI HANDLOWEJ, PRZYDATNOŚCI DO OKREŚLONEGO CELU I NIENARUSZANIA. W ŻADNYM WYPADKU AUTORZY LUB POSIADACZE PRAW AUTORSKICH NIE BĘDĄ PONOSIĆ ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK ROSZCZEŃ, SZKODY LUB INNE ODPOWIEDZIALNOŚCI, NIEZALEŻNIE OD TEGO, CZY W WYNIKU DZIAŁANIA UMOWY, NIEDOZWOLONYCH LUB W INNY SPOSÓB, WYNIKAJĄCYCH Z LUB W ZWIĄZKU Z OPROGRAMOWANIEM LUB INNYM POSTĘPOWANIEM W OPROGRAMOWANIU.
-Spakowane wersje tego oprogramowania mogą zawierać kopie OxyPlot. Core. dll i OxyPlot. GtkSharp. dll, z poniższą licencją.
+W spakowanych wersjach tego oprogramowania mogą być dostępne następujące kopie OxyPlot.Core.dll i OxyPlot.GtkSharp.dll.
 
 ---
 
@@ -236,7 +239,7 @@ OPROGRAMOWANIE JEST DOSTARCZANE "W TAKIEJ POSTACI, W JAKIEJ JEST", BEZ GWARANCJI
 ---------------------------------------
 Copyright (c) 2008-2014, Kurt Schelfthout
 
-Wszelkie prawa zastrzeżone.
+All rights reserved.
 
 Redystrybucja i użycie w formularzach źródłowych i binarnych, z lub bez modyfikacji, są dozwolone, jeśli są spełnione następujące warunki:
 
@@ -244,7 +247,7 @@ Redystrybucja i użycie w formularzach źródłowych i binarnych, z lub bez mody
 * Redystrybucje w postaci binarnej muszą odwzorować powyższe informacje o prawach autorskich, tę listę warunków oraz następujące oświadczenie dotyczące dokumentacji i/lub innych materiałów dostarczonych z dystrybucją.
 * Nazwy FsCheck i nazwiska współautorów mogą służyć do zatwierdzania lub promowania produktów pochodzących z tego oprogramowania bez konieczności wcześniejszego pisemnego zezwolenia.
 
-TO OPROGRAMOWANIE JEST DOSTARCZANE PRZEZ POSIADACZY I WSPÓŁPOSIADACZY PRAW AUTORSKICH W STANIE „TAKIM, JAKIM JEST” BEZ ŻADNYCH GWARANCJI, BEZPOŚREDNICH LUB DOMNIEMANYCH, W TYM M.IN. DOMNIEMANYCH GWARANCJI WARTOŚCI HANDLOWEJ ORAZ PRZYDATNOŚCI DO OKREŚLONEGO CELU. W ŻADNYM WYPADKU WŁAŚCICIEL LUB WSPÓŁAUTORZY PRAW AUTORSKICH NIE PONOSI ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK SZKODY BEZPOŚREDNIE, POŚREDNIE, PRZYPADKOWE, SPECJALNE, RETORSYJNE LUB WYNIKOWE (W TYM, ALE NIE OGRANICZONE DO ZAKUPU LUB USŁUG ZAMIENNYCH). UTRATA UŻYCIA, DANE LUB ZYSKI; LUB PRZERWA DZIAŁAJĄCE W FIRMIE) JEDNAK I W JAKIEJKOLWIEK KARZE ODPOWIEDZIALNOŚCI, NIEZALEŻNIE OD TEGO, CZY JEST TO UMOWA, ŚCISŁA ODPOWIEDZIALNOŚĆ CZY NIEDOZWOLONE (W TYM ZANIEDBANIE LUB W INNY SPOSÓB) WYNIKAJĄCE Z KORZYSTANIA Z TEGO OPROGRAMOWANIA, NAWET W PRZYPADKU, GDY ZALECISZ TAKIE SZKODY.
+TO OPROGRAMOWANIE JEST DOSTARCZANE PRZEZ POSIADACZY PRAW AUTORSKICH I WSPÓŁAUTORÓW "AS IS" I WSZELKIE GWARANCJE EKSPRESOWE LUB DOMNIEMANE, W TYM, ALE NIE OGRANICZONE DO, DOMNIEMANE GWARANCJE WARTOŚCI HANDLOWEJ I PRZYDATNOŚCI DO OKREŚLONEGO CELU SĄ ODJMOWANE. W ŻADNYM WYPADKU WŁAŚCICIEL LUB WSPÓŁAUTORZY PRAW AUTORSKICH NIE PONOSI ODPOWIEDZIALNOŚCI ZA JAKIEKOLWIEK SZKODY BEZPOŚREDNIE, POŚREDNIE, PRZYPADKOWE, SPECJALNE, RETORSYJNE LUB WYNIKOWE (W TYM, ALE NIE OGRANICZONE DO ZAKUPU LUB USŁUG ZAMIENNYCH). UTRATA UŻYCIA, DANE LUB ZYSKI; LUB PRZERWA DZIAŁAJĄCE W FIRMIE) JEDNAK I W JAKIEJKOLWIEK KARZE ODPOWIEDZIALNOŚCI, NIEZALEŻNIE OD TEGO, CZY JEST TO UMOWA, ŚCISŁA ODPOWIEDZIALNOŚĆ CZY NIEDOZWOLONE (W TYM ZANIEDBANIE LUB W INNY SPOSÓB) WYNIKAJĄCE Z KORZYSTANIA Z TEGO OPROGRAMOWANIA, NAWET W PRZYPADKU, GDY ZALECISZ TAKIE SZKODY.
 
 ## <a name="argu-notices-and-information"></a>POWIADOMIENIA i informacje
 ---------------------------------------
@@ -265,22 +268,22 @@ OPROGRAMOWANIE JEST DOSTARCZANE "W TAKIEJ POSTACI, W JAKIEJ JEST", BEZ GWARANCJI
 
 O ile nie zaznaczono inaczej, biblioteka FParsec w formie źródłowej i binarnej jest dystrybuowana w ramach uproszczonej licencji BSD. Uproszczona licencja BSD (vel "2 do lokalnych — licencja BSD") jest prostą, ograniczającą licencją, która jest zgodna ze znakiem OSI do lokalnych. 
 
-FParsecuje dane pochodzące z bazy danych znaków Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., który jest dystrybuowany w ramach następujących warunków: http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsecuje dane pochodzące z bazy danych znaków Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., który jest dystrybuowany w ramach następujących warunków:http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Dokumentacja w folderze doc jest licencjonowana w ramach Commons attributionej licencji do lokalnych NonCommercial 3,0. Ta licencja Creative Commons Attribution nie pozwala na korzystanie z dokumentacji do celów komercyjnych bez zgody użytkownika. Oznacza to, że na przykład nie można sprzedać dokumentacji w formularzu książki dla zysku lub umieścić ją w farmie zawartości sieci Web w celu uzyskania pieniędzy z reklamami. Można jednak skorzystać z dokumentacji w kontekście handlowym (np. umieścić ją w intranecie firmy komercyjnej), o ile nie próbujesz bezpośrednio uzyskać pieniędzy z tekstu dokumentacji. 
 
 2,1 uproszczona licencja BSD
 
-Copyright (c) 2007 \ u20122017, posta Stephan Tolksdorf. Wszelkie prawa zastrzeżone.
+Copyright (c) 2007 \ u20122017, posta Stephan Tolksdorf. All rights reserved.
 
 Redystrybucja i użycie w formularzach źródłowych i binarnych, z lub bez modyfikacji, są dozwolone, jeśli są spełnione następujące warunki: 
 * Redystrybucja kodu źródłowego musi zachować powyższe informacje o prawach autorskich, tę listę warunków i poniższe oświadczenie.
 * Redystrybucje w postaci binarnej muszą odwzorować powyższe informacje o prawach autorskich, tę listę warunków oraz następujące oświadczenie dotyczące dokumentacji i/lub innych materiałów dostarczonych z dystrybucją. 
 
-To oprogramowanie jest dostarczane przez posiadaczy praw autorskich "AS IS" i wszelkie gwarancje ekspresowe lub domniemane, w tym, ale nie ograniczone do, domniemane gwarancje dotyczące wartości handlowej i przydatności do określonego celu są odjmowane. W żadnym wypadku posiadacze praw autorskich nie ponoszą odpowiedzialności za jakiekolwiek szkody bezpośrednie, pośrednie, przypadkowe, specjalne, RETORSYJNE lub wynikowe (w tym, ale nie ograniczone do, zakup towarów lub usług, utratę użytkowania, dane lub zyski) lub działalność biznesowa zakłócenia) jednak powodowane i w jakiejkolwiek karze odpowiedzialności, niezależnie od tego, czy jest to umowa, ścisła odpowiedzialność czy niedozwolone (w tym zaniedbanie lub w inny sposób) wynikające z korzystania z tego oprogramowania, nawet w przypadku, gdy zalecisz takie szkody. 
+To oprogramowanie jest dostarczane przez posiadaczy praw autorskich "AS IS" i wszelkie gwarancje ekspresowe lub domniemane, w tym, ale nie ograniczone do, domniemane gwarancje dotyczące wartości handlowej i przydatności do określonego celu są odjmowane. W żadnym wypadku posiadacze praw autorskich nie ponosi odpowiedzialności za jakiekolwiek bezpośrednie, pośrednie, przypadkowe, specjalne, RETORSYJNE lub wynikowe odszkodowania (w tym, ale nie ograniczone, do zakupu zamiennych towarów lub usług, utrata użytkowania, dane lub zyski, lub przerwanie działania biznesowego), a także z dowolnego teorii odpowiedzialności, niezależnie od tego, czy jest to umowa, ścisła odpowiedzialność czy niedozwolone (w tym zaniedbanie lub inne) wynikające z używania tego oprogramowania , nawet w przypadku poinformowania o możliwości takiej szkody. 
 
 2,2 Creative Commons Attribution przypisywanie do lokalnych NonCommercial 3,0 nieportowo
 
-Podsumowanie: https://creativecommons.org/licenses/by-nc/3.0/
+Podsumowaniehttps://creativecommons.org/licenses/by-nc/3.0/
 
-Tekst pełnej licencji: https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Tekst pełnej licencji:https://creativecommons.org/licenses/by-nc/3.0/legalcode 

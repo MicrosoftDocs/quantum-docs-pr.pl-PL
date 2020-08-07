@@ -1,32 +1,36 @@
 ---
-title: Typy w języku Q#
-description: 'Dowiedz się więcej na temat różnych typów używanych w języku programowania Q #.'
+title: Typy wQ#
+description: Dowiedz się więcej na temat różnych typów używanych w Q# języku programowania.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: e37ce6e3a2dfad5395cdecf06178d64ec51b79f1
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415290"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869600"
 ---
-# <a name="types-in-q"></a>Typy w języku Q#
+# <a name="types-in-no-locq"></a>Typy wQ#
 
-W tym artykule opisano model typu Q # i składnię służącą do określania typów i pracy z tymi typami. Aby uzyskać szczegółowe informacje na temat sposobu tworzenia i obsługi wyrażeń tych typów, zobacz [wyrażenia typu](xref:microsoft.quantum.guide.expressions).
+W tym artykule opisano Q# model typu i składnię służącą do określania typów i pracy z tymi typami. Aby uzyskać szczegółowe informacje na temat sposobu tworzenia i obsługi wyrażeń tych typów, zobacz [wyrażenia typu](xref:microsoft.quantum.guide.expressions).
 
-Należy pamiętać, że funkcja Q # jest językiem o *jednoznacznie określonym* typie, w taki sposób, że dokładne użycie tych typów może pomóc kompilatorowi zapewnić silne gwarancje dotyczące programów Q # w czasie kompilacji.
-Aby zapewnić najmocniejsze gwarancje, konwersje między typami w Q # muszą być jawne przy użyciu wywołań do funkcji, które wyrażają konwersję. Funkcja Q # zapewnia wiele takich funkcji, jak część <xref:microsoft.quantum.convert> przestrzeni nazw.
+Należy pamiętać, że Q# jest *strongly-typed* to wulgarny język, w taki sposób, że staranne korzystanie z tych typów może pomóc kompilatorowi zapewnić silne gwarancje dotyczące Q# programów w czasie kompilacji.
+Aby zapewnić najmocniejsze gwarancje, konwersje między typami w Q# muszą być jawne przy użyciu wywołań do funkcji, które wyrażają tę konwersję. 
+Q#oferuje różne funkcje, które są częścią <xref:microsoft.quantum.convert> przestrzeni nazw.
 Przerzuty do zgodnych typów, z drugiej strony, nastąpią niejawnie. 
 
-Polecenie Q # zapewnia typy pierwotne, które są używane bezpośrednio, i różne sposoby tworzenia nowych typów z innych typów.
+Q#zawiera typy pierwotne, które są używane bezpośrednio, i różne sposoby tworzenia nowych typów z innych typów.
 Opiszemy każdą z nich w dalszej części tego artykułu.
 
 ## <a name="primitive-types"></a>Typy pierwotne
 
-Język Q # udostępnia następujące *typy pierwotne*, z których można korzystać bezpośrednio w programach Q #. Można również użyć tych typów pierwotnych do konstruowania nowych typów.
+Q#Język zawiera następujące *typy pierwotne*, z których można korzystać bezpośrednio w Q# programach. Można również użyć tych typów pierwotnych do konstruowania nowych typów.
 
 - `Int`Typ reprezentuje 64-bitową liczbę całkowitą ze znakiem, na przykład,, `2` `107` `-5` .
 - `BigInt`Typ reprezentuje podpisaną liczbę całkowitą z dowolnego rozmiaru, na przykład, `2L` , `107L` `-5L` .
@@ -40,7 +44,7 @@ Język Q # udostępnia następujące *typy pierwotne*, z których można korzyst
 - `String`Typ jest sekwencją znaków Unicode, które są nieprzezroczyste dla użytkownika po utworzeniu.
   Użyj `string` typu, aby zgłosić komunikaty do klasycznego hosta w przypadku błędu lub zdarzenia diagnostycznego.
 - `Unit`Typ może mieć tylko jedną wartość, `()` . 
-  Użyj tego typu, aby wskazać, że funkcja lub operacja Q # nie zwraca żadnych informacji. 
+  Użyj tego typu, aby wskazać, że Q# Funkcja lub operacja nie zwraca żadnych informacji. 
 - `Qubit`Typ reprezentuje bit Quantum lub qubit.
    `Qubit`s nie jest nieprzezroczysty dla użytkownika. Jedyną operacją dopuszczalną dla nich, inną niż przekazanie jej do innej operacji, jest przetestowanie pod kątem tożsamości (równość).
    Ostatecznie wdrażasz akcje na `Qubit` s, wywołując instrukcje wewnętrzne na procesorach Quantum (lub w symulatorze Quantum).
@@ -51,19 +55,19 @@ Język Q # udostępnia następujące *typy pierwotne*, z których można korzyst
    Jest to typ wyliczeniowy z dwoma możliwymi wartościami: `One` i `Zero` , które są stałymi typu `Result` .
    `Zero`wskazuje, że eigenvalue + 1 została zmierzona; `One`wskazuje, że eigenvalue — 1.
 
-Stałe,,,,,, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` i `Zero` są zastrzeżonymi symbolami w Q #.
+Stałe,,,,,, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` i `Zero` są zastrzeżonymi symbolami w Q# .
 
 ## <a name="array-types"></a>Typy tablic
 
-* Dla dowolnego prawidłowego typu Q # istnieje typ, który reprezentuje tablicę wartości tego typu.
+* Dla dowolnego prawidłowego Q# typu istnieje typ, który reprezentuje tablicę wartości tego typu.
     Na przykład `Qubit[]` i `(Bool, Pauli)[]` reprezentuje tablice `Qubit` wartości i `(Bool, Pauli)` wartości krotek.
 
 * Tablica tablic jest również prawidłowa. Rozszerzanie w poprzednim przykładzie, tablica `(Bool, Pauli)` tablic jest oznaczona `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Ten przykład, `(Bool, Pauli)[][]` , reprezentuje potencjalnie nieregularną tablicę tablic, a nie prostokątną dwuwymiarową tablicę. Usługa Q # nie obsługuje prostokątnych tablic wielowymiarowych.
+> Ten przykład, `(Bool, Pauli)[][]` , reprezentuje potencjalnie nieregularną tablicę tablic, a nie prostokątną dwuwymiarową tablicę. Q#nie obsługuje prostokątnych tablic wielowymiarowych.
 
-* Wartość tablicy można napisać w kodzie źródłowym Q # przy użyciu nawiasów kwadratowych wokół elementów tablicy, jak w `[PauliI, PauliX, PauliY, PauliZ]` .
+* Wartość tablicy może być zapisywana w Q# kodzie źródłowym przy użyciu nawiasów kwadratowych wokół elementów tablicy, jak w `[PauliI, PauliX, PauliY, PauliZ]` .
 Wspólny typ podstawowy wszystkich elementów w tablicy określa typ literału tablicy. W związku z tym konstruowanie tablicy z elementami, które nie mają wspólnego typu podstawowego, zgłasza błąd.  
 Aby zapoznać się z przykładem, zobacz [tablice o możliwych wartościach](xref:microsoft.quantum.guide.expressions#arrays-of-callables).
 
@@ -91,7 +95,7 @@ Indeksy dolne tablic są oparte na zero i muszą być typu `Int` lub typu `Range
 
 ## <a name="tuple-types"></a>Typy krotek
 
-Krotki są zaawansowaną koncepcją używaną przez funkcję Q # do zbierania wartości w jednej wartości, co ułatwia ich przekazywanie.
+Krotki są zaawansowaną koncepcją używaną przez cały Q# program do zbierania wartości w jednej wartości, co ułatwia ich przekazywanie.
 W szczególności przy użyciu notacji krotki można wyrazić, że każda operacja i możliwy do odwoływać przyjmuje dokładnie jedno wejście i zwraca dokładnie jedno wyjście.
 
 * Podaną zero lub kilka różnych typów,,..., `T0` `T1` można zauważyć, że `Tn` Nowy *Typ krotki* jako `(T0, T1, ..., Tn)` .
@@ -102,17 +106,17 @@ Takie zagnieżdżenie jest zawsze ograniczone, jednak ponieważ typy krotek nie 
 Na przykład `(3, false)` jest to krotka, której typem jest typ krotki `(Int, Bool)` .
 Istnieje możliwość tworzenia tablic krotek, spójnych kolekcji tablic, krotek podkolekcji i tak dalej.
 
-* Począwszy od Q # 0,3, `Unit` jest nazwą *typu* pustej krotki; `()` jest używana dla *wartości* pustej krotki.
+* Od Q# 0,3, `Unit` jest nazwą *typu* pustej krotki; `()` jest używana dla *wartości* pustej krotki.
 
 * Wystąpienia krotki są niezmienne.
-Usługa Q # nie udostępnia mechanizmu zmiany zawartości spójnej kolekcji po utworzeniu.
+Q#Program nie udostępnia mechanizmu zmiany zawartości spójnej kolekcji po utworzeniu.
 
 
 
 ### <a name="singleton-tuple-equivalence"></a>Równoważna krotka singleton
 
 Możliwe jest utworzenie pojedynczej krotki (pojedynczego elementu) `('T1)` , takiej jak `(5)` lub `([1,2,3])` .
-Jednakże Q # traktuje pojedynczą krotkę jako odpowiednik wartości zamkniętego typu.
+Jednakże Q# traktuje pojedynczą krotkę jako odpowiednik wartości zamkniętego typu.
 Oznacza to, że nie ma różnicy między `5` i `(5)` , lub między i i między i `5` `(((5)))` `(5, (6))` `(5, 6)` .
 Jest to równie ważne, aby można było pisać `(5)+3` w miarę pisania `5+3` ; oba wyrażenia są oceniane do `8` .
 
@@ -135,14 +139,14 @@ Na przykład:
 newtype PairOfInts = (Int, Int);
 ```
     
-* Każdy plik źródłowy Q # może deklarować dowolną liczbę typów zdefiniowanych przez użytkownika.
+* Każdy Q# plik źródłowy może deklarować dowolną liczbę typów zdefiniowanych przez użytkownika.
 * Nazwy typów muszą być unikatowe w obrębie przestrzeni nazw i mogą nie powodować konfliktów z nazwami operacji i funkcji.
 * Typy zdefiniowane przez użytkownika są różne, nawet jeśli typy podstawowe są identyczne.
 W szczególności nie istnieje Automatyczna konwersja między wartościami dwóch typów zdefiniowanych przez użytkownika, nawet jeśli typy bazowe są identyczne.
 
 ### <a name="named-vs-anonymous-items"></a>Elementy nazwane a anonimowe
 
-Plik Q # może definiować nowy nazwany typ zawierający pojedynczą wartość dowolnego typu prawnego.
+Q#Plik może definiować nowy nazwany typ zawierający pojedynczą wartość dowolnego typu prawnego.
 Dla dowolnego typu krotki `T` można zadeklarować nowy typ zdefiniowany przez użytkownika, który jest podtypem `T` `newtype` instrukcji.
 Na @"microsoft.quantum.math" przykład w przestrzeni nazw liczba zespolona jest definiowana jako typ zdefiniowany przez użytkownika:
 
@@ -151,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 Ta instrukcja tworzy nowy typ z dwoma anonimowymi elementami typu `Double` .   
 
-Poza elementami anonimowymi typy zdefiniowane przez użytkownika obsługują również *nazwane elementy* w przypadku Q # w wersji 0,7 lub nowszej. Można na przykład nazwać elementy do `Re` dla podwójnego reprezentowania rzeczywistej części liczby zespolonej i `Im` dla części urojonej: 
+Poza elementami anonimowymi typy zdefiniowane przez użytkownika obsługują również *nazwane elementy* w Q# wersji 0,7 lub nowszej. Można na przykład nazwać elementy do `Re` dla podwójnego reprezentowania rzeczywistej części liczby zespolonej i `Im` dla części urojonej: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -178,7 +182,7 @@ Powracanie do przykładu `Complex` , może być również zdefiniowane współrz
 newtype Polar = (Radius : Double, Phase : Double);
 ```
 
-Mimo że oba `Complex` i `Polar` oba mają typ podstawowy `(Double, Double)` , dwa typy są całkowicie niezgodne w Q #, minimalizując ryzyko przypadkowego wywołania złożonej funkcji matematycznej ze współrzędnymi biegunowymi i odwrotnie.
+Mimo że oba te `Complex` i `Polar` oba mają typ podstawowy `(Double, Double)` , te dwa typy są całkowicie niezgodne Q# , co minimalizuje ryzyko przypadkowego wywołania złożonej funkcji matematycznej z współrzędnymi biegunowymi i odwrotnie.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Dostęp do anonimowych elementów za pomocą operatora rozwinięcia
 
@@ -211,7 +215,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-Aby uzyskać więcej informacji na temat operatora rozwinięcia, zobacz [wyrażenia typu w Q #](xref:microsoft.quantum.guide.expressions).
+Aby uzyskać więcej informacji na temat operatora rozwinięcia, zobacz [wyrażenia typów Q# w ](xref:microsoft.quantum.guide.expressions).
 
 ### <a name="creating-values-of-user-defined-types"></a>Tworzenie wartości typów zdefiniowanych przez użytkownika
 
@@ -260,7 +264,7 @@ Uwzględniając typy `'Tinput` i `'Tresult` :
 
 Są one nazywane *sygnaturą* wywołania.
 
-* Wszystkie wywoływane przez Q # wartości przyjmują pojedynczą wartość jako dane wejściowe i zwracają pojedynczą wartość jako dane wyjściowe.
+* Wszystkie Q# wartości są wywoływane jako dane wejściowe i zwracają pojedynczą wartość jako dane wyjściowe.
 * Można używać krotek zarówno dla wartości wejściowych, jak i wyjściowych.
 * Liczba, która nie ma wyniku, zwraca `Unit` .
 * Możliwe do nadania, że żadne dane wejściowe nie przyjmują pustej kolekcji jako dane wejściowe.
@@ -273,7 +277,7 @@ Typy *funkcji* są w pełni określone przez ich sygnaturę. Na przykład funkcj
 Na przykład, jeśli wykonanie operacji opiera się na stanie innych qubits, powinien on obsługiwać `Controlled` Funktor; Jeśli operacja ma odwrotność, powinien obsługiwać `Adjoint` Funktor.
 
 > [!NOTE]
-> W tym artykule omówiono, jak funktory zmienić sygnaturę operacji. Aby uzyskać więcej informacji na temat funktory i operacji, zobacz [Operations and Functions in Q #](xref:microsoft.quantum.guide.operationsfunctions). 
+> W tym artykule omówiono, jak funktory zmienić sygnaturę operacji. Aby uzyskać więcej informacji na temat funktory i operacji, zobacz [operacje i Q# funkcje w ](xref:microsoft.quantum.guide.operationsfunctions). 
 
 Aby wymagać obsługi dla `Controlled` i/lub `Adjoint` Funktor w typie operacji, należy dodać adnotację wskazującą odpowiadające jej cechy.
 Adnotacja `is Ctl` (na przykład `(Qubit => Unit is Ctl)` ) wskazuje, że operacja jest sterowana. Oznacza to, że jego wykonywanie opiera się na stanie innego qubit lub qubits. Podobnie adnotacja `is Adj` wskazuje, że operacja ma sąsiadujące, to oznacza, że może być "odwrócona", co oznacza, że po zastosowaniu operacji, a następnie jej współdziałanie do stanu pozostawia stan niezmieniony. 
@@ -286,7 +290,7 @@ Typ operacji, która nie obsługuje żadnej funktory, jest określany za pomocą
 
 Możliwe do napisania typy mogą zawierać *parametry typu*.
 Użyj symbolu poprzedzonego znakiem pojedynczego cudzysłowu, aby wyznaczyć parametr typu; na przykład `'A` jest parametrem typu prawnego.
-Aby uzyskać więcej informacji i szczegółowe informacje na temat sposobu definiowania wywoływanych parametrów typu, zobacz [operacje i funkcje w Q #](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
+Aby uzyskać więcej informacji i szczegółowe informacje na temat sposobu definiowania dożądanych parametrów typu, zobacz [operacje i Q# funkcje w ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 
 Parametr typu może pojawić się więcej niż raz w pojedynczym podpisie.
 Na przykład funkcja, która stosuje inną funkcję do każdego elementu tablicy i zwraca zebrany wynik ma sygnaturę `(('A[], 'A->'A) -> 'A[])` .
@@ -294,8 +298,8 @@ Podobnie funkcja, która zwraca skład dwóch operacji, ma sygnaturę `((('A=>'B
 
 Po wywołaniu wywołania typu sparametryzowanego wszystkie argumenty, które mają ten sam parametr typu, muszą być tego samego typu.
 
-Funkcja Q # nie udostępnia mechanizmu ograniczania możliwych typów, które użytkownik może zastąpić parametrem typu.
+Q#Program nie udostępnia mechanizmu ograniczania możliwych typów, które użytkownik może zastąpić parametrem typu.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz, gdy widzisz wszystkie typy, które składają się na język Q #, zobacz [wyrażenia typu w Q #](xref:microsoft.quantum.guide.expressions) , aby dowiedzieć się, jak tworzyć i manipulować wyrażeniami tych różnych typów.
+Teraz, gdy wykorzystano wszystkie typy, które składają się na Q# język, zobacz [typy wyrażeń Q# w](xref:microsoft.quantum.guide.expressions) , aby dowiedzieć się, jak tworzyć i manipulować wyrażeniami tych różnych typów.

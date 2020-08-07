@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870621"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868104"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Zestaw Quantum Development Kit (QDK) Toffoli symulator
 
@@ -21,13 +24,13 @@ Chociaż symulator Toffoli jest bardziej ograniczony w funkcjonalności niż [sy
 
 ## <a name="invoking-the-toffoli-simulator"></a>Wywoływanie symulatora Toffoli
 
-Symulator Toffoli można uwidocznić za pośrednictwem `ToffoliSimulator` klasy. Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania programu Q #](xref:microsoft.quantum.guide.host-programs).
+Symulator Toffoli można uwidocznić za pośrednictwem `ToffoliSimulator` klasy. Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania Q# programu](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>Wywoływanie symulatora Toffoli z języka C #
 
-Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie `ToffoliSimulator` klasy, a następnie przekazać je jako pierwszy parametr `Run` metody operacji.
+Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie klasy `ToffoliSimulator`, a następnie przekazać je jako pierwszy parametr metody operacji `Run`.
 
-Należy pamiętać, że w przeciwieństwie do `QuantumSimulator` klasy `ToffoliSimulator` Klasa nie implementuje <xref:System.IDisposable> interfejsu, dlatego nie trzeba go umieszczać w `using` instrukcji.
+Należy pamiętać, że w przeciwieństwie do klasy `QuantumSimulator` klasa `ToffoliSimulator` nie implementuje interfejsu <xref:System.IDisposable>, dlatego nie trzeba go umieszczać w instrukcji `using`.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Należy pamiętać, że w przeciwieństwie do `QuantumSimulator` klasy `ToffoliS
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Wywoływanie symulatora Toffoli z poziomu języka Python
 
-Użyj metody [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną operacją Q #:
+Użyj metody [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>Wywoływanie symulatora Toffoli z wiersza polecenia
 
-Podczas uruchamiania programu Q # z wiersza polecenia, użyj parametru **--symulatora** (lub **-s** ), aby określić komputer docelowy symulatora Toffoli. Następujące polecenie uruchamia program przy użyciu szacowania zasobów: 
+Podczas uruchamiania Q# programu z wiersza polecenia, użyj parametru **--symulatora** (lub **-s** skrótu), aby określić komputer docelowy symulatora Toffoli. Następujące polecenie uruchamia program przy użyciu szacowania zasobów: 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>Wywoływanie symulatora Toffoli z notesów Juptyer
 
-Użyj polecenia IQ # Magic [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) , aby uruchomić operację Q #.
+Użyj I Q# Magic polecenia [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) , aby uruchomić Q# operację.
 
 ```
 %toffoli myOperation

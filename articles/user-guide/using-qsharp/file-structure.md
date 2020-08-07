@@ -1,21 +1,24 @@
 ---
-title: 'Struktura pliku Q #'
-description: 'Opisuje strukturę i składnię pliku Q #.'
+title: Q#Struktura plików
+description: Opisuje strukturę i składnię Q# pliku.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884185"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867934"
 ---
-# <a name="q-file-structure"></a>Struktura pliku Q #
+# <a name="no-locq-file-structure"></a>Q#Struktura plików
 
-Plik Q # składa się z sekwencji *nazw deklaracji*.
+Q#Plik składa się z kolejności *deklaracji przestrzeni nazw*.
 Każda deklaracja przestrzeni nazw zawiera deklaracje dla typów, operacji i funkcji zdefiniowanych przez użytkownika, a także może zawierać dowolną liczbę poszczególnych typów deklaracji i w dowolnej kolejności.
 Aby uzyskać więcej informacji na temat deklaracji w przestrzeni nazw, zobacz Typy, [operacje](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)i [funkcje](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions) [zdefiniowane przez użytkownika](xref:microsoft.quantum.guide.types#user-defined-types).
 
@@ -24,10 +27,10 @@ W szczególności Komentarze do dokumentacji dla przestrzeni nazw poprzedzają d
 
 ## <a name="namespace-declarations"></a>Deklaracje przestrzeni nazw
 
-Plik Q # ma zwykle tylko jedną deklarację przestrzeni nazw, ale może mieć wartość None (i być pusty lub zawierać komentarze) lub może zawierać wiele przestrzeni nazw.
+Q#Plik ma zwykle tylko jedną deklarację przestrzeni nazw, ale może mieć wartość None (i być pusty lub zawierać komentarze) lub może zawierać wiele przestrzeni nazw.
 Deklaracje przestrzeni nazw nie mogą być zagnieżdżane.
 
-Można zadeklarować tę samą przestrzeń nazw w wielu plikach Q #, które są kompilowane ze sobą, o ile nie ma deklaracji typu, operacji lub funkcji o tej samej nazwie.
+Można zadeklarować tę samą przestrzeń nazw w wielu Q# plikach, które są kompilowane ze sobą, o ile nie ma deklaracji typu, operacji lub funkcji o tej samej nazwie.
 W szczególności nie można zdefiniować tego samego typu w tej samej przestrzeni nazw w wielu plikach, nawet jeśli deklaracje są identyczne.
 
 Deklaracja przestrzeni nazw składa się ze słowa kluczowego `namespace` , po którym następuje nazwa przestrzeni nazw i deklaracji zawartych w przestrzeni nazw ujętej w nawiasy klamrowe `{ }` .
@@ -61,7 +64,7 @@ Jeśli zadeklarowana operacja używa operacji `Op` z `Microsoft.Quantum.Intrinsi
 Aby jednak wywołać określoną funkcję `Fn` z `Microsoft.Quantum.Math` , należy wywołać ją przy użyciu polecenia `Math.Fn` .
 
 `open`Dyrektywa ma zastosowanie do całego bloku przestrzeni nazw w pliku.
-W związku z tym, jeśli zdefiniujesz dodatkową przestrzeń nazw w tym samym pliku Q # jak `NS` wcześniej, wszystkie operacje/funkcje/typy zdefiniowane w drugim obszarze nazw nie będą miały dostępu do niczego z `Microsoft.Quantum.Intrinsic` lub, `Microsoft.Quantum.Math` chyba że zostaną powtórzone otwarte dyrektywy. 
+W związku z tym, jeśli zdefiniujesz dodatkową przestrzeń nazw w tym samym Q# pliku jak `NS` wcześniej, wszystkie operacje/funkcje/typy zdefiniowane w drugim obszarze nazw nie będą miały dostępu do niczego z `Microsoft.Quantum.Intrinsic` lub, `Microsoft.Quantum.Math` chyba że zostaną powtórzone otwarte dyrektywy. 
 
 Aby odwołać się do typu lub możliwego do odłożenia zdefiniowanego w innej przestrzeni nazw, która *nie* jest otwarta w bieżącym obszarze nazw, należy odwołać się do niej przy użyciu w pełni kwalifikowanej nazwy.
 Na przykład, dana operacja o nazwie `Op` z `X.Y` przestrzeni nazw:
@@ -73,13 +76,13 @@ Na przykład, dana operacja o nazwie `Op` z `X.Y` przestrzeni nazw:
 Zwykle lepiej jest dołączyć przestrzeń nazw przy użyciu `open` dyrektywy.
 Użycie w pełni kwalifikowanej nazwy jest wymagane, jeśli dwie przestrzenie nazw definiują konstrukcje o tej samej nazwie, a bieżące źródło używa konstrukcji z obu tych typów.
 
-Pytania i odpowiedzi są zgodne z tymi samymi regułami dotyczącymi nazewnictwa w innych językach .NET.
-Jednak polecenie Q # nie obsługuje względnych odwołań do przestrzeni nazw.
+Q#obowiązują te same reguły nazewnictwa, jak w przypadku innych języków .NET.
+Program Q# nie obsługuje jednak odwołań względnych do przestrzeni nazw.
 Na przykład jeśli przestrzeń nazw `a.b` jest otwarta, odwołanie do operacji o nazwie nie `c.d` jest rozpoznawane jako operacja o pełnej nazwie *not* `a.b.c.d` .
 
 ## <a name="formatting"></a>Formatowanie
 
-Większość instrukcji i dyrektyw Q # kończy się średnikiem, `;` .
+Większość Q# instrukcji i dyrektyw kończy się kończąc średnikiem, `;` .
 Instrukcje i deklaracje, takie jak `for` i `operation` kończące się blokiem instrukcji (patrz Poniższa sekcja) nie wymagają kończącego się średnika.
 Każdy opis instrukcji wskazuje, czy jest wymagany średnik kończący.
 
@@ -88,14 +91,14 @@ Unikaj umieszczania wielu instrukcji w pojedynczym wierszu.
 
 ## <a name="statement-blocks"></a>Bloki instrukcji
 
-Instrukcje Q # są pogrupowane w bloki instrukcji, które są zawarte w nawiasach klamrowych `{ }` . Blok instrukcji rozpoczyna się od otwarcia `{` i kończącego się zamykaniem `}` .
+Q#instrukcje są pogrupowane w blokach instrukcji, które są zawarte w nawiasach klamrowych `{ }` . Blok instrukcji rozpoczyna się od otwarcia `{` i kończącego się zamykaniem `}` .
 
 Blok instrukcji, który jest leksykalny w innym bloku, jest traktowany jako podblok bloku zawierającego; bloki zawierające i podrzędne są również nazywane blokami zewnętrznymi i wewnętrznymi.
 
 ## <a name="comments"></a>Komentarze
 
 Komentarze zaczynają się od dwóch ukośników `//` i są kontynuowane do końca wiersza.
-Komentarz może pojawić się w dowolnym miejscu w pliku źródłowym Q #.
+Komentarz może pojawić się w dowolnym miejscu w Q# pliku źródłowym.
 
 ## <a name="documentation-comments"></a>Komentarze dokumentacji
 
@@ -103,10 +106,10 @@ Komentarze zaczynające się od trzech ukośników, `///` są traktowane specjal
 W takim przypadku kompilator traktuje je jako dokumentację dla zdefiniowanego typu wywoływanego lub zdefiniowanego przez użytkownika, tak samo jak w przypadku innych języków .NET.
 
 W `///` komentarzach tekst, który ma być wyświetlany jako część dokumentacji interfejsu API, jest sformatowany jako [promocji](https://daringfireball.net/projects/markdown/syntax), z różnymi częściami dokumentacji wskazywanych przez nagłówki o specjalnie określonej nazwie.
-W obszarze promocji Użyj `@"<ref target>"` rozszerzenia, aby wykonać operacje między odwołaniami, funkcje i typy zdefiniowane przez użytkownika w Q #. Zamień na w `<ref target>` pełni kwalifikowaną nazwę obiektu kodu, do którego istnieje odwołanie.
+W obszarze promocji Użyj `@"<ref target>"` rozszerzenia, aby wykonać operacje między odwołaniami, funkcje i typy zdefiniowane przez użytkownika w programie Q# . Zamień na w `<ref target>` pełni kwalifikowaną nazwę obiektu kodu, do którego istnieje odwołanie.
 Różne aparaty dokumentacji mogą również obsługiwać dodatkowe rozszerzenia promocji.
 
-Przykład:
+Na przykład:
 
 ```qsharp
 /// # Summary
@@ -153,4 +156,4 @@ Następujące nazwy są prawidłowe jako nagłówki komentarzy dokumentacji.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Informacje o [operacjach i funkcjach](xref:microsoft.quantum.guide.operationsfunctions) w usłudze Q #.
+Więcej informacji na temat [operacji i funkcji](xref:microsoft.quantum.guide.operationsfunctions) w programie Q# .

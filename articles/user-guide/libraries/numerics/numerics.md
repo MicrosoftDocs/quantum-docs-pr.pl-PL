@@ -1,17 +1,20 @@
 ---
-title: 'Korzystanie z biblioteki liczbowej Microsoft Q #'
+title: Korzystanie z Q# biblioteki liczbowych firmy Microsoft
 description: Dowiedz się więcej o typach i operacjach dostępnych w bibliotece liczb Quantum firmy Microsoft.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276121"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868801"
 ---
 # <a name="using-the-numerics-library"></a>Korzystanie z biblioteki liczb
 
@@ -28,7 +31,7 @@ Dostęp do wszystkich tych składników można uzyskać przy użyciu jednej `ope
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Typy
+## <a name="types"></a>Types
 
 Biblioteka liczb obsługuje następujące typy:
 
@@ -41,30 +44,30 @@ Biblioteka liczb obsługuje następujące typy:
 Dla każdego z trzech powyższych typów dostępne są różne operacje:
 
 1. **`LittleEndian`**
-    - Znak dodawania
+    - Dodawanie
     - Porównanie
-    - Znak mnożenia
+    - Mnożenie
     - Podniesienie
     - Dzielenie (z resztą)
 
 1. **`SignedLittleEndian`**
-    - Znak dodawania
+    - Dodawanie
     - Porównanie
     - Uzupełnienie od 1 do wersji 2
-    - Znak mnożenia
+    - Mnożenie
     - Podniesienie
 
 1. **`FixedPoint`**
     - Przygotowanie/inicjowanie do klasycznych wartości
     - Dodawanie (klasyczna stała lub inna stała Quantum)
     - Porównanie
-    - Znak mnożenia
+    - Mnożenie
     - Podniesienie
     - Ocena wielomianowa z specjalizacją dla funkcji parzystych i nieparzystych
     - Wzajemne (1/x)
     - Pomiar (klasyczny Double)
 
-Aby uzyskać więcej informacji i szczegółowe informacje dotyczące każdej z tych operacji, zobacz dokumentację dotyczącą bibliotek Q # w witrynie [docs.Microsoft.com](https://docs.microsoft.com/quantum)
+Aby uzyskać więcej informacji i szczegółowe informacje dotyczące każdej z tych operacji, zobacz dokumentację Q# bibliotek References w witrynie [docs.Microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Przykład: dodanie liczby całkowitej
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 Wyniki, $P (x) = 1 + 2x $, będą przechowywane w `yFxP` .
 
 Drugi, `EvaluateEvenPolynomialFxP` , i trzeci, `EvaluateOddPolynomialFxP` , są specjalizacjami dla przypadków funkcji parzystych i nieparzystych. Oznacza to, że dla funkcji parzystej/nieparzystej $f (x) $ i $ $ P_ {nawet} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, symbol $ $ $f (x) $ jest dobrze zbliżony do $P _ {nawet} (x) $ lub $P _ {nieparzysta} (x): = x\cdot P_ {nawet} (x) $, odpowiednio.
-W Q # te dwa przypadki mogą być obsługiwane w następujący sposób:
+W programie Q# te dwa przypadki mogą być obsługiwane w następujący sposób:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

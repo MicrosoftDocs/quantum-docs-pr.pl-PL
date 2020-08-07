@@ -1,101 +1,93 @@
 ---
-title: Słownik przetwarzania Quantum
-description: Słownik typowych warunków, akcji i obiektów używanych w ramach przetwarzania Quantum.
-author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
-ms.date: 12/11/2017
-ms.topic: article
-uid: microsoft.quantum.glossary
-no-loc:
-- $
-- $
-- $
-- $
-- $
-- $
-- '\cdots'
-- bmatrix
-- '\ddots'
-- '\equiv'
-- '\sum'
-- '\begin'
-- '\end'
-- '\sqrt'
-- '\otimes'
-- '{'
-- '}'
-- '\text'
-- '\phi'
-- '\kappa'
-- '\psi'
-- '\alpha'
-- '\beta'
-- '\gamma'
-- '\delta'
-- '\omega'
-- '\bra'
-- '\ket'
-- '\boldone'
-- '\\\\'
-- '\\'
-- =
-- '\frac'
-- '\text'
-- '\mapsto'
-- '\dagger'
-- '\to'
+title: Opis słownika przetwarzania Quantum: słownik typowych warunków, akcji i obiektów używanych w ramach przetwarzania Quantum.
+Autor: QuantumWriter MS. Author: Alan.Geller@microsoft.com MS. Date: 12/11/2017 MS. temat: identyfikator UID artykułu: Microsoft. Quantum. słownik No-Loc:
+- "Q#"
+- "$$v"
+- "$$"
+- "$$"
+- "$"
+- "$"
+- "$"
+- "$$"
+- "\cdots"
+- "bmatrix"
+- "\ddots"
+- "\equiv"
+- "\sum"
+- "\begin"
+- "\end"
+- "\sqrt"
+- "\otimes"
+- "{"
+- "}"
+- "\text"
+- "\phi"
+- "\kappa"
+- "\psi"
+- "\alpha"
+- "\beta"
+- "\gamma"
+- "\delta"
+- "\omega"
+- "\bra"
+- "\ket"
+- "\boldone"
+- "\\\\"
+- "\\"
+- "="
+- "\frac"
+- "\text"
+- "\mapsto"
+- "\dagger"
+- "\to"
 - "\begin{cases}"
 - "\end{cases}"
-- '\operatorname'
-- '\braket'
-- '\id'
-- '\expect'
-- '\defeq'
-- '\variance'
-- '\dd'
-- '&'
+- "\operatorname"
+- "\braket"
+- "\id"
+- "\expect"
+- "\defeq"
+- "\variance"
+- "\dd"
+- "&"
 - "\begin{align}"
 - "\end{align}"
-- '\Lambda'
-- '\lambda'
-- '\Omega'
-- '\mathrm'
-- '\left'
-- '\right'
-- '\qquad'
-- '\times'
-- '\big'
-- '\langle'
-- '\rangle'
-- '\bigg'
-- '\Big'
-- '|'
-- '\mathbb'
-- '\vec'
-- '\in'
-- '\texttt'
-- '\ne'
-- <
-- '>'
-- '\leq'
-- '\geq'
-- ~~
+- "\Lambda"
+- "\lambda"
+- "\Omega"
+- "\mathrm"
+- "\left"
+- "\right"
+- "\qquad"
+- "\times"
+- "\big"
+- "\langle"
+- "\rangle"
+- "\bigg"
+- "\Big"
+- "|"
+- "\mathbb"
+- "\vec"
+- "\in"
+- "\texttt"
+- "\ne"
+- "<"
+- ">"
+- "\leq"
+- "\geq"
+- "~~"
 - "~"
 - "\begin{bmatrix}"
 - "\end{bmatrix}"
-- '\_'
-ms.openlocfilehash: ba4d171d84d808f082b919dcc6156d9c65df7c05
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275365"
+- "\_"
+
 ---
+
 # <a name="quantum-computing-glossary"></a>Słownik przetwarzania Quantum
 
 ## <a name="adjoint"></a>Sąsiadująco
 
-Złożone sprzężenie sprzężone [operacji](xref:microsoft.quantum.glossary#operation). W przypadku operacji implementujących operator [jednostkowy](xref:microsoft.quantum.glossary#unitary-operator) sąsiadujący jest odwrotną operacją i jest wskazywany przez symbol Dagger. Na przykład, jeśli operacja `U` reprezentuje $U operatora $ , a następnie `Adjoint U` reprezentuje $U ^ \dagger $ . Aby uzyskać więcej informacji, zobacz [sąsiadująco](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Złożone sprzężenie sprzężone [operacji](xref:microsoft.quantum.glossary#operation). W przypadku operacji implementujących operator [jednostkowy](xref:microsoft.quantum.glossary#unitary-operator) sąsiadujący jest odwrotną operacją i jest wskazywany przez symbol Dagger. Na przykład, jeśli operacja `U` reprezentuje operator jednostki $ U $ , a następnie `Adjoint U` reprezentuje $ U ^ \dagger $ . Aby uzyskać więcej informacji, zobacz [sąsiadująco](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +95,7 @@ Złożone sprzężenie sprzężone [operacji](xref:microsoft.quantum.glossary#op
 
 ## <a name="bell-state"></a>Stan dzwonka
 
-Jeden z czterech konkretnych Maximally [Entangled](xref:microsoft.quantum.glossary#entanglement) [Quantum](xref:microsoft.quantum.glossary#quantum-state) z dwóch qubits. Cztery Stany są zdefiniowane jako $ \ket { \ beta_ {IJ } } = (\Mathbb{I } \Otimes X ^ iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Stan dzwonka jest również znany jako [para EPR](xref:microsoft.quantum.glossary#epr-pair).
+Jeden z czterech konkretnych Maximally [Entangled](xref:microsoft.quantum.glossary#entanglement) [Quantum](xref:microsoft.quantum.glossary#quantum-state) z dwóch qubits. Cztery Stany są zdefiniowane $ \ket { \beta _ { IJ } } = ( \mathbb { I } \otimes X ^ iz ^ j) ( \ket { 00 }  +  \ket { 11 } )/ \sqrt { 2 } $ . Stan dzwonka jest również znany jako [para EPR](xref:microsoft.quantum.glossary#epr-pair).
 
 ## <a name="bloch-sphere"></a>Bloch sfera
 
@@ -111,11 +103,11 @@ Graficzna reprezentacja[jednoqubitowego](xref:microsoft.quantum.glossary#qubit) 
 
 ## <a name="callable"></a>Żądanie
 
-[Operacja](xref:microsoft.quantum.glossary#operation) lub [Funkcja](xref:microsoft.quantum.glossary#function) w języku Q #. Aby uzyskać więcej informacji, zobacz [operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions).
+[Operacja](xref:microsoft.quantum.glossary#operation) lub [Funkcja](xref:microsoft.quantum.glossary#function) w Q# języku. Aby uzyskać więcej informacji, zobacz [operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="clifford-group"></a>Grupa Clifford
 
-Zestaw operacji, które zajmują octantsą w [sferze Blochej](xref:microsoft.quantum.glossary#bloch-sphere) i permutacji dla [operatorów Pauli](xref:microsoft.quantum.glossary#pauli-operators). Są to między innymi [operacje $ $X](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ $Z](xref:microsoft.quantum.intrinsic.z), [ $ $H](xref:microsoft.quantum.intrinsic.h) i [$S $ ](xref:microsoft.quantum.intrinsic.s).
+Zestaw operacji, które zajmują octantsą w [sferze Blochej](xref:microsoft.quantum.glossary#bloch-sphere) i permutacji dla [operatorów Pauli](xref:microsoft.quantum.glossary#pauli-operators). Obejmują one operacje [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) i [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
 
 ## <a name="controlled"></a>Kontrolowane
 
@@ -123,15 +115,15 @@ Zestaw operacji, które zajmują octantsą w [sferze Blochej](xref:microsoft.qua
 
 ## <a name="dirac-notation"></a>Notacja Dirac
 
-Symboliczny skrót, który upraszcza reprezentację [Stanów Quantum](xref:microsoft.quantum.glossary#quantum-state), nazywany również notacją *bra-KET* .  Część *bra* reprezentuje wektor wierszy, na przykład $ \bra{A } = \begin{ bmatrix } a {_1 } & a {_2 } \end{ bmatrix } $ i *KET* część reprezentuje wektor kolumny, $ \ket{B } = \begin{ bmatrix } b {_1 } \\ \\ b {_2 } \end{ bmatrix } $. Aby uzyskać więcej informacji, zobacz [notacja Dirac](xref:microsoft.quantum.concepts.dirac).
+Symboliczny skrót, który upraszcza reprezentację [Stanów Quantum](xref:microsoft.quantum.glossary#quantum-state), nazywany również notacją *bra-KET* .  Część *bra* reprezentuje wektor wierszy, na przykład _1 a $ \bra { } = \begin{bmatrix} _2, { } & { } \end{bmatrix} $ a część *KET* reprezentuje wektor kolumny, $ \ket { b } = \begin{bmatrix} b { _1 } \\\\ b { _2 } \end{bmatrix} $ . Aby uzyskać więcej informacji, zobacz [notacja Dirac](xref:microsoft.quantum.concepts.dirac).
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-Współczynnik, przez który rozmiary [eigenvector](xref:microsoft.quantum.glossary#eigenvector) danego przekształcenia są zmieniane przez aplikację transformacji.  Za pomocą $M macierzy kwadratowej $ i $v eigenvector $ , a następnie $MV = CV $ , gdzie $c $ jest eigenvalue i może być złożoną liczbą dowolnego argumentu. Aby uzyskać więcej informacji, zobacz [zaawansowane koncepcje dotyczące macierzy](xref:microsoft.quantum.concepts.matrix-advanced).
+Współczynnik, przez który rozmiary [eigenvector](xref:microsoft.quantum.glossary#eigenvector) danego przekształcenia są zmieniane przez aplikację transformacji.  Dana macierz kwadratowa $ M $ i eigenvector $ v $ , następnie $ MV = CV $ , gdzie $ c $ jest eigenvalue i może być złożoną liczbą dowolnego argumentu. Aby uzyskać więcej informacji, zobacz [zaawansowane koncepcje dotyczące macierzy](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="eigenvector"></a>Eigenvector
 
-Wektor, którego kierunek jest niezmieniony przez daną transformację i którego wielkość jest zmieniana przez współczynnik odpowiadający [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)tego wektora. W przypadku $M macierzy kwadratowej $ i $c eigenvalue $ , a następnie $MV = CV $ , gdzie $v $ jest eigenvector macierzy i może być złożoną liczbą dowolnego argumentu. Aby uzyskać więcej informacji, zobacz [zaawansowane koncepcje dotyczące macierzy](xref:microsoft.quantum.concepts.matrix-advanced).
+Wektor, którego kierunek jest niezmieniony przez daną transformację i którego wielkość jest zmieniana przez współczynnik odpowiadający [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)tego wektora. W przypadku macierzy kwadratowej $ M $ i eigenvalue $ c $ , a następnie $ MV = CV $ , gdzie $ v $ jest eigenvector macierzy i może być złożoną liczbą dowolnego argumentu. Aby uzyskać więcej informacji, zobacz [zaawansowane koncepcje dotyczące macierzy](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="entanglement"></a>Splątanie
 
@@ -139,14 +131,14 @@ Cząstki Quantum, takie jak [qubits](xref:microsoft.quantum.glossary#qubit), mog
 
 ## <a name="epr-pair"></a>Para EPR
 
-Jeden z czterech konkretnych Maximally Entangled [Quantum](xref:microsoft.quantum.glossary#quantum-state) z dwóch [qubits](xref:microsoft.quantum.glossary#qubit). Cztery Stany są zdefiniowane jako $ \ket { \ beta_ {IJ } } = (\Mathbb{1 } \Otimes X ^ iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Para EPR jest również znana jako [stan dzwonka](xref:microsoft.quantum.glossary#bell-state)
+Jeden z czterech konkretnych Maximally Entangled [Quantum](xref:microsoft.quantum.glossary#quantum-state) z dwóch [qubits](xref:microsoft.quantum.glossary#qubit). Cztery Stany są zdefiniowane $ \ket { \beta _ { IJ } } = ( \mathbb { 1 } \otimes X ^ iz ^ j) ( \ket { 00 }  +  \ket { 11 } )/ \sqrt { 2 } $ . Para EPR jest również znana jako [stan dzwonka](xref:microsoft.quantum.glossary#bell-state)
 
 ## <a name="evolution"></a>Działanie
 
 Jak zmienia się [stan Quantum](xref:microsoft.quantum.glossary#quantum-state) w czasie. Aby uzyskać więcej informacji, zobacz informacje o [macierzy wykładniczej](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).
 
 ## <a name="function"></a>Funkcja
-Typ procedury podrzędnej w języku Q #, który jest czysto klasyczny (non-Quantum). Chociaż funkcje są używane w algorytmach Quantum, nie mogą działać na [qubits](xref:microsoft.quantum.glossary#qubit) lub wywołania [operacji](xref:microsoft.quantum.glossary#operation). Aby uzyskać więcej informacji, zobacz [operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions).
+Typ podprocedury w Q# języku, który jest czysto klasyczny (non-Quantum). Chociaż funkcje są używane w algorytmach Quantum, nie mogą działać na [qubits](xref:microsoft.quantum.glossary#qubit) lub wywołania [operacji](xref:microsoft.quantum.glossary#operation). Aby uzyskać więcej informacji, zobacz [operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="gate"></a>Bram
 
@@ -154,15 +146,15 @@ Starszy termin [operacji](xref:microsoft.quantum.glossary#operation)Quantum na p
 
 ## <a name="global-phase"></a>Faza globalna
 
-Gdy dwa [Stany](xref:microsoft.quantum.glossary#quantum-state) są identyczne do wielokrotności liczby zespolonej $e ^ {i \phi } $, są one określane jako różne fazy globalne. W przeciwieństwie do faz lokalnych, fazy globalne nie mogą być przestrzegane przy [mierzeniu](xref:microsoft.quantum.glossary#measurement). Aby uzyskać więcej informacji, zobacz [qubit](xref:microsoft.quantum.concepts.qubit).
+Gdy dwa [Stany](xref:microsoft.quantum.glossary#quantum-state) są identyczne do wielokrotności liczby zespolonej $ e ^ { i \phi } $ , są one określane jako różne fazy globalne. W przeciwieństwie do faz lokalnych, fazy globalne nie mogą być przestrzegane przy [mierzeniu](xref:microsoft.quantum.glossary#measurement). Aby uzyskać więcej informacji, zobacz [qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="hadamard"></a>Hadamard
 
-Operacja Hadamard (określana także jako brama Hadamard lub transformacja) działa na jednym [qubit](xref:microsoft.quantum.glossary#qubit) i umieszcza ją w parzystej [pozycji](xref:microsoft.quantum.glossary#superposition) $ \ket{0 } $ lub $ \ket{1 } $, jeśli qubit jest początkowo w stanie $ \ket{0 } $. W polu Q # ta operacja jest stosowana przez wstępnie zdefiniowaną [`H`](xref:microsoft.quantum.intrinsic.h) operację.
+Operacja Hadamard (określana także jako brama Hadamard lub transformacja) działa w ramach jednego [qubitu](xref:microsoft.quantum.glossary#qubit) i umieszcza je w parzystej [pozycji](xref:microsoft.quantum.glossary#superposition) $ \ket { 0 } $ lub $ \ket { 1 } $ , jeśli qubit jest początkowo w $ \ket { } $ stanie 0. W programie Q# Ta operacja jest stosowana przez wstępnie zdefiniowaną [`H`](xref:microsoft.quantum.intrinsic.h) operację.
 
 ## <a name="immutable"></a>Immutable
 
-Zmienna, której wartość nie może zostać zmieniona. Zmienna niezmienna w Q # jest tworzona za pomocą `let` słowa kluczowego. Aby zadeklarować zmienne, które *można* zmienić, użyj słowa kluczowego [mutable](xref:microsoft.quantum.glossary#immutable) do zadeklarowania i `set` słowa kluczowego w celu zmodyfikowania wartości. 
+Zmienna, której wartość nie może zostać zmieniona. Zmienna niezmienna w Q# jest tworzona za pomocą `let` słowa kluczowego. Aby zadeklarować zmienne, które *można* zmienić, użyj słowa kluczowego [mutable](xref:microsoft.quantum.glossary#immutable) do zadeklarowania i `set` słowa kluczowego w celu zmodyfikowania wartości. 
 
 ## <a name="measurement"></a>Miara
 
@@ -170,7 +162,7 @@ Manipulowanie [qubit](xref:microsoft.quantum.glossary#qubit) (lub zestaw qubits)
 
 ## <a name="mutable"></a>Modyfikowalny
 
-Zmienna, której wartość może zostać zmieniona po utworzeniu. Zmienna mutable w Q # jest zadeklarowana przy użyciu `mutable` słowa kluczowego i modyfikowane przy użyciu `set` słowa kluczowego. Zmienne utworzone za pomocą `let` słowa kluczowego są [niezmienne](xref:microsoft.quantum.glossary#immutable) i nie można zmienić ich wartości.
+Zmienna, której wartość może zostać zmieniona po utworzeniu. Zmienna modyfikowalna w Q# jest zadeklarowana za pomocą `mutable` słowa kluczowego i modyfikowane przy użyciu `set` słowa kluczowego. Zmienne utworzone za pomocą `let` słowa kluczowego są [niezmienne](xref:microsoft.quantum.glossary#immutable) i nie można zmienić ich wartości.
 
 ## <a name="namespace"></a>Przestrzeń nazw
 
@@ -178,7 +170,7 @@ Etykieta kolekcji pokrewnych nazw (tj. [operacji](xref:microsoft.quantum.glossar
 
 ## <a name="operation"></a>Operacja
 
-Podstawowa jednostka wykonywania Quantum w Q #. Jest w przybliżeniu odpowiednikiem funkcji w języku C, C++ lub Python albo metodą statyczną w C# lub Java. Aby uzyskać więcej informacji, zobacz [operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions).
+Podstawowa jednostka wykonywania Quantum w Q# . Jest w przybliżeniu odpowiednikiem funkcji w języku C, C++ lub Python albo metodą statyczną w C# lub Java. Aby uzyskać więcej informacji, zobacz [operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Aplikacja operatora
 
@@ -194,7 +186,7 @@ Wywoływanie [funkcji](xref:microsoft.quantum.glossary#function) lub [operacji](
 
 ## <a name="pauli-operators"></a>Operatory Pauli
 
-Zestaw trzech 2 x 2 macierzy jednostkowych znanych jako `X` `Y` `Z` operacje Quantum i. Macierz tożsamości, $I $ , jest często uwzględniana w zestawie.  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-i \\ \\ & 0 \end{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $.   Aby uzyskać więcej informacji, zobacz [operacje pojedynczego qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Zestaw trzech 2 x 2 macierzy jednostkowych znanych jako `X` `Y` `Z` operacje Quantum i. Macierz tożsamości $ i $ , często znajdują się w zestawie.  $I od = \begin{bmatrix} 1 & 0 0 \\\\ & \end{bmatrix} $ $ do X = \begin{bmatrix} 0 & 1 \\\\ & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 0 0 & \\\\ & -1 \end{bmatrix} $ .   Aby uzyskać więcej informacji, zobacz [operacje pojedynczego qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Diagram obwodu Quantum
 
@@ -206,7 +198,7 @@ Aby uzyskać więcej informacji, zobacz [obwodów Quantum](xref:microsoft.quantu
 
 ## <a name="quantum-libraries"></a>Biblioteki Quantum
 
-Kolekcje [operacji](xref:microsoft.quantum.glossary#operation), [funkcji](xref:microsoft.quantum.glossary#function) i [typów zdefiniowanych przez użytkownika](xref:microsoft.quantum.glossary#user-defined-type) do tworzenia programów pytań i odpowiedzi. [Standardowa biblioteka](xref:microsoft.quantum.libraries.standard.intro) jest instalowana domyślnie. Dostępne są inne biblioteki [chemiczne](xref:microsoft.quantum.chemistry.concepts.intro), [biblioteki liczbowe](xref:microsoft.quantum.numerics.intro) i [Biblioteka uczenia maszynowego](xref:microsoft.quantum.machine-learning.concepts.intro).
+Kolekcje [operacji](xref:microsoft.quantum.glossary#operation), [funkcji](xref:microsoft.quantum.glossary#function) i [typów zdefiniowanych przez użytkownika](xref:microsoft.quantum.glossary#user-defined-type) do tworzenia Q# programów. [Standardowa biblioteka](xref:microsoft.quantum.libraries.standard.intro) jest instalowana domyślnie. Dostępne są inne biblioteki [chemiczne](xref:microsoft.quantum.chemistry.concepts.intro), [biblioteki liczbowe](xref:microsoft.quantum.numerics.intro) i [Biblioteka uczenia maszynowego](xref:microsoft.quantum.machine-learning.concepts.intro).
 
 ## <a name="quantum-state"></a>Stan Quantum
 
@@ -222,11 +214,11 @@ Algorytm Quantum, który probabilistically się pomyślnie. W przypadku niepowod
 
 ## <a name="standard-libraries"></a>Biblioteki standardowe
 
-[Operacje](xref:microsoft.quantum.glossary#operation), [funkcje](xref:microsoft.quantum.glossary#function) i [typy zdefiniowane przez użytkownika](xref:microsoft.quantum.glossary#user-defined-type) , które są instalowane wraz z kompilatorem Q # podczas instalacji. Implementacja biblioteki standardowej jest niezależny od w odniesieniu do komputerów docelowych. Aby uzyskać więcej informacji, zobacz [biblioteki standardowe](xref:microsoft.quantum.libraries.standard.intro).
+[Operacje](xref:microsoft.quantum.glossary#operation), [funkcje](xref:microsoft.quantum.glossary#function) i [typy zdefiniowane przez użytkownika](xref:microsoft.quantum.glossary#user-defined-type) , które są instalowane wraz z Q# kompilatorem podczas instalacji. Implementacja biblioteki standardowej jest niezależny od w odniesieniu do komputerów docelowych. Aby uzyskać więcej informacji, zobacz [biblioteki standardowe](xref:microsoft.quantum.libraries.standard.intro).
 
 ## <a name="superposition"></a>Nadpozycja
 
-Koncepcja w ramach przetwarzania Quantum polega na tym, że [qubit](xref:microsoft.quantum.glossary#qubit) jest kombinacją liniową dwóch stanów, $ \ket{0 } $ i $ \ket{1 } $, dopóki nie zostanie ona [zmierzona](xref:microsoft.quantum.glossary#measurement).  Aby uzyskać więcej informacji, zobacz [Omówienie przetwarzania Quantum](xref:microsoft.quantum.overview.understanding).
+Koncepcja w ramach przetwarzania Quantum polega na tym, że [qubit](xref:microsoft.quantum.glossary#qubit) jest kombinacją liniową dwóch stanów, $ \ket { 0 } $ i $ \ket { 1 } $ , dopóki nie zostanie ona [zmierzona](xref:microsoft.quantum.glossary#measurement).  Aby uzyskać więcej informacji, zobacz [Omówienie przetwarzania Quantum](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Maszyna docelowa
 
@@ -238,11 +230,11 @@ Metoda służąca do ponownego generowania danych lub [stan Quantum](xref:micros
 
 ## <a name="tuple"></a>Spoin
 
-Kolekcja wartości rozdzielonych przecinkami, które pełnią funkcję pojedynczej wartości. *Typ* krotki jest definiowany przez typy wartości, które zawiera. W pytaniach Q # kolekcje są [niezmienne](xref:microsoft.quantum.glossary#immutable) i mogą być zagnieżdżone, zawierać tablice lub używane w tablicy. Aby uzyskać więcej informacji, zobacz [typy krotek](xref:microsoft.quantum.guide.types#tuple-types).
+Kolekcja wartości rozdzielonych przecinkami, które pełnią funkcję pojedynczej wartości. *Typ* krotki jest definiowany przez typy wartości, które zawiera. W programie Q# krotki są [niezmienne](xref:microsoft.quantum.glossary#immutable) i mogą być zagnieżdżane, zawierać tablice lub używane w tablicy. Aby uzyskać więcej informacji, zobacz [typy krotek](xref:microsoft.quantum.guide.types#tuple-types).
 
 ## <a name="unitary-operator"></a>Operator jednostkowy
 
-Operator, którego odwrotność jest równa jego [sąsiedniej](xref:microsoft.quantum.glossary#adjoint), tj. $uu ^ {\dagger } = \id $ .
+Operator, którego odwrotność jest równa jego [sąsiedniej](xref:microsoft.quantum.glossary#adjoint), tj. $ uu ^ { \dagger } = \id $ .
 
 ## <a name="user-defined-type"></a>Typ zdefiniowany przez użytkownika
 

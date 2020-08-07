@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
-ms.openlocfilehash: 4a4ecbb85cc5bbfb1ccb1f111309578bcc5bce3d
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9a24d0b4145d0db2fd8c4e16be807165fff5fb32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872654"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868920"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Wprowadzenie do Machine Learning Quantum
 
@@ -63,6 +66,6 @@ Jasno $b $ musi znajdować się w interwale $ (-0,5, + 0,5) $, aby mieć znaczen
 
 Przypadek szkoleniowy $ (x, y) \In \mathcal{D} $ jest uznawany za nieprawidłową *klasyfikację* na podstawie odchylenia $b $, jeśli etykieta wnioskowana dla $x $ AS na RULE1 jest w rzeczywistości różna od $y $. Ogólna liczba *nieocenionych klasyfikacji to wynik szkoleniowy* klasyfikatora z uwzględnieniem odchylenia $b $. *Optymalna* wartość klasyfikatora $b $ minimalizuje wynik szkolenia. Jest to łatwe do sprawdzenia, czy z góry obliczone oszacowania prawdopodobieństwa $ \{ P (M = y_2 | U (\theta) x) | (x, *) \in\mathcal{D} \} $, optymalna wartość klasyfikatora może być znaleziona przez wyszukiwanie binarne w interwale $ (-0,5, + 0,5) $ przez utworzenie maksymalnie $ \ Log_2 (| \mathcal{D} |) $ kroki.
 
-### <a name="reference"></a>Odwołanie
+### <a name="reference"></a>Dokumentacja
 
 Te informacje powinny być wystarczające, aby rozpocząć odtwarzanie kodu. Jeśli jednak chcesz dowiedzieć się więcej na temat tego modelu, zapoznaj się z oryginalną propozycją: [ *"skoncentrowane na obwodach klasyfikatory Quantum", Maria Schuld, Alex Bocharov, krysta Svore i Nathana Wiebe*](https://arxiv.org/abs/1804.00633)

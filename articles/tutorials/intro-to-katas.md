@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276216"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869685"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Nauka wykonywania obliczeń kwantowych z artykułów Quantum Kata
 
-[Quantum Kata](https://github.com/Microsoft/QuantumKatas/) to seria realizowanych samodzielnie samouczków i ćwiczeń programistycznych typu open-source, które służą zarówno do nauki elementów obliczeń kwantowych, jak i programowania w języku Q#.
+[Quantum Katas](https://github.com/Microsoft/QuantumKatas/) to typu open source, samouczków samodzielnych i ćwiczeń programistycznych, które mają na celu uczenie elementów przetwarzania Quantum i Q# programowania w tym samym czasie.
 
 ## <a name="learning-by-doing"></a>Nauka przez praktykę
 
@@ -42,15 +45,15 @@ Poznaj podstawy obliczeń kwantowych lub bardziej zaawansowane algorytmy i proto
 |[Algebra liniowa](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|Algebra liniowa służy do przedstawiania kwantowych stanów i operacji w obliczeniach kwantowych. Ten samouczek obejmuje podstawy, w tym macierze i wektory.|
 |[Koncepcja kubitu](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Dowiedz się więcej na temat kubitów — jednego z podstawowych pojęć obliczeń kwantowych. |
 |[Bramki kwantowe z jednym kubitem](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|W tym samouczku przedstawiono bramki kwantowe z jednym kubitem, które pełnią rolę bloków konstrukcyjnych algorytmów kwantowych i na różne sposoby przekształcają kwantowe stany kubitów.|
-|[Systemy z wieloma kubitami](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|W tym samouczku przedstawiono systemy z wieloma kubitami, ich reprezentację w notacji matematycznej i w kodzie Q# oraz pojęcie splątania.|
+|[Systemy z wieloma kubitami](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|W tym samouczku przedstawiono systemy qubit, ich reprezentację w notacji matematycznej i w Q# kodzie oraz koncepcję Entanglement.|
 |[Bramki kwantowe z wieloma kubitami](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Ten samouczek stanowi kolejną część samouczka [Bramki kwantowe z jednym kubitem](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) i koncentruje się na zastosowaniu bram kwantowych do systemów z wieloma kubitami.|
 
 ### <a name="quantum-computing-fundamentals"></a>Podstawy obliczeń kwantowych
 
 | Kata | Opis |
 |:-----|-------------|
-|[Rozpoznawanie bramek kwantowych](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Seria ćwiczeń mających na celu zapoznanie się z podstawowymi bramkami kwantowymi w języku Q#. Zawiera ćwiczenia dotyczące podstawowych bramek z jednym kubitem i z wieloma kubitami, bramek sprzężonych i kontrolowanych oraz sposobów modyfikowania stanu kubita przy użyciu bramek.|
-|[Tworzenie superpozycji kwantowej](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Skorzystaj z tych ćwiczeń, aby zapoznać się z koncepcją superpozycji i z programowaniem w języku Q#. Obejmuje ćwiczenia dotyczące podstawowych bramek z jednym kubitem i z wieloma kubitami, superpozycji oraz kontroli przepływu i rekursji w języku Q#.|
+|[Rozpoznawanie bramek kwantowych](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Seria ćwiczeń zaprojektowana w celu zapoznania się z podstawowymi bramami Quantum w systemie Q# . Zawiera ćwiczenia dotyczące podstawowych bramek z jednym kubitem i z wieloma kubitami, bramek sprzężonych i kontrolowanych oraz sposobów modyfikowania stanu kubita przy użyciu bramek.|
+|[Tworzenie superpozycji kwantowej](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Skorzystaj z tych ćwiczeń, aby zapoznać się z koncepcją nakładania się i programowania w programie Q# . Obejmuje ćwiczenia w przypadku podstawowych bram qubit i wieloqubitowych, podpozycji i kontroli przepływu oraz rekursji w programie Q# .|
 |[Rozróżnianie stanów kwantowych przy użyciu pomiarów](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Rozwiąż te ćwiczenia podczas uczenia się o pomiarach kwantowych oraz o stanach ortogonalnych i nieortogonalnych. |
 |[Wspólne pomiary](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Zapoznaj się z informacjami o wspólnych pomiarach parzystości i o tym, jak używać operacji [Miara](xref:microsoft.quantum.intrinsic.measure) do rozróżniania stanów kwantowych.|
 
@@ -72,7 +75,7 @@ Poznaj podstawy obliczeń kwantowych lub bardziej zaawansowane algorytmy i proto
 |:-----|-------------|
 |[Protokół BB84 do dystrybucji kluczy kwantowych](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Poznaj i zaimplementuj protokół dystrybucji kluczy kwantowych, [BB84](https://en.wikipedia.org/wiki/BB84), używając kubitów do wymiany kluczy kryptograficznych. |
 |[Kod naprawczy dla błędu przerzucania bitów](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Zapoznaj się z korygowaniem błędów kwantowych przy użyciu najprostszych kodów naprawczych błędów kwantowych (QEC) — trzykubitowego kodu przerzucania bitów.|
-|[Szacowanie fazy](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Algorytmy szacowania fazy to jedne z najbardziej podstawowych bloków konstrukcyjnych obliczeń kwantowych. Dowiedz się więcej na temat szacowania faz, korzystając z tych ćwiczeń, które obejmują kwantowe szacowanie fazy oraz przygotowywanie i uruchamianie procedur szacowania fazy w języku Q#.|
+|[Szacowanie fazy](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Algorytmy szacowania fazy to jedne z najbardziej podstawowych bloków konstrukcyjnych obliczeń kwantowych. Dowiedz się więcej na temat szacowania faz przy użyciu tych ćwiczeń, które obejmują szacowanie fazy Quantum oraz przygotowywanie i uruchamianie procedur szacowania fazy w programie Q# .|
 |[Arytmetyka kwantowa: tworzenie sumatorów z przeniesieniami szeregowymi](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Seria szczegółowych ćwiczeń, które eksplorują sumowanie [z przeniesieniami szeregowymi](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) na komputerze kwantowym. Utwórz sumator kwantowy w miejscu, rozwiń go za pomocą innego algorytmu, a na końcu utwórz kwantowy układ odejmujący w miejscu.   |
 
 ### <a name="entanglement-games"></a>Gry ze splątaniem

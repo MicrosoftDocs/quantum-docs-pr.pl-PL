@@ -1,23 +1,26 @@
 ---
-title: 'Algorytmy Quantum w Q #'
+title: Algorytmy Quantum wQ#
 description: Poznaj podstawowe algorytmy przetwarzania Quantum, w tym wzmocnienie amplitudy, transformację Fouriera, Draper i Beauregard, a także oszacowania faz.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 7f4916353c53d6459356243098281ccb16b17278
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871318"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868818"
 ---
 # <a name="quantum-algorithms"></a>Algorytmy Quantum #
 
 ## <a name="amplitude-amplification"></a>Wzmacnianie amplitudy ##
 
-*Wzmocnienie amplitudy* to jedno z podstawowych narzędzi przetwarzania Quantum. Jest to podstawowe koncepcje, które opierają się na wyszukiwaniu Grover, ocenie amplitudy i wielu algorytmach uczenia maszynowego Quantum.  Istnieje wiele wariantów i w sekcji Q # udostępniamy ogólną wersję opartą na wzOblivious amplitudy ze środkami częściowymi, aby zapewnić szeroką część zastosowań.
+*Wzmocnienie amplitudy* to jedno z podstawowych narzędzi przetwarzania Quantum. Jest to podstawowe koncepcje, które opierają się na wyszukiwaniu Grover, ocenie amplitudy i wielu algorytmach uczenia maszynowego Quantum.  Istnieje wiele wariantów, a Q# firma Microsoft udostępnia ogólną wersję opartą na WzOblivious amplitudy ze środkami częściowymi, aby zapewnić szeroki zakres aplikacji.
 
 Centralnym pomysłem związanym z wzmocnieniem amplitudy jest wzmocnienie prawdopodobieństwa pożądanego wyniku, wykonując sekwencję odbicia.  Te odbicia obracają stan początkowy bliżej żądanego stanu docelowego, często nazywanego stanem oznaczonym.  W przypadku, gdy prawdopodobieństwo mierzenia stanu początkowego w oznaczonym stanie to $ \sin ^ 2 (\theta) $, po zastosowaniu wzmocnienia amplitudy $m $ razy prawdopodobieństwo sukcesu stanie się $ \sin ^ 2 ((2 mln + 1) \theta) $.  Oznacza to, że jeśli $ \theta = \ pi/[2 (2n + 1)] $ dla niektórych wartości $n $, wzmocnienie amplitudy jest w stanie zwiększyć prawdopodobieństwo sukcesu do $100 \\ % $ po $n $ iteracji wzmocnienia amplitudy.  Ponieważ $ \theta = \sin ^ {-1} (\sqrt{\Pr (Success)}) $ oznacza to, że liczba iteracji koniecznych do uzyskania sukcesu jest mniejsza niż oczekiwana liczba, która jest niedeterministyczna, przy użyciu losowego próbkowania.
 
@@ -27,7 +30,7 @@ Logika za wzmocnieniem amplitudy następuje bezpośrednio z eigenego dekompozycj
 
 Inną przydatną właściwością, która pochodzi z tego, jest to, że eigenvalue $ \theta $ jest bezpośrednio związany z prawdopodobieństwem, że stan początkowy zostanie oznaczony (w przypadku, gdy $P _0 $ jest projektorem tylko w stanie początkowym).  Ponieważ eigenphases $Q $ to $2 \ teta = 2 \ Sin ^ {-1} (\sqrt{\Pr (Success)}) $, wtedy, gdy stosujemy szacowanie fazy do $Q $, możemy poznać prawdopodobieństwo sukcesu dla procedury jednostki Quantum.  Jest to przydatne, ponieważ wymaga dwukwadratowych zastosowań procedury Quantum, aby poznać prawdopodobieństwo sukcesu, niż byłoby to konieczne.
 
-Q # wprowadza wzmocnienie amplitudy jako specjalizację wzmocnienia amplitudy Oblivious.  Wzmocnienie amplitudy Oblivious zdobywa ten moniker, ponieważ projektor na początku eigenspace nie musi być projektorem w stanie początkowym.  W tym sensie protokół jest Oblivious do stanu początkowego.  Najważniejszym zastosowaniem wzmocnienia amplitudy Oblivious jest w niektórych *liniowych kombinacjach* metod symulacji hamiltonian jednostkowych, w którym stan początkowy jest nieznany, ale zmienia się Entangled za pomocą rejestru Ancilla w protokole symulacji.  Jeśli ten rejestr Ancilla był mierzony jako wartość stała, powiedzmy $0 $, a następnie takie metody symulacji stosują odpowiednią transformację jednostkową do pozostałej części qubits (nazywanej rejestrem systemu).  Wszystkie inne wyniki pomiarów mogą jednak prowadzić do błędu.  Wzmocnienie amplitudy Oblivious umożliwia zwiększenie prawdopodobieństwa sukcesu tego pomiaru do $100 \\ % $ z powyższymi przyczynami.  Ponadto zwykłe wzmocnienie amplitudy odnosi się do przypadku, w którym rejestr systemu jest pusty.  To dlatego, że funkcja Q # używa wzmocnienia amplitudy Oblivious jako swojej podstawowej procedury wzmocnienia amplitudy.
+Q#wprowadza wzmocnienie amplitudy jako specjalizację wzmocnienia amplitudy Oblivious.  Wzmocnienie amplitudy Oblivious zdobywa ten moniker, ponieważ projektor na początku eigenspace nie musi być projektorem w stanie początkowym.  W tym sensie protokół jest Oblivious do stanu początkowego.  Najważniejszym zastosowaniem wzmocnienia amplitudy Oblivious jest w niektórych *liniowych kombinacjach* metod symulacji hamiltonian jednostkowych, w którym stan początkowy jest nieznany, ale zmienia się Entangled za pomocą rejestru Ancilla w protokole symulacji.  Jeśli ten rejestr Ancilla był mierzony jako wartość stała, powiedzmy $0 $, a następnie takie metody symulacji stosują odpowiednią transformację jednostkową do pozostałej części qubits (nazywanej rejestrem systemu).  Wszystkie inne wyniki pomiarów mogą jednak prowadzić do błędu.  Wzmocnienie amplitudy Oblivious umożliwia zwiększenie prawdopodobieństwa sukcesu tego pomiaru do $100 \\ % $ z powyższymi przyczynami.  Ponadto zwykłe wzmocnienie amplitudy odnosi się do przypadku, w którym rejestr systemu jest pusty.  Jest to dlatego Q# , że stosuje wzmocnienie amplitudy Oblivious jako podstawową podprocedurę wzmocnienia amplitudy.
 
 Procedura ogólna ( `AmpAmpObliviousByReflectionPhases` ) ma dwa rejestry, które wywołujemy `ancillaRegister` i `systemRegister` . Akceptuje również dwie Oracle w celu zaakceptowania niezbędnych odbić. `ReflectionOracle`Działa tylko na `ancillaRegister` czas, w którym `ObliviousOracle` działają wspólnie dla obu rejestrów. Dane wejściowe `ancillaRegister` muszą być zainicjowane do-1 eigenstate pierwszego operatora odbicia $ \boldone-2P_1 $.
 
@@ -116,4 +119,4 @@ W ten sposób możemy uzyskać rejestr w formie \begin{align} \ket{\psi} & = \ s
 Jeśli przyjęto założenie, że $ \phi = 2 \pi p/2 ^ k $ dla liczby całkowitej $p $, rozpoznawamy to jako $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, gdzie $p _j $ to $j ^ {\textrm{th}} $ bit $2 \pi \phi $.
 W związku z zastosowaniem sąsiedniej transformacji Fouriera Quantum, firma Microsoft uzyskuje reprezentację binarną fazy zakodowanej jako stan Quantum.
 
-W języku Q # jest to implementowane przez <xref:microsoft.quantum.characterization.quantumphaseestimation> operację, która wymaga <xref:microsoft.quantum.oracles.discreteoracle> wdrożenia aplikacji $U ^ m $ jako funkcji dodatnich liczb całkowitych $m $.
+W programie Q# jest to implementowane przez <xref:microsoft.quantum.characterization.quantumphaseestimation> operację, która wymaga <xref:microsoft.quantum.oracles.discreteoracle> wdrożenia aplikacji $U ^ m $ jako funkcji dodatnich liczb całkowitych $m $.

@@ -1,19 +1,22 @@
 ---
-title: 'Przepływ sterowania w p #'
+title: Przepływ sterowania wQ#
 description: Pętle, warunkowe itd.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870995"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867951"
 ---
-# <a name="control-flow-in-q"></a>Przepływ sterowania w p #
+# <a name="control-flow-in-no-locq"></a>Przepływ sterowania wQ#
 
 W ramach operacji lub funkcji każda instrukcja jest uruchamiana w kolejności, podobnie jak w przypadku innych typowych języków, których to dotyczy.
 Można jednak zmodyfikować przepływ kontroli na trzy różne sposoby:
@@ -104,12 +107,12 @@ Należy pamiętać, że na końcu wykorzystujemy operator binarny z przesunięci
 
 ## <a name="repeat-until-success-loop"></a>Pętla REPEAT-until-Success
 
-Język Q # zezwala, aby klasyczny przepływ sterowania był zależny od wyników pomiaru qubits.
+Q#Język pozwala, aby klasyczny przepływ sterowania był zależny od wyników pomiaru qubits.
 Ta funkcja z kolei umożliwia wdrażanie zaawansowanych probabilistyczneych gadżetów, które mogą zmniejszyć koszt obliczeniowy wdrożenia unitaries.
-Przykładami są wzorce *powtarzające się do sukcesu* (jednostek ru) w Q #.
+Przykładami są wzorce *powtarzania do sukcesu* (jednostek ru) w programie Q# .
 Te wzorce jednostek ru są programami probabilistyczne, które mają *przewidywane* niskie koszty w zakresie bram elementarnych; poniesiony koszt zależy od rzeczywistego przebiegu i przeplotu wielu możliwych rozgałęzień.
 
-Aby ułatwić wzorce powtarzania do sukcesu (jednostek ru), Q # obsługuje konstrukcje
+Aby ułatwić wzorce powtarzania do sukcesu (jednostek ru), Q# obsługuje konstrukcje
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ Aby uzyskać więcej przykładów i szczegółów, zobacz [przykłady powtarzani
 
 ## <a name="while-loop"></a>While — pętla
 
-Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum. Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego też dedykowana konstrukcja języka w Q #. Jednak pętle, które są przerywane w zależności od warunku, a długość wykonywania jest w tym przypadku nieznana w czasie kompilacji, są obsługiwane z uwzględnieniem szczególnej opieki w środowisku uruchomieniowym Quantum. Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum). 
+Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum. Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego w przypadku dedykowanego języka konstrukcja w Q# . Jednak pętle, które są przerywane w zależności od warunku, a długość wykonywania jest w tym przypadku nieznana w czasie kompilacji, są obsługiwane z uwzględnieniem szczególnej opieki w środowisku uruchomieniowym Quantum. Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum). 
 
-W związku z tym funkcja Q # obsługuje używanie pętli while tylko w obrębie funkcji. `while`Instrukcja składa się z słowa kluczowego `while` , wyrażenia logicznego w nawiasach i bloku instrukcji.
+Q#w związku z tym obsługuje używanie pętli while tylko w obrębie funkcji. `while`Instrukcja składa się z słowa kluczowego `while` , wyrażenia logicznego w nawiasach i bloku instrukcji.
 Blok instrukcji (treść pętli) działa tak długo, jak warunek zostanie obliczony `true` .
 
 ```qsharp
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Wzorzec jednostek ru dla obrotu pojedynczej qubit o osi niewymiernej 
 
-W typowym przypadku użycia Następująca operacja Q # implementuje obrót wokół osi niewymiernej $ (I + 2i Z)/\sqrt {5} $ w sferze Bloch. Implementacja używa znanego wzorca jednostek ru:
+W typowym przypadku użycia następująca Q# operacja implementuje obrót wokół osi niewymiernej $ (I + 2i z)/\sqrt {5} $ w sferze Bloch. Implementacja używa znanego wzorca jednostek ru:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Aby uzyskać więcej informacji, zobacz [przykładowe testy jednostkowe dostępn
 
 ## <a name="next-steps"></a>Następne kroki
 
-Więcej informacji na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging) w programie Q #.
+Więcej informacji na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging) w programie Q# .

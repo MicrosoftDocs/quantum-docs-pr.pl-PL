@@ -1,17 +1,20 @@
 ---
-title: Struktury danych w bibliotekach standardowych Q
-description: 'Dowiedz się więcej na temat struktur danych, Oracle i dynamicznych generatorów w bibliotekach Microsoft Q # Standard.'
+title: Struktury danych w Q# bibliotekach standardowych
+description: Informacje na temat struktur danych, Oracle i dynamicznych generatorów w Q# bibliotekach standardowych firmy Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275733"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868527"
 ---
 # <a name="data-structures-and-modeling"></a>Struktury i modelowanie danych #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Tablice ###
 
 Canon oferuje kilka funkcji manipulowania tablicami.
-Te funkcje są typu sparametryzowanego i mogą być używane z tablicami dowolnego typu Q #.
+Te funkcje są typu sparametryzowanego i mogą być używane z tablicami dowolnego Q# typu.
 Na przykład <xref:microsoft.quantum.arrays.reversed> Funkcja zwraca nową tablicę, której elementy znajdują się w odwrotnej kolejności od ich wejścia.
 Może to służyć do zmiany sposobu reprezentowania rejestru Quantum podczas wywoływania operacji:
 
@@ -72,7 +75,7 @@ W [ocenie fazy](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm
 W tym miejscu termin Oracle odwołuje się do procedury podrzędnej Blackbox Quantum, która działa na zestawie qubits i zwraca odpowiedź jako fazę.
 Ta podprocedura często może być traktowana jako dane wejściowe algorytmu Quantum, który akceptuje Oracle, oprócz innych parametrów, i stosuje szereg operacji Quantum i traktowanie wywołania tej podprocedury Quantum, tak jakby była bramą podstawową.
 Oczywiście, aby faktycznie zaimplementować większy algorytm, należy podać konkretną dekompozycję Oracle do podstawowych bram, ale takie dekompozycja nie jest wymagana w celu zrozumienia algorytmu, który wywołuje Oracle.
-W Q # to Abstrakcja jest reprezentowana przy użyciu tego, że operacje są wartościami pierwszej klasy, w taki sposób, że operacje mogą być przesyłane do implementacji algorytmów Quantum w sposób czarno-Box.
+W programie Q# to streszczenie jest reprezentowane przez użycie tych operacji jako wartości pierwszej klasy, na przykład, że operacje mogą być przesyłane do implementacji algorytmów Quantum w sposób czarno-Box.
 Ponadto typy zdefiniowane przez użytkownika są używane do etykietowania różnych reprezentacji Oracle w sposób bezpieczny dla typu, co utrudnia przypadkowe rozliczanie różnych rodzajów operacji na czarnym pudełku.
 
 Takie firmy Oracle są wyświetlane w wielu różnych kontekstach, w tym w przykładach sławę, takich jak [Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) i algorytmy symulacji Quantum.
@@ -189,7 +192,7 @@ Jednostką, która opisuje takie bioquantum Dynamics, jest $U (t) = R_z (2 \ Ome
 W tym kontekście możemy symulować $U (t) $ dla dowolnego $t $ przy użyciu pojedynczej $R _z $ bramy i ponieważ nie trzeba ograniczać wypróbujemy tylko do zapytań dyskretnych do jednostki.
 Taki ciągły model ma również właściwość, którą częstotliwości większe niż $2 \ Pi $ można poznać z procesów szacowania fazy, które używają ciągłych zapytań, ponieważ informacje o fazie, które w przeciwnym razie byłyby maskowane przez gałąź — kawałki funkcji logarytmu mogą być ujawnione w wyniku eksperymentów wykonywanych na wartościach niebędących współmiernymi $t $.
 W związku z tym w przypadku problemów, takich jak te modele ciągłego zapytania dla oceny fazy Oracle, nie tylko są odpowiednie, ale są również preferowane dla dyskretnego modelu zapytań.
-Z tego powodu funkcja Q # ma funkcje dla obu rodzajów zapytań i pozostawia ją użytkownikowi w celu podjęcia decyzji o algorytmie szacowania fazy w celu dopasowania ich do potrzeb i typu dostępnego dla programu Oracle.
+Z tego powodu Q# Funkcja obejmuje obie formy zapytań i opuszcza go użytkownikowi, aby podjąć decyzję o algorytmie szacowania fazy w celu dopasowania ich do potrzeb i typu dostępnych rozwiązań firmy Oracle.
 
 ## <a name="dynamical-generator-modeling"></a>Modelowanie generatora dynamicznego ##
 

@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275397"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867518"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Wkładowanie próbek do zestawu Quantum Development Kit
 
@@ -47,8 +50,8 @@ Przeglądając pliki wchodzące w skład każdego folderu, przyjrzyjmy się do [
 
 | Plik              | Opis                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q # projekt używany do kompilowania próbki przy użyciu zestaw .NET Core SDK |
-| `Game.qs`         | Operacje i funkcje Q # dla przykładu                 |
+| `CHSHGame.csproj` | Q#projekt używany do kompilowania próbki przy użyciu zestaw .NET Core SDK |
+| `Game.qs`         | Q#operacje i funkcje dla przykładu                 |
 | `Host.cs`         | Program hosta C# używany do uruchomienia przykładu                     |
 | `host.py`         | Program hosta języka Python używany do uruchomienia przykładu                 |
 | `README.md`       | Dokumentacja na temat tego, co robi przykład i jak z niego korzystać    |

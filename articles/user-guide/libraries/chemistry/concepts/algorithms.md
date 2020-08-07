@@ -6,18 +6,21 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275928"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869532"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Symulowanie hamiltonian Dynamics
 
 Gdy hamiltonian jest wyrażona jako suma operatorów elementarnych, można następnie kompilować do podstawowych operacji bram przy użyciu hosta dobrze znanych technik.
 Trzy efektywne podejścia obejmują: Trotter — Suzukie formuły, liniowe kombinacje unitaries i qubitization.
-Wyjaśniono te trzy podejścia poniżej i podano konkretne przykłady Q #, jak zaimplementować te metody przy użyciu biblioteki symulacji hamiltonian.
+Wyjaśniono te trzy podejścia poniżej i przedstawiono konkretne Q# Przykłady sposobu wdrażania tych metod przy użyciu biblioteki symulacji hamiltonian.
 
 
 ## <a name="trottersuzuki-formulas"></a>Trotter — formuły Suzuki
@@ -49,7 +52,7 @@ Na przykład $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\oti
         0 & 0 & 0 & e ^ {-IT} \end{bmatrix}.
 $ $ Tutaj, $e ^ {-iHt} \ket {00} = e ^ {IT} \ket {00} $ i $e ^ {-iHt} \ket {01} = e ^ {-IT} \ket {01} $, które mogą być widoczne bezpośrednio jako konsekwencja, że parzystość $0 $ jest $0 $, podczas gdy parzystość ciągu bitowego $1 $ to $1 $.
 
-Wykładnicze operatory Pauli można zaimplementować bezpośrednio w Q # przy użyciu <xref:microsoft.quantum.intrinsic.exp> operacji:
+Wykładnicze operatory Pauli można zaimplementować bezpośrednio Q# przy użyciu <xref:microsoft.quantum.intrinsic.exp> operacji:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -86,8 +89,8 @@ Naszym punktem początkowym jest [kodowanie Jordania – Wigner](xref:microsoft.
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-Ten format reprezentacji Wigner, który jest zużywany przez algorytmy symulacji Q # jest typem zdefiniowanym przez użytkownika `JordanWignerEncodingData` .
-W obszarze Q # ten format jest przesyłany do wygodnej funkcji `TrotterStepOracle` , która zwraca operator zbliżający się czas i ewolucji przy użyciu integratora Trotter — Suzuki, oprócz innych parametrów wymaganych do wykonania.
+Ten format reprezentacji Wigner do Q# użycia przez algorytmy symulacji jest typem zdefiniowanym przez użytkownika `JordanWignerEncodingData` .
+W Q# tym formacie jest przenoszona do wygodnej funkcji `TrotterStepOracle` , która zwraca operator zbliżający się czas i ewolucję przy użyciu Trotter — Integrator Suzuki, oprócz innych parametrów wymaganych do wykonania.
 
 ```qsharp
 // qSharpData passed from driver
@@ -151,10 +154,10 @@ Operacja $ \operatorname{Prepare} $ nie jest używana bezpośrednio w qubitizati
 
 Operator przeszukiwania, $W $, może być wyrażony w postaci $ \operatorname{Select} $ i $R $ operacji as $ $ W = \operatorname{Select} R, $ $, który ponownie można zobaczyć, aby zaimplementować operatora, który jest równoważny (do isometry), aby $e ^ {\Pm i \cos ^ {-1} (h/| H | _1)} $.
 
-Te podprocedury można łatwo skonfigurować w programie Q #.
+Te podprocedury można łatwo skonfigurować w programie Q# .
 Przykładowo Rozważmy proste qubit poprzecznie Ising hamiltonian, gdzie $H = X_1 + X_2 + Z_1 Z_2 $.
-W takim przypadku kod Q # implementujący operację $ \operatorname{Select} $ jest wywoływany przez <xref:microsoft.quantum.canon.multiplexoperations> , podczas gdy operacja $ \operatorname{Prepare} $ może zostać zaimplementowana przy użyciu <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Przykład, który obejmuje symulowanie modelu Hubbard, można znaleźć jako [przykład Q #](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+W takim przypadku kod implementujący Q# operację $ \operatorname{SELECT} $ jest wywoływany przez <xref:microsoft.quantum.canon.multiplexoperations> , podczas gdy operacja $ \operatorname{Prepare} $ może zostać zaimplementowana przy użyciu <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+Przykład, który obejmuje symulowanie modelu Hubbard, można znaleźć jako [ Q# przykład](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
 
 Ręczne określenie tych kroków dla dowolnego problemu chemicznego będzie wymagało dużej nakładu pracy, które można uniknąć przy użyciu biblioteki chemicznej.
 Podobnie jak w przypadku algorytmu symulacji Trotter – Suzuki powyżej, `JordanWignerEncodingData` jest ona przenoszona do funkcji wygodnej, `QubitizationOracle` która zwraca operator przechodzenia, oprócz innych parametrów wymaganych do wykonania.
