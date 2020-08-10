@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430785"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866982"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Wprowadzenie do obliczeń kwantowych i zestaw Quantum Development Kit
 
@@ -62,9 +65,9 @@ Uczenie maszynowe na komputerach klasycznych rewolucjonizuje świat nauki i bizn
 
 Zestaw Quantum Development Kit jest dostępny z [biblioteką Quantum Machine Learning](xref:microsoft.quantum.machine-learning.concepts.intro), która umożliwia uruchamianie hybrydowych, kwantowo-klasycznych eksperymentów uczenia maszynowego. Biblioteka zawiera przykłady i samouczki, a także udostępnia narzędzia niezbędne do zaimplementowania nowego hybrydowego algorytmu kwantowo-klasycznego, skoncentrowanego na obwodzie klasyfikatora kwantowego w celu rozwiązywania nadzorowanych problemów klasyfikacji.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# i zestaw Microsoft Quantum Development Kit (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Język Q# i zestaw Microsoft Quantum Development Kit (QDK)
 
-Q# to język programowania typu open-source firmy Microsoft do tworzenia i uruchamiania algorytmów kwantowych. Jest on częścią zestawu [QDK](https://docs.microsoft.com/quantum/), w pełni funkcjonalnego zestawu deweloperskiego dla języka Q#, którego można używać ze standardowymi narzędziami i językami do tworzenia aplikacji kwantowych. Można je uruchamiać w różnych środowiskach, w tym wbudowanym kwantowym symulatorze pełnego stanu.
+Q# to język programowania typu open-source firmy Microsoft używany do tworzenia i uruchamiania algorytmów kwantowych. Jest on częścią zestawu [QDK](https://docs.microsoft.com/quantum/), w pełni funkcjonalnego zestawu deweloperskiego dla języka Q#, którego można używać ze standardowymi narzędziami i językami do tworzenia aplikacji kwantowych. Można je uruchamiać w różnych środowiskach, w tym wbudowanym kwantowym symulatorze pełnego stanu.
 
 Istnieją rozszerzenia dla programów Visual Studio i VS Code oraz pakiety do użycia z językiem Python i aplikacją Jupyter Notebook.
 
@@ -74,7 +77,7 @@ Dokumentacja zawiera przewodnik po języku Q#, samouczki i przykładowy kod umo�
 
 ## <a name="microsoft-quantum-hardware-partners"></a>Partnerzy sprzętu kwantowego firmy Microsoft
 
-Firma Microsoft współpracuje z producentami sprzętu kwantowego, aby zapewnić deweloperom dostęp w chmurze do sprzętu kwantowego. Korzystając z rozwiązania [Azure Quantum](https://azure.microsoft.com/services/quantum/) i języka Q#, deweloperzy będą mogli eksplorować algorytmy kwantowe i uruchamiać swoje programy kwantowe na różnych typach sprzętu kwantowego.
+Firma Microsoft współpracuje z producentami sprzętu kwantowego, aby zapewnić deweloperom dostęp w chmurze do sprzętu kwantowego. Korzystając z platformy [Azure Quantum](https://azure.microsoft.com/services/quantum/) i języka Q#, deweloperzy będą mogli eksplorować algorytmy kwantowe i uruchamiać swoje programy kwantowe na różnych typach sprzętu kwantowego.
 
 Rozwiązania [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) i [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) używają procesorów **opartych na uwięzionych jonach**, używając w tym celu jonów uwięzionych w polu elektronicznym, a rozwiązanie [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) używa obwodów nadprzewodnictwa.
 

@@ -1,19 +1,22 @@
 ---
-title: Tworzenie zawartości za pomocą języka Q# i platformy .NET
+title: Programowanie przy użyciu języka Q# i platformy .NET
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885493"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867560"
 ---
-# <a name="develop-with-q-and-net"></a>Tworzenie zawartości za pomocą języka Q# i platformy .NET
+# <a name="develop-with-no-locq-and-net"></a>Programowanie przy użyciu języka Q# i platformy .NET
 
 Język Q# został opracowany z myślą o współdziałaniu z językami platformy .NET, takimi jak C# i F#.
 W tym przewodniku pokazujemy, jak używać języka Q# z programem hosta napisanym w języku platformy .NET.
@@ -24,7 +27,7 @@ Najpierw tworzymy aplikację w języku Q# i hosta na platformie .NET, a następn
 
 - Zainstaluj zestaw Quantum Development Kit [do użycia z projektami wiersza polecenia w języku Q#](xref:microsoft.quantum.install.standalone).
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Tworzenie biblioteki języka Q# i hosta platformy .NET
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Tworzenie biblioteki języka Q# i hosta platformy .NET
 
 Pierwszym krokiem jest utworzenie projektów biblioteki języka Q# oraz hosta platformy .NET, który będzie wywoływał operacje i funkcje zdefiniowane w bibliotece języka Q#.
 
@@ -65,7 +68,7 @@ Jeśli używasz edytora innego niż Visual Studio lub VS Code, po prostu postęp
 - Utwórz nową bibliotekę języka Q#
   - Przejdź do pozycji **Plik** -> **Nowy** -> **Projekt**
   - Wpisz „Q#” w polu wyszukiwania
-  - Wybierz pozycję **Biblioteka Q#**
+  - Wybierz pozycję **Biblioteka języka Q#**
   - Wybierz pozycję **Dalej**
   - Wybierz nazwę i lokalizację biblioteki
   - Upewnij się, że pole „Umieść projekt i rozwiązanie w tym samym katalogu” jest **niezaznaczone**
@@ -80,7 +83,7 @@ Jeśli używasz edytora innego niż Visual Studio lub VS Code, po prostu postęp
 
 ***
 
-## <a name="calling-into-q-from-net"></a>Wywoływanie funkcji języka Q# z aplikacji platformy .NET
+## <a name="calling-into-no-locq-from-net"></a>Wywoływanie funkcji języka Q# z aplikacji platformy .NET
 
 Po skonfigurowaniu projektów zgodnie z powyższymi instrukcjami można wywoływać funkcje języka Q# z aplikacji konsolowej platformy .NET.
 Kompilator języka Q# utworzy klasy platformy .NET dla wszystkich operacji i funkcji języka Q#, co umożliwi uruchamianie programów kwantowych w symulatorze.
@@ -89,7 +92,7 @@ Kompilator języka Q# utworzy klasy platformy .NET dla wszystkich operacji i fun
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Aby wywołać tę operację z poziomu aplikacji platformy .NET w symulatorze kwantowym, możesz użyć metody `Run` w klasie platformy .NET `RunAlgorithm`, wygenerowanej przez kompilator języka Q#:
+Aby wywołać tę operację z poziomu aplikacji platformy .NET w symulatorze kwantowym, możesz użyć metody `Run` w klasie platformy .NET `RunAlgorithm` wygenerowanej przez kompilator języka Q#:
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -103,4 +106,4 @@ Aby wywołać tę operację z poziomu aplikacji platformy .NET w symulatorze kwa
     
 ## <a name="next-steps"></a>Następne kroki
 
-Po skonfigurowaniu zestawu Quantum Development Kit zarówno na potrzeby programów wiersza polecenia w języku Q#, jak i współdziałania z platformą .NET, możesz napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).
+Po skonfigurowaniu zestawu Quantum Development Kit zarówno na potrzeby programów wiersza polecenia w języku Q#, jak i współdziałania z platformą .NET, możesz napisać i uruchomić swój [pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).

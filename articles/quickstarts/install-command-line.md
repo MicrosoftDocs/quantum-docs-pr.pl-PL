@@ -6,16 +6,19 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871437"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867611"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Tworzenie aplikacji wiersza polecenia w języku Q#
+# <a name="develop-with-no-locq-command-line-applications"></a>Tworzenie aplikacji wiersza polecenia w języku Q#
 
-Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku hosta, takim jak C#, F#, czy Python.
+Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -23,7 +26,7 @@ Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku h
 
 ## <a name="installation"></a>Instalacja
 
-Chociaż aplikacje wiersza polecenia w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji języka Q#. W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces. Programowanie w tych środowiskach obejmuje bogate funkcje rozszerzenia QDK, takie jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych. 
+Chociaż aplikacje wiersza polecenia w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku Q#. W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces. Programowanie w tych środowiskach obejmuje bogate funkcje rozszerzenia QDK, takie jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych. 
 
 Aby skonfigurować program VS Code:
 
@@ -48,7 +51,7 @@ Aby zainstalować zestaw QDK dla innego środowiska, wprowadź w wierszu polecen
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Programowanie przy użyciu języka Q#
+## <a name="develop-with-no-locq"></a>Programowanie przy użyciu języka Q#
 
 Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku.
 
@@ -56,7 +59,7 @@ Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku.
 
 Aby utworzyć nowy projekt:
 
-1. Kliknij pozycję **View** -> **Command Palette**, a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).
+1. Kliknij pozycję **View** -> **Command Palette** (Widok -> Paleta poleceń), a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).
 2. Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).
 3. Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).
 4. Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.
@@ -74,11 +77,11 @@ Aby uruchomić aplikację:
 
 ### <a name="visual-studio"></a>[Program Visual Studio](#tab/tabid-vs)
 
-Zweryfikuj instalację programu Visual Studio, tworząc aplikację `Hello World` w języku Q#.
+Zweryfikuj instalację programu Visual Studio, tworząc aplikację Q# w języku `Hello World`.
 
 Aby utworzyć nową aplikację w języku Q#:
 1. Otwórz program Visual Studio, a następnie wybierz kolejno opcje **Plik** -> **Nowy** -> **Projekt**.
-2. Wpisz `Q#` w polu wyszukiwania, wybierz pozycję **Aplikacja Q#** , a następnie kliknij pozycję **Dalej**.
+2. Wpisz `Q#` w polu wyszukiwania, wybierz pozycję **Aplikacja Q#** , a następnie kliknij przycisk **Dalej**.
 3. Wprowadź nazwę i lokalizację aplikacji, a następnie kliknij pozycję **Utwórz**.
 
 

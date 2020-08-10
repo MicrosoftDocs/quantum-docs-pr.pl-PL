@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436570"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866863"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Wpółtworzenie zestawu Quantum Development Kit
 
@@ -55,7 +58,7 @@ Każdy z tych elementów znajduje się w innym repozytorium, więc jedną z pier
 - [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Realizowane samodzielnie ćwiczenia programistyczne do nauki obliczeń kwantowych i języka programowania Q#.
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): Kompilator języka Q#, rozszerzenie programu Visual Studio i rozszerzenie programu Visual Studio Code.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Struktura symulacji, generowanie kodu i maszyny docelowe symulacji dla zestawu Quantum Development Kit.
-- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jądro Jupyter i funkcje hosta języka Python dla języka Q#, a także obrazy platformy Docker na potrzeby używania IQ# w środowiskach chmur.
+- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jądro Jupyter i funkcje hosta języka Python dla języka Q#, a także obrazy platformy Docker na potrzeby używania rozszerzenia IQ# w środowiskach chmur.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Kod źródłowy dokumentacji opublikowanej na stronie https://docs.microsoft.com/quantum.
 
 > [!NOTE]

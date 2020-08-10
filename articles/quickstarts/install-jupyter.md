@@ -6,23 +6,26 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871454"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866812"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
 
 Zainstaluj zestaw QDK na potrzeby opracowywania operacji języka Q# w notesach Jupyter Notebook języka Q#.
 
-Notesy Jupyter Notebook zapewniają możliwość wykonywania kodu w miejscu, a także instrukcje, notatki i inną zawartość. Jest to idealne środowisko do pisania kodu języka Q# z osadzonymi wyjaśnieniami lub interaktywnych samouczków wykonywania obliczeń kwantowych. Oto jak zacząć tworzyć własne notesy języka Q#.
+Notesy Jupyter Notebook zapewniają możliwość wykonywania kodu w miejscu, a także instrukcje, notatki i inną zawartość. Jest to idealne środowisko do pisania kodu Q# z osadzonymi wyjaśnieniami lub interaktywnych samouczków wykonywania obliczeń kwantowych. Oto jak zacząć tworzenie własnych notesów języka Q#.
 
 > [!NOTE]
-> * W notesach Jupyter Notebook języka Q# można uruchamiać tylko kod języka Q# i nie można wywoływać operacji z zewnętrznych programów hosta (na przykład z plików języka Python lub C#). To środowisko nie będzie odpowiednie, jeśli chcesz połączyć program kwantowy z zewnętrznym klasycznym programem hosta.
+> * W notesach Jupyter Notebook języka Q# można uruchamiać tylko kod Q# i nie można wywoływać operacji z zewnętrznych programów hosta (na przykład z plików języka Python lub C#). To środowisko nie będzie odpowiednie, jeśli chcesz połączyć program kwantowy z zewnętrznym klasycznym programem hosta.
 
-## <a name="install-the-iq-jupyter-kernel"></a>Instalowanie jądra Jupyter IQ#
+## <a name="install-the-ino-locq-jupyter-kernel"></a>Instalowanie jądra Jupyter IQ#
 
 IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używane głównie w środowiskach Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i symulowania operacji języka Q#.
 
@@ -70,11 +73,11 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
     
 ***
 
-Gotowe. Masz teraz jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i wykonywania operacji języka Q# z poziomu notesów Jupyter Notebook dla języka Q#.
+Gotowe. Masz teraz jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i wykonywania operacji języka Q# z poziomu notesów Jupyter Notebook języka Q#.
 
-## <a name="create-your-first-q-notebook"></a>Tworzenie pierwszego notesu w języku Q#
+## <a name="create-your-first-no-locq-notebook"></a>Tworzenie pierwszego notesu języka Q#
 
-Teraz możesz już zweryfikować instalację notesu Jupyter Notebook języka Q#, pisząc i wykonując prostą operację w języku Q#.
+Teraz możesz zweryfikować instalację notesu Jupyter Notebook języka Q#, pisząc i wykonując prostą operację w języku Q#.
 
 1. Ze środowiska utworzonego podczas instalacji (tj. utworzonego środowiska conda lub środowiska języka Python, w którym zainstalowano pakiet Jupyter) uruchom następujące polecenie, aby uruchomić serwer notesu Jupyter Notebook:
 
@@ -84,7 +87,7 @@ Teraz możesz już zweryfikować instalację notesu Jupyter Notebook języka Q#,
 
     - Jeśli notes Jupyter Notebook nie zostanie otwarty automatycznie w przeglądarce, skopiuj i wklej adres URL otrzymany w wierszu polecenia do okna przeglądarki.
 
-1. Wybierz pozycję „Nowy” → „Q#”, aby utworzyć notes Jupyter Notebook z jądrem Q#, i dodaj następujący kod do pierwszej komórki notesu:
+1. Wybierz pozycję „New” → „Q#” (Nowy → Q#), aby utworzyć notes Jupyter Notebook z jądrem Q#, i dodaj następujący kod do pierwszej komórki notesu:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
@@ -92,7 +95,7 @@ Teraz możesz już zweryfikować instalację notesu Jupyter Notebook języka Q#,
 
     ![Komórka notesu Jupyter Notebook z kodem języka Q#](~/media/install-guide-jupyter.png)
 
-    W danych wyjściowych komórki powinien zostać wyświetlony element `SampleQuantumRandomNumberGenerator`. W przypadku uruchamiania w notesach Jupyter Notebook kod języka Q# jest kompilowany, a komórka zwraca w danych wyjściowych nazwy wszystkich znalezionych operacji.
+    W danych wyjściowych komórki powinien zostać wyświetlony element `SampleQuantumRandomNumberGenerator`. W przypadku uruchamiania w notesach Jupyter Notebook kod Q# jest kompilowany, a komórka zwraca w danych wyjściowych nazwy wszystkich znalezionych operacji.
 
 1. W nowej komórce wykonaj utworzoną operację w symulatorze za pomocą polecenia `%simulate`:
 
@@ -107,4 +110,4 @@ Po zainstalowaniu zestawu QDK na potrzeby notesów Jupyter Notebook języka Q# m
 Aby znaleźć więcej przykładów zastosowań notesów Jupyter Notebook języka Q#, zobacz:
 
 - [Wprowadzenie do języka Q# i notesów Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Tam znajdziesz notes Jupyter Notebook języka Q# zawierający więcej szczegółów dotyczących tego, jak używać języka Q# w środowisku Jupyter.
-- [Quantum Katas](xref:microsoft.quantum.overview.katas) to kolekcja typu open-source, zawierająca realizowane samodzielnie samouczki oraz zestawy ćwiczeń programistycznych w formie notesów Jupyter Notebook języka Q#. [Notesy samouczków Quantum Katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) to dobry sposób, aby zacząć. Celem samouczków Quantum Katas jest połączenie nauki elementów obliczeń kwantowych i tworzenia zawartości w języku Q#. To doskonały przykład zawartości, którą można tworzyć za pomocą notesów Jupyter Notebook języka Q#.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas) to kolekcja typu open-source zawierająca realizowane samodzielnie samouczki oraz zestawy ćwiczeń programistycznych w formie notesów Jupyter Notebook języka Q#. [Notesy samouczków Quantum Katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) to dobry sposób, aby zacząć. Celem samouczków Quantum Katas jest połączenie nauki elementów obliczeń kwantowych i tworzenia zawartości w języku Q#. To doskonały przykład zawartości, którą można tworzyć za pomocą notesów Jupyter Notebook języka Q#.

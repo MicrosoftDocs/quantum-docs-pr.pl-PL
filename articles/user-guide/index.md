@@ -6,14 +6,17 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885010"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869634"
 ---
-# <a name="the-q-user-guide"></a>Podręcznik użytkownika języka Q#
+# <a name="the-no-locq-user-guide"></a>Podręcznik użytkownika języka Q#
 
 Podręcznik użytkownika języka Q# — Zapraszamy! 
 
@@ -23,17 +26,17 @@ W poszczególnych tematach tego przewodnika opisano szczegółowo podstawowe poj
 
 - [Podstawy języka Q#](xref:microsoft.quantum.guide.basics): Wprowadzające omówienie dotyczące przeznaczenia i funkcjonalności języka programowania Q#. 
 
-- [Sposoby uruchamiania programu w języku Q#](xref:microsoft.quantum.guide.host-programs): Zawiera opis sposobu wykonywania programu w języku Q# i udostępnia przegląd różnych metod wywoływania programu: z wiersza polecenia, w notesach Jupyter Notebook dla języka Q# lub z klasycznego programu hosta napisanego w języku Python lub języku platformy .NET.
+- [Sposoby uruchamiania programu w języku Q#](xref:microsoft.quantum.guide.host-programs): Zawiera opis sposobu wykonywania programu w języku Q# i udostępnia przegląd różnych metod wywoływania programu: z wiersza polecenia, w notesach Jupyter Notebook języka Q# lub z klasycznego programu hosta napisanego w języku Python lub języku platformy .NET.
 
-### <a name="q-language"></a>Język Q#
+### <a name="no-locq-language"></a>Język Q#
 
 - [Typy w języku Q#](xref:microsoft.quantum.guide.types): Opis modelu typów języka Q# oraz składni służącej do określania typów i pracy z nimi.
 
-- [Wyrażenia typów](xref:microsoft.quantum.guide.expressions): Szczegóły dotyczące określania, odwoływania się, łączenia i wykonywania operacji w przypadku wartości poszczególnych typów w języku Q#. 
+- [Wyrażenia typów](xref:microsoft.quantum.guide.expressions): Szczegóły dotyczące określania, łączenia i wykonywania operacji w przypadku wartości poszczególnych typów w języku Q# oraz odwoływania się do nich. 
 
-### <a name="using-q"></a>Korzystanie z języka Q#
+### <a name="using-no-locq"></a>Korzystanie z akcji Q#
 
-- [Struktura plików języka Q#](xref:microsoft.quantum.guide.filestructure): Opis struktury i składni pliku języka Q# `*.qs`.
+- [Struktura plików języka Q#](xref:microsoft.quantum.guide.filestructure): Opis struktury i składni pliku `*.qs` języka Q#.
 
 - [Operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions): Szczegóły dwóch wywoływalnych typów w języku Q#: *operacji*, które obejmują akcje dotyczące rejestrów kubitów, oraz *funkcji*, które współpracują wyłącznie z informacjami klasycznymi. 
     W tym miejscu opisano, jak je definiować i wywoływać, łącznie ze sprzężonymi i kontrolowanymi wersjami operacji kwantowych.
@@ -47,7 +50,7 @@ W poszczególnych tematach tego przewodnika opisano szczegółowo podstawowe poj
 
 - [Testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging): Szczegóły niektórych technik służących do upewniania się, że kod działa zgodnie z oczekiwaniami. 
     Ze względu na ogólną nieprzezroczystość informacji kwantowych debugowanie programu kwantowego może wymagać wyspecjalizowanych technik. 
-    Na szczęście język Q# obsługuje wiele klasycznych technik debugowania, które są znane programistom, a także tych, które są specyficzne dla programów kwantowych. Obejmuje to tworzenie i uruchamianie testów jednostkowych w języku Q#, osadzanie *asercji* dotyczących wartości i prawdopodobieństwa w kodzie oraz funkcje `Dump`, które wyprowadzają stan maszyn docelowych. 
+    Na szczęście język Q# obsługuje wiele klasycznych technik debugowania, które są znane programistom, a także tych, które są specyficzne dla programów kwantowych. Obejmuje to tworzenie i uruchamianie testów jednostkowych w języku Q#, osadzanie *asercji* dotyczących wartości i prawdopodobieństwa w kodzie oraz funkcje `Dump`, które wyprowadzają stany maszyn docelowych. 
     Tych ostatnich funkcji można używać wraz z naszym symulatorem pełnego stanu do debugowania niektórych części obliczeń przez ominięcie pewnych ograniczeń kwantowych (np. [twierdzenia o braku klonowania](xref:microsoft.quantum.concepts.pauli)).
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Symulatory kwantowe i narzędzia do szacowania zasobów
@@ -64,4 +67,4 @@ W poszczególnych tematach tego przewodnika opisano szczegółowo podstawowe poj
 
 ### <a name="quick-reference-pages"></a>Strony skróconej dokumentacji
 
-- [Polecenia magic IQ#](xref:microsoft.quantum.guide.quickref.iqsharp): Strona skróconej dokumentacji dla poleceń magic IQ# w ramach notesów Jupyter dla języka Q#.
+- [Polecenia magic rozszerzenia IQ#](xref:microsoft.quantum.guide.quickref.iqsharp): Strona skróconej dokumentacji dla poleceń magic rozszerzenia IQ# w ramach notesów Jupyter Notebook dla języka Q#.
