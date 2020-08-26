@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje przydatne do celów diagnostycznych, w tym operacje potwierdzania i funkcje roszczeń."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Potwierdza, że dwie tablice wartości logicznych są równe.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: Potwierdza, że klasyczna wartość zmiennoprzecinkowa ma oczekiwaną wartość do małej tolerancji o wartości 1e-10.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: Między wywołaniem tej operacji i jej częścią, potwierdza, że dana operacja jest wywoływana co najwyżej określoną liczbę razy.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: Między wywołaniem tej operacji i jej częścią, potwierdzenia, że co najwyżej dana liczba dodatkowych qubits są przydzielane przy użyciu instrukcji using.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Potwierdzenie, że dany qubits są wszystkie w stanie $ \ket {0} $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     W rezultacie ta operacja wymaga tylko jednego wywołania dla każdej testowanej operacji, ale wymaga dwukrotnego przydzielenia qubits.
 
     To potwierdzenie może służyć do upewnienia się, że na przykład, że zoptymalizowana wersja operacji działa identycznie z implementacją algorytmie, lub że operacja, która działa w zakresie danych wejściowych innych niż Quantum, zgadza się ze znanymi przypadkami.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Potwierdza, że faza równego stanu nadpozycji ma oczekiwaną wartość.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Potwierdza, że qubit `q` znajduje się w oczekiwanej eigenstate operatora Pauli z.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     Potwierdza, że element qubit w oczekiwanym stanie.
 
 
-    `expected`reprezentuje złożony wektor, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected` reprezentuje złożony wektor, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     Pierwszy element spójnych krotek reprezentuje każdy z $a $, $b $ jest rzeczywistą częścią liczby zespolonej, a druga jest częścią urojoną.
 
     Ostatni argument definiuje tolerancję, z którą jest wykonywane potwierdzenie.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Potwierdza, że qubit `q` znajduje się w oczekiwanej eigenstate operatora Pauli z do danej tolerancji.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: Po wykonaniu operacji program wyświetla diagnostykę operacji, które są dostępne dla bieżącego celu wykonania.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: Rozpoznany przez kompilator atrybut, za pomocą którego można zdefiniować alternatywną nazwę, która może być używana podczas ładowania typu lub do celów testowych.
 - uid: microsoft.quantum.diagnostics.test
   summary: Atrybut rozpoznany przez kompilator używany do oznaczania testu jednostkowego.
-summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje i operacje przydatne do celów diagnostycznych, w tym operacje potwierdzania i funkcje roszczeń."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884570"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863046"

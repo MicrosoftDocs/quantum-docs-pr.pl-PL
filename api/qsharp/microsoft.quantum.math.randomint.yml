@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Generuje jednolitie losową liczbę całkowitą większą lub równą zero i mniejszą od podanej górnej granicy.
-remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, aby jej losowość zależała od implementacji `Random`.
+summary: RandomInt jest przestarzała. Użyj @"microsoft.quantum.random.drawrandomint" zamiast tego.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: Liczba całkowita o wartości większej niż największa liczba całkowita, która ma zostać zwrócona przez tę operację.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Liczba całkowita $x $ na losowo z danego interwału; oznacza to, że z $ \Pr (x) ={1}\Frac {\texttt{maxInt}} $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682753"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863530"

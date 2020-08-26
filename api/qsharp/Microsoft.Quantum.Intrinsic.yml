@@ -86,12 +86,7 @@ operations:
 
     > Ta operacja używa **przeciwległej** Konwencji podpisywania z @"microsoft.quantum.intrinsic.r" i nie obejmuje współczynnika $1/2 $ dołączonego przez @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    Operacja Losowa pobiera tablicę podwajania jako dane wejściowe i zwraca losowo wybrany indeks do tablicy jako `Int` .
-
-    Prawdopodobieństwo wyboru określonego indeksu jest proporcjonalne do wartości elementu tablicy w tym indeksie.
-
-    Elementy tablicy, które są równe zeru, są ignorowane, a ich indeksy nigdy nie są zwracane. Jeśli którykolwiek element tablicy jest mniejszy od zera lub żaden element tablicy nie jest większy niż zero, operacja kończy się niepowodzeniem.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLosowo jest przestarzałe. Użyj @\"microsoft.quantum.random.drawcategorical\" zamiast tego."
 - uid: microsoft.quantum.intrinsic.reset
   summary: Podano jeden qubit, mierzy go i zapewnia, że znajduje się w stanie | 0 ⟩, aby można go było bezpiecznie zwolnić.
 - uid: microsoft.quantum.intrinsic.resetall
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885241"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862707"

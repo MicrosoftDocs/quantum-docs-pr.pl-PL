@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.allowatmostnqubits
+name: AllowAtMostNQubits
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Między wywołaniem tej operacji i jej częścią, potwierdzenia, że co najwyżej dana liczba dodatkowych qubits są przydzielane przy użyciu instrukcji using.
+remarks: Ta operacja może zostać zamieniona na elementy docelowe, które ich nie obsługują.
+examples: >-
+  Poniższy fragment kodu zakończy się niepowodzeniem podczas wykonywania na maszynach, które obsługują tę diagnostykę:
+
+
+  ```Q#
+
+  within {
+      AllowAtMostNQubits(3, "Too many qubits allocated.");
+  } apply {
+      // Fails since this allocates four qubits.
+      using (register = Qubit[4]) {
+      }
+  }
+
+  ```
+syntax: 'operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit'
+input:
+  content: '(nQubits : Int, message : String)'
+  types:
+  - name: nQubits
+    summary: Maksymalna liczba qubits, które mogą być przydzieloną.
+    isPrimitive: true
+    uid: Int
+  - name: message
+    summary: Komunikat, który ma być wyświetlany w przypadku awarii.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+metadata:
+  ms.openlocfilehash: 154bcc5f67a44e436e42907d8679c14f68c88021
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864162"
