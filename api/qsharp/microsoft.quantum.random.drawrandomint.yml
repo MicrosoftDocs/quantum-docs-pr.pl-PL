@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandomint
+name: DrawRandomInt
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: Rysuje losową liczbę całkowitą w danym zakresie włącznie.
+remarks: Kończy się niepowodzeniem, jeśli `max <= min` .
+examples: >-
+  Poniższy fragment kodu Q # losowy rzutuje na sześć stron:
+
+
+  ```Q#
+
+  let roll = DrawRandomInt(1, 6);
+
+  ```
+syntax: 'operation DrawRandomInt (min : Int, max : Int) : Int'
+input:
+  content: '(min : Int, max : Int)'
+  types:
+  - name: min
+    summary: Najmniejsza liczba całkowita do narysowania.
+    isPrimitive: true
+    uid: Int
+  - name: max
+    summary: Największa liczba całkowita do narysowania.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Liczba całkowita w zakresie włącznie z `min` do z `max` jednolitym prawdopodobieństwem.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.discreteuniformdistribution
+metadata:
+  ms.openlocfilehash: cb80cacff95dac9e4cecc5717124c20909a56ca0
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864249"

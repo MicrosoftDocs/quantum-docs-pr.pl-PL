@@ -2,19 +2,19 @@
 title: Wewnętrzne operacje i funkcje w QDK
 description: Dowiedz się więcej na temat wewnętrznych operacji i funkcji w QDK, w tym funkcji klasycznych, operacji związanych z jednostką, rotacją i pomiarem.
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868444"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863725"
 ---
 # <a name="the-prelude"></a>Preludium #
 
@@ -128,27 +128,27 @@ W ramach algorytmów Quantum często warto wyrazić rotację jako ułamki dyadic
 Różni się od <xref:microsoft.quantum.intrinsic.r> , że kąt obrotu jest określony jako dwa dane wejściowe typu `Int` interpretowane jako ułamek dyadic.
 W tym celu `RFrac` ma sygnaturę `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Implementuje qubit jednostki $ \exp (\pi k \sigma/2 ^ n) $, gdzie $ \sigma $ jest matrycą Pauli odpowiadającą pierwszemu argumentowi, $k $ jest drugim argumentem, a $n $ to trzeci argument.
-`RFrac(_,k,n,_)`jest taka sama jak `R(_,-πk/2^n,_)` ; należy zauważyć, że kąt jest *wartością ujemną* części ułamkowej.
+`RFrac(_,k,n,_)` jest taka sama jak `R(_,-πk/2^n,_)` ; należy zauważyć, że kąt jest *wartością ujemną* części ułamkowej.
 
 <xref:microsoft.quantum.intrinsic.rx>Operacja implementuje obrót wokół osi Pauli $X $.
 Ma sygnaturę `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rx(_, _)`jest taka sama jak `R(PauliX, _, _)` .
+`Rx(_, _)` jest taka sama jak `R(PauliX, _, _)` .
 
 <xref:microsoft.quantum.intrinsic.ry>Operacja implementuje obrót wokół osi Pauli $Y $.
 Ma sygnaturę `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Ry(_, _)`jest taka sama jak `R(PauliY,_ , _)` .
+`Ry(_, _)` jest taka sama jak `R(PauliY,_ , _)` .
 
 <xref:microsoft.quantum.intrinsic.rz>Operacja implementuje obrót wokół osi Pauli $Z $.
 Ma sygnaturę `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rz(_, _)`jest taka sama jak `R(PauliZ, _, _)` .
+`Rz(_, _)` jest taka sama jak `R(PauliZ, _, _)` .
 
 <xref:microsoft.quantum.intrinsic.r1>Operacja implementuje obrót o podaną ilość około $ \ket {1} $, eigenstate $-$1 z $Z $.
 Ma sygnaturę `((Double, Qubit) => Unit is Adj + Ctl)` .
-`R1(phi,_)`jest taka sama, jak `R(PauliZ,phi,_)` i `R(PauliI,-phi,_)` .
+`R1(phi,_)` jest taka sama, jak `R(PauliZ,phi,_)` i `R(PauliI,-phi,_)` .
 
 <xref:microsoft.quantum.intrinsic.r1frac>Operacja implementuje rotację ułamkową o podaną ilość wokół elementu Z = 1 eigenstate.
 Ma sygnaturę `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
-`R1Frac(k,n,_)`jest taka sama, jak `RFrac(PauliZ,-k.n+1,_)` i `RFrac(PauliI,k,n+1,_)` .
+`R1Frac(k,n,_)` jest taka sama, jak `RFrac(PauliZ,-k.n+1,_)` i `RFrac(PauliI,k,n+1,_)` .
 
 Poniżej przedstawiono przykład operacji obrotu (wokół osi Pauli $Z $, w tym wystąpieniu) zamapowanej na sferę Bloch:
 
@@ -160,17 +160,17 @@ Oprócz operacji pojedynczych qubit, Preludium także definiuje kilka operacji q
 
 Po pierwsze, <xref:microsoft.quantum.intrinsic.cnot> operacja wykonuje standardowe kontrolowane `NOT` bramy, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 0 & \\ \\ 0 & 1 & 0 \end{bmatrix}.
 \end{Equation} ma sygnaturę `((Qubit, Qubit) => Unit is Adj + Ctl)` reprezentującą, że $ \operatorname{CNOT} $ działa unitarily na dwóch indywidualnych qubits.
-`CNOT(q1, q2)`jest taka sama jak `(Controlled X)([q1], q2)` .
+`CNOT(q1, q2)` jest taka sama jak `(Controlled X)([q1], q2)` .
 Ponieważ `Controlled` Funktor umożliwia kontrolę nad rejestrem, używamy literału tablicowego, `[q1]` Aby wskazać, że chcemy tylko jedną kontrolkę.
 
 <xref:microsoft.quantum.intrinsic.ccnot>Operacja wykonuje podwójnie sterowaną bramą, a także znaną jako bramę Toffoli.
 Ma sygnaturę `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
-`CCNOT(q1, q2, q3)`jest taka sama jak `(Controlled X)([q1, q2], q3)` .
+`CCNOT(q1, q2, q3)` jest taka sama jak `(Controlled X)([q1, q2], q3)` .
 
 <xref:microsoft.quantum.intrinsic.swap>Operacja zamienia Stany Quantum z dwóch qubitsów.
 Oznacza to, że implementuje macierz jednostkową \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 & & 1 \\ \\ & 0 & 0 \\ \\ 0 & 0 & 0 1 \end{bmatrix}.
 \end{Equation} ma sygnaturę `((Qubit, Qubit) => Unit is Adj + Ctl)` .
-`SWAP(q1,q2)`jest odpowiednikiem `CNOT(q1, q2)` `CNOT(q2, q1)` , a następnie `CNOT(q1, q2)` .
+`SWAP(q1,q2)` jest odpowiednikiem `CNOT(q1, q2)` `CNOT(q2, q1)` , a następnie `CNOT(q1, q2)` .
 
 > [!NOTE]
 > Brama wymiany *nie* jest taka sama jak zmiana rozmieszczenia elementów zmiennej typu `Qubit[]` .
@@ -202,7 +202,7 @@ Operacje pomiarów nie obsługują ani `Adjoint` `Controlled` Funktor.
 
 <xref:microsoft.quantum.intrinsic.measure>Operacja wykonuje wspólne pomiary co najmniej jednego qubits w określonym produkcie operatorów Pauli.
 Jeśli macierz Pauli i tablica qubit mają różne długości, operacja kończy się niepowodzeniem.
-`Measure`ma sygnaturę `((Pauli[], Qubit[]) => Result)` .
+`Measure` ma sygnaturę `((Pauli[], Qubit[]) => Result)` .
 
 Należy zauważyć, że wspólne pomiary nie są takie same jak pomiary każdego qubit indywidualnie.
 Rozważmy na przykład stan $ \ket {11} = \ket {1} \otimes \Ket {1} = X\otimes X \ket {00} $.
@@ -215,11 +215,11 @@ Ta właściwość będzie istotna w przyszłości, ponieważ omawiamy korekcję 
 Dla wygody Preludium również obejmuje dwie inne operacje do mierzenia qubits.
 Najpierw ponieważ wykonywanie pomiarów qubit jest dość popularne, Preludium definiuje skrót dla tego przypadku.
 <xref:microsoft.quantum.intrinsic.m>Operacja mierzy operator Pauli $Z $ na jednym qubit i ma sygnaturę `(Qubit => Result)` .
-`M(q)`jest odpowiednikiem `Measure([PauliZ], [q])` .
+`M(q)` jest odpowiednikiem `Measure([PauliZ], [q])` .
 
 <xref:microsoft.quantum.measurement.multim>Mierzy operator Pauli $Z $ *oddzielnie* na każdej tablicy qubits, zwracając *tablicę* `Result` wartości uzyskanych dla każdego qubit.
 W niektórych przypadkach może to być zoptymalizowane. Ma sygnaturę ( `Qubit[] => Result[])` .
-`MultiM(qs)`jest równoważne:
+`MultiM(qs)` jest równoważne:
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

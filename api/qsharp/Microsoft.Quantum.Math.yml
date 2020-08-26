@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Konwertuje liczbę zespoloną typu `ComplexPolar` na liczbę zespoloną typu `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym`denominatorBound`
+  summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym`denominatorBound`
+  summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Zwraca cosinus określonego kąta.
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera klasyczne funkcje matematyczne i typy danych."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Generuje jednolitie losową liczbę całkowitą większą lub równą zero i mniejszą od podanej górnej granicy.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRandomInt jest przestarzała. Użyj @\"microsoft.quantum.random.drawrandomint\" zamiast tego."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Generuje losową liczbę całkowitą równomiernie próbkowaną ze wszystkich liczb całkowitych, które mogą być reprezentowane w danej liczbie bitów.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRandomIntPow2 jest przestarzała. Użyj @\"microsoft.quantum.random.drawrandomint\" zamiast tego."
 - uid: microsoft.quantum.math.randomreal
-  summary: Zwraca losową liczbę rzeczywistą w interwale większym lub równym zero i mniejszą od jednej.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRandomReal jest przestarzała. Użyj @\"microsoft.quantum.random.drawrandomdouble\" zamiast tego."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Zwraca jeden z jednoqubitowych operatorów Pauli jednolicie losowo.
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nRandomSingleQubitPauli jest przestarzała. Użyj @\"microsoft.quantum.random.drawrandompauli\" zamiast tego."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326500"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863065"

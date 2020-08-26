@@ -91,8 +91,8 @@ Podczas pracy z programem Q# najbardziej typowym rodzajem pomiarów, w których 
 W takich przypadkach często omawia się pomiar pomiaru operatora Pauli, w ogólności operatora, takiego jak $ X, Y, Z $ lub $ z \otimes z, x \otimes x, x \otimes Y $ i tak dalej.
 
 > [!TIP]
->W programie Q# Operatory qubit Pauli są ogólnie reprezentowane przez tablice typu `Pauli[]` .
->Na przykład, aby reprezentować $ X \otimes Z \otimes Y $ , można użyć tablicy `[PauliX, PauliZ, PauliY]` .
+> W programie Q# Operatory qubit Pauli są ogólnie reprezentowane przez tablice typu `Pauli[]` .
+> Na przykład, aby reprezentować $ X \otimes Z \otimes Y $ , można użyć tablicy `[PauliX, PauliZ, PauliY]` .
 
 Omawianie pomiaru w warunkach operatorów Pauli jest szczególnie powszechne w podpolu korekcji błędów Quantum.
 W programie Q# przestrzegamy podobnej Konwencji. teraz wyjaśnimy ten alternatywny widok pomiarów.
@@ -122,7 +122,7 @@ Notacja Pauliu odwołuje się do tej równoważności jednostki, identyfikując 
 Te pomiary są podane poniżej dla wygody.
 
 
-|Przekształcenie | jednostek miary Pauli|
+|Przekształcenie  | jednostek miary Pauli  |
 |-------------------|------------------------|
 |$ $ Z |               $\boldone$             |
 |$ $ X | $H               $                    |
@@ -174,14 +174,14 @@ $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
         1 & 0 & 0 &\\\\
-        0 & 1 & 0 & 0\\\\
-        0 & 0 & -1 & 0\\\\
-        0 & 0 & & -1 \end{bmatrix} .
+        0 &  1 &  0 &  0 \\\\
+        0 &  0 & -1 &  0 \\\\
+        0 &  0 & & -1 \end{bmatrix} .
 \end{align}
 $$
 
 Tak jak wcześniej, każda jednostkowa transformacja takich macierzy również opisuje dwie spacje oznaczone przez $ \Pm 1 $ eigenvalues.
-Na przykład $ x \otimes x = h \otimes h (z \otimes z) h h \otimes $ od tożsamości z $ = HXH $ .
+Na przykład $ x \otimes x = h \otimes h (z \otimes z) h h \otimes $  od tożsamości z $ = HXH $ .
 Podobnie jak w przypadku pojedynczej qubit, wszystkie dwie qubit Pauli-pomiary mogą być zapisywane jako $ u ^ \dagger (Z \otimes \id ) u $ dla $ 4 \times 4 $ macierzy jednostkowych $ U $ . Wyliczmy przekształcenia w poniższej tabeli.
 
 > [!NOTE]
@@ -191,14 +191,13 @@ Podobnie jak w przypadku pojedynczej qubit, wszystkie dwie qubit Pauli-pomiary m
 >     \left( \begin { macierz}
 >1 & 0 & 0 &\\\\
 >0 & 0 & 1 &\\\\
->0 & 1 & 0 & 0\\\\
+>         0 & 1 & 0 & 0 \\\\
 >0 & 0 & z & 1 > \end { macierzy } \right ) >     \end{align}
 > $$
->służy do symulowania operacji wewnętrznej [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> służy do symulowania operacji wewnętrznej [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
-|Przekształcenie | jednostek miary Pauli|
+|Przekształcenie     | jednostek miary Pauli  |
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone T $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ W ten sposób są one zgodne z wymaganiami określonymi powyżej.
 W Q# , takie pomiary zwracają $ wartość j, $ Jeśli pomiar daje wynik w eigenspace znaku $ (-1) ^ j $ .
 Pauli pomiary jako wbudowaną funkcję w programie Q# są przydatne, ponieważ pomiary takich operatorów wymagają długich łańcuchów kontrolowanych bram, a przekształcenia podstawowe, aby opisać bramę diagonalizing U, która jest $ $ wymagana do realizacji operacji jako iloczyn dwuskładnikowy z $ $ i $ \id $ .
 Aby określić, że chcesz wykonać jedną z tych wstępnie zdefiniowanych pomiarów, nie musisz martwić się o to, jak przekształcić swoją podstawę, tak aby pomiar bazowy obliczał informacje.
-Q#obsługuje automatycznie wszystkie wymagane przekształcenia podstawowe.
+Q# obsługuje automatycznie wszystkie wymagane przekształcenia podstawowe.
 Aby uzyskać więcej informacji, zobacz [`Measure`](xref:microsoft.quantum.intrinsic.measure) i [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operacje.
 
 ## <a name="the-no-cloning-theorem"></a>Theorem bez klonowania
@@ -257,7 +256,7 @@ Gdy Pełna weryfikacja theorem nie jest w stanie nieco zbyt technicznym w naszej
 
 W przypadku takiego komputera z systemem Quantum Operacja klonowania musi być opisana przez macierz jednostkową.
 Nie można wymusić pomiaru, ponieważ spowodowałoby to uszkodzenie stanu Quantum, który próbujemy sklonować.
-Aby symulować operację klonowania, chcemy, aby macierz jednostkowa używała właściwości, która$$
+Aby symulować operację klonowania, chcemy, aby macierz jednostkowa używała właściwości, która $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 dla każdego stanu $ \ket { \psi } $ .

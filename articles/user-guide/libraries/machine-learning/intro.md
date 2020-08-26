@@ -8,18 +8,18 @@ uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9a24d0b4145d0db2fd8c4e16be807165fff5fb32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868920"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863098"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Wprowadzenie do Machine Learning Quantum
 
 ## <a name="framework-and-goals"></a>Struktura i cele
 
-Kodowanie Quantum i przetwarzanie informacji jest zaawansowaną alternatywą dla klasycznych klasyfikatorów usługi Machine Learning, w szczególności, kodowania dane w rejestrach Quantum, które są zwięzłe względem liczby funkcji, systematycznie wykorzystuje Entanglement Quantum jako zasób obliczeniowy i wykorzystuje pomiar Quantum dla wnioskowania klasy.
+Kodowanie i przetwarzanie informacji przy użyciu Quantum jest zaawansowaną alternatywą dla klasycznego klasyfikatora funkcji uczenia maszynowego. W szczególności pozwala nam kodować dane w rejestrach Quantum, które są zwięzłe względem liczby funkcji, systematycznie wykorzystuj Entanglement Quantum jako zasób obliczeniowy i wykorzystując pomiar Quantum dla wnioskowania klas.
 Klasyfikator Quantum oparty na obwodzie to stosunkowo proste rozwiązanie Quantum, które łączy dane kodowania z szybkim obwodem Quantum Entangling/disentangling, a następnie pomiarem do wywnioskowania etykiet klas próbek danych.
 Celem jest zapewnienie klasycznej charakterystyki i magazynowania obwodów podmiotu, a także hybrydowego procesu Quantum/klasycznego szkolenia parametrów obwodu nawet dla bardzo dużych miejsc funkcji.
 
@@ -29,14 +29,18 @@ Klasyfikacja to nadzorowane zadanie uczenia maszynowego, w którym celem jest wy
 Podobnie jak w przypadku tradycyjnych metod, klasyfikacja Quantum składa się z trzech kroków:
 - kodowanie danych
 - Przygotowanie stanu klasyfikatora
-- pomiar ze względu na probabilistyczne charakter pomiaru, te trzy kroki muszą być powtórzone wielokrotnie. Pomiar może być wyświetlany jako równoważnik równoważności nieliniowej.
-Zarówno kodowanie, jak i obliczenia stanu klasyfikatora są wykonywane za pomocą *obwodów Quantum*. Gdy obwód kodowania jest zwykle oparty na danych i bez parametrów, obwód klasyfikatora zawiera wystarczającą zestaw parametrów, które można uzyskać. 
+- pomiar ze względu na probabilistyczne charakter pomiaru, te trzy kroki muszą być powtórzone wielokrotnie. Zarówno kodowanie, jak i obliczenia stanu klasyfikatora są wykonywane za pomocą *obwodów Quantum*. Gdy obwód kodowania jest zwykle oparty na danych i bez parametrów, obwód klasyfikatora zawiera wystarczającą zestaw parametrów, które można uzyskać. 
 
 W proponowanym rozwiązaniu obwód klasyfikatora składa się z rotacji jednoqubitowych i trójwymiarowych rotacji z dwoma qubitami. W tym miejscu są to kąty obrotu. Bramy rotacji i kontrolowanej rotacji są znane jako *uniwersalne* dla obliczeń Quantum, co oznacza, że każda macierz masy jednostkowej może być rozłożone na wystarczająco długi obwód składający się z takich bram.
 
+W proponowanej wersji obsługiwana jest tylko jedna obwód, po której następuje szacowanie o pojedynczej częstotliwości.
+W takim przypadku rozwiązanie jest analogową usługą Quantum dla maszyny wektorowej pomocy technicznej z niewielką ilością jądra wielostopniowego.
+
 ![Multilayer Perceptron a klasyfikator skoncentrowany obwodu](~/media/DLvsQCC.png)
 
-Możemy porównać ten model z Multilayer Perceptron, aby lepiej zrozumieć podstawową strukturę. W Perceptron predykcyjny $p (y | x, \theta) $ jest określany przez zestaw wag $ \theta $, które określają funkcje liniowe łączące funkcje aktywacji nieliniowej (neurons). Te parametry można przeszkolone, aby utworzyć model. W warstwie wyjściowej możemy uzyskać prawdopodobieństwo próbkowania należącego do klasy przy użyciu funkcji aktywacji nieliniowej, takiej jak softmax. W klasyfikatorze zorientowanym na obwód, predykcyjny jest określany przez kąty obrotu qubit i przenoszące się do dwóch qubitów. W podobny sposób te parametry mogą być przeszkolone przez hybrydową lub klasyczną wersję algorytmu gradientu. Aby obliczyć dane wyjściowe, zamiast korzystać z funkcji aktywacji nieliniowej, prawdopodobieństwo, że Klasa jest uzyskiwana poprzez odczytywanie powtarzających się pomiarów w określonym qubit po kontrolowanej rotacji. Aby zakodować klasyczne dane w stanie Quantum, używamy do kontrolowanego obwodu kodowania do przygotowania stanu.
+Prosty projekt klasyfikatora Quantum można porównać do tradycyjnego rozwiązania do obsługi maszyn wektorowych (SVM). Wnioskowanie dla przykładu danych $x $ w przypadku SVM jest wykonywane przy użyciu optymalnego formularza jądra $ \sum \ alpha_j k (x_j, x) $, gdzie $k $ jest pewną funkcją jądra.
+
+Z kolei klasyfikator Quantum używa predykcyjności $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, który jest podobny w duchu, ale technicznie inny. W tym przypadku, gdy używane jest proste kodowanie amplitudy, $p (y │ x, U (\theta)) $ jest postacią kwadratową w amplitudach $x $, ale współczynniki tego formularza nie są już niezależne. Zamiast tego są one agregowane z elementów macierzy obwodu $U (\theta) $, które zwykle mają znacznie mniej bardziej poznanie parametry $ \theta $ niż wymiar wektora $x $. Stopień wielomianu $p (y │ x, U (\theta)) $ w oryginalnych funkcjach można zwiększyć do wartości $2 ^ l $ przy użyciu kodowania produktu Quantum na $l $ kopie $x $.
 
 Nasza architektura analizuje stosunkowo płytki obwodów, co w związku z tym musi być *szybko Entangling* w celu przechwycenia wszystkich korelacji między funkcjami danych we wszystkich zakresach. Przykład najbardziej przydatnego, szybkiego składnika obwodu Entangling pokazano na poniższej ilustracji. Mimo że obwód z tą geometrią składa się tylko z bram o $3 n + 1 $, macierz wagi jednostki, która jest obliczana, zapewnia znaczącą komunikację krzyżową między funkcjami $2 ^ n $.
 
@@ -69,3 +73,5 @@ Przypadek szkoleniowy $ (x, y) \In \mathcal{D} $ jest uznawany za nieprawidłow�
 ### <a name="reference"></a>Dokumentacja
 
 Te informacje powinny być wystarczające, aby rozpocząć odtwarzanie kodu. Jeśli jednak chcesz dowiedzieć się więcej na temat tego modelu, zapoznaj się z oryginalną propozycją: [ *"skoncentrowane na obwodach klasyfikatory Quantum", Maria Schuld, Alex Bocharov, krysta Svore i Nathana Wiebe*](https://arxiv.org/abs/1804.00633)
+
+Oprócz przykładu kodu, który będzie widoczny w następnych krokach, można również rozpocząć Eksplorowanie klasyfikacji Quantum w [tym samouczku](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) 

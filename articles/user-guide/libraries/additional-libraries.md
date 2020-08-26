@@ -9,20 +9,20 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869583"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863088"
 ---
 # <a name="using-additional-no-locq-libraries"></a>Korzystanie z dodatkowych Q# bibliotek
 
 Zestaw Quantum Development Kit udostępnia dodatkowe funkcje specyficzne dla domeny za pomocą _pakietów NuGet_ , które można dodać do Q# projektów.
 
-| Q#Biblioteki  | Pakiet NuGet | Uwagi |
+| Q# Biblioteki  | Pakiet NuGet | Uwagi |
 |---------|---------|--------|
-| [Q#Biblioteka standardowa](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Uwzględnione domyślnie |
+| [Q# Biblioteka standardowa](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Uwzględnione domyślnie |
 | [Biblioteka dla chemii kwantowej](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Biblioteka dla liczb kwantowych](xref:microsoft.quantum.numerics.intro) | [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Biblioteka dla kwantowego uczenia maszynowego](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
@@ -33,7 +33,7 @@ Po zainstalowaniu zestawu Quantum Development Kit do użycia z preferowanym śro
 > Niektóre Q# biblioteki mogą współpracować z dodatkowymi narzędziami, które działają razem z Q# programami lub które integrują się z aplikacjami hosta.
 > Na przykład [instrukcje instalacji biblioteki chemicznej](xref:microsoft.quantum.chemistry.concepts.installation) opisują, jak używać pakietu [ **Microsoft. Quantum. chemii** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) wraz z NWChem obliczeniową, a także jak instalować `qdk-chem` narzędzia wiersza polecenia do pracy z danymi chemii Quantum.
 
-## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#aplikacje wiersza polecenia lub współdziałanie z platformą .NET](#tab/tabid-csproj)
+## <a name="no-locq-applications-or-net-interopability"></a>[Q# aplikacje lub współdziałanie z platformą .NET](#tab/tabid-csproj)
 
 **Wiersz polecenia lub Visual Studio Code:** Przy użyciu wiersza polecenia lub z poziomu Visual Studio Code można użyć `dotnet` polecenia, aby dodać odwołanie do pakietu NuGet do projektu.
 Aby na przykład dodać pakiet [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) , uruchom następujące polecenie:

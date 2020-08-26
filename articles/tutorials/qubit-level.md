@@ -1,5 +1,5 @@
 ---
-title: Zapisuj i Symuluj programy qubit na poziomieQ#
+title: Zapisuj i Symuluj programy qubit na poziomie Q#
 description: Samouczek krok po kroku dotyczący pisania i symulowania programu Quantum, który działa na indywidualnym poziomie qubit
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869719"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863330"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Samouczek: pisanie i symulowanie programów qubit na poziomie w funkcji Q\#
 
@@ -41,15 +41,15 @@ W naszym przypadku zdefiniujemy Q# operację przeprowadzenia pełnej transformac
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
-> * Zdefiniuj operacje Quantum wQ#
+> * Zdefiniuj operacje Quantum w Q#
 > * Wywoływanie Q# operacji bezpośrednio z wiersza polecenia lub przy użyciu klasycznego programu hosta
 > * Symuluj operację Quantum z alokacji qubit do danych wyjściowych pomiaru
 > * Obserwuj symulowane wavefunction systemu Quantum w całej operacji
 
 Uruchamianie programu Quantum z zestawem Quantum Development Kit firmy Microsoft zwykle składa się z dwóch części:
 1. Sam program, który jest implementowany przy użyciu Q# języka programowania Quantum, a następnie wywoływany do uruchamiania na komputerze Quantum lub symulatorze Quantum. Składają się one z 
-    - Q#operacje: procedury podrzędne działające w rejestrach Quantum i 
-    - Q#Functions: klasyczne procedury podrzędne używane w algorytmie Quantum.
+    - Q# operacje: procedury podrzędne działające w rejestrach Quantum i 
+    - Q# Functions: klasyczne procedury podrzędne używane w algorytmie Quantum.
 2. Punkt wejścia służący do wywoływania programu Quantum i określania komputera docelowego, na którym ma być uruchamiany.
     Można to zrobić bezpośrednio z wiersza polecenia lub za pośrednictwem programu hosta zapisaną w klasycznym języku programowania, takim jak Python lub C#.
     Ten samouczek zawiera instrukcje dla dowolnej metody, której wolisz.
@@ -92,7 +92,7 @@ Następnie zdefiniujemy `Perform3qubitQFT` operację:
 Na razie operacja nie przyjmuje żadnych argumentów i nie zwraca żadnych---w tym przypadku napisze, że zwraca `Unit` obiekt, który jest zbliżone `void` w języku C# lub w pustej kolekcji, `Tuple[()]` w Python.
 Później zmodyfikujemy ją, aby zwracała tablicę wyników pomiarów, w której punkt `Unit` zostanie zastąpiony przez `Result[]` . 
 
-### <a name="allocate-qubits-with-using"></a>Alokuj qubits z`using`
+### <a name="allocate-qubits-with-using"></a>Alokuj qubits z `using`
 W naszej Q# operacji najpierw przydzielmy rejestr trzech qubits z `using` instrukcją:
 
 ```qsharp
@@ -114,7 +114,7 @@ W programie `using` qubits są automatycznie przypisywane w stanie $ \ket {0} $.
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Stosowanie bram o pojedynczej qubit i kontrolowanej
 
 Następnie stosujemy bramy, które składają się na samą operację.
-Q#zawiera już wiele podstawowych bram Quantum jako operacje w [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) przestrzeni nazw i nie są one wyjątkiem. 
+Q# zawiera już wiele podstawowych bram Quantum jako operacje w [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) przestrzeni nazw i nie są one wyjątkiem. 
 
 W ramach Q# operacji instrukcje wywoływania wywołania będą wykonywane w kolejności sekwencyjnej.
 W związku z tym pierwsza brama do zastosowania to [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) do pierwszej qubit:
@@ -134,10 +134,10 @@ Oprócz zastosowania `H` bramy (Hadamard) do poszczególnych qubits obwód QFT s
 
 #### <a name="controlled-operations"></a>Kontrolowane operacje
 
-Q#sprawia, że nie jest to bardzo proste, aby było możliwe wykonywanie operacji na jednym lub wielu qubits kontroli.
+Q# sprawia, że nie jest to bardzo proste, aby było możliwe wykonywanie operacji na jednym lub wielu qubits kontroli.
 Ogólnie rzecz biorąc, należy jedynie przeddzwonić wywołanie z `Controlled` , a argumenty operacji zmieniają się w taki sposób:
 
- `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
+ `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
 
 Należy zauważyć, że kontrolka qubits musi być określona jako tablica, nawet jeśli jest to pojedynczy qubit.
 
@@ -157,7 +157,7 @@ Zwróć uwagę, że używamy [`PI()`](xref:microsoft.quantum.math.pi) funkcji z 
 Ponadto dzieli się na `Double` (np. `2.0` ), ponieważ podział przez liczbę całkowitą `2` spowoduje zgłoszenie błędu typu. 
 
 > [!TIP]
-> `R1(π/2)`i `R1(π/4)` są równoważne `S` `T` operacje i (również w programie `Microsoft.Quantum.Intrinsic` ).
+> `R1(π/2)` i `R1(π/4)` są równoważne `S` `T` operacje i (również w programie `Microsoft.Quantum.Intrinsic` ).
 
 
 Po zastosowaniu odpowiednich `H` operacji i kontrolowanych rotacji do drugiego i trzeciego qubits:
@@ -249,9 +249,9 @@ Gdy Q# plik i operacja zakończą pracę, nasz program Quantum jest gotowy do wy
 Po zdefiniowaniu naszej Q# operacji w `.qs` pliku musimy teraz wywołać tę operację i obserwować wszystkie zwrócone dane klasyczne.
 Na razie nie ma niczego żadnego zwracanego (należy odwołać, że nasza operacja została zdefiniowana powyżej `Unit` ), ale w przypadku późniejszej modyfikacji Q# operacji w celu zwrócenia tablicy wyników pomiaru ( `Result[]` ) nastąpi przekierowanie.
 
-Chociaż program jest powszechny w Q# środowiskach używanych do wywoływania go, sposób postępowania w ten sposób będzie różny. W związku z tym po prostu postępuj zgodnie z instrukcjami wyświetlanymi na karcie odpowiadającej Twoim Instalatorowi: Praca z poziomu Q# aplikacji wiersza polecenia lub programu hosta w języku Python lub C#.
+Chociaż program jest powszechny w Q# środowiskach używanych do wywoływania go, sposób postępowania w ten sposób będzie różny. W związku z tym po prostu postępuj zgodnie z instrukcjami wyświetlanymi na karcie odpowiadającej Instalatorowi: Praca z Q# aplikacji lub użycie programu hosta w języku Python lub C#.
 
-#### <a name="command-line"></a>[Wiersz polecenia](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Wiersz polecenia](#tab/tabid-cmdline)
 
 Uruchomienie Q# programu z wiersza polecenia wymaga jedynie niewielkiej zmiany Q# pliku.
 
@@ -396,7 +396,7 @@ W wyniku tego drukowane dane wyjściowe pokazują, że nasze bramy zaprogramowan
 
 $ $ \ket{\psi} \_ {Initial} = \ket {000} $ $
 
-na 
+na wartość 
 
 $ $ \begin{align} \ket{\psi} \_ {Final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -445,7 +445,7 @@ Każdy `Result` Typ mierzony (albo `Zero` `One` ) jest następnie dodawany do od
 
 Słowo kluczowe `set` jest zawsze używane do ponownego przypisania zmiennych powiązanych przy użyciu `mutable` .
 
-#### <a name="return-resultarray"></a>Przesłać`resultArray`
+#### <a name="return-resultarray"></a>Przesłać `resultArray`
 
 Ze względu na wszystkie trzy qubits i wyniki dodane do `resultArray` , firma Microsoft bezpiecznie resetuje i cofa alokację qubits.
 Po `using` zamknięciu bloku Wstaw
@@ -499,10 +499,10 @@ Kod operacji końcowej powinien wyglądać następująco:
 }
 ```
 
-Jeśli pracujesz z wiersza polecenia, zwracana tablica zostanie po prostu wydrukowana bezpośrednio do konsoli na końcu wykonywania.
+Jeśli pracujesz z wiersza polecenia, zwracana tablica zostanie po prostu wydrukowana bezpośrednio do konsoli po zakończeniu wykonywania.
 W przeciwnym razie zaktualizuj program hosta, aby przetworzyć zwróconą tablicę.
 
-#### <a name="command-line"></a>[Wiersz polecenia](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Wiersz polecenia](#tab/tabid-cmdline)
 
 Aby lepiej zrozumieć zwracaną tablicę, która zostanie wydrukowana w konsoli programu, można dodać kolejną `Message` Q# plik w pliku tuż przed `return` instrukcją:
 

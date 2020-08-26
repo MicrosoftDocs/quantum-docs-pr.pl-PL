@@ -1,5 +1,5 @@
 ---
-title: Eksploruj Entanglement zQ#
+title: Eksploruj Entanglement z Q#
 description: Dowiedz się, jak napisać program Quantum w Q# . Opracowywanie aplikacji stanu Bella za pomocą zestawu QDK (Quantum Development Kit)
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869702"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863440"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Samouczek: Eksplorowanie splątania przy użyciu języka Q\#
 
@@ -52,11 +52,11 @@ Teraz jesteśmy gotowi do zademonstrowania Q# tego zachowania.  Rozpoczniesz od 
 
 ## <a name="creating-a-no-locq-project"></a>Tworzenie Q# projektu
 
-Pierwszą czynnością, którą należy wykonać, jest utworzenie nowego Q# projektu. W tym samouczku zamierzamy używać środowiska na podstawie [aplikacji wiersza polecenia z vs Code](xref:microsoft.quantum.install.standalone).
+Pierwszą czynnością, którą należy wykonać, jest utworzenie nowego Q# projektu. W tym samouczku zamierzamy używać środowiska na podstawie [ Q# aplikacji z vs Code](xref:microsoft.quantum.install.standalone).
 
 Aby utworzyć nowy projekt, w VS Code: 
 
-1. Kliknij pozycję **Wyświetl**  ->  **paletę poleceń** i wybierz pozycję ** Q# : Utwórz nowy projekt**.
+1. Kliknij pozycję **View** -> **Command Palette** (Widok -> Paleta poleceń), a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).
 2. Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).
 3. Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).
 4. Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.
@@ -125,7 +125,7 @@ Operacja kwantowa przekształca stan kubitu. Czasami mówi się o bramkach kwant
 
 Aby zademonstrować efekt operacji `SetQubitState`, dodawana jest następnie operacja `TestBellState`. Ta operacja przyjmuje jako dane wejściowe wartość `Zero` lub `One` i wywołuje operację `SetQubitState` pewną liczbę razy z tymi danymi wejściowymi, a także oblicza, ile razy została zwrócona wartość `Zero` z pomiaru kubitu i ile razy została zwrócona wartość `One`. Oczywiście w tej pierwszej symulacji operacji `TestBellState` oczekujemy, że dane wyjściowe będą wskazywać, iż wszystkie pomiary kubitu z ustawionym parametrem wejściowym `Zero` będą zwracać wartość `Zero`, a wszystkie pomiary kubitu z ustawionym parametrem wejściowym `One` będą zwracać wartość `One`. Dodatkowo dodamy kod do `TestBellState` przedstawienia do przedłożenia i Entanglement.
 
-Dodaj następującą operację do pliku `Bell.qs` wewnątrz przestrzeni nazw po operacji `SetQubitState`:
+Dodaj następującą operację do pliku `Program.qs` wewnątrz przestrzeni nazw po operacji `SetQubitState`:
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,13 +161,13 @@ Domyślnie zmienne w Q# są niezmienne; ich wartości nie można zmienić po ich
 
 Jeśli potrzebujesz zmiennej, której wartość można zmienić, takiej jak `numOnes` w przykładzie, możesz zadeklarować zmienną za pomocą słowa kluczowego `mutable`. Wartość zmiennej modyfikowalnej zmienia się przy użyciu instrukcji `setQubitState`.
 
-W obu przypadkach typ zmiennej jest wnioskowany przez kompilator. Q#nie wymaga żadnych adnotacji typu dla zmiennych.
+W obu przypadkach typ zmiennej jest wnioskowany przez kompilator. Q# nie wymaga żadnych adnotacji typu dla zmiennych.
 
 #### <a name="about-using-statements-in-q"></a>`using`Instrukcje w temacie Q\#
 
 `using`Instrukcja jest również specjalna dla Q# . Służy do przydzielania kubitów do użycia w bloku kodu. W programie Q# wszystkie qubits są przydzielane i wydawane, a nie stałymi zasobami w całym okresie istnienia złożonego algorytmu. Instrukcja `using` przydziela zestaw kubitów na początku bloku i zwalnia te kubity na jego końcu.
 
-## <a name="execute-the-code-from-the-command-line"></a>Wykonywanie kodu z wiersza polecenia
+## <a name="run-the-code-from-the-command-prompt"></a>Uruchamianie kodu z wiersza polecenia
 
 Aby uruchomić kod, musimy określić kompilator, *który* jest wywoływany do uruchomienia, gdy zostanie podane `dotnet run` polecenie. Jest to wykonywane z prostą zmianą w Q# pliku, dodając wiersz `@EntryPoint()` bezpośrednio poprzedzający możliwy do `TestBellState` przeprowadzenia: operację w tym przypadku. Pełny kod powinien:
 
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 Teraz przyjrzyjmy się sposobom, w jaki Q# wyrażamy, jak można dołączać qubits.  Przypomnijmy, że kubit może być w stanie superpozycji wartości 0 i 1.  Użyjemy operacji `Hadamard`, aby go uzyskać. Jeśli kubit znajduje się w dowolnym ze stanów klasycznych (gdy pomiar zwraca zawsze wartość `Zero` lub zawsze wartość `One`), operacja `Hadamard` lub `H` wprowadzi kubit w stan, w którym pomiar kubitu będzie zwracać wartość `Zero` przez 50% czasu i zwracać wartość `One` przez 50% czasu.  Koncepcyjnie kubit można uważać za będący w połowie między wartościami `Zero` i `One`.  Gdy teraz zasymulujemy operację `TestBellState`, zwracane wyniki będą zawierać w przybliżeniu równą liczbę wartości `Zero` i `One` po pomiarze.  
 
-### <a name="x-flips-qubit-state"></a>`X`Przerzucanie stanu qubit
+### <a name="x-flips-qubit-state"></a>`X` Przerzucanie stanu qubit
 
 Najpierw spróbujemy przerzucić kubit (jeśli kubit jest w stanie `Zero`, przerzucimy go do stanu `One` i na odwrót). Wykonuje się to za pomocą operacji `X` przed wykonaniem pomiaru w operacji `TestBellState`:
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 Teraz przyjrzyjmy się właściwościom Quantum klasy qubits.
 
-### <a name="h-prepares-superposition"></a>`H`przygotowuje nałożenie
+### <a name="h-prepares-superposition"></a>`H` przygotowuje nałożenie
 
 Wszystko, co należy zrobić, to zastąpić operację `X` w poprzednim uruchomieniu operacją Hadamarda `H`. Zamiast przerzucać kubit całkowicie z wartości 0 do wartości 1, przerzucimy go tylko w połowie. Zastąpione wiersze w operacji `TestBellState` teraz wyglądają następująco:
 

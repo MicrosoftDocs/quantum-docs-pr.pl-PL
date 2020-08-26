@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 869d13acd5cb82fac73be514d6622a616ddceb54
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866676"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863767"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -24,6 +24,23 @@ Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.q
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
 
+## <a name="version-01220082513"></a>0.12.20082513 wersja
+
+*Data wydania: 25 sierpnia 2020*
+
+To wydanie zawiera następujące elementy:
+
+- Nowa [przestrzeń nazw Microsoft. Quantum. Random](xref:microsoft.quantum.random), zapewniająca wygodniejszy sposób próbkowania losowo wybranych wartości z Q# programów. ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
+- Ulepszona [przestrzeń nazw Microsoft. Quantum. Diagnostics](xref:microsoft.quantum.diagnostics) z nową [ `DumpOperation` operacją](xref:microsoft.quantum.diagnostics.dumpoperation)i nowe operacje ograniczające qubite i wywołania programu Oracle. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
+- Nowe [ `%project` polecenie Magic](xref:microsoft.quantum.iqsharp.magic-ref.project) w Q# i i [ `qsharp.projects` interfejs API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) w języku Python do obsługi odwołań do Q# projektów poza bieżącym folderem obszaru roboczego. Zobacz [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) , aby poznać bieżące ograniczenia tej funkcji. 
+- Obsługa automatycznego ładowania `.csproj` plików dla Q# hostów/Python i umożliwia ładowanie zewnętrznych odwołań do projektu lub pakietu w czasie inicjacji. Aby uzyskać więcej informacji, zobacz Przewodnik dotyczący używania [ Q# z notesami Python i Jupyter](xref:microsoft.quantum.guide.host-programs) .
+- Dodano przykład ErrorCorrection. Syndrome.
+- Dodano sprzężenie możliwość dostosowania do SimpleIsing.
+- Zaktualizowano przykład HiddenShift.
+- Dodano przykład do rozwiązywania Sudoku z algorytmem Grover (udział zewnętrzny)
+- Ogólne poprawki błędów.
+
+Zapoznaj się z pełną listą zamkniętych żądań ściągnięcia dla [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatorów](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) [ Q# i i](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01220072031"></a>0.12.20072031 wersja
 
@@ -50,8 +67,8 @@ To wydanie zawiera następujące elementy:
 - Aktualizacje ułatwiające Q# użytkownikom korzystanie z pakietów bibliotek z różnymi wersjami QDK, co wymaga, aby tylko główne & numery wersji pomocniczej nie były dokładnie takie same.
 - Usunięto przestarzałą `Microsoft.Quantum.Primitive.*` przestrzeń nazw
 - Przeniesiono operacje:
-  - `Microsoft.Quantum.Intrinsic.Assert`jest teraz`Microsoft.Quantum.Diagnostics.AssertMeasurement`
-  - `Microsoft.Quantum.Intrinsic.AssertProb`jest teraz`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+  - `Microsoft.Quantum.Intrinsic.Assert` jest teraz `Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb` jest teraz `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
 - Poprawki błędów 
 
 Zapoznaj się z pełną listą zamkniętych żądań ściągnięcia dla [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatorów](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) [ Q# i i](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -68,10 +85,10 @@ Ta wersja rozwiązuje usterkę wpływającą na kompilację Q# projektów.
 
 To wydanie zawiera następujące elementy:
 
-- Q#Notesy i programy hosta języka Python nie będą już kończyć się niepowodzeniem, gdy Q# punkt wejścia jest obecny
+- Q# Notesy i programy hosta języka Python nie będą już kończyć się niepowodzeniem, gdy Q# punkt wejścia jest obecny
 - Aktualizacje w [bibliotece standardowej](xref:microsoft.quantum.libraries.standard.intro) pozwalające używać modyfikatorów dostępu
 - Teraz kompilator zezwala na wtyczkę kroków ponownego zapisu między wbudowanymi krokami ponownego zapisu
-- Kilka przestarzałych funkcji i operacji zostało usuniętych zgodnie z harmonogramem opisanym w naszych [zasadach dotyczących interfejsu API](xref:microsoft.quantum.contributing.api-design). Q#programy i biblioteki, które kompilują bez ostrzeżeń w wersji 0.11.2004.2825, będą nadal działały niemodyfikowane.
+- Kilka przestarzałych funkcji i operacji zostało usuniętych zgodnie z harmonogramem opisanym w naszych [zasadach dotyczących interfejsu API](xref:microsoft.quantum.contributing.api-design). Q# programy i biblioteki, które kompilują bez ostrzeżeń w wersji 0.11.2004.2825, będą nadal działały niemodyfikowane.
 
 Zapoznaj się z pełną listą zamkniętych żądań ściągnięcia dla [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatorów](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) [ Q# i i](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
@@ -84,12 +101,12 @@ Zapoznaj się z pełną listą zamkniętych żądań ściągnięcia dla [bibliot
 
 To wydanie zawiera następujące elementy:
 
-- Nowa obsługa Q# aplikacji wiersza polecenia, które nie wymagają już pliku hosta C# lub Python. Aby uzyskać więcej informacji na temat rozpoczynania pracy z Q# aplikacjami wiersza polecenia, zobacz [tutaj](xref:microsoft.quantum.install.standalone).
+- Nowe wsparcie dla Q# aplikacji, które nie wymagają już pliku hosta C# lub Python. Aby uzyskać więcej informacji na temat rozpoczynania pracy z Q# aplikacjami, zobacz [tutaj](xref:microsoft.quantum.install.standalone).
 - Zaktualizowano przewodnik Szybki start kwantowego generatora liczb losowych, aby nie wymagał już pliku hosta języka C# ani Python. Zobacz zaktualizowany przewodnik [Szybki start](xref:microsoft.quantum.quickstarts.qrng)
 - Ulepszenia wydajności do Q# obrazów platformy Docker
 
 > [!NOTE]
-> Q#aplikacje wiersza polecenia korzystające z nowego [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) atrybutu obecnie nie mogą być wywoływane z programów Python i .NET.
+> Q# aplikacje korzystające z nowego [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) atrybutu obecnie nie mogą być wywoływane z programów Python i .NET.
 > Więcej informacji można znaleźć w przewodnikach współdziałania z językiem [Python](xref:microsoft.quantum.install.python) i platformą [.NET](xref:microsoft.quantum.install.cs).
 
 ## <a name="version-01120033107"></a>Wersja 0.11.2003.3107
@@ -189,7 +206,7 @@ Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliot
 
 To wydanie zawiera następujące elementy:
 
-- Nowa obsługa [instrukcji sprzężonych](xref:microsoft.quantum.guide.operationsfunctions#conjugations) wQ#
+- Nowa obsługa [instrukcji sprzężonych](xref:microsoft.quantum.guide.operationsfunctions#conjugations) w Q#
 - Nowe akcje kodu w kompilatorze, takie jak „zamień na”, „dodaj dokumentację” i prosta aktualizacja elementu tablicy
 - Dodano szablon instalacji i nowe polecenia projektu do rozszerzenia edytora Visual Studio Code
 - Dodano nowe odmiany kombinatora ApplyIf, takie jak [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -225,7 +242,7 @@ Zobacz pełną listę zamkniętych żądań ściągnięcia dotyczących [bibliot
 
 Podsumowano zmiany i przedstawiono instrukcje uaktualniania istniejących programów.  Przeczytaj więcej na temat tych zmian na [ Q# blogu dev](https://devblogs.microsoft.com/qsharp).
 
-### <a name="no-locq-language-syntax"></a>Q#Składnia języka
+### <a name="no-locq-language-syntax"></a>Q# Składnia języka
 W tej wersji dodano nową Q# składnię języka:
 * Dodano nazwane elementy dla [typów zdefiniowanych przez użytkownika](xref:microsoft.quantum.guide.types#user-defined-types).  
 * Konstruktory typów zdefiniowanych przez użytkownika mogą być teraz używane jako funkcje.
@@ -256,7 +273,7 @@ To wydanie zawiera następujące elementy:
 
 Podsumowano zmiany i przedstawiono instrukcje uaktualniania istniejących programów.  Więcej informacji na temat tych zmian można znaleźć w pod adresem devblogs.microsoft.com/qsharp.
 
-### <a name="no-locq-language-syntax"></a>Q#Składnia języka
+### <a name="no-locq-language-syntax"></a>Q# Składnia języka
 W tej wersji dodano nową Q# składnię języka:
 * Dodano [skrócony sposób wyrażania specjalizacji operacji kwantowych](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (kontroli i dołączania) za pomocą operatorów `+`.  Stara składnia jest przestarzała.  Programy używające starej składni (np. `: adjoint`) będą nadal działać, ale zostanie wygenerowane ostrzeżenie dotyczące czasu kompilacji.  
 * Dodano nowy operator dla wyrażenia [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions). W celu wyrażenia tworzenia tablicy jako modyfikacji istniejącej tablicy można używać operatora `w/`.
@@ -297,19 +314,19 @@ Informacje na temat aktualizowania zestawu QDK znajdują się w [przewodniku ins
   
 Jeśli masz istniejące Q# projekty z wersji 0,5 zestawu Quantum Development Kit, wykonaj następujące kroki, aby przeprowadzić migrację tych projektów do najnowszej wersji.
 
-    1. Projekty muszą zostać uaktualnione w odpowiedniej kolejności.  Jeśli masz rozwiązanie z wieloma projektami, zaktualizuj poszczególne projekty w kolejności, w jakiej są przywoływane.
-    2. W wierszu polecenia uruchom polecenie `dotnet clean`, aby usunąć wszystkie istniejące dane binarne i pliki pośrednie.
-    3. W edytorze tekstów otwórz plik csproj i zmień wersję wszystkich elementów „Microsoft. Quantum” `PackageReference` na wersję 0.6.1904, a następnie zmień nazwę pakietu „Microsoft.Quantum.Canon” na „Microsoft.Quantum.Standard”, na przykład:
+1. Projekty muszą zostać uaktualnione w odpowiedniej kolejności.  Jeśli masz rozwiązanie z wieloma projektami, zaktualizuj poszczególne projekty w kolejności, w jakiej są przywoływane.
+2. W wierszu polecenia Uruchom polecenie, `dotnet clean` Aby usunąć wszystkie istniejące dane binarne i pliki pośrednie.
+3. W edytorze tekstów otwórz plik csproj i zmień wersję wszystkich elementów „Microsoft. Quantum” `PackageReference` na wersję 0.6.1904, a następnie zmień nazwę pakietu „Microsoft.Quantum.Canon” na „Microsoft.Quantum.Standard”, na przykład:
 
-         ```xml
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-        ```
-    4. W wierszu polecenia uruchom następujące polecenie: `dotnet msbuild`  
-    5. Po uruchomieniu tego polecenia może być konieczne ręczne usunięcie błędów powstałych w wyniku wprowadzenia opisanych powyżej zmian.  W wielu przypadkach te błędy będą również raportowane przez funkcję IntelliSense w programie Visual Studio lub edytorze Visual Studio Code.
-        - Otwórz folder główny projektu lub obejmujące rozwiązanie w programie Visual Studio 2019 bądź w edytorze Visual Studio Code.
-        - Po otwarciu pliku. QS w edytorze należy zobaczyć dane wyjściowe Q# rozszerzenia języka w oknie danych wyjściowych.
-        - Po pomyślnym załadowaniu projektu (zostanie to zasygnalizowane w oknie danych wyjściowych) otwórz każdy plik i ręcznie rozwiąż wszystkie pozostałe problemy.
+    ```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+    ```
+4. W wierszu polecenia Uruchom następujące polecenie: `dotnet msbuild`  
+5. Po uruchomieniu tego polecenia może być konieczne ręczne usunięcie błędów powstałych w wyniku wprowadzenia opisanych powyżej zmian.  W wielu przypadkach te błędy będą również raportowane przez funkcję IntelliSense w programie Visual Studio lub edytorze Visual Studio Code.
+    - Otwórz folder główny projektu lub obejmujące rozwiązanie w programie Visual Studio 2019 bądź w edytorze Visual Studio Code.
+    - Po otwarciu pliku. QS w edytorze należy zobaczyć dane wyjściowe Q# rozszerzenia języka w oknie danych wyjściowych.
+    - Po pomyślnym załadowaniu projektu (zostanie to zasygnalizowane w oknie danych wyjściowych) otwórz każdy plik i ręcznie rozwiąż wszystkie pozostałe problemy.
 
 > [!NOTE]
 > * W wersji 0.6 serwer języka dołączony do zestawu Quantum Development Kit nie obsługuje wielu obszarów roboczych.
@@ -571,7 +588,7 @@ Należy pamiętać, że operacja RandomWalkPhaseEstimation z przestrzeni nazw Mi
 ### <a name="known-issues"></a>Znane problemy
 
 - `--filter`Opcja nie `dotnet test` działa poprawnie dla testów zapisanych Q# .
-  W związku z tym poszczególne testy jednostkowe nie mogą być uruchamiane w edytorze Visual Studio Code. Zalecamy użycie polecenia `dotnet test` w wierszu polecenia w celu ponownego uruchomienia wszystkich testów.
+  W związku z tym poszczególne testy jednostkowe nie mogą być uruchamiane w Visual Studio Code; Zalecamy korzystanie z `dotnet test` wiersza polecenia w celu ponownego uruchomienia wszystkich testów.
 
 ## <a name="version-0118011707"></a>Wersja 0.1.1801.1707
 

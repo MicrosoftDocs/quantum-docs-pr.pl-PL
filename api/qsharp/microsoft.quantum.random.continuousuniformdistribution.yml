@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.continuousuniformdistribution
+name: ContinuousUniformDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: Zwraca jednolitą dystrybucję dla danego interwału włącznie.
+remarks: Kończy się niepowodzeniem, jeśli `max <= min` .
+examples: >-
+  Poniższy fragment kodu Q # losowo rysuje kąt między $0 $ i $2 \pi $:
+
+
+  ```Q#
+
+  let angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());
+
+  let angle = angleDistribution::Sample();
+
+  ```
+syntax: 'function ContinuousUniformDistribution (min : Double, max : Double) : Microsoft.Quantum.Random.ContinuousDistribution'
+input:
+  content: '(min : Double, max : Double)'
+  types:
+  - name: min
+    summary: Najmniejsza liczba rzeczywista do narysowania.
+    isPrimitive: true
+    uid: Double
+  - name: max
+    summary: Największa liczba rzeczywista do narysowania.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Random.ContinuousDistribution
+  types:
+  - summary: Rozkład, którego losowo variates są liczbami rzeczywistymi w interwale włącznie z `min` do, `max` z jednolitym prawdopodobieństwem.
+    uid: microsoft.quantum.random.continuousdistribution
+seeAlso:
+- microsoft.quantum.drawrandomdouble
+metadata:
+  ms.openlocfilehash: ac2f90f2793cf6a94fbb50bdac1d05f3790efa1e
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864345"

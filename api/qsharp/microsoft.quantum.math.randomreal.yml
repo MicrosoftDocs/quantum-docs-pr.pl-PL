@@ -3,19 +3,12 @@ uid: microsoft.quantum.math.randomreal
 name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Zwraca losową liczbę rzeczywistą w interwale większym lub równym zero i mniejszą od jednej.
-remarks: Ta funkcja wywołuje <xref:microsoft.quantum.intrinsic.random>, aby jej losowość zależała od implementacji `Random`.
+summary: RandomReal jest przestarzała. Użyj @"microsoft.quantum.random.drawrandomdouble" zamiast tego.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
-    summary: >-
-      Liczba bitów dokładności, z którą należy próbkować liczbę losową.
-
-          # Output
-
-      Liczba rzeczywista $x = k/2 ^ {\texttt{bitsRandom}} $ dla liczby całkowitej $k $ próbkowanie z interwału $ [0, 2 ^ {\texttt{bitsRandom}}) $ z prawdopodobieństwem $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $.
     isPrimitive: true
     uid: Int
 output:
@@ -24,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: b3974f5b12f8d49cc7920021caad98f6e2f3a60c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2cb70e92b47d9233d241eee730337c5fcf709ca8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681526"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863574"
