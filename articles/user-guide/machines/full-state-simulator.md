@@ -9,16 +9,16 @@ uid: microsoft.quantum.machines.full-state-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a27cece9858d62814b9d80c47e61c5d7d3b8c885
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868342"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992227"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Zestaw Quantum Development Kit (QDK) — symulator stanu pełnego
 
-QDK zapewnia pełen symulatora stanu, który symuluje maszynę Quantum na komputerze lokalnym. Za pomocą symulatora stanu pełnego można uruchamiać i debugować algorytmy Quantum Q# , wykorzystując do 30 qubits. Pełen symulator stanu jest podobny do symulatora Quantum używanego w [liq $ UI | \rangle $](http://stationq.github.io/Liquid/) platformy Microsoft Research.
+QDK zapewnia pełen symulatora stanu, który symuluje maszynę Quantum na komputerze lokalnym. Za pomocą symulatora stanu pełnego można uruchamiać i debugować algorytmy Quantum Q# , wykorzystując do 30 qubits. Pełen symulator stanu jest podobny do symulatora Quantum używanego w  [liq $ UI | \rangle $](http://stationq.github.io/Liquid/) platformy Microsoft Research.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>Wywoływanie i uruchamianie symulatora stanu pełnego
 
@@ -39,7 +39,7 @@ Ponieważ `QuantumSimulator` Klasa implementuje <xref:System.IDisposable> interf
 
 ### <a name="invoking-the-simulator-from-python"></a>Wywoływanie symulatora z języka Python
 
-Użyj metody [symulacja ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Q# Python z zaimportowaną Q# operacją:
+Użyj metody [symulacja ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) z biblioteki języka Q# Python z zaimportowaną Q# operacją:
 
 ```python
 qubit_result = myOperation.simulate()

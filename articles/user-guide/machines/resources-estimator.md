@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868189"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992245"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
@@ -69,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>Wywoływanie zasobów szacowania z języka Python
 
-Użyj metody [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:
+Użyj metody [estimate_resources ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -127,7 +127,7 @@ Szacowania zasobów śledzi następujące metryki:
 |----|----|
 |__CNOT__    |Liczba uruchomień `CNOT` operacji (znanych także jako kontrolowane operacje Pauli X).|
 |__QubitClifford__ |Liczba uruchomień pojedynczego qubit Clifford i Pauli operacji.|
-|__miara__    |Liczba uruchomień pomiarów.  |
+|__Miara__    |Liczba uruchomień pomiarów.  |
 |__R__    |Liczba uruchomień wszystkich rotacji qubit, z wyjątkiem `T` operacji Clifford i Pauli.  |
 |__T__    |Liczba uruchomień `T` operacji i ich sprzężenia, w tym `T` operacje, T_x = H. T. H i T_y = HY. T. HY.  |
 |__Ścisł__|Dolna granica głębokości obwodu Quantum uruchamianego przez Q# operację. Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
@@ -138,7 +138,7 @@ Szacowania zasobów śledzi następujące metryki:
 
 Możesz użyć <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> z <xref:microsoft.quantum.diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Kwantowy symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)

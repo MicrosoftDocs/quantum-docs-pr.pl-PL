@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992262"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -32,7 +32,7 @@ To wydanie zawiera następujące elementy:
 
 - Nowa [przestrzeń nazw Microsoft. Quantum. Random](xref:microsoft.quantum.random), zapewniająca wygodniejszy sposób próbkowania losowo wybranych wartości z Q# programów. ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
 - Ulepszona [przestrzeń nazw Microsoft. Quantum. Diagnostics](xref:microsoft.quantum.diagnostics) z nową [ `DumpOperation` operacją](xref:microsoft.quantum.diagnostics.dumpoperation)i nowe operacje ograniczające qubite i wywołania programu Oracle. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
-- Nowe [ `%project` polecenie Magic](xref:microsoft.quantum.iqsharp.magic-ref.project) w Q# i i [ `qsharp.projects` interfejs API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) w języku Python do obsługi odwołań do Q# projektów poza bieżącym folderem obszaru roboczego. Zobacz [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) , aby poznać bieżące ograniczenia tej funkcji. 
+- Nowe [ `%project` polecenie Magic](xref:microsoft.quantum.iqsharp.magic-ref.project) w Q# i i [ `qsharp.projects` interfejs API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) w języku Python do obsługi odwołań do Q# projektów poza bieżącym folderem obszaru roboczego. Zobacz [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) , aby poznać bieżące ograniczenia tej funkcji. 
 - Obsługa automatycznego ładowania `.csproj` plików dla Q# hostów/Python i umożliwia ładowanie zewnętrznych odwołań do projektu lub pakietu w czasie inicjacji. Aby uzyskać więcej informacji, zobacz Przewodnik dotyczący używania [ Q# z notesami Python i Jupyter](xref:microsoft.quantum.guide.host-programs) .
 - Dodano przykład ErrorCorrection. Syndrome.
 - Dodano sprzężenie możliwość dostosowania do SimpleIsing.

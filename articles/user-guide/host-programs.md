@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863167"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992194"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Sposoby uruchamiania Q# programu
 
@@ -346,7 +346,7 @@ Multiple qubits:
 
 Domyślnie `import qsharp` polecenie ładuje wszystkie `.qs` pliki w bieżącym folderze i sprawia, że ich Q# operacje i funkcje są dostępne do użycia w skrypcie języka Python.
 
-Aby załadować Q# kod z innego folderu, można użyć [ `qsharp.projects` interfejsu API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) w celu dodania odwołania do `.csproj` pliku dla Q# projektu (czyli projektu, do którego się odwołuje `Microsoft.Quantum.Sdk` ).
+Aby załadować Q# kod z innego folderu, można użyć [ `qsharp.projects` interfejsu API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) w celu dodania odwołania do `.csproj` pliku dla Q# projektu (czyli projektu, do którego się odwołuje `Microsoft.Quantum.Sdk` ).
 To polecenie spowoduje skompilowanie wszystkich `.qs` plików w folderze zawierającym `.csproj` i jego podfolderach. Spowoduje również cykliczne załadowanie wszelkich pakietów, do których odwołuje się `PackageReference` lub Q# projekty, do których odwołuje się `ProjectReference` ten `.csproj` plik.
 
 Na przykład poniższy kod języka Python importuje projekt zewnętrzny, odwołujący się do jego ścieżki względnej do bieżącego folderu i wywołuje jedną z jej Q# operacji:
@@ -365,7 +365,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-Aby załadować pakiety zewnętrzne zawierające Q# kod, użyj [ `qsharp.packages` interfejsu API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+Aby załadować pakiety zewnętrzne zawierające Q# kod, użyj [ `qsharp.packages` interfejsu API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages).
 
 Jeśli Q# kod w bieżącym folderze zależy od zewnętrznych projektów lub pakietów, mogą pojawić `import qsharp` się błędy, ponieważ zależności nie zostały jeszcze załadowane.
 Aby załadować wymagane pakiety zewnętrzne lub Q# projekty podczas wykonywania `import qsharp` polecenia, upewnij się, że folder z skryptem języka Python zawiera `.csproj` plik, którego dotyczy odwołanie `Microsoft.Quantum.Sdk` . W tym `.csproj` celu należy dodać właściwość `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` do `<PropertyGroup>` . Spowoduje to wymuszenie Q# cyklicznego ładowania dowolnego `ProjectReference` lub `PackageReference` elementów znalezionych w tym `.csproj` czasie w `import qsharp` poleceniu.

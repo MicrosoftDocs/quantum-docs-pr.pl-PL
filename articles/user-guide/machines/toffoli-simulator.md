@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868104"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992215"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Zestaw Quantum Development Kit (QDK) Toffoli symulator
 
@@ -40,7 +40,7 @@ Należy pamiętać, że w przeciwieństwie do klasy `QuantumSimulator` klasa `To
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Wywoływanie symulatora Toffoli z poziomu języka Python
 
-Użyj metody [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:
+Użyj metody [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -68,7 +68,7 @@ Symulator Toffoli obsługuje:
 
 * Rotacje i exponentiated Pauly, takie jak `R` i `Exp` , gdy wynikiem operacji jest równa `X` się lub macierzy tożsamości.
 * Operacje pomiarów i [potwierdzeń](xref:microsoft.quantum.diagnostics.assertmeasurement) , ale tylko na `Z` podstawie Pauli. Zwróć uwagę, że prawdopodobieństwo operacji pomiaru ma zawsze **wartość 0** lub **1**; nie ma losowości w symulatorze Toffoli.
-* `DumpMachine`i `DumpRegister` funkcje.
+* `DumpMachine` i `DumpRegister` funkcje.
 Obie funkcje wyprowadzają bieżący `Z` stan bazowy każdego qubitu, jedną qubit na wiersz.
 
 ## <a name="specifying-the-number-of-qubits"></a>Określanie liczby qubits
@@ -84,7 +84,7 @@ Na przykład:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Szacowania zasobów Quantum](xref:microsoft.quantum.machines.resources-estimator)
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
