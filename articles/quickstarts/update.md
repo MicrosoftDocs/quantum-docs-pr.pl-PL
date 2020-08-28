@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866761"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863638"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Aktualizowanie zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -86,7 +86,7 @@ Możesz teraz przejść do sekcji [Aktualizowanie rozszerzenia QDK dla programu 
 2. Wybierz pozycję **Terminal** -> **New Terminal** (Nowy terminal).
 3. Postępuj zgodnie z instrukcjami aktualizowania przy użyciu wiersza polecenia (tuż poniżej).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Aktualizowanie projektów języka Q# przy użyciu wiersza polecenia
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Aktualizowanie projektów języka Q# przy użyciu wiersza polecenia
 
 1. Przejdź do folderu zawierającego główny plik projektu.
 
@@ -309,7 +309,7 @@ Teraz możesz używać zaktualizowanego jądra IQ# do uruchamiania istniejących
 
 1. Zaktualizuj szablony projektów kwantowych dla platformy .NET
 
-    Za pomocą wiersza polecenia:
+    W wierszu polecenia:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866948"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863774"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Co to jest język programowania Q# i zestaw QDK?
 
@@ -24,7 +24,7 @@ Jako język programowania, Q# zawiera elementy znane z języków Python, C# i F#
 
 ## <a name="what-can-i-do-with-the-qdk"></a>Co można zrobić za pomocą zestawu QDK?
 
-QDK to w pełni funkcjonalny zestaw deweloperski dla języka Q#, którego można używać z popularnymi narzędziami i językami do tworzenia aplikacji kwantowych możliwych do uruchamiania w różnych środowiskach. Programy utworzone w języku Q# można uruchamiać jako aplikację wiersza polecenia albo za pomocą notesów Jupyter lub programu hosta utworzonego w języku Python bądź na platformie .NET.
+QDK to w pełni funkcjonalny zestaw deweloperski dla języka Q#, którego można używać z popularnymi narzędziami i językami do tworzenia aplikacji kwantowych możliwych do uruchamiania w różnych środowiskach. Programy w języku Q# można uruchamiać jako aplikację konsolową lub za pomocą notesów Jupyter albo programu hosta utworzonego w języku Python bądź na platformie .NET.
 
 ### <a name="develop-in-common-tools-and-environments"></a>Opracowywanie w popularnych narzędziach i środowiskach
 
@@ -48,7 +48,7 @@ Uruchamiaj swoje programy kwantowe w symulatorze kwantowym pełnego stanu lub sy
 
 ## <a name="how-does-no-locq-work"></a>Jak działa język Q#?
 
-Program napisany w języku Q# można skompilować do autonomicznej aplikacji wiersza polecenia albo wywoływać za pośrednictwem programu hosta napisanego w języku Python lub na platformie .NET.
+Program napisany w języku Q# można skompilować do autonomicznej aplikacji albo wywoływać za pośrednictwem programu hosta napisanego w języku Python lub na platformie .NET.
 
 Podczas kompilowania i uruchamiania programu tworzone jest wystąpienie symulatora kwantowego, do którego jest następnie przekazywany kod Q#. Symulator używa kodu Q# do tworzenia kubitów (symulacji cząstek kwantowych) i stosuje przekształcenia w celu zmodyfikowania ich stanu. Wyniki operacji kwantowych w symulatorze są następnie zwracane do programu.  
 
@@ -60,7 +60,7 @@ Odizolowanie kodu Q# w symulatorze gwarantuje, że algorytmy są zgodne z prawam
 
 Wszystko, czego potrzebujesz do pisania i uruchamiania programów utworzonych w języku Q#, w tym kompilator języka Q#, biblioteki języka Q# i symulatory kwantowe, możesz instalować i uruchamiać na komputerze lokalnym. Kiedyś będziesz w stanie zdalnie uruchamiać programy utworzone w języku Q# na rzeczywistym komputerze kwantowym, a do tego czasu symulatory kwantowe znajdujące się w zestawie QDK zapewniają dokładne i niezawodne wyniki.
 
-- Uruchamianie [programu napisanego w języku Q# z poziomu wiersza polecenia](xref:microsoft.quantum.install.standalone) jest najszybszym sposobem na rozpoczęcie pracy.
+- Tworzenie [aplikacji w języku Q#](xref:microsoft.quantum.install.standalone) to najszybszy sposób rozpoczęcia.
 
 - Uruchamiaj autonomiczne [notesy Jupyter z funkcją IQ#](xref:microsoft.quantum.install.jupyter) — rozszerzeniem Jupyter umożliwiającym kompilowanie, symulowanie i wizualizowanie programów napisanych w języku Q#.
 

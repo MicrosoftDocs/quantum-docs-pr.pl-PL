@@ -1,5 +1,5 @@
 ---
-title: Tworzenie aplikacji wiersza polecenia w języku Q#
+title: Tworzenie przy użyciu aplikacji w języku Q#
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867611"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863662"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>Tworzenie aplikacji wiersza polecenia w języku Q#
+# <a name="develop-with-no-locq-applications"></a>Tworzenie przy użyciu aplikacji w języku Q#
 
 Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.
 
@@ -26,7 +26,7 @@ Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku h
 
 ## <a name="installation"></a>Instalacja
 
-Chociaż aplikacje wiersza polecenia w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku Q#. W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces. Programowanie w tych środowiskach obejmuje bogate funkcje rozszerzenia QDK, takie jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych. 
+Chociaż aplikacje w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku Q#. W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces. Programowanie w tych środowiskach obejmuje bogate funkcje rozszerzenia QDK, takie jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych. 
 
 Aby skonfigurować program VS Code:
 
@@ -45,7 +45,7 @@ Aby skonfigurować program Visual Studio Codespaces:
 3. Teraz możesz uruchomić nowe środowisko i rozpocząć programowanie w przeglądarce za pomocą [środowiska IDE programu VS Codespaces w chmurze](https://online.visualstudio.com/environments). Alternatywnie można korzystać z lokalnej instalacji programu VS Code i używać Codespaces jako [środowiska zdalnego](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
-Aby zainstalować zestaw QDK dla innego środowiska, wprowadź w wierszu polecenia:
+Aby zainstalować zestaw QDK dla innego środowiska, w wierszu polecenia wprowadź następujące polecenie:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -94,7 +94,7 @@ Aby uruchomić aplikację:
 > [!NOTE]
 > Jeśli masz wiele projektów w jednym rozwiązaniu programu Visual Studio, wszystkie projekty zawarte w rozwiązaniu muszą znajdować się w tym samym folderze co rozwiązanie lub w jednym z jego podfolderów.  
 
-### <a name="other-editors-with-the-command-line"></a>[Inne edytory z wierszem polecenia](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[Inne edytory przy użyciu wiersza polecenia](#tab/tabid-cmdline)
 
 Zweryfikuj instalację, tworząc aplikację `Hello World` w języku Q#.
 

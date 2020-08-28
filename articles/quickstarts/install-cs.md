@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867560"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863670"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Programowanie przy użyciu języka Q# i platformy .NET
 
@@ -25,7 +25,7 @@ Najpierw tworzymy aplikację w języku Q# i hosta na platformie .NET, a następn
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Zainstaluj zestaw Quantum Development Kit [do użycia z projektami wiersza polecenia w języku Q#](xref:microsoft.quantum.install.standalone).
+- Zainstaluj zestaw Quantum Development Kit [do użycia z projektami w języku Q#](xref:microsoft.quantum.install.standalone).
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Tworzenie biblioteki języka Q# i hosta platformy .NET
 
@@ -34,7 +34,7 @@ Pierwszym krokiem jest utworzenie projektów biblioteki języka Q# oraz hosta pl
 Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku programistycznemu.
 Jeśli używasz edytora innego niż Visual Studio lub VS Code, po prostu postępuj zgodnie z krokami wiersza polecenia.
 
-### <a name="visual-studio-code-or-command-line"></a>[Program Visual Studio Code lub wiersz polecenia](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Program Visual Studio Code lub wiersz polecenia](#tab/tabid-cmdline)
 
 - Utwórz nową bibliotekę języka Q#
 
@@ -106,4 +106,4 @@ Aby wywołać tę operację z poziomu aplikacji platformy .NET w symulatorze kwa
     
 ## <a name="next-steps"></a>Następne kroki
 
-Po skonfigurowaniu zestawu Quantum Development Kit zarówno na potrzeby programów wiersza polecenia w języku Q#, jak i współdziałania z platformą .NET, możesz napisać i uruchomić swój [pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).
+Po skonfigurowaniu zestawu Quantum Development Kit zarówno na potrzeby aplikacji w języku Q#, jak i współdziałania z platformą .NET, możesz napisać i uruchomić swój [pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).

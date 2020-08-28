@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867523"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863738"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Wprowadzenie do zestawu Quantum Development Kit (QDK)
 
@@ -36,7 +36,7 @@ Aby zacząć korzystać z możliwości obliczeń kwantowych, możesz wypróbowa�
 * [Eksplorowanie splątania przy użyciu języka Q#](xref:microsoft.quantum.write-program) — ten samouczek obejmuje napisanie w języku Q# programu demonstrującego niektóre podstawowe koncepcje programowania kwantowego.
     Jeśli nie możesz jeszcze zacząć tworzyć kodu, nadal możesz kontynuować bez instalowania zestawu QDK oraz zapoznać się z omówieniem języka programowania Q# i pierwszymi pojęciami związanymi z obliczeniami kwantowymi.
 * [Algorytm wyszukiwania Grovera](xref:microsoft.quantum.quickstarts.search) — poznaj przykładowy program w języku Q#, który przedstawia, jak można w języku Q# wyrażać algorytmy kwantowe, abstrahując od operacji kwantowych niskiego poziomu.
-    Ten samouczek przeprowadzi Cię przez proces tworzenia programu jako aplikacji wiersza polecenia języka Q# przy użyciu programu Visual Studio lub Visual Studio Code.
+    Ten samouczek przeprowadzi Cię przez proces tworzenia programu jako aplikacji języka Q# przy użyciu programu Visual Studio lub Visual Studio Code.
 
 ### <a name="learning-further"></a>Dalsza nauka
 * Dzięki [modułom Microsoft Learn dotyczące obliczeń kwantowych](https://docs.microsoft.com/learn/browse/?term=quantum) opanujesz kluczowe pojęcia we własnym tempie i w odpowiednim dla Ciebie czasie. Możesz poznać podstawowe informacje dotyczące sposobu tworzenia programów kwantowych przy użyciu zestawu QDK w naszym [pierwszym module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
