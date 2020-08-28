@@ -6,12 +6,12 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: e6ae75ef66a82dd1d0c0b07f52694974e86b4406
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79022511"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992279"
 ---
 # <a name="q-api-reference"></a>Dokumentacja interfejsu API języka Q# #
 
@@ -19,6 +19,6 @@ Ta dokumentacja interfejsu API obejmuje standardową bibliotekę języka Q# i tr
 
 - [Biblioteki języka Q#](xref:microsoft.quantum.qsharplibintro)
 - [Biblioteki platformy .NET](xref:microsoft.quantum.dotnetlibsintro)
-- [Biblioteki języka Python](https://docs.microsoft.com/python/qsharp)
+- [Biblioteki języka Python](https://docs.microsoft.com/python/qsharp-core/qsharp)
 
 Aby uzyskać więcej informacji o bibliotekach języka Q#, zobacz <xref:microsoft.quantum.libraries>.
