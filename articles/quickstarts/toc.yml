@@ -6,7 +6,7 @@ items:
     items:
       - name: Omówienie instalacji
         href: index.md
-      - name: Aplikacje wiersza polecenia dla języka Q#
+      - name: Aplikacje języka Q#
         href: install-command-line.md
       - name: Notesy programu Jupyter dla języka Q#
         href: install-jupyter.md
