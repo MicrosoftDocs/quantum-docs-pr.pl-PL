@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Wykonuje modularny przyrost qubit rejestru przez stałą całkowitą.
 
 
-  Poinformuj nas `increment` o $a $, `modulus` przez $N $ i integer zakodowane w `target` $y $.
+  Poinformuj nas `increment` o $a $, `modulus` przez $N $ i Integer zakodowane w `target` $y $.
 
   Następnie operacja wykonuje następujące przekształcenia: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} INTEGERS są zakodowane w formacie little-endian w QFT.
 remarks: >-
-  Zakłada, `target` że najwyższy bit ma ustawioną wartość 0.
+  Zakłada, że `target` najwyższy bit ma ustawioną wartość 0.
 
   Zakłada również, że wartość docelowa jest mniejsza niż $N $.
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Liczba całkowita $y $ w formacie little-endian z kodowaniem `increment` fazowym, do której dodano $a $.
+    summary: Liczba całkowita $y $ w formacie little-endian z kodowaniem fazowym, `increment` do której dodano $a $.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92c20afa6753d80a10a38d8c787efab3a295fc2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676857"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342843"
