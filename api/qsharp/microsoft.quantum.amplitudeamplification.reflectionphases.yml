@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Fazy dla sekwencji częściowego odbicia w wzmocnienia amplitudy.
 remarks: >-
   Pierwszy parametr jest tablicą faz dla odbicia informacji o stanie uruchomienia. Drugi parametr jest tablicą faz dla odbicia stanu docelowego.
@@ -10,9 +10,9 @@ remarks: >-
   Obie tablice muszą mieć równej długości. Należy zauważyć, że w wielu przypadkach Pierwsza faza dotycząca stanu początkowego i ostatniej fazy dotyczącej stanu docelowego wprowadza globalną fazę zmiany i może być ustawiona na $0 $.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 84d2c006997f8a2a3c9b121581b5dd58804a806d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680118"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340361"

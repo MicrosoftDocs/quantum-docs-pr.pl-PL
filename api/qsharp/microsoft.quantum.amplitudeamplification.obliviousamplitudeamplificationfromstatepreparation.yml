@@ -2,16 +2,16 @@
 uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
 name: ObliviousAmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Wzmocnienie amplitudy Oblivious przez firmy Oracle dla częściowych odbicia.
 remarks: >-
-  Stanowi to bardziej rygorystyczne warunki na formularzu pomocniczych Stanów początkowych i docelowych niż w `AmpAmpObliviousByReflectionPhases`.
+  Stanowi to bardziej rygorystyczne warunki na formularzu pomocniczych Stanów początkowych i docelowych niż w `AmpAmpObliviousByReflectionPhases` .
 
-  Przyjęto założenie, że $A{0}\_\ket{0}\_f\ket A =\_\ket{\Text{Start}} {FA} $ przygotowuje pomocniczy stan uruchomienia\_$ \ket{\Text{Start}} {FA} $ z podstawy obliczeniowej ${0}\_\ket{0}f\ket $.
+  Przyjęto założenie, że $A \ket {0} \_ f\ket {0} \_ A = \ket{\Text{Start}} \_ {FA} $ przygotowuje pomocniczy stan uruchomienia $ \ket{\Text{Start}} \_ {FA} $ z podstawy obliczeniowej $ \ket {0} \_ f\ket {0} $.
 
-  Przyjęto założenie, że stan docelowy jest oznaczony przez $ \ket{1}\_f $.
+  Przyjęto założenie, że stan docelowy jest oznaczony przez $ \ket {1} \_ f $.
 
-  Przyjęto założenie, że \begin{align} O\ket {\ Text {Start}\_} {FA}\_\ket{\psi} s ={1}\_\lambda\ket f\ket {\ Text {cokolwiek}\_} a\ket {\ Text {Target}\_} s U\_\ket{\psi} s + \sqrt{1-| \lambda | ^ 2}{0}\_\ket f\cdots, \end{align} dla niektórych jednostek $U $.
+  Przyjęto założenie, że \begin{align} O\ket {\ Text {Start}} \_ {FA} \ket{\psi} \_ s = \lambda\ket {1} \_ f\ket {\ Text {cokolwiek}} \_ a\ket {\ Text {Target}} \_ s U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\cdots, \end{align} dla niektórych jednostek $U $.
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9c4bedaffafdbe0c7dfdda6a4a6ec3ded4a69bfd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680137"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340378"
