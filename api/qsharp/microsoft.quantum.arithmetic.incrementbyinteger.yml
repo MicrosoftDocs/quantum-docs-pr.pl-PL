@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.incrementbyinteger
 name: IncrementByInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Zwiększa niepodpisany rejestr Quantum przez klasyczną liczbę całkowitą, używając rotacji faz.
 
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ecd059d615d6e6888807e9ba0afdbeaf422de423
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679556"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342231"

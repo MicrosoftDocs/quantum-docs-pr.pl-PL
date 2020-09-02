@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
 name: StandardReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Oblicza częściowe fazy odbicia w przypadku wzmocnienia amplitudy standardowej.
 remarks: Wszystkie fazy to $ \pi $, z wyjątkiem pierwszego odbicia stanu początkowego i ostatniego odbicia w stanie docelowym, które są $0 $.
 syntax: 'function StandardReflectionPhases (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
@@ -19,9 +19,9 @@ output:
   - summary: Operacja implementująca fazy określone jako częściowe odbicie
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: bbe128a674348d09cec2b1583bcdf60e1d7d8418
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c02770bc2968e53d4bc13dd0c66f1bf6598e860e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676908"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342197"
