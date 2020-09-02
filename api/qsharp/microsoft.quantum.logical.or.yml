@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Zwraca wartość logiczną, która powoduje odłączenie dwóch wartości.
 remarks: >-
-  W przeciwieństwie `or` do operatora, ta funkcja nie jest krótka obwód, tak że oba dane wejściowe są w pełni oceniane.
+  W przeciwieństwie do `or` operatora, ta funkcja nie jest krótka obwód, tak że oba dane wejściowe są w pełni oceniane.
 
 
   W przypadku zachowania do krótkiego obwodu następujące elementy są równoważne:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`if i tylko wtedy, `a` gdy `b` lub `true`są.'
+  - summary: '`true` if i tylko wtedy, gdy `a` lub `b` są `true` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e95ecbda0b5a51b7380d77f514af76644689757c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683559"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345087"

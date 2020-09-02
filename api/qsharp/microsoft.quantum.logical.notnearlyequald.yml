@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.notnearlyequald
 name: NotNearlyEqualD
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe nie są niemal równe (czyli nie są objęte tolerancją 1e-12).
 remarks: >-
   Następujące elementy są równoważne:
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`if i tylko wtedy `a` , gdy nie jest niemal `b`równe.'
+  - summary: '`true` if i tylko wtedy, gdy `a` nie jest niemal równe `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 021cec48888fba8bad1ec7b1ba47e668892fecff
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 86e376c8d257ebf7206effc0266b3eeb488a1483
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683579"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345104"

@@ -2,13 +2,13 @@
 uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
-namespace: Microsoft.Quantum.Math
-summary: Reprezentuje liczbę racjonalną formularza `p/q`. Liczba `p` całkowita jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
+namespace: microsoft.quantum.math
+summary: Reprezentuje liczbę racjonalną formularza `p/q` . Liczba całkowita `p` jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 63ff365d45d7000f2c75e72630da48fc75144eb9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673798"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343948"

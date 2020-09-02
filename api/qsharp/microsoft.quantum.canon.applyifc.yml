@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifc
 name: ApplyIfC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Stosuje operację z możliwością kontrolowania dla klasycznego bitu.
 
 
-  Dana operacja `op` i wartość `bit`bitowa mają zastosowanie `op` do elementu `target` if `bit` is. `true` Jeśli `false`nie, nic się nie `target`dzieje z.
+  Dana operacja `op` i wartość bitowa `bit` mają zastosowanie do elementu `op` `target` if `bit` is `true` . Jeśli `false` nie, nic się nie dzieje z `target` .
 
   Sufiks `C` wskazuje, że operacja do zastosowania jest sterowana.
 examples: >-
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0c4a650eabe75c3ab62556daf19647e63c1a2b46
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680491"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350527"
