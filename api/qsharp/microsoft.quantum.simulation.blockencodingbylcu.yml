@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.blockencodingbylcu
 name: BlockEncodingByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Koduje operatora zainteresowania `BlockEncoding`.
+  Koduje operatora zainteresowania `BlockEncoding` .
 
 
-  To konstruuje `BlockEncoding` $U jednostkowe = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowań stanu, taką jak $P{0}\_\ket a = \ sum_j \sqrt{\ alpha_j\|/\|\_\vec\alpha 2}\_\ket{j} a $, i $V = \ sum_ {j}\_\ket{j}\bra{j} a\otimes U_j $.
-remarks: Ta `BlockEncoding` implementacja zapewnia właściwości `BlockEncodingReflection`.
+  To konstruuje `BlockEncoding` $U jednostkowe = P\cdot V\cdot P ^ \dagger $, który koduje niektóre operatory $H = \ sum_ {j} | \ alpha_j | U_j $ znaczenie, które jest liniową kombinacją unitaries. Zwykle $P $ jest jednostką przygotowań stanu, taką jak $P \ket {0} \_ a = \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $, i $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $.
+remarks: Ta `BlockEncoding` implementacja zapewnia właściwości `BlockEncodingReflection` .
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:
   content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
@@ -46,7 +46,7 @@ input:
 output:
   content: (('T, 'S) => Unit is Adj + Ctl)
   types:
-  - summary: Jednostkowe $U $ działające wspólnie z rejestrami `a` i `s` tymi, które zablokują $H $, i spełniają $U ^ \dagger = U $.
+  - summary: Jednostkowe $U $ działające wspólnie z rejestrami `a` i tymi `s` , które zablokują $H $, i spełniają $U ^ \Dagger = U $.
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 581170f33001b0fef6606a39085b36c7f9559ac0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9886496e446a9dfc0b302be0077f35b3190ff9e4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686895"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330195"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.simulation.generatorindex
 name: GeneratorIndex
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Reprezentuje pojedynczy termin pierwotny w zestawie wszystkich generatorów dynamicznych, np. operatorów hermitian, dla których istnieje mapa z tego generatora do czasu ewolucji przez ten generator, za pośrednictwem `EvolutionSet`.
+  Reprezentuje pojedynczy termin pierwotny w zestawie wszystkich generatorów dynamicznych, np. operatorów hermitian, dla których istnieje mapa z tego generatora do czasu ewolucji przez ten generator, za pośrednictwem `EvolutionSet` .
 
 
   Pierwszy element (int [], Double []) jest indeksem, który jest pojedynczym terminem — na przykład Pauli ciąg XXY z współczynnikem 0,5 będzie indeksowany przez ([1, 1, 2], [0,5]). Alternatywnie, Hamiltonians sparametryzowane przez zmienną ciągłą, taką jak X cos φ + Y Sin φ, może być reprezentowane przez ([], [φ]). Drugi element indeksuje podsystem, na którym działa Generator.
@@ -16,7 +16,7 @@ remarks: >-
 
   ### <a name="examples"></a>Przykłady
 
-  Przy <xref:microsoft.quantum.simulation.paulievolutionset>użyciu, operator $ \pi X_2 X_5 Y_9 $ jest reprezentowany jako:
+  Przy użyciu  <xref:microsoft.quantum.simulation.paulievolutionset> , operator $ \pi X_2 X_5 Y_9 $ jest reprezentowany jako:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b291cc0b0adc4799e49403fb76f0f47dbadcaf5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655159"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330178"

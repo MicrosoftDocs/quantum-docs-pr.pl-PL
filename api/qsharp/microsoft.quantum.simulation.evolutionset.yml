@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutionset
 name: EvolutionSet
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Reprezentuje zestaw bram, które mogą być łatwo zaimplementowane i używane do implementowania algorytmów symulacji.
 
 
-  Elementy w zestawie są indeksowane przez <xref:microsoft.quantum.simulation.generatorindex>, a każdy zestaw jest opisany przez funkcję z `GeneratorIndex` do <xref:microsoft.quantum.simulation.evolutionunitary>, które są operacjami sparametryzowanymi przez wartość rzeczywistą reprezentującą czas
+  Elementy w zestawie są indeksowane przez  <xref:microsoft.quantum.simulation.generatorindex> , a każdy zestaw jest opisany przez funkcję z `GeneratorIndex` do  <xref:microsoft.quantum.simulation.evolutionunitary> , które są operacjami sparametryzowanymi przez wartość rzeczywistą reprezentującą czas
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 747986d1374a343827373ef85ac66720ca3c74b6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687003"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343200"
