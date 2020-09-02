@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.quantumrom
 name: QuantumROM
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Używa techniki Quantum ROM do reprezentowania danej macierzy gęstości.
 
 
-  Po otrzymaniu listy $N $ współwydajnych $ \ alpha_j $, spowoduje to zwrócenie $U jednostkowej $, która używa metody Quantum-ROM do przygotowania przybliżenia $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ oczyszczania macierzy gęstości $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. W tym przybliżeniu błąd $ \epsilon $ jest taki, że $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ i $\|\tilde\rho-\rho\| \le \epsilon $. Innymi słowy, $ $ \begin{align} U\ket{0}^ {\Lceil\ Log_2 N\rceil} \ KET{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage} _j}.
+  Po otrzymaniu listy $N $ współwydajnych $ \ alpha_j $, spowoduje to zwrócenie $U jednostkowej $, która używa metody Quantum-ROM do przygotowania przybliżenia $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ oczyszczania macierzy gęstości $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. W tym przybliżeniu błąd $ \epsilon $ jest taki, że $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ i $ \| \tilde\rho-\rho \| \le \epsilon $. Innymi słowy, $ $ \begin{align} U\ket {0} ^ {\lceil\ Log_2 N\rceil} \ KET {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage} _j}.
 
   \end{align} $ $
 examples: >-
-  Poniższy fragment kodu przygotowuje oczyszczenie stanu $3 $-qubit $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, gdzie $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, i błąd to `1e-3`;
+  Poniższy fragment kodu przygotowuje oczyszczenie stanu $3 $-qubit $ \rho = \ sum_ {j = 0} ^ {4} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, gdzie $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $, i błąd to `1e-3` ;
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- Kodowanie elektronicznego spektrum w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
+references: '- Kodowanie elektronicznego spektrum w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Neven https://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -53,7 +53,7 @@ output:
       ## <a name="first-parameter"></a>Pierwszy parametr
 
 
-      Krotka `(x,(y,z))` , `x = y + z` gdzie jest łączna liczba przydzieloną qubits, `y` jest liczbą qubits dla `LittleEndian` rejestru i `z` jest liczbą qubits elementów bezużytecznych.
+      Krotka `(x,(y,z))` `x = y + z` , gdzie jest łączna liczba przydzieloną qubits, `y` jest liczbą qubits dla `LittleEndian` rejestru i `z` jest liczbą qubits elementów bezużytecznych.
 
 
       ## <a name="second-parameter"></a>Drugi parametr
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f0626eeccd1c8b411f8210b5e59f0321527a39c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686498"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331284"

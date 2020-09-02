@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.dumpregister
 name: DumpRegister
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Zrzuca stan bieżącej maszyny docelowej skojarzony z danym qubits.
 remarks: >-
   Ta metoda umożliwia zrzut informacji skojarzonych ze stanem danego qubits do pliku lub innej lokalizacji.
 
-  Rzeczywiste wygenerowane informacje i semantyka `location` są specyficzne dla każdej maszyny docelowej. Jednak podanie pustej krotki jako lokalizacji (`()`) zazwyczaj oznacza wygenerowanie danych wyjściowych w konsoli programu.
+  Rzeczywiste wygenerowane informacje i semantyka `location` są specyficzne dla każdej maszyny docelowej. Jednak podanie pustej krotki jako lokalizacji ( `()` ) zazwyczaj oznacza wygenerowanie danych wyjściowych w konsoli programu.
 
 
   W przypadku lokalnego symulatora pełnego stanu dystrybuowanego w ramach zestawu Quantum Development Kit ta metoda oczekuje ciągu z ścieżką do pliku, w którym będzie zapisywać stan danego qubits (tj. funkcja Wave odpowiedniego podsystemu) jako Jednowymiarowa tablica liczb zespolonych, w których każdy element reprezentuje amplitudę prawdopodobieństwa pomiaru odpowiedniego stanu.
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 384ce2373081545129c569ea6acc6b01733587fc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677228"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337301"
