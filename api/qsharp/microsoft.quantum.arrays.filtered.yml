@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.filtered
 name: Filtered
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca tablicę, która składa się z tych elementów, które spełniają predykat.
 remarks: Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i predykat `'T -> Bool` możemy filtrować elementy.
 examples: >-
@@ -44,7 +44,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Tablica elementów `'T`.
+    summary: Tablica elementów `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -59,9 +59,9 @@ typeParameters:
 - uid: "'T"
   summary: Typ `array` elementów.
 metadata:
-  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b586b356e18c71f1721fbce0ec26e2ea37bfd73
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676460"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352295"

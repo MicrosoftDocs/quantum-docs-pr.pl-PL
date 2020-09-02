@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.enumerated
 name: Enumerated
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dana tablica zwraca nową tablicę zawierającą elementy oryginalnej tablicy wraz z indeksami każdego elementu.
 examples: >-
   Następujące `for` pętle są równoważne:
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: Typ elementów tablicy.
 metadata:
-  ms.openlocfilehash: a8b0a9abeb378c863d228268315950f32c5247c0
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: aecfb5c9f6a7d3f6b14717a7068a0596ae867c9f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884647"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352414"
