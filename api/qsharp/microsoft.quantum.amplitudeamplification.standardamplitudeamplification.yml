@@ -2,9 +2,9 @@
 uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
 name: StandardAmplitudeAmplification
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Algorytm wzmocnienia amplitudy standardowej
-remarks: Jest to standardowy algorytm wzmocnienia amplitudy uzyskany przez wybór faz odbicia obliczanych `AmpAmpPhasesStandard` przez założenie,{0}\_że \begin{align} A\ket {{0}\_f} \ket{1}\_s = \lambda\ket f\ket {\ Text {\_Target}} s + \sqrt{1-| \lambda | ^{0}\_2} \ket f\cdots, \end{align} ta operacja przygotowuje{0}\_stan \begin{align} \operatorname{AmpAmpByOracle}\ket {{0}\_f} \ket s = \sin ((2n + 1{-1}) \sin ^ (\lambda{1}\_)) \ket f\ket {\ Text {\_Target}}{0}\_s + \cdots\ket f \end{align} w `flagQubit` większości `auxiliaryRegister` przypadków i jest inicjowany w stanie{0}\_${0}\_\ket f\ket a $.
+remarks: Jest to standardowy algorytm wzmocnienia amplitudy uzyskany przez wybór faz odbicia obliczanych przez `AmpAmpPhasesStandard` założenie, że \Begin{align} A\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ Text {Target}} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ F\cdots, \end{align} ta operacja przygotowuje stan \begin{align} \operatorname{AmpAmpByOracle}\ket {0} \_ {f} \ket {0} \_ s = \sin ((2n + 1) \sin ^ {-1} (\lambda)) \ket {1} \_ f\ket {\ Text {Target}} \_ s + \cdots\ket {0} \_ f \end{align} w większości przypadków `flagQubit` i `auxiliaryRegister` jest inicjowany w stanie $ \ket {0} \_ f\ket {0} \_ a $.
 syntax: 'function StandardAmplitudeAmplification (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [*G. Brassard, P. Hoyer, M. Mosca, A. Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0fc7ceb390a64ce6224a084147207663d96c3b75
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f78b541045b309403387962128a3cfda3290cade
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676928"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341874"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.uncurriedopca
 name: UncurriedOpCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Dana funkcja, która zwraca operacje, zwraca nową operację, która pobiera dane wejściowe jako krotki.
 
@@ -35,7 +35,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl + Adj)
   types:
-  - summary: Nowa operacja `op` , która `op(t, u)` jest równoważna z `(curriedOp(t))(u)`.
+  - summary: Nowa operacja `op` , która `op(t, u)` jest równoważna z `(curriedOp(t))(u)` .
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: aa04fce36dcfb989e109ab791822e83fba3cd9bc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cc2ac733e8cdc2d4e21e55e87fa624385aaf9724
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677960"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354692"

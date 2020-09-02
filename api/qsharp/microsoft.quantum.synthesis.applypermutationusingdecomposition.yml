@@ -2,7 +2,7 @@
 uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
 name: ApplyPermutationUsingDecomposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: >-
   Permutes amplitud w stanie Quantum przy użyciu syntezy opartej na dekompozycji.
 
@@ -60,9 +60,9 @@ seeAlso:
 - microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
 - microsoft.quantum.synthesis.applypermutationusingtransformation
 metadata:
-  ms.openlocfilehash: 2394b1260a848e590bea911e5b52d0e37d8c1bac
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 3fd7b84cbf403fe271849ae4d8841a1c8123faa0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886599"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328087"
