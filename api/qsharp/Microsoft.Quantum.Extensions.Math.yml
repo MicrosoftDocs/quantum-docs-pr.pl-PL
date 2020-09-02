@@ -3,81 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAbsB jest przestarzała. Użyj @\"microsoft.quantum.math.absl\" zamiast tego.\nUżyj @\"microsoft.quantum.math.absl\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAbsB jest przestarzała. Użyj @\"microsoft.quantum.math.absl\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.absl\"."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAbsD jest przestarzała. Użyj @\"microsoft.quantum.math.absd\" zamiast tego.\nUżyj @\"microsoft.quantum.math.absd\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAbsD jest przestarzała. Użyj @\"microsoft.quantum.math.absd\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.absd\"."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAbsI jest przestarzała. Użyj @\"microsoft.quantum.math.absi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.absi\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAbsI jest przestarzała. Użyj @\"microsoft.quantum.math.absi\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.absi\"."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nArcCos jest przestarzała. Użyj @\"microsoft.quantum.math.arccos\" zamiast tego.\nUżyj @\"microsoft.quantum.math.arccos\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nArcCos jest przestarzała. Użyj @\"microsoft.quantum.math.arccos\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.arccos\"."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nŁuki są przestarzałe. Użyj @\"microsoft.quantum.math.arcsin\" zamiast tego.\nUżyj @\"microsoft.quantum.math.arcsin\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nŁuki są przestarzałe. Użyj @\"microsoft.quantum.math.arcsin\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.arcsin\"."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nArcTan jest przestarzała. Użyj @\"microsoft.quantum.math.arctan\" zamiast tego.\nUżyj @\"microsoft.quantum.math.arctan\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nArcTan jest przestarzała. Użyj @\"microsoft.quantum.math.arctan\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.arctan\"."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nArcTan2 jest przestarzała. Użyj @\"microsoft.quantum.math.arctan2\" zamiast tego.\nUżyj @\"microsoft.quantum.math.arctan2\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nArcTan2 jest przestarzała. Użyj @\"microsoft.quantum.math.arctan2\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.arctan2\"."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLimit został uznany za przestarzały. Użyj @\"microsoft.quantum.math.ceiling\" zamiast tego.\nUżyj @\"microsoft.quantum.math.ceiling\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLimit został uznany za przestarzały. Użyj @\"microsoft.quantum.math.ceiling\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.ceiling\"."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCos jest przestarzały. Użyj @\"microsoft.quantum.math.cos\" zamiast tego.\nUżyj @\"microsoft.quantum.math.cos\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCos jest przestarzały. Użyj @\"microsoft.quantum.math.cos\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.cos\"."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCosh — jest przestarzała. Użyj @\"microsoft.quantum.math.cosh\" zamiast tego.\nUżyj @\"microsoft.quantum.math.cosh\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nCosh — jest przestarzała. Użyj @\"microsoft.quantum.math.cosh\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.cosh\"."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nDivRemB jest przestarzała. Użyj @\"microsoft.quantum.math.divreml\" zamiast tego.\nUżyj @\"microsoft.quantum.math.divreml\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nDivRemB jest przestarzała. Użyj @\"microsoft.quantum.math.divreml\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.divreml\"."
 - uid: microsoft.quantum.extensions.math.e
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nWiadomość E została wycofana. Użyj@\"microsoft.quantum.math.e\" zamiast niego.\nUżyj @\"microsoft.quantum.math.e\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nWiadomość E została wycofana. Użyj @\"microsoft.quantum.math.e\" zamiast niego.\nUżywaj @\"microsoft.quantum.math.e\"."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nExpD jest przestarzała. Użyj @\"microsoft.quantum.math.expd\" zamiast tego.\nUżyj @\"microsoft.quantum.math.expd\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nExpD jest przestarzała. Użyj @\"microsoft.quantum.math.expd\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.expd\"."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPiętro zostało wycofane. Użyj @\"microsoft.quantum.math.floor\" zamiast tego.\nUżyj @\"microsoft.quantum.math.floor\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPiętro zostało wycofane. Użyj @\"microsoft.quantum.math.floor\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.floor\"."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIEEERemainder jest przestarzała. Użyj @\"microsoft.quantum.math.ieeeremainder\" zamiast tego.\nUżyj @\"microsoft.quantum.math.ieeeremainder\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nIEEERemainder jest przestarzała. Użyj @\"microsoft.quantum.math.ieeeremainder\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.ieeeremainder\"."
 - uid: microsoft.quantum.extensions.math.log
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nDziennik został uznany za przestarzały. Użyj @\"microsoft.quantum.math.log\" zamiast tego.\nUżyj @\"microsoft.quantum.math.log\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nDziennik został uznany za przestarzały. Użyj @\"microsoft.quantum.math.log\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.log\"."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLog10 — jest przestarzała. Użyj @\"microsoft.quantum.math.log10\" zamiast tego.\nUżyj @\"microsoft.quantum.math.log10\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nLog10 — jest przestarzała. Użyj @\"microsoft.quantum.math.log10\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.log10\"."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMaxB jest przestarzała. Użyj @\"microsoft.quantum.math.maxl\" zamiast tego.\nUżyj @\"microsoft.quantum.math.maxl\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMaxB jest przestarzała. Użyj @\"microsoft.quantum.math.maxl\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.maxl\"."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMaxD jest przestarzała. Użyj @\"microsoft.quantum.math.maxd\" zamiast tego.\nUżyj @\"microsoft.quantum.math.maxd\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMaxD jest przestarzała. Użyj @\"microsoft.quantum.math.maxd\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.maxd\"."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMaxI jest przestarzała. Użyj @\"microsoft.quantum.math.maxi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.maxi\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMaxI jest przestarzała. Użyj @\"microsoft.quantum.math.maxi\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.maxi\"."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMinB jest przestarzała. Użyj @\"microsoft.quantum.math.minl\" zamiast tego.\nUżyj @\"microsoft.quantum.math.minl\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMinB jest przestarzała. Użyj @\"microsoft.quantum.math.minl\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.minl\"."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nZdanie zostało zaniechane. Użyj @\"microsoft.quantum.math.mind\" zamiast tego.\nUżyj @\"microsoft.quantum.math.mind\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nZdanie zostało zaniechane. Użyj @\"microsoft.quantum.math.mind\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.mind\"."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMinI jest przestarzały. Użyj @\"microsoft.quantum.math.mini\" zamiast tego.\nUżyj @\"microsoft.quantum.math.mini\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMinI jest przestarzały. Użyj @\"microsoft.quantum.math.mini\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.mini\"."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModPowB jest przestarzała. Użyj @\"microsoft.quantum.math.modpowl\" zamiast tego.\nUżyj @\"microsoft.quantum.math.modpowl\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nModPowB jest przestarzała. Użyj @\"microsoft.quantum.math.modpowl\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.modpowl\"."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPI został uznany za przestarzały. Użyj @\"microsoft.quantum.math.pi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.pi\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPI został uznany za przestarzały. Użyj @\"microsoft.quantum.math.pi\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.pi\"."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPowD jest przestarzała. Użyj @\"microsoft.quantum.math.powd\" zamiast tego.\nUżyj @\"microsoft.quantum.math.powd\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPowD jest przestarzała. Użyj @\"microsoft.quantum.math.powd\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.powd\"."
 - uid: microsoft.quantum.extensions.math.round
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nUdziec jest przestarzały. Użyj @\"microsoft.quantum.math.round\" zamiast tego.\nUżyj @\"microsoft.quantum.math.round\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nUdziec jest przestarzały. Użyj @\"microsoft.quantum.math.round\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.round\"."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSignB jest przestarzała. Użyj @\"microsoft.quantum.math.signl\" zamiast tego.\nUżyj @\"microsoft.quantum.math.signl\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSignB jest przestarzała. Użyj @\"microsoft.quantum.math.signl\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.signl\"."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPodpisano jako przestarzałe. Użyj @\"microsoft.quantum.math.signd\" zamiast tego.\nUżyj @\"microsoft.quantum.math.signd\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPodpisano jako przestarzałe. Użyj @\"microsoft.quantum.math.signd\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.signd\"."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSignI jest przestarzała. Użyj @\"microsoft.quantum.math.signi\" zamiast tego.\nUżyj @\"microsoft.quantum.math.signi\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSignI jest przestarzała. Użyj @\"microsoft.quantum.math.signi\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.signi\"."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSin jest przestarzały. Użyj @\"microsoft.quantum.math.sin\" zamiast tego.\nUżyj @\"microsoft.quantum.math.sin\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSin jest przestarzały. Użyj @\"microsoft.quantum.math.sin\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.sin\"."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSINH jest przestarzała. Użyj @\"microsoft.quantum.math.sinh\" zamiast tego.\nUżyj @\"microsoft.quantum.math.sinh\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSINH jest przestarzała. Użyj @\"microsoft.quantum.math.sinh\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.sinh\"."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSqrt jest przestarzały. Użyj @\"microsoft.quantum.math.sqrt\" zamiast tego.\nUżyj @\"microsoft.quantum.math.sqrt\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nSqrt jest przestarzały. Użyj @\"microsoft.quantum.math.sqrt\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.sqrt\"."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nTan jest przestarzały. Użyj @\"microsoft.quantum.math.tan\" zamiast tego.\nUżyj @\"microsoft.quantum.math.tan\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nTan jest przestarzały. Użyj @\"microsoft.quantum.math.tan\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.tan\"."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nTANH jest przestarzały. Użyj @\"microsoft.quantum.math.tanh\" zamiast tego.\nUżyj @\"microsoft.quantum.math.tanh\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nTANH jest przestarzały. Użyj @\"microsoft.quantum.math.tanh\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.tanh\"."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nObcinanie zostało zaniechane. Użyj @\"microsoft.quantum.math.truncate\" zamiast tego.\nUżyj @\"microsoft.quantum.math.truncate\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nObcinanie zostało zaniechane. Użyj @\"microsoft.quantum.math.truncate\" zamiast tego.\nUżywaj @\"microsoft.quantum.math.truncate\"."
 metadata:
-  ms.openlocfilehash: b94b4c7aa1523d9f3e8b42359e759ffa356b25ea
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f5896e114085169670eddd1f768f38ec89ce8b7a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673259"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340973"

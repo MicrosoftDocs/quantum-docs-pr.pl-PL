@@ -4,29 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Są to niektóre funkcje z przestrzeni nazw System. Convert środowiska .NET CLR, które są istotne w systemie typu Q #.\n\n # <a name=\"remarks\"></a>Uwagi\n Jeśli istnieje kilka wersji funkcji dla typów bool, int i Double, odpowiadające im funkcje mają sufiks B, I i D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBigIntToBools jest przestarzała. Użyj @\"microsoft.quantum.convert.bigintasboolarray\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.bigintasboolarray\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBigIntToBools jest przestarzała. Użyj @\"microsoft.quantum.convert.bigintasboolarray\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBoolsToBigInt jest przestarzała. Użyj @\"microsoft.quantum.convert.boolarrayasbigint\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.boolarrayasbigint\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nBoolsToBigInt jest przestarzała. Użyj @\"microsoft.quantum.convert.boolarrayasbigint\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPauliArrayToInt jest przestarzała. Użyj @\"microsoft.quantum.convert.pauliarrayasint\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.pauliarrayasint\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nPauliArrayToInt jest przestarzała. Użyj @\"microsoft.quantum.convert.pauliarrayasint\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToBigInt jest przestarzała. Użyj @\"microsoft.quantum.convert.intasbigint\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.intasbigint\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToBigInt jest przestarzała. Użyj @\"microsoft.quantum.convert.intasbigint\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToDouble — jest przestarzała. Użyj @\"microsoft.quantum.convert.intasdouble\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.intasdouble\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToDouble — jest przestarzała. Użyj @\"microsoft.quantum.convert.intasdouble\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringB jest przestarzała. Użyj @\"microsoft.quantum.convert.boolasstring\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.boolasstring\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringB jest przestarzała. Użyj @\"microsoft.quantum.convert.boolasstring\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMetoda ToString została uznana za przestarzałą. Użyj @\"microsoft.quantum.convert.doubleasstring\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.doubleasstring\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nMetoda ToString została uznana za przestarzałą. Użyj @\"microsoft.quantum.convert.doubleasstring\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringDFormat jest przestarzała. Użyj @\"microsoft.quantum.convert.doubleasstringwithformat\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.doubleasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringDFormat jest przestarzała. Użyj @\"microsoft.quantum.convert.doubleasstringwithformat\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringI jest przestarzała. Użyj @\"microsoft.quantum.convert.intasstring\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.intasstring\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringI jest przestarzała. Użyj @\"microsoft.quantum.convert.intasstring\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringIFormat jest przestarzała. Użyj @\"microsoft.quantum.convert.intasstringwithformat\" zamiast tego.\nUżyj @\"microsoft.quantum.convert.intasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nToStringIFormat jest przestarzała. Użyj @\"microsoft.quantum.convert.intasstringwithformat\" zamiast tego.\nUżywaj @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f307cfeabec132c2b3b3953f30a2b0ad208f57a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673291"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341024"

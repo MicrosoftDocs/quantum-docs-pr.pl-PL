@@ -7,13 +7,13 @@ operations:
   summary: >-
     Zwraca liczbę qubits, które są obecnie dostępne do zażyczania.
 
-    Obejmuje to nieużywane qubits; oznacza to, że obejmuje to qubits zwrócone przez `GetQubitsAvailableToUse`.
+    Obejmuje to nieużywane qubits; oznacza to, że obejmuje to qubits zwrócone przez `GetQubitsAvailableToUse` .
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: Zwraca liczbę qubits, która jest obecnie dostępna do użycia.
 metadata:
-  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f597d8f429089b0ebf2c22cef1d1b98ea270402
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673346"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341160"
