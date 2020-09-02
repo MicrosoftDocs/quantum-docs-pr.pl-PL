@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebca
 name: ApplyIfElseBCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Stosuje jedną z dwóch operacji jednostkowych, w zależności od wartości klasycznego bitu.
 
 
-  Na przykład bit `bit`, `trueOp` stosuje operację wraz z `trueInput` jako dane wejściowe, `bit` gdy `true`jest i ma `falseOp(falseInput)` zastosowanie `bit` , `false`gdy jest.
+  Na przykład bit `bit` , stosuje operację `trueOp` wraz z `trueInput` jako dane wejściowe `bit` , gdy jest i ma `true` zastosowanie, `falseOp(falseInput)` gdy `bit` jest `false` .
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: Wartość logiczna służąca do określenia, `trueOp` `falseOp` czy ma zostać zastosowana.
+    summary: Wartość logiczna służąca do określenia `trueOp` , czy `falseOp` ma zostać zastosowana.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Operacja jednostkowa, która ma zostać zastosowana w przypadku `bit` programu `true`.
+    summary: Operacja jednostkowa, która ma zostać zastosowana w przypadku programu `bit` `true` .
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: Dane wejściowe, które mają być `trueOp` dostarczone `bit` , `true`gdy ma wartość.
+    summary: Dane wejściowe, które mają być dostarczone, `trueOp` gdy `bit` ma wartość `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Operacja jednostkowa, która ma zostać zastosowana w przypadku `bit` programu `false`.
+    summary: Operacja jednostkowa, która ma zostać zastosowana w przypadku programu `bit` `false` .
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: Dane wejściowe, które mają być `falseOp` dostarczone `bit` , `false`gdy ma wartość.
+    summary: Dane wejściowe, które mają być dostarczone, `falseOp` gdy `bit` ma wartość `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Typ wejściowy operacji `trueOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `trueOp` która ma być stosowana warunkowo.
 - uid: "'U"
-  summary: Typ wejściowy operacji `falseOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `falseOp` która ma być stosowana warunkowo.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 608808f776ac0d187571adc415abc0c7d1666ef9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672768"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350357"

@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserc
 name: ApplyIfElseRC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Stosuje jedną z dwóch operacji kontrolowanych, w zależności od wartości klasycznego wyniku.
 
 
-  W związku `result`z tym, stosuje operację `zeroOp` za `zeroInput` pomocą jako dane wejściowe `result` `Zero`, gdy jest równe, i `oneOp(oneInput)` ma `result == One`zastosowanie, gdy.
+  W związku z `result` tym, stosuje operację `zeroOp` za pomocą `zeroInput` jako dane wejściowe `result` , gdy jest równe `Zero` , i ma zastosowanie, `oneOp(oneInput)` gdy `result == One` .
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Wynik pomiaru służący do określenia, `zeroOp` czy `oneOp` lub ma zostać zastosowany.
+    summary: Wynik pomiaru służący do określenia `zeroOp` , czy lub `oneOp` ma zostać zastosowany.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Operacja umożliwiająca przeprowadzenie kontroli, która `result == Zero`ma być stosowana w przypadku.
+    summary: Operacja umożliwiająca przeprowadzenie kontroli, która ma być stosowana w przypadku `result == Zero` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: Dane wejściowe, które mają być `zeroOp` dostarczone `result == Zero`przez.
+    summary: Dane wejściowe, które mają być dostarczone przez `zeroOp` `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Operacja umożliwiająca przeprowadzenie kontroli, która `result == One`ma być stosowana w przypadku.
+    summary: Operacja umożliwiająca przeprowadzenie kontroli, która ma być stosowana w przypadku `result == One` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: Dane wejściowe, które mają być `oneOp` dostarczone `result == One`przez.
+    summary: Dane wejściowe, które mają być dostarczone przez `oneOp` `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Typ wejściowy operacji `zeroOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `zeroOp` która ma być stosowana warunkowo.
 - uid: "'U"
-  summary: Typ wejściowy operacji `oneOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `oneOp` która ma być stosowana warunkowo.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b31ace845d04b3c279b54e0dfea575632ce575f8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672738"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350221"
