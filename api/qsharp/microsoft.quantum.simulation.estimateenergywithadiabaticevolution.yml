@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
 name: EstimateEnergyWithAdiabaticEvolution
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: '`statePrepUnitary` Wykonuje przygotowanie stanu przez zastosowanie na podstawie automatycznie przydzielonego stanu danych wejściowych, a następnie przygotowania stanu adiabatic `adiabaticUnitary`przy użyciu, i wreszcie szacowania fazy, `qpeUnitary`w odniesieniu do stanu `phaseEstAlgorithm`uzyskanego przy użyciu.'
+namespace: microsoft.quantum.simulation
+summary: Wykonuje przygotowanie stanu przez zastosowanie `statePrepUnitary` na podstawie automatycznie przydzielonego stanu danych wejściowych, a następnie przygotowania stanu adiabatic przy użyciu `adiabaticUnitary` , i wreszcie szacowania fazy, w odniesieniu do `qpeUnitary` stanu uzyskanego przy użyciu `phaseEstAlgorithm` .
 syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Firma Oracle reprezentująca operator jednostkowy $U $ reprezentujący ewolucję czasu $ \delta t $ w generatorze dynamicznym ze stanem ziemi $ \ket{\phi} $ i energią stanu ziemi\\$E = \phi, \delta t $.
+    summary: Firma Oracle reprezentująca operator jednostkowy $U $ reprezentujący ewolucję czasu $ \delta t $ w generatorze dynamicznym ze stanem ziemi $ \ket{\phi} $ i energią stanu ziemi $E = \phi \\ , \delta t $.
     isOperation: true
     input:
       types:
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: ffab30daf3028c12768d9c9f4cd16a8011a7931f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee69257bcde8ac8ed3afa34d520f9778bde0da91
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655184"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343282"
