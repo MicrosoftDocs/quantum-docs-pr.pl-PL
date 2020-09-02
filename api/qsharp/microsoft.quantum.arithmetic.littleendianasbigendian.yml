@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.littleendianasbigendian
 name: LittleEndianAsBigEndian
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: Konwertuje rejestr `LittleEndian` qubit na rejestr `BigEndian` qubit przez odwrócenie kolejności qubit.
+namespace: microsoft.quantum.arithmetic
+summary: Konwertuje `LittleEndian` Rejestr qubit na `BigEndian` Rejestr qubit przez odwrócenie kolejności qubit.
 syntax: 'function LittleEndianAsBigEndian (input : Microsoft.Quantum.Arithmetic.LittleEndian) : Microsoft.Quantum.Arithmetic.BigEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -17,9 +17,9 @@ output:
   - summary: Qubit w `BigEndian` formacie rejestru.
     uid: microsoft.quantum.arithmetic.bigendian
 metadata:
-  ms.openlocfilehash: 179ed8c442a92cee65cab540b83921a4dfb99002
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 014b80a8cb065f6900209a33f599053913ce9c68
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676819"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341891"
