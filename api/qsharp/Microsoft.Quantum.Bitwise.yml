@@ -38,9 +38,9 @@ functions:
   summary: Zwraca liczbę całkowitą reprezentującą bity Z tablicy operatorów Pauli.
 summary: " # <a name=\"summary\"></a>Podsumowanie\n Ta przestrzeń nazw zawiera funkcje do działania na bitowej reprezentacji klasycznych typów danych."
 metadata:
-  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02fa75fd66a8f6dfeda42bc7e9e8832b34ecba40
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673377"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341585"

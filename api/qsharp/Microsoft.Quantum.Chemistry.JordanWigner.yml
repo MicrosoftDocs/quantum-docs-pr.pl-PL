@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner
 name: Microsoft.Quantum.Chemistry.JordanWigner
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
-  summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do a `GeneratorSystem` wyrażone w warunkach Pauli. `GeneratorIndex`
+  summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do a `GeneratorSystem` wyrażone w warunkach Pauli `GeneratorIndex` .
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
   summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
@@ -15,7 +15,7 @@ functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
   summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do, `GeneratorSystem` wyrażone w zakresie `GeneratorIndex` Konwencji zdefiniowanej w tym pliku.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
-  summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do a `GeneratorSystem` wyrażone w warunkach Pauli. `GeneratorIndex`
+  summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do a `GeneratorSystem` wyrażone w warunkach Pauli `GeneratorIndex` .
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
   summary: Zwraca Qubitizationą optymalizację T-Count i parametry niezbędne do jej uruchomienia.
 - uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
@@ -24,7 +24,7 @@ functions:
   summary: Zwraca operację kroku Trotter i parametry niezbędne do jej uruchomienia.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1}\_z PR ^ {z}\_p) z\_{p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In\{0, 1\}$ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1\_} z PR ^ {\_Z} p\_) z {p-1}... Z_0 \ket{\psi} \end{align} $ $
+  summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1} z \_ PR ^ {z} \_ p) z \_ {p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In \{ 0, 1 \} $ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} z \_ PR ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: Proste przygotowanie stanu wersji próbnej przez zajmowanie orbitals
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
@@ -34,7 +34,7 @@ operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
   summary: Połączony z jednostką — przygotowanie stanu wersji próbnej dla klastra
 - uid: microsoft.quantum.chemistry.jordanwigner.selectz
-  summary: Jednostkowa $U $, która stosuje bramę programu Pauli $Z $ na qubits $p $ conditiond w stanie indeksu $ \ket{p} $. Oznacza to, $ $ \begin{align} U\ket {p} \ KET {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+  summary: Jednostkowa $U $, która stosuje bramę programu Pauli $Z $ na qubits $p $ conditiond w stanie indeksu $ \ket{p} $. Oznacza to, $ $ \begin{align} U\ket {p} \ KET {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $
 newtypes:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   summary: >-
@@ -49,13 +49,13 @@ newtypes:
 
     Znaczenie reprezentowanego danych jest określane przez algorytm, który go otrzymuje.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  summary: Funkcja zwracająca `OptimizedBETermIndex` dane dla terminu `n` podanego `n`przez liczbę całkowitą wraz z liczbą warunków w pierwszej `Int` i łączną wartość bezwzględną wszystkich współczynników warunku w. `Double`
+  summary: Funkcja zwracająca `OptimizedBETermIndex` dane dla terminu `n` podanego przez liczbę całkowitą `n` wraz z liczbą warunków w pierwszej `Int` i łączną wartość bezwzględną wszystkich współczynników warunku w `Double` .
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: Dane warunkowe w zoptymalizowanym algorytmie kodowania bloków.
 metadata:
-  ms.openlocfilehash: bbc51f1ca36c81f15f96d0e526eb15bf79922373
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0299b01d022eda61772a48ce1cb1bc693ffbdf31
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677038"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341449"
