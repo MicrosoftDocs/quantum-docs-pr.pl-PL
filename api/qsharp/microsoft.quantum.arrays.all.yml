@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, i sprawdza, czy wszystkie elementy tablicy spełniają predykat.
-remarks: "Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, `'T[]` gdy mamy tablicę i funkcję `predicate: 'T -> Bool` możemy utworzyć `Bool` wartość wskazującą, czy wszystkie elementy są spełnione. `predicate`"
+remarks: "Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i funkcję `predicate: 'T -> Bool` możemy utworzyć `Bool` wartość wskazującą, czy wszystkie elementy są spełnione `predicate` ."
 examples: >-
   Poniższy kod sprawdza, czy wszystkie elementy tablicy są inne niż zero:
 
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Tablica elementów `'T`.
+    summary: Tablica elementów `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: '`Bool` Wartość i funkcji predykatu zastosowana do wszystkich elementów.'
+  - summary: '`Bool`Wartość i funkcji predykatu zastosowana do wszystkich elementów.'
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Typ `array` elementów.
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676581"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352652"

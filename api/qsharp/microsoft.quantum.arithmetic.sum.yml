@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Implementuje bramę sum odwracalnych. Nadawana jest `carryIn` zakodowana w qubit i dwie summand bity zakodowane w `summand1` i `summand2`, które oblicza bitowe XOR `carryIn` `summand1` i `summand2` w qubit. `summand2`
+namespace: microsoft.quantum.arithmetic
+summary: Implementuje bramę sum odwracalnych. Nadawana jest zakodowana w qubit `carryIn` i dwie summand bity zakodowane w `summand1` i `summand2` , które oblicza bitowe XOR `carryIn` `summand1` i `summand2` w qubit `summand2` .
 remarks: W przeciwieństwie do `Carry` operacji to nie oblicza bitu przeprowadzenia.
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Druga summand qubit jest zastępowana dolną bitową sumą `summand1` i. `summand2`
+    summary: Druga summand qubit jest zastępowana dolną bitową sumą `summand1` i `summand2` .
     isPrimitive: true
     uid: Qubit
 output:
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 076a767177b20b04d029d3512ecf73bc26902824
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681049"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352686"

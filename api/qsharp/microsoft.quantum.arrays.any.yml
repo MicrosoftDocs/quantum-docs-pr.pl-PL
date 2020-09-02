@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.any
 name: Any
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, sprawdza, czy co najmniej jeden element tablicy spełnia predykat.
-remarks: "Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, `'T[]` gdy mamy tablicę i funkcję `predicate: 'T -> Bool` możemy utworzyć `Bool` wartość wskazującą, czy jakiś element spełnia. `predicate`"
+remarks: "Funkcja jest definiowana dla typów ogólnych, tzn. zawsze, gdy mamy tablicę `'T[]` i funkcję `predicate: 'T -> Bool` możemy utworzyć `Bool` wartość wskazującą, czy jakiś element spełnia `predicate` ."
 examples: >-
   ```qsharp
 
@@ -41,23 +41,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Tablica elementów `'T`.
+    summary: Tablica elementów `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: '`Bool` Wartość lub funkcji predykatu zastosowana do wszystkich elementów.'
+  - summary: '`Bool`Wartość lub funkcji predykatu zastosowana do wszystkich elementów.'
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Typ `array` elementów.
 metadata:
-  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb61be88ccba6392ca70c75f6c506b9b6c1c8bbd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676561"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352601"
