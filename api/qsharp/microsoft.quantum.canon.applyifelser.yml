@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelser
 name: ApplyIfElseR
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Stosuje jedną z dwóch operacji, w zależności od wartości klasycznego wyniku.
 
 
-  W związku `result`z tym, stosuje operację `zeroOp` za `zeroInput` pomocą jako dane wejściowe `result` `Zero`, gdy jest równe, i `oneOp(oneInput)` ma `result == One`zastosowanie, gdy.
+  W związku z `result` tym, stosuje operację `zeroOp` za pomocą `zeroInput` jako dane wejściowe `result` , gdy jest równe `Zero` , i ma zastosowanie, `oneOp(oneInput)` gdy `result == One` .
 syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U))"
   types:
   - name: result
-    summary: Wynik pomiaru służący do określenia, `zeroOp` czy `oneOp` lub ma zostać zastosowany.
+    summary: Wynik pomiaru służący do określenia `zeroOp` , czy lub `oneOp` ma zostać zastosowany.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Operacja, która ma zostać zastosowana w przypadku `result == Zero`.
+    summary: Operacja, która ma zostać zastosowana w przypadku `result == Zero` .
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: zeroInput
-    summary: Dane wejściowe, które mają być `zeroOp` dostarczone `result == Zero`przez.
+    summary: Dane wejściowe, które mają być dostarczone przez `zeroOp` `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Operacja, która ma zostać zastosowana w przypadku `result == One`.
+    summary: Operacja, która ma zostać zastosowana w przypadku `result == One` .
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: oneInput
-    summary: Dane wejściowe, które mają być `oneOp` dostarczone `result == One`przez.
+    summary: Dane wejściowe, które mają być dostarczone przez `oneOp` `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -53,9 +53,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Typ wejściowy operacji `zeroOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `zeroOp` która ma być stosowana warunkowo.
 - uid: "'U"
-  summary: Typ wejściowy operacji `oneOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `oneOp` która ma być stosowana warunkowo.
 seeAlso:
 - microsoft.quantum.canon.applyifzero
 - microsoft.quantum.canon.applyifone
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 4623c321aa2b802b8f27f6a3ec8e65463083b314
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1614a00214bdebe8d5b761cc8ca0732d76a919f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672745"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350255"

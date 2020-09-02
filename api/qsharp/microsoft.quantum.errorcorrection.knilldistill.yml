@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Implementuje algorytm Knillowania stanu Magic.
 
 
-  Podajesz 15 przybliżonych kopii stanu Magic $ $ \begin{align}{8} \cos\frac{\pi}{0} \ket + \sin{8} \frac{\pi}{1} \ket \end{align}, $ $ zapewnia jedną kopię w wyższej jakości.
+  Podajesz 15 przybliżonych kopii stanu Magic $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} \ket {8} {1} \end{align}, $ $ zapewnia jedną kopię w wyższej jakości.
 remarks: >-
   Przestrzegamy algorytmu Knill.
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: Rejestr piętnastu qubits zawierający przybliżone kopie stanu Magic. Po zastosowaniu tej procedury dalszej kontroli `roughMagic[0]` będzie zawierać jeden wyższy poziom kopii, a reszta rejestru zostanie zresetowana do stanu $ \ket{00\cdots 0} $.
+    summary: Rejestr piętnastu qubits zawierający przybliżone kopie stanu Magic. Po zastosowaniu tej procedury dalszej `roughMagic[0]` kontroli będzie zawierać jeden wyższy poziom kopii, a reszta rejestru zostanie zresetowana do stanu $ \ket{00\cdots 0} $.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: Jeśli `true`, wówczas procedura zakończyła się pomyślnie i zostanie zaakceptowana kopia wyższej jakości. Jeśli `false`procedura zakończyła się niepowodzeniem, a stan rejestru powinien być traktowany jako niezdefiniowany.
+  - summary: Jeśli `true` , wówczas procedura zakończyła się pomyślnie i zostanie zaakceptowana kopia wyższej jakości. Jeśli `false` procedura zakończyła się niepowodzeniem, a stan rejestru powinien być traktowany jako niezdefiniowany.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682358"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350119"

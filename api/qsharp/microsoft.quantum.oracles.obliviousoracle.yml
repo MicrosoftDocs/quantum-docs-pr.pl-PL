@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Reprezentuje wzmocnienie amplitudy Oracle for Oblivious.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - $A rejestru Ancilla $ $O $.
 
-  - System rejestruje $s $, na którym jest zastosowana żądana jednostka $U $, po wybraniu rejestracji $a $ w stanie $ \ket{t}\_a $.
+  - System rejestruje $s $, na którym jest zastosowana żądana jednostka $U $, po wybraniu rejestracji $a $ w stanie $ \ket{t} \_ a $.
 remarks: >-
-  Ta Oracle zdefiniowana przez $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ działa w stanie Ancilla $ \ket{s}\_a $, aby zaimplementować jednostkę $U $ na dowolnym stanie systemu $ \ket{\psi}\_s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{t}\_a $.
+  Ta Oracle zdefiniowana przez $ $ O\ket {s} \_ a\ket {\ psi} \_ s = \Lambda\ket{t} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} \_ a\cdots $ $ działa w stanie Ancilla $ \ket{s} \_ a $, aby zaimplementować jednostkę $U $ na dowolnym stanie systemu $ \ket{\psi} \_ s $ z amplitudą $ \lambda $ na podstawie oflagowanej przez $ \ket{t} \_ a $.
 
-  Pierwszy parametr jest rejestrem qubit $ \ket{s}\_a $. Drugi parametr jest rejestrem qubit $ \ket{\psi}\_s $.
+  Pierwszy parametr jest rejestrem qubit $ \ket{s} \_ a $. Drugi parametr jest rejestrem qubit $ \ket{\psi} \_ s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681256"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332014"

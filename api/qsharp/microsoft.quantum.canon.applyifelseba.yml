@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelseba
 name: ApplyIfElseBA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Stosuje jedną z dwóch operacji przylegających, w zależności od wartości klasycznego bitu.
 
 
-  Na przykład bit `bit`, `trueOp` stosuje operację wraz z `trueInput` jako dane wejściowe, `bit` gdy `true`jest i ma `falseOp(falseInput)` zastosowanie `bit` , `false`gdy jest.
+  Na przykład bit `bit` , stosuje operację `trueOp` wraz z `trueInput` jako dane wejściowe `bit` , gdy jest i ma `true` zastosowanie, `falseOp(falseInput)` gdy `bit` jest `false` .
 syntax: "operation ApplyIfElseBA (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U))"
   types:
   - name: bit
-    summary: Wartość logiczna służąca do określenia, `trueOp` `falseOp` czy ma zostać zastosowana.
+    summary: Wartość logiczna służąca do określenia `trueOp` , czy `falseOp` ma zostać zastosowana.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `true`.
+    summary: Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `true` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: trueInput
-    summary: Dane wejściowe, które mają być `trueOp` dostarczone `bit` , `true`gdy ma wartość.
+    summary: Dane wejściowe, które mają być dostarczone, `trueOp` gdy `bit` ma wartość `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `false`.
+    summary: Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `false` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Adjoint
   - name: falseInput
-    summary: Dane wejściowe, które mają być `falseOp` dostarczone `bit` , `false`gdy ma wartość.
+    summary: Dane wejściowe, które mają być dostarczone, `falseOp` gdy `bit` ma wartość `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: Typ wejściowy operacji `trueOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `trueOp` która ma być stosowana warunkowo.
 - uid: "'U"
-  summary: Typ wejściowy operacji `falseOp` , która ma być stosowana warunkowo.
+  summary: Typ wejściowy operacji, `falseOp` która ma być stosowana warunkowo.
 functors:
 - Adjoint
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 6e84acfbad8d1811ee0ab41de1f51fbcab4c286c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ec84d5f11aefafd44bd2a4a2ef9fff21a6f6d1b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675008"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350374"
