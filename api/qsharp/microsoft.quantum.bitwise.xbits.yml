@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.xbits
 name: XBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Zwraca liczbę całkowitą reprezentującą X bity tablicy operatorów Pauli.
 remarks: Funkcja zgłosi, jeśli długość `paulis` tablicy jest większa niż 63.
 syntax: 'function XBits (paulis : Pauli[]) : Int'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Liczba całkowita $x $ z reprezentacją binarną{62}\,${61}\,(\,p_ p_ \dots p_0) $, gdzie $p _i `paulis[i]` = `PauliI` $0 `PauliZ` , jeśli jest lub i gdzie $p `paulis[i]` _i `PauliX` = `PauliY`$1, jeśli jest lub.
+  - summary: Liczba całkowita $x $ z reprezentacją binarną $ (p_ {62} \, p_ {61} \, \dots \, p_0) $, gdzie $p _i = $0, jeśli `paulis[i]` jest `PauliI` lub `PauliZ` i gdzie $p _i = $1, jeśli `paulis[i]` jest `PauliX` lub `PauliY` .
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 386db905e433b5ab424eae80209ac9907ba3ed8c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680579"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351020"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyif
 name: ApplyIf
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Stosuje operację warunkową przy użyciu klasycznego bitu.
 
 
-  Dana operacja `op` i wartość `bit`bitowa mają zastosowanie `op` do elementu `target` if `bit` is. `true` Jeśli `false`nie, nic się nie `target`dzieje z.
+  Dana operacja `op` i wartość bitowa `bit` mają zastosowanie do elementu `op` `target` if `bit` is `true` . Jeśli `false` nie, nic się nie dzieje z `target` .
 examples: >-
   Poniżej przygotowuje się rejestr qubits do stanu podstawy obliczeniowej reprezentowanego przez klasyczny ciąg bitowy wyrażony jako tablica `Bool` wartości:
 
@@ -59,9 +59,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: b3a573c55d461eb3c1a2af0cb7bacd0a4cfecbe5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7d74e21954daef04543dfc42534502b2fa8aab2e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676357"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350561"
