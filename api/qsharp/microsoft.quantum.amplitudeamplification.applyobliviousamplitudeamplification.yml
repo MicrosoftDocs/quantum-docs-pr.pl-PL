@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Wzmocnienie amplitudy Oblivious, określając częściowe odbicie.
 remarks: >-
-  Mając określony pomocniczy stan uruchomienia $ \ket{\Text{Start}}\_a $, określony pomocniczy stan docelowy $ \ket{\Text{Target}}\_a $ i dowolny stan systemu $ \ket{\psi}\_s $, Załóżmy, że \begin{align} O\ket {\ Text {Start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp}\_a\cdots \end{align} dla niektórych jednostek $U $.
+  Mając określony pomocniczy stan uruchomienia $ \ket{\Text{Start}} \_ a $, określony pomocniczy stan docelowy $ \ket{\Text{Target}} \_ a $ i dowolny stan systemu $ \ket{\psi} \_ s $, Załóżmy, że \begin{align} O\ket {\ Text {Start}} \_ a\ket {\ psi} \_ s = \lambda\ket{\Text{Target}} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp} \_ a\cdots \end{align} dla niektórych jednostek $U $.
 
-  Przez sekwencję odbić o stanie początkowym i docelowym w odniesieniu do rejestru pomocniczego, w którym są `signalOracle` stosowane aplikacje i jej sąsiadujące, prawdopodobieństwo sukcesu zastosowania U może ulec zmianie.
+  Przez sekwencję odbić o stanie początkowym i docelowym w odniesieniu do rejestru pomocniczego, w którym `signalOracle` są stosowane aplikacje i jej sąsiadujące, prawdopodobieństwo sukcesu zastosowania U może ulec zmianie.
 
 
-  W większości przypadków `auxiliaryRegister` jest inicjowany w stanie $ \ket{\Text{Start}}\_a $.
+  W większości przypadków `auxiliaryRegister` jest inicjowany w stanie $ \ket{\Text{Start}} \_ a $.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Zobacz
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672962"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340531"

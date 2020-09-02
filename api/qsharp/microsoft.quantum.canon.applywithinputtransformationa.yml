@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformationa
 name: ApplyWithInputTransformationA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: W przypadku operacji, która akceptuje pewne dane wejściowe, funkcja zwracająca dane wyjściowe zgodne z tą operacją oraz dane wejściowe do tej funkcji, stosuje operację przy użyciu funkcji, aby przekształcić dane wejściowe na formularz oczekiwany przez operację.
 examples: >-
-  Następujące wywołanie używa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" do zastosowania operacji przeznaczonej @"Microsoft.Quantum.Arithmetic.BigEndian" do wejścia na dane wejściowe typu: @"Microsoft.Quantum.Arithmetic.LittleEndian"
+  Następujące wywołanie używa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" do zastosowania operacji przeznaczonej do @"Microsoft.Quantum.Arithmetic.BigEndian" wejścia na dane wejściowe typu @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: bf2e1c808b908ea5e1ad15014b5d7745708d6156
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7bcc29b8c096b5cb6daf3c5279671f1af3e008df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676276"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357123"

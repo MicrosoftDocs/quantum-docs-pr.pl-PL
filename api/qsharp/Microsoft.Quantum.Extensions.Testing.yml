@@ -3,25 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAllZero jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertallzero\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertallzero\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAllZero jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertallzero\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAllZeroTol jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertAllZeroTol jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualInPlace jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualInPlace jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualInPlaceCompBasis jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualInPlaceCompBasis jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualReferenced jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertOperationsEqualReferenced jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nNależy zauważyć, że kolejność argumentów dla tej operacji została zmieniona."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubit jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertqubit\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertqubit\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubit jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertqubit\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubitState jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubitState jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubitTol jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" zamiast tego.\nUżyj @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
+  summary: "\n> [!WARNING]\n> Przestarzałe\n\nAssertQubitTol jest przestarzała. Użyj @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" zamiast tego.\nUżywaj @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 2edd8b382cb62078188850d6810c26e4f3a8a901
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b5ec7ae3ae8957082182787759effebb20f97125
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673249"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340208"
