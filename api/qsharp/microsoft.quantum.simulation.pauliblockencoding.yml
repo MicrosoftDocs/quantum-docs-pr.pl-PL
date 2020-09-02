@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.pauliblockencoding
 name: PauliBlockEncoding
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Tworzy moduł kodowania bloku dla hamiltonian.
 
 
   Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ jest opisywany przez sumę Pauliych warunków $P _j $, każdy z rzeczywistym czynnikiem $ \ alpha_j $.
-remarks: Jest on uzyskiwany przez przygotowanie i cofnięcie przygotowania stanu $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ i skonstruowanie kontrolowanego jednostkowo jednostki <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> i. <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>
+remarks: Jest on uzyskiwany przez przygotowanie i cofnięcie przygotowania stanu $ \ sum_ {j} \sqrt{\ alpha_j/\Alpha}\ket{j} $ i skonstruowanie kontrolowanego jednostkowo jednostki <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> i <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> .
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -29,15 +29,15 @@ output:
       ## <a name="second-parameter"></a>Drugi parametr
 
 
-      `BlockEncodingReflection` Jednostkowa $U $ hamiltonian $H $. Ponieważ ta jednostka jest taka sama jak $U ^ 2 = I $, jest również odbiciem.
+      `BlockEncodingReflection`Jednostkowa $U $ Hamiltonian $H $. Ponieważ ta jednostka jest taka sama jak $U ^ 2 = I $, jest również odbiciem.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a7d259a2d09cb26d46976132589ab6693530cb63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682540"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329719"

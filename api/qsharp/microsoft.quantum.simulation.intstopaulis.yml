@@ -2,28 +2,28 @@
 uid: microsoft.quantum.simulation.intstopaulis
 name: IntsToPaulis
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: Konwertuje tablicę liczb całkowitych na tablicę operatorów Pauli pojedynczej qubit.
 syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
 input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Tablica liczb całkowitych w zakresie `0..3` , który ma zostać przekonwertowany na operatory Pauli.
+    summary: Tablica liczb całkowitych w zakresie, `0..3`  który ma zostać przekonwertowany na operatory Pauli.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Tablica `paulis` `Pauli[]` operatorów Pauli o takiej samej długości jak `ints` taka, która `paulis[idxPauli]` jest równa elementowi `[PauliI, PauliX, PauliY, PauliZ]` danego elementu. `ints[idxPauli]`
+  - summary: Tablica `paulis` operatorów Pauli o takiej `Pauli[]` samej długości jak `ints` taka, która `paulis[idxPauli]` jest równa elementowi `[PauliI, PauliX, PauliY, PauliZ]` danego elementu `ints[idxPauli]` .
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f4d7e34cc7555fab89c6fd4d8371837da2296015
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682619"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329819"
