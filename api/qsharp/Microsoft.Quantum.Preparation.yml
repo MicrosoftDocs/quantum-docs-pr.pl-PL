@@ -8,17 +8,17 @@ functions:
     Oblicza współrzędne Blocha dla stanu jednego qubitu.
 
 
-    Uwzględniając dwie liczby zespolone $a 0, a1 $, które reprezentują stan qubit, obliczenia współrzędnych w sferze Bloch, takie jak{0} $a 0 \ket{1} + a1 \ket = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ teta/2{0})} \ket + e ^ {i \phi/2}\sin{(\ teta/2{1})} \ket) $.
+    Uwzględniając dwie liczby zespolone $a 0, a1 $, które reprezentują stan qubit, obliczenia współrzędnych w sferze Bloch, takie jak $a 0 \ket {0} + a1 \ket {1} = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ teta/2)} \ket {0} + e ^ {i \phi/2}\sin{(\ teta/2)} \ket {1} ) $.
 - uid: microsoft.quantum.preparation.quantumrom
   summary: >-
     Używa techniki Quantum ROM do reprezentowania danej macierzy gęstości.
 
 
-    Po otrzymaniu listy $N $ współwydajnych $ \ alpha_j $, spowoduje to zwrócenie $U jednostkowej $, która używa metody Quantum-ROM do przygotowania przybliżenia $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ oczyszczania macierzy gęstości $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. W tym przybliżeniu błąd $ \epsilon $ jest taki, że $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ i $\|\tilde\rho-\rho\| \le \epsilon $. Innymi słowy, $ $ \begin{align} U\ket{0}^ {\Lceil\ Log_2 N\rceil} \ KET{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage} _j}.
+    Po otrzymaniu listy $N $ współwydajnych $ \ alpha_j $, spowoduje to zwrócenie $U jednostkowej $, która używa metody Quantum-ROM do przygotowania przybliżenia $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ oczyszczania macierzy gęstości $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. W tym przybliżeniu błąd $ \epsilon $ jest taki, że $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ i $ \| \tilde\rho-\rho \| \le \epsilon $. Innymi słowy, $ $ \begin{align} U\ket {0} ^ {\lceil\ Log_2 N\rceil} \ KET {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{garbage} _j}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
-  summary: Zwraca łączną liczbę qubits, które muszą zostać przydzielone do operacji zwróconej `QuantumROM`przez.
+  summary: Zwraca łączną liczbę qubits, które muszą zostać przydzielone do operacji zwróconej przez `QuantumROM` .
 - uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   summary: >-
     Zwraca operację, która przygotowuje określony stan Quantum.
@@ -59,7 +59,7 @@ operations:
     Buforowanie entangles dwóch qubit rejestrów.
 
 
-    W odniesieniu do dwóch rejestrów przygotowuje Maximally Entangled State ${1}\frac {{2}\sqrt} \left ({00} \ket +{11} \ket \right) $ między każdą parą qubits w odpowiednich rejestrach, przy założeniu, że każda Rejestracja zaczyna się w stanie $ \ket{0\cdots 0} $.
+    W odniesieniu do dwóch rejestrów przygotowuje Maximally Entangled State $ \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right) $ między każdą parą qubits w odpowiednich rejestrach, przy założeniu, że każda Rejestracja zaczyna się w stanie $ \ket{0\cdots 0} $.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     Uwzględniając rejestr, przygotuje ten rejestr w stanie mieszanym Maximally.
@@ -68,33 +68,33 @@ operations:
     Rejestr jest przygotowywany w stanie $ \boldone/2 ^ N $ przez zastosowanie kompletnego kanału depolarizing do każdego qubit, gdzie $N $ jest długością rejestru.
 - uid: microsoft.quantum.preparation.preparequbit
   summary: >-
-    Przygotowuje qubit w + 1 (`Zero`) eigenstate danego operatora Pauli.
+    Przygotowuje qubit w + 1 ( `Zero` ) eigenstate danego operatora Pauli.
 
     Jeśli jest określony operator Identity, qubit jest przygotowana w stanie mieszanym Maximally.
 
 
-    Jeśli qubit był początkowo w stanie $ \ket{0}$, ta operacja przygotowuje qubit w eigenstate $ + $1 danego operatora Pauli lub, dla `PauliI`, w stanie mieszanym Maximally (zobacz <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+    Jeśli qubit był początkowo w stanie $ \ket {0} $, ta operacja przygotowuje qubit w eigenstate $ + $1 danego operatora Pauli lub, dla `PauliI` , w stanie mieszanym Maximally (zobacz <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
 
 
-    Jeśli{0}qubit było w stanie innym niż $ \ket $, ta operacja stosuje następujące bramy: $H $ for `PauliX`, $HS $ for `PauliY`, $I $ dla `PauliZ` i <xref:microsoft.quantum.preparation.preparesinglequbitidentity> dla. `PauliI`
+    Jeśli qubit było w stanie innym niż $ \ket {0} $, ta operacja stosuje następujące bramy: $H $ for `PauliX` , $HS $ for `PauliY` , $I $ dla `PauliZ` i <xref:microsoft.quantum.preparation.preparesinglequbitidentity> dla `PauliI` .
 - uid: microsoft.quantum.preparation.preparesinglequbitidentity
   summary: >-
     Przygotowuje qubit w stanie mieszanym Maximally.
 
 
-    Przygotowuje daną qubit w stanie $ \boldone/$2 przez zastosowanie depolarizing kanału $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1} {4} \ sum_ {\mu \In \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{align} $ $ WHERE $ \sigma\_i $ jest operatorem $i $ th Pauli i gdzie $ \rho $ jest operatorem gęstości reprezentującym stan mieszany.
+    Przygotowuje daną qubit w stanie $ \boldone/$2 przez zastosowanie depolarizing kanału $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac {1} {4} \ sum_ {\mu \In \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}, \end{align} $ $ WHERE $ \sigma \_ i $ jest operatorem $i $ th Pauli i gdzie $ \rho $ jest operatorem gęstości reprezentującym stan mieszany.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    Tworzy jednolity nadpozycja w stosunku do Stanów, `nIndices`które kodują od 0 do.
+    Tworzy jednolity nadpozycja w stosunku do Stanów, które kodują od 0 do `nIndices` .
 
 
-    Oznacza to, że ta jednostka $U $ tworzy jednolity nadpozycja dla wszystkich stanów $0 $ do $M-$1, z uwzględnieniem stanu wejściowego $ \ket{0\cdots 0} $. Innymi słowy, $ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+    Oznacza to, że ta jednostka $U $ tworzy jednolity nadpozycja dla wszystkich stanów $0 $ do $M-$1, z uwzględnieniem stanu wejściowego $ \ket{0\cdots 0} $. Innymi słowy, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{align} $ $.
 metadata:
-  ms.openlocfilehash: 25ebe80b64af0cfd50e5a32c1ef91f8a299cef04
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673083"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339885"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1}\_z PR ^ {z}\_p) z\_{p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In\{0, 1\}$ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1\_} z PR ^ {\_Z} p\_) z {p-1}... Z_0 \ket{\psi} \end{align} $ $
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1} z \_ PR ^ {z} \_ p) z \_ {p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In \{ 0, 1 \} $ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} z \_ PR ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- Kodowanie elektronicznego spektrum w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
+references: '- Kodowanie elektronicznego spektrum w obwodach Quantum przy użyciu liniowej o złożoności T Babbush, Craig Gidney, Dominic W. Jagods, Nathana Wiebe, Jarrod McClean, Alexandru, Austin Fowlera, Hartmut Neven https://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: Gdy qubit jest w stanie $ \ket{0}$, zostanie zastosowany $X $. Gdy jest w stanie $ \ket{1}$, zostanie zastosowany $Y $.
+    summary: Gdy qubit jest w stanie $ \ket {0} $, zostanie zastosowany $X $. Gdy jest w stanie $ \ket {1} $, zostanie zastosowany $Y $.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b221c123b0917232b6f470be84d56358fe08f47e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665302"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339460"

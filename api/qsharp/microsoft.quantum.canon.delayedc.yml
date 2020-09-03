@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.delayedc
 name: DelayedC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Zwraca operację, która stosuje daną operację z danym argumentem.
 syntax: "function DelayedC (op : ('T => Unit is Ctl), arg : 'T) : (Unit => Unit is Ctl)"
 input:
@@ -22,13 +22,13 @@ input:
     functors:
     - Controlled
   - name: arg
-    summary: Dane wejściowe, do których zostanie `op` zastosowana operacja.
+    summary: Dane wejściowe, do których `op` zostanie zastosowana operacja.
     uid: "'T"
     isLocal: true
 output:
   content: (Unit => Unit is Ctl)
   types:
-  - summary: Nowa operacja stosowana `op` z danymi wejściowymi`arg`
+  - summary: Nowa operacja stosowana `op` z danymi wejściowymi `arg`
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: 909d645e2567e92ca8943188c580e6d942cefcda
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5824fa31157b2e6b2cf8c1ea6ad3f69593f2be81
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675627"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356392"

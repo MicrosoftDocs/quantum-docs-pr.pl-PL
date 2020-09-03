@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Za pomocą pojedynczego operatora Pauli qubit i indeksu qubit, zwraca wieloqubity operator Pauli z danym operatorem Single-qubit w tym indeksie i `PauliI` w każdym innym indeksie.
 examples: >-
-  Aby uzyskać tablicę `[PauliI, PauliI, PauliX, PauliI]`:
+  Aby uzyskać tablicę `[PauliI, PauliI, PauliX, PauliI]` :
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: Indeks taki `output[location] == pauli`, gdzie `output` jest danymi wyjściowymi tej funkcji.
+    summary: Indeks taki `output[location] == pauli` , gdzie `output` jest danymi wyjściowymi tej funkcji.
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a5a6dbabfe51f52da9eb63d23bfbf1cf7ee03370
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675599"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356375"
