@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.equalc
 name: EqualC
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Zwraca wartość true, jeśli i tylko wtedy, gdy dwa dane wejściowe są równe.
 syntax: 'function EqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
 input:
@@ -17,13 +17,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`if i tylko wtedy `a` , gdy jest `b`równa.'
+  - summary: '`true` if i tylko wtedy, gdy `a` jest równa `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 586dc4b3e30ba8083f090b9515d1f4e0ed851092
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb847b6a5f47f0ee5843d64d5bcec53867c5affe
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685966"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346107"
