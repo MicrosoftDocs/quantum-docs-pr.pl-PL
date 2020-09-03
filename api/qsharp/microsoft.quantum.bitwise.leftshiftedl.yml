@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.leftshiftedl
 name: LeftShiftedL
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Przenosi bitową reprezentację liczby pozostawionej przez daną liczbę bitów.
 remarks: >-
   Następujące elementy są równoważne:
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: Liczba bitów, przez którą `value` ma zostać przesunięty w lewo.
+    summary: Liczba bitów, przez którą ma `value` zostać przesunięty w lewo.
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: Wartość `value`, przesunięta w lewo przez `amount` bity.
+  - summary: Wartość `value` , przesunięta w lewo przez `amount` bity.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 61ae04f5085513742058c0208e8add0af8fd463b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 89f2643e60027818c962f90f043094a21dd579ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680676"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351224"

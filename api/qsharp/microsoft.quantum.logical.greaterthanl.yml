@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.greaterthanl
 name: GreaterThanL
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest większa niż inna liczba.
 remarks: >-
   Następujące elementy są równoważne:
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`if i tylko wtedy `a` , gdy jest ściśle `b`większa niż.'
+  - summary: '`true` if i tylko wtedy, gdy `a` jest ściśle większa niż `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: bbefcf4eb4fe78e1055dbf163adef05511162c83
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 28728a15e5b857ad30ae75142b2558be8616f5d3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685863"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345801"

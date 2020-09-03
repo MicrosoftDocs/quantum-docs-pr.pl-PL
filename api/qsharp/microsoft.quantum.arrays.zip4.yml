@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.zip4
 name: Zip4
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: W przypadku czterech tablic funkcja zwraca nową tablicę składającą się z 4 krotek, tak że każda 4-krotka zawiera element z każdej oryginalnej tablicy.
 syntax: "function Zip4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]"
 input:
@@ -31,7 +31,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3, 'T4)[]
   types:
-  - summary: Tablica zawierająca 4-krotek formularza `(first[idx], second[idx], third[idx], fourth[idx])` dla każdej z nich. `idx` Jeśli cztery tablice nie mają równej długości, dane wyjściowe będą tak długo jak krótsze dane wejściowe.
+  - summary: Tablica zawierająca 4-krotek formularza `(first[idx], second[idx], third[idx], fourth[idx])` dla każdej z nich `idx` . Jeśli cztery tablice nie mają równej długości, dane wyjściowe będą tak długo jak krótsze dane wejściowe.
     isArray: true
     types:
     - uid: "'T1"
@@ -55,9 +55,9 @@ seeAlso:
 - zip
 - zip3
 metadata:
-  ms.openlocfilehash: 5e099a24bdcad341d018cf7c5becec8a4d558631
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 437027a767ea7a2c49fd3b8dfa73858c847942c6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680726"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351343"
