@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.bound
 name: Bound
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Dana tablica operacji działających na pojedynczym wejściu tworzy nową operację, która wykonuje każdą daną operację w sekwencji.
 examples: >-
   Następujące elementy są równoważne:
@@ -17,7 +17,7 @@ examples: >-
   ```
 
 
-  i
+  oraz
 
 
   ```qsharp
@@ -62,9 +62,9 @@ seeAlso:
 - microsoft.quantum.canon.bounda
 - microsoft.quantum.canon.boundca
 metadata:
-  ms.openlocfilehash: 3b588e1481ff35c06aef5a381ca3a8fb67054ebd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67c61c10e00585f1419f01f19ca3dc5f4ca07d4f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676012"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356936"

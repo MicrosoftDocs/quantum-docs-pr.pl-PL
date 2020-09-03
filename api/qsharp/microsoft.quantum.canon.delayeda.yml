@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.delayeda
 name: DelayedA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Zwraca operację, która stosuje daną operację z danym argumentem.
 syntax: "function DelayedA (op : ('T => Unit is Adj), arg : 'T) : (Unit => Unit is Adj)"
 input:
@@ -22,13 +22,13 @@ input:
     functors:
     - Adjoint
   - name: arg
-    summary: Dane wejściowe, do których zostanie `op` zastosowana operacja.
+    summary: Dane wejściowe, do których `op` zostanie zastosowana operacja.
     uid: "'T"
     isLocal: true
 output:
   content: (Unit => Unit is Adj)
   types:
-  - summary: Nowa operacja stosowana `op` z danymi wejściowymi`arg`
+  - summary: Nowa operacja stosowana `op` z danymi wejściowymi `arg`
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: ee329ba4febb8b8bf9a0748a42d5c6522aa91be1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 57b03ffbc135303d43caf4f473d29a5e8c85d9ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675638"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356426"
