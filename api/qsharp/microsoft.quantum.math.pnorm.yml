@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnorm
 name: PNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  Zwraca `L(p)` normę wektora `Double`s.
+  Zwraca `L(p)` normę wektora `Double` s.
 
 
-  Oznacza to, że dana tablica `Double[]`$x $ typu zwraca $p $-norma $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+  Oznacza to, że dana tablica $x $ typu `Double[]` zwraca $p $-norma $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Double
   types:
-  - summary: $P $-norma $\|x\|_p $.
+  - summary: $P $-norma $ \| x \| _p $.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5583e7d14c7363538ca11f48564ebac7240f511b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f267609a04e66b6a445a92473a223a776fdccda
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684042"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333510"
