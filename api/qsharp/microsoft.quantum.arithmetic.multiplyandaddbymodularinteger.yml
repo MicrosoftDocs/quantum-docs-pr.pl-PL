@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 name: MultiplyAndAddByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Wykonuje modułowe mnożenie i Dodawanie przez stałe wartości całkowite w rejestrze qubit.
 
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Rejestr Quantum reprezentujący liczbę całkowitą bez znaku, którego wartość ma zostać dodana do każdej etykiety stanu podstawy `summand`.
+    summary: Rejestr Quantum reprezentujący liczbę całkowitą bez znaku, którego wartość ma zostać dodana do każdej etykiety stanu podstawy `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
     summary: Rejestr Quantum reprezentujący liczbę całkowitą bez znaku, który ma być używany jako element docelowy dla tej operacji.
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9bec96048c4c1f8431bdfd831f560e7c1af72c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676753"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353536"

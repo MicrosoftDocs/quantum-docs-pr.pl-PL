@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Tworzy tablicę `arr` liczb całkowitych wyliczanych przez początek.. krok.. punktów.
 examples: >-
   ```qsharp
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: '`Range` Wartości `start..step..end` do przekonwertowania na tablicę.'
+    summary: '`Range`Wartości `start..step..end` do przekonwertowania na tablicę.'
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: Nowa tablica liczb całkowitych odpowiadających wartościom powtarzanym przez `range`.
+  - summary: Nowa tablica liczb całkowitych odpowiadających wartościom powtarzanym przez `range` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 22077ab84984e3701fef26c28fefefd325ea4627
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677373"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338321"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Zwraca zdefiniowaną wartość końcową danego zakresu, która nie musi być ostatnim elementem w sekwencji.
 remarks: >-
-  Pierwszy element wyrażenia zakresu `start`to, jego drugi element `start+step`jest, trzeci element jest `start+step+step`itd., do do. `end`
+  Pierwszy element wyrażenia zakresu to `start` , jego drugi element jest, `start+step` trzeci element jest `start+step+step` itd., do do `end` .
 
 
   Należy zauważyć, że zdefiniowana wartość końcowa zakresu może różnić się od ostatniego elementu w sekwencji określonej przez zakres; na przykład, w zakresie 0.. 2.. 5 ostatni element to 4, ale wartość końcowa to 5.
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 08a7e70a8e12ef85902f03d7e24f99d3b5082f38
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657638"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337998"
