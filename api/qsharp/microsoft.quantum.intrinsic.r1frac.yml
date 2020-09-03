@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.r1frac
 name: R1Frac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Stosuje obrót o stanie $ \ket{1}$ przez kąt określony jako ułamek dyadic.
+  Stosuje obrót o stanie $ \ket {1} $ przez kąt określony jako ułamek dyadic.
 
 
   \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -14,7 +14,7 @@ summary: >-
 
   > [!WARNING]
 
-  > Ta operacja używa **przeciwległej** Konwencji podpisywania z @"microsoft.quantum.intrinsic.r"i nie obejmuje współczynnika $1/2 $ dołączonego przez @"microsoft.quantum.intrinsic.r1".
+  > Ta operacja używa **przeciwległej** Konwencji podpisywania z @"microsoft.quantum.intrinsic.r" i nie obejmuje współczynnika $1/2 $ dołączonego przez @"microsoft.quantum.intrinsic.r1" .
 remarks: >-
   Równoważne:
 
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cfaf195a3c811d43df50548771759f6dbf3fdc6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683734"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346753"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.realmod
 name: RealMod
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Oblicza moduł między dwoma liczbami rzeczywistymi.
 remarks: >-
   Ta funkcja oblicza moduł rzeczywisty, zawijając linię rzeczywistą wokół okręgu jednostki, a następnie wyszukując kąt w okręgu jednostki odpowiadającym danym wejściowym.
 
-  Następnie `minValue` dane wejściowe określają, gdzie należy wyciąć okrąg jednostkowy.
+  `minValue`Następnie dane wejściowe określają, gdzie należy wyciąć okrąg jednostkowy.
 examples: >-
   ```qsharp
       // Returns 3 π / 2.
@@ -38,9 +38,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 0a35628198ae5d496b093b98542daeac16aced9b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6738040f8628998a98a69a7e884125ac91228787
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681494"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333136"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Pomnóż liczbę `xs` całkowitą przez `ys` liczbę całkowitą i Zapisz wynik `result`w, który musi być początkowy od zera.
+namespace: microsoft.quantum.arithmetic
+summary: Pomnóż liczbę całkowitą `xs` przez liczbę całkowitą `ys` i Zapisz wynik w `result` , który musi być początkowy od zera.
 remarks: >-
   Używa standardowego podejścia Shift-and-Add do implementowania mnożenia.
 
@@ -19,7 +19,7 @@ input:
     summary: mnożnik $n $-bitowy (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: wynik $2n $-bit (LittleEndian) musi być w stanie $ \ket{0}$.
+    summary: wynik $2n $-bit (LittleEndian) musi być w stanie $ \ket {0} $.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67e1ef577bf36cf524d2468bc191d2b381c800df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679484"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353383"
