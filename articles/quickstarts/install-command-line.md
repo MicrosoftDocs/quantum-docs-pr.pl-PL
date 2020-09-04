@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
+ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863662"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358262"
 ---
 # <a name="develop-with-no-locq-applications"></a>Tworzenie przy użyciu aplikacji w języku Q#
 
@@ -41,7 +41,7 @@ Aby skonfigurować program Visual Studio:
 Aby skonfigurować program Visual Studio Codespaces:
 
 1. Utwórz [konto platformy Azure](https://azure.microsoft.com/free/).
-2. Utwórz środowisko programu Codespaces. Postępuj zgodnie z [przewodnikiem Szybki start](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). Podczas tworzenia środowiska Codespace zalecamy wprowadzenie wartości `microsoft/Quantum` w polu „Git Repository” (Repozytorium Git) w celu załadowania ustawień specyficznych dla zestawu QDK.
+2. Utwórz środowisko programu Codespaces. Postępuj zgodnie z [przewodnikiem Szybki start](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). Podczas tworzenia środowiska Codespace zalecamy wprowadzenie wartości `microsoft/Quantum` w polu „Git Repository” (Repozytorium Git) w celu załadowania ustawień specyficznych dla zestawu QDK.
 3. Teraz możesz uruchomić nowe środowisko i rozpocząć programowanie w przeglądarce za pomocą [środowiska IDE programu VS Codespaces w chmurze](https://online.visualstudio.com/environments). Alternatywnie można korzystać z lokalnej instalacji programu VS Code i używać Codespaces jako [środowiska zdalnego](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
