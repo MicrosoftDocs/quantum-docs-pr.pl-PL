@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863440"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063244"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Samouczek: Eksplorowanie splątania przy użyciu języka Q\#
 
@@ -112,7 +112,7 @@ Q#Operacja jest podprocedurą Quantum. Oznacza to, że jest to wywoływana proce
 
 Argumenty operacji są przekazywane za pomocą krotki (w nawiasach).
 
-Zwracany typ operacji jest określony po dwukropku. W tym przypadku operacja `SetQubitState` nie zwraca wartości, więc jest oznaczona jako zwracająca wartość `Unit`. Jest to Q# odpowiednik w języku `unit` F #, który jest w przybliżeniu analogiczny do `void` języka C#, i pustej krotki ( `Tuple[()]` ) w Python.
+Zwracany typ operacji jest określony po dwukropku. W tym przypadku operacja `SetQubitState` nie zwraca wartości, więc jest oznaczona jako zwracająca wartość `Unit`. Jest to Q# odpowiednik w języku `unit` F #, który jest w przybliżeniu analogiczny do `void` języka C#, i pustą krotką w języku Python ( `()` , reprezentowane przez wskazówkę typu `Tuple[()]` ).
 
 W pierwszej operacji użyto dwóch operacji Quantum Q# :
 
