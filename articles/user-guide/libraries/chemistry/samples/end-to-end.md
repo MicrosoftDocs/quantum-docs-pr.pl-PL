@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869311"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759719"
 ---
 # <a name="end-to-end-with-nwchem"></a>Kompleksowe rozwiązanie z NWChem #
 
@@ -22,7 +22,7 @@ Przed kontynuowaniem tego przykładu upewnij się, że zainstalowano platformę 
 
 Więcej informacji:
 - [Struktura pokładów wejściowych NWChem](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Polecenia dotyczące pokładu wejściowego do użycia z zestawem Quantum Development Kit](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Polecenia dotyczące pokładu wejściowego do użycia z zestawem Quantum Development Kit](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [Instalowanie biblioteki i zależności chemii](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Zliczanie zasobów](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Następnie zaimportujemy `Get-GateCount` polecenie dostarczone z przykładem **GetGateCount** .
-Aby uzyskać szczegółowe informacje, zobacz [instrukcje dostarczone z przykładem](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
+Aby uzyskać szczegółowe informacje, zobacz [instrukcje dostarczone z przykładem](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount).
 Następnie uruchom następujące polecenie, zastępując je `<runtime>` `win10-x64` , `osx-x64` lub, w zależności od `linux-x64` używanego systemu operacyjnego:
 
 ```powershell
@@ -95,7 +95,7 @@ Najpierw Sklonuj [repozytorium nwchemgit/nwchem](https://github.com/nwchemgit/nw
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-`nwchemgit/nwchem`Repozytorium zawiera różne pokłady wejściowe przeznaczone do użycia z zestawem Quantum Development Kit, które znajdują się w [ `QA/chem_library_tests` folderze](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests).
+`nwchemgit/nwchem`Repozytorium zawiera różne pokłady wejściowe przeznaczone do użycia z zestawem Quantum Development Kit, które znajdują się w [ `QA/chem_library_tests` folderze](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests).
 Na potrzeby tego przykładu będziemy używać `H4` pokładu wejściowego:
 
 ```powershell
@@ -167,7 +167,7 @@ Istnieje wiele rzeczy, które należy wykonać w tym miejscu:
 - Wypróbuj różne wstępnie zdefiniowane talie wejściowe, np., zmieniając parametr `alpha` w `h4_sto6g_alpha.nw` , 
 - Spróbuj zmodyfikować talie, edytując talie NWChem bezpośrednio, np. Eksplorowanie `STO-nG` modeli dla różnych wyborów n, 
 - Wypróbuj inne wstępnie zdefiniowane pokłady wejściowe NWChem, które są dostępne w programie `nwchem/qa/chem_library_tests` ,
-- Wypróbuj pakiet wstępnie zdefiniowanych testów porównawczych Broombridge YAML, które zostały wygenerowane z NWChem i są dostępne jako część [repozytorium Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Te testy porównawcze obejmują: 
+- Wypróbuj pakiet wstępnie zdefiniowanych testów porównawczych Broombridge YAML, które zostały wygenerowane z NWChem i są dostępne jako część [repozytorium Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML). Te testy porównawcze obejmują: 
     - małe cząsteczek, takie jak wodór wodoru (H2), beryl (hydride), litu (LiH),
     - większe cząsteczek, takie jak ozon (O3), beta-karoten, cytosine i wiele innych. 
 - Wypróbuj graficzną [strzałkę EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) frontonu, która oferuje interfejs do Microsoft Quantum Development Kit. 
@@ -180,7 +180,7 @@ Aby rozpocząć pracę z EMSL strzałkami frontonu opartymi na sieci Web, w [tym
 > [!NOTE]
 > Uruchamianie strzałek EMSL w przeglądarce internetowej wymaga włączenia języka JavaScript. Zapoznaj się z tymi [instrukcjami](https://www.enable-javascript.com/) dotyczącymi sposobu włączania języka JavaScript w przeglądarce. 
 
-Najpierw wprowadź cząsteczkę w polu zapytania, które mówi``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+Najpierw wprowadź cząsteczkę w polu zapytania, które mówi ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 Można wprowadzić wiele cząsteczek według ich nazwy Colloquial, na przykład "kofeiny" zamiast "1, 3, 7-trimethylxanthine". 
 

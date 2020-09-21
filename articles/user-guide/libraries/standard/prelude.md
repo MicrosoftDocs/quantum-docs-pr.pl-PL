@@ -2,19 +2,19 @@
 title: Wewnętrzne operacje i funkcje w QDK
 description: Dowiedz się więcej na temat wewnętrznych operacji i funkcji w QDK, w tym funkcji klasycznych, operacji związanych z jednostką, rotacją i pomiarem.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863725"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833544"
 ---
 # <a name="the-prelude"></a>Preludium #
 
@@ -240,7 +240,7 @@ Ten sam komputer docelowy może wyeliminować ten wpływ na wydajność, zastęp
 
 ### <a name="math"></a>Math ###
 
-<xref:microsoft.quantum.math>Przestrzeń nazw zawiera wiele przydatnych funkcji z [ `System.Math` klasy](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)podstawowej biblioteki klas programu .NET.
+<xref:microsoft.quantum.math>Przestrzeń nazw zawiera wiele przydatnych funkcji z [ `System.Math` klasy](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)podstawowej biblioteki klas programu .NET.
 Te funkcje mogą być używane w taki sam sposób jak inne Q# funkcje:
 
 ```qsharp

@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868948"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759225"
 ---
 # <a name="design-your-own-classifier"></a>Projektowanie własnego klasyfikatora
 
@@ -30,7 +30,7 @@ Podobnie jak w przypadku klasycznej uczenia głębokiego, nie ma żadnej ogólne
 
 Aby skompilować klasyfikator, zamierzamy połączyć kontrolowane rotacje w modelu obwodu. Aby to zrobić, można użyć typu [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) zdefiniowanego w bibliotece Quantum Machine Learning. Ten typ akceptuje cztery argumenty, które określają: indeks elementu docelowego qubit, tablicę indeksów qubits kontrolki, oś obrotu i indeks skojarzonego parametru w tablicy parametrów definiujących model.
 
-Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)możemy znaleźć następujący klasyfikator zdefiniowany w pliku `Training.qs` .
+Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)możemy znaleźć następujący klasyfikator zdefiniowany w pliku `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {

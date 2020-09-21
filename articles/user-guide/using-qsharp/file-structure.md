@@ -1,22 +1,22 @@
 ---
-title: Q#Struktura plików
+title: Q# Struktura plików
 description: Opisuje strukturę i składnię Q# pliku.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867934"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833317"
 ---
-# <a name="no-locq-file-structure"></a>Q#Struktura plików
+# <a name="no-locq-file-structure"></a>Q# Struktura plików
 
 Q#Plik składa się z kolejności *deklaracji przestrzeni nazw*.
 Każda deklaracja przestrzeni nazw zawiera deklaracje dla typów, operacji i funkcji zdefiniowanych przez użytkownika, a także może zawierać dowolną liczbę poszczególnych typów deklaracji i w dowolnej kolejności.
@@ -76,7 +76,7 @@ Na przykład, dana operacja o nazwie `Op` z `X.Y` przestrzeni nazw:
 Zwykle lepiej jest dołączyć przestrzeń nazw przy użyciu `open` dyrektywy.
 Użycie w pełni kwalifikowanej nazwy jest wymagane, jeśli dwie przestrzenie nazw definiują konstrukcje o tej samej nazwie, a bieżące źródło używa konstrukcji z obu tych typów.
 
-Q#obowiązują te same reguły nazewnictwa, jak w przypadku innych języków .NET.
+Q# obowiązują te same reguły nazewnictwa, jak w przypadku innych języków .NET.
 Program Q# nie obsługuje jednak odwołań względnych do przestrzeni nazw.
 Na przykład jeśli przestrzeń nazw `a.b` jest otwarta, odwołanie do operacji o nazwie nie `c.d` jest rozpoznawane jako operacja o pełnej nazwie *not* `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Unikaj umieszczania wielu instrukcji w pojedynczym wierszu.
 
 ## <a name="statement-blocks"></a>Bloki instrukcji
 
-Q#instrukcje są pogrupowane w blokach instrukcji, które są zawarte w nawiasach klamrowych `{ }` . Blok instrukcji rozpoczyna się od otwarcia `{` i kończącego się zamykaniem `}` .
+Q# instrukcje są pogrupowane w blokach instrukcji, które są zawarte w nawiasach klamrowych `{ }` . Blok instrukcji rozpoczyna się od otwarcia `{` i kończącego się zamykaniem `}` .
 
 Blok instrukcji, który jest leksykalny w innym bloku, jest traktowany jako podblok bloku zawierającego; bloki zawierające i podrzędne są również nazywane blokami zewnętrznymi i wewnętrznymi.
 
@@ -109,7 +109,7 @@ W `///` komentarzach tekst, który ma być wyświetlany jako część dokumentac
 W obszarze promocji Użyj `@"<ref target>"` rozszerzenia, aby wykonać operacje między odwołaniami, funkcje i typy zdefiniowane przez użytkownika w programie Q# . Zamień na w `<ref target>` pełni kwalifikowaną nazwę obiektu kodu, do którego istnieje odwołanie.
 Różne aparaty dokumentacji mogą również obsługiwać dodatkowe rozszerzenia promocji.
 
-Na przykład:
+Przykład:
 
 ```qsharp
 /// # Summary

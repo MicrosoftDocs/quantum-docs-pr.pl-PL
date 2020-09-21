@@ -2,19 +2,19 @@
 title: Eksploruj Entanglement z Q#
 description: Dowiedz się, jak napisać program Quantum w Q# . Opracowywanie aplikacji stanu Bella za pomocą zestawu QDK (Quantum Development Kit)
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063244"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834027"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Samouczek: Eksplorowanie splątania przy użyciu języka Q\#
 
@@ -83,7 +83,7 @@ Naszym celem jest przygotowanie dwóch qubits w konkretnym stanie Quantum, pokaz
 
 ### <a name="initialize-qubit-using-measurement"></a>Inicjowanie qubit przy użyciu miary
 
-W pierwszym poniższym kodzie pokazano, jak korzystać z qubits w programie Q# .  Wprowadzimy dwie operacje [`M`](xref:microsoft.quantum.intrinsic.m) i [`X`](xref:microsoft.quantum.intrinsic.x) przekształciją stan qubit. W tym fragmencie kodu jest definiowana operacja `SetQubitState`, która przyjmuje parametr w postaci kubitu i kolejny parametr `desired`, reprezentujący stan, w który należy wprowadzić kubit.  Operacja `SetQubitState` wykonuje pomiar kubitu za pomocą operacji `M`.  W programie Q# pomiar qubit zawsze zwraca albo `Zero` `One` .  Jeśli pomiar zwraca wartość, która nie jest równa żądanej wartości, `SetQubitState` "Przerzuć" qubit, czyli wykonuje `X` operację, która zmienia stan qubit na nowy stan, w którym prawdopodobieństwa zwracająca `Zero` wynik pomiaru i `One` jest odwrócona. W ten sposób `SetQubitState` zawsze umieszcza docelowy qubit w żądanym stanie.
+W pierwszym poniższym kodzie pokazano, jak korzystać z qubits w programie Q# .  Wprowadzimy dwie operacje [`M`](xref:microsoft.quantum.intrinsic.m) i [`X`](xref:microsoft.quantum.intrinsic.x) przekształciją stan qubit. W tym fragmencie kodu jest definiowana operacja `SetQubitState`, która przyjmuje parametr w postaci kubitu i kolejny parametr `desired`, reprezentujący stan, w który należy wprowadzić kubit.  Operacja `SetQubitState` wykonuje pomiar kubitu za pomocą operacji `M`.  W programie Q# pomiar qubit zawsze zwraca albo `Zero` `One` .  Jeśli pomiar zwraca wartość, która nie jest równa żądanej wartości, `SetQubitState` "przerzuca" qubit; oznacza to, że wykonuje `X` operację, która zmienia stan qubit na nowy stan, w którym prawdopodobieństwa zwrócenia pomiaru `Zero` i `One` jest odwrócona. W ten sposób `SetQubitState` zawsze umieszcza docelowy qubit w żądanym stanie.
 
 Zastąp zawartość `Program.qs` następującym kodem:
 
@@ -104,7 +104,7 @@ Zastąp zawartość `Program.qs` następującym kodem:
 Można teraz wywołać tę operację, aby ustawić dla kubitu stan klasyczny, powodujący zwracanie wartości `Zero` przez 100% czasu lub zwracanie wartości `One` przez 100% czasu.
 Wartości `Zero` i `One` są stałymi, które reprezentują dwa możliwe wyniki pomiaru kubitu.
 
-Operacja `SetQubitState` mierzy kubit. Jeśli kubit jest w żądanym stanie, operacja `SetQubitState` pozostawia go bez zmian; w przeciwnym razie zmieniamy stan kubitu na żądany, wykonując operację `X`.
+Operacja `SetQubitState` mierzy kubit. Jeśli qubit jest w stanie, który chcemy, `SetQubitState` pozostawi to samo. w przeciwnym razie, uruchamiając `X` operację, zmienimy stan qubit na żądany stan.
 
 #### <a name="about-no-locq-operations"></a>Informacje o Q# operacjach
 
@@ -300,7 +300,7 @@ Jest to zjawisko **superpozycji**, które daje nam po raz pierwszy wgląd w rzec
 ## <a name="prepare-entanglement"></a>Przygotowanie splątania
 
 Teraz przyjrzyjmy się sposobom, w jaki Q# wyrażamy możliwości entangle qubits.
-Najpierw ustawiamy pierwszy kubit w stanie początkowym, a następnie wprowadzamy go w stan superpozycji za pomocą operacji `H`.  Następnie przed pomiarem pierwszego qubit używamy nowej operacji ( `CNOT` ), która oznacza, że nie jest to kontrolowane.  Wynikiem wykonania tej operacji na dwóch kubitach jest przerzucenie drugiego kubitu, jeśli pierwszy kubit ma wartość `One`.  Teraz oba kubity są splątane.  Nasze dane statystyczne dotyczące pierwszego kubitu nie uległy zmianie (szansa 50%-50% dla wartości `Zero` i `One` po pomiarze), ale teraz pomiar drugiego kubitu jest __zawsze__ taki sam jak pierwszego kubitu. Bramka `CNOT` splątała dwa kubity — cokolwiek dzieje się z jednym z nich, to samo dzieje się z drugim. W przypadku odwrócenia pomiarów (drugi kubit przed pierwszym) będzie dziać się to samo. Pierwsza miara będzie losowa, a druga zablokowana na wartości pierwszej.
+Najpierw ustawiamy pierwszy kubit w stanie początkowym, a następnie wprowadzamy go w stan superpozycji za pomocą operacji `H`.  Następnie przed pomiarem pierwszego qubit używamy nowej operacji ( `CNOT` ), która oznacza, że nie jest to *kontrolowane*.  Wynikiem uruchomienia tej operacji na dwóch qubits jest przerzucenie drugiej qubit, jeśli pierwszy qubit jest `One` .  Teraz oba kubity są splątane.  Nasze dane statystyczne dotyczące pierwszego kubitu nie uległy zmianie (szansa 50%-50% dla wartości `Zero` i `One` po pomiarze), ale teraz pomiar drugiego kubitu jest __zawsze__ taki sam jak pierwszego kubitu. Bramka `CNOT` splątała dwa kubity — cokolwiek dzieje się z jednym z nich, to samo dzieje się z drugim. W przypadku odwrócenia pomiarów (drugi kubit przed pierwszym) będzie dziać się to samo. Pierwsza miara będzie losowa, a druga zablokowana na wartości pierwszej.
 
 Najpierw należy przydzielić dwie qubits zamiast jednego w `TestBellState` :
 

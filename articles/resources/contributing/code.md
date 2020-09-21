@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866913"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834894"
 ---
 # <a name="contributing-code"></a>Zasady współtworzenia
 
@@ -34,7 +34,7 @@ W ten sposób jest przydatne, gdy funkcje dodane przez wkład są dobrze przetes
 Q#Funkcje, operacje i typy zdefiniowane przez użytkownika, które tworzą biblioteki, takie jak Canon, są automatycznie testowane jako część opracowywania w repozytorium [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Gdy zostanie otwarte nowe żądanie ściągnięcia, na przykład nasza konfiguracja [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) sprawdzi, czy zmiany w żądaniu ściągnięcia nie podzielą żadnych istniejących funkcji, od których zależy społeczność programowania Quantum.
 
-W najnowszej Q# wersji test jednostkowy jest definiowany przy użyciu `@Test("QuantumSimulator")` atrybutu. Argument może mieć wartość "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" lub dowolną w pełni kwalifikowaną nazwę określającą cel wykonania. Kilka atrybutów definiujących różne elementy docelowe wykonywania może być dołączanych do tego samego możliwego do odtworzenia. Niektóre z naszych testów nadal używają przestarzałego pakietu [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , który uwidacznia wszystkie Q# funkcje i operacje kończące `Test` się na platformie [xUnit](https://xunit.github.io/) . Ten pakiet nie jest już wymagany do definiowania testów jednostkowych. 
+W najnowszej Q# wersji testy jednostkowe są definiowane przy użyciu `@Test("QuantumSimulator")` atrybutu. Argument może mieć wartość "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" lub dowolną w pełni kwalifikowaną nazwę określającą cel uruchomienia. Kilka atrybutów definiujących różne elementy docelowe przebiegu można dołączać do tego samego możliwego do odtworzenia. Niektóre z naszych testów nadal używają przestarzałego pakietu [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , który uwidacznia wszystkie Q# funkcje i operacje kończące `Test` się na platformie [xUnit](https://xunit.github.io/) . Ten pakiet nie jest już wymagany do definiowania testów jednostkowych. 
 
 Poniższa funkcja służy do upewnienia się, <xref:microsoft.quantum.canon.fst> że <xref:microsoft.quantum.canon.snd> funkcje i zwracają odpowiednie dane wyjściowe w reprezentatywnym przykładzie.
 Jeśli dane wyjściowe `Fst` lub `Snd` są nieprawidłowe, `fail` instrukcja jest używana, aby spowodować niepowodzenie testu.

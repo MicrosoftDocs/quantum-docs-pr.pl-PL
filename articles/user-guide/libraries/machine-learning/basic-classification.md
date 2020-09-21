@@ -1,24 +1,24 @@
 ---
 title: Podstawowa Klasyfikacja z biblioteką Machine Learning Quantum
-description: Dowiedz się, jak wykonać klasyfikator sekwencyjny Quantum zapisaną Q# przy użyciu biblioteki quantum Machine Learning QDK firmy Microsoft.
+description: Dowiedz się, jak uruchomić klasyfikatora sekwencyjnego Quantum zapisaną Q# przy użyciu biblioteki quantum Machine Learning QDK firmy Microsoft.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868971"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833717"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Podstawowa Klasyfikacja: klasyfikowanie danych za pomocą QDK
 
-W tym przewodniku szybki start dowiesz się, jak wykonać klasyfikator sekwencyjny Quantum zapisaną Q# przy użyciu biblioteki quantum Machine Learning QDK. 
+W tym przewodniku szybki start dowiesz się, jak uruchomić klasyfikator sekwencyjny Quantum, który został zapisany Q# przy użyciu biblioteki quantum Machine Learning QDK. 
 
 W tym przewodniku użyjemy zestawu danych o połowie księżyca przy użyciu struktury klasyfikatora zdefiniowanej w Q# .
 
@@ -32,7 +32,7 @@ W tym przewodniku użyjemy zestawu danych o połowie księżyca przy użyciu str
 Program hosta składa się z trzech części:
 
 - Załaduj zestaw danych i wybierz zestaw parametrów uruchamiania dla modelu.
-- Wykonaj szkolenie, aby określić parametry i odchylenia modelu.
+- Uruchom szkolenie, aby określić parametry i odchylenia modelu.
 - Weryfikowanie modelu w celu określenia jego dokładności
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Język Python z programem Visual Studio Code lub wierszem polecenia](#tab/tabid-python)
@@ -70,7 +70,7 @@ Program hosta składa się z trzech części:
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Następnie naciśnij klawisz F5. Program zacznie działać i pojawią się nowe okna z następującymi wynikami: 
+    Naciśnij klawisz F5, aby uruchomić program. Nowe okno wyświetli następujące wyniki: 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ Zapiszemy następujący kod w pliku o nazwie `Training.qs` .
 
 Najważniejsze funkcje i operacje zdefiniowane w powyższym kodzie są następujące:
 
-- `ClassifierStructure() : ControlledRotation[]`: w tej funkcji ustawimy strukturę modelu obwodu przez dodanie warstw kontrolowanej bramy. Ten krok jest analogiczny do deklaracji warstw neurons w modelu uczenia głębokiego.
-- `TrainHalfMoonModel() : (Double[], Double)`: Ta operacja jest podstawową częścią kodu i definiuje szkolenie. Tutaj ładujemy przykłady z zestawu danych zawartego w bibliotece, ustawimy parametry funkcji Hyper-i początkowe parametry szkolenia i zaczniemy szkolenie przez wywołanie operacji `TrainSequentialClassifier` zawartej w bibliotece. Zwraca parametry i bias określające klasyfikatora.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: Ta operacja definiuje proces walidacji w celu oszacowania modelu. Tutaj ładujemy próbki do walidacji, liczbę pomiarów na próbkę i tolerancję. Zwraca liczbę błędów klasyfikacji na wybranej partii próbek do walidacji.
+- `ClassifierStructure() : ControlledRotation[]` : w tej funkcji ustawimy strukturę modelu obwodu przez dodanie warstw kontrolowanej bramy. Ten krok jest analogiczny do deklaracji warstw neurons w modelu uczenia głębokiego.
+- `TrainHalfMoonModel() : (Double[], Double)` : Ta operacja jest podstawową częścią kodu i definiuje szkolenie. Tutaj ładujemy przykłady z zestawu danych zawartego w bibliotece, ustawimy parametry funkcji Hyper-i początkowe parametry szkolenia i zaczniemy szkolenie przez wywołanie operacji `TrainSequentialClassifier` zawartej w bibliotece. Zwraca parametry i bias określające klasyfikatora.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : Ta operacja definiuje proces walidacji w celu oszacowania modelu. Tutaj ładujemy próbki do walidacji, liczbę pomiarów na próbkę i tolerancję. Zwraca liczbę błędów klasyfikacji na wybranej partii próbek do walidacji.
 
 ## <a name="next-steps"></a>Następne kroki
 

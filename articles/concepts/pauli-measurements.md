@@ -1,6 +1,6 @@
 ---
 title: Paulis Description: informacje na temat pracy z operacjami pomiaru pojedynczego i wieloqubitowego Pauli.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Pauli MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: bradben UID: Microsoft. Quantum. koncepcje. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Jest również odpowiednikiem zastosowania $ HS ^ \dagger $ do wektora stanu Qua
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -223,14 +223,14 @@ Jedna dodatkowa Uwaga: Chociaż może być skłonny do założenia, że pomiary 
 Powodem jest to, że pomiar z projektów z z z $ \otimes $ jest stanem Quantum do $ $ eigenstate tych operatorów + 1 lub $ -1 $ .
 Pomiar $ z \otimes \mathbb { 1 } $ , a następnie $ \mathbb { 1 } \otimes z $ projektów w wektorze stanu Quantum najpierw do połowy miejsca z 1 $ \otimes \mathbb { } $ , a następnie do połowy miejsca $ \mathbb { 1 } \otimes z $ . Ponieważ istnieją cztery wektory obliczeniowe, przeprowadzenie obydwu pomiarów zmniejsza stan do kwartału, a tym samym redukuje go do jednego wektora obliczanego na podstawie.
 
-## <a name="correlations-between-qubits"></a>Korelacje między qubits
+## <a name="correlations-between-qubits"></a>Korelacje między kubitami
 Innym sposobem na pomiar iloczynów ilościowych macierzy Pauli, takich jak $ x \otimes x $ lub $ z \otimes z $ , jest to, że pomiary umożliwiają przeszukanie informacji przechowywanych w korelacji między tymi dwoma qubits.
 Pomiar $ X \otimes \id $ pozwala przeglądać informacje, które są przechowywane lokalnie w pierwszej qubit.
 Mimo że oba typy pomiarów są równie cenne w przypadku obliczeń opartych na usługach Quantum
 Wykaże, że w ramach przetwarzania Quantum, często informacje, które chcesz poznać nie są przechowywane w żadnym z pojedynczych qubitów, ale raczej są przechowywane nielokalnie we wszystkich qubitsach i dlatego tylko przez ich przechodzenie przez wspólne pomiary (np. $ z \otimes $ ) czy te informacje stają się manifestem.
 
 Na przykład w przypadku korekcji błędów często chcemy dowiedzieć się, jaki błąd wystąpił podczas uczenia niczego o stanie, który próbujesz chronić.
-[Przykładowy kod przerzucania bitów](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) pokazuje przykład sposobu, w jaki można to zrobić przy użyciu pomiarów, takich jak z z i z z $ \otimes \otimes \id $ $ \id \otimes \otimes $ . < ! --Do zrobienia: Zmień tę wartość na link do przeglądarki przykładów, gdy tylko próbka kodu przerzucania bitów jest włączona. -->
+[Przykładowy kod przerzucania bitów](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) pokazuje przykład sposobu, w jaki można to zrobić przy użyciu pomiarów, takich jak z z i z z $ \otimes \otimes \id $ $ \id \otimes \otimes $ . < ! --Do zrobienia: Zmień tę wartość na link do przeglądarki przykładów, gdy tylko próbka kodu przerzucania bitów jest włączona. -->
 
 Można również mierzyć dowolne operatory Pauli, takie jak $ X \otimes Y \otimes Z \otimes \boldone $ .
 Wszystkie te produkty dwubajtowe operatorów Pauli mają tylko dwa eigenvalues $ \Pm 1 $ i oba eigenspaces stanowią pół miejsca całego obszaru wektora.

@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit powiadomienia i informacje dotycz
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Nie dodawaj ani nie edytuj słów kluczowych bez konsultacji z ekspertem SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869753"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834129"
 ---
 # <a name="third-party-software-notices-and-information"></a>POWIADOMIENIA I INFORMACJE DOTYCZĄCE OPROGRAMOWANIA INNYCH FIRM
 
@@ -268,7 +268,7 @@ OPROGRAMOWANIE JEST DOSTARCZANE "W TAKIEJ POSTACI, W JAKIEJ JEST", BEZ GWARANCJI
 
 O ile nie zaznaczono inaczej, biblioteka FParsec w formie źródłowej i binarnej jest dystrybuowana w ramach uproszczonej licencji BSD. Uproszczona licencja BSD (vel "2 do lokalnych — licencja BSD") jest prostą, ograniczającą licencją, która jest zgodna ze znakiem OSI do lokalnych. 
 
-FParsecuje dane pochodzące z bazy danych znaków Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., który jest dystrybuowany w ramach następujących warunków:http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsecuje dane pochodzące z bazy danych znaków Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., który jest dystrybuowany w ramach następujących warunków: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Dokumentacja w folderze doc jest licencjonowana w ramach Commons attributionej licencji do lokalnych NonCommercial 3,0. Ta licencja Creative Commons Attribution nie pozwala na korzystanie z dokumentacji do celów komercyjnych bez zgody użytkownika. Oznacza to, że na przykład nie można sprzedać dokumentacji w formularzu książki dla zysku lub umieścić ją w farmie zawartości sieci Web w celu uzyskania pieniędzy z reklamami. Można jednak skorzystać z dokumentacji w kontekście handlowym (np. umieścić ją w intranecie firmy komercyjnej), o ile nie próbujesz bezpośrednio uzyskać pieniędzy z tekstu dokumentacji. 
 
@@ -284,6 +284,6 @@ To oprogramowanie jest dostarczane przez posiadaczy praw autorskich "AS IS" i ws
 
 2,2 Creative Commons Attribution przypisywanie do lokalnych NonCommercial 3,0 nieportowo
 
-Podsumowaniehttps://creativecommons.org/licenses/by-nc/3.0/
+Podsumowanie https://creativecommons.org/licenses/by-nc/3.0/
 
-Tekst pełnej licencji:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+Tekst pełnej licencji: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

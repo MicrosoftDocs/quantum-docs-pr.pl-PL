@@ -2,19 +2,19 @@
 title: Tworzenie kwantowego generatora liczb losowych
 description: Utwórz Q# projekt, który pokazuje podstawowe koncepcje Quantum, takie jak Podpozycja, tworząc generator liczb losowych Quantum.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863626"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834044"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Samouczek: implementowanie kwantowego generatora liczb losowych w języku Q\#
 
@@ -33,7 +33,7 @@ Prosty przykład algorytmu Quantum zapisany w Q# jest generatorem liczb losowych
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Jak wspomniano w artykule [Informacje na temat obliczeń kwantowych](xref:microsoft.quantum.overview.understanding), kubit jest jednostką informacji kwantowych, która może być w superpozycji. Przy pomiarze kubit może mieć tylko wartość 0 lub 1. Jednak podczas wykonywania stan kubitu reprezentuje prawdopodobieństwo odczytania wartości 0 lub 1 przy pomiarze. Ten stan probabilistyczny jest nazywany superpozycją. Przy użyciu tego prawdopodobieństwa można generować liczby losowe.
+Jak wspomniano w artykule [Informacje na temat obliczeń kwantowych](xref:microsoft.quantum.overview.understanding), kubit jest jednostką informacji kwantowych, która może być w superpozycji. Przy pomiarze kubit może mieć tylko wartość 0 lub 1. Jeśli jednak operacja jest uruchomiona, stan qubit reprezentuje prawdopodobieństwo odczytu 0 lub 1 z pomiarem. Ten stan probabilistyczny jest nazywany superpozycją. Przy użyciu tego prawdopodobieństwa można generować liczby losowe.
 
 W naszej Q# operacji wprowadzamy `Qubit` Typ danych, natywny dla Q# . Element `Qubit` można przydzielić tylko za pomocą instrukcji `using`. Po przydzieleniu kubit jest zawsze w stanie `Zero`. 
 
@@ -74,11 +74,11 @@ Aby utworzyć pełną Q# aplikację, Dodaj następujący punkt wejścia do Q# pr
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-Plik wykonywalny uruchomi operację lub funkcję oznaczoną atrybutem `@EntryPoint()` w symulatorze lub estymatorze zasobów, w zależności od konfiguracji projektu i opcji wiersza polecenia.
+Program uruchomi operację lub funkcję oznaczoną `@EntryPoint()` atrybutem na symulatorze lub szacowania zasobów, w zależności od konfiguracji projektu i opcji wiersza polecenia.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-W programie Visual Studio wystarczy nacisnąć klawisze Ctrl + F5, aby wykonać skrypt.
+W programie Visual Studio po prostu naciśnij kombinację klawiszy CTRL + F5, aby uruchomić skrypt.
 
 W programie VS Code za pierwszym razem skompiluj plik Program.qs, wpisując w terminalu następujące polecenie:
 

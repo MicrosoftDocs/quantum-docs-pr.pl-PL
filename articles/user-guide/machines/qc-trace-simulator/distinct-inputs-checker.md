@@ -2,19 +2,19 @@
 title: Sprawdzanie odrębnych wejść — zestaw Quantum Development Kit
 description: Dowiedz się więcej o programie Microsoft QDK DISTINCT Input Checker, który używa symulatora śledzenia usługi Quantum do sprawdzenia Q# kodu pod kątem potencjalnych konfliktów z współdzielonym qubits.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868274"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833465"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Symulator śledzenia Quantum: unikatowe dane wejściowe
 
@@ -88,7 +88,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - Omówienie zestawu Quantum Development Kit [Quantum Trace symulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>Dokumentacja interfejsu API.

@@ -1,20 +1,20 @@
 ---
 title: Symulowanie hamiltonian Dynamics
 description: Dowiedz się, jak używać formuł Trotter-Suzuki i qubitization do pracy z symulacjami hamiltonian.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869532"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834010"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Symulowanie hamiltonian Dynamics
 
@@ -46,9 +46,9 @@ Najprostszą rodziną Hamiltonians i raczej najbardziej przydatną w tym miejscu
 Operatory Pauli można łatwo symulować, ponieważ mogą być ukośne przy użyciu operacji Clifford (które są bramami standardowymi w ramach przetwarzania Quantum).
 Po przeprowadzeniu przekątnej ich eigenvalues można znaleźć, obliczając parzystość qubits, na której działają.
 
-Na przykład $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $ WHERE $ $ e ^ {-i Z \otimes Z t} = \begin{bmatrix} e ^ {-IT} & 0 & 0 & 0\\\
-        0 & e ^ {i t} & 0 & 0\\\
-        0 & 0 & e ^ {IT} & 0\\\
+Na przykład $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $ WHERE $ $ e ^ {-i Z \otimes Z t} = \begin{bmatrix} e ^ {-IT} & 0 & 0 & 0 \\\
+        0 & e ^ {i t} & 0 & 0 \\\
+        0 & 0 & e ^ {IT} & 0 \\\
         0 & 0 & 0 & e ^ {-IT} \end{bmatrix}.
 $ $ Tutaj, $e ^ {-iHt} \ket {00} = e ^ {IT} \ket {00} $ i $e ^ {-iHt} \ket {01} = e ^ {-IT} \ket {01} $, które mogą być widoczne bezpośrednio jako konsekwencja, że parzystość $0 $ jest $0 $, podczas gdy parzystość ciągu bitowego $1 $ to $1 $.
 
@@ -65,7 +65,7 @@ Wykładnicze operatory Pauli można zaimplementować bezpośrednio Q# przy użyc
 
 W przypadku Fermionic Hamiltonians, w której [dekompozycja Jordanii – Wigner](xref:microsoft.quantum.chemistry.concepts.jordanwigner) , wygodnie mapuje hamiltonian na sumę operatorów Pauli.
 Oznacza to, że powyższe podejście można łatwo dostosować do symulowania chemii.
-Zamiast ręcznego zapętlenia wszystkich Paulich w reprezentacji Jordania-Wigner, poniżej przedstawiono prosty przykład sposobu wykonywania takich symulacji w ramach chemii.
+Zamiast ręcznego zapętlenia wszystkich Paulich w reprezentacji Jordania-Wigner, poniżej przedstawiono prosty przykład sposobu działania takiej symulacji w ramach chemii.
 Naszym punktem początkowym jest [kodowanie Jordania – Wigner](xref:microsoft.quantum.chemistry.concepts.jordanwigner) Fermionic hamiltonian, wyrażone w kodzie jako wystąpienie `JordanWignerEncoding` klasy.
 
 ```csharp
@@ -90,7 +90,7 @@ Naszym punktem początkowym jest [kodowanie Jordania – Wigner](xref:microsoft.
 ```
 
 Ten format reprezentacji Wigner do Q# użycia przez algorytmy symulacji jest typem zdefiniowanym przez użytkownika `JordanWignerEncodingData` .
-W Q# tym formacie jest przenoszona do wygodnej funkcji `TrotterStepOracle` , która zwraca operator zbliżający się czas i ewolucję przy użyciu Trotter — Integrator Suzuki, oprócz innych parametrów wymaganych do wykonania.
+W programie Q# ten format jest przesyłany do wygodnej funkcji `TrotterStepOracle` , która zwraca operator zbliżający się czas i ewolucji przy użyciu Trotter — Integrator Suzuki, a także innych parametrów wymaganych do jego uruchomienia.
 
 ```qsharp
 // qSharpData passed from driver
@@ -145,7 +145,7 @@ Może to być widoczne z faktu, że $ \operatorname{Select} ^ 2 \ KET {j} \ket{\
 
 Druga podprocedura jest nazywana $ \operatorname{Prepare} $.
 Podczas gdy operacja Select zapewnia spójny dostęp do każdego z hamiltonian warunków $H _j $ procedura Prepare zapewnia metodę uzyskiwania dostępu do współczynników $h _j $, \begin{Equation} \operatorname{Prepare}\ket {0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}.
-\end{Equation} następnie przy użyciu wielokrotnie kontrolowanej bramy fazy, zobaczymy, że $ $ \Lambda\ket {0} ^ {\otimes n} = \begin{Cases} \- \ket{x} & \Text{if} x = 0\\\
+\end{Equation} następnie przy użyciu wielokrotnie kontrolowanej bramy fazy, zobaczymy, że $ $ \Lambda\ket {0} ^ {\otimes n} = \begin{Cases} \- \ket{x} & \Text{if} x = 0 \\\
         \ket{x} & \Text{Otherwise} \end{cases}.
 $$
 
@@ -157,10 +157,10 @@ Operator przeszukiwania, $W $, może być wyrażony w postaci $ \operatorname{Se
 Te podprocedury można łatwo skonfigurować w programie Q# .
 Przykładowo Rozważmy proste qubit poprzecznie Ising hamiltonian, gdzie $H = X_1 + X_2 + Z_1 Z_2 $.
 W takim przypadku kod implementujący Q# operację $ \operatorname{SELECT} $ jest wywoływany przez <xref:microsoft.quantum.canon.multiplexoperations> , podczas gdy operacja $ \operatorname{Prepare} $ może zostać zaimplementowana przy użyciu <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Przykład, który obejmuje symulowanie modelu Hubbard, można znaleźć jako [ Q# przykład](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+Przykład, który obejmuje symulowanie modelu Hubbard, można znaleźć jako [ Q# przykład](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 Ręczne określenie tych kroków dla dowolnego problemu chemicznego będzie wymagało dużej nakładu pracy, które można uniknąć przy użyciu biblioteki chemicznej.
-Podobnie jak w przypadku algorytmu symulacji Trotter – Suzuki powyżej, `JordanWignerEncodingData` jest ona przenoszona do funkcji wygodnej, `QubitizationOracle` która zwraca operator przechodzenia, oprócz innych parametrów wymaganych do wykonania.
+Podobnie jak w przypadku algorytmu symulacji Trotter – Suzuki powyżej, `JordanWignerEncodingData` jest ona przenoszona do funkcji wygodnej, `QubitizationOracle` która zwraca operator Instruktaż, oprócz innych parametrów wymaganych do uruchomienia.
 
 ```qsharp
 // qSharpData passed from driver

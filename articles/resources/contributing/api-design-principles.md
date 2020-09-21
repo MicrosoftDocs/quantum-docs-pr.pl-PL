@@ -1,6 +1,6 @@
 ---
-title: Q#Zasady projektowania interfejsu API
-description: Q#Zasady projektowania interfejsu API
+title: Q# Zasady projektowania interfejsu API
+description: Q# Zasady projektowania interfejsu API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866897"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834913"
 ---
-# <a name="no-locq-api-design-principles"></a>Q#Zasady projektowania interfejsu API
+# <a name="no-locq-api-design-principles"></a>Q# Zasady projektowania interfejsu API
 
 ## <a name="introduction"></a>Wprowadzenie
 
@@ -44,7 +44,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
     Umieszczaj inaczej, nie wprowadzaj publicznych interfejsów API, jeśli są użyteczne, ale upewnij się, że każda część interfejsu API ma *konkretny* przykład, w którym będzie przydatna.
 
   *Przykłady:*
-  - @"microsoft.quantum.canon.applytoeachca"może służyć jako `ApplyToEachCA(H, _)` do przygotowywania rejestrów w jednolitym stanie nadpozycji, typowe zadanie w wielu algorytmach Quantum. Tej samej operacji można także użyć dla wielu innych zadań w ramach przygotowywania, liczb i algorytmów opartych na oprogramowaniu Oracle.
+  - @"microsoft.quantum.canon.applytoeachca" może służyć jako `ApplyToEachCA(H, _)` do przygotowywania rejestrów w jednolitym stanie nadpozycji, typowe zadanie w wielu algorytmach Quantum. Tej samej operacji można także użyć dla wielu innych zadań w ramach przygotowywania, liczb i algorytmów opartych na oprogramowaniu Oracle.
 
 - ✅**Wykonaj** nowe projekty interfejsu API w ramach burzy mózgów i warsztatów, aby sprawdzić, czy są one intuicyjne i spełniają proponowane przypadki użycia.
 
@@ -65,11 +65,11 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ✅**Podaj operacje** i funkcje "podkładki", które umożliwiają prawidłowe działanie istniejącego kodu użytkownika podczas jego wymuszania.
 
   *Przykłady:*
-  - Podczas zmieniania nazwy operacji wywoływanej `EstimateExpectation` do `EstimateAverage` , należy wprowadzić nową operację o nazwie, `EstimateExpectation` która wywołuje oryginalną operację przy użyciu nowej nazwy, tak aby istniejący kod nadal działał poprawnie.
+  - Podczas zmieniania nazwy operacji wywoływanej `EstimateExpectation` do   `EstimateAverage` , należy wprowadzić nową operację o nazwie,   `EstimateExpectation` która wywołuje oryginalną operację przy użyciu nowej nazwy, tak aby istniejący kod nadal działał poprawnie.
 
 - ✅**Użyj** atrybutu, @"microsoft.quantum.core.deprecated" Aby komunikować się z zaniechaniem użytkownika.
 
-- ✅Podczas zmieniania nazwy operacji lub funkcji należy **podać nową** nazwę jako ciąg wejściowy do `@Deprecated` .
+- ✅ Podczas zmieniania nazwy operacji lub funkcji należy **podać nową** nazwę jako ciąg wejściowy do `@Deprecated` .
 
 - ⛔️ **nie** usuwać istniejących funkcji ani operacji bez okresu wycofania wynoszącego co najmniej sześć miesięcy w przypadku wersji zapoznawczej lub co najmniej dwa lata dla obsługiwanych wersji.
 
@@ -91,13 +91,13 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 
   *Przykłady:*
   - Podprocedura, która kwadratów danych wejściowych zmiennoprzecinkowych może być pisanych niejednoznacznie i dlatego powinna być udostępniona użytkownikowi, `Squared : Double -> Double` a nie jako operacja `Square : Double => Double` . Pozwala to na wywoływanie podprocedury w większej liczbie miejsc (np. w innych funkcjach) i udostępnia przydatne informacje optymalizacji kompilatorowi, który może mieć wpływ na wydajność i optymalizacje.
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`i `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` różnią się w zależności od tego, czy są one przydatne w różnych sytuacjach.
-  - Procedury interfejsu API, które przekształcają stosowanie operacji Quantum, często mogą być wykonywane w sposób deterministyczny i dlatego mogą być udostępniane jako funkcje takie jak `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` i `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` różnią się w zależności od tego, czy są one przydatne w różnych sytuacjach.
+  - Procedury interfejsu API, które przekształcają stosowanie operacji Quantum, często mogą być wykonywane w sposób deterministyczny i dlatego mogą być udostępniane jako funkcje takie jak   `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
 
 - ✅**Uogólnij** typ danych wejściowych o ile jest to odpowiednie dla każdej funkcji i operacji, przy użyciu parametrów typu w razie potrzeby.
 
   *Przykłady:*
-  - `ApplyToEach`ma typ `<'T>(('T => Unit), 'T[]) => Unit` , a nie konkretny typ najczęściej używanej aplikacji `((Qubit => Unit), Qubit[]) => Unit` .
+  - `ApplyToEach` ma typ `<'T>(('T => Unit), 'T[]) => Unit` , a nie konkretny typ najczęściej używanej aplikacji `((Qubit => Unit), Qubit[]) => Unit` .
 
 > [!TIP]
 > Ważne jest, aby przewidzieć przyszłe potrzeby, ale ważne jest również rozwiązywanie konkretnych problemów dla użytkowników.
@@ -121,7 +121,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ✅**Wykonaj** zamówienie elementów w spójnych kolekcjach, tak aby najczęściej stosowane dane wejściowe były wykonywane w pierwszej kolejności (tj. w taki sposób, że częściowa aplikacja działa podobnie do currying).
 
   *Przykłady:*
-  - Operacja `ApplyRotation` , która pobiera liczbę zmiennoprzecinkową i qubit jako dane wejściowe, może być często stosowana częściowo z danymi wejściowymi zmiennoprzecinkowymi jako pierwszą do użycia z operacjami, które oczekują wejścia typu `Qubit => Unit` . W rezultacie sygnatura`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - Operacja `ApplyRotation` , która pobiera liczbę zmiennoprzecinkową i qubit jako dane wejściowe, może być często stosowana częściowo z danymi wejściowymi zmiennoprzecinkowymi jako pierwszą do użycia z operacjami, które oczekują wejścia typu `Qubit => Unit` . W rezultacie sygnatura `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       może być najbardziej spójna z częściową aplikacją.
   - Zwykle te wskazówki oznaczają umieszczenie wszystkich danych klasycznych przed wszystkimi qubits w spójnych krotkach, ale używają dobrych orzeczeń i sprawdzenia, jak interfejs API jest wywoływany w ćwiczeń.
 
@@ -132,7 +132,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ✅**Wprowadź nowe** typy zdefiniowane przez użytkownika, aby zapewnić pomocne skróty dla długich i/lub skomplikowanych typów.
 
   *Przykłady:*
-  - W przypadkach, gdy typ operacji z trzema danymi wejściowymi tablicy qubit jest często traktowany jako dane wejściowe lub zwracane jako dane wyjściowe, dostarczając typ UDT, taki jak`newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
+  - W przypadkach, gdy typ operacji z trzema danymi wejściowymi tablicy qubit jest często traktowany jako dane wejściowe lub zwracane jako dane wyjściowe, dostarczając typ UDT, taki jak `newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
       może pomóc w zapewnieniu przydatnej skróconej składni.
 
 - ✅**Wprowadź nowe** typy zdefiniowane przez użytkownika, aby wskazać, że dany typ podstawowy ma być używany tylko w konkretnym sensie.
@@ -143,12 +143,12 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ✅**Wprowadź nowe** typy zdefiniowane przez użytkownika z nazwanymi elementami, które zezwalają na przyszłą rozszerzalność (np.: Struktura wyników, która może zawierać dodatkowe nazwane elementy w przyszłości).
 
   *Przykłady:*
-  - Gdy operacja `TrainModel` uwidacznia dużą liczbę opcji konfiguracji, narażając te opcje jako nowe `TrainingOptions` UDT i dostarczając nową funkcję, `DefaultTrainingOptions : Unit -> TrainingOptions` Użytkownicy mogą przesłonić określone nazwane elementy w TrainingOptions wartości UDT, jednocześnie umożliwiając deweloperom biblioteki Dodawanie nowych elementów UDT odpowiednio do potrzeb.
+  - Gdy operacja `TrainModel` uwidacznia dużą liczbę opcji konfiguracji, narażając te opcje jako nowe   `TrainingOptions` UDT i dostarczając nową funkcję,   `DefaultTrainingOptions : Unit -> TrainingOptions` Użytkownicy mogą przesłonić określone nazwane elementy w TrainingOptions wartości UDT, jednocześnie umożliwiając deweloperom biblioteki Dodawanie nowych elementów UDT odpowiednio do potrzeb.
 
 - ✅**Zadeklaruj nazwane** elementy dla nowych typów zdefiniowanych przez użytkownika w preferencjach, aby wymagać od użytkowników znajomości poprawnej dekonstrukcji krotki.
 
   *Przykłady:*
-  - Gdy reprezentujesz liczbę zespoloną w swojej dekompozycji biegunowej, wolisz `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` `newtype ComplexPolar = (Double, Double)` .
+  - Gdy reprezentujesz liczbę zespoloną w swojej dekompozycji biegunowej, wolisz   `newtype ComplexPolar = (Magnitude: Double, Argument: Double)`   `newtype ComplexPolar = (Double, Double)` .
 
 **Kluczowa zasada:** Użyj typów zdefiniowanych przez użytkownika w taki sposób, aby zmniejszyć obciążenie poznawcze i nie wymagał od użytkownika poznania dodatkowych koncepcji i nomenklatury.
 
@@ -167,7 +167,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ⛔️ **nie** należy wprowadzać funkcji akcesora, chyba że jest to absolutnie wymagane;   silnie Preferuj nazwane elementy w tym przypadku.
 
   *Przykłady:*
-  - Wprowadzając UDT `newtype Complex = (Double, Double)` , wolisz modyfikować definicję do `newtype Complex = (Real : Double, Imag : Double)` wprowadzenia funkcji `GetReal : Complex -> Double` i `GetImag : Complex -> Double` .
+  - Wprowadzając UDT `newtype Complex = (Double, Double)` , wolisz modyfikować definicję do   `newtype Complex = (Real : Double, Imag : Double)` wprowadzenia funkcji `GetReal : Complex -> Double` i   `GetImag : Complex -> Double` .
 
 ## <a name="namespaces-and-organization"></a>Przestrzenie nazw i organizacja
 
@@ -176,29 +176,29 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 - ✅**Nazywaj** przestrzenie nazw jako `Publisher.Product.DomainArea` .
 
   *Przykłady:*
-  - Funkcje, operacje i UDTs opublikowane przez firmę Microsoft jako część funkcji symulacji Quantum zestawu Quantum Development Kit są umieszczane w `Microsoft.Quantum.Simulation` przestrzeni nazw.
-  - `Microsoft.Quantum.Math`reprezentuje obszar nazw Opublikowany przez firmę Microsoft w ramach zestawu Quantum Development Kit odnoszący się do obszaru domeny matematyki.
+  - Funkcje, operacje i UDTs opublikowane przez firmę Microsoft jako część funkcji symulacji Quantum zestawu Quantum Development Kit są umieszczane w   `Microsoft.Quantum.Simulation` przestrzeni nazw.
+  - `Microsoft.Quantum.Math` reprezentuje obszar nazw Opublikowany przez firmę Microsoft w ramach zestawu Quantum Development Kit odnoszący się do obszaru domeny matematyki.
 
 - ✅**Należy** umieścić operacje, funkcje i typy zdefiniowane przez użytkownika używane do określonych funkcji w przestrzeni nazw, która opisuje tę funkcję, nawet jeśli ta funkcja jest używana w różnych domenach problemów.
 
   *Przykłady:*
-  - Interfejsy API przygotowania stanu opublikowane przez firmę Microsoft w ramach zestawu Quantum Development Kit byłyby umieszczane w systemie `Microsoft.Quantum.Preparation` .
-  - Interfejsy API symulacji Quantum opublikowane przez firmę Microsoft w ramach zestawu Quantum Development Kit byłyby umieszczane w systemie `Microsoft.Quantum.Simulation` .
+  - Interfejsy API przygotowania stanu opublikowane przez firmę Microsoft w ramach zestawu Quantum Development Kit byłyby umieszczane w systemie   `Microsoft.Quantum.Preparation` .
+  - Interfejsy API symulacji Quantum opublikowane przez firmę Microsoft w ramach zestawu Quantum Development Kit byłyby umieszczane w systemie   `Microsoft.Quantum.Simulation` .
 
 - ✅Operacje **umieszczania** , funkcje i typy zdefiniowane przez użytkownika używane tylko w określonych domenach w przestrzeni nazw wskazujące ich domenę narzędzia. W razie potrzeby użyj subnazw, aby wskazać zadania ukierunkowane w obrębie poszczególnych nazw specyficznych dla domeny.
 
   *Przykłady:*
-  - Biblioteka Quantum Machine Learning Library opublikowana przez firmę Microsoft jest w dużym stopniu umieszczana w @"microsoft.quantum.machinelearning" przestrzeni nazw, ale przykładowe zestawy danych są dostarczane przez @"microsoft.quantum.machinelearning.datasets" przestrzeń nazw.
+  - Biblioteka Quantum Machine Learning Library opublikowana przez firmę Microsoft jest w dużym stopniu umieszczana w @"microsoft.quantum.machinelearning" przestrzeni nazw, ale przykładowe zestawy danych są dostarczane przez @"microsoft.quantum.machinelearning.datasets"   przestrzeń nazw.
   - Chemiczne interfejsy API Quantum opublikowane przez firmę Microsoft jako część zestawu Quantum Development Kit powinny być umieszczone w `Microsoft.Quantum.Chemistry` . Funkcja specyficzna dla wdrożenia programu Jordania--Wigner dekompozycji może zostać umieszczona w `Microsoft.Quantum.Chemistry.JordanWigner` , aby interfejs podstawowy dla obszaru domeny chemii Quantum nie był objęty implementacjami.
 
 **Kluczowa zasada:** Używaj przestrzeni nazw i modyfikatorów dostępu, aby zamierzać powierzchnię interfejsu API narażoną na użytkowników i ukrywać szczegóły wewnętrzne związane z implementacją i testowaniem interfejsów API.
 
-- ✅W każdym przypadku **należy umieścić wszystkie** funkcje i operacje, które są potrzebne do zaimplementowania interfejsu API w tej samej przestrzeni nazw co zaimplementowany interfejs API, ale oznaczone za pomocą słów kluczowych "Private" lub "internal", aby wskazać, że nie są one częścią publicznej powierzchni interfejsu API biblioteki. Użyj nazwy rozpoczynającej się od znaku podkreślenia ( `_` ) w celu wizualnego odróżnienia operacji prywatnych i wewnętrznych oraz funkcji od publicznych.
+- ✅ W każdym przypadku **należy umieścić wszystkie** funkcje i operacje, które są potrzebne do zaimplementowania interfejsu API w tej samej przestrzeni nazw co zaimplementowany interfejs API, ale oznaczone za pomocą słów kluczowych "Private" lub "internal", aby wskazać, że nie są one częścią publicznej powierzchni interfejsu API biblioteki. Użyj nazwy rozpoczynającej się od znaku podkreślenia ( `_` ) w celu wizualnego odróżnienia operacji prywatnych i wewnętrznych oraz funkcji od publicznych.
 
   *Przykłady:*
   - Nazwa operacji `_Features` wskazuje funkcję, która jest prywatna dla danego obszaru nazw i zestawu i powinna być dołączona `internal` słowa kluczowego.
 
-- ✅W rzadkich przypadkach, gdy do zaimplementowania interfejsu API dla danego obszaru nazw jest wymagany obszerny zestaw funkcji lub operacji **prywatnych, należy** umieścić je w nowej przestrzeni nazw zgodnej z zaimplementowaną i końcową przestrzenią nazw `.Private` .
+- ✅ W rzadkich przypadkach, gdy do zaimplementowania interfejsu API dla danego obszaru nazw jest wymagany obszerny zestaw funkcji lub operacji **prywatnych, należy** umieścić je w nowej przestrzeni nazw zgodnej z zaimplementowaną i końcową przestrzenią nazw `.Private` .
 
 - ✅**Należy** umieścić wszystkie testy jednostkowe w przestrzeni nazw pasujące do przestrzeni nazw w ramach testu i kończąc na `.Tests` .
 
@@ -224,7 +224,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 
   - **Słowa**
 
-    - **Potwierdzenie**: należy sprawdzić, czy założono założenie stanu maszyny docelowej i jej qubits, prawdopodobnie przy użyciu zasobów niefizycznych. Operacje korzystające z tego zlecenia powinny zawsze być bezpiecznie usuwalne bez wpływu na funkcjonalność bibliotek i programów wykonywalnych. Należy pamiętać, że w przeciwieństwie do faktów, potwierdzenia mogą generalnie zależeć od stanu zewnętrznego, takiego jak stan rejestru qubit, środowisko wykonawcze lub tak dalej. Ponieważ zależność od stanu zewnętrznego jest rodzajem efektu ubocznego, potwierdzenia muszą być uwidocznione jako operacje, a nie funkcje.
+    - **Potwierdzenie**: należy sprawdzić, czy założono założenie stanu maszyny docelowej i jej qubits, prawdopodobnie przy użyciu zasobów niefizycznych. Operacje korzystające z tego zlecenia powinny zawsze być bezpiecznie usuwalne bez wpływu na funkcjonalność bibliotek i programów wykonywalnych. Należy zauważyć, że w przeciwieństwie do faktów, potwierdzenia mogą zasadniczo zależeć od stanu zewnętrznego, takiego jak stan rejestru qubit, środowisko uruchomieniowe lub tak dalej. Ponieważ zależność od stanu zewnętrznego jest rodzajem efektu ubocznego, potwierdzenia muszą być uwidocznione jako operacje, a nie funkcje.
 
     - **Oszacowanie**: użycie jednego lub większej liczby możliwych do powtórzenia pomiarów, oszacowanie klasycznej ilości wyników pomiarów.
 
@@ -249,12 +249,12 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 
   - **Rzeczowniki**:
 
-    - **Fakt**: warunek logiczny, który zależy tylko od danych wejściowych, a nie na stanie maszyny docelowej, jego środowisku lub stanu qubits maszyny. W przeciwieństwie do potwierdzenia fakt jest tylko wrażliwy na *wartości* podane dla tego faktu. Na przykład:
+    - **Fakt**: warunek logiczny, który zależy tylko od danych wejściowych, a nie na stanie maszyny docelowej, jego środowisku lub stanu qubits maszyny. W przeciwieństwie do potwierdzenia fakt jest tylko wrażliwy na *wartości* podane dla tego faktu. Przykład:
 
       *Przykłady:*
       - @"microsoft.quantum.diagnostics.equalityfacti": reprezentuje fakt dotyczący dwóch danych wejściowych z liczbą całkowitą; liczby całkowite podane jako dane wejściowe są równe siebie lub nie są niezależne od żadnego innego stanu programu.
 
-    - **Opcje:** Typ UDT zawierający kilka nazwanych elementów, które mogą działać jako argumenty opcjonalne do funkcji lub operacji. Na przykład:
+    - **Opcje:** Typ UDT zawierający kilka nazwanych elementów, które mogą działać jako argumenty opcjonalne do funkcji lub operacji. Przykład:
 
       *Przykłady:*
       - @"microsoft.quantum.machinelearning.trainingoptions"UDT zawiera nazwane elementy dla stawki szkoleniowej, rozmiar minibatch oraz inne konfigurowalne parametry szkolenia ml.
@@ -268,8 +268,8 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
     - **Jako:** Reprezentuje, że dane wejściowe i wyjściowe funkcji reprezentują te same informacje, ale dane wyjściowe przedstawiają te informacje **jako** *X* , a nie oryginalną reprezentację. Jest to szczególnie typowe w przypadku funkcji konwersji typów.
 
       *Przykłady:*
-      - `IntAsDouble(2)`wskazuje, że zarówno dane wejściowe ( `2` ), jak i dane wyjściowe ( `2.0` ) reprezentują jakościowe te same informacje, ale przy użyciu różnych \# typów danych Q.
+      - `IntAsDouble(2)` wskazuje, że zarówno dane wejściowe ( `2` ), jak i dane wyjściowe ( `2.0` ) reprezentują jakościowe te same informacje, ale przy użyciu różnych \# typów danych Q.
 
-    - **Z:** Aby zapewnić spójność, ta pozycja **nie powinna** być używana do wskazania funkcji konwersji typu lub innego przypadku **,** gdzie jest to odpowiednie.
+    - **Z:** Aby zapewnić spójność, ta pozycja   **nie powinna** być używana do wskazania funkcji konwersji typu lub innego przypadku **,** gdzie jest to odpowiednie.
 
     - ⛔️ **:** **nie należy** używać tego położenia przedniego, aby uniknąć nieporozumień z użyciem jako czasownika w wielu językach programowania.

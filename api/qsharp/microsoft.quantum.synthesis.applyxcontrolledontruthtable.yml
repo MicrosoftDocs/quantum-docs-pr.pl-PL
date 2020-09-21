@@ -16,7 +16,7 @@ summary: >-
 
   Może być reprezentowana przez dużą liczbę całkowitą `0xE8L` w notacji szesnastkowej lub jako `232L` notację dziesiętną.  `L`Sufiks wskazuje, że stała jest typu `BigInt` .
 
-  Więcej szczegółów na temat tej reprezentacji można znaleźć w [tabelach prawdy Kata](https://github.com/microsoft/QuantumKatas/tree/master/TruthTables).
+  Więcej szczegółów na temat tej reprezentacji można znaleźć w [tabelach prawdy Kata](https://github.com/microsoft/QuantumKatas/tree/main/TruthTables).
 
 
   Implementacja wykorzystuje @"microsoft.quantum.intrinsic.cnot" @"microsoft.quantum.intrinsic.r1" bramy i.
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 metadata:
-  ms.openlocfilehash: 782833d34462056413628504cca92f5333a04659
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: d07c1ae20f133d1215d1f6b0cdbd07a635039dda
+  ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89327996"
+  ms.lasthandoff: 09/17/2020
+  ms.locfileid: "90759360"

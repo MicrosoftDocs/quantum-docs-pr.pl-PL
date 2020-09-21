@@ -1,6 +1,6 @@
 ---
 title: Opis obwodów Quantum: informacje o wizualizacji reprezentują proste i złożone operacje Quantum przy użyciu diagramów obwodów Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Circuits MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Circuits MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ W przypadku specjalnych przypadków, w których $ G = X $ i $ g. = $ wprowadzamy
 <!--Nie może znaleźć możliwości łatwego wyśrodkowania tego elementu... prawdopodobnie wymagana jest rozszerzenie:-->
 ![Diagram obwodu dla specjalnych przypadków sterowanych bram](~/media/6.svg)
 
-Q#zapewnia metody automatycznego generowania kontrolowanej wersji operacji, która polega na tym, że programista nie ma konieczności ręcznego wykonywania kodu. Poniżej przedstawiono przykład:
+Q# zapewnia metody automatycznego generowania kontrolowanej wersji operacji, która polega na tym, że programista nie ma konieczności ręcznego wykonywania kodu. Poniżej przedstawiono przykład:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ W związku z tym, taki obwód jest podobny do:
 <!--Nie może znaleźć możliwości łatwego wyśrodkowania tego elementu... prawdopodobnie wymagana jest rozszerzenie:-->
 ![Symbol reprezentujący operację pomiaru](~/media/7.svg)
 
-Q#implementuje [operator miary](xref:microsoft.quantum.intrinsic.measure) do tego celu.
+Q# implementuje [operator miary](xref:microsoft.quantum.intrinsic.measure) do tego celu.
 Zapoznaj się z [sekcją pomiary](xref:microsoft.quantum.libraries.standard.prelude#measurements) , aby uzyskać więcej informacji.
 
 Analogicznie, podobwód

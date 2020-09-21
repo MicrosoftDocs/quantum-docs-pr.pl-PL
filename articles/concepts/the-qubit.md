@@ -1,6 +1,6 @@
 ---
 title: qubit w usłudze Quantum Computing Description: Poznaj qubits, podstawową jednostkę informacji w ramach przetwarzania Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. qubit MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -120,7 +120,7 @@ Qubits może również być postawiony w $ 3 $ D przy użyciu reprezentacji [*sf
 ![Bloch sfera](~/media/concepts_bloch.png)
 
 Strzałki na tym diagramie pokazują kierunek, w którym wektor stanu Quantum jest wskazywany, a każda transformacja strzałki może być uważana za rotację na jednej z osi kardynalnych.
-Chociaż zastanawiasz się, że obliczenia Quantum są rozbudowane Intuition, trudne jest użycie tego Intuition do projektowania i opisywania algorytmów. Q#eliminuje ten problem, dostarczając język do opisywania rotacji.
+Chociaż zastanawiasz się, że obliczenia Quantum są rozbudowane Intuition, trudne jest użycie tego Intuition do projektowania i opisywania algorytmów. Q# eliminuje ten problem, dostarczając język do opisywania rotacji.
 
 ## <a name="single-qubit-operations"></a>Operacje pojedynczej qubit
 
@@ -128,7 +128,7 @@ Komputery Quantum przetwarzają dane przez zastosowanie uniwersalnego zestawu br
 To pojęcie uniwersalności jest zbliżone na potrzeby uniwersalności dla tradycyjnych (tj. klasycznych) obliczeń, w których zestaw bram jest uznawany za uniwersalny, jeśli każda transformacja bitów wejściowych może zostać wykonana przy użyciu obwodu o skończonej długości.
 W przypadku przetwarzania Quantum prawidłowe przekształcenia, które możemy wykonywać na qubit są transformacje jednostkowe i pomiary.
 *Podległych operacja* lub złożona sprzężona transformacja ma decydujące znaczenie dla przetwarzania Quantum, ponieważ jest to konieczne do odwrócenia transformacji Quantum.
-Q#odzwierciedla to, dostarczając metody do automatycznego kompilowania sekwencji bram do ich sąsiadujących, co sprawia, że programista chce, aby adjoints kod w wielu przypadkach. Poniżej przedstawiono przykład:
+Q# odzwierciedla to, dostarczając metody do automatycznego kompilowania sekwencji bram do ich sąsiadujących, co sprawia, że programista chce, aby adjoints kod w wielu przypadkach. Poniżej przedstawiono przykład:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ W celu zapewnienia uniwersalnego wymaga się, aby komputer Quantum był *przybli
 Innymi słowy, zestaw bram jest uniwersalnym zestawem bram, jeśli jakakolwiek transformacja jednostkowa może być w przybliżeniu zapisywana jako iloczyn bram z tego zestawu. Wymagane jest, aby dla dowolnego z określonych błędów istniały bramy $ G_ { 1 } , G_ { 2 } , \ldots, G_N $ z zestawu bram, tak że
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \approx U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \approx U. $$
 
 Należy zauważyć, że ze względu na to, że Konwencja do mnożenia macierzy ma być mnożona od prawej do lewej strony pierwszej bramy w tej sekwencji, $ G_N $ , jest faktycznie ostatnią zastosowana do wektora stanu Quantum. Bardziej formalnie Załóżmy, że taki zestaw bram jest uniwersalny, jeśli dla każdej tolerancji błędów $ \epsilon > 0 $ istnieje $ G_1, \ldots G_N, $ że odległość między $ G_N \ldots G_1 $ i $ U $ jest najwyżej $ \epsilon $ . Najlepiej, aby wartość $ N $ wymagana do osiągnięcia tej odległości $ \epsilon $ powinna mieć skalę Poly-logarithmically z $ 1/\ Epsilon $ .
 

@@ -1,19 +1,20 @@
 ---
 title: Słownik biblioteki Quantum Machine Learning
+description: Słownik terminów dotyczących programu Quantum Machine Learning
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863025"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833910"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Słownik Quantum Machine Learning
 
@@ -42,7 +43,7 @@ Definiuje liczbę próbek danych używanych do pojedynczego oszacowania gradient
 ### <a name="training-epochs-tolerance-gridlocks"></a>Treningi, tolerancja, gridlocks
 
 "Epoka" oznacza jedno kompletne przejście przez zaplanowane dane szkoleniowe.
-Maksymalna liczba epok na wątek szkoleniowy (patrz poniżej) powinna być ograniczona. Wątek szkoleniowy jest zdefiniowany do zakończenia (z najlepszymi znanymi parametrami kandydatów), gdy została wykonana Maksymalna liczba epok. Jednak takie szkolenie zostanie zakończone wcześniej, gdy wartość w harmonogramie sprawdzania poprawności nie będzie mniejsza niż wybrana tolerancja. Załóżmy na przykład, że niedozwolona tolerancja klasyfikacji wynosi 0,01 (1%); Jeśli na 2000 zestawie walidacji próbek jest wyświetlana mniej niż 20 błędów klasyfikacji, osiągnięto poziom tolerancji. Wątek szkoleniowy kończy się również przedwcześnie, jeśli wynik sprawdzania poprawności modelu kandydata nie pokazał żadnych ulepszeń w przypadku kilku kolejnych epok (korków). Logika dla zakończenia korków jest obecnie stałe.
+Maksymalna liczba epok na wątek szkoleniowy (patrz poniżej) powinna być ograniczona. Wątek szkoleniowy jest zdefiniowany do zakończenia (z najlepszymi znanymi parametrami kandydatów), gdy została uruchomiona Maksymalna liczba epok. Jednak takie szkolenie zostanie zakończone wcześniej, gdy wartość w harmonogramie sprawdzania poprawności nie będzie mniejsza niż wybrana tolerancja. Załóżmy na przykład, że niedozwolona tolerancja klasyfikacji wynosi 0,01 (1%); Jeśli na 2000 zestawie walidacji próbek jest wyświetlana mniej niż 20 błędów klasyfikacji, osiągnięto poziom tolerancji. Wątek szkoleniowy kończy się również przedwcześnie, jeśli wynik sprawdzania poprawności modelu kandydata nie pokazał żadnych ulepszeń w przypadku kilku kolejnych epok (korków). Logika dla zakończenia korków jest obecnie stałe.
 
 ### <a name="measurements-count"></a>Liczba pomiarów
 

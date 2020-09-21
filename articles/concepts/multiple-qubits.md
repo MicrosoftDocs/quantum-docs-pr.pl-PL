@@ -1,6 +1,6 @@
 ---
 title: wiele qubits opis: informacje na temat wykonywania operacji na co najmniej dwóch qubitsach.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Multiple-qubits MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: bradben UID: Microsoft. Quantum. koncepcje. Multiple-qubits MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -97,7 +97,7 @@ Te narzędzia są absolutnie niezbędne do zrozumienia zestawów bram, które s�
 
 ## <a name="representing-two-qubits"></a>Reprezentuje dwa Qubits
 Główną różnicą między jednym i dwuqubitowym stanem jest to, że dwa qubit Stany są cztery wymiarowe, a nie dwa wymiarowe.
-Wynika to z faktu, że podstawa obliczeniowa dla dwóch qubit Stanów jest tworzona przez produkty dwustronne z qubit Stanów.  Na przykład mamy\begin{align}
+Wynika to z faktu, że podstawa obliczeniowa dla dwóch qubit Stanów jest tworzona przez produkty dwustronne z qubit Stanów.  Na przykład mamy \begin{align}
 00 \equiv \begin{bmatrix} 1 \\\\ 0 1 0 1 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} , \qquad 01 \equiv \begin{bmatrix} 1 \\\\ 0 0 0 \end{bmatrix} \otimes \begin{bmatrix} 1 0 \\\\ \end{bmatrix} = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} ,\\\\
 10 0 1 1 0 0 0 \equiv \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} , \qquad 11 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} 0 0 0.
 \end{align}
@@ -122,7 +122,7 @@ Na przykład nie ma żadnych Stanów $ \psi = \begin{bmatrix} \alpha \\\\ \beta 
 
 $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ / \sqrt { 2 } \end{bmatrix} .$$ 
 
-Taki stan dwuqubitowy, który nie może być zapisany jako iloczyn dwuetapowego stanu jednego qubitu, jest nazywany "Entangled State"; dwa qubits są określane jako [*Entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement).  Mówiąc, że stan Quantum nie może być uważany za pojedynczy iloczyn jednego z qubit Stanów, informacje przechowywane przez stan nie są ograniczone do jednej z qubits indywidualnie.  Zamiast tego informacje są przechowywane nie lokalnie w korelacji między tymi dwoma stanami.  Taka nielokalna informacja jest jedną z głównych funkcji przetwarzania Quantum w porównaniu z klasycznym przetwarzaniem i jest istotna dla wielu protokołów Quantum, takich jak [teleporty](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) Quantum i [Korekcja błędów Quantum](xref:microsoft.quantum.libraries.error-correction).
+Taki stan dwuqubitowy, który nie może być zapisany jako iloczyn dwuetapowego stanu jednego qubitu, jest nazywany "Entangled State"; dwa qubits są określane jako [*Entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement).  Mówiąc, że stan Quantum nie może być uważany za pojedynczy iloczyn jednego z qubit Stanów, informacje przechowywane przez stan nie są ograniczone do jednej z qubits indywidualnie.  Zamiast tego informacje są przechowywane nie lokalnie w korelacji między tymi dwoma stanami.  Taka nielokalna informacja jest jedną z głównych funkcji przetwarzania Quantum w porównaniu z klasycznym przetwarzaniem i jest istotna dla wielu protokołów Quantum, takich jak [teleporty](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) Quantum i [Korekcja błędów Quantum](xref:microsoft.quantum.libraries.error-correction).
 
 ## <a name="measuring-two-qubit-states"></a>Mierzenie dwuQubitowych Stanów ##
 Mierzenie dwuqubitowych Stanów jest bardzo podobne do pomiarów pojedynczej qubit. Mierzenie stanu
@@ -137,29 +137,29 @@ $$
 zwraca $ 00 $ z prawdopodobieństwem $ | \alpha _ { 00 } | ^ 2 $ , $ 01 $ $ | z \alpha prawdopodobieństwem _ { 01 } | ^ 2 $ , $ 10 $ z prawdopodobieństwem $ | \alpha _ { 10 } | ^ 2 $ i $ 11 $ z $ prawdopodobieństwem | 11 \alpha _ { } | ^ 2 $ . Zmienne $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ i $ 11 \alpha _ { } $ zostały świadomie nazwane, aby to połączenie było jasne. Po pomiarze, jeśli wynik wynosi $ 00, $ stan Quantum dla systemu dwuqubitowego został zwinięty i jest teraz
 
 $$
-    1,00\equiv
+    1,00 \equiv
     \begin{bmatrix}
-        jedno\\\\ 
-        2,0\\\\ 
-        2,0\\\\ 
+        jedno \\\\ 
+        2,0 \\\\ 
+        2,0 \\\\ 
         0 \end{bmatrix} .
 $$
 
 Możliwe jest również zmierzenie tylko jednego qubita z dwuqubitnym stanem Quantum. W przypadkach, gdy mierzy się tylko jeden z qubits, wpływ pomiaru jest nieco różny, ponieważ cały stan nie jest zwijany do stanu podstawy, a raczej jest zwinięty tylko w jednym podsystemie.  Innymi słowy w takich przypadkach pomiary tylko jednego qubit zwija tylko jeden z podsystemów, ale nie wszystkich.  
 
-Aby to sprawdzić, rozważ zmierzenie pierwszego qubitu następującego stanu, który jest tworzony przez zastosowanie Hadamard przekształcenia $ H $ na dwóch qubits początkowo ustawionych jako "0":$$
+Aby to sprawdzić, rozważ zmierzenie pierwszego qubitu następującego stanu, który jest tworzony przez zastosowanie Hadamard przekształcenia $ H $ na dwóch qubits początkowo ustawionych jako "0": $$
 H ^ { \otimes 2 (1 0 1 0) 1 2 1 1 1 1 1 – 1 1-1-1-1,0 1-1-1-1-1,0% 0 1 1 } \left \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \right = \frac { } { } \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & \end{bmatrix} \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} = \frac { } { } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases} \text { } = . wynik 0 1 2% 1 & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ 0 \\\\ 0 \end{bmatrix} \\\\ \text { wynik } = 1 & \frac { 1 } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \\\\ \end{cases} 0 0 1.  
 $$
 Oba wyniki mają 50% prawdopodobieństwa wystąpienia.  Wynik o wartości 50% prawdopodobieństwa dla obu tych możliwości można zależeć od faktu, że początkowa wektor stanu Quantum jest niezmienny w przypadku wymiany $ 0 $ z $ 1 $ w pierwszej qubit.
 
-Reguła matematyczna służąca do mierzenia pierwszych lub sekund qubit jest prosta.  Jeśli postanowimy $ $ , e_k być $ k ^ { \rma } $ wektora obliczeń i niech $ S $ będzie zestawem wszystkich $ e_k $ w taki sposób, że qubit w danym przypadku Pobiera wartość $ 1 $ dla tej wartości $ k $ .  Na przykład, Jeśli interesuje Cię pomiar pierwszej qubit, $ S $ będzie zawierać $ e_1 \equiv 10 $ i $ e_3 \equiv 11 $ .  Podobnie, jeśli chcemy, aby druga qubit $ S $ obejmowała $ e_2 \equiv 01 $ i $ e_3 \equiv 11 $ .  Prawdopodobieństwo mierzenia wybranych qubit na $ 1 $ jest dla wektora stanu$\psi$
+Reguła matematyczna służąca do mierzenia pierwszych lub sekund qubit jest prosta.  Jeśli postanowimy $ $ , e_k być $ k ^ { \rma } $ wektora obliczeń i niech $ S $ będzie zestawem wszystkich $ e_k $ w taki sposób, że qubit w danym przypadku Pobiera wartość $ 1 $ dla tej wartości $ k $ .  Na przykład, Jeśli interesuje Cię pomiar pierwszej qubit, $ S $ będzie zawierać $ e_1 \equiv 10 $ i $ e_3 \equiv 11 $ .  Podobnie, jeśli chcemy, aby druga qubit $ S $ obejmowała $ e_2 \equiv 01 $ i $ e_3 \equiv 11 $ .  Prawdopodobieństwo mierzenia wybranych qubit na $ 1 $ jest dla wektora stanu $\psi$
 
 $$
 P ( \text { wynik } = 1) = \sum _ { e_k \text { w zestawie } S } \psi ^ \dagger e_k e_k ^ \dagger \psi .
 $$
 
 > [!NOTE]
->W tym dokumencie korzystamy z formatu little-endian, aby oznaczyć podstawę obliczeniową. W formacie little endian najmniej znaczące bity są pierwsze. Na przykład liczba czterech w formacie little-endian jest reprezentowana przez ciąg bitów 001.
+> W tym dokumencie korzystamy z formatu little-endian, aby oznaczyć podstawę obliczeniową. W formacie little endian najmniej znaczące bity są pierwsze. Na przykład liczba czterech w formacie little-endian jest reprezentowana przez ciąg bitów 001.
 
 Ponieważ każda pomiar qubit może dać jedynie $ wartość 0 $ lub $ 1 $ , prawdopodobieństwo pomiaru $ 0 $ jest po prostu $ 1-P ( \text { wynik } = 1) $ .  Dlatego tylko jawnie dajemy formułę dla prawdopodobieństwa pomiaru $ 1 $ .
 
@@ -198,37 +198,37 @@ Podobnie jak w przypadku pojedynczej qubit, każda transformacja jednostkowa jes
 Na przykład brama CNOT (sterowana bez) jest powszechnie wykorzystywaną bramą dwuqubitową i jest reprezentowana przez następującą macierz jednostkową:
 
 $$
-\operatorname{CNOT } = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 0 \ 0 \ 0 \ \\\\ 1 \\\\ 0 \ 0 \ 1 \ 0\end{bmatrix}
+\operatorname{CNOT } = \begin{bmatrix} 1 \ 0 \ 0 \ 0  \\\\  0 \ 1 \ 0 \ 0 0 \ 0 \ 0 \ \\\\  1 \\\\  0 \ 0 \ 1 \ 0 \end{bmatrix}
 $$
 
 Możemy również utworzyć bramy dwuqubitowe, stosując bramy jednoqubitowe na obu qubits. Na przykład jeśli stosujemy bramy 
 
 $$
 \begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 $$
 
 oraz
 
 $$\begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}
+e \ f \\\\ g \ h \end{bmatrix}
 $$
 
-odpowiednio do pierwszej i drugiej qubits jest to równoznaczne z zastosowaniem jednostki dwuqubitowej dostarczonej przez jej iloczyn dwuskładnikowy:$$\begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+odpowiednio do pierwszej i drugiej qubits jest to równoznaczne z zastosowaniem jednostki dwuqubitowej dostarczonej przez jej iloczyn dwuskładnikowy: $$\begin{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}=
+e \ f \\\\ g \ h \end{bmatrix}=
     \begin{bmatrix}
-    AE \ AF \ nie należy\\\\
-    AG \ Ah \ BG \ BH\\\\
-    ce \ CF \ de \ DF\\\\
+    AE \ AF \ nie należy \\\\
+    AG \ Ah \ BG \ BH \\\\
+    ce \ CF \ de \ DF \\\\
     CG \ ch \ DG \ DH \end{bmatrix} .$$
 W ten sposób możemy tworzyć bramy dwuqubitowe, pobierając iloczyn dwustronnych bram o pojedynczej qubit. Niektóre przykłady bram z dwoma qubitami obejmują $ h \otimes h $ , $ x \otimes \boldone $ i $ x \otimes Z $ .
 
 Należy pamiętać, że chociaż dwie bramy pojedynczej qubit definiują bramę dwuqubitową przez przejmowanie jej iloczynu, to nie jest spełniony. Nie wszystkie bramy dwuqubitowe mogą być napisywane jako iloczyn dwuskładnikowego bram pojedynczej qubit.  Taka Brama jest nazywana bramą *Entangling* . Przykładem bramy Entangling jest brama CNOT.
 
-Intuition za bramą typu kontrolowanego nie można uogólnionie do dowolnych bram.  Kontrolowana Brama ogólnie jest bramą, która działa jako tożsamość (IE nie ma żadnej akcji), chyba że określony qubit to $ 1 $ .  Oznacza to, że sterowane jednostki są kontrolowane w tym przypadku na qubit z etykietą $ x $ $ \Lambda \_ (U) $ .  Przykładowo $ \Lambda _0 (u) e 1 \_ { } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ i $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e \_ { 0 } \otimes { \psi } $ , gdzie $ e \_ 0 $ i $ e \_ 1 $ są wektorami obliczanymi na podstawie wartości $ 0 $ i $ 1 $ .  Rozważmy na przykład następującą sterowaną $ bramą-Z, $ a następnie możemy to zrobić jako$$
+Intuition za bramą typu kontrolowanego nie można uogólnionie do dowolnych bram.  Kontrolowana Brama ogólnie jest bramą, która działa jako tożsamość (IE nie ma żadnej akcji), chyba że określony qubit to $ 1 $ .  Oznacza to, że sterowane jednostki są kontrolowane w tym przypadku na qubit z etykietą $ x $ $ \Lambda \_ (U) $ .  Przykładowo $ \Lambda _0 (u) e 1 \_ { } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ i $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e \_ { 0 } \otimes { \psi } $ , gdzie $ e \_ 0 $ i $ e \_ 1 $ są wektorami obliczanymi na podstawie wartości $ 0 $ i $ 1 $ .  Rozważmy na przykład następującą sterowaną $ bramą-Z, $ a następnie możemy to zrobić jako $$
 \Lambda\_0 (Z) 1 0 1,0 0 0 1,0 0 0 0 1 0 0 0 = \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & -1 \end{bmatrix} = ( \boldone \otimes h) \operatorname { CNOT } ( \boldone \otimes h).
 $$
 
@@ -251,7 +251,7 @@ Bramy Quantum działają w taki sam sposób.  Na przykład jeśli chcemy zastoso
 
 \begin{align}
 &(X \otimes \operatorname { CNOT } _ { 12 } \otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone ) \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ 1 1 0 0 0\end{bmatrix}\\\\
-&\qquad\qquad\equiv0011001.\end{align}
+&\qquad\qquad\equiv 0011001. \end{align}
 
 W wielu systemach qubit często istnieje potrzeba alokacji i alokacji qubits, które pełnią rolę pamięci tymczasowej dla komputera Quantum.  Taka qubit jest nazywana Ancilla.  Domyślnie przyjęto, że stan qubit jest inicjowany $ e_0 $ po przydzieleniu.  Ponadto założono, że jest on ponownie zwracany do $ e_0 $ przed cofnięciem alokacji.  To założenie jest ważne, ponieważ jeśli Ancilla qubit będzie Entangled z innym rejestrem qubit, gdy zostanie cofnięta alokacja, proces cofania alokacji spowoduje szkody dla Ancilla.  Z tego powodu zawsze zakładamy, że takie qubits są przywracane do stanu początkowego przed jego udostępnieniem.
 

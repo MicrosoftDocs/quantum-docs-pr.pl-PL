@@ -1,6 +1,6 @@
 ---
 title: Opis platformy Quantum Oracle: informacje na temat pracy z i definiowania Quantum Oracle, operacje czarnego pola, które są używane jako dane wejściowe w innym algorytmie.
-Autor: cgranade UID: Microsoft. Quantum. koncepcje. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. temat: artykuł No-Loc:
+Autor: cgranade UID: Microsoft. Quantum. koncepcje. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ 
 $$
 
 ## <a name="phase-oracles"></a>Fazy Oracle
-Alternatywnie możemy kodować program $ f $ do programu Oracle $ o, $ stosując _fazę_ w oparciu o dane wejściowe $ $ . Można na przykład określić, $ $ że$$
+Alternatywnie możemy kodować program $ f $ do programu Oracle $ o, $ stosując _fazę_ w oparciu o dane wejściowe $ $ . Można na przykład określić, $ $ że $$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Jeśli faza Oracle działa na bieżąco z rejestrem w stanie obliczenia $ \ket { x } $ , wówczas ta faza jest globalnym etapem i dlatego nie jest zauważalna.
 Jednak taka Oracle może być bardzo wydajnym zasobem, jeśli jest stosowana do nadpozycji lub jako kontrolowanej operacji.
 Rozważmy na przykład fazę $ O_f firmy Oracle $ dla funkcji pojedynczej qubit $ f $ .
-Następnie$$
+Następnie $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

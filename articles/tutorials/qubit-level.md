@@ -2,19 +2,19 @@
 title: Zapisuj i Symuluj programy qubit na poziomie Q#
 description: Samouczek krok po kroku dotyczący pisania i symulowania programu Quantum, który działa na indywidualnym poziomie qubit
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863330"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834962"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Samouczek: pisanie i symulowanie programów qubit na poziomie w funkcji Q\#
 
@@ -116,7 +116,7 @@ W programie `using` qubits są automatycznie przypisywane w stanie $ \ket {0} $.
 Następnie stosujemy bramy, które składają się na samą operację.
 Q# zawiera już wiele podstawowych bram Quantum jako operacje w [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) przestrzeni nazw i nie są one wyjątkiem. 
 
-W ramach Q# operacji instrukcje wywoływania wywołania będą wykonywane w kolejności sekwencyjnej.
+W ramach Q# operacji, instrukcje wywołujące wywołania będą wykonywane w kolejności sekwencyjnej.
 W związku z tym pierwsza brama do zastosowania to [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) do pierwszej qubit:
 
 <br/>
@@ -132,9 +132,9 @@ Dlatego zastosowanie [`H`](xref:microsoft.quantum.intrinsic.h) do pierwszej qubi
 Oprócz zastosowania `H` bramy (Hadamard) do poszczególnych qubits obwód QFT składa się głównie z kontrolowanych [`R1`](xref:microsoft.quantum.intrinsic.r1) rotacji.
 `R1(θ, <qubit>)`Operacja ogólnie pozostawia składnik $ \ket {0} $ niezmienionej qubit, podczas gdy stosowana jest rotacja $e ^ {i\theta} $ do składnika $ \ket {1} $.
 
-#### <a name="controlled-operations"></a>Kontrolowane operacje
+#### <a name="controlled-operations"></a>Operacje sterowane
 
-Q# sprawia, że nie jest to bardzo proste, aby było możliwe wykonywanie operacji na jednym lub wielu qubits kontroli.
+Q# sprawia, że uruchomienie operacji na jednym lub wielu kontrolkach qubits bardzo proste.
 Ogólnie rzecz biorąc, należy jedynie przeddzwonić wywołanie z `Controlled` , a argumenty operacji zmieniają się w taki sposób:
 
  `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Gdy Q# plik i operacja zakończą pracę, nasz program Quantum jest gotowy do wywołania i symulowania.
 
-## <a name="execute-the-program"></a>Wykonywanie programu
+## <a name="run-the-program"></a>Uruchamianie programu
 
 Po zdefiniowaniu naszej Q# operacji w `.qs` pliku musimy teraz wywołać tę operację i obserwować wszystkie zwrócone dane klasyczne.
 Na razie nie ma niczego żadnego zwracanego (należy odwołać, że nasza operacja została zdefiniowana powyżej `Unit` ), ale w przypadku późniejszej modyfikacji Q# operacji w celu zwrócenia tablicy wyników pomiaru ( `Result[]` ) nastąpi przekierowanie.
@@ -269,7 +269,7 @@ Aby uruchomić program, Otwórz terminal w folderze projektu i wprowadź
 dotnet run
 ```
 
-Po wykonaniu tych czynności powinny zostać `Message` wyświetlone `DumpMachine` poniższe dane wyjściowe w konsoli programu.
+Po zakończeniu powinny zostać wyświetlone poniższe dane `Message` `DumpMachine` wyjściowe w konsoli programu.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,9 +314,9 @@ Host języka C# ma cztery części:
     Brak w tym przykładzie.
 3. Uruchamia algorytm kwantowy. 
     Każda Q# Operacja generuje klasę języka C# o tej samej nazwie. 
-    Ta klasa ma metodę `Run`, która **asynchronicznie** wykonuje operację.
-    Wykonanie jest asynchroniczne, ponieważ wykonanie na rzeczywistym sprzęcie będzie asynchroniczne. 
-    Ponieważ `Run` Metoda jest asynchroniczna, wywoływana jest `Wait()` Metoda; ta funkcja blokuje wykonywanie do momentu zakończenia zadania i zwraca wynik synchronicznie. 
+    Ta klasa ma `Run` metodę, która wykonuje operację **asynchronicznie**.
+    Przebieg jest asynchroniczny, ponieważ jego działanie na rzeczywistym sprzęcie będzie asynchroniczne. 
+    Ponieważ `Run` Metoda jest asynchroniczna, wywoływana jest `Wait()` metoda; spowoduje to zablokowanie przebiegu do momentu zakończenia zadania i zwrócenie wyniku synchronicznie. 
 4. Przetwarza zwrócony wynik operacji.
     Na razie operacja nie zwraca żadnej wartości.
 
@@ -499,7 +499,7 @@ Kod operacji końcowej powinien wyglądać następująco:
 }
 ```
 
-Jeśli pracujesz z wiersza polecenia, zwracana tablica zostanie po prostu wydrukowana bezpośrednio do konsoli po zakończeniu wykonywania.
+Jeśli pracujesz z wiersza polecenia, zwracana tablica zostanie po prostu wyświetlona bezpośrednio w konsoli na końcu uruchomienia.
 W przeciwnym razie zaktualizuj program hosta, aby przetworzyć zwróconą tablicę.
 
 #### <a name="command-prompt"></a>[Wiersz polecenia](#tab/tabid-cmdline)

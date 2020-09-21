@@ -1,38 +1,39 @@
 ---
-title: Przepływ sterowania wQ#
+title: Przepływ sterowania w Q#
 description: Pętle, warunkowe itd.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867951"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833507"
 ---
-# <a name="control-flow-in-no-locq"></a>Przepływ sterowania wQ#
+# <a name="control-flow-in-no-locq"></a>Przepływ sterowania w Q#
 
 W ramach operacji lub funkcji każda instrukcja jest uruchamiana w kolejności, podobnie jak w przypadku innych typowych języków, których to dotyczy.
 Można jednak zmodyfikować przepływ kontroli na trzy różne sposoby:
 
-* `if`zatwierdzeni
-* `for`pętli
-* `repeat-until-success`pętli
+* `if` zatwierdzeni
+* `for` pętli
+* `repeat-until-success` pętli
+* liczby sprzężone ( `apply-within` instrukcje)
 
-`if` `for` Konstrukcje przepływu sterowania i są realizowane w dobrze znanym znaczeniu dla większości klasycznych języków programowania. [`Repeat-until-success`](#repeat-until-success-loop)pętle zostały omówione w dalszej części tego artykułu.
+`if` `for` Konstrukcje przepływu sterowania i są realizowane w dobrze znanym znaczeniu dla większości klasycznych języków programowania. [`Repeat-until-success`](#repeat-until-success-loop) pętle i [sprzężenia](#conjugations) zostały omówione w dalszej części tego artykułu.
 
 Należy pamiętać, że `for` pętle i `if` instrukcje mogą być używane w operacjach, dla których [specjalizacje](xref:microsoft.quantum.guide.operationsfunctions) są generowane automatycznie. W tym scenariuszu sąsiadująca `for` Pętla odwraca kierunek i przyjmuje sąsiadujące poszczególne iteracje.
 Ta akcja jest zgodna z zasadą "buty i-SOCKS": Jeśli chcesz cofnąć umieszczenie w usłudze SOCKS, a następnie kliknij pozycję Wycofaj w odniesieniu do butów, a następnie Cofnij umieszczenie w obszarze SOCKS. 
 
 ## <a name="if-else-if-else"></a>If, Else-IF, else
 
-`if`Instrukcja obsługuje wykonywanie warunkowe.
+`if`Instrukcja obsługuje przetwarzanie warunkowe.
 Składa się ze słowa kluczowego `if` , wyrażenia logicznego w nawiasach i bloku instrukcji (bloku _then_ ).
 Opcjonalnie można wykonać dowolną liczbę klauzul else-IF, z których każdy składa się ze słowa kluczowego `elif` , wyrażenia logicznego w nawiasach i bloku instrukcji (bloku _else-if_ ).
 Na koniec instrukcja może opcjonalnie zakończyć z klauzulą else, która składa się ze słowa kluczowego, `else` po którym następuje inny blok instrukcji (blok _else_ ).
@@ -75,7 +76,7 @@ Instrukcja składa się ze słowa kluczowego `for` , po którym następuje symbo
 
 Blok instrukcji (treść pętli) jest uruchamiany wielokrotnie, ze zdefiniowanym symbolem (zmienna pętli) powiązaną z każdą wartością z zakresu lub tablicy.
 Należy zauważyć, że jeśli wyrażenie zakresu szacuje pusty zakres lub tablicę, treść nie jest w ogóle uruchomiona.
-Wyrażenie jest w pełni oceniane przed wprowadzeniem pętli i nie zmienia się w czasie wykonywania pętli.
+Wyrażenie jest w pełni oceniane przed wprowadzeniem pętli i nie zmienia się, gdy pętla jest uruchomiona.
 
 Zmienna pętla jest powiązana z każdym wejściem do treści pętli i jest niepowiązana na końcu treści.
 Zmienna Loop nie jest powiązana po zakończeniu pętli for.
@@ -129,7 +130,7 @@ Zostanie uruchomiona pętla, a następnie warunek jest obliczany.
 Jeśli warunek ma wartość true, instrukcja zostanie zakończona; w przeciwnym razie przebiega naprawy i instrukcja zostanie ponownie uruchomiona, rozpoczynając od treści pętli.
 
 Wszystkie trzy części pętli jednostek ru (treść, test i naprawa) są traktowane jako pojedynczy zakres *dla każdego powtórzenia*, dlatego symbole, które są powiązane w treści są dostępne zarówno w teście, jak i w naprawie.
-Jednak wykonanie naprawy kończy zakres instrukcji, tak aby powiązania symboli wykonane w trakcie treści lub naprawy nie były dostępne w kolejnych powtórzeniach.
+Jednak ukończenie przebiegu naprawy kończy zakres instrukcji, tak aby powiązania symboli wykonane podczas treści lub naprawy nie były dostępne w kolejnych powtórzeniach.
 
 Ponadto `fixup` instrukcja jest często przydatna, ale nie zawsze jest konieczna.
 W przypadkach, gdy nie jest to konieczne, konstrukcja
@@ -148,11 +149,12 @@ Aby uzyskać więcej przykładów i szczegółów, zobacz [przykłady powtarzani
 > [!TIP]   
 > Unikaj używania pętli REPEAT-until-Success wewnątrz funkcji. Użyj *while* pętle, aby zapewnić odpowiednie funkcje wewnątrz funkcji. 
 
-## <a name="while-loop"></a>While — pętla
+## <a name="while-loop"></a>Pętla while
 
-Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum. Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego w przypadku dedykowanego języka konstrukcja w Q# . Jednak pętle, które są przerywane w zależności od warunku, a długość wykonywania jest w tym przypadku nieznana w czasie kompilacji, są obsługiwane z uwzględnieniem szczególnej opieki w środowisku uruchomieniowym Quantum. Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum). 
+Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum. Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego w przypadku dedykowanego języka konstrukcja w Q# . Jednak pętle, które są przerywane w zależności od stanu i długość przebiegu są nieznane w czasie kompilacji, są obsługiwane z szczególnym uwzględnieniem w środowisku uruchomieniowym Quantum. Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum). 
 
-Q#w związku z tym obsługuje używanie pętli while tylko w obrębie funkcji. `while`Instrukcja składa się z słowa kluczowego `while` , wyrażenia logicznego w nawiasach i bloku instrukcji.
+Q#w związku z tym obsługuje używanie pętli while tylko w obrębie funkcji.
+`while`Instrukcja składa się z słowa kluczowego `while` , wyrażenia logicznego w nawiasach i bloku instrukcji.
 Blok instrukcji (treść pętli) działa tak długo, jak warunek zostanie obliczony `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>Liczby sprzężone
+
+W przeciwieństwie do klasycznych bitów zwalnianie pamięci Quantum jest nieco bardziej zamierzone, ponieważ niequbitse Resetowanie może mieć niepożądane skutki dla pozostałych obliczeń, jeśli qubits nadal Entangled. Te efekty można uniknąć przez prawidłowe wykonanie obliczeń przed przystąpieniem do zwolnienia pamięci. Typowym wzorcem przetwarzania Quantum jest następujące: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# obsługuje instrukcję sprzężenia implementującą poprzednią transformację. Korzystając z tej instrukcji, `ApplyWith` można zaimplementować operację w następujący sposób:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Taka instrukcja sprzężona jest przydatna, jeśli zewnętrzne i wewnętrzne przekształcenia nie są łatwo dostępne jako operacje, ale są bardziej wygodne do opisania przez blok składający się z kilku instrukcji. 
+
+Przekształcenie odwrotne dla instrukcji zdefiniowanych w bloku jest automatycznie generowane przez kompilator i uruchamiane po zakończeniu zastosowania instrukcji.
+Ponieważ żadne zmienne modyfikowalne używane jako część wewnątrz bloku nie mogą być ponownie powiązane w bloku Apply, wygenerowane przekształcenie jest gwarantowane jako sąsiadujące obliczenie w bloku. 
 
 ## <a name="return-statement"></a>Return, instrukcja
 
@@ -248,7 +289,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>JEDNOSTEK ru bez`fixup`
+### <a name="rus-without-fixup"></a>JEDNOSTEK ru bez `fixup`
 
 Ten przykład pokazuje pętlę jednostek ru bez kroku naprawy. Kod jest obwodem usługi probabilistyczne, który implementuje ważną bramę rotacji $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ przy użyciu `H` `T` bram i.
 Pętla kończy się na wartościach $ \frac {8} {5} $.
@@ -330,7 +371,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Aby uzyskać więcej informacji, zobacz [przykładowe testy jednostkowe dostępne w bibliotece standardowej](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Aby uzyskać więcej informacji, zobacz [przykładowe testy jednostkowe dostępne w bibliotece standardowej](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Następne kroki
 
