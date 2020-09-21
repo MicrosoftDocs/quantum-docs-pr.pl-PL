@@ -2,18 +2,18 @@
 title: Przykładowy program NWChem Quantum
 description: Za pomocą pokładu wejściowego NWChem należy zapoznać się z przykładem uzyskiwania liczby bram dla symulacji chemicznej Quantum.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759719"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835761"
 ---
 # <a name="end-to-end-with-nwchem"></a>Kompleksowe rozwiązanie z NWChem #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> Domyślnie system Windows zapobiega wykonywaniu skryptów lub modułów jako miary zabezpieczeń.
-> Aby zezwolić na uruchamianie modułów `Invoke-NWChem.psm1` w systemie Windows, może być konieczna zmiana zasad wykonywania.
+> Domyślnie system Windows zapobiega uruchamianiu skryptów lub modułów jako miary zabezpieczeń.
+> Aby zezwolić na uruchamianie modułów `Invoke-NWChem.psm1` w systemie Windows, może być konieczne zmodyfikowanie zasad.
 > Aby to zrobić, uruchom `Set-ExecutionPolicy` polecenie:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> Zasady wykonywania zostaną następnie przywrócone po zakończeniu działania programu PowerShell.
-> Jeśli chcesz zapisać zasady wykonywania, użyj innej wartości dla `-Scope` :
+> Zasady zostaną przywrócone po zakończeniu działania programu PowerShell.
+> Jeśli chcesz zapisać zasady, użyj innej wartości dla `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

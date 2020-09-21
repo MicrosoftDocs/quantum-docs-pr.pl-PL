@@ -2,19 +2,19 @@
 title: Operacje i funkcje w Q#
 description: Jak definiować i wywoływać operacje i funkcje, a także wyspecjalizowane specjalizacje operacji.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759428"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833477"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Operacje i funkcje w Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Jeśli operacja implementuje transformację jednostkową, tak jak w przypadku wielu operacji w Q# , można zdefiniować sposób działania operacji przy *adjointed* lub *kontrolowanej*. *Podległych* specjalizacji operacji określa sposób działania "odwrotności" operacji, podczas gdy *kontrolowana* specjalizacja określa, jak działa operacja, gdy jej aplikacja jest kondycjonowana na stanie określonego rejestru Quantum.
 
-Adjoints operacji Quantum są kluczowe dla wielu aspektów przetwarzania Quantum. Przykład jednej takiej sytuacji omówionej wraz z użyteczną Q# techniką programowania, zobacz [sprzężenia](#conjugations) w tym artykule. 
-
-Kontrolowana wersja operacji jest nową operacją, która efektywnie stosuje operację podstawową tylko wtedy, gdy wszystkie kontrolki qubits są w określonym stanie.
+Adjoints operacji Quantum są kluczowe dla wielu aspektów przetwarzania Quantum. Przykład jednej takiej sytuacji omówionej wraz z użyteczną Q# techniką programowania można znaleźć w temacie [sterowanie przepływem: sprzężenia](xref:microsoft.quantum.guide.controlflow#conjugations). Kontrolowana wersja operacji jest nową operacją, która efektywnie stosuje operację podstawową tylko wtedy, gdy wszystkie kontrolki qubits są w określonym stanie.
 Jeśli kontrolka qubits znajduje się w położeniu, wówczas podstawowa operacja jest stosowana spójnie z odpowiednią częścią położenia.
 W ten sposób kontrolowane operacje są często używane do generowania Entanglement.
 
@@ -151,7 +149,7 @@ Rzeczywista implementacja każdej specjalizacji może być *jawnie* lub *jawnie*
 
 ### <a name="implicitly-specifying-implementations"></a>Niejawnie Określanie implementacji
 
-W takim przypadku treść deklaracji operacji składa się wyłącznie z implementacji domyślnej. Na przykład:
+W takim przypadku treść deklaracji operacji składa się wyłącznie z implementacji domyślnej. Przykład:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -364,46 +362,6 @@ Można
 
 Typy zdefiniowane przez użytkownika są traktowane jako opakowana wersja typu podstawowego, a nie jako podtyp.
 Oznacza to, że wartość typu zdefiniowanego przez użytkownika nie może być użyteczna w przypadku, gdy oczekiwano wartości typu podstawowego.
-
-
-### <a name="conjugations"></a>Liczby sprzężone
-
-W przeciwieństwie do klasycznych bitów zwalnianie pamięci Quantum jest nieco bardziej zamierzone, ponieważ niequbitse Resetowanie może mieć niepożądane skutki dla pozostałych obliczeń, jeśli qubits nadal Entangled. Te efekty można uniknąć przez prawidłowe wykonanie obliczeń przed przystąpieniem do zwolnienia pamięci. Typowym wzorcem przetwarzania Quantum jest następujące: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-Począwszy od naszego 0,9 wydania, Q# obsługuje instrukcję sprzężenia implementującą poprzednią transformację. Korzystając z tej instrukcji, `ApplyWith` można zaimplementować operację w następujący sposób:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Taka instrukcja sprzężona jest znacznie bardziej użyteczna, jeśli przekształcenia zewnętrzne i wewnętrzne nie są łatwo dostępne jako operacje, ale są bardziej wygodne do opisania przez blok składający się z kilku instrukcji. 
-
-Przekształcenie odwrotne dla instrukcji zdefiniowanych w bloku jest automatycznie generowane przez kompilator i uruchamiane po zakończeniu zastosowania instrukcji.
-Ponieważ żadne zmienne modyfikowalne używane jako część wewnątrz bloku nie mogą być ponownie powiązane w bloku Apply, wygenerowane przekształcenie jest gwarantowane jako sąsiadujące obliczenie w bloku. 
 
 
 ## <a name="defining-new-functions"></a>Definiowanie nowych funkcji

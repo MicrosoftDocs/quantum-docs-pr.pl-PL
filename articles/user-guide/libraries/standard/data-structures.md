@@ -3,18 +3,18 @@ title: Struktury danych w Q# bibliotekach standardowych
 description: Informacje na temat struktur danych, Oracle i dynamicznych generatorów w Q# bibliotekach standardowych firmy Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868527"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835591"
 ---
 # <a name="data-structures-and-modeling"></a>Struktury i modelowanie danych #
 
@@ -160,8 +160,8 @@ Ten moduł jest zwykle opisywany przez jeden z dwóch typów rozwiązań firmy O
 
 > [!TIP]
 > Oba typy Oracle opisane poniżej zostały omówione w przykładach.
-> Aby dowiedzieć się więcej o programie Oracle Query, zobacz przykład [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
-> Aby dowiedzieć się więcej na temat zapytań dyskretnych, zobacz [przykład **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> Aby dowiedzieć się więcej o programie Oracle Query, zobacz przykład [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Aby dowiedzieć się więcej na temat zapytań dyskretnych, zobacz [przykład **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 Pierwszy typ Oracle, który wywołuje zapytanie dyskretne Oracle i reprezentuje typ zdefiniowany przez użytkownika <xref:microsoft.quantum.oracles.discreteoracle> , po prostu obejmuje macierz jednostkową.
 Jeśli $U $ jest jednostką, której eigenvalues chcemy oszacować, a firma Oracle dla $U $ jest po prostu dodatkiem do procedury podrzędnej, która implementuje $U $.
@@ -211,8 +211,8 @@ gdzie liczba całkowita $r > $0 kontroluje błąd przybliżenia.
 Biblioteka modelowania generatora dynamicznego zapewnia strukturę służącą do systematycznego kodowania skomplikowanych generatorów pod kątem łatwiejszych generatorów. Taki opis może zostać następnie przesłany do, powiedzmy, biblioteka symulacji w celu zaimplementowania ewolucji czasu przez wybrany przez Ciebie algorytm symulacji z wieloma szczegółami.
 
 > [!TIP]
-> Dynamiczna biblioteka generatora opisana poniżej znajduje się w przykładach. Aby zapoznać się z przykładem opartym na modelu Ising, zobacz [przykład **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> Przykład na podstawie wodoru molekularnego można znaleźć w [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) i [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) Samples.
+> Dynamiczna biblioteka generatora opisana poniżej znajduje się w przykładach. Aby zapoznać się z przykładem opartym na modelu Ising, zobacz [przykład **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> Przykład na podstawie wodoru molekularnego można znaleźć w [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) i [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) Samples.
 
 ### <a name="complete-description-of-a-generator"></a>Pełny opis generatora ###
 

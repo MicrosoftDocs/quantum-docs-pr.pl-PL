@@ -1,20 +1,20 @@
 ---
 title: Praca z kubitami
-description: Opis wypełnienia
+description: Dowiedz się więcej o pracy z usługą qubits w programie Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867866"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835863"
 ---
 # <a name="working-with-qubits"></a>Praca z kubitami
 
@@ -150,7 +150,7 @@ Pomiary poszczególnych qubits można wykonywać w różnych bazach, z których 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Mierzenie pojedynczej qubit w `PauliZ` oparciu o
 
 Użyj [`M`](xref:microsoft.quantum.intrinsic.m) operacji, która jest wbudowaną wewnętrzną operacją niebędącą jednostką, do pomiaru pojedynczej qubit na `PauliZ` podstawę i przypisz wartość klasyczną do wyniku.
-`M`ma zarezerwowany typ zwracany, `Result` który może przyjmować tylko wartości `Zero` lub `One` odpowiadające mierzonym stanom $ \ket {0} $ lub $ \ket {1} $-wskazującą, że wynik nie jest już stanem Quantum.
+`M` ma zarezerwowany typ zwracany, `Result` który może przyjmować tylko wartości `Zero` lub `One` odpowiadające mierzonym stanom $ \ket {0} $ lub $ \ket {1} $-wskazującą, że wynik nie jest już stanem Quantum.
 
 Prostym przykładem jest następująca operacja, która przydziela jeden qubit w stanie $ \ket {0} $, a następnie stosuje do niego operację Hadamard `H` i mierzy wynik `PauliZ` .
 

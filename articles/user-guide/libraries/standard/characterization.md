@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868631"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759913"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -74,7 +74,7 @@ Oszacowanie fazy z tego powodu występuje w wielu algorytmach Quantum, które ud
 ### <a name="bayesian-phase-estimation"></a>Oszacowanie fazy bayesowskie ###
 
 > [!TIP]
-> Aby uzyskać więcej informacji na temat szacowania fazy bayesowskie w sposób, zobacz przykład [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) .
+> Aby uzyskać więcej informacji na temat szacowania fazy bayesowskie w sposób, zobacz przykład [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) .
 
 Koncepcja szacowania fazy bayesowskie jest prosta.
 Dane statystyczne pomiarów można zbierać z poziomu protokołu szacowania fazy, a następnie przetwarzać wyniki przy użyciu wnioskowania bayesowskie i podać oszacowanie parametru.
@@ -112,7 +112,7 @@ Najważniejszym elementem niezawodnym oszacowania fazy, który jest współużyt
 Inne istotne szczegóły obejmują:, na przykład, obciążenie małą ilością tylko $1 $ Ancilla qubit lub że procedura jest nieadaptacyjna, co oznacza, że wymagana sekwencja eksperymentów Quantum jest niezależna od wyników pomiaru pośredniego. W tym i przemieszczonych przykładach, w których jest ważne, aby wybrać algorytm szacowania fazy, należy zapoznać się z dokumentacją, taką jak @"microsoft.quantum.characterization.robustphaseestimation" i publikacjami, do których istnieją odwołania, aby uzyskać więcej informacji i ich implementacji.
 
 > [!TIP]
-> Istnieje wiele przykładów, w których jest używane niezawodne szacowanie faz. W przypadku szacowania fazy w przypadku wyodrębnienia energii stanu ziemi w różnych systemach fizycznych należy zapoznać się z przykładem [ **symulacji H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [przykładem **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)i [przykładowym **modelem Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+> Istnieje wiele przykładów, w których jest używane niezawodne szacowanie faz. W przypadku szacowania fazy w przypadku wyodrębnienia energii stanu ziemi w różnych systemach fizycznych należy zapoznać się z przykładem [ **symulacji H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), [przykładem **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)i [przykładowym **modelem Hubbard** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Ciągłe firmy Oracle ###
@@ -130,7 +130,7 @@ W rezultacie użycie szacowania fazy z ciągłymi zapytaniami pozwala nam pozna�
 
 ### <a name="random-walk-phase-estimation"></a>Szacowanie fazy losowego przeszukiwania ###
 
-Q#zapewnia przydatne przybliżenie oceny fazy bayesowskie przeznaczonej do użycia w pobliżu urządzeń Quantum, które działają przez Kondycjonowanie losowego przeszukiwania rekordów danych uzyskanych z oszacowania fazy iteracyjnej.
+Q# zapewnia przydatne przybliżenie oceny fazy bayesowskie przeznaczonej do użycia w pobliżu urządzeń Quantum, które działają przez Kondycjonowanie losowego przeszukiwania rekordów danych uzyskanych z oszacowania fazy iteracyjnej.
 Ta metoda jest zarówno adaptacyjna, jak i całkowicie deterministyczna, co pozwala na niemal optymalne skalowanie błędów w szacowanej fazie $ \hat{\phi} $ z bardzo niewielką ilością pamięci.
 
 Protokół używa przybliżonej metody wnioskowania bayesowskie, która zakłada, że wcześniejsza dystrybucja to gaussowskie.

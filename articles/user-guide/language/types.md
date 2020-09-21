@@ -1,31 +1,31 @@
 ---
-title: Typy wQ#
+title: Typy w Q#
 description: Dowiedz się więcej na temat różnych typów używanych w Q# języku programowania.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869600"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835829"
 ---
-# <a name="types-in-no-locq"></a>Typy wQ#
+# <a name="types-in-no-locq"></a>Typy w Q#
 
 W tym artykule opisano Q# model typu i składnię służącą do określania typów i pracy z tymi typami. Aby uzyskać szczegółowe informacje na temat sposobu tworzenia i obsługi wyrażeń tych typów, zobacz [wyrażenia typu](xref:microsoft.quantum.guide.expressions).
 
 Należy pamiętać, że Q# jest *strongly-typed* to wulgarny język, w taki sposób, że staranne korzystanie z tych typów może pomóc kompilatorowi zapewnić silne gwarancje dotyczące Q# programów w czasie kompilacji.
 Aby zapewnić najmocniejsze gwarancje, konwersje między typami w Q# muszą być jawne przy użyciu wywołań do funkcji, które wyrażają tę konwersję. 
-Q#oferuje różne funkcje, które są częścią <xref:microsoft.quantum.convert> przestrzeni nazw.
+Q# oferuje różne funkcje, które są częścią <xref:microsoft.quantum.convert> przestrzeni nazw.
 Przerzuty do zgodnych typów, z drugiej strony, nastąpią niejawnie. 
 
-Q#zawiera typy pierwotne, które są używane bezpośrednio, i różne sposoby tworzenia nowych typów z innych typów.
+Q# zawiera typy pierwotne, które są używane bezpośrednio, i różne sposoby tworzenia nowych typów z innych typów.
 Opiszemy każdą z nich w dalszej części tego artykułu.
 
 ## <a name="primitive-types"></a>Typy pierwotne
@@ -34,7 +34,7 @@ Q#Język zawiera następujące *typy pierwotne*, z których można korzystać be
 
 - `Int`Typ reprezentuje 64-bitową liczbę całkowitą ze znakiem, na przykład,, `2` `107` `-5` .
 - `BigInt`Typ reprezentuje podpisaną liczbę całkowitą z dowolnego rozmiaru, na przykład, `2L` , `107L` `-5L` .
-   Ten typ jest oparty na platformie .NET<xref:System.Numerics.BigInteger>
+   Ten typ jest oparty na platformie .NET <xref:System.Numerics.BigInteger>
    Wprowadź.
 
 - `Double`Typ reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji, na przykład,, `0.0` `-1.3` `4e-7` .
@@ -53,7 +53,7 @@ Q#Język zawiera następujące *typy pierwotne*, z których można korzystać be
    Jest to typ wyliczeniowy, który ma cztery możliwe wartości: `PauliI` , `PauliX` , `PauliY` , i `PauliZ` , które są stałymi typu `Pauli` .
 - `Result`Typ reprezentuje wynik pomiaru.
    Jest to typ wyliczeniowy z dwoma możliwymi wartościami: `One` i `Zero` , które są stałymi typu `Result` .
-   `Zero`wskazuje, że eigenvalue + 1 została zmierzona; `One`wskazuje, że eigenvalue — 1.
+   `Zero` wskazuje, że eigenvalue + 1 została zmierzona; `One` wskazuje, że eigenvalue — 1.
 
 Stałe,,,,,, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` i `Zero` są zastrzeżonymi symbolami w Q# .
 
@@ -65,7 +65,7 @@ Stałe,,,,,, `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` i `Zero` s
 * Tablica tablic jest również prawidłowa. Rozszerzanie w poprzednim przykładzie, tablica `(Bool, Pauli)` tablic jest oznaczona `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Ten przykład, `(Bool, Pauli)[][]` , reprezentuje potencjalnie nieregularną tablicę tablic, a nie prostokątną dwuwymiarową tablicę. Q#nie obsługuje prostokątnych tablic wielowymiarowych.
+> Ten przykład, `(Bool, Pauli)[][]` , reprezentuje potencjalnie nieregularną tablicę tablic, a nie prostokątną dwuwymiarową tablicę. Q# nie obsługuje prostokątnych tablic wielowymiarowych.
 
 * Wartość tablicy może być zapisywana w Q# kodzie źródłowym przy użyciu nawiasów kwadratowych wokół elementów tablicy, jak w `[PauliI, PauliX, PauliY, PauliZ]` .
 Wspólny typ podstawowy wszystkich elementów w tablicy określa typ literału tablicy. W związku z tym konstruowanie tablicy z elementami, które nie mają wspólnego typu podstawowego, zgłasza błąd.  
@@ -98,7 +98,7 @@ Indeksy dolne tablic są oparte na zero i muszą być typu `Int` lub typu `Range
 Krotki są zaawansowaną koncepcją używaną przez cały Q# program do zbierania wartości w jednej wartości, co ułatwia ich przekazywanie.
 W szczególności przy użyciu notacji krotki można wyrazić, że każda operacja i możliwy do odwoływać przyjmuje dokładnie jedno wejście i zwraca dokładnie jedno wyjście.
 
-* Podaną zero lub kilka różnych typów,,..., `T0` `T1` można zauważyć, że `Tn` Nowy *Typ krotki* jako `(T0, T1, ..., Tn)` .
+* Podaną zero lub kilka różnych typów,,..., `T0` `T1` można zauważyć, że `Tn` Nowy  *Typ krotki* jako `(T0, T1, ..., Tn)` .
 Typy używane do konstruowania nowego typu krotki mogą sami być krotkami, jak w `(Int, (Qubit, Qubit))` .
 Takie zagnieżdżenie jest zawsze ograniczone, jednak ponieważ typy krotek nie mogą znajdować się w żadnych okolicznościach.
 
@@ -109,7 +109,7 @@ Istnieje możliwość tworzenia tablic krotek, spójnych kolekcji tablic, krotek
 * Od Q# 0,3, `Unit` jest nazwą *typu* pustej krotki; `()` jest używana dla *wartości* pustej krotki.
 
 * Wystąpienia krotki są niezmienne.
-Q#Program nie udostępnia mechanizmu zmiany zawartości spójnej kolekcji po utworzeniu.
+Q# Program nie udostępnia mechanizmu zmiany zawartości spójnej kolekcji po utworzeniu.
 
 
 
@@ -133,7 +133,7 @@ Nazywamy tę właściwość jako _równoważność spójnej kolekcji_.
 
 Deklaracja typu zdefiniowanego przez użytkownika składa się ze słowa kluczowego `newtype` , po którym następuje nazwa typu zdefiniowanego przez użytkownika, elementu `=` , prawidłowej specyfikacji typu i kończącego się średnika.
 
-Na przykład:
+Przykład:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -155,10 +155,10 @@ newtype Complex = (Double, Double);
 ```
 Ta instrukcja tworzy nowy typ z dwoma anonimowymi elementami typu `Double` .   
 
-Poza elementami anonimowymi typy zdefiniowane przez użytkownika obsługują również *nazwane elementy* w Q# wersji 0,7 lub nowszej. Można na przykład nazwać elementy do `Re` dla podwójnego reprezentowania rzeczywistej części liczby zespolonej i `Im` dla części urojonej: 
+Poza elementami anonimowymi typy zdefiniowane przez użytkownika obsługują również *nazwane elementy* w Q# wersji 0,7 lub nowszej. Można na przykład nazwać elementy do `Real` dla podwójnego reprezentowania rzeczywistej części liczby zespolonej i `Imag` dla części urojonej: 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 Nazewnictwo jednego elementu w typie zdefiniowanym przez użytkownika nie oznacza, że wszystkie elementy muszą mieć nazwę, a także obsługiwane są dowolne kombinacje elementów nazwanych i nienazwanych. Ponadto elementy wewnętrzne mogą być również nazwane.
 Typ `Nested` , jak pokazano poniżej, ma typ podstawowy `(Double, (Int, String))` , którego tylko element typu `Int` ma nazwę, a wszystkie inne elementy są anonimowe. 
@@ -171,18 +171,18 @@ Elementy nazwane mają zalety, do których można uzyskiwać dostęp bezpośredn
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 Oprócz udostępniania krótkich aliasów dla potencjalnie skomplikowanych typów krotek, istotną zaletą definiowania takich typów jest możliwość udokumentowania zamiaru określonej wartości.
-Powracanie do przykładu `Complex` , może być również zdefiniowane współrzędne bieguna 2D jako typ zdefiniowany przez użytkownika:
+Powracanie do przykładu `Complex` , może także definiować współrzędne biegunowe represenation jako typ zdefiniowany przez użytkownika:
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-Mimo że oba te `Complex` i `Polar` oba mają typ podstawowy `(Double, Double)` , te dwa typy są całkowicie niezgodne Q# , co minimalizuje ryzyko przypadkowego wywołania złożonej funkcji matematycznej z współrzędnymi biegunowymi i odwrotnie.
+Mimo że oba te `Complex` i `ComplexPolar` oba mają typ podstawowy `(Double, Double)` , te dwa typy są całkowicie niezgodne Q# , co minimalizuje ryzyko przypadkowego wywołania złożonej funkcji matematycznej z współrzędnymi biegunowymi i odwrotnie.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Dostęp do anonimowych elementów za pomocą operatora rozwinięcia
 
@@ -199,7 +199,7 @@ function PrintedMessage(value : Nested) : Unit {
 
 Pojedynczy operator odpakowywania odpakuje jedną warstwę otoki. Użyj wielu nieopakowanych operatorów, aby uzyskać dostęp do wartości w postaci mnożenia.
 
-Na przykład:
+Przykład:
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -259,8 +259,8 @@ Ogólnie rzecz biorąc, typy zdefiniowane przez użytkownika mogą nie zawierać
 
 Uwzględniając typy `'Tinput` i `'Tresult` :
 
-* `('Tinput => 'Tresult)`jest typem podstawowym dla każdej *operacji*, na przykład `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)`jest typem podstawowym dla dowolnej *funkcji*, na przykład `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` jest typem podstawowym dla każdej *operacji*, na przykład `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` jest typem podstawowym dla dowolnej *funkcji*, na przykład `(Int -> Int)` . 
 
 Są one nazywane *sygnaturą* wywołania.
 
@@ -274,13 +274,13 @@ Są one nazywane *sygnaturą* wywołania.
 Typy *funkcji* są w pełni określone przez ich sygnaturę. Na przykład funkcja, która oblicza sinus kąta, będzie miała typ `(Double -> Double)` . 
 
 *Operacje* mają pewne dodatkowe cechy, które są wyrażane jako część typu operacji. Takie charakterystyki zawierają informacje o tym, które *funktory* operacja obsługuje.
-Na przykład, jeśli wykonanie operacji opiera się na stanie innych qubits, powinien on obsługiwać `Controlled` Funktor; Jeśli operacja ma odwrotność, powinien obsługiwać `Adjoint` Funktor.
+Na przykład, Jeśli uruchomienie operacji opiera się na stanie innych qubits, powinien on obsługiwać `Controlled` Funktor; Jeśli operacja ma odwrotność, powinien obsługiwać `Adjoint` Funktor.
 
 > [!NOTE]
 > W tym artykule omówiono, jak funktory zmienić sygnaturę operacji. Aby uzyskać więcej informacji na temat funktory i operacji, zobacz [operacje i Q# funkcje w ](xref:microsoft.quantum.guide.operationsfunctions). 
 
 Aby wymagać obsługi dla `Controlled` i/lub `Adjoint` Funktor w typie operacji, należy dodać adnotację wskazującą odpowiadające jej cechy.
-Adnotacja `is Ctl` (na przykład `(Qubit => Unit is Ctl)` ) wskazuje, że operacja jest sterowana. Oznacza to, że jego wykonywanie opiera się na stanie innego qubit lub qubits. Podobnie adnotacja `is Adj` wskazuje, że operacja ma sąsiadujące, to oznacza, że może być "odwrócona", co oznacza, że po zastosowaniu operacji, a następnie jej współdziałanie do stanu pozostawia stan niezmieniony. 
+Adnotacja `is Ctl` (na przykład `(Qubit => Unit is Ctl)` ) wskazuje, że operacja jest sterowana. Oznacza to, że jego przebieg zależy od stanu innego qubit lub qubits. Podobnie adnotacja `is Adj` wskazuje, że operacja ma sąsiadujące, to oznacza, że może być "odwrócona", co oznacza, że po zastosowaniu operacji, a następnie jej współdziałanie do stanu pozostawia stan niezmieniony. 
 
 Jeśli chcesz wymagać, aby operacja tego typu obsługiwała zarówno element, `Adjoint` jak i `Controlled` Funktor, możesz to zrobić jako `(Qubit => Unit is Adj + Ctl)` . Na przykład wbudowana <xref:microsoft.quantum.intrinsic.x> operacja Pauli ma typ `(Qubit => Unit is Adj + Ctl)` . 
 
@@ -298,7 +298,7 @@ Podobnie funkcja, która zwraca skład dwóch operacji, ma sygnaturę `((('A=>'B
 
 Po wywołaniu wywołania typu sparametryzowanego wszystkie argumenty, które mają ten sam parametr typu, muszą być tego samego typu.
 
-Q#Program nie udostępnia mechanizmu ograniczania możliwych typów, które użytkownik może zastąpić parametrem typu.
+Q# Program nie udostępnia mechanizmu ograniczania możliwych typów, które użytkownik może zastąpić parametrem typu.
 
 ## <a name="next-steps"></a>Następne kroki
 

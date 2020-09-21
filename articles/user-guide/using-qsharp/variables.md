@@ -1,24 +1,24 @@
 ---
-title: Zmienne wQ#
-description: Opis wypełnienia
+title: Zmienne w Q#
+description: Dowiedz się, jak korzystać z różnych zmiennych w Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867849"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835880"
 ---
-# <a name="variables-in-no-locq"></a>Zmienne wQ#
+# <a name="variables-in-no-locq"></a>Zmienne w Q#
 
-Q#rozróżnia symbole modyfikowalne *i zmienne,* które są powiązane/przypisane do wyrażeń.
+Q# rozróżnia symbole modyfikowalne *i zmienne,* które są powiązane/przypisane do wyrażeń.
 Ogólnie rzecz biorąc, zaleca się użycie niezmiennych symboli, ponieważ umożliwia kompilatorowi wykonywanie większej optymalizacji.
 
 Lewa strona powiązania składa się z krotki symboli i prawej strony wyrażenia.
@@ -166,7 +166,7 @@ Przypisanie tego formularza jest określane w celu *odtworzenia* elementów tej 
 Jeśli po prawej stronie powiązania jest krotka, można ją dekonstruować po przypisaniu.
 Takie dekonstrukcji mogą dotyczyć krotek zagnieżdżonych, a każda pełna lub częściowa dekonstrukcja jest prawidłowa, o ile kształt krotki po prawej stronie jest zgodny z kształtem krotki symboli.
 
-Na przykład:
+Przykład:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1

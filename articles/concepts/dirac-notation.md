@@ -1,6 +1,6 @@
 ---
 title: Dirac opis notacji: informacje na temat używania notacji Dirac do reprezentowania Stanów Quantum i symulowania operacji Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Dirac MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Pojęcie to przedstawiające stan jako macierz, a nie wektor, jest często wygod
 Ogólne operatory stanu Quantum, a nie wektory, są powszechnie dostępne w niektórych obszarach przetwarzania Quantum, ale nie są niezbędne do zrozumienia podstaw tego pola.
 W przypadku interesującego czytnika zalecamy odczytanie jednej z książek referencyjnych, które znajdują się w temacie, [Aby uzyskać więcej informacji](xref:microsoft.quantum.more-information).
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#sekwencje bram równoważne z Stanami Quantum
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# sekwencje bram równoważne z Stanami Quantum
 Punkt końcowy, który jest podwyższany dla notacji Quantum i Q# języka programowania: na początku tego dokumentu stwierdzamy, że element Quantum jest podstawowym obiektem informacji w ramach przetwarzania Quantum.  Może to być niespodziewane, że w przypadku Q# wystąpienia Quantum nie ma żadnego pojęcia.  Zamiast tego wszystkie stany są opisane tylko przez operacje używane do ich przygotowania.  Poprzedni przykład jest doskonałym ilustracją.  Zamiast wyznaczać jednolite nadpozycja dla każdego ciągu bitowego Quantum w rejestrze, możemy przedstawić wynik jako $ H ^ { \otimes n } \ket { 0 } $ .  Ten wykładniczy, krótszy opis stanu nie tylko ma zaletę, że możemy z niej skorzystać, ale również zwięzłie definiuje operacje, które są niezbędne do propagowania przez stos oprogramowania w celu wdrożenia algorytmu.  Z tego powodu Q# zaprojektowano w celu emitowania sekwencji bram zamiast Stanów Quantum; jednak na poziomie teoretycznym dwie perspektywy są równoważne.

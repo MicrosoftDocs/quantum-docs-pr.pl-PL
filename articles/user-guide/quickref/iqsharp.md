@@ -2,18 +2,18 @@
 title: I Q# polecenia Magic
 description: Szybka Strona referencyjna dla Q# poleceń Magic z Q# notesami Jupyter
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863699"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833573"
 ---
 # <a name="ino-locq-magic-commands"></a>I Q# polecenia Magic
 
@@ -34,12 +34,12 @@ ms.locfileid: "88863699"
 ### <a name="azure-quantum-integration"></a>Integracja z usługą Quantum platformy Azure
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Nawiązuje połączenie z obszarem roboczym usługi Azure Quantum lub wyświetla bieżący stan połączenia.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Wykonuje zadanie w obszarze roboczym usługi Azure Quantum.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Uruchamia zadanie w obszarze roboczym usługi Azure Quantum.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Wyświetla listę zadań w bieżącym obszarze roboczym usługi Azure Quantum.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Wyświetla wyniki zadania w bieżącym obszarze roboczym usługi Azure Quantum.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Wyświetla stan zadania w bieżącym obszarze roboczym usługi Azure Quantum.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Przesyła zadanie do obszaru roboczego usługi Azure Quantum.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Ustawia lub wyświetla aktywny cel wykonywania na potrzeby Q# przesłania zadania w obszarze roboczym usługi Azure Quantum.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Ustawia lub wyświetla aktywny obiekt docelowy przebiegu do Q# przesłania zadania w obszarze roboczym usługi Azure Quantum.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chemia (z pakietu Microsoft. Quantum. chemii)
 
@@ -51,6 +51,6 @@ ms.locfileid: "88863699"
 
 ### <a name="katas-from-microsoftquantumkatas-package"></a>Katas (z pakietu Microsoft. Quantum. Katas)
 
-- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Wykonuje pojedynczy test i sprawdza, czy test zakończył się pomyślnie.
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Uruchamia pojedynczy test i zgłasza, czy test pomyślnie zakończył się powodzeniem.
 - [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): Sprawdza implementację odwołania dla testu pojedynczej Kata.
     W odniesieniu do komórki zastępuje implementację odwołania jednego zadania w komórce i informuje, czy test pomyślnie zakończył się powodzeniem.

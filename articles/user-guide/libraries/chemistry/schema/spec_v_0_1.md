@@ -2,19 +2,19 @@
 title: Specyfikacja schematu Broombridge (ver 0,1)
 description: Szczegóły specyfikacji dla schematu chemii Broombridge Quantum v dla biblioteki chemii Microsoft Quantum.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: abbc63b8801c774e6ba06cff99b7382d64424b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869141"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835744"
 ---
 # <a name="broombridge-specification-v01"></a>Specyfikacja Broombridge v 0,1 #
 

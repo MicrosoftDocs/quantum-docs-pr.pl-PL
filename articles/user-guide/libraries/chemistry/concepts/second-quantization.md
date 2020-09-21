@@ -1,20 +1,20 @@
 ---
 title: Drugie podziału
 description: Dowiedz się więcej na temat drugiego podejścia podziału do modelowania struktur elektronicznych w programowaniu Quantum.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869464"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835812"
 ---
 # <a name="second-quantization"></a>Drugie podziału
 
@@ -77,7 +77,7 @@ Biblioteka chemii Quantum może korzystać z tych konwencji, a w tym celu można
 ```
 
 W przypadku systemów fermionic zasada wykluczenia Pauli zapobiega obecności więcej niż jednego elementu elektronu w jednym punkcie obrotu w tym samym czasie.
-Oznacza to, że możemy napisać dwa stany prawne dla $ \ psi_1 $ as \begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket {0} _1 & \Text{if $ \ psi_1 $ nie jest zajmowana}\\\
+Oznacza to, że możemy napisać dwa stany prawne dla $ \ psi_1 $ as \begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket {0} _1 & \Text{if $ \ psi_1 $ nie jest zajmowana} \\\
 \ket {1} _1 & \Text{if $ \ psi_1 $ jest zajęta.} \end{Cases} \end{Equation} to rozwiązanie jest doskonałe dla komputerów z systemem Quantum, ponieważ oznacza to, że firma Microsoft może przechowywać zawód elektroniczny jako pojedynczy bit Quantum.
 
 Stany zawodności dla elementu $2N $ orbitals mogą być w podobny sposób przechowywane w $2N $ qubits.

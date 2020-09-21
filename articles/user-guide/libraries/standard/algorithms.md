@@ -1,20 +1,20 @@
 ---
-title: Algorytmy Quantum wQ#
+title: Algorytmy Quantum w Q#
 description: Poznaj podstawowe algorytmy przetwarzania Quantum, w tym wzmocnienie amplitudy, transformację Fouriera, Draper i Beauregard, a także oszacowania faz.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868818"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835676"
 ---
 # <a name="quantum-algorithms"></a>Algorytmy Quantum #
 
@@ -30,7 +30,7 @@ Logika za wzmocnieniem amplitudy następuje bezpośrednio z eigenego dekompozycj
 
 Inną przydatną właściwością, która pochodzi z tego, jest to, że eigenvalue $ \theta $ jest bezpośrednio związany z prawdopodobieństwem, że stan początkowy zostanie oznaczony (w przypadku, gdy $P _0 $ jest projektorem tylko w stanie początkowym).  Ponieważ eigenphases $Q $ to $2 \ teta = 2 \ Sin ^ {-1} (\sqrt{\Pr (Success)}) $, wtedy, gdy stosujemy szacowanie fazy do $Q $, możemy poznać prawdopodobieństwo sukcesu dla procedury jednostki Quantum.  Jest to przydatne, ponieważ wymaga dwukwadratowych zastosowań procedury Quantum, aby poznać prawdopodobieństwo sukcesu, niż byłoby to konieczne.
 
-Q#wprowadza wzmocnienie amplitudy jako specjalizację wzmocnienia amplitudy Oblivious.  Wzmocnienie amplitudy Oblivious zdobywa ten moniker, ponieważ projektor na początku eigenspace nie musi być projektorem w stanie początkowym.  W tym sensie protokół jest Oblivious do stanu początkowego.  Najważniejszym zastosowaniem wzmocnienia amplitudy Oblivious jest w niektórych *liniowych kombinacjach* metod symulacji hamiltonian jednostkowych, w którym stan początkowy jest nieznany, ale zmienia się Entangled za pomocą rejestru Ancilla w protokole symulacji.  Jeśli ten rejestr Ancilla był mierzony jako wartość stała, powiedzmy $0 $, a następnie takie metody symulacji stosują odpowiednią transformację jednostkową do pozostałej części qubits (nazywanej rejestrem systemu).  Wszystkie inne wyniki pomiarów mogą jednak prowadzić do błędu.  Wzmocnienie amplitudy Oblivious umożliwia zwiększenie prawdopodobieństwa sukcesu tego pomiaru do $100 \\ % $ z powyższymi przyczynami.  Ponadto zwykłe wzmocnienie amplitudy odnosi się do przypadku, w którym rejestr systemu jest pusty.  Jest to dlatego Q# , że stosuje wzmocnienie amplitudy Oblivious jako podstawową podprocedurę wzmocnienia amplitudy.
+Q# wprowadza wzmocnienie amplitudy jako specjalizację wzmocnienia amplitudy Oblivious.  Wzmocnienie amplitudy Oblivious zdobywa ten moniker, ponieważ projektor na początku eigenspace nie musi być projektorem w stanie początkowym.  W tym sensie protokół jest Oblivious do stanu początkowego.  Najważniejszym zastosowaniem wzmocnienia amplitudy Oblivious jest w niektórych *liniowych kombinacjach* metod symulacji hamiltonian jednostkowych, w którym stan początkowy jest nieznany, ale zmienia się Entangled za pomocą rejestru Ancilla w protokole symulacji.  Jeśli ten rejestr Ancilla był mierzony jako wartość stała, powiedzmy $0 $, a następnie takie metody symulacji stosują odpowiednią transformację jednostkową do pozostałej części qubits (nazywanej rejestrem systemu).  Wszystkie inne wyniki pomiarów mogą jednak prowadzić do błędu.  Wzmocnienie amplitudy Oblivious umożliwia zwiększenie prawdopodobieństwa sukcesu tego pomiaru do $100 \\ % $ z powyższymi przyczynami.  Ponadto zwykłe wzmocnienie amplitudy odnosi się do przypadku, w którym rejestr systemu jest pusty.  Jest to dlatego Q# , że stosuje wzmocnienie amplitudy Oblivious jako podstawową podprocedurę wzmocnienia amplitudy.
 
 Procedura ogólna ( `AmpAmpObliviousByReflectionPhases` ) ma dwa rejestry, które wywołujemy `ancillaRegister` i `systemRegister` . Akceptuje również dwie Oracle w celu zaakceptowania niezbędnych odbić. `ReflectionOracle`Działa tylko na `ancillaRegister` czas, w którym `ObliviousOracle` działają wspólnie dla obu rejestrów. Dane wejściowe `ancillaRegister` muszą być zainicjowane do-1 eigenstate pierwszego operatora odbicia $ \boldone-2P_1 $.
 

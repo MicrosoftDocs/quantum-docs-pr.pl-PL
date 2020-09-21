@@ -3,18 +3,18 @@ title: Korekcja błędów w Q# bibliotekach standardowych
 description: Dowiedz się, jak używać poprawiania kodów błędów w Q# programach, chroniąc stan qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868495"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835557"
 ---
 # <a name="error-correction"></a>Korekcja błędów #
 
@@ -78,7 +78,7 @@ W tej sekcji opisano te struktury i jej aplikacje do kilku prostych kodów koryg
 > Pełne wprowadzenie do formalnego stabilizacji wykracza poza zakres tej sekcji.
 > Czytelnicy chcą uzyskać więcej informacji na temat [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>Reprezentuje kody poprawiające błędy wQ# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Reprezentuje kody poprawiające błędy w Q# ##
 
 Aby pomóc w określeniu poprawnych kodów błędów, Q# Canon oferuje kilka różnych typów zdefiniowanych przez użytkownika:
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Więcej szczegółów znajduje się w [przykładowym kodzie przerzucania bitowego](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
+Więcej szczegółów znajduje się w [przykładowym kodzie przerzucania bitowego](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).
 
 W odniesieniu do kodu bitowego przewrócenia, Q# Canon jest dostarczany z implementacją [qubit doskonałego kodu](https://arxiv.org/abs/quant-ph/9602019), a także [kod siedmiu qubit](https://arxiv.org/abs/quant-ph/9705052), oba mogą poprawić dowolny błąd pojedynczego qubit.

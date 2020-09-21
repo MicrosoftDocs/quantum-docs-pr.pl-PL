@@ -1,6 +1,6 @@
 ---
 title: zaawansowane pojęcia dotyczące macierzy: informacje na temat eigenvectors, eigenvalues i wykładniczych, podstawowych narzędzi służących do opisywania i symulowania algorytmów Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Matrix — Advanced MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Matrix — Advanced MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ Teraz rozszerzamy manipulowanie macierzami na [*Eigenvalues, Eigenvectors*](http
 
 Przypuśćmy, $ $ że jest to macierz kwadratowa, a funkcja $ v to $ wektor, który nie jest wektorem "All Zeros" (tj. wektor ze wszystkimi wpisami równą $ 0 $ ).
 
-Załóżmy $ $ , że v to [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) $ M, $ Jeśli $ = OKS $ dla pewnej liczby $ c $ . Załóżmy $ $ , że c jest [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) odpowiadający eigenvector $ v $ . Ogólnie rzecz biorąc $ , macierz M $ może przekształcić wektor w dowolne inne wektory, ale eigenvector jest specjalny, ponieważ pozostaje niezmieniony, z wyjątkiem tego, że jest mnożony przez liczbę. Należy pamiętać, że jeśli $ v $ jest eigenvector z eigenvalue $ c $ , to $ AV $ jest również eigenvector (dla dowolnej niezerowej $ a $ ) z tym samym eigenvalue.
+Załóżmy $ $ , że v to [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)  $ M, $ Jeśli $ = OKS $ dla pewnej liczby $ c $ . Załóżmy $ $ , że c jest [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) odpowiadający eigenvector $ v $ . Ogólnie rzecz biorąc $ , macierz M $ może przekształcić wektor w dowolne inne wektory, ale eigenvector jest specjalny, ponieważ pozostaje niezmieniony, z wyjątkiem tego, że jest mnożony przez liczbę. Należy pamiętać, że jeśli $ v $ jest eigenvector z eigenvalue $ c $ , to $ AV $ jest również eigenvector (dla dowolnej niezerowej $ a $ ) z tym samym eigenvalue.
 
 Na przykład w przypadku macierzy tożsamości każdy wektor $ v $ jest eigenvector z eigenvalue $ 1 $ .
 
@@ -108,7 +108,7 @@ Wektory
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ \end{bmatrix} , 0 \begin{bmatrix} \\\\ 1 \\\\ \end{bmatrix} i \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-są eigenvectors tej macierzy odpowiednio z eigenvalues $ D_1 $ , $ d_2 $ i $ D_3 $ . Jeśli $ D_1 $ , $ d_2 $ i $ D_3 $ są liczbami odrębnymi, wówczas te wektory (i ich wielokrotność) są jedyną eigenvectorsą macierzy $ d $ . Ogólnie rzecz biorąc, w przypadku matrycy ukośnej można łatwo odczytywać eigenvalues i eigenvectors. Eigenvalues są wszystkie liczby wyświetlane na przekątnej, a ich odpowiednie eigenvectors to wektory jednostek z jednym wpisem równym 1, $ $ a pozostałe wpisy są równe $ 0 $ .
+są eigenvectors tej macierzy odpowiednio z eigenvalues  $ D_1 $ , $ d_2 $ i $ D_3 $ . Jeśli $ D_1 $ , $ d_2 $ i $ D_3 $ są liczbami odrębnymi, wówczas te wektory (i ich wielokrotność) są jedyną eigenvectorsą macierzy $ d $ . Ogólnie rzecz biorąc, w przypadku matrycy ukośnej można łatwo odczytywać eigenvalues i eigenvectors. Eigenvalues są wszystkie liczby wyświetlane na przekątnej, a ich odpowiednie eigenvectors to wektory jednostek z jednym wpisem równym 1, $ $ a pozostałe wpisy są równe $ 0 $ .
 
 Zwróć uwagę, że w powyższym przykładzie eigenvectors z $ D jest $ podstawą dla $ $ wektorów trójwymiarowych. Podstawą jest zestaw wektorów, tak że każdy wektor może być zapisany jako liniowa kombinacja. Bardziej jawnie, $ v_1 $ , $ v_2 $ i $ v_3 $ stanowią podstawę, jeśli dowolny wektor $ v $ może być zapisany jako $ v = A_1 v_1 + a_2 v_2 + a_3 v_3 $ dla niektórych liczb $ A_1 $ , $ a_2 $ i $ a_3 $ .
 

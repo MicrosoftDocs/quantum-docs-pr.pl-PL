@@ -1,22 +1,22 @@
 ---
-title: Q#Nazwie
-description: Podstawowe pojęcia związane zQ#
+title: Q# Nazwie
+description: Podstawowe pojęcia związane z Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869651"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835523"
 ---
-# <a name="no-locq-basics"></a>Q#Nazwie
+# <a name="no-locq-basics"></a>Q# Nazwie
 
 W tym artykule przedstawiono krótkie wprowadzenie do podstawowych bloków konstrukcyjnych Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Aby uzyskać więcej informacji na temat inicjowania lub *alokowania*qubits, zobacz [Praca z qubits](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-no-locq"></a>Stany Quantum wQ#
+## <a name="quantum-states-in-no-locq"></a>Stany Quantum w Q#
 
 Z tego powodu poprzedni program nie odwołuje się jawnie do stanu w ramach Q# programu, ale opisano, w jaki sposób ten program *przekształca* stan.
 Korzystając z tej metody, można całkowicie niezależny od na temat tego, co stan Quantum *jest* nawet na każdej maszynie docelowej, co może mieć różne interpretacje w zależności od maszyny. 
@@ -53,7 +53,7 @@ Jednak w przyszłości, gdy maszyna docelowa jest rzeczywistym komputerem z syst
 Q#Program ponownie łączy te operacje w sposób zdefiniowany przez maszynę docelową w celu utworzenia nowych, wyższych operacji do wyrażenia Quantum obliczeń.
 W ten sposób można Q# łatwo wyrażać logikę podstawowych algorytmów Quantum i hybrydowe, a także ogólnie w odniesieniu do struktury maszyny docelowej lub symulatora.
 
-## <a name="no-locq-operations-and-functions"></a>Q#operacje i funkcje
+## <a name="no-locq-operations-and-functions"></a>Q# operacje i funkcje
 
 W konkretnym przypadku Q# program składa się z *operacji*, *funkcji*i wszystkich typów zdefiniowanych przez użytkownika. 
 
@@ -65,13 +65,13 @@ W tym przypadku `Measure` jest *operacją* , która instruuje maszynę docelową
 Razem operacje i funkcje są nazywane *możliwymi*do przełożenia. Ich podstawowa struktura i zachowanie są wprowadzane i szczegółowo opisane w temacie [operacje Q# i funkcje w ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="no-locq-syntax-overview"></a>Q#Omówienie składni
+## <a name="no-locq-syntax-overview"></a>Q# Omówienie składni
 
 Składnia języka opisuje różne kombinacje symboli, które tworzą poprawny w składni program.
 W programie Q# elementy składni są klasyfikowane do trzech różnych grup: typów, wyrażeń i instrukcji.
 
-### <a name="types"></a>Types
-Q#jest językiem o jednoznacznie określonym typie, w taki sposób, że staranne użycie typów może pomóc kompilatorowi zapewnić mocne gwarancje dotyczące Q# programów w czasie kompilacji.
+### <a name="types"></a>Typy
+Q# jest językiem o jednoznacznie określonym typie, w taki sposób, że staranne użycie typów może pomóc kompilatorowi zapewnić mocne gwarancje dotyczące Q# programów w czasie kompilacji.
 Oprócz standardowych i opartych na Quantum typów pierwotnych, na przykład,,, `Int` `Bool` `Qubit` i `Result` , Q# zapewnia obsługę typów zdefiniowanych przez użytkownika.
 
 Aby zapoznać się z opisami wszystkich typów pierwotnych, szczegóły dotyczące typów tablic i krotek oraz kroki definiowania nowych typów w Q# pliku, zobacz [typy w Q# ](xref:microsoft.quantum.guide.types).
@@ -87,7 +87,7 @@ Na przykład inne `Int` wyrażenie, którego wynikiem jest wartość `5` `2+3` .
 Aby uzyskać więcej informacji na temat wyrażeń i zgodnych operatorów w Q# , zobacz [typu Expressions in Q# ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Instrukcje 
-Instrukcja jest jednostką składniową bezwzględnego języka programowania, która wyraża pewne działania do wykonania. Różnice instrukcji z wyrażeniami w tych instrukcjach nie zwracają wyników i są wykonywane wyłącznie dla ich efektów ubocznych. Wyrażenia, jednak zawsze zwracają wynik i często nie mają efektów ubocznych. W krótkim Q# czasie są wykonywane instrukcje, podczas gdy wyrażenia są oceniane.
+Instrukcja jest jednostką składniową bezwzględnego języka programowania, która wyraża pewne działania do wykonania. Różnice instrukcji z wyrażeniami w tych instrukcjach nie zwracają wyników i są uruchamiane wyłącznie dla ich efektów ubocznych. Wyrażenia, jednak zawsze zwracają wynik i często nie mają żadnych efektów ubocznych. W krótkim Q# czasie są wykonywane instrukcje, podczas gdy wyrażenia są oceniane.
 
 Prosty przykład instrukcji w programie Q# przypisuje symbol do wyrażenia:
 ```qsharp

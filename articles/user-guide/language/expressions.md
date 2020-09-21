@@ -1,32 +1,32 @@
 ---
-title: Wyrażenia wQ#
+title: Wyrażenia w Q#
 description: Dowiedz się, jak określać, odwoływać i łączyć stałe, zmienne, operatory, operacje i funkcje jako wyrażenia w Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869617"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835846"
 ---
-# <a name="expressions-in-no-locq"></a>Wyrażenia wQ#
+# <a name="expressions-in-no-locq"></a>Wyrażenia w Q#
 
 ## <a name="numeric-expressions"></a>Wyrażenia liczbowe
 
 Wyrażenia liczbowe są wyrażeniami typu `Int` , `BigInt` , lub `Double` .
 Oznacza to, że są to liczby całkowite lub zmiennoprzecinkowe.
 
-`Int`literały w Q# są zapisywane jako sekwencja cyfr.
+`Int` literały w Q# są zapisywane jako sekwencja cyfr.
 Szesnastkowe i binarne liczby całkowite są obsługiwane i zapisywane odpowiednio przy użyciu `0x` `0b` prefiksu i.
 
-`BigInt`literały w Q# mają końcowy `l` `L` sufiks lub.
+`BigInt` literały w Q# mają końcowy `l` `L` sufiks lub.
 Szesnastkowe duże liczby całkowite są obsługiwane i zapisywane z prefiksem "0x".
 W ten sposób wszystkie prawidłowe zastosowania `BigInt` literałów są następujące:
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`literały w Q# są liczbami zmiennoprzecinkowymi zapisanymi przy użyciu cyfr dziesiętnych.
+`Double` literały w Q# są liczbami zmiennoprzecinkowymi zapisanymi przy użyciu cyfr dziesiętnych.
 Mogą być napisywane z lub bez separatora dziesiętnego, `.` lub części wykładniczej wskazanej za pomocą znaku "e" lub "e" (po których dozwolone są tylko możliwe znaki minus i cyfry dziesiętne).
 Poniżej podano prawidłowe `Double` literały: `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ W przypadku wartości liczb całkowitych i dużych liczb całkowitych przesunię
 Przesunięcie wartości ujemnej w lewo lub w prawo powoduje ujemną liczbę.
 Oznacza to, że przesunięcie jednego kroku w lewo lub w prawo jest takie samo jak mnożenie lub dzielenie odpowiednio przez 2.
 
-Dzielenie liczb całkowitych i moduł całkowity są zgodne z tym samym zachowaniem dla liczb ujemnych w języku C#.
-Oznacza to, że `a % b` zawsze ma ten sam znak jako `a` i `b * (a / b) + a % b` zawsze równa się `a` .
-Na przykład:
+Dzielenie liczb całkowitych i moduł całkowity są zgodne z tym samym zachowaniem dla liczb ujemnych w języku C#. Oznacza to, że `a % b` zawsze ma ten sam znak jako `a` i `b * (a / b) + a % b` zawsze równa się `a` . Przykład:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 Operacje dzielenia w dużej liczbie całkowitej i modułu działają w ten sam sposób.
 
@@ -113,13 +111,13 @@ Mając każde wyrażenie logiczne, `not` operator jednoargumentowy może służy
 
 ## <a name="string-expressions"></a>Wyrażenia ciągu
 
-Q#zezwala na użycie ciągów w `fail` instrukcji (objaśnienie w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow#fail-statement)) i w [`Message`](xref:microsoft.quantum.intrinsic.message) funkcji standardowej. Takie zachowanie jest zależne od używanego symulatora, ale zazwyczaj zapisuje komunikat do konsoli hosta, gdy zostanie wywołana w trakcie działania Q# programu.
+Q# zezwala na użycie ciągów w `fail` instrukcji (objaśnienie w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow#fail-statement)) i w [`Message`](xref:microsoft.quantum.intrinsic.message) funkcji standardowej. Takie zachowanie jest zależne od używanego symulatora, ale zazwyczaj zapisuje komunikat do konsoli hosta, gdy zostanie wywołana w trakcie działania Q# programu.
 
 Ciągi w Q# są literałami lub interpolowanymi ciągami.
 
 Literały ciągu są podobne do prostych literałów ciągu w większości języków: sekwencji znaków Unicode ujętych w podwójne cudzysłowy `" "` .
 Wewnątrz ciągu Użyj znaku ukośnika odwrotnego, `\` Aby wypróbować znak podwójnego cudzysłowu ( `\"` ) lub wstawić nowy wiersz ( `\n` ), powrót karetki ( `\r` ) lub kartę ( `\t` ).
-Na przykład:
+Przykład:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -156,14 +154,14 @@ Należy zauważyć, że implikowana `step` wartość to + 1 `stop` , nawet jeśl
 
 Oto kilka przykładowych zakresów:
 
-- `1..3`jest zakresem 1, 2, 3.
-- `2..2..5`jest zakresem od 2 do 4.
-- `2..2..6`jest zakresem 2, 4, 6.
-- `6..-2..2`jest zakresem 6, 4, 2.
-- `2..1`jest pustym zakresem.
-- `2..6..7`jest zakresem 2.
-- `2..2..1`jest pustym zakresem.
-- `1..-1..2`jest pustym zakresem.
+- `1..3` jest zakresem 1, 2, 3.
+- `2..2..5` jest zakresem od 2 do 4.
+- `2..2..6` jest zakresem 2, 4, 6.
+- `6..-2..2` jest zakresem 6, 4, 2.
+- `2..1` jest pustym zakresem.
+- `2..6..7` jest zakresem 2.
+- `2..2..1` jest pustym zakresem.
+- `1..-1..2` jest pustym zakresem.
 
 ## <a name="qubit-expressions"></a>Wyrażenia qubit
 
@@ -207,11 +205,11 @@ Dla typów zdefiniowanych przez użytkownika, zdefiniowanych w warunkach innych 
 W takim przypadku, jeśli `WrappedPair` jest typem zdefiniowanym przez użytkownika z typem źródłowym `IntPair` i `t` jest zmienną z wartością `WrappedPair(IntPair(1,2))` , `t!!` to jest `(1,2)` .
 
 `!`Operator ma wyższy priorytet niż wszystkie inne operatory inne niż `[]` dla indeksowania tablicy i dzielenia.
-`!`i `[]` Powiąż, to jest `a[i]![3]` odczytywane jako `((a[i])!)[3]` : Zrób `i` ty element `a` , Odpakuj go, a następnie Pobierz trzeci element nieopakowanej wartości (która musi być tablicą).
+`!` i `[]` Powiąż, to jest `a[i]![3]` odczytywane jako `((a[i])!)[3]` : Zrób `i` ty element `a` , Odpakuj go, a następnie Pobierz trzeci element nieopakowanej wartości (która musi być tablicą).
 
 Pierwszeństwo `!` operatora ma jeden wpływ, który może nie być oczywisty.
 Jeśli funkcja lub operacja zwraca wartość, która staje się nieopakowana, wywołanie funkcji lub operacji musi być ujęte w nawiasy, tak aby krotka argumentu była powiązana z wywołaniem, a nie z odwinięciem.
-Na przykład:
+Przykład:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -253,7 +251,7 @@ Typ | Domyślny
  `Qubit` | _Nieprawidłowy qubit_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | Pusty zakres,`1..1..0`
+ `Range` | Pusty zakres, `1..1..0`
  `Callable` | _nieprawidłowe wywoływanie_
  `Array['T]` | `'T[0]`
 
@@ -328,17 +326,17 @@ Oczywiście tylko odpowiednie fragmenty są ponownie tworzone w miarę potrzeb. 
 Można utworzyć nową tablicę z istniejącej tablicy za pośrednictwem wyrażeń *kopiowania i aktualizowania* , które używają operatorów `w/` i `<-` .
 Wyrażenie Copy-and-Update jest wyrażeniem formularza `expression1 w/ expression2 <- expression3` , gdzie
 
-* `expression1`Typ musi być typem `T[]` `T` .
-* `expression2`definiuje, które indeksy w tablicy określone w `expression1` do zmodyfikowania. `expression2`musi to być typ `Int` lub typ `Range` .
-* `expression3`to wartości używane do aktualizowania elementów w programie `expression1` , na podstawie indeksów określonych w `expression2` . Jeśli `expression2` jest typu `Int` , `expression3` musi być typu `T` . Jeśli `expression2` jest typu `Range` , `expression3` musi być typu `T[]` .
+* `expression1` Typ musi być typem `T[]` `T` .
+* `expression2` definiuje, które indeksy w tablicy określone w `expression1` do zmodyfikowania. `expression2` musi to być typ `Int` lub typ `Range` .
+* `expression3` to wartości używane do aktualizowania elementów w programie `expression1` , na podstawie indeksów określonych w `expression2` . Jeśli `expression2` jest typu `Int` , `expression3` musi być typu `T` . Jeśli `expression2` jest typu `Range` , `expression3` musi być typu `T[]` .
 
 Na przykład wyrażenie Copy-and-Update `arr w/ idx <- value` konstruuje nową tablicę ze wszystkimi elementami ustawionymi na odpowiadające im elementy w `arr` , z wyjątkiem elementów określonych przez `idx` , które są ustawione na wartości w `value` . 
 
 Dostarczone `arr` zawiera tablicę `[0,1,2,3]` , a następnie 
 
-- `arr w/ 0 <- 10`jest tablicą `[10,1,2,3]` .
-- `arr w/ 2 <- 10`jest tablicą `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`jest tablicą `[10,1,12,3]` .
+- `arr w/ 0 <- 10` jest tablicą `[10,1,2,3]` .
+- `arr w/ 2 <- 10` jest tablicą `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` jest tablicą `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Wyrażenia Copy-and-Update dla nazwanych elementów
 
@@ -376,11 +374,11 @@ Można również utworzyć tablicę z możliwymi do przetworzenia.
 * Jeśli wspólny typ elementu jest operacją lub typem funkcji, wszystkie elementy muszą mieć te same typy danych wejściowych i wyjściowych.
 * Typ elementu tablicy obsługuje wszystkie [funktory](xref:microsoft.quantum.guide.operationsfunctions) , które są obsługiwane przez wszystkie elementy.
 Na przykład jeśli `Op1` , `Op2` , i `Op3` wszystkie są `Qubit[] => Unit` operacjami, ale `Op1` obsługuje `Adjoint` , `Op2` obsługuje `Controlled` i `Op3` obsługuje obie:
-  * `[Op1, Op2]`jest tablicą `(Qubit[] => Unit)` operacji.
-  * `[Op1, Op3]`jest tablicą `(Qubit[] => Unit is Adj)` operacji.
-  * `[Op2, Op3]`jest tablicą `(Qubit[] => Unit is Ctl)` operacji.
+  * `[Op1, Op2]` jest tablicą `(Qubit[] => Unit)` operacji.
+  * `[Op1, Op3]` jest tablicą `(Qubit[] => Unit is Adj)` operacji.
+  * `[Op2, Op3]` jest tablicą `(Qubit[] => Unit is Ctl)` operacji.
 
-Jednak chociaż operacje `(Qubit[] => Unit is Adj)` i `(Qubit[] => Unit is Ctl)` mają wspólny typ podstawowy `(Qubit[] => Unit)` , *tablice* tych operacji nie mają wspólnego typu podstawowego.
+Jednak chociaż operacje `(Qubit[] => Unit is Adj)` i  `(Qubit[] => Unit is Ctl)` mają wspólny typ podstawowy `(Qubit[] => Unit)` , *tablice* tych operacji nie mają wspólnego typu podstawowego.
 
 Na przykład `[[Op1], [Op2]]` obecnie zgłaszany jest błąd, ponieważ próbuje utworzyć tablicę dwóch niezgodnych typów tablicy `(Qubit[] => Unit is Adj)[]` i `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ W przypadku dwóch wyrażeń tego samego typu i wyrażenia logicznego należy ut
 Wyrażenia warunkowe mogą oszacować operacje, które mają te same dane wejściowe i wyjściowe, ale obsługują różne funktory. W tym przypadku typ wyrażenia warunkowego jest operacją z danymi wejściowymi i wyjściowymi, które obsługują wszystkie funktory obsługiwane przez oba wyrażenia.
 Na przykład jeśli `Op1` , `Op2` , i `Op3` wszystkie są `Qubit[]=>Unit` , ale obsługuje, `Op1` `Adjoint` `Op2` obsługuje `Controlled` i `Op3` obsługuje obie:
 
-- `flag ? Op1 | Op2`jest `(Qubit[] => Unit)` operacją.
-- `flag ? Op1 | Op3`jest `(Qubit[] => Unit is Adj)` operacją.
-- `flag ? Op2 | Op3`jest `(Qubit[] => Unit is Ctl)` operacją.
+- `flag ? Op1 | Op2` jest `(Qubit[] => Unit)` operacją.
+- `flag ? Op1 | Op3` jest `(Qubit[] => Unit is Adj)` operacją.
+- `flag ? Op2 | Op3` jest `(Qubit[] => Unit is Ctl)` operacją.
 
 Jeśli jedno z dwóch możliwych wyrażeń wynikowych zawiera wywołanie funkcji lub operacji, to wywołanie odbywa się tylko wtedy, gdy ten wynik jest wartością wywołania. Na przykład w przypadku `a==b ? C(qs) | D(qs)` , gdy `a==b` ma wartość true, `C` operacja jest wywoływana, a jeśli ma wartość false, `D` wywoływana jest tylko operacja. Takie podejście jest podobne do *krótkich obwodów* w innych językach.
 
@@ -472,15 +470,15 @@ Specyfikacja typu jest wymagana, ponieważ `Op3` i `Op1` ma różne typy, więc 
 
 * Nawiasy dla wywołania operacji i funkcji są również powiązane przed dowolnym operatorem, ale po indeksowaniu tablicy i funktory.
 
-Q#Operatory według pierwszeństwa, od najwyższego do najniższego:
+Q# Operatory według pierwszeństwa, od najwyższego do najniższego:
 
 Operator | Większa | Opis | Typy operandów
 ---------|----------|---------|---------------
- końcowe`!` | Jednoargumentowy | Unwrap | Dowolny typ zdefiniowany przez użytkownika
+ końcowe `!` | Jednoargumentowy | Unwrap | Dowolny typ zdefiniowany przez użytkownika
  `-`, `~~~`, `not` | Jednoargumentowy | Cyfra ujemna, dopełnienie bitowe, Negacja logiczna | `Int`, `BigInt` lub `Double` dla `-` , `Int` dla `BigInt` `~~~` `Bool``not`
- `^` | Binarne | Moc całkowita | `Int`lub `BigInt` dla podstawy `Int` dla wykładnika
- `/`, `*`, `%` | Binarne | Dzielenie, mnożenie, moduł całkowity | `Int`, `BigInt` lub `Double` dla `/` i `*` , `Int` lub `BigInt` dla`%`
- `+`, `-` | Binarne | Dodawanie lub łączenie ciągów i tablic, odejmowanie | `Int`, `BigInt` or `Double` , dodatkowo `String` lub dowolnego typu tablicy dla`+`
+ `^` | Binarne | Moc całkowita | `Int` lub `BigInt` dla podstawy `Int` dla wykładnika
+ `/`, `*`, `%` | Binarne | Dzielenie, mnożenie, moduł całkowity | `Int`, `BigInt` lub `Double` dla `/` i `*` , `Int` lub `BigInt` dla `%`
+ `+`, `-` | Binarne | Dodawanie lub łączenie ciągów i tablic, odejmowanie | `Int`, `BigInt` or `Double` , dodatkowo `String` lub dowolnego typu tablicy dla `+`
  `<<<`, `>>>` | Binarne | Lewy Shift, prawy Shift | `Int` lub `BigInt`
  `<`, `<=`, `>`, `>=` | Binarne | Mniejsze niż, mniejsze niż lub równe, większe niż, większe niż lub równe | `Int``BigInt`lub`Double`
  `==`, `!=` | Binarne | porównania równe, nierówne | dowolny typ pierwotny
@@ -490,7 +488,7 @@ Operator | Większa | Opis | Typy operandów
  `and` | Binarne | Logiczne AND | `Bool`
  `or` | Binarne | Logiczne OR | `Bool`
  `..` | Plik binarny/Trzyelementowy | Operator zakresu | `Int`
- `?` `|` | Trójargumentowy | Warunkowe | `Bool`po lewej stronie
+ `?` `|` | Trójargumentowy | Warunkowe | `Bool` po lewej stronie
 `w/` `<-` | Trójargumentowy | Kopiuj i Aktualizuj | Zobacz [wyrażenia kopiowania i aktualizowania](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Następne kroki

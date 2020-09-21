@@ -2,19 +2,19 @@
 title: Sposoby uruchamiania Q# programu
 description: Przegląd różnych sposobów uruchamiania Q# programów. Z poziomu wiersza polecenia, Q# notesów Jupyter i klasycznych programów do obsługi hostów w języku Python lub platformie .NET.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 05/15/2020
 ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759820"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835965"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Sposoby uruchamiania Q# programu
 
@@ -26,9 +26,9 @@ Podstawowa różnica polega na tym, że Q# można uruchomić:
 - jako aplikacja autonomiczna, w której Q# jest jedynym używanym językiem, a program jest wywoływany bezpośrednio. Dwie metody faktycznie należą do tej kategorii:
   - Interfejs wiersza polecenia
   - Q# Notesy Jupyter
-- za pomocą dodatkowego *programu hosta*, pisanego w języku Python lub języka .NET (np. C# lub F #), który następnie wywołuje program i może dodatkowo przetwarzać wyniki zwrócone.
+- za pomocą dodatkowego *programu hosta*, pisanego w języku Python lub języka .NET (na przykład C# lub F #), który następnie wywołuje program i może dodatkowo przetwarzać wyniki zwrócone.
 
-Aby zapoznać się z najlepszymi procesami i ich różnicami, należy wziąć pod uwagę prosty Q# program i porównać sposoby jego wykonywania.
+Aby zapoznać się z najlepszymi procesami i ich różnicami, należy wziąć pod uwagę prosty Q# program i porównać sposoby jego działania.
 
 ## <a name="basic-no-locq-program"></a>Q#Program Basic
 
@@ -44,8 +44,8 @@ W programie Q# można to wykonać za pomocą następującego kodu:
         }
 ```
 
-Jednak ten kod nie może być wykonywany przez Q# .
-W tym celu należy wykonać treść [operacji](xref:microsoft.quantum.guide.basics#q-operations-and-functions), która jest następnie wykonywana, gdy wywoływana---albo bezpośrednio lub przez inną operację. W związku z tym można napisać operację w następującej postaci:
+Jednak ten kod nie może być uruchamiany przez Q# .
+W tym celu należy wykonać treść [operacji](xref:microsoft.quantum.guide.basics#q-operations-and-functions), która jest uruchamiana, gdy wywoływana---albo bezpośrednio lub przez inną operację. W związku z tym można napisać operację w następującej postaci:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -93,43 +93,46 @@ namespace NamespaceName {
 > Jedynym wyjątkiem jest [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) przestrzeń nazw, która jest zawsze automatycznie otwierana.
 > W związku z tym możliwe jest, że takie wywoływanie [`Length`](xref:microsoft.quantum.core.length) może być zawsze używane bezpośrednio.
 
-### <a name="execution-on-target-machines"></a>Wykonywanie na komputerach docelowych
+### <a name="running-on-target-machines"></a>Uruchomione na maszynach docelowych
 
-Teraz ogólny model wykonywania Q# programu zostanie wyczyszczony.
+Teraz ogólny model przebiegu Q# programu zostanie wyczyszczony.
 
 <br/>
 <img src="../media/hostprograms_general_execution_model.png" alt="Q# program execution diagram" width="400">
 
-Po pierwsze, konkretnie wywoływane do wykonania ma dostęp do wszelkich innych metod i typów zdefiniowanych w tej samej przestrzeni nazw.
+Po pierwsze, konkretnie wywoływane do uruchomienia ma dostęp do wszelkich innych metod i typów zdefiniowanych w tej samej przestrzeni nazw.
 Uzyskują również dostęp do tych elementów z dowolnej [ Q# biblioteki](xref:microsoft.quantum.libraries), ale muszą one być przywoływane za pośrednictwem ich pełnej nazwy albo za pomocą `open` instrukcji opisanych powyżej.
 
-Samo wywoływanie jest wykonywane na *[maszynie docelowej](xref:microsoft.quantum.machines)*.
+Samo wywoływanie jest uruchamiane na *[maszynie docelowej](xref:microsoft.quantum.machines)*.
 Takie maszyny docelowe mogą być rzeczywistym sprzętem Quantum lub wieloma symulatorami dostępnymi jako część QDK.
-W naszym przykładzie najbardziej przydatną maszyną docelową jest wystąpienie [symulatora o pełnym stanie](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` która oblicza zachowanie programu tak, jakby było wykonywane na komputerze z systemem Quantum z nieprawidłowym hałasem.
+W naszym przykładzie najbardziej przydatną maszyną docelową jest wystąpienie [symulatora pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` która oblicza zachowanie programu tak, jakby było uruchamiane na komputerze z systemem Quantum bez użycia szumu.
 
-Do tej pory opisano, co się dzieje, gdy Q# zostanie wykonane określone wywoływanie.
+Do tej pory opisano, co się dzieje, gdy Q# zostanie uruchomione określone wywoływanie.
 Bez względu na to, czy Q# jest używany w aplikacji autonomicznej, czy za pomocą programu hosta, ten ogólny proces jest większy lub mniejszy---tym samym elastyczność QDK.
-Różnice między różnymi sposobami wywoływania zestawu Quantum Development Kit w ten sposób ujawniają się w *sposób* , w jaki Q# wywołania wywoływane do wykonania i w jaki sposób są zwracane wyniki.
-Bardziej szczegółowe różnice między nimi 
-1. wskazuje Q# , który możliwy do wykonania,
-2. jak są udostępniane potencjalną liczbę argumentów,
-3. Określanie komputera docelowego, na którym ma zostać wykonane jego wykonywanie, oraz
-4. sposób zwracania wyników.
+Różnice między sposobami wywołania zestawu Quantum Development Kit w ten sposób ujawniają się w *sposób* , w jaki Q# wywołania wywoływane do uruchomienia i w jaki sposób są zwracane wszystkie wyniki.
+Bardziej szczegółowe różnice są następujące:
+
+- Wskazuje, który Q# możliwy do uruchomienia ma być uruchamiany
+- Jak są udostępniane potencjalne możliwe do odwoływać argumenty
+- Określanie komputera docelowego, na którym ma być uruchamiany
+- Jak są zwracane wyniki
 
 Najpierw omówiono, jak to zrobić za pomocą Q# aplikacji autonomicznej z wiersza polecenia, a następnie kontynuować korzystanie z programów obsługi języka Python i C#.
 Firma Microsoft rezerwuje autonomiczną aplikację Q# dla notesów Jupyter w ciągu ostatnich, ponieważ w przeciwieństwie do pierwszych trzech funkcja podstawowa nie Wyśrodkowuje Q# plików lokalnych.
 
 > [!NOTE]
-> Chociaż nie jest to zilustrowane w tych przykładach, jedna ze współdziałania między metodami wykonywania polega na tym, że wszystkie komunikaty, które są drukowane z wewnątrz Q# programu ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) na przykład), zwykle są zawsze drukowane do odpowiedniej konsoli.
+> Chociaż nie jest to zilustrowane w tych przykładach, jedna ze współdziałania między metodami Run polega na tym, że wszystkie komunikaty, które są drukowane z wewnątrz Q# programu ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) na przykład), zazwyczaj będą zawsze drukowane do odpowiedniej konsoli.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# z wiersza polecenia
 Jednym z najprostszych sposobów na rozpoczęcie pisania Q# programów jest uniknięcie przejmowania informacji o osobnych plikach i drugim języku.
 Używanie Visual Studio Code lub Visual Studio z rozszerzeniem QDK umożliwia bezproblemowe przepływ pracy, w którym uruchamiamy wywoływany Q# z tylko jednego Q# pliku.
 
-W ten sposób ostatecznie wywołamy wykonanie programu, wprowadzając
+W ten sposób ostatecznie uruchomimy program, wprowadzając
+
 ```dotnetcli
 dotnet run
 ```
+
 w wierszu polecenia.
 Najprostszym przepływem pracy jest to, że lokalizacja katalogu terminalu jest taka sama jak w przypadku Q# pliku, który można łatwo obsługiwać podczas Q# edycji plików przy użyciu zintegrowanego terminalu w vs Code, na przykład.
 Jednak [ `dotnet run` polecenie](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) akceptuje wiele opcji, a program może być również uruchamiany z innej lokalizacji, po prostu dostarczając `--project <PATH>` lokalizację Q# pliku.
@@ -137,7 +140,7 @@ Jednak [ `dotnet run` polecenie](https://docs.microsoft.com/dotnet/core/tools/do
 
 ### <a name="add-entry-point-to-no-locq-file"></a>Dodaj punkt wejścia do Q# pliku
 
-Większość Q# plików będzie zawierać więcej niż jeden możliwy do przekroczenia, dlatego musimy poinformować kompilator o *tym, który* jest możliwy do wykonania, gdy udostępnimy `dotnet run` polecenie.
+Większość Q# plików będzie zawierać więcej niż jeden możliwy do oddzwonienia, więc w naturalny sposób musimy poinformować kompilator o *tym, który* jest możliwy do uruchomienia, gdy udostępnimy `dotnet run` polecenie.
 Jest to wykonywane z prostą zmianą dla Q# samego pliku: 
     - Dodaj wiersz `@EntryPoint()` bezpośrednio poprzedzający możliwy do odwoływać.
 
@@ -228,7 +231,7 @@ BorrowedWidth   0
 
 Aby uzyskać szczegółowe informacje na temat tego, co wskazują te metryki, zobacz [Resource szacowania: raportowane metryki](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
 
-### <a name="command-line-execution-summary"></a>Podsumowanie wykonania wiersza polecenia
+### <a name="command-line-run-summary"></a>Podsumowanie uruchamiania wiersza polecenia
 <br/>
 <img src="../media/hostprograms_command_line_diagram.png" alt="Q# program from command line" width="700">
 
@@ -236,19 +239,19 @@ Aby uzyskać szczegółowe informacje na temat tego, co wskazują te metryki, zo
 
 Jak opisano powyżej przy użyciu `--project` opcji, [ `dotnet run` polecenie](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) akceptuje również opcje niezwiązane z wywoływanymi Q# argumentami.
 W przypadku udostępniania obu rodzajów opcji `dotnet` należy najpierw podać opcje specyficzne, po których następuje ogranicznik `--` , a następnie Q# Opcje specyficzne dla programu.
-Na przykład specifiying ścieżka wraz z liczbą qubits dla operacji powyżej zostanie wykonana za pośrednictwem `dotnet run --project <PATH> -- -n <n>` .
+Na przykład określenie ścieżki wraz z liczbą qubits dla operacji powyżej zostanie uruchomione za pośrednictwem `dotnet run --project <PATH> -- -n <n>` .
 
 ## <a name="no-locq-with-host-programs"></a>Q# z programami hosta
 
 W przypadku naszego Q# pliku, alternatywą do wywołania operacji lub funkcji bezpośrednio z wiersza polecenia jest użycie *programu hosta* w innym klasycznym języku. W szczególności można to zrobić za pomocą języka Python lub środowiska .NET, takiego jak C# lub F # (na przykład w przypadku zwięzłości w tym miejscu zostanie przedstawione szczegółowe informacje dotyczące języka C#).
 Aby włączyć współdziałanie, wymagana jest nieco większa konfiguracja, ale te szczegóły znajdują się w [przewodnikach instalacji](xref:microsoft.quantum.install).
 
-W Nutshell sytuacja obejmuje teraz plik programu hosta (np. `*.py` lub `*.cs` ) w tej samej lokalizacji, w której znajduje się Q# plik.
-Teraz program *hosta* , który jest uruchamiany, i w trakcie jego wykonywania może wywoływać określone Q# operacje i funkcje z Q# pliku.
+W Nutshell sytuacja zawiera teraz plik programu hosta (na przykład `*.py` lub `*.cs` ) w tej samej lokalizacji, w której znajduje się Q# plik.
+Teraz jest to program *hosta* , który jest uruchamiany, a gdy jest uruchomiony, może wywołać określone Q# operacje i funkcje z Q# pliku.
 Rdzeń współdziałania jest oparty na kompilatorze, dzięki czemu Q# zawartość pliku jest Q# dostępna dla programu hosta, dzięki czemu mogą one być wywoływane.
 
 Jedną z głównych zalet korzystania z programu hosta jest to, że klasyczne dane zwrócone przez Q# program można następnie przetworzyć w języku hosta.
-Może to obejmować pewne zaawansowane przetwarzanie danych (np. coś, którego nie można wykonać wewnętrznie w programie Q# ), a następnie wywoływanie dalszych Q# akcji na podstawie tych wyników, a także prostą metodę wykreślania Q# wyników.
+Może to obejmować pewne zaawansowane przetwarzanie danych (np. coś, które nie może być wykonane wewnętrznie w programie Q# ), a następnie wywoływanie dalszych Q# akcji na podstawie tych wyników, jak również do wykreślania Q# wyników.
 
 Ogólny schemat jest przedstawiony tutaj i omawiamy konkretne implementacje dla języków Python i C#. Przykład przy użyciu programu hosta języka F # można znaleźć na [Przykłady współdziałania z platformą .NET](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
@@ -292,7 +295,7 @@ Program hosta języka Python jest skonstruowany w następujący sposób:
 1. Zaimportuj `qsharp` moduł, który rejestruje moduł ładujący modułu pod kątem Q# współdziałania. 
     Dzięki temu Q# przestrzenie nazw mogą być wyświetlane jako moduły języka Python, z których można "zaimportować" Q# .
     Należy zauważyć, że nie jest to technicznie możliwe do Q# zaimportowania, ale raczej elementy zastępcze języka Python, które umożliwiają wywoływanie.
-    Są one zachowane jako obiekty klas języka Python, na których używamy metod do określenia maszyn docelowych do wysyłania operacji do wykonania.
+    Działają one jako obiekty klas języka Python. Używamy metod dla tych obiektów, aby określić maszyny docelowe, do których wysyłamy operację podczas uruchamiania programu.
 
 2. Zaimportuj te Q# , które zostały wywołane bezpośrednio---w tym przypadku, `MeasureSuperposition` i `MeasureSuperpositionArray` .
     ```python
@@ -404,16 +407,16 @@ Najpierw udostępniamy wszelkie klasy używane w naszym programie hosta z `using
 ```csharp
 using System;
 using System.Threading.Tasks;
-using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (e.g. QuantumSimulator, ResourcesEstimator)
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (for example, QuantumSimulator, ResourcesEstimator)
 using NamespaceName;                              // make the Q# namespace available
 ```
 
-Następnie deklarujemy przestrzeń nazw języka C#, kilka innych bitów i kawałków (zobacz pełny blok kodu poniżej), a następnie wszelkie klasyczne programowanie, które chcemy (np. przetwarzanie argumentów dla wywoływanych Q# ).
+Następnie deklarujemy naszą przestrzeń nazw języka C#, kilka innych bitów i kawałków (zobacz pełny blok kodu poniżej), a następnie wszelkie klasyczne programowanie, które chcemy (na przykład przetwarzanie argumentów dla wywoływanych danych Q# ).
 Ten ostatni nie jest konieczny w naszym przypadku, ale przykład takiego użycia można znaleźć w  [próbce współdziałania z platformą .NET](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 #### <a name="target-machines"></a>Maszyny docelowe
 
-Po powrocie do programu Q# należy utworzyć wystąpienie dowolnego komputera docelowego, na którym będą wykonywane nasze operacje.
+Po powrocie do programu Q# należy utworzyć wystąpienie dowolnego komputera docelowego, na którym zostaną uruchomione nasze operacje.
 
 ```csharp
             using var sim = new QuantumSimulator();
@@ -431,9 +434,9 @@ Zwrócone wyniki można następnie przypisać do zmiennych w języku C#:
 ```
 
 > [!NOTE]
-> `Run`Metoda jest wykonywana asynchronicznie, ponieważ będzie to miało miejsce w przypadku rzeczywistego sprzętu Quantum, w związku z czym `await` słowo kluczowe blokuje dalsze wykonywanie do momentu ukończenia zadania.
+> `Run`Metoda jest uruchamiana asynchronicznie, ponieważ będzie dotyczyć rzeczywistego sprzętu Quantum, w związku z czym `await` słowo kluczowe blokuje dalsze przetwarzanie do momentu ukończenia zadania.
 
-Jeśli możliwy do odrzucania Q# nie ma żadnych zwracanych (tj. zwraca typ `Unit` ), wykonanie może być nadal wykonywane w taki sam sposób, bez przypisywania go do zmiennej.
+Jeśli możliwy do odrzucania Q# nie ma żadnych zwracanych (na przykład zwraca typ `Unit` ), przebieg można nadal wykonać w taki sam sposób, bez przypisywania go do zmiennej.
 W takim przypadku cały wiersz będzie po prostu zawierać 
 ```csharp
 await <callable>.Run(<simulator>);
@@ -441,7 +444,7 @@ await <callable>.Run(<simulator>);
 
 #### <a name="arguments"></a>Argumenty
 
-Wszystkie argumenty, które można Q# wywołać, są po prostu przekazane jako dodatkowe argumenty po maszyny docelowej.
+Wszystkie argumenty do wywoływanych Q# są po prostu przekazane jako dodatkowe argumenty po maszynie docelowej.
 W związku z tym wyniki `MeasureSuperpositionArray` dotyczące `n=4` qubits zostałyby pobrane za pośrednictwem 
 
 ```csharp
@@ -578,7 +581,7 @@ BorrowedWidth   0
 
 ## <a name="no-locq-jupyter-notebooks"></a>Q# Notesy Jupyter
 Q# Notesy Jupyter używają Q# jądra I, które umożliwia definiowanie, kompilowanie i uruchamianie wywoływanych elementów Q# w pojedynczym notesie---wszystkie instrukcje, notatki i inne treści.
-Oznacza to, że chociaż istnieje możliwość zaimportowania i użycia zawartości `*.qs` Q# plików, nie jest to konieczne w modelu wykonywania.
+Oznacza to, że chociaż istnieje możliwość zaimportowania i użycia zawartości `*.qs` Q# plików, nie jest to konieczne w modelu uruchomieniowym.
 
 Tutaj szczegółowo opisano sposób uruchamiania Q# operacji zdefiniowanych powyżej, ale bardziej rozległe wprowadzenie do korzystania z Q# notesów Jupyter jest dostępne na stronie [wprowadzenie do Q# i Jupyter notesów](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
@@ -590,7 +593,7 @@ Dzięki temu możemy umożliwić dostęp do wywoływanych [ Q# bibliotek standar
 Po uruchomieniu komórki z taką instrukcją definicje z tych przestrzeni nazw są dostępne w całym obszarze roboczym.
 
 > [!NOTE]
-> Elementy [Microsoft. Quantum.](xref:microsoft.quantum.intrinsic) Inin i [Microsoft. Quantum. Canon](xref:microsoft.quantum.canon) (np. [`H`](xref:microsoft.quantum.intrinsic.h) i [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) ) są automatycznie dostępne dla operacji zdefiniowanych w komórkach w Q# notesach Jupyter.
+> Elementy [Microsoft. Quantum.](xref:microsoft.quantum.intrinsic) Inin i [Microsoft. Quantum. Canon](xref:microsoft.quantum.canon) (na przykład [`H`](xref:microsoft.quantum.intrinsic.h) i [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) ) są automatycznie dostępne dla operacji zdefiniowanych w komórkach w Q# notesach Jupyter.
 > Nie jest to jednak prawdziwe w przypadku kodu pochodzącego z zewnętrznych Q# plików źródłowych (proces pokazywany na początku [ Q# i w notesach Jupyter](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
 > 
 
@@ -609,12 +612,12 @@ Na przykład program `%simulate` korzysta z programu `QuantumSimulator` i korzys
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>Przekazywanie danych wejściowych do funkcji i operacji
 
-Aby przekazać dane wejściowe do Q# operacji, argumenty mogą być przekazywane jako `key=value` pary do polecenia Execution Magic.
+Aby przekazać dane wejściowe do Q# operacji, argumenty mogą być przekazywane jako `key=value` pary do polecenia Run Magic.
 W celu uruchomienia `MeasureSuperpositionArray` programu z czterema qubits można uruchomić `%simulate MeasureSuperpositionArray n=4` następujące polecenie:
 
 <img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-Ten wzorzec może być używany podobnie z `%estimate` i innymi poleceniami wykonywania.
+Ten wzorzec może być używany podobnie z `%estimate` i innymi poleceniami Run.
 
 ### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Używanie Q# kodu z innych projektów lub pakietów
 

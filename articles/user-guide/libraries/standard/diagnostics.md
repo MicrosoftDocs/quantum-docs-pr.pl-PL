@@ -3,17 +3,17 @@ title: Diagnostyka w Q# bibliotekach standardowych
 description: Dowiedz się więcej o funkcjach i operacjach diagnostycznych w Q# bibliotekach standardowych używanych do przechwytywania błędów lub błędów w programach Quantum.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868546"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835574"
 ---
 # <a name="diagnostics"></a>Diagnostyka #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`ma sygnaturę `(String -> Unit)` reprezentującą, że nie można zaobserwować emitowania komunikatu dziennika debugowania z poziomu programu Q# .
+> `Message` ma sygnaturę `(String -> Unit)` reprezentującą, że nie można zaobserwować emitowania komunikatu dziennika debugowania z poziomu programu Q# .
 
 <xref:microsoft.quantum.diagnostics.dumpmachine>I w <xref:microsoft.quantum.diagnostics.dumpregister> wyniku tego nakazuje komputerom docelowym dostarczenie informacji diagnostycznych dotyczących wszystkich aktualnie przyznanych qubits lub odpowiednio określonego rejestru qubits.
 Każdy komputer docelowy różni się w zależności od informacji diagnostycznych w odpowiedzi na instrukcję zrzutu.
@@ -67,16 +67,16 @@ W ten sposób można testować poszczególne operacje w klasycznym symulatorze p
 Na komputerach docelowych, które nie pozwalają na ocenę potwierdzeń, wywołania <xref:microsoft.quantum.diagnostics.assertmeasurement> można bezpiecznie zignorować.
 
 Ogólnie rzecz biorąc, <xref:microsoft.quantum.diagnostics.assertmeasurement> potwierdzenie operacji, które mierzą podaną qubits na podstawie podaną wartość Pauli, będzie zawsze mieć dany wynik.
-Jeśli potwierdzenie nie powiedzie się, wykonywanie kończy się przez wywołanie `fail` z podanym komunikatem.
+Jeśli potwierdzenie nie powiedzie się, przebieg zostanie zakończony przez wywołanie `fail` z podanym komunikatem.
 Domyślnie ta operacja nie jest zaimplementowana. symulatory, które mogą ją obsługiwać, powinny dostarczyć implementację, która przeprowadza sprawdzanie środowiska uruchomieniowego.
-`AssertMeasurement`ma sygnaturę `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` ma sygnaturę `((Pauli[], Qubit[], Result, String) -> ())` .
 Ponieważ `AssertMeasurement` jest funkcją z pustą krotką jako typem danych wyjściowych, żadne skutki z wywołania nie `AssertMeasurement` są zauważalne w Q# programie.
 
 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability>Wyniki funkcji operacji, które mierzą podaną qubits w danej Pauli, będą miały wynik z danym prawdopodobieństwem, w ramach pewnej tolerancji.
-Tolerancja jest dodatkiem (np. `abs(expected-actual) < tol` ).
-Jeśli potwierdzenie nie powiedzie się, wykonywanie kończy się przez wywołanie `fail` z podanym komunikatem.
+Tolerancja jest dodatkiem (na przykład `abs(expected-actual) < tol` ).
+Jeśli potwierdzenie nie powiedzie się, przebieg zostanie zakończony przez wywołanie `fail` z podanym komunikatem.
 Domyślnie ta operacja nie jest zaimplementowana. symulatory, które mogą ją obsługiwać, powinny dostarczyć implementację, która przeprowadza sprawdzanie środowiska uruchomieniowego.
-`AssertMeasurementProbability`ma sygnaturę `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Pierwszy z `Double` parametrów daje odpowiednie prawdopodobieństwo wyniku, a druga na tolerancję.
+`AssertMeasurementProbability` ma sygnaturę `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Pierwszy z `Double` parametrów daje odpowiednie prawdopodobieństwo wyniku, a druga na tolerancję.
 
 Możemy wykonać więcej niż potwierdzenie pojedynczej miary przy użyciu, że klasyczne informacje używane przez symulator do reprezentowania wewnętrznego stanu qubit są możliwe do skopiowania, dzięki czemu nie ma potrzeby faktycznego przeprowadzenia pomiaru w celu przetestowania naszej potwierdzenia.
 W szczególności pozwala nam przyczynić się do *niezgodności* pomiarów, które byłyby niemożliwe na rzeczywistym sprzęcie.
