@@ -1,17 +1,17 @@
 ---
-uid: microsoft.quantum.standardlibsintro
-title: Standardowa biblioteka Q# dla rozwiązania Microsoft Quantum
-description: Dokumentacja referencyjna standardowej biblioteki języka Q# dla rozwiązania Microsoft Quantum
-author: natke
-ms.author: nakersha
+uid: microsoft.quantum.apiref-intro
+title: Biblioteki języka Q# dla rozwiązania Microsoft Quantum
+description: Dokumentacja referencyjna bibliotek języka Q# dla rozwiązania Microsoft Quantum
+author: bradben
+ms.author: v-benbra
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: e6ae75ef66a82dd1d0c0b07f52694974e86b4406
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: dd340bf6e6da87bc7f5df5999c4b93ce4075b30d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992279"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834639"
 ---
 # <a name="q-api-reference"></a>Dokumentacja interfejsu API języka Q# #
 

@@ -2,19 +2,19 @@ expanded: true
 items:
   - name: Rozpoczynanie pracy z zestawem QDK
     href: get-started.md
-  - name: Instalowanie zestawu QDK
+  - name: Konfigurowanie zestawu QDK
+    href: index.md
+  - name: Przykłady rozpoczynania pracy
     items:
-      - name: Omówienie instalacji
-        href: index.md
       - name: Aplikacje języka Q#
         href: install-command-line.md
-      - name: Notesy programu Jupyter dla języka Q#
+      - name: Używanie Q# z notesami Jupyter Notebook
         href: install-jupyter.md
-      - name: Używanie Q# z innymi językami
-        items:
-          - name: Używanie Q# z językiem Python
-            href: install-python.md
-          - name: Używanie Q# z platformą .NET
-            href: install-cs.md
+      - name: Używanie Q# z rozwiązaniem Binder
+        href: install-binder.md
+      - name: Używanie Q# z językiem Python
+        href: install-python.md
+      - name: Używanie Q# z platformą .NET
+        href: install-cs.md
   - name: Aktualizowanie zestawu QDK
     href: update.md
