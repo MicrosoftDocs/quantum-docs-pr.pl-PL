@@ -2,19 +2,19 @@
 title: Komputery kwantowe i symulatory kwantowe
 description: Dowiedz się więcej na temat sprzętu kwantowego, symulatorów kwantowych i działania operacji kwantowych.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867713"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835013"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Komputery kwantowe i symulatory kwantowe
 
@@ -33,7 +33,7 @@ Aby uzyskać prawidłowe działanie komputerów kwantowych, należy sprostać wi
 
 ## <a name="quantum-simulators"></a>Symulatory kwantowe
 
-Symulatory kwantowe, które działają na klasycznych komputerach, umożliwiają symulowanie wykonywania algorytmów kwantowych w systemie kwantowym.  Zestaw Microsoft Quantum Development Kit (QDK) zawiera wektorowy symulator pełnego stanu oraz inne wyspecjalizowane symulatory kwantowe.
+Symulatory kwantowe, które działają na komputerach klasycznych, umożliwiają symulowanie obliczania algorytmów kwantowych w systemie kwantowym.  Zestaw Microsoft Quantum Development Kit (QDK) zawiera wektorowy symulator pełnego stanu oraz inne wyspecjalizowane symulatory kwantowe.
 
 ## <a name="topological-qubit"></a>Kubit topologiczny
 

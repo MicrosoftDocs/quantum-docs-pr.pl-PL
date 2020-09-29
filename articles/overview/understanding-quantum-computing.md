@@ -2,23 +2,23 @@
 title: Informacje na temat obliczeń kwantowych
 description: Co to są komputery kwantowe i jak korzystają z zasad mechaniki kwantowej?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866965"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834996"
 ---
 # <a name="understanding-quantum-computing"></a>Informacje na temat obliczeń kwantowych
 
-Dzięki obliczeniom kwantowym można przetwarzać informacje, bazując na zasadach mechaniki kwantowej. Z tego względu wykonywanie obliczeń kwantowych wymaga innego podejścia niż w przypadku obliczeń klasycznych.  Jednym z przykładów obrazujących tę różnicę jest procesor używany do obliczeń kwantowych.  Podczas gdy klasyczne komputery używają znanych mikroukładów opartych na krzemie, komputery kwantowe korzystają z materiałów kwantowych, takich jak atomy, jony, fotony lub elektrony.  
+Dzięki obliczeniom kwantowym można przetwarzać informacje, bazując na zasadach mechaniki kwantowej. Z tego względu wykonywanie obliczeń kwantowych wymaga innego podejścia niż w przypadku obliczeń klasycznych. Jednym z przykładów obrazujących tę różnicę jest procesor używany do obliczeń kwantowych. Podczas gdy komputery klasyczne używają znanych mikroukładów opartych na krzemie, komputery kwantowe korzystają z systemów kwantowych, takich jak atomy, jony, fotony lub elektrony. Wykorzystują one właściwości kwantowe do reprezentowania bitów, które mogą być przygotowywane w różnych kwantowych superpozycjach wartości 1 i 0.  
 
 Materiał kwantowy zachowuje się zgodnie z prawami mechaniki kwantowej, w której używa się pojęć, takich jak obliczenia probabilistyczne, superpozycja czy splątanie. Te pojęcia stanowią podstawę algorytmów kwantowych, które wykorzystują moc obliczeń kwantowych do rozwiązywania złożonych problemów. W tym artykule opisano niektóre podstawowe pojęcia mechaniki kwantowej, na której bazują obliczenia kwantowe.
 

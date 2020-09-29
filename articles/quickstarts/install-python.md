@@ -1,20 +1,21 @@
 ---
 title: Programowanie przy użyciu języków Q# i Python
+description: Dowiedz się, jak utworzyć aplikację Q# przy użyciu języka Python.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866744"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834163"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Programowanie przy użyciu języków Q# i Python
 
@@ -55,7 +56,7 @@ Zainstaluj zestaw QDK, aby tworzyć programy hosta w języku Python umożliwiaj�
     pip install qsharp
     ```
 
-1. Zainstaluj IQ#, jądro używane w środowiskach Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i wykonywania operacji języka Q#.
+1. Zainstaluj IQ# — jądro używane w środowiskach Jupyter i Python, które zapewnia podstawowe funkcje kompilowania i uruchamiania operacji języka Q#.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -73,7 +74,7 @@ Zainstaluj zestaw QDK, aby tworzyć programy hosta w języku Python umożliwiaj�
     
 ***
 
-Gotowe. Masz teraz zarówno pakiet `qsharp` języka Python, jak i jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i wykonywania operacji języka Q# z poziomu środowiska Python i umożliwia korzystanie z notesów Jupyter Notebook języka Q#.
+Gotowe. Masz teraz zarówno pakiet `qsharp` języka Python, jak i jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i uruchamiania operacji języka Q# z poziomu środowiska Python oraz umożliwia korzystanie z notesów Jupyter języka Q#.
 
 ## <a name="choose-your-ide"></a>Wybieranie środowiska IDE
 
@@ -88,7 +89,7 @@ Jeśli chcesz użyć innego edytora, powyższe instrukcje przygotują Cię do ws
 
 ## <a name="write-your-first-no-locq-program"></a>Pisanie pierwszego programu w języku Q#
 
-Teraz możesz już zweryfikować instalację pakietu `qsharp` języka Python, pisząc i wykonując prosty program w języku Q#.
+Teraz możesz już zweryfikować instalację pakietu `qsharp` języka Python, pisząc i uruchamiając prosty program w języku Q#.
 
 1. Utwórz minimalną operację języka Q#, tworząc plik o nazwie `Operation.qs` i dodając do niego następujący kod:
 
@@ -109,11 +110,11 @@ Teraz możesz już zweryfikować instalację pakietu `qsharp` języka Python, pi
     python host.py
     ```
 
-1. Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `0` lub `1`. W przypadku wielokrotnego uruchamiania programu każdy wynik powinien być wyświetlany przez w przybliżeniu połowę czasu.
+1. Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `0` lub `1`. W przypadku wielokrotnego uruchamiania programu każdy wynik powinien być wyświetlany w przybliżeniu przez połowę czasu.
 
 > [!NOTE]
 > * Ten kod języka Python to zwykły program w języku Python. Możesz użyć dowolnego środowiska języka Python, w tym notesów Jupyter Notebook opartych na języku Python, aby napisać program w języku Python i wywołać operacje języka Q#. Program w języku Python może zaimportować operacje języka Q# z dowolnych plików qs znajdujących się w tym samym folderze co sam kod języka Python.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po zainstalowaniu zestawu Quantum Development Kit w preferowanym środowisku możesz postępować zgodnie z tym samouczkiem, aby napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).
+Po przetestowaniu zestawu Quantum Development Kit w preferowanym środowisku możesz postępować zgodnie z tym samouczkiem, aby napisać i uruchomić [swój pierwszy program kwantowy](xref:microsoft.quantum.quickstarts.qrng).

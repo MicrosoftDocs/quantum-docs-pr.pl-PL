@@ -1,24 +1,27 @@
 ---
 title: Tworzenie przy użyciu aplikacji w języku Q#
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Dowiedz się, jak utworzyć aplikację Q# uruchamianą z wiersza polecenia.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358262"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834418"
 ---
 # <a name="develop-with-no-locq-applications"></a>Tworzenie przy użyciu aplikacji w języku Q#
 
-Programy w języku Q# można wykonywać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.
+Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku.
+
+Programy w języku Q# można uruchamiać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -63,14 +66,14 @@ Aby utworzyć nowy projekt:
 2. Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).
 3. Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).
 4. Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.
-        
+
 Zapoznaj się z projektem. Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.
 
 Aby uruchomić aplikację:
+
 1. Kliknij pozycję **Terminal** -> **New Terminal** (Nowy terminal).
 2. W wierszu polecenia terminalu wprowadź polecenie `dotnet run`.
 3. W oknie danych wyjściowych powinien zostać wyświetlony następujący tekst: `Hello quantum world!`
-
 
 > [!NOTE]
 > Obszary robocze z wieloma folderami głównymi nie są obecnie obsługiwane przez rozszerzenie programu VS Code dla języka Q#. Jeśli masz wiele projektów w jednym obszarze roboczym programu VS Code, wszystkie projekty muszą znajdować się w tym samym folderze głównym.
@@ -80,6 +83,7 @@ Aby uruchomić aplikację:
 Zweryfikuj instalację programu Visual Studio, tworząc aplikację Q# w języku `Hello World`.
 
 Aby utworzyć nową aplikację w języku Q#:
+
 1. Otwórz program Visual Studio, a następnie wybierz kolejno opcje **Plik** -> **Nowy** -> **Projekt**.
 2. Wpisz `Q#` w polu wyszukiwania, wybierz pozycję **Aplikacja Q#** , a następnie kliknij przycisk **Dalej**.
 3. Wprowadź nazwę i lokalizację aplikacji, a następnie kliknij pozycję **Utwórz**.
@@ -88,6 +92,7 @@ Aby utworzyć nową aplikację w języku Q#:
 Zapoznaj się z projektem. Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.
 
 Aby uruchomić aplikację:
+
 1. Wybierz kolejno pozycje **Debuguj** -> **Uruchom bez debugowania**.
 2. W oknie konsoli powinien zostać wypisany tekst `Hello quantum world!`.
 
@@ -105,11 +110,13 @@ Zweryfikuj instalację, tworząc aplikację `Hello World` w języku Q#.
     ```
 
 1. Tworzenie nowej aplikacji:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Przechodzenie do katalogu aplikacji:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ Zweryfikuj instalację, tworząc aplikację `Hello World` w języku Q#.
     Ten katalog powinien teraz zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli. Ten szablon można zmodyfikować za pomocą edytora tekstów i zastąpić go własnymi aplikacjami kwantowymi. 
 
 1. Uruchom program:
+
     ```dotnetcli
     dotnet run
     ```

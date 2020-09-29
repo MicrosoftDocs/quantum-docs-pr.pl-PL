@@ -2,23 +2,23 @@
 title: Co to jest język programowania Q# i zestaw QDK?
 description: Dowiedz się więcej o zestawie Microsoft Quantum Development Kit, języku programowania Q# i sposobach tworzenia programów kwantowych.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863774"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834571"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Co to jest język programowania Q# i zestaw QDK?
 
-Q# to język programowania typu open-source firmy Microsoft używany do tworzenia i uruchamiania algorytmów kwantowych. Wchodzi on w skład zestawu Quantum Development Kit (QDK), który zawiera [biblioteki języka Q#](xref:microsoft.quantum.libraries), [symulatory kwantowe](xref:microsoft.quantum.machines), [rozszerzenia dla innych środowisk programistycznych](xref:microsoft.quantum.install) i [dokumentację interfejsu API](xref:microsoft.quantum.standardlibsintro). Oprócz biblioteki standardowej języka Q# zestaw QDK obejmuje biblioteki chemiczne, uczenia maszynowego i liczbowe.
+Q# to język programowania typu open-source firmy Microsoft używany do tworzenia i uruchamiania algorytmów kwantowych. Wchodzi on w skład zestawu Quantum Development Kit (QDK), który zawiera [biblioteki języka Q#](xref:microsoft.quantum.libraries), [symulatory kwantowe](xref:microsoft.quantum.machines), [rozszerzenia dla innych środowisk programistycznych](xref:microsoft.quantum.install) i [dokumentację interfejsu API](xref:microsoft.quantum.apiref-intro). Oprócz biblioteki standardowej języka Q# zestaw QDK obejmuje biblioteki chemiczne, uczenia maszynowego i liczbowe.
 
 Jako język programowania, Q# zawiera elementy znane z języków Python, C# i F# oraz obsługuje podstawowy model proceduralny pisania programów z użyciem pętli, instrukcji „jeśli/to” i wspólnych typów danych. Wprowadzono w nim również nowe struktury danych i operacje specyficzne dla środowiska kwantowego.
 
@@ -54,7 +54,7 @@ Podczas kompilowania i uruchamiania programu tworzone jest wystąpienie symulato
 
 Odizolowanie kodu Q# w symulatorze gwarantuje, że algorytmy są zgodne z prawami fizyki kwantowej i mogą działać poprawnie na komputerach kwantowych.
 
-![przepływ kodu Q#](~/media/qsharp-code-flow.png)
+![Przepływ kodu w języku Qsharp](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>Jak mogę korzystać z zestawu QDK?
 

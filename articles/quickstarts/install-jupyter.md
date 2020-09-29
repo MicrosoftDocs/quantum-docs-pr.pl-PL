@@ -1,29 +1,27 @@
 ---
 title: Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
+description: Dowiedz się, jak utworzyć aplikację Q# przy użyciu notesów Jupyter.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866812"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834316"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
 
 Zainstaluj zestaw QDK na potrzeby opracowywania operacji języka Q# w notesach Jupyter Notebook języka Q#.
 
-Notesy Jupyter Notebook zapewniają możliwość wykonywania kodu w miejscu, a także instrukcje, notatki i inną zawartość. Jest to idealne środowisko do pisania kodu Q# z osadzonymi wyjaśnieniami lub interaktywnych samouczków wykonywania obliczeń kwantowych. Oto jak zacząć tworzenie własnych notesów języka Q#.
-
-> [!NOTE]
-> * W notesach Jupyter Notebook języka Q# można uruchamiać tylko kod Q# i nie można wywoływać operacji z zewnętrznych programów hosta (na przykład z plików języka Python lub C#). To środowisko nie będzie odpowiednie, jeśli chcesz połączyć program kwantowy z zewnętrznym klasycznym programem hosta.
+Notesy Jupyter zapewniają możliwość obliczania kodu w miejscu, a także instrukcje, notatki i inną zawartość. Jest to idealne środowisko do pisania kodu Q# z osadzonymi wyjaśnieniami lub interaktywnych samouczków wykonywania obliczeń kwantowych. Oto jak zacząć tworzenie własnych notesów języka Q#.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Instalowanie jądra Jupyter IQ#
 
@@ -62,22 +60,22 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Jeśli w kroku `dotnet iqsharp install` wystąpił błąd, otwórz nowe okno terminalu i spróbuj ponownie.
-    > Jeśli to nadal nie działa, spróbuj znaleźć zainstalowane narzędzie `dotnet-iqsharp` (w systemie Windows `dotnet-iqsharp.exe`) i uruchomić następujące polecenie:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > gdzie `/path/to/dotnet-iqsharp` należy zastąpić ścieżką bezwzględną narzędzia `dotnet-iqsharp` w systemie plików.
-    > Zwykle znajduje się ono w podfolderze `.dotnet/tools` w folderze profilu użytkownika.
+> [!NOTE]
+> Jeśli w kroku `dotnet iqsharp install` wystąpił błąd, otwórz nowe okno terminalu i spróbuj ponownie.
+> Jeśli to nadal nie działa, spróbuj znaleźć zainstalowane narzędzie `dotnet-iqsharp` (w systemie Windows `dotnet-iqsharp.exe`) i uruchomić następujące polecenie:
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> gdzie `/path/to/dotnet-iqsharp` należy zastąpić ścieżką bezwzględną narzędzia `dotnet-iqsharp` w systemie plików.
+> Zwykle znajduje się ono w podfolderze `.dotnet/tools` w folderze profilu użytkownika.
     
 ***
 
-Gotowe. Masz teraz jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i wykonywania operacji języka Q# z poziomu notesów Jupyter Notebook języka Q#.
+Gotowe. Masz teraz jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i uruchamiania operacji języka Q# z poziomu notesów Jupyter języka Q#.
 
 ## <a name="create-your-first-no-locq-notebook"></a>Tworzenie pierwszego notesu języka Q#
 
-Teraz możesz zweryfikować instalację notesu Jupyter Notebook języka Q#, pisząc i wykonując prostą operację w języku Q#.
+Teraz możesz zweryfikować instalację notesu Jupyter języka Q#, pisząc i uruchamiając prostą operację w języku Q#.
 
 1. Ze środowiska utworzonego podczas instalacji (tj. utworzonego środowiska conda lub środowiska języka Python, w którym zainstalowano pakiet Jupyter) uruchom następujące polecenie, aby uruchomić serwer notesu Jupyter Notebook:
 
@@ -87,7 +85,7 @@ Teraz możesz zweryfikować instalację notesu Jupyter Notebook języka Q#, pisz
 
     - Jeśli notes Jupyter Notebook nie zostanie otwarty automatycznie w przeglądarce, skopiuj i wklej adres URL otrzymany w wierszu polecenia do okna przeglądarki.
 
-1. Wybierz pozycję „New” → „Q#” (Nowy → Q#), aby utworzyć notes Jupyter Notebook z jądrem Q#, i dodaj następujący kod do pierwszej komórki notesu:
+1. Wybierz pozycję **New → Q#** (Nowy → Q#), aby utworzyć notes Jupyter z jądrem Q#, i dodaj następujący kod do pierwszej komórki notesu:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
@@ -97,11 +95,11 @@ Teraz możesz zweryfikować instalację notesu Jupyter Notebook języka Q#, pisz
 
     W danych wyjściowych komórki powinien zostać wyświetlony element `SampleQuantumRandomNumberGenerator`. W przypadku uruchamiania w notesach Jupyter Notebook kod Q# jest kompilowany, a komórka zwraca w danych wyjściowych nazwy wszystkich znalezionych operacji.
 
-1. W nowej komórce wykonaj utworzoną operację w symulatorze za pomocą polecenia `%simulate`:
+1. W nowej komórce uruchom utworzoną operację w symulatorze za pomocą polecenia `%simulate`:
 
     ![Komórka notesu Jupyter Notebook z poleceniem magic %simulate](~/media/install-guide-jupyter-simulate.png)
 
-    Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `Zero` lub `One`. W przypadku wielokrotnego uruchamiania komórki każdy wynik powinien być wyświetlany przez w przybliżeniu połowę czasu.
+    Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `Zero` lub `One`. W przypadku wielokrotnego uruchamiania komórki każdy wynik powinien być wyświetlany w przybliżeniu przez połowę czasu.
 
 ## <a name="next-steps"></a>Następne kroki
 
