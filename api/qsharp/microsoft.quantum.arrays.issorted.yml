@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.issorted
+name: IsSorted
+type: function
+namespace: microsoft.quantum.arrays
+summary: Dana tablica zwraca czy tablica jest sortowana zgodnie z definicją przez daną funkcję porównania.
+remarks: Przyjmuje się `comparison` , że funkcja jest przechodnia, na przykład jeśli `comparison(a, b)` i `comparison(b, c)` , `comparison(a, c)` jest przyjmowana. Jeśli ta właściwość nie jest wstrzymana, dane wyjściowe tej funkcji mogą być nieprawidłowe.
+syntax: "function IsSorted (comparison : (('T, 'T) -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(comparison : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: comparison
+    summary: Funkcja, która porównuje dwa elementy, które `a` są uważane za mniej niż lub równą `b` if `comparison(a, b)` `true` .
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Tablica, która ma zostać sprawdzona.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: '`true` Jeśli i tylko wtedy, gdy dla każdej pary `a` elementów `b` i `array` występuje w tej kolejności, `comparison(a, b)` jest `true` .'
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: Typ każdego elementu `array` .
+metadata:
+  ms.openlocfilehash: 4cf457c3f53bd9acdcccf699d3c0047185953c9f
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494184"
