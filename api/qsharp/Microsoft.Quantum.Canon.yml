@@ -387,6 +387,22 @@ operations:
     Stosuje operację do pierwszych dwóch qubits w rejestrze.
 
     Modyfikator `CA` wskazuje, że operacja jest sterowana i sąsiadująca.
+- uid: microsoft.quantum.canon.applytohead
+  summary: Stosuje operację do pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytoheada
+  summary: Stosuje operację do pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytoheadc
+  summary: Stosuje operację do pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytoheadca
+  summary: Stosuje operację do pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytomost
+  summary: Stosuje operację do wszystkich elementów oprócz ostatniego elementu tablicy.
+- uid: microsoft.quantum.canon.applytomosta
+  summary: Stosuje operację do wszystkich elementów oprócz ostatniego elementu tablicy.
+- uid: microsoft.quantum.canon.applytomostc
+  summary: Stosuje operację do wszystkich elementów oprócz ostatniego elementu tablicy.
+- uid: microsoft.quantum.canon.applytomostca
+  summary: Stosuje operację do wszystkich elementów oprócz ostatniego elementu tablicy.
 - uid: microsoft.quantum.canon.applytopartition
   summary: Stosuje parę operacji do danej partycji rejestracji w dwóch częściach.
 - uid: microsoft.quantum.canon.applytopartitiona
@@ -404,6 +420,14 @@ operations:
     Stosuje parę operacji do danej partycji rejestracji w dwóch częściach.
 
     Modyfikator `CA` wskazuje, że operacja jest sterowana i sąsiadująca.
+- uid: microsoft.quantum.canon.applytorest
+  summary: Stosuje operację do wszystkich elementów oprócz pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytoresta
+  summary: Stosuje operację do wszystkich elementów oprócz pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytorestc
+  summary: Stosuje operację do wszystkich elementów oprócz pierwszego elementu tablicy.
+- uid: microsoft.quantum.canon.applytorestca
+  summary: Stosuje operację do wszystkich elementów oprócz pierwszego elementu tablicy.
 - uid: microsoft.quantum.canon.applytosubregister
   summary: Stosuje operację do podrejestru rejestru, z qubitsem określonym przez tablicę ich indeksów.
 - uid: microsoft.quantum.canon.applytosubregistera
@@ -421,6 +445,14 @@ operations:
     Stosuje operację do podrejestru rejestru, z qubitsem określonym przez tablicę ich indeksów.
 
     Modyfikator `CA` wskazuje, że operacja jest sterowana i sąsiadująca.
+- uid: microsoft.quantum.canon.applytotail
+  summary: Stosuje operację do ostatniego elementu tablicy.
+- uid: microsoft.quantum.canon.applytotaila
+  summary: Stosuje operację do ostatniego elementu tablicy.
+- uid: microsoft.quantum.canon.applytotailc
+  summary: Stosuje operację do ostatniego elementu tablicy.
+- uid: microsoft.quantum.canon.applytotailca
+  summary: Stosuje operację do ostatniego elementu tablicy.
 - uid: microsoft.quantum.canon.applywith
   summary: Dwie operacje mają zastosowanie jeden, jak jest sprzężony z drugim.
 - uid: microsoft.quantum.canon.applywitha
@@ -581,9 +613,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Przestarzałe\n\nResultStack jest przestarzała."
 metadata:
-  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 7346d86d3ff9db2146f37a3f402b60faebe442b7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341568"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464440"
