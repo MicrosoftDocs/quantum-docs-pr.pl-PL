@@ -9,18 +9,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1b767313b7f421ddaba62ab2be99fe10b8d0430e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1523bfdfec08fd093f1c7ea999e23e85fc3cfc14
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834554"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91478940"
 ---
 # <a name="quantum-computing-history-and-background"></a>Historia i podstawy obliczeń kwantowych
 
 W ciągu ostatnich kilku lat powstało mnóstwo nowych technologii komputerowych, a obliczenia kwantowe to prawdopodobnie technologia wymagająca największego przesunięcia paradygmatu ze strony deweloperów.  Komputery kwantowe zaproponowali w latach 80. fizyk [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) i matematyk [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  Intuicja stojąca za obliczeniami kwantowymi wywodzi się z czegoś, co często postrzegane było jako jeden z największych kłopotów fizyki: nadzwyczajnego postępu naukowego stojącego w obliczu niemożności modelowania nawet prostych układów. Mechanika kwantowa powstała między 1900 a 1925 rokiem i pozostaje kamieniem węgielnym, który ostatecznie stanowi podstawę chemii, fizyki materii skondensowanej i najrozmaitszych technologii, od układów scalonych po oświetlenie LED.  Pomimo tych sukcesów modelowanie nawet niektórych najprostszych układów w mechanice kwantowej wydawało się przekraczać ludzkie możliwości.  Przyczyną jest to, że symulowanie układów nawet kilkudziesięciu cząstek wchodzących między sobą w interakcje wymaga więcej mocy obliczeniowej niż jakikolwiek konwencjonalny komputer jest w stanie dostarczyć w ciągu tysięcy lat!
 
-To, dlaczego symulacja mechaniki kwantowej jest tak trudna, można wytłumaczyć na wiele sposobów.  Być może najprostszym wyjaśnieniem jest to, że teorię kwantów można interpretować jako twierdzącą, że materia na poziomie kwantowym znajduje się w wielu konfiguracjach (nazywanych *stanami*) jednocześnie.  W przeciwieństwie do klasycznej teorii prawdopodobieństwa, te wiele potencjalnie obserwowalnych konfiguracji stanu kwantowego może interferować ze sobą jak fale w basenie pływowym.  Ta interferencja uniemożliwia użycie próbkowania statystycznego do uzyskania konfiguracji stanu kwantowego.  Zamiast tego, jeśli chcemy zrozumieć ewolucję kwantu, musimy śledzić *każdą możliwą* konfigurację, w jakiej mógłby znajdować się układ kwantowy.  
+To, dlaczego symulacja mechaniki kwantowej jest tak trudna, można wytłumaczyć na wiele sposobów.  Mówiąc najprościej, teorię kwantów można interpretować jako twierdzenie, że materia na poziomie kwantowym znajduje się jednocześnie w wielu możliwych konfiguracjach (nazywanych *stanami*).  W przeciwieństwie do klasycznej teorii prawdopodobieństwa, te wiele potencjalnie obserwowalnych konfiguracji stanu kwantowego może interferować ze sobą jak fale w basenie pływowym.  Ta interferencja uniemożliwia użycie próbkowania statystycznego do uzyskania konfiguracji stanu kwantowego.  Zamiast tego, jeśli chcemy zrozumieć ewolucję kwantu, musimy śledzić *każdą możliwą* konfigurację, w jakiej mógłby znajdować się układ kwantowy.  
 
 Rozważmy układ elektronów, w którym elektrony mogą znajdować się w dowolnej z $40$ pozycji.  Elektrony mogą być w dowolnej z $2^{40}$ konfiguracji (ponieważ każde położenie może zawierać lub nie zawierać elektronu). Do przechowania stanu kwantowego elektronów w pamięci konwencjonalnego komputera potrzeba byłoby ponad $130$ GB pamięci!  To dużo, ale w zasięgu niektórych komputerów.  Gdybyśmy dopuścili możliwość, że cząstki znajdują się dowolnej z $41$ pozycji, istniałoby dwukrotnie więcej konfiguracji przy $2^{41}$, co z kolei wymagałoby więcej niż $260$ GB pamięci do przechowania stanu kwantowego. Jeśli chcielibyśmy przechowywać stan w konwencjonalny sposób, liczby położeń nie moglibyśmy zwiększać w nieskończoność, ponieważ szybko przekroczylibyśmy możliwości obliczeniowe nawet najpotężniejszych komputerów na świecie.  Już przy kilkuset elektronach pamięć potrzebna do przechowywania układu przekracza liczbę cząstek we wszechświecie, a więc nie ma szans na to, że za pomocą naszych konwencjonalnych komputerów kiedykolwiek uda się symulować ich dynamikę kwantową. A do tego ze swej natury takie systemy ochoczo ewoluują w czasie, zgodnie z prawami mechaniki kwantowej, rozkosznie nieświadome problemów inżynierów i niemożności symulowania ich ewolucji przy użyciu mocy obliczeniowej konwencjonalnych komputerów.
 
