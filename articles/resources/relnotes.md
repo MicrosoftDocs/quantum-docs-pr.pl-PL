@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492357"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771328"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Ten artykuł zawiera informacje dotyczące poszczególnych wersji zestawu Quantu
 Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.quantum.install).
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
+
+## <a name="version-01220100504"></a>0.12.20100504 wersja
+
+*Data wydania: 5 października, 2020*
+
+W tej wersji rozwiązano usterkę wpływającą na ładowanie Q# notesów (zobacz [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>0.12.20092803 wersja
 
@@ -66,7 +72,7 @@ Zapoznaj się z pełną listą zamkniętych żądań ściągnięcia dla [bibliot
 
 To wydanie zawiera następujące elementy:
 
-- Otwarte przestrzenie nazw w Q# notesach są teraz dostępne dla wszystkich obliczeń w przyszłych komórkach. Dzięki temu można na przykład otwierać obszary nazw raz w komórce w górnej części notesu zamiast otwierać odpowiednie przestrzenie nazw w każdej komórce kodu. Nowe `%lsopen` polecenie Magic wyświetla listę obecnie otwartych przestrzeni nazw.
+- Otwarte przestrzenie nazw w Q# notesach są teraz dostępne podczas uruchamiania wszystkich przyszłych komórek. Dzięki temu można na przykład otwierać obszary nazw raz w komórce w górnej części notesu zamiast otwierać odpowiednie przestrzenie nazw w każdej komórce kodu. Nowe `%lsopen` polecenie Magic wyświetla listę obecnie otwartych przestrzeni nazw.
 
 Zapoznaj się z pełną listą zamkniętych żądań ściągnięcia dla [bibliotek](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [kompilatorów](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [środowiska uruchomieniowego](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [przykładów](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) [ Q# i i](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
