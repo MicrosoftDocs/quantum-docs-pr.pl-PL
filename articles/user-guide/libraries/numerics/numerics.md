@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868801"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764138"
 ---
 # <a name="using-the-numerics-library"></a>Korzystanie z biblioteki liczb
 
@@ -31,37 +31,37 @@ Dostęp do wszystkich tych składników można uzyskać przy użyciu jednej `ope
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Types
+## <a name="types"></a>Typy
 
 Biblioteka liczb obsługuje następujące typy:
 
 1. **`LittleEndian`**: Tablica qubit `qArr : Qubit[]` , która reprezentuje liczbę całkowitą, gdzie `qArr[0]` wskazuje najmniejszy znaczący bit.
 1. **`SignedLittleEndian`**: Taka sama jak `LittleEndian` z tą różnicą, że reprezentuje ze znakiem liczbę całkowitą przechowywaną w uzupełnieniu dwóch.
-1. **`FixedPoint`**: Reprezentuje liczbę rzeczywistą składającą się z tablicy qubit `qArr2 : Qubit[]` i pozycji punktu binarnego `pos` , która zlicza liczbę cyfr binarnych po lewej stronie punktu binarnego. `qArr2`jest przechowywany w taki sam sposób jak w przypadku programu `SignedLittleEndian` .
+1. **`FixedPoint`**: Reprezentuje liczbę rzeczywistą składającą się z tablicy qubit `qArr2 : Qubit[]` i pozycji punktu binarnego `pos` , która zlicza liczbę cyfr binarnych po lewej stronie punktu binarnego. `qArr2` jest przechowywany w taki sam sposób jak w przypadku programu `SignedLittleEndian` .
 
 ## <a name="operations"></a>Operacje
 
 Dla każdego z trzech powyższych typów dostępne są różne operacje:
 
 1. **`LittleEndian`**
-    - Dodawanie
+    - Znak dodawania
     - Porównanie
-    - Mnożenie
+    - Znak mnożenia
     - Podniesienie
     - Dzielenie (z resztą)
 
 1. **`SignedLittleEndian`**
-    - Dodawanie
+    - Znak dodawania
     - Porównanie
     - Uzupełnienie od 1 do wersji 2
-    - Mnożenie
+    - Znak mnożenia
     - Podniesienie
 
 1. **`FixedPoint`**
     - Przygotowanie/inicjowanie do klasycznych wartości
     - Dodawanie (klasyczna stała lub inna stała Quantum)
     - Porównanie
-    - Mnożenie
+    - Znak mnożenia
     - Podniesienie
     - Ocena wielomianowa z specjalizacją dla funkcji parzystych i nieparzystych
     - Wzajemne (1/x)
@@ -120,7 +120,7 @@ Aby rozpocząć, Sklonuj repozytorium i Otwórz `Numerics` podfolder:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 Następnie `cd` do jednego z przykładowych folderów i uruchomienia przykładu za pośrednictwem
