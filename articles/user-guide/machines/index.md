@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833432"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771318"
 ---
 # <a name="quantum-simulators"></a>Symulatory kwantowe
 
@@ -24,7 +24,7 @@ Symulatory kwantowe to programy działające na klasycznych komputerach pełnią
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Symulatory kwantowe zestawu Quantum Development Kit (QDK)
 
-Symulator kwantowy zapewnia implementacje kwantowych typów pierwotnych algorytmu. Obejmują one operacje pierwotne, takie jak `H`, `CNOT` i `Measure`, a także śledzenie kubitów i zarządzanie nimi. Zestaw QDK zawiera różne klasy symulatorów kwantowych reprezentujące różne modele uruchamiania dla tego samego algorytmu kwantowego. 
+Symulator kwantowy zapewnia implementacje kwantowych typów pierwotnych algorytmu. Obejmują one operacje pierwotne, takie jak `H`, `CNOT` i `Measure`, a także śledzenie kubitów i zarządzanie nimi. Zestaw QDK zawiera różne klasy symulatorów kwantowych reprezentujące różne sposoby symulowania tego samego algorytmu kwantowego. 
 
 
 Każdy typ symulatora kwantowego może udostępniać odrębną implementację typów pierwotnych. Na przykład [symulator pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator) uruchamia algorytm kwantowy, w pełni symulując [wektor stanu kwantowego](xref:microsoft.quantum.glossary#quantum-state), podczas gdy [symulator śledzenia komputera kwantowego](xref:microsoft.quantum.machines.qc-trace-simulator.intro) w ogóle nie uwzględnia rzeczywistego stanu kwantowego. Zamiast tego śledzi on użycie bramy, kubitów oraz innych zasobów.

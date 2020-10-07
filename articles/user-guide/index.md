@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834758"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771374"
 ---
 # <a name="the-no-locq-user-guide"></a>Podręcznik użytkownika języka Q#
 
@@ -55,7 +55,7 @@ W poszczególnych tematach tego przewodnika opisano szczegółowo podstawowe poj
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Symulatory kwantowe i narzędzia do szacowania zasobów
 
-- [Symulatory kwantowe i aplikacje hosta](xref:microsoft.quantum.machines): Omówienie różnych dostępnych symulatorów oraz ogólnego modelu uruchamiania między programami hosta a maszynami docelowymi.
+- [Symulatory kwantowe i aplikacje hosta](xref:microsoft.quantum.machines): Omówienie różnych dostępnych symulatorów oraz tego, jak programy hosta i maszyny docelowe współdziałają w celu uruchamiania programów Q#.
 
 - [Symulator pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator): Maszyna docelowa, która symuluje pełny stan kwantowy. Przydatne do pełnego uruchamiania lub debugowania programów o mniejszej skali (mniej niż kilkadziesiąt kubitów)
 
