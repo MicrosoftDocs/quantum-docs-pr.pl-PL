@@ -1,3 +1,5 @@
+- name: Rozwijanie umiejętności dzięki środowisku MS Learn
+  href: 'https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/'
 - name: Słownik
   href: glossary.md
 - name: Współtworzenie zestawu QDK
