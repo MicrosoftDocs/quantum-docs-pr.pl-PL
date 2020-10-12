@@ -4,17 +4,17 @@ title: Wprowadzenie do zestawu Quantum Development Kit (QDK)
 description: Dowiedz się, jak rozpocząć programowanie projektów w języku Q# przy użyciu zestawu Microsoft Quantum Development Kit.
 author: bradben
 ms.author: v-benbra
-ms.date: 5/10/2020
+ms.date: 9/29/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8a60888bbf7dce1b85bce7a2aa8c994bb8570964
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834503"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771205"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Wprowadzenie do zestawu Quantum Development Kit (QDK)
 
@@ -34,13 +34,11 @@ Aby zacząć korzystać z możliwości obliczeń kwantowych, możesz wypróbowa�
 
 * [Kwantowy generator liczb losowych](xref:microsoft.quantum.quickstarts.qrng) — to taka aplikacja typu „Hello world” w języku Q#, która zapewnia krótkie wprowadzenie do koncepcji kwantowych i umożliwia utworzenie oraz uruchomienie aplikacji kwantowej w ciągu kilku minut.
 * [Eksplorowanie splątania przy użyciu języka Q#](xref:microsoft.quantum.write-program) — ten samouczek obejmuje napisanie w języku Q# programu demonstrującego niektóre podstawowe koncepcje programowania kwantowego. Jeśli nie możesz jeszcze zacząć tworzyć kodu, nadal możesz kontynuować bez instalowania zestawu QDK oraz zapoznać się z omówieniem języka programowania Q# i pierwszymi pojęciami związanymi z obliczeniami kwantowymi.
-* [Algorytm wyszukiwania Grovera](xref:microsoft.quantum.quickstarts.search) — poznaj przykładowy program w języku Q#, który przedstawia, jak można w języku Q# wyrażać algorytmy kwantowe, abstrahując od operacji kwantowych niskiego poziomu.
-    Ten samouczek przeprowadzi Cię przez proces tworzenia programu jako aplikacji języka Q# przy użyciu programu Visual Studio lub Visual Studio Code.
+* [Algorytm wyszukiwania Grovera](xref:microsoft.quantum.quickstarts.search) — poznaj przykładowy program w języku Q#, który przedstawia, jak można w języku Q# wyrażać algorytmy kwantowe, abstrahując od operacji kwantowych niskiego poziomu. Ten samouczek przeprowadzi Cię przez proces tworzenia programu jako aplikacji języka Q# przy użyciu programu Visual Studio lub Visual Studio Code.
 
-### <a name="learning-further"></a>Dalsza nauka
-* Dzięki [modułom Microsoft Learn dotyczące obliczeń kwantowych](https://docs.microsoft.com/learn/browse/?term=quantum) opanujesz kluczowe pojęcia we własnym tempie i w odpowiednim dla Ciebie czasie. Możesz poznać podstawowe informacje dotyczące sposobu tworzenia programów kwantowych przy użyciu zestawu QDK w naszym [pierwszym module](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
-* Aby dowiedzieć się więcej na temat programowania w języku Q#, zapoznaj się z projektem [Quantum Katas](https://github.com/Microsoft/QuantumKatas) — kolekcją ćwiczeń programistycznych do wykonywania we własnym tempie, które stanowią wprowadzenie do obliczeń kwantowych przez ćwiczenia programistyczne w języku Q#.
-    Wiele z tych ćwiczeń kata jest również dostępnych jako notesy języka Q#. 
+## <a name="learning-further"></a>Dalsza nauka
+* Witryna Microsoft Learn oferuje bezpłatne szkolenia online dotyczące obliczeń kwantowych. Ścieżka szkoleniowa [Podstawy obliczeń kwantowych](https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/) przedstawia podstawowe pojęcia związane z obliczeniami kwantowymi i algorytmami kwantowymi oraz umożliwia rozpoczęcie tworzenia programów kwantowych przy użyciu języka Q#.
+* Aby dowiedzieć się więcej na temat programowania w języku Q#, zapoznaj się z projektem [Quantum Katas](https://github.com/Microsoft/QuantumKatas) — kolekcją ćwiczeń programistycznych do wykonywania we własnym tempie, które stanowią wprowadzenie do obliczeń kwantowych przez ćwiczenia programistyczne w języku Q#. Wiele z tych ćwiczeń kata jest również dostępnych jako notesy języka Q#. 
 * Nasze [repozytorium przykładów](https://github.com/Microsoft/Quantum) zawiera wiele próbek tego, jak pisać programy kwantowe przy użyciu języka Q#. Większość z tych przykładów jest pisanych z użyciem naszych [bibliotek kwantowych](https://github.com/Microsoft/QuantumLibraries) typu open source, w tym naszych bibliotek [standardowych](xref:microsoft.quantum.libraries.standard.intro) i [chemicznych](xref:microsoft.quantum.chemistry.concepts.intro) (więcej informacji na ten temat znajduje się poniżej).
 
 ## <a name="key-concepts-for-quantum-computing"></a>Kluczowe pojęcia dotyczące obliczeń kwantowych
@@ -59,7 +57,7 @@ Bieżąca dokumentacja zawiera następujące dodatkowe tematy.
 ### <a name="no-locq-developer-guides"></a>Przewodniki deweloperów języka Q#
 
 * [Przewodnik użytkownika języka Q#](xref:microsoft.quantum.guide) zawiera szczegółowy opis podstawowych pojęć używanych do tworzenia programów kwantowych w języku Q#.
-* W temacie [Symulatory kwantowe i aplikacje hosta](xref:microsoft.quantum.machines) opisano, jak są obliczane algorytmy kwantowe, jakie maszyny kwantowe są dostępne oraz jak napisać sterownik dla programu kwantowego w języku innym niż Q#.
+* W temacie [Symulatory kwantowe i aplikacje hosta](xref:microsoft.quantum.machines) opisano, jak są uruchamiane algorytmy kwantowe, jakie maszyny kwantowe są dostępne oraz jak napisać sterownik dla programu kwantowego w języku innym niż Q#.
 
 ### <a name="no-locq-libraries"></a>Biblioteki języka Q#
 

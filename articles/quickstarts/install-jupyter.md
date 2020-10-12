@@ -10,18 +10,18 @@ uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834316"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771388"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
 
 Zainstaluj zestaw QDK na potrzeby opracowywania operacji języka Q# w notesach Jupyter Notebook języka Q#.
 
-Notesy Jupyter zapewniają możliwość obliczania kodu w miejscu, a także instrukcje, notatki i inną zawartość. Jest to idealne środowisko do pisania kodu Q# z osadzonymi wyjaśnieniami lub interaktywnych samouczków wykonywania obliczeń kwantowych. Oto jak zacząć tworzenie własnych notesów języka Q#.
+Notesy Jupyter Notebook umożliwiają uruchamianie kodu w miejscu, a także instrukcje, notatki i inną zawartość. Jest to idealne środowisko do pisania kodu Q# z osadzonymi wyjaśnieniami lub interaktywnych samouczków wykonywania obliczeń kwantowych. Oto jak zacząć tworzenie własnych notesów języka Q#.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Instalowanie jądra Jupyter IQ#
 
