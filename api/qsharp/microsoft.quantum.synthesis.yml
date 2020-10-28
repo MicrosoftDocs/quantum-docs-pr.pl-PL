@@ -1,0 +1,71 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Dekomponowauje permutację na zmiennej
+  uid: Microsoft.Quantum.Synthesis.DecomposedOn
+- summary: Koduj tabelę prawdy w {1,-1} kodowaniu
+  uid: Microsoft.Quantum.Synthesis.Encoded
+- summary: Rozszerza spektrum przez odwrócone współczynniki
+  uid: Microsoft.Quantum.Synthesis.Extended
+- summary: Oblicza Hadamard transformację funkcji logicznej w {-1,1} kodowaniu przy użyciu metody Yates
+  uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Tworzy typ MCMTMask jako tablicę pojedynczą, jeśli elementy docelowe nie są równe 0. w przeciwnym razie zwraca pustą tablicę.
+  uid: Microsoft.Quantum.Synthesis.GateMask
+- summary: Oblicza do dwóch masek MCMT do przekształcenia y do x.
+  uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment
+- summary: Zwraca wszystkie pozycje, w których są ustawiane bity liczby całkowitej.
+  uid: Microsoft.Quantum.Synthesis.IntegerBits
+- summary: Przekształć maskę bitów kontroli i elementów docelowych na parę formantów qubits i Target qubits
+  uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair
+- summary: '{-1,1} kodowanie wartości logicznej prawdy'
+  uid: Microsoft.Quantum.Synthesis.RMEncoding
+- summary: Dostosowuje tabelę prawdy z tablicy wartości logicznych zgodnie z liczbą zmiennych, która zwraca długość nowej tablicy `2^numVars` , co może wymagać zwiększenia `table` rozmiaru z `false` wpisami lub obcinanie go do `2^numVars` elementów.
+  uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Maskowanie masek bramy w celu wysyntezowania permutacji.
+  uid: Microsoft.Quantum.Synthesis.TBSMain
+- summary: Oblicza maski bramy w celu przekształcenia uprawnienie [x] do x i aktualizuje bieżącą permutację.
+  uid: Microsoft.Quantum.Synthesis.TBSStep
+- summary: Zbierz wszystkie funkcje dla kontrolowanych bram przez składanie wszystkich indeksów zmiennych
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
+- summary: Logika dekompozycji dla pojedynczego indeksu zmiennej
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder
+- summary: Zaktualizuj wzorzec danych wyjściowych zgodnie z maską bramy.
+  uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern
+- summary: Aktualizuj permutację na podstawie maski bramy.
+  uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
+- summary: Wstaw 0-bitowe do liczby całkowitej
+  uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+name: Microsoft.Quantum.Synthesis
+newtypes:
+- summary: Stan podczas dekompozycji na podstawie indeksów zmiennych
+  uid: Microsoft.Quantum.Synthesis.DecompositionState
+- summary: >-
+    Typ reprezentujący wielokierunkową bramę Toffoli z wieloma lokalizacjami.
+
+    Pierwsza liczba całkowita jest maską bitową dla linii kontrolnych.  Ustawione indeksy bitowe odpowiadają indeksom wierszy sterowania.
+
+    Druga liczba całkowita jest maską bitową dla wierszy docelowych.  Ustawione indeksy bitowe odpowiadają indeksom wierszy docelowych.
+
+    Indeksy bitowe obu liczb całkowitych muszą być rozłączone.
+  uid: Microsoft.Quantum.Synthesis.MCMTMask
+operations:
+- summary: Permutes amplitud w stanie Quantum przy użyciu syntezy opartej na dekompozycji.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
+- summary: Permutes amplitud w stanie Quantum przy użyciu syntezy opartej na dekompozycji.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
+- summary: Permutes amplitud w stanie Quantum przy użyciu syntezy opartej na transformacji.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: Stosuje @"microsoft.quantum.intrinsic.x" operację na `target` , jeśli funkcja logiczna `func` zwróci wartość true dla klasycznego przypisania w `controlRegister` .
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
+- summary: Stosuje @"microsoft.quantum.intrinsic.x" operację na `target` , jeśli funkcja logiczna `func` zwróci wartość true dla klasycznego przypisania w `controlRegister` .
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget
+summary: Ta przestrzeń nazw zawiera funkcje i operacje umożliwiające syntezowanie operacji Quantum na podstawie permutacji i funkcji logicznych.
+uid: Microsoft.Quantum.Synthesis
+metadata:
+  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725722"
