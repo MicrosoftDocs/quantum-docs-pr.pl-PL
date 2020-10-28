@@ -1,0 +1,166 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, i sprawdza, czy wszystkie elementy tablicy spełniają predykat.
+  uid: Microsoft.Quantum.Arrays.All
+- summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, sprawdza, czy co najmniej jeden element tablicy spełnia predykat.
+  uid: Microsoft.Quantum.Arrays.Any
+- summary: Dzieli tablicę na wiele części równej długości.
+  uid: Microsoft.Quantum.Arrays.Chunks
+- summary: Wyodrębnia kolumnę z macierzy.
+  uid: Microsoft.Quantum.Arrays.ColumnAt
+- summary: Ta funkcja nie sprawdza dla kształtu macierzy
+  uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
+- summary: Tworzy tablicę o podaną długość ze wszystkimi elementami równymi podaną wartością.
+  uid: Microsoft.Quantum.Arrays.ConstantArray
+- summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca liczbę elementów tablicy, która składa się z tych elementów, które spełniają predykat.
+  uid: Microsoft.Quantum.Arrays.Count
+- summary: Łączy zamapowane i zgięcie w jedną funkcję
+  uid: Microsoft.Quantum.Arrays.CumulativeFolded
+- summary: Zwraca tablicę elementów ukośnych macierzy 2-wymiarowej.
+  uid: Microsoft.Quantum.Arrays.Diagonal
+- summary: Zwraca wartość przy podanym indeksie tablicy.
+  uid: Microsoft.Quantum.Arrays.ElementAt
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.ElementAtDiagonal
+- summary: Zwraca elementy tablicy w danym zakresie indeksów.
+  uid: Microsoft.Quantum.Arrays.ElementsAt
+- summary: Zwraca pustą tablicę danego typu.
+  uid: Microsoft.Quantum.Arrays.EmptyArray
+- summary: Dana tablica zwraca nową tablicę zawierającą elementy oryginalnej tablicy wraz z indeksami każdego elementu.
+  uid: Microsoft.Quantum.Arrays.Enumerated
+- summary: Dana dwie tablice tego samego typu i predykatu, który jest zdefiniowany dla par elementów tablic, sprawdza, czy tablice są równe.
+  uid: Microsoft.Quantum.Arrays.EqualA
+- summary: Zwraca tablicę zawierającą elementy innej tablicy, z wyłączeniem elementów na danej liście indeksów.
+  uid: Microsoft.Quantum.Arrays.Exclude
+- summary: Zwraca tablicę zawierającą elementy innej tablicy, z wyłączeniem elementów na danej liście indeksów.
+  uid: Microsoft.Quantum.Arrays.Excluding
+- summary: Dana tablica i predykat, który jest zdefiniowany dla elementów tablicy, zwraca tablicę, która składa się z tych elementów, które spełniają predykat.
+  uid: Microsoft.Quantum.Arrays.Filtered
+- summary: Podaną tablicą i funkcją, która mapuje element tablicy na część tablicy wyjściowej, zwraca tablice wyjściowe połączone dla każdego elementu tablicy.
+  uid: Microsoft.Quantum.Arrays.FlatMapped
+- summary: Dana tablica tablic zwraca połączenie wszystkich tablic.
+  uid: Microsoft.Quantum.Arrays.Flattened
+- summary: Iteruje funkcję `f` za pomocą tablicy `array` , zwracając `f(f(f(initialState, array[0]), array[1]), ...)` .
+  uid: Microsoft.Quantum.Arrays.Fold
+- summary: Zwraca pierwszy element tablicy.
+  uid: Microsoft.Quantum.Arrays.Head
+- summary: Zwraca krotkę pierwszych i pozostałych elementów tablicy.
+  uid: Microsoft.Quantum.Arrays.HeadAndRest
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Identity
+- summary: Zwraca pierwszy indeks pierwszego elementu w tablicy, który spełnia określony predykat. Jeśli taki element nie istnieje, zwraca wartość-1.
+  uid: Microsoft.Quantum.Arrays.IndexOf
+- summary: Dana tablica zwraca zakres przez indeksy tej tablicy, odpowiedni do użycia w pętli for.
+  uid: Microsoft.Quantum.Arrays.IndexRange
+- summary: Przeplot dwóch tablic o (prawie) tym samym rozmiarze.
+  uid: Microsoft.Quantum.Arrays.Interleaved
+- summary: Zwraca wartość true, jeśli i tylko wtedy, gdy tablica jest pusta.
+  uid: Microsoft.Quantum.Arrays.IsEmpty
+- summary: Zwraca wartość PRAWDA, jeśli i tylko wtedy, gdy dana tablica reprezentuje permutację.
+  uid: Microsoft.Quantum.Arrays.IsPermutation
+- summary: Dana tablica zwraca czy tablica jest sortowana zgodnie z definicją przez daną funkcję porównania.
+  uid: Microsoft.Quantum.Arrays.IsSorted
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.IsValuePresent
+- summary: Dana tablica zwraca funkcję, która zwraca elementy tej tablicy.
+  uid: Microsoft.Quantum.Arrays.LookupFunction
+- summary: Dana tablica i funkcja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w funkcji.
+  uid: Microsoft.Quantum.Arrays.Mapped
+- summary: Dana tablica i funkcja, która jest zdefiniowana dla indeksowanych elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w funkcji.
+  uid: Microsoft.Quantum.Arrays.MappedByIndex
+- summary: Uwzględniając zakres i funkcję, która przyjmuje liczbę całkowitą jako dane wejściowe, zwraca nową tablicę, która składa się z obrazów wartości zakresu w ramach funkcji.
+  uid: Microsoft.Quantum.Arrays.MappedOverRange
+- summary: W przypadku dwóch posortowanych tablic funkcja zwraca pojedynczą tablicę zawierającą elementy obu elementów w sortowanej kolejności. Używane wewnętrznie przez scalanie sortowania.
+  uid: Microsoft.Quantum.Arrays.Merged
+- summary: Tworzy tablicę, która jest równa tablicy wejściowej, z tą różnicą, że ostatni element tablicy jest porzucany.
+  uid: Microsoft.Quantum.Arrays.Most
+- summary: Zwraca krotkę wszystkich elementów oprócz jednego i ostatniego elementu tablicy.
+  uid: Microsoft.Quantum.Arrays.MostAndTail
+- summary: Zwraca tablicę uzupełnioną o określone wartości do określonej długości.
+  uid: Microsoft.Quantum.Arrays.Padded
+- summary: Dzieli tablicę na wiele części.
+  uid: Microsoft.Quantum.Arrays.Partitioned
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Prefix
+- summary: Podaną tablicę zwraca wszystkie jej prefiksy.
+  uid: Microsoft.Quantum.Arrays.Prefixes
+- summary: Reprezentuje warunek, którego Dwuwymiarowa tablica ma kształt prostokątny
+  uid: Microsoft.Quantum.Arrays.RectangularArrayFact
+- summary: Tworzy tablicę, która jest równa tablicy wejściowej, z tą różnicą, że pierwszy element tablicy jest porzucany.
+  uid: Microsoft.Quantum.Arrays.Rest
+- summary: Utwórz tablicę zawierającą te same elementy co Tablica wejściowa, ale w odwrotnej kolejności.
+  uid: Microsoft.Quantum.Arrays.Reversed
+- summary: Pobierz tablicę liczb całkowitych w danym interwale.
+  uid: Microsoft.Quantum.Arrays.SequenceI
+- summary: Pobierz tablicę liczb całkowitych w danym interwale.
+  uid: Microsoft.Quantum.Arrays.SequenceL
+- summary: Dana tablica zwraca elementy tej tablicy posortowane według danej funkcji porównywania.
+  uid: Microsoft.Quantum.Arrays.Sorted
+- summary: Reprezentuje warunek, którego Dwuwymiarowa tablica ma kształt kwadratowy
+  uid: Microsoft.Quantum.Arrays.SquareArrayFact
+- summary: Pobiera tablicę i listę lokalizacji i tworzy nową tablicę utworzoną z elementów oryginalnej tablicy, które pasują do określonych lokalizacji.
+  uid: Microsoft.Quantum.Arrays.Subarray
+- summary: Stosuje wymianę dwóch elementów w tablicy.
+  uid: Microsoft.Quantum.Arrays.Swapped
+- summary: Zwraca ostatni element tablicy.
+  uid: Microsoft.Quantum.Arrays.Tail
+- summary: Zwraca transpozycję macierzy reprezentowanej jako tablica tablic.
+  uid: Microsoft.Quantum.Arrays.Transposed
+- summary: Zamienia listę 2-kroteks na tablicę zagnieżdżoną.
+  uid: Microsoft.Quantum.Arrays.TupleArrayAsNestedArray
+- summary: Zwraca nową tablicę, która nie ma równych elementów sąsiadujących.
+  uid: Microsoft.Quantum.Arrays.Unique
+- summary: Dana Tablica 2-krotek zwraca spójną kolekcję dwóch tablic, z których każda zawiera elementy krotek tablicy wejściowej.
+  uid: Microsoft.Quantum.Arrays.Unzipped
+- summary: Podano predykat i tablicę, zwraca indeksy tej tablicy, w której predykat ma wartość true.
+  uid: Microsoft.Quantum.Arrays.Where
+- summary: Zwraca wszystkie kolejne podtablice długości `size` .
+  uid: Microsoft.Quantum.Arrays.Windows
+- summary: >-
+    > [!WARNING]
+
+    > Plik zip został uznany za przestarzały. Użyj <xref:Microsoft.Quantum.Arrays.Zipped> zamiast tego.
+
+
+    Dana dwie tablice zwraca nową tablicę par, w taki sposób, że każda para zawiera element z każdej oryginalnej tablicy.
+  uid: Microsoft.Quantum.Arrays.Zip
+- summary: >-
+    > [!WARNING]
+
+    > Zip3 — jest przestarzała. Użyj <xref:Microsoft.Quantum.Arrays.Zipped3> zamiast tego.
+
+
+    Podano trzy tablice, zwraca nową tablicę 3-krotek, tak że każda 3-krotka zawiera element z każdej oryginalnej tablicy.
+  uid: Microsoft.Quantum.Arrays.Zip3
+- summary: >-
+    > [!WARNING]
+
+    > Zip4 jest przestarzała. Użyj <xref:Microsoft.Quantum.Arrays.Zipped4> zamiast tego.
+
+
+    W przypadku czterech tablic funkcja zwraca nową tablicę składającą się z 4 krotek, tak że każda 4-krotka zawiera element z każdej oryginalnej tablicy.
+  uid: Microsoft.Quantum.Arrays.Zip4
+- summary: Dana dwie tablice zwraca nową tablicę par, w taki sposób, że każda para zawiera element z każdej oryginalnej tablicy.
+  uid: Microsoft.Quantum.Arrays.Zipped
+- summary: Podano trzy tablice, zwraca nową tablicę 3-krotek, tak że każda 3-krotka zawiera element z każdej oryginalnej tablicy.
+  uid: Microsoft.Quantum.Arrays.Zipped3
+- summary: W przypadku czterech tablic funkcja zwraca nową tablicę składającą się z 4 krotek, tak że każda 4-krotka zawiera element z każdej oryginalnej tablicy.
+  uid: Microsoft.Quantum.Arrays.Zipped4
+- summary: Zwraca elementy zamówienia w tablicy, które muszą zostać zamienione w celu utworzenia uporządkowanej tablicy. Przyjęto zamianę na miejsce.
+  uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
+name: Microsoft.Quantum.Arrays
+newtypes: []
+operations:
+- summary: Powtarza operację dla danej liczby próbek, zbierając wyniki wyjściowe w tablicy.
+  uid: Microsoft.Quantum.Arrays.DrawMany
+- summary: Dana tablica i operacja, która jest zdefiniowana dla elementów tablicy, zwraca nową tablicę, która składa się z obrazów oryginalnej tablicy w ramach operacji.
+  uid: Microsoft.Quantum.Arrays.ForEach
+summary: Ta przestrzeń nazw zawiera funkcje do tworzenia tablic danych i manipulowania nimi.
+uid: Microsoft.Quantum.Arrays
+metadata:
+  ms.openlocfilehash: aa551a5e9372bd63335a3a9ae3d817628722c09d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92719376"
