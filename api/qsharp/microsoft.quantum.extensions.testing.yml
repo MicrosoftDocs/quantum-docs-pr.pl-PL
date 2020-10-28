@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZero jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertAllZero> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertallzero".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZeroTol jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlace jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+
+    > Należy zauważyć, że kolejność argumentów dla tej operacji została zmieniona.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlaceCompBasis jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+
+    > Należy zauważyć, że kolejność argumentów dla tej operacji została zmieniona.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualReferenced jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+
+    > Należy zauważyć, że kolejność argumentów dla tej operacji została zmieniona.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubit jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertQubit> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertqubit".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitState jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitTol jest przestarzała. Użyj <xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance> zamiast tego.
+
+    >
+
+    > Używaj @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712096"

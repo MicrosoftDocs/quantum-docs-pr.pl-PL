@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Environment
+newtypes: []
+operations:
+- summary: Zwraca liczbę qubits, które są obecnie dostępne do zażyczania. Obejmuje to nieużywane qubits; oznacza to, że obejmuje to qubits zwrócone przez `GetQubitsAvailableToUse` .
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow
+- summary: Zwraca liczbę qubits, która jest obecnie dostępna do użycia.
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToUse
+summary: Te funkcje dostarczają informacji o środowisku, w którym występuje obliczenie Quantum.
+uid: Microsoft.Quantum.Environment
+metadata:
+  ms.openlocfilehash: 04a3ffe56be7da2c9adc13e2b27fe9ce0f982c44
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713183"
