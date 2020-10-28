@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489769"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691798"
 ---
 # <a name="contributing-code"></a>Zasady współtworzenia
 
@@ -36,7 +36,7 @@ Gdy zostanie otwarte nowe żądanie ściągnięcia, na przykład nasza konfigura
 
 W najnowszej Q# wersji testy jednostkowe są definiowane przy użyciu `@Test("QuantumSimulator")` atrybutu. Argument może mieć wartość "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" lub dowolną w pełni kwalifikowaną nazwę określającą cel uruchomienia. Kilka atrybutów definiujących różne elementy docelowe przebiegu można dołączać do tego samego możliwego do odtworzenia. Niektóre z naszych testów nadal używają przestarzałego pakietu [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , który uwidacznia wszystkie Q# funkcje i operacje kończące `Test` się na platformie [xUnit](https://xunit.github.io/) . Ten pakiet nie jest już wymagany do definiowania testów jednostkowych. 
 
-Poniższa funkcja służy do upewnienia się, <xref:microsoft.quantum.canon.fst> że <xref:microsoft.quantum.canon.snd> funkcje i zwracają odpowiednie dane wyjściowe w reprezentatywnym przykładzie.
+Poniższa funkcja służy do upewnienia się, <xref:Microsoft.Quantum.Canon.Fst> że <xref:Microsoft.Quantum.Canon.Snd> funkcje i zwracają odpowiednie dane wyjściowe w reprezentatywnym przykładzie.
 Jeśli dane wyjściowe `Fst` lub `Snd` są nieprawidłowe, `fail` instrukcja jest używana, aby spowodować niepowodzenie testu.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 Bardziej skomplikowane warunki można sprawdzić przy użyciu technik w [sekcji Testowanie](xref:microsoft.quantum.libraries.diagnostics) w przewodniku biblioteki standardowe.
-Na przykład następujące testy sprawdzają, czy `H(q); X(q); H(q);` jako wywołane przez <xref:microsoft.quantum.canon.applywith> są takie same jak `Z(q)` .
+Na przykład następujące testy sprawdzają, czy `H(q); X(q); H(q);` jako wywołane przez <xref:Microsoft.Quantum.Canon.ApplyWith> są takie same jak `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")

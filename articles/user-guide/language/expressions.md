@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835846"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691599"
 ---
 # <a name="expressions-in-no-locq"></a>Wyrażenia w Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Mogą być napisywane z lub bez separatora dziesiętnego, `.` lub części wykładniczej wskazanej za pomocą znaku "e" lub "e" (po których dozwolone są tylko możliwe znaki minus i cyfry dziesiętne).
 Poniżej podano prawidłowe `Double` literały: `0.0` , `1.2e5` , `1e-5` .
 
-Uwzględniając wyrażenie tablicy dowolnego typu elementu, można utworzyć `Int` wyrażenie przy użyciu [`Length`](xref:microsoft.quantum.core.length) wbudowanej funkcji, z wyrażeniem tablicy ujętym w nawiasy.
+Uwzględniając wyrażenie tablicy dowolnego typu elementu, można utworzyć `Int` wyrażenie przy użyciu [`Length`](xref:Microsoft.Quantum.Core.Length) wbudowanej funkcji, z wyrażeniem tablicy ujętym w nawiasy.
 Na przykład, jeśli `a` jest powiązany z tablicą, `Length(a)` jest wyrażeniem liczby całkowitej.
 Jeśli `b` jest tablicą tablic liczb całkowitych, `Int[][]` , a następnie `Length(b)` jest liczbą tablic w `b` , i `Length(b[1])` jest liczbą liczb całkowitych w drugiej tablicy podrzędnej w `b` .
 
@@ -64,7 +64,7 @@ W przypadku wartości liczb całkowitych i dużych liczb całkowitych przesunię
 Przesunięcie wartości ujemnej w lewo lub w prawo powoduje ujemną liczbę.
 Oznacza to, że przesunięcie jednego kroku w lewo lub w prawo jest takie samo jak mnożenie lub dzielenie odpowiednio przez 2.
 
-Dzielenie liczb całkowitych i moduł całkowity są zgodne z tym samym zachowaniem dla liczb ujemnych w języku C#. Oznacza to, że `a % b` zawsze ma ten sam znak jako `a` i `b * (a / b) + a % b` zawsze równa się `a` . Przykład:
+Dzielenie liczb całkowitych i moduł całkowity są zgodne z tym samym zachowaniem dla liczb ujemnych w języku C#. Oznacza to, że `a % b` zawsze ma ten sam znak jako `a` i `b * (a / b) + a % b` zawsze równa się `a` . Na przykład:
 
 |`A` | `B` | `A / B` | `A % B`|
 |:---------:|:----------:|:---------:|:---------:|
@@ -111,13 +111,13 @@ Mając każde wyrażenie logiczne, `not` operator jednoargumentowy może służy
 
 ## <a name="string-expressions"></a>Wyrażenia ciągu
 
-Q# zezwala na użycie ciągów w `fail` instrukcji (objaśnienie w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow#fail-statement)) i w [`Message`](xref:microsoft.quantum.intrinsic.message) funkcji standardowej. Takie zachowanie jest zależne od używanego symulatora, ale zazwyczaj zapisuje komunikat do konsoli hosta, gdy zostanie wywołana w trakcie działania Q# programu.
+Q# zezwala na użycie ciągów w `fail` instrukcji (objaśnienie w [przepływie sterowania](xref:microsoft.quantum.guide.controlflow#fail-statement)) i w [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) funkcji standardowej. Takie zachowanie jest zależne od używanego symulatora, ale zazwyczaj zapisuje komunikat do konsoli hosta, gdy zostanie wywołana w trakcie działania Q# programu.
 
 Ciągi w Q# są literałami lub interpolowanymi ciągami.
 
 Literały ciągu są podobne do prostych literałów ciągu w większości języków: sekwencji znaków Unicode ujętych w podwójne cudzysłowy `" "` .
 Wewnątrz ciągu Użyj znaku ukośnika odwrotnego, `\` Aby wypróbować znak podwójnego cudzysłowu ( `\"` ) lub wstawić nowy wiersz ( `\n` ), powrót karetki ( `\r` ) lub kartę ( `\t` ).
-Przykład:
+Na przykład:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -128,7 +128,7 @@ Q#Składnia interpolacji ciągów jest podzbiorem składni języka C#. Poniżej 
 
 * Aby zidentyfikować literał ciągu jako ciąg interpolowany, poprzedź go `$` symbolem. Między `$` i `"` , które zaczyna się literałem ciągu znaków, nie może być odstępu.
 
-* Poniżej znajduje się podstawowy przykład, za pomocą którego [`Message`](xref:microsoft.quantum.intrinsic.message) można napisać wynik pomiaru do konsoli wraz z innymi Q# wyrażeniami.
+* Poniżej znajduje się podstawowy przykład, za pomocą którego [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) można napisać wynik pomiaru do konsoli wraz z innymi Q# wyrażeniami.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Na przykład `(1, One)` jest `(Int, Result)` wyrażeniem.
 
 W przypadku innych niż literały jedynymi wyrażeniami krotek są symbole, które są powiązane z wartościami krotki, elementami tablicy tablic krotek i wywoływanie wywołań, które zwracają krotki.
 
-## <a name="user-defined-type-expressions"></a>Wyrażenia typu zdefiniowanego przez użytkownika
+## <a name="user-defined-type-expressions"></a>Wyrażenia typu User-Defined
 
 Literał typu zdefiniowanego przez użytkownika składa się z nazwy typu, a następnie literału krotki typu krotki podstawowej typu.
 Na przykład jeśli `IntPair` jest typem zdefiniowanym przez użytkownika `(Int, Int)` , a następnie `IntPair(2, 3)` jest prawidłowym literałem tego typu.
@@ -209,7 +209,7 @@ W takim przypadku, jeśli `WrappedPair` jest typem zdefiniowanym przez użytkown
 
 Pierwszeństwo `!` operatora ma jeden wpływ, który może nie być oczywisty.
 Jeśli funkcja lub operacja zwraca wartość, która staje się nieopakowana, wywołanie funkcji lub operacji musi być ujęte w nawiasy, tak aby krotka argumentu była powiązana z wywołaniem, a nie z odwinięciem.
-Przykład:
+Na przykład:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -237,11 +237,11 @@ W większości przypadków jest to pewna odmiana zero.
 
 W przypadku qubits i elementów, które są odwołaniami do jednostek, nie ma żadnej rozsądnej wartości domyślnej.
 W związku z tym, wartością domyślną jest nieprawidłowe odwołanie, którego nie można użyć bez powodowania błędu czasu wykonywania, podobnie jak w przypadku odwołań o wartości null w językach, takich jak C# lub Java.
-Tablice zawierające qubits lub elementy wywoływane muszą zostać zainicjowane przy użyciu wartości innych niż domyślne, aby można było bezpiecznie używać ich elementów. Odpowiednie procedury inicjowania można znaleźć w temacie <xref:microsoft.quantum.arrays> .
+Tablice zawierające qubits lub elementy wywoływane muszą zostać zainicjowane przy użyciu wartości innych niż domyślne, aby można było bezpiecznie używać ich elementów. Odpowiednie procedury inicjowania można znaleźć w temacie <xref:Microsoft.Quantum.Arrays> .
 
 Wartości domyślne dla każdego typu są następujące:
 
-Typ | Domyślny
+Typ | Domyślne
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`

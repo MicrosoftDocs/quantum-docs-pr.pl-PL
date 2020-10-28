@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835523"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691633"
 ---
 # <a name="no-locq-basics"></a>Q# Nazwie
 
@@ -28,7 +28,7 @@ Z perspektywy technicznej, program Quantum jest określonym zestawem klasycznych
 Istotną konsekwencją tego widoku jest to, że Q# program nie jest bezpośrednio modelem qubits, ale raczej opisuje, w jaki sposób klasyczny komputer współdziała z tymi qubitsami.
 Zgodnie z projektem, nie Q# definiuje bezpośrednio Stanów Quantum ani innych właściwości Mechanics Quantum.
 Na przykład rozważmy stan $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ omówiony w przewodniku [koncepcji obliczeniowej usługi Quantum](xref:microsoft.quantum.concepts.intro) .
-Aby przygotować ten stan w programie Q# , Zacznij od faktów, że qubits są inicjowane w stanie $ \ket {0} $ i że $ \ket{+} = H\ket {0} $, gdzie $H $ to [Hadamard Transform](xref:microsoft.quantum.glossary#hadamard), zaimplementowany przez [ `H` operację](xref:microsoft.quantum.intrinsic.h). Kod podstawowy Q# do zainicjowania i przekształcenia qubit jest następujący:
+Aby przygotować ten stan w programie Q# , Zacznij od faktów, że qubits są inicjowane w stanie $ \ket {0} $ i że $ \ket{+} = H\ket {0} $, gdzie $H $ to [Hadamard Transform](xref:microsoft.quantum.glossary#hadamard), zaimplementowany przez [ `H` operację](xref:Microsoft.Quantum.Intrinsic.H). Kod podstawowy Q# do zainicjowania i przekształcenia qubit jest następujący:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -37,7 +37,7 @@ using (qubit = Qubit()) {
     // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
-Aby uzyskać więcej informacji na temat inicjowania lub *alokowania*qubits, zobacz [Praca z qubits](xref:microsoft.quantum.guide.qubits).
+Aby uzyskać więcej informacji na temat inicjowania lub *alokowania* qubits, zobacz [Praca z qubits](xref:microsoft.quantum.guide.qubits).
 
 ## <a name="quantum-states-in-no-locq"></a>Stany Quantum w Q#
 
@@ -45,7 +45,7 @@ Z tego powodu poprzedni program nie odwołuje się jawnie do stanu w ramach Q# p
 Korzystając z tej metody, można całkowicie niezależny od na temat tego, co stan Quantum *jest* nawet na każdej maszynie docelowej, co może mieć różne interpretacje w zależności od maszyny. 
 
 Q#Program nie może Introspect stanu qubit.
-Zamiast tego program może wywoływać operacje, takie jak [`Measure`](xref:microsoft.quantum.intrinsic.measure) Aby poznać informacje z qubit i wywoływać operacje, takie jak [`X`](xref:microsoft.quantum.intrinsic.x) i [`H`](xref:microsoft.quantum.intrinsic.h) do działania na stanie qubit.
+Zamiast tego program może wywoływać operacje, takie jak [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) Aby poznać informacje z qubit i wywoływać operacje, takie jak [`X`](xref:Microsoft.Quantum.Intrinsic.X) i [`H`](xref:Microsoft.Quantum.Intrinsic.H) do działania na stanie qubit.
 Te *operacje są wykonywane* tylko w konkretnym miejscu przez maszynę docelową używaną do uruchamiania określonego Q# programu.
 Na przykład, jeśli uruchamiasz program w [symulatorze pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator), symulator wykonuje odpowiednie operacje matematyczne w symulowanym systemie Quantum.
 Jednak w przyszłości, gdy maszyna docelowa jest rzeczywistym komputerem z systemem Quantum, wywołanie takich operacji powoduje Q# kierowanie komputera Quantum do wykonywania odpowiednich *rzeczywistych* operacji na *rzeczywistym* systemie Quantum, na przykład precyzyjne impulsy laserowe.
@@ -55,14 +55,14 @@ W ten sposób można Q# łatwo wyrażać logikę podstawowych algorytmów Quantu
 
 ## <a name="no-locq-operations-and-functions"></a>Q# operacje i funkcje
 
-W konkretnym przypadku Q# program składa się z *operacji*, *funkcji*i wszystkich typów zdefiniowanych przez użytkownika. 
+W konkretnym przypadku Q# program składa się z *operacji* , *funkcji* i wszystkich typów zdefiniowanych przez użytkownika. 
 
 Operacje są używane do opisywania transformacji systemów Quantum i są najbardziej podstawowymi blokami konstrukcyjnymi Q# programów. Każda operacja zdefiniowana w programie Q# może następnie wywołać dowolną liczbę innych operacji.
 
 W przeciwieństwie do operacji, funkcje są używane do opisywania przejrzystie *deterministycznych* zachowań klasycznych i nie mają żadnych efektów poza obliczaniem klasycznych wartości. Załóżmy na przykład, że chcesz zmierzyć qubits na końcu programu i dodać wyniki pomiarów do tablicy.
 W tym przypadku `Measure` jest *operacją* , która instruuje maszynę docelową, aby wykonywała pomiary w qubits (rzeczywista lub symulowana). W tym samym czasie *Funkcja* obsługuje klasyczny proces dodawania zwracanych wyników do tablicy.
 
-Razem operacje i funkcje są nazywane *możliwymi*do przełożenia. Ich podstawowa struktura i zachowanie są wprowadzane i szczegółowo opisane w temacie [operacje Q# i funkcje w ](xref:microsoft.quantum.guide.operationsfunctions).
+Razem operacje i funkcje są nazywane *możliwymi* do przełożenia. Ich podstawowa struktura i zachowanie są wprowadzane i szczegółowo opisane w temacie [operacje Q# i funkcje w ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# Omówienie składni
@@ -94,7 +94,7 @@ Prosty przykład instrukcji w programie Q# przypisuje symbol do wyrażenia:
 let count = 5;
 ```
 
-Bardziej interesujący przykład to `for` instrukcja, która obsługuje iterację i zawiera *blok instrukcji*.
+Bardziej interesujący przykład to `for` instrukcja, która obsługuje iterację i zawiera *blok instrukcji* .
 Załóżmy `qubits` , że symbol jest powiązany z rejestrem qubits (technicznie typu `Qubit[]` lub tablicy `Qubit` typów). Następnie
 ```qsharp
 for (qubit in qubits) {

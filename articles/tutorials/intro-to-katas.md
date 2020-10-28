@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834826"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691651"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Nauka wykonywania obliczeń kwantowych z artykułów Quantum Kata
 
@@ -55,7 +55,7 @@ Poznaj podstawy obliczeń kwantowych lub bardziej zaawansowane algorytmy i proto
 |[Rozpoznawanie bramek kwantowych](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Seria ćwiczeń zaprojektowana w celu zapoznania się z podstawowymi bramami Quantum w systemie Q# . Zawiera ćwiczenia dotyczące podstawowych bramek z jednym kubitem i z wieloma kubitami, bramek sprzężonych i kontrolowanych oraz sposobów modyfikowania stanu kubita przy użyciu bramek.|
 |[Tworzenie superpozycji kwantowej](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Skorzystaj z tych ćwiczeń, aby zapoznać się z koncepcją nakładania się i programowania w programie Q# . Obejmuje ćwiczenia w przypadku podstawowych bram qubit i wieloqubitowych, podpozycji i kontroli przepływu oraz rekursji w programie Q# .|
 |[Rozróżnianie stanów kwantowych przy użyciu pomiarów](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Rozwiąż te ćwiczenia podczas uczenia się o pomiarach kwantowych oraz o stanach ortogonalnych i nieortogonalnych. |
-|[Wspólne pomiary](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Zapoznaj się z informacjami o wspólnych pomiarach parzystości i o tym, jak używać operacji [Miara](xref:microsoft.quantum.intrinsic.measure) do rozróżniania stanów kwantowych.|
+|[Wspólne pomiary](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Zapoznaj się z informacjami o wspólnych pomiarach parzystości i o tym, jak używać operacji [Miara](xref:Microsoft.Quantum.Intrinsic.Measure) do rozróżniania stanów kwantowych.|
 
 ### <a name="algorithms"></a>Algorytmy
 

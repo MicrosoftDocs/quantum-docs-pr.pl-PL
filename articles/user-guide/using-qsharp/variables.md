@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835880"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690940"
 ---
 # <a name="variables-in-no-locq"></a>Zmienne w Q#
 
@@ -40,7 +40,7 @@ Przypisuje określoną tablicę operatorów Pauli do nazwy zmiennej (lub "symbol
 > [!NOTE]
 > W poprzednim przykładzie nie ma potrzeby jawnego określania typu nowej zmiennej, ponieważ wyrażenie po prawej stronie `let` instrukcji jest niejednoznaczne, a kompilator wnioskuje właściwy typ. 
 
-Zmienne zdefiniowane przy użyciu `let` są *niezmienne*, co oznacza, że po jego zdefiniowaniu nie można już zmieniać w żaden sposób.
+Zmienne zdefiniowane przy użyciu `let` są *niezmienne* , co oznacza, że po jego zdefiniowaniu nie można już zmieniać w żaden sposób.
 Pozwala to na kilka optymalizacji, w tym optymalizację klasycznej logiki, która działa na zmiennych do zmiany kolejności w przypadku zastosowania `Adjoint` wariantu operacji.
 
 ## <a name="mutable-variables"></a>Zmienne modyfikowalne
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Instrukcje Update-and-Reassign
 
 Podobne łączenie istnieje dla [wyrażeń Copy-and-Update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) po prawej stronie.
-Istnieją odpowiednie instrukcje *Update-and-Reassign* dla *nazwanych elementów* w typach zdefiniowanych przez użytkownika, a także dla *elementów tablicy*.  
+Istnieją odpowiednie instrukcje *Update-and-Reassign* dla *nazwanych elementów* w typach zdefiniowanych przez użytkownika, a także dla *elementów tablicy* .  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-W przypadku tablic [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) w Q# bibliotece standardowej dostępne są niezbędne narzędzia do wykonywania wielu typowych operacji inicjowania tablic i manipulowania nimi, co pozwala uniknąć konieczności aktualizowania elementów tablicy w pierwszym miejscu. 
+W przypadku tablic [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) w Q# bibliotece standardowej dostępne są niezbędne narzędzia do wykonywania wielu typowych operacji inicjowania tablic i manipulowania nimi, co pozwala uniknąć konieczności aktualizowania elementów tablicy w pierwszym miejscu. 
 
 Instrukcje Update-and-Reassign oferują alternatywę w razie konieczności:
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Za pomocą narzędzi biblioteki dla tablic dostępnych w programie [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) można na przykład łatwo zdefiniować funkcję zwracającą tablicę `Pauli` typów, w których element w indeksie `i` przyjmuje daną `Pauli` wartość, a wszystkie inne wpisy są tożsamością ( `PauliI` ).
+Za pomocą narzędzi biblioteki dla tablic dostępnych w programie [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) można na przykład łatwo zdefiniować funkcję zwracającą tablicę `Pauli` typów, w których element w indeksie `i` przyjmuje daną `Pauli` wartość, a wszystkie inne wpisy są tożsamością ( `PauliI` ).
 
 Poniżej przedstawiono dwie definicje takich funkcji, a drugie korzystanie z narzędzi na tym etapie.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-Zamiast przeiterować każdy indeks w tablicy i warunkowo ustawić go na `PauliI` lub dane `pauli` , można zamiast tego użyć z programu, `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Aby utworzyć tablicę `PauliI` typów, a następnie po prostu zwrócić wyrażenie Copy-and-Update, w którym zmieniono określoną wartość przy indeksie `location` :
+Zamiast przeiterować każdy indeks w tablicy i warunkowo ustawić go na `PauliI` lub dane `pauli` , można zamiast tego użyć z programu, `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Aby utworzyć tablicę `PauliI` typów, a następnie po prostu zwrócić wyrażenie Copy-and-Update, w którym zmieniono określoną wartość przy indeksie `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
@@ -166,7 +166,7 @@ Przypisanie tego formularza jest określane w celu *odtworzenia* elementów tej 
 Jeśli po prawej stronie powiązania jest krotka, można ją dekonstruować po przypisaniu.
 Takie dekonstrukcji mogą dotyczyć krotek zagnieżdżonych, a każda pełna lub częściowa dekonstrukcja jest prawidłowa, o ile kształt krotki po prawej stronie jest zgodny z kształtem krotki symboli.
 
-Przykład:
+Na przykład:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1

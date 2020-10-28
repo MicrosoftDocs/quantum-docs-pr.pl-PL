@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835982"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690952"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Symulator śledzenia Quantum: licznik operacji pierwotnych
 
 Licznik operacji pierwotnej jest częścią [symulatora śledzenia](xref:microsoft.quantum.machines.qc-trace-simulator.intro)zestawu Quantum Development Kit. Liczy liczbę procesów pierwotnych używanych przez każdą operację wywoływaną w programie Quantum. 
 
-Wszystkie <xref:microsoft.quantum.intrinsic> operacje są wyrażane w odniesieniu do rotacji qubit, operacji T, operacji qubit Clifford, operacji CNOT i pomiarów wieloqubit Pauli observables. Licznik operacji pierwotnych agreguje i zbiera dane statystyczne na temat wszystkich krawędzi [grafu wywołania](https://en.wikipedia.org/wiki/Call_graph)operacji.
+Wszystkie <xref:Microsoft.Quantum.Intrinsic> operacje są wyrażane w odniesieniu do rotacji qubit, operacji T, operacji qubit Clifford, operacji CNOT i pomiarów wieloqubit Pauli observables. Licznik operacji pierwotnych agreguje i zbiera dane statystyczne na temat wszystkich krawędzi [grafu wywołania](https://en.wikipedia.org/wiki/Call_graph)operacji.
 
 ## <a name="invoking-the-primitive-operation-counter"></a>Wywoływanie licznika operacji pierwotnej
 
-Aby uruchomić symulator śledzenia Quantum z licznikiem operacji pierwotnej, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UsePrimitiveOperationsCounter` Właściwość na **true**, a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie za pomocą `QCTraceSimulatorConfiguration` jako parametru.
+Aby uruchomić symulator śledzenia Quantum z licznikiem operacji pierwotnej, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UsePrimitiveOperationsCounter` Właściwość na **true** , a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie za pomocą `QCTraceSimulatorConfiguration` jako parametru.
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Używanie licznika operacji pierwotnej w programie hosta C#
 
-Poniższy przykład kodu w języku C# jest częścią liczby <xref:microsoft.quantum.intrinsic.t> operacji potrzebnych do zaimplementowania <xref:microsoft.quantum.intrinsic.ccnot> operacji w oparciu o następujący Q# przykładowy kod:
+Poniższy przykład kodu w języku C# jest częścią liczby <xref:Microsoft.Quantum.Intrinsic.T> operacji potrzebnych do zaimplementowania <xref:Microsoft.Quantum.Intrinsic.ccnot> operacji w oparciu o następujący Q# przykładowy kod:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -75,7 +75,7 @@ Na koniec można wyprowadzić wszystkie dane statystyczne zebrane przez licznik 
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - Omówienie zestawu Quantum Development Kit [Quantum Trace symulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>Dokumentacja interfejsu API.

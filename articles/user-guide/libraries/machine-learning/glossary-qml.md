@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833910"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691519"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Słownik Quantum Machine Learning
 
@@ -30,7 +30,7 @@ W przypadku wektora parametrów kandydujących i odchylenia klasyfikatora ich *w
 
 ## <a name="hyperparameters"></a>Hiperparametry
 
-Proces szkolenia modelu podlega określonym wstępnie określonym wartościom, które są nazywane *parametrami*:
+Proces szkolenia modelu podlega określonym wstępnie określonym wartościom, które są nazywane *parametrami* :
 
 ### <a name="learning-rate"></a>Tempo nauki
 
@@ -56,9 +56,10 @@ Funkcja prawdopodobieństwa, która jest narzędziem szkoleniowym klasyfikatora,
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Jak zmodyfikować parametry
 
-W bibliotece QML najlepszym sposobem modyfikowania parametrów jest zastępowanie wartości domyślnych UDT [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . W tym celu należy wywołać tę funkcję [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) i zastosować operator `w/` w celu zastąpienia wartości domyślnych. Na przykład, aby użyć 100 000 pomiarów i szybkość uczenia 0,01:
- ```qsharp
+W bibliotece QML najlepszym sposobem modyfikowania parametrów jest zastępowanie wartości domyślnych UDT [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . W tym celu należy wywołać tę funkcję [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) i zastosować operator `w/` w celu zastąpienia wartości domyślnych. Na przykład, aby użyć 100 000 pomiarów i szybkość uczenia 0,01:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759736"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691525"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Uzyskiwanie szacunkowych poziomów energii
 Oszacowanie wartości poziomów energii jest jednym z głównych zastosowań chemii Quantum. W tym artykule opisano, jak można wykonać to dla kanonicznego przykładu wodoru. Przykład przywoływany w tej sekcji znajduje się [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) w repozytorium próbek chemii. Jest to przykładowy przykład wizualizacji, który przedstawia dane wyjściowe [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) .
@@ -44,7 +44,7 @@ Pierwszym krokiem jest utworzenie hamiltonian reprezentującego wodór molekular
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Symulowanie hamiltonian wymaga przekonwertowania operatorów Fermion na operatory qubit. Ta konwersja jest wykonywana za pomocą kodowania Jordania-Wigner w następujący sposób:
+Symulowanie hamiltonian wymaga przekonwertowania operatorów Fermion na operatory qubit. Ta konwersja jest wykonywana za pomocą kodowania Jordan-Wigner w następujący sposób:
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-W tym momencie można użyć [algorytmów szacowania fazy](xref:microsoft.quantum.libraries.characterization) standardowej biblioteki, aby poznać energię stanu ziemi przy użyciu poprzedniej symulacji. Wymaga to przygotowania dobrego zbliżania do stanu ziemi Quantum. Sugestie dotyczące tych przybliżeń znajdują się w [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schemacie. Niemniej jednak te sugestie, domyślne podejście dodaje wiele Electrons, `hamiltonian.NElectrons` Aby greedily zminimalizować okresy świetlne jednego z nich. Funkcje i operacje szacowania fazy są dostępne w notacji DocFX w przestrzeni nazw [Microsoft. Quantum. charakteryzującą](xref:microsoft.quantum.characterization) .
+W tym momencie można użyć [algorytmów szacowania fazy](xref:microsoft.quantum.libraries.characterization) standardowej biblioteki, aby poznać energię stanu ziemi przy użyciu poprzedniej symulacji. Wymaga to przygotowania dobrego zbliżania do stanu ziemi Quantum. Sugestie dotyczące tych przybliżeń znajdują się w [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schemacie. Niemniej jednak te sugestie, domyślne podejście dodaje wiele Electrons, `hamiltonian.NElectrons` Aby greedily zminimalizować okresy świetlne jednego z nich. Funkcje i operacje szacowania fazy są dostępne w notacji DocFX w przestrzeni nazw [Microsoft. Quantum. charakteryzującą](xref:Microsoft.Quantum.Characterization) .
 
 Poniższy fragment kodu przedstawia sposób, w jaki dane wyjściowe ewolucji w czasie rzeczywistym przez bibliotekę symulacji chemicznej integrują się z oszacowaniem fazy Quantum.
 

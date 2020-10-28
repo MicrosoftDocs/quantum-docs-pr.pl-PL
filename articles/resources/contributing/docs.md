@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759683"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691785"
 ---
 # <a name="improving-documentation"></a>Ulepszanie dokumentacji
 
@@ -46,7 +46,7 @@ Opiszemy więcej informacji na temat żądań ściągnięcia poniżej, ale teraz
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Odwołuje się do przykładowego kodu z artykułu koncepcyjnego
 
-Jeśli chcesz dołączyć kod z [repozytorium przykładów](https://github.com/Microsoft/Quantum), możesz to zrobić przy użyciu specjalnego DocFXej promocji z nieprawidłowymi wersjami:
+Jeśli chcesz dołączyć kod z [repozytorium przykładów](https://github.com/Microsoft/Quantum), możesz to zrobić przy użyciu specjalnego DocFX-Flavoredej promocji:
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ Przykładowo `ControlledOnBitString` możemy napisać coś w następujący spos�
  }
 ```
 
-Możesz zobaczyć wyrenderowaną wersję kodu powyżej w [dokumentacji interfejsu API dla `ControlledOnBitString` funkcji](xref:microsoft.quantum.canon.controlledonbitstring).
+Możesz zobaczyć wyrenderowaną wersję kodu powyżej w [dokumentacji interfejsu API dla `ControlledOnBitString` funkcji](xref:Microsoft.Quantum.Canon.ControlledOnBitString).
 
 Oprócz ogólnych metod pisania dokumentacji, w opisie komentarzy dokumentacji interfejsu API pomocne jest zachowanie kilku rzeczy:
 

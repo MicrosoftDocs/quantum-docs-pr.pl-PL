@@ -89,7 +89,7 @@ Ta sekwencja bram ma podstawowe znaczenie dla przetwarzania Quantum, ponieważ t
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Operacje o tej lub większej złożoności są powszechnie stosowane w algorytmach Quantum i korekcji błędów Quantum, dlatego powinna być to świetna, że istnieje prosta metoda dla wizualizacji zwanej *diagramem obwodu Quantum*.
+Operacje o tej lub większej złożoności są powszechnie stosowane w algorytmach Quantum i korekcji błędów Quantum, dlatego powinna być to świetna, że istnieje prosta metoda dla wizualizacji zwanej *diagramem obwodu Quantum* .
 Diagram obwodu do przygotowywania tego stanu Maximally Entangled Quantum to:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Na przykład symbol
 <!--Nie może znaleźć możliwości łatwego wyśrodkowania tego elementu... prawdopodobnie wymagana jest rozszerzenie:-->
 ![Symbol operacji Hadamard działającej w rejestrze jednoqubitnym](~/media/2.svg)
 
-jest operacją [Hadamard](xref:microsoft.quantum.intrinsic.h) działającą na rejestrze z jednym qubitem.
+jest operacją [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) działającą na rejestrze z jednym qubitem.
 
 Bramy Quantum są uporządkowane w kolejności chronologicznej z bramą z lewej strony, jako brama po raz pierwszy zastosowana do qubits.
 Innymi słowy, jeśli zdjęcia są nastawione jako przechowanie stanu Quantum, przewody te przesuwają stan Quantum za pośrednictwem każdej bramy na diagramie od lewej do prawej.
@@ -150,7 +150,7 @@ Ogólnie rzecz biorąc, firma Microsoft opisuje takie kontrolowane operacje na d
 ![Diagram obwodu bramy z pojedynczą kontrolą](~/media/5.svg)
 
 W tym miejscu czarne kółko oznacza bit Quantum, dla którego Brama jest kontrolowana, a przewod pionowy oznacza jednostkę, która jest stosowana, gdy kontrolka qubit Pobiera wartość $ 1 $ .
-W przypadku specjalnych przypadków, w których $ G = X $ i $ g. = $ wprowadzamy następującą notację do opisywania kontrolowanej wersji bram (należy zauważyć, że brama sterowana X jest [ $ $ bramą CNOT](xref:microsoft.quantum.intrinsic.cnot)):
+W przypadku specjalnych przypadków, w których $ G = X $ i $ g. = $ wprowadzamy następującą notację do opisywania kontrolowanej wersji bram (należy zauważyć, że brama sterowana X jest [ $ $ bramą CNOT](xref:Microsoft.Quantum.Intrinsic.CNOT)):
 
 <!--- ![](.\media\6.svg) --->
 <!--Nie może znaleźć możliwości łatwego wyśrodkowania tego elementu... prawdopodobnie wymagana jest rozszerzenie:-->
@@ -175,7 +175,7 @@ W związku z tym, taki obwód jest podobny do:
 <!--Nie może znaleźć możliwości łatwego wyśrodkowania tego elementu... prawdopodobnie wymagana jest rozszerzenie:-->
 ![Symbol reprezentujący operację pomiaru](~/media/7.svg)
 
-Q# implementuje [operator miary](xref:microsoft.quantum.intrinsic.measure) do tego celu.
+Q# implementuje [operator miary](xref:Microsoft.Quantum.Intrinsic.Measure) do tego celu.
 Zapoznaj się z [sekcją pomiary](xref:microsoft.quantum.libraries.standard.prelude#measurements) , aby uzyskać więcej informacji.
 
 Analogicznie, podobwód

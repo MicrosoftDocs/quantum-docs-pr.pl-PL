@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3515279dd4d03b2a512035af0b13e084dd91f9dc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835710"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691161"
 ---
 # <a name="design-your-own-classifier"></a>Projektowanie własnego klasyfikatora
 
@@ -28,7 +28,7 @@ Podobnie jak w przypadku klasycznej uczenia głębokiego, nie ma żadnej ogólne
 
 ## <a name="how-to-build-a-classifier-with-q"></a>Jak utworzyć klasyfikator przy użyciu Q\#
 
-Aby skompilować klasyfikator, zamierzamy połączyć kontrolowane rotacje w modelu obwodu. Aby to zrobić, można użyć typu [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) zdefiniowanego w bibliotece Quantum Machine Learning. Ten typ akceptuje cztery argumenty, które określają: indeks elementu docelowego qubit, tablicę indeksów qubits kontrolki, oś obrotu i indeks skojarzonego parametru w tablicy parametrów definiujących model.
+Aby skompilować klasyfikator, zamierzamy połączyć kontrolowane rotacje w modelu obwodu. Aby to zrobić, można użyć typu [`ControlledRotation`](xref:Microsoft.Quantum.MachineLearning.ControlledRotation) zdefiniowanego w bibliotece Quantum Machine Learning. Ten typ akceptuje cztery argumenty, które określają: indeks elementu docelowego qubit, tablicę indeksów qubits kontrolki, oś obrotu i indeks skojarzonego parametru w tablicy parametrów definiujących model.
 
 Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)możemy znaleźć następujący klasyfikator zdefiniowany w pliku `Training.qs` .
 
@@ -47,7 +47,7 @@ Zobaczmy przykład klasyfikatora. W [przykładzie Half księżyca](https://githu
     }
  ```
 
-To, co definiujemy w tym miejscu, jest funkcja, która zwraca tablicę `ControlledRotation` elementów, która razem z tablicą parametrów i odchylenia będzie definiować nasze [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Ten typ jest fundamentalny w bibliotece Machine Learning Quantum i definiuje klasyfikatora. Obwód zdefiniowany w funkcji powyżej jest częścią klasyfikatora, w którym każda próbka zestawu danych zawiera dwie funkcje. W związku z tym potrzebujemy tylko dwóch qubits. Graficzna reprezentacja obwodu to:
+To, co definiujemy w tym miejscu, jest funkcja, która zwraca tablicę `ControlledRotation` elementów, która razem z tablicą parametrów i odchylenia będzie definiować nasze [`SequentialModel`](xref:Microsoft.Quantum.MachineLearning.SequentialModel) . Ten typ jest fundamentalny w bibliotece Machine Learning Quantum i definiuje klasyfikatora. Obwód zdefiniowany w funkcji powyżej jest częścią klasyfikatora, w którym każda próbka zestawu danych zawiera dwie funkcje. W związku z tym potrzebujemy tylko dwóch qubits. Graficzna reprezentacja obwodu to:
 
  ![Przykład modelu obwodu](~/media/circuit_model_1.PNG)
 
@@ -55,11 +55,11 @@ Należy zauważyć, że domyślnie operacje biblioteki Quantum Machine Learning 
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>Używanie funkcji biblioteki do zapisywania warstw bram
 
-Załóżmy, że mamy zestaw danych o 784 funkcjach na wystąpienie, np. obrazy 28 × 28 pikseli, takie jak zestaw danych MNIST ręcznie. W takim przypadku szerokość obwodu jest wystarczająco duża, aby można było pisać każdą bramę indywidualnie, ale niepraktyczne zadanie. Dlatego Biblioteka Quantum Machine Learning udostępnia zestaw narzędzi do automatycznego generowania warstw z parametrami. Na przykład funkcja [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) zwraca tablicę niekontrolowanych rotacji qubit na daną oś, z jednym obrotem dla każdego qubit w rejestrze, z których każdy jest określany przez inny parametr modelu. Na przykład `LocalRotationsLayer(4, X)` zwraca następujący zestaw bram:
+Załóżmy, że mamy zestaw danych o 784 funkcjach na wystąpienie, np. obrazy 28 × 28 pikseli, takie jak zestaw danych MNIST ręcznie. W takim przypadku szerokość obwodu jest wystarczająco duża, aby można było pisać każdą bramę indywidualnie, ale niepraktyczne zadanie. Dlatego Biblioteka Quantum Machine Learning udostępnia zestaw narzędzi do automatycznego generowania warstw z parametrami. Na przykład funkcja [`LocalRotationsLayer`](xref:Microsoft.Quantum.MachineLearning.LocalRotationsLayer) zwraca tablicę niekontrolowanych rotacji qubit na daną oś, z jednym obrotem dla każdego qubit w rejestrze, z których każdy jest określany przez inny parametr modelu. Na przykład `LocalRotationsLayer(4, X)` zwraca następujący zestaw bram:
 
  ![Warstwa obrotów lokalnych](~/media/local_rotations_layer.PNG)
 
-Zalecamy zapoznanie się z [biblioteką interfejsów API Machine Learning Quantum](xref:microsoft.quantum.machinelearning) , aby poznać wszystkie narzędzia dostępne do usprawnienia projektowania obwodu.
+Zalecamy zapoznanie się z [biblioteką interfejsów API Machine Learning Quantum](xref:Microsoft.Quantum.MachineLearning) , aby poznać wszystkie narzędzia dostępne do usprawnienia projektowania obwodu.
 
 ## <a name="next-steps"></a>Następne kroki
 

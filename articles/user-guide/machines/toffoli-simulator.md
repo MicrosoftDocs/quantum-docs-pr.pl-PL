@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835914"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690779"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Zestaw Quantum Development Kit (QDK) Toffoli symulator
 
@@ -67,7 +67,7 @@ Użyj I Q# Magic polecenia [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.
 Symulator Toffoli obsługuje:
 
 * Rotacje i exponentiated Pauly, takie jak `R` i `Exp` , gdy wynikiem operacji jest równa `X` się lub macierzy tożsamości.
-* Operacje pomiarów i [potwierdzeń](xref:microsoft.quantum.diagnostics.assertmeasurement) , ale tylko na `Z` podstawie Pauli. Zwróć uwagę, że prawdopodobieństwo operacji pomiaru ma zawsze **wartość 0** lub **1**; nie ma losowości w symulatorze Toffoli.
+* Operacje pomiarów i [potwierdzeń](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) , ale tylko na `Z` podstawie Pauli. Zwróć uwagę, że prawdopodobieństwo operacji pomiaru ma zawsze **wartość 0** lub **1** ; nie ma losowości w symulatorze Toffoli.
 * `DumpMachine` i `DumpRegister` funkcje.
 Obie funkcje wyprowadzają bieżący `Z` stan bazowy każdego qubitu, jedną qubit na wiersz.
 
@@ -77,14 +77,14 @@ Domyślnie `ToffoliSimulator` wystąpienie przydziela miejsce na 65 536 qubits.
 Jeśli algorytm wymaga więcej qubits niż ten, można określić liczbę qubit, podając wartość `qubitCount` parametru do konstruktora.
 Każdy dodatkowy qubit wymaga tylko jednego bajtu pamięci, więc nie ma znaczącego kosztu oszacowania liczby potrzebnych qubits.
 
-Przykład:
+Na przykład:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Szacowania zasobów Quantum](xref:microsoft.quantum.machines.resources-estimator)
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835931"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691871"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
@@ -127,18 +127,45 @@ Szacowania zasobów śledzi następujące metryki:
 |----|----|
 |__CNOT__    |Liczba uruchomień `CNOT` operacji (znanych także jako kontrolowane operacje Pauli X).|
 |__QubitClifford__ |Liczba uruchomień pojedynczego qubit Clifford i Pauli operacji.|
-|__miara__    |Liczba uruchomień pomiarów.  |
+|__Miara__    |Liczba uruchomień pomiarów.  |
 |__R__    |Liczba uruchomień wszystkich rotacji qubit, z wyjątkiem `T` operacji Clifford i Pauli.  |
 |__T__    |Liczba uruchomień `T` operacji i ich sprzężenia, w tym `T` operacje, T_x = H. T. H i T_y = HY. T. HY.  |
-|__Ścisł__|Dolna granica głębokości obwodu Quantum uruchamianego przez Q# operację. Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Szerokość__    |Dolna granica maksymalnej liczby qubits przydzieloną podczas uruchamiania Q# operacji. Jednocześnie może nie być możliwe równoczesne osiąganie __głębokości__ i dolnej granicy __szerokości__ .  |
+|__Ścisł__|Głębokość obwodu Quantum uruchamianego przez Q# operację (patrz [poniżej](#depth-width-and-qubitcount)). Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Szerokość__|Szerokość obwodu Quantum uruchamianego przez Q# operację (patrz [poniżej](#depth-width-and-qubitcount)). Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__QubitCount__    |Dolna granica maksymalnej liczby qubits przydzieloną podczas uruchamiania Q# operacji. Ta Metryka może nie być zgodna z __głębokością__ (patrz poniżej).  |
 |__BorrowedWidth__    |Maksymalna liczba qubits zaciągniętych w ramach Q# operacji.  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Głębokość, Szerokość i QubitCount
+
+Raportowane oszacowania głębokości i szerokości są zgodne ze sobą.
+(Poprzednio obie liczby były osiągalne, ale na potrzeby głębokości i szerokości są wymagane różne obwody.) Obecnie obie metryki w tej parze mogą być osiągane przez ten sam obwód w tym samym czasie.
+
+Zgłaszane są następujące metryki:
+
+__Głębokość:__ W przypadku operacji głównej należy wykonać ją w celu jej wykonania przy założeniu określonych czasów bramy.
+Dla operacji o nazwie lub późniejszych wartościach czasowych między najnowszym czasem dostępności qubit na początku i na końcu operacji.
+
+__Szerokość:__ W przypadku operacji głównej — liczba qubits rzeczywiście użyta do jej wykonania (i operacji wywoływanych przez nią).
+W przypadku operacji o wartościach lub kolejnych operacjach — ile więcej qubits było używanych oprócz qubits już używanych na początku operacji.
+
+Należy pamiętać, że ponownie użyte qubits nie przyczyniają się do tej liczby.
+Oznacza to, że jeśli kilka qubits zostało zwolnionych przed rozpoczęciem operacji i wszystkie qubit wymagane przez tę operację a (i operacje wywoływane z) zostały spełnione przez ponowne użycie poprzednio wydanej wersji qubits, Szerokość operacji A jest raportowana jako 0. Pomyślnie pożyczone qubits nie przyczyniają się do szerokości.
+
+__QubitCount:__ W przypadku operacji głównej — minimalna liczba qubits, które byłyby wystarczające do wykonania tej operacji (i wywoływanej z niej operacji).
+W przypadku operacji o nazwie lub kolejnych operacji — minimalna liczba qubits, które byłyby wystarczające do wykonania tej operacji osobno. Ta liczba nie zawiera qubits danych wejściowych. Obejmuje to zapożyczone qubits.
+
+Obsługiwane są dwa tryby operacji. Tryb jest wybierany przez ustawienie QCTraceSimulatorConfiguration. OptimizeDepth.
+
+__OptimizeDepth = true:__ Nie zaleca się QubitManager z qubit ponownie i przydziela nowe qubit za każdym razem, gdy zostanie wyświetlony monit o qubit. Dla __głębokości__ operacji głównej jest to minimalna głębokość (Dolna granica). Dla tej głębokości zgłoszono zgodną __Szerokość__ (obie można osiągnąć w tym samym czasie). Należy zauważyć, że ta szerokość prawdopodobnie nie będzie optymalna. Wartość __QubitCount__ może być mniejsza niż szerokość operacji głównej, ponieważ zakłada się jej ponowne użycie.
+
+__OptimizeDepth = FAŁSZ:__ QubitManager zaleca się ponowne użycie qubits i ponowne użycie zwolnienia qubits przed przydzieleniem nowych. __Szerokość__ operacji głównej jest minimalna (Dolna granica). Jest raportowana zgodna __głębokość__ , na której można ją osiągnąć. __QubitCount__ będzie taka sama jak __Szerokość__ dla operacji głównej, przy założeniu, że nie pożyczy się.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Podawanie prawdopodobieństwa wyników pomiarów
 
-Możesz użyć <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> z <xref:microsoft.quantum.diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+Możesz użyć <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> z <xref:Microsoft.Quantum.Diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Kwantowy symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)

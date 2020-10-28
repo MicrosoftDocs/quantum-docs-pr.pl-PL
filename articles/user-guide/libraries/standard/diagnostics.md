@@ -8,12 +8,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835574"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690847"
 ---
 # <a name="diagnostics"></a>Diagnostyka #
 
@@ -23,9 +23,9 @@ W dużym stopniu obsługa ta jest dostępna w formie funkcji i operacji, które 
 
 ## <a name="machine-diagnostics"></a>Diagnostyka maszyny ##
 
-Diagnostykę na temat klasycznych wartości można uzyskać za pomocą <xref:microsoft.quantum.intrinsic.message> funkcji, aby rejestrować komunikat w sposób zależny od maszyny.
+Diagnostykę na temat klasycznych wartości można uzyskać za pomocą <xref:Microsoft.Quantum.Intrinsic.Message> funkcji, aby rejestrować komunikat w sposób zależny od maszyny.
 Domyślnie program zapisuje ciąg w konsoli programu.
-Używane razem z interpolowanymi ciągami <xref:microsoft.quantum.intrinsic.message> ułatwia raportowanie informacji diagnostycznych o klasycznych wartościach:
+Używane razem z interpolowanymi ciągami <xref:Microsoft.Quantum.Intrinsic.Message> ułatwia raportowanie informacji diagnostycznych o klasycznych wartościach:
 
 ```Q#
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
@@ -35,7 +35,7 @@ Message($"About to rotate by an angle of {angle}...");
 > [!NOTE]
 > `Message` ma sygnaturę `(String -> Unit)` reprezentującą, że nie można zaobserwować emitowania komunikatu dziennika debugowania z poziomu programu Q# .
 
-<xref:microsoft.quantum.diagnostics.dumpmachine>I w <xref:microsoft.quantum.diagnostics.dumpregister> wyniku tego nakazuje komputerom docelowym dostarczenie informacji diagnostycznych dotyczących wszystkich aktualnie przyznanych qubits lub odpowiednio określonego rejestru qubits.
+<xref:Microsoft.Quantum.Diagnostics.DumpMachine>I w <xref:Microsoft.Quantum.Diagnostics.DumpRegister> wyniku tego nakazuje komputerom docelowym dostarczenie informacji diagnostycznych dotyczących wszystkich aktualnie przyznanych qubits lub odpowiednio określonego rejestru qubits.
 Każdy komputer docelowy różni się w zależności od informacji diagnostycznych w odpowiedzi na instrukcję zrzutu.
 Maszyna docelowa [pełnego stanu symulatora](xref:microsoft.quantum.machines.full-state-simulator) , na przykład, udostępnia program hosta z wektorem stanu, którego używa wewnętrznie do reprezentowania rejestru qubits.
 Porównując, komputer docelowy [symulatora Toffoli](xref:microsoft.quantum.machines.toffoli-simulator) zapewnia jeden klasyczny bit dla każdego qubitu.
@@ -45,34 +45,34 @@ Porównując, komputer docelowy [symulatora Toffoli](xref:microsoft.quantum.mach
 
 ## <a name="facts-and-assertions"></a>Fakty i potwierdzenia ##
 
-Zgodnie z opisem w sekcji [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging), funkcja lub operacja z podpisem `Unit -> Unit` lub `Unit => Unit` odpowiednio, można oznaczyć jako *test jednostkowy*.
+Zgodnie z opisem w sekcji [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging), funkcja lub operacja z podpisem `Unit -> Unit` lub `Unit => Unit` odpowiednio, można oznaczyć jako *test jednostkowy* .
 Każdy test jednostkowy zwykle składa się z małego programu Quantum oraz co najmniej jednego warunku, który sprawdza poprawność tego programu.
-Warunki te mogą mieć postać _faktów_, które sprawdzają wartości danych wejściowych lub _zatwierdzeń_, które sprawdzają Stany jednego lub więcej qubitsów, które zostały przesłane jako dane wejściowe.
+Warunki te mogą mieć postać _faktów_ , które sprawdzają wartości danych wejściowych lub _zatwierdzeń_ , które sprawdzają Stany jednego lub więcej qubitsów, które zostały przesłane jako dane wejściowe.
 
 Na przykład, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` reprezentuje fakt matematyczny, że $1 + 1 = $2, natomiast `AssertQubit(One, qubit)` reprezentuje warunek, który mierzy `qubit` zwraca `One` z pewnością.
 W poprzednim przypadku można sprawdzić poprawność warunku, używając tylko jego wartości, a w tym drugim musimy wiedzieć coś o stanie qubit, aby oszacować potwierdzenie.
 
 Q#Biblioteki standardowe zapewniają kilka różnych funkcji służących do reprezentowania faktów, w tym:
 
-- <xref:microsoft.quantum.diagnostics.fact>
-- <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
-- <xref:microsoft.quantum.diagnostics.nearequalityfactc>
-- <xref:microsoft.quantum.diagnostics.equalityfacti>
+- <xref:Microsoft.Quantum.Diagnostics.Fact>
+- <xref:Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact>
+- <xref:Microsoft.Quantum.Diagnostics.NearEqualityFactC>
+- <xref:Microsoft.Quantum.Diagnostics.EqualityFactI>
 
 
 ### <a name="testing-qubit-states"></a>Testowanie Stanów qubit ###
 
 W praktyce potwierdzenia opierają się na faktach, że klasyczne symulacje Quantum Mechanics nie muszą przestrzegać [theorem bez klonowania](https://arxiv.org/abs/quant-ph/9607018), tak że firma Microsoft może wprowadzać niefizyczne pomiary i potwierdzenia przy użyciu symulatora dla naszej maszyny docelowej.
 W ten sposób można testować poszczególne operacje w klasycznym symulatorze przed wdrożeniem na sprzęcie.
-Na komputerach docelowych, które nie pozwalają na ocenę potwierdzeń, wywołania <xref:microsoft.quantum.diagnostics.assertmeasurement> można bezpiecznie zignorować.
+Na komputerach docelowych, które nie pozwalają na ocenę potwierdzeń, wywołania <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> można bezpiecznie zignorować.
 
-Ogólnie rzecz biorąc, <xref:microsoft.quantum.diagnostics.assertmeasurement> potwierdzenie operacji, które mierzą podaną qubits na podstawie podaną wartość Pauli, będzie zawsze mieć dany wynik.
+Ogólnie rzecz biorąc, <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> potwierdzenie operacji, które mierzą podaną qubits na podstawie podaną wartość Pauli, będzie zawsze mieć dany wynik.
 Jeśli potwierdzenie nie powiedzie się, przebieg zostanie zakończony przez wywołanie `fail` z podanym komunikatem.
 Domyślnie ta operacja nie jest zaimplementowana. symulatory, które mogą ją obsługiwać, powinny dostarczyć implementację, która przeprowadza sprawdzanie środowiska uruchomieniowego.
 `AssertMeasurement` ma sygnaturę `((Pauli[], Qubit[], Result, String) -> ())` .
 Ponieważ `AssertMeasurement` jest funkcją z pustą krotką jako typem danych wyjściowych, żadne skutki z wywołania nie `AssertMeasurement` są zauważalne w Q# programie.
 
-<xref:microsoft.quantum.diagnostics.assertmeasurementprobability>Wyniki funkcji operacji, które mierzą podaną qubits w danej Pauli, będą miały wynik z danym prawdopodobieństwem, w ramach pewnej tolerancji.
+<xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability>Wyniki funkcji operacji, które mierzą podaną qubits w danej Pauli, będą miały wynik z danym prawdopodobieństwem, w ramach pewnej tolerancji.
 Tolerancja jest dodatkiem (na przykład `abs(expected-actual) < tol` ).
 Jeśli potwierdzenie nie powiedzie się, przebieg zostanie zakończony przez wywołanie `fail` z podanym komunikatem.
 Domyślnie ta operacja nie jest zaimplementowana. symulatory, które mogą ją obsługiwać, powinny dostarczyć implementację, która przeprowadza sprawdzanie środowiska uruchomieniowego.
@@ -88,7 +88,7 @@ Oznacza to, że \begin{align} \ket{\psi} = \ket{\psi '} \Text{if i tylko wtedy, 
 \end{align} przy użyciu operacji pierwotnych zdefiniowanych w Preludium, możemy bezpośrednio wykonać pomiary, która zwraca, `Zero` Jeśli $ \ket{\psi} $ jest eigenstate jednego z operatorów Pauli.
 
 
-Operacja <xref:microsoft.quantum.diagnostics.assertqubit> zawiera szczególnie przydatne skróty, które należy wykonać w przypadku, gdy chcemy przetestować potwierdzenie $ \ket{\psi} = \ket {0} $.
+Operacja <xref:Microsoft.Quantum.Diagnostics.AssertQubit> zawiera szczególnie przydatne skróty, które należy wykonać w przypadku, gdy chcemy przetestować potwierdzenie $ \ket{\psi} = \ket {0} $.
 Jest to typowe, na przykład, gdy firma Microsoft nie przeliczyła, aby zwracała Ancilla qubits do $ \ket {0} $ przed ich zwolnieniem.
 Potwierdzenie dla $ \ket $ jest również przydatne, gdy chcemy zastanowić się, {0} że dwa przygotowania stanu `P` i `Q` operacje przygotowywają ten sam stan, a w przypadku ich `Q` obsługi `Adjoint` .
 W szczególności,
@@ -103,7 +103,7 @@ using (register = Qubit()) {
 ```
 
 Zwykle jednak firma Microsoft może nie mieć dostępu do potwierdzeń o stanach, które nie pokrywają się z eigenstates operatorów Pauli.
-Na przykład $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $ nie jest eigenstateem żadnego operatora Pauli, w taki sposób, że nie można użyć, <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Aby jednoznacznie określić, że stan $ \ket{\psi '} $ jest równy $ \ket{\psi} $.
+Na przykład $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $ nie jest eigenstateem żadnego operatora Pauli, w taki sposób, że nie można użyć, <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> Aby jednoznacznie określić, że stan $ \ket{\psi '} $ jest równy $ \ket{\psi} $.
 Zamiast tego musimy rozłożyć potwierdzenie $ \ket{\psi '} = \ket{\psi} $ do założeń, które mogą być testowane bezpośrednio przy użyciu elementów podstawowych obsługiwanych przez nasz symulator.
 W tym celu pozwól $ \ket{\psi} = \Alpha \ket {0} + \beta \ket {1} $ dla liczb zespolonych $ \Alpha = a i \_ \_ $ i $ \beta $.
 Należy zauważyć, że to wyrażenie wymaga czterech liczb rzeczywistych $ \{ a \_ r, a \_ i, b \_ r, b \_ i \} $ do określenia, ponieważ każda liczba zespolona może być wyrażona jako suma części rzeczywistej i urojonej.
@@ -115,7 +115,7 @@ Zezwól $x $, $y $ i $z $ `Result` na wartości Pauli $X $, $Y $ i $Z $ pomiaró
 Następnie przy użyciu funkcji prawdopodobieństwo dla pomiarów Quantum, \begin{align} \Pr (x = \texttt{Zero} | \Alpha, \beta) & = \frac12 + a \_ r b \_ r + a \_ i b \_ i \\ \\ \Pr (y = \texttt{Zero} | \Alpha, \beta) & = \frac12 + a \_ r b \_ i-a \_ i b \_ r \\ \\ \Pr (z = \texttt{zero} | \Alpha, \beta) & = \frac12\left (1 + a \_ r ^ 2 + a ^ 2 \_ + b \_ r ^ 2 + b \_ i ^ 2 \right).
 \end{align}
 
-<xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>Operacja implementuje te potwierdzenia w postaci reprezentacji $ \Alpha $ i $ \beta $ jako wartości typu <xref:microsoft.quantum.math.complex> .
+<xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance>Operacja implementuje te potwierdzenia w postaci reprezentacji $ \Alpha $ i $ \beta $ jako wartości typu <xref:Microsoft.Quantum.Math.Complex> .
 Jest to przydatne, gdy oczekiwany stan można obliczyć matematycznie.
 
 ### <a name="asserting-equality-of-quantum-operations"></a>Potwierdzanie równości operacji Quantum ###
@@ -128,28 +128,28 @@ Firma Microsoft może chcieć zainteresować, że $U ^ \dagger (t) = U (-t) $, z
 Ogólnie mówiąc, istnieją dwie różne strategie, które możemy wykonać w celu potwierdzenia, że dwie operacje `U` i `V` działają identycznie.
 Po pierwsze można sprawdzić, czy `U(target); (Adjoint V)(target);` zachowuje wszystkie Stany.
 Po drugie możemy sprawdzić, czy `U(target); (Adjoint V)(target);` działa on w połowie stanu Entangled. zachowuje to Entanglement.
-Te strategie są implementowane przez operacje firmy Canon <xref:microsoft.quantum.diagnostics.assertoperationsequalinplace> i <xref:microsoft.quantum.diagnostics.assertoperationsequalreferenced> odpowiednio.
+Te strategie są implementowane przez operacje firmy Canon <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> i <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> odpowiednio.
 
 > [!NOTE]
 > Wymienione powyżej potwierdzenie zostało omówione w oparciu o [Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), matematyczną strukturę, która odnosi się do operacji na $n $ qubits do Entangled Stanów na $2n $ qubits.
 > W szczególności operacja Identity na $n $ qubits jest reprezentowana przez $n $ kopie Entangled State $ \ket{\ beta_ {00} } \mathrel{: =} (\ket {00} + \ket {11} )/\sqrt {2} $.
-> Operacja <xref:microsoft.quantum.preparation.preparechoistate> implementuje ten isomorphism, przygotowując stan, który reprezentuje daną operację.
+> Operacja <xref:Microsoft.Quantum.Preparation.PrepareChoiState> implementuje ten isomorphism, przygotowując stan, który reprezentuje daną operację.
 
 W przybliżeniu te strategie są rozróżniane w zależności od czasu.
 Iteracja przez każdy stan wejściowy zabiera dodatkowy czas, podczas gdy użycie Entanglement jako odniesienia wymaga przechowywania dodatkowych qubits.
-W przypadkach, gdy operacja implementuje odwracalną operację klasyczną, na przykład w przypadku, gdy interesuje mnie tylko w przypadku Stanów bazowych obliczeń, <xref:microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis> testy równości dotyczące tego ograniczonego zestawu danych wejściowych.
+W przypadkach, gdy operacja implementuje odwracalną operację klasyczną, na przykład w przypadku, gdy interesuje mnie tylko w przypadku Stanów bazowych obliczeń, <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> testy równości dotyczące tego ograniczonego zestawu danych wejściowych.
 
 > [!TIP]
-> Iteracja w Stanach wejściowych jest obsługiwana przez operacje wyliczania <xref:microsoft.quantum.canon.iteratethroughcartesianproduct> i <xref:microsoft.quantum.canon.iteratethroughcartesianpower> .
+> Iteracja w Stanach wejściowych jest obsługiwana przez operacje wyliczania <xref:Microsoft.Quantum.Canon.IterateThroughCartesianProduct> i <xref:Microsoft.Quantum.Canon.IterateThroughCartesianPower> .
 > Te operacje są bardziej ogólnie przydatne w przypadku stosowania operacji do każdego elementu kartezjańskiego produktu między dwoma lub więcej zestawami.
 
 Jednak te dwa podejścia przetestują różne właściwości operacji pod kontrolą.
 Ponieważ potwierdzenie w miejscu wywołuje każdą operację wiele razy, raz dla każdego stanu danych wejściowych, wszystkie losowe wybory i wyniki pomiarów mogą ulec zmianie między wywołaniami.
-Z drugiej strony potwierdzenie odwołania wywołuje każdą operację dokładnie raz, aby sprawdzać, czy operacje są równe *pojedynczego zrzutu*.
+Z drugiej strony potwierdzenie odwołania wywołuje każdą operację dokładnie raz, aby sprawdzać, czy operacje są równe *pojedynczego zrzutu* .
 Oba te testy są przydatne w celu zapewnienia poprawności programów Quantum.
 
 
 ## <a name="further-reading"></a>Dalsze informacje ##
 
 - <xref:microsoft.quantum.guide.testingdebugging>
-- <xref:microsoft.quantum.diagnostics>
+- <xref:Microsoft.Quantum.Diagnostics>

@@ -107,7 +107,7 @@ Graficzna reprezentacja[jednoqubitowego](xref:microsoft.quantum.glossary#qubit) 
 
 ## <a name="clifford-group"></a>Grupa Clifford
 
-Zestaw operacji, które zajmują octantsą w [sferze Blochej](xref:microsoft.quantum.glossary#bloch-sphere) i permutacji dla [operatorów Pauli](xref:microsoft.quantum.glossary#pauli-operators). Obejmują one operacje [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) i [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
+Zestaw operacji, które zajmują octantsą w [sferze Blochej](xref:microsoft.quantum.glossary#bloch-sphere) i permutacji dla [operatorów Pauli](xref:microsoft.quantum.glossary#pauli-operators). Obejmują one operacje [ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) i [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S).
 
 ## <a name="controlled"></a>Kontrolowane
 
@@ -150,7 +150,7 @@ Gdy dwa [Stany](xref:microsoft.quantum.glossary#quantum-state) są identyczne do
 
 ## <a name="hadamard"></a>Hadamard
 
-Operacja Hadamard (określana także jako brama Hadamard lub transformacja) działa w ramach jednego [qubitu](xref:microsoft.quantum.glossary#qubit) i umieszcza je w parzystej [pozycji](xref:microsoft.quantum.glossary#superposition) $ \ket { 0 } $ lub $ \ket { 1 } $ , jeśli qubit jest początkowo w $ \ket { } $ stanie 0. W programie Q# Ta operacja jest stosowana przez wstępnie zdefiniowaną [`H`](xref:microsoft.quantum.intrinsic.h) operację.
+Operacja Hadamard (określana także jako brama Hadamard lub transformacja) działa w ramach jednego [qubitu](xref:microsoft.quantum.glossary#qubit) i umieszcza je w parzystej [pozycji](xref:microsoft.quantum.glossary#superposition) $ \ket { 0 } $ lub $ \ket { 1 } $ , jeśli qubit jest początkowo w $ \ket { } $ stanie 0. W programie Q# Ta operacja jest stosowana przez wstępnie zdefiniowaną [`H`](xref:Microsoft.Quantum.Intrinsic.H) operację.
 
 ## <a name="immutable"></a>Immutable
 
@@ -182,11 +182,11 @@ Podprocedura, która dostarcza informacje zależne od danych do algorytmu Quantu
 
 ## <a name="partial-application"></a>Aplikacja częściowa
 
-Wywoływanie [funkcji](xref:microsoft.quantum.glossary#function) lub [operacji](xref:microsoft.quantum.glossary#operation) bez wszystkich wymaganych danych wejściowych. Spowoduje to zwrócenie nowego elementu, który wymaga tylko brakujących parametrów (wskazywanych przez podkreślenie) [, które mają](xref:microsoft.quantum.glossary#callable) być dostarczone podczas przyszłej aplikacji. Na przykład dana funkcja `MyFunc(x : int, y : int) : int {return x + y;}` może zostać częściowo zastosowana do nowej funkcji `let NewFunc = MyFunc(_, 3)` . Następnie można wywołać nową funkcję w późniejszym czasie z brakującym parametrem, `NewFunc(2)` który zwraca wartość *5*.  Aby uzyskać więcej informacji, zobacz [częściowa aplikacja](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+Wywoływanie [funkcji](xref:microsoft.quantum.glossary#function) lub [operacji](xref:microsoft.quantum.glossary#operation) bez wszystkich wymaganych danych wejściowych. Spowoduje to zwrócenie nowego elementu, który wymaga tylko brakujących parametrów (wskazywanych przez podkreślenie) [, które mają](xref:microsoft.quantum.glossary#callable) być dostarczone podczas przyszłej aplikacji. Na przykład dana funkcja `MyFunc(x : int, y : int) : int {return x + y;}` może zostać częściowo zastosowana do nowej funkcji `let NewFunc = MyFunc(_, 3)` . Następnie można wywołać nową funkcję w późniejszym czasie z brakującym parametrem, `NewFunc(2)` który zwraca wartość *5* .  Aby uzyskać więcej informacji, zobacz [częściowa aplikacja](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
 ## <a name="pauli-operators"></a>Operatory Pauli
 
-Zestaw trzech 2 x 2 macierzy jednostkowych znanych jako `X` `Y` `Z` operacje Quantum i. Macierz tożsamości $ i $ , często znajdują się w zestawie.  $I od = \begin{bmatrix} 1 & 0 0 \\\\ & \end{bmatrix} $ $ do X = \begin{bmatrix} 0 & 1 \\\\ & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 0 0 & \\\\ & -1 \end{bmatrix} $ .   Aby uzyskać więcej informacji, zobacz [operacje pojedynczego qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Zestaw 3 2 x 2 macierze jednostkowe znane jako `X` `Y` `Z` operacje Quantum i. Macierz tożsamości $ i $ , często znajdują się w zestawie.  $I od = \begin{bmatrix} 1 & 0 0 \\\\ & \end{bmatrix} $ $ do X = \begin{bmatrix} 0 & 1 \\\\ & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 0 0 & \\\\ & -1 \end{bmatrix} $ .   Aby uzyskać więcej informacji, zobacz [operacje pojedynczego qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Diagram obwodu Quantum
 
