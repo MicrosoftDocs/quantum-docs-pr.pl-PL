@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833477"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692140"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Operacje i funkcje w Q#
 
@@ -32,7 +32,7 @@ Deklaracja operacji składa się ze słowa kluczowego `operation` , po którym w
 
 Każda operacja przyjmuje dane wejściowe, tworzy dane wyjściowe i określa Implementację dla co najmniej jednej specjalizacji operacji.
 Możliwe specjalizacje oraz sposób definiowania i wywoływania tych elementów są szczegółowo opisane w różnych sekcjach tego artykułu.
-Na razie Rozważmy następujące operacje, które definiują tylko domyślną specjalizację treści i pobierają pojedyncze qubit jako dane wejściowe, a następnie wywołują wbudowaną <xref:microsoft.quantum.intrinsic.x> operację na tym wejściu:
+Na razie Rozważmy następujące operacje, które definiują tylko domyślną specjalizację treści i pobierają pojedyncze qubit jako dane wejściowe, a następnie wywołują wbudowaną <xref:Microsoft.Quantum.Intrinsic.X> operację na tym wejściu:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ Wreszcie definiuje, `Unit` że dane wyjściowe operacji są puste.
 `Unit` jest używany podobnie do `void` języka C# i innych nieużywanych języków i jest odpowiednikiem `unit` w języku F # i innych językach funkcjonalnych.
 
 Operacje mogą również zwracać bardziej interesujące typy niż `Unit` .
-Na przykład <xref:microsoft.quantum.intrinsic.m> operacja zwraca dane wyjściowe typu `Result` , reprezentujący wykonywanie pomiaru.  Można przekazać ją z operacji do innej operacji lub użyć jej ze `let` słowem kluczowym, aby zdefiniować nową zmienną.
+Na przykład <xref:Microsoft.Quantum.Intrinsic.m> operacja zwraca dane wyjściowe typu `Result` , reprezentujący wykonywanie pomiaru.  Można przekazać ją z operacji do innej operacji lub użyć jej ze `let` słowem kluczowym, aby zdefiniować nową zmienną.
 
 Takie podejście umożliwia reprezentowanie klasycznego obliczenia, które współdziała z operacjami Quantum na niskim poziomie, na przykład w przypadku [kodowania](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)z nadmiernym użyciem:
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > Każda operacja w programie Q# przyjmuje dokładnie jedno wejście i zwraca dokładnie jedno wyjście.
-> Wiele danych wejściowych i wyjściowych jest przedstawianych przy użyciu *krotek*, które zbierają wiele wartości w jedną wartość.
+> Wiele danych wejściowych i wyjściowych jest przedstawianych przy użyciu *krotek* , które zbierają wiele wartości w jedną wartość.
 > W tym przypadku Q# jest językiem "Krotka w kolekcji".
 > Po tym koncepcji zestaw pustych nawiasów `()` powinien zostać odczytany jako krotka "Empty", która ma typ `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Operacje kontrolowane i sąsiadujące
 
-Jeśli operacja implementuje transformację jednostkową, tak jak w przypadku wielu operacji w Q# , można zdefiniować sposób działania operacji przy *adjointed* lub *kontrolowanej*. *Podległych* specjalizacji operacji określa sposób działania "odwrotności" operacji, podczas gdy *kontrolowana* specjalizacja określa, jak działa operacja, gdy jej aplikacja jest kondycjonowana na stanie określonego rejestru Quantum.
+Jeśli operacja implementuje transformację jednostkową, tak jak w przypadku wielu operacji w Q# , można zdefiniować sposób działania operacji przy *adjointed* lub *kontrolowanej* . *Podległych* specjalizacji operacji określa sposób działania "odwrotności" operacji, podczas gdy *kontrolowana* specjalizacja określa, jak działa operacja, gdy jej aplikacja jest kondycjonowana na stanie określonego rejestru Quantum.
 
 Adjoints operacji Quantum są kluczowe dla wielu aspektów przetwarzania Quantum. Przykład jednej takiej sytuacji omówionej wraz z użyteczną Q# techniką programowania można znaleźć w temacie [sterowanie przepływem: sprzężenia](xref:microsoft.quantum.guide.controlflow#conjugations). Kontrolowana wersja operacji jest nową operacją, która efektywnie stosuje operację podstawową tylko wtedy, gdy wszystkie kontrolki qubits są w określonym stanie.
 Jeśli kontrolka qubits znajduje się w położeniu, wówczas podstawowa operacja jest stosowana spójnie z odpowiednią częścią położenia.
@@ -139,7 +139,7 @@ Innym przykładem `CNOT(control, target)` może być implementacja `Controlled X
 
 W pierwszej deklaracji operacji w poprzednich przykładach operacje `BitFlip` i `DecodeSuperdense` zostały zdefiniowane z podpisami `(Qubit => Unit)` i `((Qubit, Qubit) => (Result, Result))` odpowiednio.
 Jak `DecodeSuperdense` obejmuje pomiary, nie jest operacją jednostkową i w związku z tym nie może istnieć żadne kontrolowane niesąsiadujące specjalizacje (odwołaj powiązane wymaganie, aby ta operacja zwracała `Unit` ).
-Jednak jak `BitFlip` po prostu wykonuje operację jednostkową <xref:microsoft.quantum.intrinsic.x> , można ją zdefiniować przy użyciu obu specjalizacji.
+Jednak jak `BitFlip` po prostu wykonuje operację jednostkową <xref:Microsoft.Quantum.Intrinsic.X> , można ją zdefiniować przy użyciu obu specjalizacji.
 
 W tej sekcji szczegółowo opisano, jak uwzględnić istnienie specjalizacji w Q# deklaracjach operacji, dzięki czemu mogą one być wywoływane w połączeniu z `Adjoint` lub `Controlled` funktory.
 Aby uzyskać więcej informacji o niektórych sytuacjach, w których jest to prawidłowe lub nieprawidłowe, aby zadeklarować specjalizacje, zobacz [warunki dotyczące prawidłowej definiowania specjalizacji](#circumstances-for-validly-defining-specializations) w tym artykule.
@@ -149,7 +149,7 @@ Rzeczywista implementacja każdej specjalizacji może być *jawnie* lub *jawnie*
 
 ### <a name="implicitly-specifying-implementations"></a>Niejawnie Określanie implementacji
 
-W takim przypadku treść deklaracji operacji składa się wyłącznie z implementacji domyślnej. Przykład:
+W takim przypadku treść deklaracji operacji składa się wyłącznie z implementacji domyślnej. Na przykład:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -368,7 +368,7 @@ Oznacza to, że wartość typu zdefiniowanego przez użytkownika nie może być 
 
 Funkcje są czysto deterministyczne, klasyczne procedury w Q# , które różnią się od operacji w tym, że nie mogą mieć żadnych efektów poza obliczaniem wartości wyjściowej.
 W szczególności funkcje nie mogą wywoływać operacji; Działaj na, alokuj lub zażycz qubits; Przykładowe liczby losowe; lub w inny sposób zależy od stanu poza wartością wejściową do funkcji.
-W związku z tym Q# funkcje są *czyste*, w tym, że zawsze mapują te same wartości wejściowe na te same wartości wyjściowe.
+W związku z tym Q# funkcje są *czyste* , w tym, że zawsze mapują te same wartości wejściowe na te same wartości wyjściowe.
 Takie zachowanie umożliwia Q# kompilatorowi bezpieczne Zmienianie kolejności sposobu i czasu wywoływania funkcji podczas generowania specjalizacji operacji.
 
 Każdy Q# plik źródłowy może definiować dowolną liczbę funkcji.
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>Klasyczna logika w funkcjach = = dobra
 
-Za każdym razem, gdy jest to możliwe, warto napisać klasyczną logikę pod kątem funkcji, a nie operacji, dzięki czemu operacje mogą łatwo korzystać z niej. Na przykład, jeśli wcześniej zapisałeś wcześniejszą `Square` deklarację jako *operację*, kompilator nie może zagwarantowania, że wywołanie go z tymi samymi danymi wejściowymi będzie spójnie generować te same dane wyjściowe.
+Za każdym razem, gdy jest to możliwe, warto napisać klasyczną logikę pod kątem funkcji, a nie operacji, dzięki czemu operacje mogą łatwo korzystać z niej. Na przykład, jeśli wcześniej zapisałeś wcześniejszą `Square` deklarację jako *operację* , kompilator nie może zagwarantowania, że wywołanie go z tymi samymi danymi wejściowymi będzie spójnie generować te same dane wyjściowe.
 
 Aby podkreślić różnicę między funkcjami i operacjami, należy wziąć pod uwagę problem z próbkami klasycznymi losowych z poziomu Q# operacji:
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 Za każdym razem `U` , gdy jest wywoływana, ma inną akcję na `target` .
 W szczególności kompilator nie może zagwarantować, że jeśli dodasz `adjoint auto` deklarację specjalizacji do `U` , `U(target); Adjoint U(target);` działa jako tożsamość (to oznacza, że jako No-op).
-To narusza definicję części sąsiedniej zdefiniowanej w [wektorach i macierzach](xref:microsoft.quantum.concepts.vectors), takich jak umożliwienie kompilatorowi automatyczne wygenerowanie sąsiadującej specjalizacji w operacji, w której wywołanie operacji <xref:microsoft.quantum.math.randomreal> spowodowałoby przerwanie gwarancji dostarczonych przez kompilator; <xref:microsoft.quantum.math.randomreal> jest operacją, dla której nie istnieje przyległych lub kontrolowana wersja.
+To narusza definicję części sąsiedniej zdefiniowanej w [wektorach i macierzach](xref:microsoft.quantum.concepts.vectors), takich jak umożliwienie kompilatorowi automatyczne wygenerowanie sąsiadującej specjalizacji w operacji, w której wywołanie operacji <xref:Microsoft.Quantum.Math.RandomReal> spowodowałoby przerwanie gwarancji dostarczonych przez kompilator; <xref:Microsoft.Quantum.Math.RandomReal> jest operacją, dla której nie istnieje przyległych lub kontrolowana wersja.
 
 Z drugiej strony, zezwolenie na wywołania funkcji, takie jak `Square` jest bezpieczne, i gwarantuje, że kompilator musi tylko zachować dane wejściowe, aby `Square` zachować stabilny wynik.
 W ten sposób izolowanie możliwie największej logiki w ramach funkcji pozwala łatwo ponownie wykorzystać tę logikę w innych funkcjach i operacjach.
@@ -467,7 +467,7 @@ Chociaż jest to możliwe w przypadku niewielkiej liczby takich funkcji, podczas
 Jednak większość tego rodzaju trudności wynika z faktu, że nie podano w kompilatorze informacji, które muszą rozpoznać, w jaki sposób `Map` są powiązane różne wersje.
 Efektywnie, chcesz, aby kompilator traktował `Map` jako rodzaj funkcji matematycznej z Q# *typów* do Q# funkcji.
 
-Q# formalizes to pojęcie przez umożliwienie funkcjom i operacjom posiadania *parametrów typu*, a także ich zwykłych parametrów krotek.
+Q# formalizes to pojęcie przez umożliwienie funkcjom i operacjom posiadania *parametrów typu* , a także ich zwykłych parametrów krotek.
 W poprzednich przykładach, chcesz traktować `Map` jako parametry typu `Int, Pauli` w pierwszym przypadku i `Double, String` w drugim przypadku.
 W większości przypadków Użyj tych parametrów typu, tak jakby były to typy zwykłe. Używaj wartości parametrów typu do wprowadzania tablic i krotek, wywoływania funkcji i operacji oraz przypisywania do zmiennych normalnych lub modyfikowalnych.
 
@@ -536,9 +536,9 @@ Q#Biblioteki standardowe zapewniają wiele takich operacji i funkcji sparametryz
 Są one omówione bardziej szczegółowo w [ Q# przewodniku po bibliotece standardowej](xref:microsoft.quantum.libraries.standard.intro).
 
 
-## <a name="callables-as-first-class-values"></a>Możliwy do przełożenia jako wartości pierwszej klasy
+## <a name="callables-as-first-class-values"></a>Możliwy do przeFirst-Class wartości
 
-Jedną z kluczowych technik z przyczyn dotyczących przepływu sterowania i klasycznej logiki przy użyciu funkcji, a nie operacji, jest korzystanie z tych operacji i funkcji w programie, które Q# są *pierwszej klasy*.
+Jedną z kluczowych technik z przyczyn dotyczących przepływu sterowania i klasycznej logiki przy użyciu funkcji, a nie operacji, jest korzystanie z tych operacji i funkcji w programie, które Q# są *pierwszej klasy* .
 Oznacza to, że są to poszczególne wartości w języku we własnym zakresie.
 Na przykład, poniżej jest doskonale prawidłowy Q# kod, w przypadku niewielkiego pośrednika:
 
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-Wartość zmiennej `ourH` w poprzednim fragmencie kodu jest następnie operacją <xref:microsoft.quantum.intrinsic.h> , która umożliwia wywoływanie tej wartości podobnie jak każda inna operacja.
+Wartość zmiennej `ourH` w poprzednim fragmencie kodu jest następnie operacją <xref:Microsoft.Quantum.Intrinsic.H> , która umożliwia wywoływanie tej wartości podobnie jak każda inna operacja.
 Dzięki tej możliwości można pisać operacje, które przyjmują operacje w ramach danych wejściowych, tworząc koncepcje przepływu sterowania wyższego rzędu.
 Na przykład można wyobrazić się do operacji "kwadratowych", stosując ją dwa razy do tego samego elementu docelowego qubit.
 
@@ -589,7 +589,7 @@ Oznacza to, że klasyczna logika wewnątrz funkcji jest izolowana, co gwarantuje
 
 ## <a name="partial-application"></a>Aplikacja częściowa
 
-Można wykonać znacznie więcej dzięki funkcjom, które zwracają operacje przy użyciu *częściowej aplikacji*, w którym można dostarczyć co najmniej jedną część danych wejściowych do funkcji lub operacji bez jej rzeczywistego wywoływania. W poprzednim `ApplyTwice` przykładzie można wskazać, że nie chcesz określać, od razu, do czego qubit powinna być stosowana operacja wejściowa:
+Można wykonać znacznie więcej dzięki funkcjom, które zwracają operacje przy użyciu *częściowej aplikacji* , w którym można dostarczyć co najmniej jedną część danych wejściowych do funkcji lub operacji bez jej rzeczywistego wywoływania. W poprzednim `ApplyTwice` przykładzie można wskazać, że nie chcesz określać, od razu, do czego qubit powinna być stosowana operacja wejściowa:
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {

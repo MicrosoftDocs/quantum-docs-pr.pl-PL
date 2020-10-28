@@ -1,6 +1,6 @@
 ---
 title: Symulowanie hamiltonian Dynamics
-description: Dowiedz się, jak używać formuł Trotter-Suzuki i qubitization do pracy z symulacjami hamiltonian.
+description: Dowiedz się, jak używać Trotter-Suzuki formuł i qubitization do pracy z symulacjami hamiltonian.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834010"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691882"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Symulowanie hamiltonian Dynamics
 
@@ -28,13 +28,13 @@ Pomysłem za Trotter — formuły Suzuki są proste: wyrażenie hamiltonian jako
 W szczególności Let $H = \ sum_ {j = 1} ^ m H_j $ to hamiltonian.
 Następnie $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, co oznacza, że jeśli $t \ll $1, błąd w tym przybliżeniu będzie nieznaczny.
 Należy pamiętać, że jeśli $e ^ {-i H t} $ były zwykłą wartością wykładniczą, błąd w tym przybliżeniu nie będzie $O (m ^ 2 t ^ 2) $: wartość będzie równa zero.
-Ten błąd występuje, ponieważ $e ^ {-iHt} $ jest operatorem wykładniczym i w związku z tym występuje błąd podczas korzystania z tej formuły ze względu na fakt, że $H _j $ warunki nie współpracownicy (*tj.*$H _j H_k \ne H_k H_j $).
+Ten błąd występuje, ponieważ $e ^ {-iHt} $ jest operatorem wykładniczym i w związku z tym występuje błąd podczas korzystania z tej formuły ze względu na fakt, że $H _j $ warunki nie współpracownicy ( *tj.* $H _j H_k \ne H_k H_j $).
 
 Jeśli $t $ jest duże, Trotter — formuły Suzuki mogą być używane w celu dokładnego symulowania dynamiki przez podzielenie go na sekwencję krótkich etapów czasu.
 Niech $r $ to liczba kroków podejmowanych w trakcie rozwoju czasu, więc każdy krok czasu jest wykonywany dla czasu $t/r $. Następnie mamy $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, co oznacza, że jeśli $r $ skaluje jako $m ^ 2 t ^ 2/1/Epsilon $, błąd można wykonać z najwyżej $ \epsilon $ dla dowolnego $ \epsilon>$0.
 
 Dokładniejsze przybliżenia mogą być kompilowane przez konstruowanie sekwencji wykładniczych operatorów w taki sposób, że warunki błędu anulują się.
-Najprostsza taka formuła, druga Order Trotter-Suzuki Formula, przyjmuje postać $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ Right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ błąd, który można wprowadzić poniżej $ \epsilon $ dla dowolnego $ \epsilon>$0, wybierając $r $ do skalowania jako $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
+Najprostsza taka formuła, druga kolejność Trotter-Suzuki formuła, przyjmuje postać $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ Right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ błąd, który można wprowadzić poniżej $ \epsilon $ dla dowolnego $ \epsilon>$0, wybierając $r $ do skalowania jako $m ^ {3/2} t ^ {3/2}/\sqrt {\ Epsilon} $.
 
 Nawet formuły wyższego rzędu, w tym ($ 2K $) kolejność jednokierunkowa dla $k>$0, można utworzyć rekursywnie: $ $ U_ {2K} (t) = [U_ {2K-2} (s_k \~ t)] ^ 2 U_ {2K-2} ([1-4s_k] t) [U_ {2K-2} (s_k \~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2K + 1}/r ^ {2K}), $ $ where $s _k = (4-4 ^ {1/(2K-1)}) ^ {-1} $.
 
@@ -52,7 +52,7 @@ Na przykład $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\oti
         0 & 0 & 0 & e ^ {-IT} \end{bmatrix}.
 $ $ Tutaj, $e ^ {-iHt} \ket {00} = e ^ {IT} \ket {00} $ i $e ^ {-iHt} \ket {01} = e ^ {-IT} \ket {01} $, które mogą być widoczne bezpośrednio jako konsekwencja, że parzystość $0 $ jest $0 $, podczas gdy parzystość ciągu bitowego $1 $ to $1 $.
 
-Wykładnicze operatory Pauli można zaimplementować bezpośrednio Q# przy użyciu <xref:microsoft.quantum.intrinsic.exp> operacji:
+Wykładnicze operatory Pauli można zaimplementować bezpośrednio Q# przy użyciu <xref:Microsoft.Quantum.Intrinsic.Exp> operacji:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ Wykładnicze operatory Pauli można zaimplementować bezpośrednio Q# przy użyc
 
 W przypadku Fermionic Hamiltonians, w której [dekompozycja Jordanii – Wigner](xref:microsoft.quantum.chemistry.concepts.jordanwigner) , wygodnie mapuje hamiltonian na sumę operatorów Pauli.
 Oznacza to, że powyższe podejście można łatwo dostosować do symulowania chemii.
-Zamiast ręcznego zapętlenia wszystkich Paulich w reprezentacji Jordania-Wigner, poniżej przedstawiono prosty przykład sposobu działania takiej symulacji w ramach chemii.
+Zamiast ręcznego zapętlenia wszystkich Paulich w reprezentacji Jordan-Wigner poniżej przedstawiono prosty przykład sposobu, w jaki będzie wyglądała taka symulacja w ramach chemii.
 Naszym punktem początkowym jest [kodowanie Jordania – Wigner](xref:microsoft.quantum.chemistry.concepts.jordanwigner) Fermionic hamiltonian, wyrażone w kodzie jako wystąpienie `JordanWignerEncoding` klasy.
 
 ```csharp
@@ -156,7 +156,7 @@ Operator przeszukiwania, $W $, może być wyrażony w postaci $ \operatorname{Se
 
 Te podprocedury można łatwo skonfigurować w programie Q# .
 Przykładowo Rozważmy proste qubit poprzecznie Ising hamiltonian, gdzie $H = X_1 + X_2 + Z_1 Z_2 $.
-W takim przypadku kod implementujący Q# operację $ \operatorname{SELECT} $ jest wywoływany przez <xref:microsoft.quantum.canon.multiplexoperations> , podczas gdy operacja $ \operatorname{Prepare} $ może zostać zaimplementowana przy użyciu <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+W takim przypadku kod implementujący Q# operację $ \operatorname{SELECT} $ jest wywoływany przez <xref:Microsoft.Quantum.Canon.MultiplexOperations> , podczas gdy operacja $ \operatorname{Prepare} $ może zostać zaimplementowana przy użyciu <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .
 Przykład, który obejmuje symulowanie modelu Hubbard, można znaleźć jako [ Q# przykład](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 Ręczne określenie tych kroków dla dowolnego problemu chemicznego będzie wymagało dużej nakładu pracy, które można uniknąć przy użyciu biblioteki chemicznej.
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-Co ważne, implementacja <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> ma zastosowanie do dowolnego Hamiltoniansu określonego jako liniowa kombinacja ciągów Pauli.
-Wersja zoptymalizowana pod kątem symulacji chemicznej jest wywoływana przy użyciu <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> .
+Co ważne, implementacja <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> ma zastosowanie do dowolnego Hamiltoniansu określonego jako liniowa kombinacja ciągów Pauli.
+Wersja zoptymalizowana pod kątem symulacji chemicznej jest wywoływana przy użyciu <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> .
 Ta wersja jest zoptymalizowana pod kątem zminimalizowania liczby bram T wykorzystujących techniki omówione w temacie [kodowanie elektronicznych widm w obwodach Quantum przy użyciu liniowej złożoności T](https://arxiv.org/abs/1805.03662).

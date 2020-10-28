@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835642"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692160"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -39,7 +39,7 @@ Jest to zalety, że wymaga tylko pojedynczej dodatkowej qubit do wykonania fazy 
 Każda z metod proponowanych poniżej używa innej strategii do projektowania eksperymentów i różnych metod przetwarzania danych w celu uzyskania informacji o fazie.  Każdy z nich ma unikatową korzyść w zakresie od uzyskania rygorystycznych powiązań błędów, do możliwości uwzględniania wcześniejszych informacji, tolerowania błędów lub uruchamiania w pamięci limitted klasyczne komputery.
 
 W omawianiu oszacowania fazy iteracyjnej będziemy rozważać $U jednostkowe $ podaną jako operację czerni.
-Zgodnie z opisem w sekcji dotyczącej rozwiązań firmy Oracle w [strukturach danych](xref:microsoft.quantum.libraries.data-structures)firmy Q# Canon modeluje takie operacje według <xref:microsoft.quantum.oracles.discreteoracle> typu zdefiniowanego przez użytkownika, zdefiniowanego przez typ krotki `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Zgodnie z opisem w sekcji dotyczącej rozwiązań firmy Oracle w [strukturach danych](xref:microsoft.quantum.libraries.data-structures)firmy Q# Canon modeluje takie operacje według <xref:Microsoft.Quantum.Oracles.DiscreteOracle> typu zdefiniowanego przez użytkownika, zdefiniowanego przez typ krotki `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 W konkretnym przypadku, `U : DiscreteOracle` a następnie `U(m)` implementuje $U ^ m $ dla `m : Int` .
 
 W przypadku tej definicji, każdy krok iteracji fazy szacowania kontynuuje proces przygotowywania pomocniczej qubit w stanie $ \ket{+} $ wraz z początkowym stanem $ \ket{\phi} $ przyjętym przez nas jest [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) $U (m) $, tj. $U (m) \ket{\phi} = e ^ {im\phi} \ KET {\ Fi} $.  
@@ -99,7 +99,7 @@ Dokładne wnioskowanie bayesowskie jest w sposób nieodpowiedniy do przeprowadze
 Aby wyświetlić ten obraz, chcielibyśmy poznać zmienną $n $-bitową $x $.
 Wcześniejsza dystrybucja $ \Pr (x) $ ma obsługę ponad $2 ^ n $ hipotetycznych wartości $x $.
 Oznacza to, że jeśli potrzebujemy wysoce dokładnego oszacowania $x $, szacowanie fazy bayesowskie może wymagać zabraniania pamięci i czasu przetwarzania.
-Chociaż w przypadku niektórych aplikacji, takich jak symulacja Quantum, wymagana dokładność limitted nie wyklucza takich metod inne aplikacje, takie jak skró, nie można użyć dokładnej bayesowskie wnioskowania w ramach etapu szacowania fazy.  Z tego powodu udostępniamy również implementacje przybliżonych metod bayesowskie, takich jak [szacowanie etapowych przeszukiwań (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) , a także inne podejścia niebayesowskieowe, takie jak [niezawodna Ocena faz](xref:microsoft.quantum.characterization.robustphaseestimation).
+Chociaż w przypadku niektórych aplikacji, takich jak symulacja Quantum, wymagana dokładność limitted nie wyklucza takich metod inne aplikacje, takie jak skró, nie można użyć dokładnej bayesowskie wnioskowania w ramach etapu szacowania fazy.  Z tego powodu udostępniamy również implementacje przybliżonych metod bayesowskie, takich jak [szacowanie etapowych przeszukiwań (RWPE)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) , a także inne podejścia niebayesowskieowe, takie jak [niezawodna Ocena faz](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation).
 
 ### <a name="robust-phase-estimation"></a>Niezawodna Ocena fazy ###
 
@@ -112,14 +112,14 @@ Najważniejszym elementem niezawodnym oszacowania fazy, który jest współużyt
 Inne istotne szczegóły obejmują:, na przykład, obciążenie małą ilością tylko $1 $ Ancilla qubit lub że procedura jest nieadaptacyjna, co oznacza, że wymagana sekwencja eksperymentów Quantum jest niezależna od wyników pomiaru pośredniego. W tym i przemieszczonych przykładach, w których jest ważne, aby wybrać algorytm szacowania fazy, należy zapoznać się z dokumentacją, taką jak @"microsoft.quantum.characterization.robustphaseestimation" i publikacjami, do których istnieją odwołania, aby uzyskać więcej informacji i ich implementacji.
 
 > [!TIP]
-> Istnieje wiele przykładów, w których jest używane niezawodne szacowanie faz. W przypadku szacowania fazy w przypadku wyodrębnienia energii stanu ziemi w różnych systemach fizycznych należy zapoznać się z przykładem [ **symulacji H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), [przykładem **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)i [przykładowym **modelem Hubbard** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
+> Istnieje wiele przykładów, w których jest używane niezawodne szacowanie faz. W przypadku szacowania fazy w przypadku wyodrębnienia energii stanu ziemi w różnych systemach fizycznych należy zapoznać się z przykładem [ **symulacji H2**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), [przykładem **SimpleIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)i [przykładowym **modelem Hubbard**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Ciągłe firmy Oracle ###
 
-Możemy również uogólnić z modelu Oracle użytego powyżej, aby umożliwić korzystanie z Oracle w czasie ciągłym, które są modelowane przez typ firmy <xref:microsoft.quantum.oracles.continuousoracle> .
+Możemy również uogólnić z modelu Oracle użytego powyżej, aby umożliwić korzystanie z Oracle w czasie ciągłym, które są modelowane przez typ firmy <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Rozważmy, że zamiast pojedynczego operatora jednostkowego $U $, mamy rodzinę operatorów jednostkowych $U (t) $ for $t \In \mathbb{R} $, takich jak $U (t) U (s) $ = $U (t + s) $.
-Jest to słaba instrukcja, niż w przypadku odrębnego przypadku, ponieważ możemy utworzyć element, <xref:microsoft.quantum.oracles.discreteoracle> ograniczając $t = m \, \delta t $ dla niektórych stałych $ \delta t $.
+Jest to słaba instrukcja, niż w przypadku odrębnego przypadku, ponieważ możemy utworzyć element, <xref:Microsoft.Quantum.Oracles.DiscreteOracle> ograniczając $t = m \, \delta t $ dla niektórych stałych $ \delta t $.
 Według [theorem kamienia](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i H t) $ dla pewnego operatora $H $, gdzie $ \exp $ to macierz wykładnicza, zgodnie z opisem w [zaawansowanych macierzach](xref:microsoft.quantum.concepts.matrix-advanced).
 Eigenstate $ \ket{\phi} $ $H $, które $H \ket{\phi} = \phi \ket{\phi} $, również eigenstate of $U (t) $ dla wszystkich $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
@@ -146,14 +146,14 @@ Możliwość przechodzenie do tyłu pozwala również algorytmowi dowiedzieć si
 
 Każda operacja szacowania fazy dostarczana z użyciem firmy Q# Canon przyjmuje inny zestaw danych wejściowych parametryzacja jakość, której potrzebujemy z końcowego oszacowania $ \hat{\phi} $.
 Te różne dane wejściowe, jednak wspólnie współdzielą kilka danych wejściowych, takie jak częściowa aplikacja przez parametry jakości, skutkuje typowym podpisem.
-Na przykład <xref:microsoft.quantum.characterization.robustphaseestimation> operacja omówiona w następnej sekcji ma następujący podpis:
+Na przykład <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> operacja omówiona w następnej sekcji ma następujący podpis:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 `bitsPrecision`Dane wejściowe są unikatowe dla `RobustPhaseEstimation` , chociaż `oracle` i `eigenstate` są wspólne.
-Tak więc, jak widać w **H2Sample**, operacja może akceptować algorytm iteracyjnej oceny fazy z wejściem formularza, `(DiscreteOracle, Qubit[]) => Unit` Aby zezwolić użytkownikowi na określenie dowolnych algorytmów szacowania fazy:
+Tak więc, jak widać w **H2Sample** , operacja może akceptować algorytm iteracyjnej oceny fazy z wejściem formularza, `(DiscreteOracle, Qubit[]) => Unit` Aby zezwolić użytkownikowi na określenie dowolnych algorytmów szacowania fazy:
 
 ```qsharp
 operation H2EstimateEnergy(
