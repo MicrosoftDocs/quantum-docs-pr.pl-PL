@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835591"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692240"
 ---
 # <a name="data-structures-and-modeling"></a>Struktury i modelowanie danych #
 
 ## <a name="classical-data-structures"></a>Klasyczne struktury danych ##
 
 Wraz z typami zdefiniowanymi przez użytkownika do reprezentowania koncepcji Quantum, Canon oferuje również operacje, funkcje i typy do pracy z danymi klasycznymi używanymi w kontroli systemów Quantum.
-Na przykład <xref:microsoft.quantum.arrays.reversed> Funkcja przyjmuje tablicę jako dane wejściowe i zwraca tę samą tablicę w odwrotnej kolejności.
+Na przykład <xref:Microsoft.Quantum.Arrays.Reversed> Funkcja przyjmuje tablicę jako dane wejściowe i zwraca tę samą tablicę w odwrotnej kolejności.
 Można go następnie użyć w tablicy typu, `Qubit[]` Aby uniknąć konieczności stosowania niepotrzebnych bram $ \operatorname{swap} $ podczas konwersji między reprezentacjami jednostek Quantum.
-Podobnie znaleźliśmy w poprzedniej sekcji, że typy formularzy `(Int, Int -> T)` mogą być przydatne do reprezentowania losowych kolekcji dostępu, więc <xref:microsoft.quantum.arrays.lookupfunction> Funkcja zapewnia wygodny sposób konstruowania takich typów z typów tablic.
+Podobnie znaleźliśmy w poprzedniej sekcji, że typy formularzy `(Int, Int -> T)` mogą być przydatne do reprezentowania losowych kolekcji dostępu, więc <xref:Microsoft.Quantum.Arrays.LookupFunction> Funkcja zapewnia wygodny sposób konstruowania takich typów z typów tablic.
 
 ### <a name="pairs"></a>Parowanie ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 Canon oferuje kilka funkcji manipulowania tablicami.
 Te funkcje są typu sparametryzowanego i mogą być używane z tablicami dowolnego Q# typu.
-Na przykład <xref:microsoft.quantum.arrays.reversed> Funkcja zwraca nową tablicę, której elementy znajdują się w odwrotnej kolejności od ich wejścia.
+Na przykład <xref:Microsoft.Quantum.Arrays.Reversed> Funkcja zwraca nową tablicę, której elementy znajdują się w odwrotnej kolejności od ich wejścia.
 Może to służyć do zmiany sposobu reprezentowania rejestru Quantum podczas wywoływania operacji:
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-Podobnie <xref:microsoft.quantum.arrays.subarray> Funkcja może służyć do zmiany kolejności lub podzbiorów elementów tablicy:
+Podobnie <xref:Microsoft.Quantum.Arrays.Subarray> Funkcja może służyć do zmiany kolejności lub podzbiorów elementów tablicy:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-W połączeniu z sterowaniem przepływem funkcje manipulowania tablicą, takie jak <xref:microsoft.quantum.arrays.zip> mogą zapewnić zaawansowany sposób wyznaczania programów Quantum:
+W połączeniu z sterowaniem przepływem funkcje manipulowania tablicą, takie jak <xref:Microsoft.Quantum.Arrays.Zipped> mogą zapewnić zaawansowany sposób wyznaczania programów Quantum:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-Ta Oracle jest następnie szczególnym przypadkiem <xref:microsoft.quantum.canon.rall1> operacji, która umożliwia obracanie przez dowolną fazę zamiast przypadku odbicia $ \phi = \pi $.
-W tym przypadku `RAll1` jest podobny do <xref:microsoft.quantum.intrinsic.r1> operacji Preludium, w tym, że obraca się on o $ \ket{11\cdots1} $ zamiast stanu Single-qubit $ \ket {1} $.
+Ta Oracle jest następnie szczególnym przypadkiem <xref:Microsoft.Quantum.Canon.RAll1> operacji, która umożliwia obracanie przez dowolną fazę zamiast przypadku odbicia $ \phi = \pi $.
+W tym przypadku `RAll1` jest podobny do <xref:Microsoft.Quantum.Intrinsic.R1> operacji Preludium, w tym, że obraca się on o $ \ket{11\cdots1} $ zamiast stanu Single-qubit $ \ket {1} $.
 
 Oracle, który oznacza początkowe miejsce, może być skonstruowany w podobny sposób.
 W pseudokodzie:
@@ -139,7 +139,7 @@ W pseudokodzie:
 4. Zastosuj $X $ brama do każdego qubit.
 5. Zastosuj $H $ brama do każdego qubit.
 
-Tym razem pokazujemy również użycie <xref:microsoft.quantum.canon.applywith> razem z <xref:microsoft.quantum.canon.rall1> opisaną powyżej operacją:
+Tym razem pokazujemy również użycie <xref:Microsoft.Quantum.Canon.ApplyWith> razem z <xref:Microsoft.Quantum.Canon.RAll1> opisaną powyżej operacją:
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -160,10 +160,10 @@ Ten moduł jest zwykle opisywany przez jeden z dwóch typów rozwiązań firmy O
 
 > [!TIP]
 > Oba typy Oracle opisane poniżej zostały omówione w przykładach.
-> Aby dowiedzieć się więcej o programie Oracle Query, zobacz przykład [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
-> Aby dowiedzieć się więcej na temat zapytań dyskretnych, zobacz [przykład **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> Aby dowiedzieć się więcej o programie Oracle Query, zobacz przykład [ **PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Aby dowiedzieć się więcej na temat zapytań dyskretnych, zobacz [przykład **IsingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
-Pierwszy typ Oracle, który wywołuje zapytanie dyskretne Oracle i reprezentuje typ zdefiniowany przez użytkownika <xref:microsoft.quantum.oracles.discreteoracle> , po prostu obejmuje macierz jednostkową.
+Pierwszy typ Oracle, który wywołuje zapytanie dyskretne Oracle i reprezentuje typ zdefiniowany przez użytkownika <xref:Microsoft.Quantum.Oracles.DiscreteOracle> , po prostu obejmuje macierz jednostkową.
 Jeśli $U $ jest jednostką, której eigenvalues chcemy oszacować, a firma Oracle dla $U $ jest po prostu dodatkiem do procedury podrzędnej, która implementuje $U $.
 Na przykład może upłynąć $U $, aby było to Oracle $Q $ zdefiniowany powyżej na potrzeby szacowania amplitudy.
 Eigenvalues tej macierzy można użyć do oszacowania nakładania się między Stanami początkowymi i docelowymi $ \sin ^ 2 (\theta) $, przy użyciu kwadratów z mniejszą ilością próbek niż w przypadku, w przeciwnym razie będzie potrzebna.
@@ -173,7 +173,7 @@ Innymi słowy, chcemy oszacować $ \theta $ dla nieznanej bramy rotacji w formul
 W takich przypadkach podprocedura, z którą będziemy korzystać, aby poznać tę stałą wartość $ \theta $ dla bramy to $ $ \begin{align} U & = R_z (\theta) \\ \\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \ teta/2} \end{bmatrix}.
 \end{align} $ $
 
-Drugim typem Oracle używanym w ocenie fazy jest ciągłe zapytanie Oracle reprezentowane przez <xref:microsoft.quantum.oracles.continuousoracle> Typ.
+Drugim typem Oracle używanym w ocenie fazy jest ciągłe zapytanie Oracle reprezentowane przez <xref:Microsoft.Quantum.Oracles.ContinuousOracle> Typ.
 Ciągłe zapytanie Oracle do oceny fazy przyjmuje postać $U (t) $, gdzie $t $ jest znaną w sposób klasyczny.
 Jeśli możemy $U $ być stałą jednostką, a następnie ciągłe zapytanie Oracle przyjmuje formularz $U (t) = U ^ t $.
 Pozwala to na badanie macierzy, takich jak $ \sqrt{U} $, które nie mogły zostać zaimplementowane bezpośrednio w modelu zapytań dyskretnych.
@@ -211,7 +211,7 @@ gdzie liczba całkowita $r > $0 kontroluje błąd przybliżenia.
 Biblioteka modelowania generatora dynamicznego zapewnia strukturę służącą do systematycznego kodowania skomplikowanych generatorów pod kątem łatwiejszych generatorów. Taki opis może zostać następnie przesłany do, powiedzmy, biblioteka symulacji w celu zaimplementowania ewolucji czasu przez wybrany przez Ciebie algorytm symulacji z wieloma szczegółami.
 
 > [!TIP]
-> Dynamiczna biblioteka generatora opisana poniżej znajduje się w przykładach. Aby zapoznać się z przykładem opartym na modelu Ising, zobacz [przykład **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> Dynamiczna biblioteka generatora opisana poniżej znajduje się w przykładach. Aby zapoznać się z przykładem opartym na modelu Ising, zobacz [przykład **IsingGenerators**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
 > Przykład na podstawie wodoru molekularnego można znaleźć w [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) i [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) Samples.
 
 ### <a name="complete-description-of-a-generator"></a>Pełny opis generatora ###
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 Pierwszy parametr reprezentuje czas trwania, który zostanie pomnożony przez współczynnik w `GeneratorIndex` , ewolucji jednostkowej. Drugi parametr to qubit, w którym są rejestrowane działania jednostkowe. 
 
-### <a name="time-dependent-generators"></a>Generatory zależne od czasu ###
+### <a name="time-dependent-generators"></a>Generatory Time-Dependent ###
 
 W wielu przypadkach są również zainteresowani generatorami zależnymi od czasu, które mogą wystąpić w równaniu Schrödinger $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = \hat H (t) \ket{\psi (t)}, \end{align} $ $, gdzie Generator $ \hat H (t) $ jest teraz zależny od czasu. Rozszerzenie od niezależnych generatorów czasowych powyżej do tego przypadku jest proste. Zamiast Naprawiono `GeneratorSystem` hamiltonian $, a w przypadku wszystkich $t godzin nie ma już `GeneratorSystemTimeDependent` typu zdefiniowanego przez użytkownika.
 
