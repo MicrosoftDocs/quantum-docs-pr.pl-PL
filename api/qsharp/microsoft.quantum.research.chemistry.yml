@@ -1,0 +1,57 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JWOptimized.
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedFermionEvolutionFunction
+- summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do, `GeneratorSystem` wyrażone w zakresie `GeneratorIndex` Konwencji zdefiniowanej w tym pliku.
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedGeneratorSystem
+- summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w Pauli.
+  uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
+- summary: Zwraca zoptymalizowaną operację kroku Trotter i parametry niezbędne do jej uruchomienia.
+  uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
+- summary: Etap klasycznego przetwarzania `ApplyDeltaParity` . To oblicza listę qubits kontroli do oceny różnicy parzystości między dowolnymi dwoma PQRS... warunki nawet długości.
+  uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
+name: Microsoft.Quantum.Research.Chemistry
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyBasisChange
+- summary: Oblicza różnicę między poprzednim PQRS... warunki i następne PQRS... mandat. Różnica jest obliczana na pomocniczej qubit.
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
+- summary: Proste przygotowanie stanu wersji próbnej przez zajmowanie orbitals
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedStatePreparation
+- summary: Służy do zmiany podstawy operatora Z na operator Y. sprzężenie.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToX
+- summary: Służy do zmiany podstawy operatora Z do operatora Y przez sprzężenie.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToY
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry._ApplyOptimizedTrotterStep
+- summary: Stosuje ewolucję czasową przez PQRS termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123Term
+- summary: Krok implementacji `JWOptimized0123Term_` ;
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
+- summary: >-
+    Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JWOptimized.
+
+    Zobacz [dynamiczne modelowanie generatora](../libraries/data-structures#dynamical-generator-modeling) , aby uzyskać więcej szczegółów.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedFermionEvolution
+- summary: Stosuje ewolucję czasową przez PQ termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTerm
+- summary: Krok implementacji elementu `JWOptimizedHpqTerm_` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTermImpl
+- summary: Stosuje ewolucję czasową przez PQ lub PQQR termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedPQandPQQRTerm
+- summary: Stosuje obrót rz z nielewę do podwójnej fazy w fazie szacowania fazy.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZ
+- summary: Stosuje ewolucję czasową z terminem Z opisanym przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZTerm
+- summary: Stosuje ewolucję czasową przez ZZ termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZZTerm
+summary: Ta przestrzeń nazw zawiera zaawansowane metody badania dla symulacji chemicznej Quantum.
+uid: Microsoft.Quantum.Research.Chemistry
+metadata:
+  ms.openlocfilehash: 22850f044e31507f72d5ac505ece67112fbdccb9
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92711321"
