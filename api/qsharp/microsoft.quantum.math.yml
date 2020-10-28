@@ -1,0 +1,281 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Zwraca wartość bezwzględną złożonej liczby typu `Complex` .
+  uid: Microsoft.Quantum.Math.AbsComplex
+- summary: Zwraca wartość bezwzględną złożonej liczby typu `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsComplexPolar
+- summary: Zwraca wartość bezwzględną liczby zmiennoprzecinkowej o podwójnej precyzji.
+  uid: Microsoft.Quantum.Math.AbsD
+- summary: Zwraca wartość bezwzględną liczby całkowitej.
+  uid: Microsoft.Quantum.Math.AbsI
+- summary: Zwraca wartość bezwzględną dużej liczby całkowitej.
+  uid: Microsoft.Quantum.Math.AbsL
+- summary: Zwraca kwadratową wartość bezwzględną złożonej liczby typu `Complex` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplex
+- summary: Zwraca kwadratową wartość bezwzględną złożonej liczby typu `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar
+- summary: Funkcja pomocnika służąca do rekursywnego obliczania bitsize wartości.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeI
+- summary: Funkcja pomocnika służąca do rekursywnego obliczania bitsize wartości.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeL
+- summary: Zwraca kąt, którego cosinus jest równy podanej liczbie.
+  uid: Microsoft.Quantum.Math.ArcCos
+- summary: Oblicza odwrotny cosinus hiperboliczny liczby.
+  uid: Microsoft.Quantum.Math.ArcCosh
+- summary: Zwraca kąt, którego sinus jest równy podanej liczbie.
+  uid: Microsoft.Quantum.Math.ArcSin
+- summary: Oblicza odwrotny sinus hiperboliczny liczby.
+  uid: Microsoft.Quantum.Math.ArcSinh
+- summary: Zwraca kąt, którego tangens jest równy podanej liczbie.
+  uid: Microsoft.Quantum.Math.ArcTan
+- summary: Zwraca kąt, którego tangens jest ilorazem dwóch określonych liczb.
+  uid: Microsoft.Quantum.Math.ArcTan2
+- summary: Oblicza odwrotny tangens hiperboliczny liczby.
+  uid: Microsoft.Quantum.Math.ArcTanh
+- summary: Zwraca fazę złożonej liczby typów `Complex` .
+  uid: Microsoft.Quantum.Math.ArgComplex
+- summary: Zwraca fazę złożonej liczby typów `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ArgComplexPolar
+- summary: >-
+    Dla nieujemnej liczby całkowitej `a` zwraca liczbę bitów wymaganych do reprezentowania `a` .
+
+    Oznacza to, że program zwraca najmniejszy $n $, który $a < 2 ^ n $.
+  uid: Microsoft.Quantum.Math.BitSizeI
+- summary: >-
+    Dla nieujemnej liczby całkowitej `a` zwraca liczbę bitów wymaganych do reprezentowania `a` .
+
+    Oznacza to, że program zwraca najmniejszy $n $, który $a < 2 ^ n $.
+  uid: Microsoft.Quantum.Math.BitSizeL
+- summary: Zwraca najmniejszą liczbę całkowitą większą lub równą podanej liczbie.
+  uid: Microsoft.Quantum.Math.Ceiling
+- summary: Konwertuje liczbę zespoloną typu `Complex` na liczbę zespoloną typu `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ComplexAsComplexPolar
+- summary: Konwertuje liczbę zespoloną typu `ComplexPolar` na liczbę zespoloną typu `Complex` .
+  uid: Microsoft.Quantum.Math.ComplexPolarAsComplex
+- summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym `denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentI
+- summary: Znajduje ciąg dalszy Convergent najbliższy `fraction` z mianownikiem mniejszym lub równym `denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentL
+- summary: Zwraca cosinus określonego kąta.
+  uid: Microsoft.Quantum.Math.Cos
+- summary: Zwraca cosinus hiperboliczny odpowiadający podanemu kątowi.
+  uid: Microsoft.Quantum.Math.Cosh
+- summary: Dzieli jedną wartość BigInteger przez inną, zwraca wynik i resztę jako krotkę.
+  uid: Microsoft.Quantum.Math.DivRemL
+- summary: Zwraca iloraz dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.DividedByC
+- summary: Zwraca iloraz dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.DividedByCP
+- summary: Zwraca iloraz dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.DividedByD
+- summary: Zwraca iloraz dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.DividedByI
+- summary: Zwraca iloraz dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.DividedByL
+- summary: Zwraca naturalną LOGARYTM logarytmiczną $e $.
+  uid: Microsoft.Quantum.Math.E
+- summary: Zwraca $e $ podniesioną do określonej potęgi.
+  uid: Microsoft.Quantum.Math.ExpD
+- summary: Zwraca liczbę całkowitą podniesioną do danej potęgi w odniesieniu do danego modułu.
+  uid: Microsoft.Quantum.Math.ExpModI
+- summary: Zwraca liczbę całkowitą podniesioną do danej potęgi w odniesieniu do danego modułu.
+  uid: Microsoft.Quantum.Math.ExpModL
+- summary: Oblicza krotkę $ (u, v) $, która $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, gdzie $ \operatorname{GCD} $ jest $a $ największy wspólny dzielnik $a $ i $b $. GCD jest zawsze dodatni.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI
+- summary: Oblicza krotkę $ (u, v) $, która $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, gdzie $ \operatorname{GCD} $ jest $a $ największy wspólny dzielnik $a $ i $b $. GCD jest zawsze dodatni.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
+- summary: Zwraca największą liczbę całkowitą mniejszą lub równą podanej liczbie.
+  uid: Microsoft.Quantum.Math.Floor
+- summary: Oblicza największy wspólny dzielnik $a $ i $b $. GCD jest zawsze dodatni.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorI
+- summary: Oblicza największy wspólny dzielnik $a $ i $b $. GCD jest zawsze dodatni.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorL
+- summary: Zwraca resztę z dzielenia przez określony numer przez inny określony numer.
+  uid: Microsoft.Quantum.Math.IEEERemainder
+- summary: Zwraca $b $, które $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
+  uid: Microsoft.Quantum.Math.InverseModI
+- summary: Zwraca $b $, które $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
+  uid: Microsoft.Quantum.Math.InverseModL
+- summary: Zwraca wartość true, jeśli $a $ i $b $ są współi w przeciwnym razie false.
+  uid: Microsoft.Quantum.Math.IsCoprimeI
+- summary: Zwraca wartość true, jeśli $a $ i $b $ są współi w przeciwnym razie false.
+  uid: Microsoft.Quantum.Math.IsCoprimeL
+- summary: Oblicza logarytm dziesiętny liczby.
+  uid: Microsoft.Quantum.Math.Lg
+- summary: Zwraca logarytm naturalny (podstawowy $e $) o podanej liczbie.
+  uid: Microsoft.Quantum.Math.Log
+- summary: Zwraca logarytm dziesiętny z podanej liczby.
+  uid: Microsoft.Quantum.Math.Log10
+- summary: Zwraca logarytm naturalny z 2.
+  uid: Microsoft.Quantum.Math.LogOf2
+- summary: Dana tablica liczb całkowitych zwraca największy element.
+  uid: Microsoft.Quantum.Math.Max
+- summary: Zwraca większe z dwóch podanych liczb.
+  uid: Microsoft.Quantum.Math.MaxD
+- summary: Zwraca większe z dwóch podanych liczb.
+  uid: Microsoft.Quantum.Math.MaxI
+- summary: Zwraca większe z dwóch podanych liczb.
+  uid: Microsoft.Quantum.Math.MaxL
+- summary: Dana tablica liczb całkowitych zwraca najmniejszy element.
+  uid: Microsoft.Quantum.Math.Min
+- summary: Zwraca mniejsze z dwóch podanych liczb.
+  uid: Microsoft.Quantum.Math.MinD
+- summary: Zwraca mniejsze z dwóch podanych liczb.
+  uid: Microsoft.Quantum.Math.MinI
+- summary: Zwraca mniejsze z dwóch podanych liczb.
+  uid: Microsoft.Quantum.Math.MinL
+- summary: Zwraca różnicę między dwoma danymi wejściowymi.
+  uid: Microsoft.Quantum.Math.MinusC
+- summary: Zwraca różnicę między dwoma danymi wejściowymi.
+  uid: Microsoft.Quantum.Math.MinusCP
+- summary: Zwraca różnicę między dwoma danymi wejściowymi.
+  uid: Microsoft.Quantum.Math.MinusD
+- summary: Zwraca różnicę między dwoma danymi wejściowymi.
+  uid: Microsoft.Quantum.Math.MinusI
+- summary: Zwraca różnicę między dwoma danymi wejściowymi.
+  uid: Microsoft.Quantum.Math.MinusL
+- summary: Zwraca moduł liczby w odniesieniu do innej liczby.
+  uid: Microsoft.Quantum.Math.ModI
+- summary: Zwraca moduł liczby w odniesieniu do innej liczby.
+  uid: Microsoft.Quantum.Math.ModL
+- summary: Wykonuje dzielenie modularne na liczbę podniesioną do potęgi innej liczby.
+  uid: Microsoft.Quantum.Math.ModPowL
+- summary: Oblicza pozostałą postać kanoniczną `value` modulo `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusI
+- summary: Oblicza pozostałą postać kanoniczną `value` modulo `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusL
+- summary: Zwraca jednoargumentową negację danych wejściowych.
+  uid: Microsoft.Quantum.Math.NegationC
+- summary: Zwraca jednoargumentową negację danych wejściowych.
+  uid: Microsoft.Quantum.Math.NegationCP
+- summary: Zwraca jednoargumentową negację danych wejściowych.
+  uid: Microsoft.Quantum.Math.NegationD
+- summary: Zwraca jednoargumentową negację danych wejściowych.
+  uid: Microsoft.Quantum.Math.NegationI
+- summary: Zwraca jednoargumentową negację danych wejściowych.
+  uid: Microsoft.Quantum.Math.NegationL
+- summary: Reprezentuje stosunek obwodu okręgu do jego średnicy, określonego przez stałą, π.
+  uid: Microsoft.Quantum.Math.PI
+- summary: >-
+    Zwraca `L(p)` normę wektora `Double` s.
+
+    Oznacza to, że dana tablica $x $ typu `Double[]` zwraca $p $-norma $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+  uid: Microsoft.Quantum.Math.PNorm
+- summary: >-
+    Normalizuje wektor `Double` s w `L(p)` normie.
+
+    Oznacza to, że dana tablica $x $ typu `Double[]` zwraca tablicę, w której wszystkie elementy są podzielone przez $p $-norma $ \| x \| _p $.
+  uid: Microsoft.Quantum.Math.PNormalized
+- summary: Zwraca sumę (konkatenację) dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.PlusA
+- summary: Zwraca sumę dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.PlusC
+- summary: Zwraca sumę dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.PlusCP
+- summary: Zwraca sumę dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.PlusD
+- summary: Zwraca sumę dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.PlusI
+- summary: Zwraca sumę dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.PlusL
+- summary: Zwraca liczbę podniesioną do danej potęgi.
+  uid: Microsoft.Quantum.Math.PowC
+- summary: Wewnętrz. Ponieważ najłatwiej zdefiniować moc dwóch liczb zespolonych w formularzu kartezjańskiego jako zwracaną w postaci biegunowej, definiujemy ją w tym miejscu, a następnie konwertują w razie potrzeby.
+  uid: Microsoft.Quantum.Math.PowCAsCP
+- summary: Zwraca liczbę podniesioną do danej potęgi.
+  uid: Microsoft.Quantum.Math.PowCP
+- summary: Zwraca liczbę x podniesioną do potęgi t.
+  uid: Microsoft.Quantum.Math.PowD
+- summary: Zwraca liczbę podniesioną do danej potęgi.
+  uid: Microsoft.Quantum.Math.PowI
+- summary: Zwraca liczbę podniesioną do danej potęgi.
+  uid: Microsoft.Quantum.Math.PowL
+- summary: Oblicza moduł między dwoma liczbami rzeczywistymi.
+  uid: Microsoft.Quantum.Math.RealMod
+- summary: Zaokrągla wartość do najbliższej liczby całkowitej.
+  uid: Microsoft.Quantum.Math.Round
+- summary: Zwraca liczbę całkowitą, która wskazuje znak liczby.
+  uid: Microsoft.Quantum.Math.SignD
+- summary: Zwraca liczbę całkowitą, która wskazuje znak liczby.
+  uid: Microsoft.Quantum.Math.SignI
+- summary: Zwraca liczbę całkowitą, która wskazuje znak liczby.
+  uid: Microsoft.Quantum.Math.SignL
+- summary: Zwraca sinus określonego kąta.
+  uid: Microsoft.Quantum.Math.Sin
+- summary: Zwraca sinus hiperboliczny odpowiadający podanemu kątowi.
+  uid: Microsoft.Quantum.Math.Sinh
+- summary: Zwraca pierwiastek kwadratowy z podanej liczby.
+  uid: Microsoft.Quantum.Math.Sqrt
+- summary: Zwraca kwadratową 2-normatywną wartość wektora.
+  uid: Microsoft.Quantum.Math.SquaredNorm
+- summary: Zwraca tangens podanego kąta.
+  uid: Microsoft.Quantum.Math.Tan
+- summary: Zwraca tangens hiperboliczny odpowiadający podanemu kątowi.
+  uid: Microsoft.Quantum.Math.Tanh
+- summary: Zwraca iloczyn dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.TimesC
+- summary: Zwraca iloczyn dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.TimesCP
+- summary: Zwraca iloczyn dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.TimesD
+- summary: Zwraca iloczyn dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.TimesI
+- summary: Zwraca iloczyn dwóch danych wejściowych.
+  uid: Microsoft.Quantum.Math.TimesL
+- summary: Oblicza integralną część liczby.
+  uid: Microsoft.Quantum.Math.Truncate
+- summary: Wewnętrzne wywołanie cykliczne do obliczania GCD z powiązaniem
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentI
+- summary: Wewnętrzne wywołanie cykliczne do obliczania GCD z powiązaniem
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentL
+- summary: Wewnętrzne wywołanie cykliczne do obliczania GCD.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorI
+- summary: Wewnętrzne wywołanie cykliczne do obliczania GCD.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorL
+name: Microsoft.Quantum.Math
+newtypes:
+- summary: Reprezentuje liczbę racjonalną formularza `p/q` . Liczba całkowita `p` jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
+  uid: Microsoft.Quantum.Math.BigFraction
+- summary: Reprezentuje liczbę zespoloną przez jej składniki rzeczywiste i urojone. Pierwszym elementem krotki jest składnik prawdziwy, drugi składnik urojony.
+  uid: Microsoft.Quantum.Math.Complex
+- summary: >-
+    Reprezentuje liczbę zespoloną w postaci biegunowej.
+
+    Reprezentacja biegunowa liczby zespolonej jest $c = r e ^ {i t} $.
+  uid: Microsoft.Quantum.Math.ComplexPolar
+- summary: Reprezentuje liczbę racjonalną formularza `p/q` . Liczba całkowita `p` jest pierwszym elementem krotki i `q` jest drugim elementem krotki.
+  uid: Microsoft.Quantum.Math.Fraction
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > RandomInt jest przestarzała. Użyj <xref:Microsoft.Quantum.Random.DrawRandomInt> zamiast tego.
+
+  uid: Microsoft.Quantum.Math.RandomInt
+- summary: >+
+    > [!WARNING]
+
+    > RandomIntPow2 jest przestarzała. Użyj <xref:Microsoft.Quantum.Random.DrawRandomInt> zamiast tego.
+
+  uid: Microsoft.Quantum.Math.RandomIntPow2
+- summary: >+
+    > [!WARNING]
+
+    > RandomReal jest przestarzała. Użyj <xref:Microsoft.Quantum.Random.DrawRandomDouble> zamiast tego.
+
+  uid: Microsoft.Quantum.Math.RandomReal
+- summary: >+
+    > [!WARNING]
+
+    > RandomSingleQubitPauli jest przestarzała. Użyj <xref:Microsoft.Quantum.Random.DrawRandomPauli> zamiast tego.
+
+  uid: Microsoft.Quantum.Math.RandomSingleQubitPauli
+summary: Ta przestrzeń nazw zawiera klasyczne funkcje matematyczne i typy danych.
+uid: Microsoft.Quantum.Math
+metadata:
+  ms.openlocfilehash: 13ccb80ce78e7d9d6341d7b228e39b65026ab090
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92723398"
