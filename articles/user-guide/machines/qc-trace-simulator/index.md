@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771299"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690831"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Symulator śledzenia kwantowego zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 Ponieważ symulator śledzenia kwantowego nie symuluje rzeczywistego stanu kwantowego, nie może on obliczyć prawdopodobieństwa wyników pomiaru w ramach operacji. 
 
-W związku z tym jeśli operacja obejmuje pomiary, należy jawnie podać te prawdopodobieństwa przy użyciu operacji <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> z przestrzeni nazw <xref:microsoft.quantum.diagnostics>. Zostało to przedstawione w poniższym przykładzie:
+W związku z tym jeśli operacja obejmuje pomiary, należy jawnie podać te prawdopodobieństwa przy użyciu operacji <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> z przestrzeni nazw <xref:Microsoft.Quantum.Diagnostics>. Zostało to przedstawione w poniższym przykładzie:
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Gdy symulator śledzenia kwantowego napotka element `AssertMeasurementProbability`, zarejestruje wynik `Zero` dla wartości `PauliZ` w elementach `source` i `q` z prawdopodobieństwem **0.5**. Po uruchomieniu później operacji `M` symulator odnajdzie zarejestrowane wartości prawdopodobieństwa wyniku, a operacja `M` zwróci wartość `Zero` lub `One` z prawdopodobieństwem **0.5**. Jeśli ten sam kod zostanie wykonany w symulatorze, który śledzi stan kwantowy, taki symulator sprawdzi, czy prawdopodobieństwa podane w operacji `AssertMeasurementProbability` są poprawne.
+Gdy symulator śledzenia kwantowego napotka element `AssertMeasurementProbability`, zarejestruje wynik `Zero` dla wartości `PauliZ` w elementach `source` i `q` z prawdopodobieństwem **0.5** . Po uruchomieniu później operacji `M` symulator odnajdzie zarejestrowane wartości prawdopodobieństwa wyniku, a operacja `M` zwróci wartość `Zero` lub `One` z prawdopodobieństwem **0.5** . Jeśli ten sam kod zostanie wykonany w symulatorze, który śledzi stan kwantowy, taki symulator sprawdzi, czy prawdopodobieństwa podane w operacji `AssertMeasurementProbability` są poprawne.
 
 Należy pamiętać, że jeśli istnieje co najmniej jedna operacja pomiaru nieopisana przy użyciu elementu `AssertMeasurementProbability`, symulator zgłosi wyjątek [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception).
 
