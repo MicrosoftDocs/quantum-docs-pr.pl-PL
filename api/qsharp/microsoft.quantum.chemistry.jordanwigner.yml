@@ -1,0 +1,162 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do a `GeneratorSystem` wyrażone w warunkach Pauli `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerBlockEncodingGeneratorSystem
+- summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorEvolutionSet
+- summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do, `GeneratorSystem` wyrażone w zakresie `GeneratorIndex` Konwencji zdefiniowanej w tym pliku.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorGeneratorSystem
+- summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionEvolutionSet
+- summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
+- summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do, `GeneratorSystem` wyrażone w zakresie `GeneratorIndex` Konwencji zdefiniowanej w tym pliku.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerGeneratorSystem
+- summary: Konwertuje hamiltonian opisane przez `JWOptimizedHTerms` do a `GeneratorSystem` wyrażone w warunkach Pauli `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBlockEncodingGeneratorSystem
+- summary: Zwraca Qubitizationą optymalizację T-Count i parametry niezbędne do jej uruchomienia.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle
+- summary: Zwraca operację Qubitization i parametry niezbędne do jej uruchomienia.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle
+- summary: Zwraca operację kroku Trotter i parametry niezbędne do jej uruchomienia.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle
+- summary: Oblicza składnik Z programu Jordanii — ciąg Wigner między indeksami Fermion w operatorze fermionic z parzystą liczbą operatorów tworzenia i Annihilation.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliZString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._GetOptimizedBETermIndexCoeff_
+- summary: Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorFunction
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorIndex
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorSystemImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorPQRSTermSigns
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncoding_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedQuantumWalkByQubitization_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEGeneratorSystemCoeff_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedQubitizationOracleSeperatedRegisters_
+- summary: Konwertuje element GeneratorIndex opisujący termin PQ na wyrażenie "GeneratorIndex []" w postaci Paul
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliGenIdx_
+- summary: Konwertuje element GeneratorIndex opisujący termin PQ na wyrażenie "GeneratorIndex []" w postaci Paul
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliMajIdx_
+- summary: Konwertuje GeneratorIndex opisujący termin PQ lub PQQR na wyrażenie "GeneratorIndex []" w postaci Paul
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliGenIdx_
+- summary: Konwertuje GeneratorIndex opisujący termin PQ lub PQQR na wyrażenie "GeneratorIndex []" w postaci Paul
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliMajIdx_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._QubitizationOracleSeperatedRegisters
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases_
+- summary: Konwertuje element GeneratorIndex opisujący termin PQRS na wyrażenie "GeneratorIndex []" w postaci Paul
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliGenIdx_
+- summary: Konwertuje element GeneratorIndex opisujący termin PQRS na wyrażenie "GeneratorIndex []" w postaci Paul
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliMajIdx_
+- summary: Konwertuje GeneratorIndex opisujący termin Z na wyrażenie "GeneratorIndex []" w postaci Pauld.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliGenIdx
+- summary: Konwertuje GeneratorIndex opisujący termin Z na wyrażenie "GeneratorIndex []" w postaci Pauld.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliMajIdx_
+- summary: Konwertuje GeneratorIndex opisujący termin ZZ na wyrażenie "GeneratorIndex []" w postaci Pauld.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliGenIdx
+- summary: Konwertuje GeneratorIndex opisujący termin ZZ na wyrażenie "GeneratorIndex []" w postaci Pauld.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliMajIdx_
+name: Microsoft.Quantum.Chemistry.JordanWigner
+newtypes:
+- summary: 'Format danych przesłanych od języka C# do Q #, aby reprezentować warunki hamiltonian. Znaczenie reprezentowanego danych jest określane przez algorytm, który go otrzymuje.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms
+- summary: 'Format danych przesłanych od języka C# do Q #, aby reprezentować wszystkie informacje dotyczące symulacji hamiltonian. Znaczenie reprezentowanego danych jest określane przez algorytm, który go otrzymuje.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData
+- summary: 'Format danych przesłanych od języka C# do Q # w celu reprezentowania przygotowania stanu początkowego znaczenie danych reprezentowane przez algorytm, który go otrzymuje.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState
+- summary: Funkcja zwracająca `OptimizedBETermIndex` dane dla terminu `n` podanego przez liczbę całkowitą `n` wraz z liczbą warunków w pierwszej `Int` i łączną wartość bezwzględną wszystkich współczynników warunku w `Double` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
+- summary: Dane warunkowe w zoptymalizowanym algorytmie kodowania bloków.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex
+operations:
+- summary: >-
+    Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
+
+    Zobacz [dynamiczne modelowanie generatora](../libraries/data-structures#dynamical-generator-modeling) , aby uzyskać więcej szczegółów.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionImpl
+- summary: Jednostkowa $U $, która stosuje ciąg Pauli w $ (X ^ {z + 1} z \_ PR ^ {z} \_ p) z \_ {p-1}... Z_0 $ qubits $0.. p $ Conditional na indeksie $z \In \{ 0, 1 \} $ i $p $. Oznacza to, że $ $ \begin{align} U\ket {z} \ KET {p} \ KET {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} z \_ PR ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEXY
+- summary: Proste przygotowanie stanu wersji próbnej przez zajmowanie orbitals
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: Rozrzedzony proces wielokonfiguracyjnego stanu wersji próbnej przez dodanie excitations do wstępnego stanu wersji próbnej.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSparseMultiConfigurationalState
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareTrialState
+- summary: Połączony z jednostką — przygotowanie stanu wersji próbnej dla klastra
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareUnitaryCoupledClusterState
+- summary: Jednostkowa $U $, która stosuje bramę programu Pauli $Z $ na qubits $p $ conditiond w stanie indeksu $ \ket{p} $. Oznacza to, $ $ \begin{align} U\ket {p} \ KET {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.SelectZ
+- summary: Stosuje ewolucję czasową przez PQRS termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWigner0123Term_
+- summary: Stosuje ewolucję czasową przez operator klastra PQRS termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQRSTerm
+- summary: Stosuje ewolucję czasową przez operator klastra PQ termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQTerm
+- summary: Stosuje ewolucję czasową przez PQ termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQTerm_
+- summary: Stosuje ewolucję czasową przez PQ lub PQQR termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQandPQQRTerm_
+- summary: Stosuje ewolucję czasową z terminem Z opisanym przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZTerm_
+- summary: Stosuje ewolucję czasową przez ZZ termin opisany przez `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZZTerm_
+- summary: >-
+    Reprezentuje Generator dynamiczny jako zestaw bram, które są symulowane i rozszerzanie w JordanWigner.
+
+    Zobacz [dynamiczne modelowanie generatora](../libraries/data-structures#dynamical-generator-modeling) , aby uzyskać więcej szczegółów.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._MergeTwoRegisters_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner
+metadata:
+  ms.openlocfilehash: 909133bb6f75aa814c17ac1e54667c3599e47bf6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pl-PL
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714084"
