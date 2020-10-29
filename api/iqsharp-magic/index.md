@@ -1,22 +1,23 @@
 ---
 title: Polecenia magic IQ#
+description: Wyświetla listę poleceń magic dostępnych w jądrze Jupyter IQ#.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
-ms.openlocfilehash: 934ab18b667797d09d2c8188f727e64b0017e1d5
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91464678"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691136"
 ---
 # <a name="iq-magic-commands"></a>Polecenia magic IQ#
 | Polecenia magic | Podsumowanie |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Nawiązuje połączenie z obszarem roboczym usługi Azure Quantum lub wyświetla bieżący stan połączenia. |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Wykonuje zadanie w obszarze roboczym usługi Azure Quantum. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Przesyła zadanie do obszaru roboczego usługi Azure Quantum i czeka na ukończenie. |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Wyświetla listę zadań w bieżącym obszarze roboczym usługi Azure Quantum. |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Wyświetla wyniki zadania w bieżącym obszarze roboczym usługi Azure Quantum. |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Wyświetla stan zadania w bieżącym obszarze roboczym usługi Azure Quantum. |
@@ -29,6 +30,7 @@ ms.locfileid: "91464678"
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Ładuje hamiltonian fermionów dla problemu ze strukturą elektroniczną. Problem jest ładowany z pliku lub przekazywany jako argument. |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Ładuje problem struktury elektronicznej Broombridge i zwraca wybrany stan danych wejściowych. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Umożliwia ustawianie lub badanie opcji konfiguracji. |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | Kroki podejmowane przy wykonywaniu danej operacji języka Q# lub funkcji. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Uruchamia daną funkcję lub operację na maszynie docelowej ResourcesEstimator. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Wykonuje pojedynczy test. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Zwraca listę wszystkich aktualnie dostępnych poleceń magic. |
