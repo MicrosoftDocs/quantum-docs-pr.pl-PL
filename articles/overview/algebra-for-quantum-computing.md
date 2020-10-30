@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835132"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692255"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Algebra liniowa na potrzeby obliczeń kwantowych
 
 Algebra liniowa jest językiem obliczeń kwantowych. Mimo że nie trzeba jej znać w celu implementowania lub pisania programów kwantowych, jest powszechnie używana do opisywania stanów kubitów, operacji kwantowych oraz do przewidywania działania komputera kwantowego w odpowiedzi na sekwencję instrukcji.
 
-Podobnie jak znajomość [podstawowych pojęć dotyczących fizyki kwantowej](xref:microsoft.quantum.overview.understanding) może pomóc zrozumieć obliczenia kwantowe, znajomość podstawowej algebry liniowej może pomóc zrozumieć, jak działają algorytmy kwantowe. Warto zapoznać się przynajmniej z **wektorami** i **mnożeniem macierzy**. Jeśli chcesz odświeżyć wiedzę o tych pojęciach związanych z algebrą, oto kilka samouczków, które obejmują podstawowe informacje:
+Podobnie jak znajomość [podstawowych pojęć dotyczących fizyki kwantowej](xref:microsoft.quantum.overview.understanding) może pomóc zrozumieć obliczenia kwantowe, znajomość podstawowej algebry liniowej może pomóc zrozumieć, jak działają algorytmy kwantowe. Warto zapoznać się przynajmniej z **wektorami** i **mnożeniem macierzy** . Jeśli chcesz odświeżyć wiedzę o tych pojęciach związanych z algebrą, oto kilka samouczków, które obejmują podstawowe informacje:
 
 - [Samouczek w notesie Jupyter dotyczący algebry liniowej](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [Samouczek w notesie Jupyter dotyczący arytmetyki zespolonej](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -41,7 +41,7 @@ W temacie [Komputery kwantowe i symulatory kwantowe](xref:microsoft.quantum.over
 Poniżej przedstawiono dwie typowe operacje kwantowe reprezentowane za pomocą mnożenia macierzy.
 
 
-[Operacja `X`](xref:microsoft.quantum.intrinsic.x) jest reprezentowana przez macierz Pauliego $X$,
+[Operacja `X`](xref:Microsoft.Quantum.Intrinsic.X) jest reprezentowana przez macierz Pauliego $X$,
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ i służy do przerzucenia stanu kubitu z 0 do 1 (lub odwrotnie), na przykład
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-[Operacja „H”](xref:microsoft.quantum.intrinsic.h) jest reprezentowana przez transformację Hadamarda $H$,
+[Operacja „H”](xref:Microsoft.Quantum.Intrinsic.H) jest reprezentowana przez transformację Hadamarda $H$,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -57,13 +57,13 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}.$$
 
-Macierz, która reprezentuje operację kwantową ma jedno wymaganie — musi być macierzą **unitarną**. Macierz jest unitarna, jeśli **odwrócenie** macierzy jest równe **transponowaniu sprzężonemu** macierzy.
+Macierz, która reprezentuje operację kwantową ma jedno wymaganie — musi być macierzą **unitarną** . Macierz jest unitarna, jeśli **odwrócenie** macierzy jest równe **transponowaniu sprzężonemu** macierzy.
 
 ## <a name="representing-two-qubit-states"></a>Reprezentacja stanów dwóch kubitów
 
 W powyższych przykładach stan jednego kubitu został opisany przy użyciu jednej kolumny matrix $\begin{bmatrix} a \\\\ b \end{bmatrix}$ i zastosowanie do niej operacji opisano przez pomnożenie dwóch macierzy. Jednak komputery kwantowe używają więcej niż jednego kubitu, więc w jaki sposób można opisać połączony stan dwóch kubitów? 
 
-Należy pamiętać, że każdy kubit jest przestrzenią wektorową, więc nie można ich tylko przemnożyć. Zamiast tego należy użyć **iloczynu tensorowego**, który jest operacją powiązaną tworzącą nową przestrzeń wektorową z pojedynczych obszarów wektorowych i jest reprezentowany przez symbol $\otimes$. Na przykład jest obliczany iloczyn tensorowy stanów dwóch kubitów $\begin{bmatrix} a \\\\ b \end{bmatrix}$ i $\begin{bmatrix} c \\\\ d \end{bmatrix}$
+Należy pamiętać, że każdy kubit jest przestrzenią wektorową, więc nie można ich tylko przemnożyć. Zamiast tego należy użyć **iloczynu tensorowego** , który jest operacją powiązaną tworzącą nową przestrzeń wektorową z pojedynczych obszarów wektorowych i jest reprezentowany przez symbol $\otimes$. Na przykład jest obliczany iloczyn tensorowy stanów dwóch kubitów $\begin{bmatrix} a \\\\ b \end{bmatrix}$ i $\begin{bmatrix} c \\\\ d \end{bmatrix}$
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
