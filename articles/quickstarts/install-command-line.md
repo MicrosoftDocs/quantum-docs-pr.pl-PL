@@ -1,5 +1,5 @@
 ---
-title: Tworzenie przy użyciu aplikacji w języku Q#
+title: Tworzenie aplikacji w języku Q# w środowisku IDE
 description: Dowiedz się, jak utworzyć aplikację Q# uruchamianą z wiersza polecenia.
 author: bradben
 ms.author: v-benbra
@@ -10,53 +10,52 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
+ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834418"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93376426"
 ---
-# <a name="develop-with-no-locq-applications"></a>Tworzenie przy użyciu aplikacji w języku Q#
+# <a name="develop-with-no-locq-applications-in-an-ide"></a>Tworzenie aplikacji w języku Q# w środowisku IDE
 
-Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku.
+Programy w języku Q# można uruchamiać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python. Aplikacje w języku Q# możesz opracowywać w programie Visual Studio Code (VS Code), programie Visual Studio, usłudze Visual Studio Codespaces lub dowolnym edytorze / środowisku IDE, a następnie uruchamiać je z poziomu konsoli .NET. 
 
-Programy w języku Q# można uruchamiać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.
-
-## <a name="prerequisites"></a>Wymagania wstępne
+## <a name="prerequisites-for-all-environments"></a>Wymagania wstępne dla wszystkich środowisk
 
 - [Zestaw .NET Core SDK 3.1 lub nowszy](https://www.microsoft.com/net/download)
 
 ## <a name="installation"></a>Instalacja
 
-Chociaż aplikacje w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku Q#. W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces. Programowanie w tych środowiskach obejmuje bogate funkcje rozszerzenia QDK, takie jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych. 
+Chociaż aplikacje w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku Q#. W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces. Programowanie w tych środowiskach umożliwia wykorzystanie bogatych funkcji rozszerzenia QDK, takich jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych. 
 
-Aby skonfigurować program VS Code:
+### <a name="to-configure-for-vs-code"></a>Aby skonfigurować na potrzeby programu VS Code:
 
 1. Pobierz i zainstaluj program [VS Code](https://code.visualstudio.com/download) (dostępny dla systemów Windows, Linux i Mac).
 2. Zainstaluj [zestaw Microsoft QDK dla programu VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-Aby skonfigurować program Visual Studio:
+### <a name="to-configure-for-visual-studio"></a>Aby skonfigurować na potrzeby programu Visual Studio:
 
 1. Pobierz i zainstaluj program [Visual Studio](https://visualstudio.microsoft.com/downloads/) w wersji 16.3 lub nowszej z włączonym pakietem roboczym Tworzenie aplikacji dla wielu platform w środowisku .NET Core.
 2. Pobierz i zainstaluj [zestaw Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
-Aby skonfigurować program Visual Studio Codespaces:
+### <a name="to-configure-for-another-environment"></a>Aby skonfigurować na potrzeby innego środowiska: 
 
-1. Utwórz [konto platformy Azure](https://azure.microsoft.com/free/).
-2. Utwórz środowisko programu Codespaces. Postępuj zgodnie z [przewodnikiem Szybki start](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). Podczas tworzenia środowiska Codespace zalecamy wprowadzenie wartości `microsoft/Quantum` w polu „Git Repository” (Repozytorium Git) w celu załadowania ustawień specyficznych dla zestawu QDK.
-3. Teraz możesz uruchomić nowe środowisko i rozpocząć programowanie w przeglądarce za pomocą [środowiska IDE programu VS Codespaces w chmurze](https://online.visualstudio.com/environments). Alternatywnie można korzystać z lokalnej instalacji programu VS Code i używać Codespaces jako [środowiska zdalnego](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
-
-
-Aby zainstalować zestaw QDK dla innego środowiska, w wierszu polecenia wprowadź następujące polecenie:
+1. Wprowadź następujące polecenie w wierszu polecenia
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
+### <a name="to-configure-for-visual-studio-codespaces"></a>Aby skonfigurować na potrzeby usługi Visual Studio Codespaces:
+
+1. Utwórz [konto platformy Azure](https://azure.microsoft.com/free/).
+2. Utwórz środowisko programu Codespaces. Postępuj zgodnie z [przewodnikiem Szybki start](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). Podczas tworzenia środowiska Codespace zalecamy wprowadzenie wartości `microsoft/Quantum` w polu „Git Repository” (Repozytorium Git) w celu załadowania ustawień specyficznych dla zestawu QDK.
+3. Teraz możesz uruchomić nowe środowisko i rozpocząć programowanie w przeglądarce za pomocą [środowiska IDE programu VS Codespaces w chmurze](https://online.visualstudio.com/environments). Alternatywnie można korzystać z lokalnej instalacji programu VS Code i używać Codespaces jako [środowiska zdalnego](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
+
 ## <a name="develop-with-no-locq"></a>Programowanie przy użyciu języka Q#
 
-Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku.
+Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku programistycznemu.
 
 ### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
 
@@ -102,12 +101,6 @@ Aby uruchomić aplikację:
 ### <a name="other-editors-with-the-command-prompt"></a>[Inne edytory przy użyciu wiersza polecenia](#tab/tabid-cmdline)
 
 Zweryfikuj instalację, tworząc aplikację `Hello World` w języku Q#.
-
-1. Zainstaluj szablony projektów.
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
 
 1. Tworzenie nowej aplikacji:
 
