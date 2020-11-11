@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691681"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448348"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Informacje o wersji zestawu Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Ten artykuł zawiera informacje dotyczące poszczególnych wersji zestawu Quantu
 Instrukcje instalacji znajdują się w [przewodniku instalacji](xref:microsoft.quantum.install).
 
 Instrukcje dotyczące aktualizacji znajdują się w [przewodniku aktualizacji](xref:microsoft.quantum.update).
+
+## <a name="version-01320111004"></a>0.13.20111004 wersja
+
+*Data wydania: 10 listopada, 2020*
+
+Ta wersja wyłącza funkcje IntelliSense dla Q# plików w programie Visual Studio i Visual Studio Code, gdy plik projektu nie istnieje. W ten sposób można rozwiązać problem polegający na tym, że funkcje IntelliSense mogą przestać działać po dodaniu nowego Q# pliku do projektu (zobacz [qsharp-Compiler # 720](https://github.com/microsoft/qsharp-compiler/issues/720)).
 
 ## <a name="version-01320102604"></a>0.13.20102604 wersja
 
@@ -526,7 +532,7 @@ W tej aktualizacji znacząco zwiększono wydajność symulacji dużych i małych
 W tej aktualizacji dodano nowe funkcje debugowania:
 * Dodano dwie nowe operacje, @"microsoft.quantum.extensions.diagnostics.dumpmachine" i @"microsoft.quantum.extensions.diagnostics.dumpregister", których danymi wyjściowymi są informacje o funkcji falowej docelowego komputera kwantowego w danym momencie.  
 * W programie Visual Studio prawdopodobieństwo mierzenia wartości $\ket{1}$ na pojedynczym kubicie jest teraz automatycznie wyświetlane w oknie debugowania dla maszyny docelowej QuantumSimulator.
-* W programie Visual Studio ulepszono wyświetlanie właściwości zmiennych w oknach debugowania **Automatyczne** i **Elementy lokalne** . 
+* W programie Visual Studio ulepszono wyświetlanie właściwości zmiennych w oknach debugowania **Automatyczne** i **Elementy lokalne**. 
 
 Dowiedz się więcej na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging).
 
