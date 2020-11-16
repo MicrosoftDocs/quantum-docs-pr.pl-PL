@@ -1,6 +1,6 @@
 ---
-title: 'Tworzenie aplikacji w języku :::no-loc(Q#)::: w środowisku IDE'
-description: 'Dowiedz się, jak utworzyć aplikację :::no-loc(Q#)::: uruchamianą z wiersza polecenia.'
+title: 'Tworzenie aplikacji w języku Q# w środowisku IDE'
+description: 'Dowiedz się, jak utworzyć aplikację Q# uruchamianą z wiersza polecenia.'
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
@@ -8,8 +8,8 @@ ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
 ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
 ms.translationtype: HT
@@ -17,9 +17,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93376426"
 ---
-# <a name="develop-with-no-locq-applications-in-an-ide"></a><span data-ttu-id="7a4a9-103">Tworzenie aplikacji w języku :::no-loc(Q#)::: w środowisku IDE</span><span class="sxs-lookup"><span data-stu-id="7a4a9-103">Develop with :::no-loc(Q#)::: applications in an IDE</span></span>
+# <a name="develop-with-no-locq-applications-in-an-ide"></a><span data-ttu-id="7a4a9-103">Tworzenie aplikacji w języku Q# w środowisku IDE</span><span class="sxs-lookup"><span data-stu-id="7a4a9-103">Develop with Q# applications in an IDE</span></span>
 
-<span data-ttu-id="7a4a9-104">Programy w języku :::no-loc(Q#)::: można uruchamiać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-104">:::no-loc(Q#)::: programs can run on their own, without a driver in a host language like C#, F#, or Python.</span></span> <span data-ttu-id="7a4a9-105">Aplikacje w języku :::no-loc(Q#)::: możesz opracowywać w programie Visual Studio Code (VS Code), programie Visual Studio, usłudze Visual Studio Codespaces lub dowolnym edytorze / środowisku IDE, a następnie uruchamiać je z poziomu konsoli .NET.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-105">You can develop :::no-loc(Q#)::: applications in Visual Studio Code (VS Code), Visual Studio, Visual Studio Codespaces, or with any editor/IDE and run applications from the .NET console.</span></span> 
+<span data-ttu-id="7a4a9-104">Programy w języku Q# można uruchamiać samodzielnie, bez sterownika w języku hosta, takim jak C#, F# czy Python.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-104">Q# programs can run on their own, without a driver in a host language like C#, F#, or Python.</span></span> <span data-ttu-id="7a4a9-105">Aplikacje w języku Q# możesz opracowywać w programie Visual Studio Code (VS Code), programie Visual Studio, usłudze Visual Studio Codespaces lub dowolnym edytorze / środowisku IDE, a następnie uruchamiać je z poziomu konsoli .NET.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-105">You can develop Q# applications in Visual Studio Code (VS Code), Visual Studio, Visual Studio Codespaces, or with any editor/IDE and run applications from the .NET console.</span></span> 
 
 ## <a name="prerequisites-for-all-environments"></a><span data-ttu-id="7a4a9-106">Wymagania wstępne dla wszystkich środowisk</span><span class="sxs-lookup"><span data-stu-id="7a4a9-106">Prerequisites for all environments</span></span>
 
@@ -27,7 +27,7 @@ ms.locfileid: "93376426"
 
 ## <a name="installation"></a><span data-ttu-id="7a4a9-108">Instalacja</span><span class="sxs-lookup"><span data-stu-id="7a4a9-108">Installation</span></span>
 
-<span data-ttu-id="7a4a9-109">Chociaż aplikacje w języku :::no-loc(Q#)::: można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku :::no-loc(Q#):::.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-109">While you can build :::no-loc(Q#)::: applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your :::no-loc(Q#)::: applications locally.</span></span> <span data-ttu-id="7a4a9-110">W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-110">For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces.</span></span> <span data-ttu-id="7a4a9-111">Programowanie w tych środowiskach umożliwia wykorzystanie bogatych funkcji rozszerzenia QDK, takich jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-111">Developing in these environments leverages the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more.</span></span> 
+<span data-ttu-id="7a4a9-109">Chociaż aplikacje w języku Q# można tworzyć w dowolnym środowisku IDE, zalecamy korzystanie z programu Visual Studio Code (VS Code) lub Visual Studio jako środowiska IDE do lokalnego programowania aplikacji w języku Q#.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-109">While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally.</span></span> <span data-ttu-id="7a4a9-110">W przypadku programowania w chmurze za pośrednictwem przeglądarki internetowej zalecamy używanie programu Visual Studio Codespaces.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-110">For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces.</span></span> <span data-ttu-id="7a4a9-111">Programowanie w tych środowiskach umożliwia wykorzystanie bogatych funkcji rozszerzenia QDK, takich jak ostrzeżenia, wyróżnianie składni, szablony projektów i wiele innych.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-111">Developing in these environments leverages the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more.</span></span> 
 
 ### <a name="to-configure-for-vs-code"></a><span data-ttu-id="7a4a9-112">Aby skonfigurować na potrzeby programu VS Code:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-112">To configure for VS Code:</span></span>
 
@@ -53,7 +53,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 2. <span data-ttu-id="7a4a9-122">Utwórz środowisko programu Codespaces.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-122">Create a Codespaces environment.</span></span> <span data-ttu-id="7a4a9-123">Postępuj zgodnie z [przewodnikiem Szybki start](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-123">Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser).</span></span> <span data-ttu-id="7a4a9-124">Podczas tworzenia środowiska Codespace zalecamy wprowadzenie wartości `microsoft/Quantum` w polu „Git Repository” (Repozytorium Git) w celu załadowania ustawień specyficznych dla zestawu QDK.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-124">When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.</span></span>
 3. <span data-ttu-id="7a4a9-125">Teraz możesz uruchomić nowe środowisko i rozpocząć programowanie w przeglądarce za pomocą [środowiska IDE programu VS Codespaces w chmurze](https://online.visualstudio.com/environments).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-125">You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments).</span></span> <span data-ttu-id="7a4a9-126">Alternatywnie można korzystać z lokalnej instalacji programu VS Code i używać Codespaces jako [środowiska zdalnego](https://docs.microsoft.com/visualstudio/online/how-to/vscode).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-126">Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).</span></span>
 
-## <a name="develop-with-no-locq"></a><span data-ttu-id="7a4a9-127">Programowanie przy użyciu języka :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="7a4a9-127">Develop with :::no-loc(Q#):::</span></span>
+## <a name="develop-with-no-locq"></a><span data-ttu-id="7a4a9-127">Programowanie przy użyciu języka Q#</span><span class="sxs-lookup"><span data-stu-id="7a4a9-127">Develop with Q#</span></span>
 
 <span data-ttu-id="7a4a9-128">Postępuj zgodnie z instrukcjami na karcie odpowiadającej Twojemu środowisku programistycznemu.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-128">Follow the instructions on the tab corresponding to your development environment.</span></span>
 
@@ -61,12 +61,12 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 <span data-ttu-id="7a4a9-130">Aby utworzyć nowy projekt:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-130">To create a new project:</span></span>
 
-1. <span data-ttu-id="7a4a9-131">Kliknij pozycję **View** -> **Command Palette** (Widok -> Paleta poleceń), a następnie wybierz polecenie **:::no-loc(Q#):::: Create New Project** (Q#: utwórz nowy projekt).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-131">Click **View** -> **Command Palette** and select **:::no-loc(Q#):::: Create New Project**.</span></span>
+1. <span data-ttu-id="7a4a9-131">Kliknij pozycję **View** -> **Command Palette** (Widok -> Paleta poleceń), a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-131">Click **View** -> **Command Palette** and select **Q#: Create New Project**.</span></span>
 2. <span data-ttu-id="7a4a9-132">Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-132">Click **Standalone console application**.</span></span>
 3. <span data-ttu-id="7a4a9-133">Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).</span><span class="sxs-lookup"><span data-stu-id="7a4a9-133">Navigate to the location to save the project and click **Create Project**.</span></span>
 4. <span data-ttu-id="7a4a9-134">Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-134">When the project is successfully created, click **Open new project...** in the lower right.</span></span>
 
-<span data-ttu-id="7a4a9-135">Zapoznaj się z projektem.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-135">Inspect the project.</span></span> <span data-ttu-id="7a4a9-136">Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka :::no-loc(Q#):::, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-136">You should see a source file named `Program.qs`, which is a :::no-loc(Q#)::: program that defines a simple operation to print a message to the console.</span></span>
+<span data-ttu-id="7a4a9-135">Zapoznaj się z projektem.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-135">Inspect the project.</span></span> <span data-ttu-id="7a4a9-136">Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-136">You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
 <span data-ttu-id="7a4a9-137">Aby uruchomić aplikację:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-137">To run the application:</span></span>
 
@@ -75,20 +75,20 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 3. <span data-ttu-id="7a4a9-140">W oknie danych wyjściowych powinien zostać wyświetlony następujący tekst: `Hello quantum world!`</span><span class="sxs-lookup"><span data-stu-id="7a4a9-140">You should see the following text in the output window `Hello quantum world!`</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7a4a9-141">Obszary robocze z wieloma folderami głównymi nie są obecnie obsługiwane przez rozszerzenie programu VS Code dla języka :::no-loc(Q#):::.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-141">Workspaces with multiple root folders are not currently supported by the VS Code :::no-loc(Q#)::: extension.</span></span> <span data-ttu-id="7a4a9-142">Jeśli masz wiele projektów w jednym obszarze roboczym programu VS Code, wszystkie projekty muszą znajdować się w tym samym folderze głównym.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-142">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
+> <span data-ttu-id="7a4a9-141">Obszary robocze z wieloma folderami głównymi nie są obecnie obsługiwane przez rozszerzenie programu VS Code dla języka Q#.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-141">Workspaces with multiple root folders are not currently supported by the VS Code Q# extension.</span></span> <span data-ttu-id="7a4a9-142">Jeśli masz wiele projektów w jednym obszarze roboczym programu VS Code, wszystkie projekty muszą znajdować się w tym samym folderze głównym.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-142">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
 
 ### <a name="visual-studio"></a>[<span data-ttu-id="7a4a9-143">Program Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7a4a9-143">Visual Studio</span></span>](#tab/tabid-vs)
 
-<span data-ttu-id="7a4a9-144">Zweryfikuj instalację programu Visual Studio, tworząc aplikację :::no-loc(Q#)::: w języku `Hello World`.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-144">Verify your Visual Studio installation by creating a :::no-loc(Q#)::: `Hello World` application.</span></span>
+<span data-ttu-id="7a4a9-144">Zweryfikuj instalację programu Visual Studio, tworząc aplikację Q# w języku `Hello World`.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-144">Verify your Visual Studio installation by creating a Q# `Hello World` application.</span></span>
 
-<span data-ttu-id="7a4a9-145">Aby utworzyć nową aplikację w języku :::no-loc(Q#)::::</span><span class="sxs-lookup"><span data-stu-id="7a4a9-145">To create a new :::no-loc(Q#)::: application:</span></span>
+<span data-ttu-id="7a4a9-145">Aby utworzyć nową aplikację w języku Q#:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-145">To create a new Q# application:</span></span>
 
 1. <span data-ttu-id="7a4a9-146">Otwórz program Visual Studio, a następnie wybierz kolejno opcje **Plik** -> **Nowy** -> **Projekt**.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-146">Open Visual Studio and click **File** -> **New** -> **Project**.</span></span>
-2. <span data-ttu-id="7a4a9-147">Wpisz `:::no-loc(Q#):::` w polu wyszukiwania, wybierz pozycję **Aplikacja :::no-loc(Q#):::** , a następnie kliknij przycisk **Dalej**.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-147">Type `:::no-loc(Q#):::` in the search box, select **:::no-loc(Q#)::: Application** and click **Next**.</span></span>
+2. <span data-ttu-id="7a4a9-147">Wpisz `Q#` w polu wyszukiwania, wybierz pozycję **Aplikacja Q#** , a następnie kliknij przycisk **Dalej**.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-147">Type `Q#` in the search box, select **Q# Application** and click **Next**.</span></span>
 3. <span data-ttu-id="7a4a9-148">Wprowadź nazwę i lokalizację aplikacji, a następnie kliknij pozycję **Utwórz**.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-148">Enter a name and location for your application and click **Create**.</span></span>
 
 
-<span data-ttu-id="7a4a9-149">Zapoznaj się z projektem.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-149">Inspect the project.</span></span> <span data-ttu-id="7a4a9-150">Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka :::no-loc(Q#):::, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-150">You should see a source file named `Program.qs`, which is a :::no-loc(Q#)::: program that defines a simple operation to print a message to the console.</span></span>
+<span data-ttu-id="7a4a9-149">Zapoznaj się z projektem.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-149">Inspect the project.</span></span> <span data-ttu-id="7a4a9-150">Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-150">You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
 <span data-ttu-id="7a4a9-151">Aby uruchomić aplikację:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-151">To run the application:</span></span>
 
@@ -100,12 +100,12 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 ### <a name="other-editors-with-the-command-prompt"></a>[<span data-ttu-id="7a4a9-155">Inne edytory przy użyciu wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="7a4a9-155">Other editors with the command prompt</span></span>](#tab/tabid-cmdline)
 
-<span data-ttu-id="7a4a9-156">Zweryfikuj instalację, tworząc aplikację `Hello World` w języku :::no-loc(Q#):::.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-156">Verify your installation by creating a :::no-loc(Q#)::: `Hello World` application.</span></span>
+<span data-ttu-id="7a4a9-156">Zweryfikuj instalację, tworząc aplikację `Hello World` w języku Q#.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-156">Verify your installation by creating a Q# `Hello World` application.</span></span>
 
 1. <span data-ttu-id="7a4a9-157">Tworzenie nowej aplikacji:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-157">Create a new application:</span></span>
 
     ```dotnetcli
-    dotnet new console -lang :::no-loc(Q#)::: -o runSayHello
+    dotnet new console -lang Q# -o runSayHello
     ```
 
 1. <span data-ttu-id="7a4a9-158">Przechodzenie do katalogu aplikacji:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-158">Navigate to the application directory:</span></span>
@@ -114,7 +114,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
     cd runSayHello
     ```
 
-    <span data-ttu-id="7a4a9-159">Ten katalog powinien teraz zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka :::no-loc(Q#):::, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-159">This directory should now contain a file `Program.qs`, which is a :::no-loc(Q#)::: program that defines a simple operation to print a message to the console.</span></span> <span data-ttu-id="7a4a9-160">Ten szablon można zmodyfikować za pomocą edytora tekstów i zastąpić go własnymi aplikacjami kwantowymi.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-160">You can modfiy this template with a text editor and overwrite it with your own quantum applications.</span></span> 
+    <span data-ttu-id="7a4a9-159">Ten katalog powinien teraz zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-159">This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span> <span data-ttu-id="7a4a9-160">Ten szablon można zmodyfikować za pomocą edytora tekstów i zastąpić go własnymi aplikacjami kwantowymi.</span><span class="sxs-lookup"><span data-stu-id="7a4a9-160">You can modfiy this template with a text editor and overwrite it with your own quantum applications.</span></span> 
 
 1. <span data-ttu-id="7a4a9-161">Uruchom program:</span><span class="sxs-lookup"><span data-stu-id="7a4a9-161">Run the program:</span></span>
 

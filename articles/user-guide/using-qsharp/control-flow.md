@@ -1,5 +1,5 @@
 ---
-title: 'Przepływ sterowania w :::no-loc(Q#):::'
+title: 'Przepływ sterowania w Q#'
 description: Pętle, warunkowe itd.
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,8 +7,8 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,7 +16,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691088"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="c9893-103">Przepływ sterowania w :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="c9893-103">Control flow in :::no-loc(Q#):::</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="c9893-103">Przepływ sterowania w Q#</span><span class="sxs-lookup"><span data-stu-id="c9893-103">Control flow in Q#</span></span>
 
 <span data-ttu-id="c9893-104">W ramach operacji lub funkcji każda instrukcja jest uruchamiana w kolejności, podobnie jak w przypadku innych typowych języków, których to dotyczy.</span><span class="sxs-lookup"><span data-stu-id="c9893-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
 <span data-ttu-id="c9893-105">Można jednak zmodyfikować przepływ kontroli na trzy różne sposoby:</span><span class="sxs-lookup"><span data-stu-id="c9893-105">However, you can modify the flow of control in three distinct ways:</span></span>
@@ -108,12 +108,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a><span data-ttu-id="c9893-140">Pętla REPEAT-until-Success</span><span class="sxs-lookup"><span data-stu-id="c9893-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="c9893-141">:::no-loc(Q#):::Język pozwala, aby klasyczny przepływ sterowania był zależny od wyników pomiaru qubits.</span><span class="sxs-lookup"><span data-stu-id="c9893-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="c9893-141">Q#Język pozwala, aby klasyczny przepływ sterowania był zależny od wyników pomiaru qubits.</span><span class="sxs-lookup"><span data-stu-id="c9893-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
 <span data-ttu-id="c9893-142">Ta funkcja z kolei umożliwia wdrażanie zaawansowanych probabilistyczneych gadżetów, które mogą zmniejszyć koszt obliczeniowy wdrożenia unitaries.</span><span class="sxs-lookup"><span data-stu-id="c9893-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="c9893-143">Przykładami są wzorce *powtarzania do sukcesu* (jednostek ru) w programie :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="c9893-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="c9893-143">Przykładami są wzorce *powtarzania do sukcesu* (jednostek ru) w programie Q# .</span><span class="sxs-lookup"><span data-stu-id="c9893-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
 <span data-ttu-id="c9893-144">Te wzorce jednostek ru są programami probabilistyczne, które mają *przewidywane* niskie koszty w zakresie bram elementarnych; poniesiony koszt zależy od rzeczywistego przebiegu i przeplotu wielu możliwych rozgałęzień.</span><span class="sxs-lookup"><span data-stu-id="c9893-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="c9893-145">Aby ułatwić wzorce powtarzania do sukcesu (jednostek ru), :::no-loc(Q#)::: obsługuje konstrukcje</span><span class="sxs-lookup"><span data-stu-id="c9893-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
+<span data-ttu-id="c9893-145">Aby ułatwić wzorce powtarzania do sukcesu (jednostek ru), Q# obsługuje konstrukcje</span><span class="sxs-lookup"><span data-stu-id="c9893-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -151,9 +151,9 @@ until (expression);
 
 ## <a name="while-loop"></a><span data-ttu-id="c9893-157">Pętla while</span><span class="sxs-lookup"><span data-stu-id="c9893-157">While loop</span></span>
 
-<span data-ttu-id="c9893-158">Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum.</span><span class="sxs-lookup"><span data-stu-id="c9893-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="c9893-159">Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego w przypadku dedykowanego języka konstrukcja w :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="c9893-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="c9893-160">Jednak pętle, które są przerywane w zależności od stanu i długość przebiegu są nieznane w czasie kompilacji, są obsługiwane z szczególnym uwzględnieniem w środowisku uruchomieniowym Quantum.</span><span class="sxs-lookup"><span data-stu-id="c9893-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="c9893-161">Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum).</span><span class="sxs-lookup"><span data-stu-id="c9893-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="c9893-158">Wzorce REPEAT-until-Success mają bardzo connotation specyficzny dla Quantum.</span><span class="sxs-lookup"><span data-stu-id="c9893-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="c9893-159">Są one powszechnie używane w określonych klasach algorytmów Quantum — dlatego w przypadku dedykowanego języka konstrukcja w Q# .</span><span class="sxs-lookup"><span data-stu-id="c9893-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="c9893-160">Jednak pętle, które są przerywane w zależności od stanu i długość przebiegu są nieznane w czasie kompilacji, są obsługiwane z szczególnym uwzględnieniem w środowisku uruchomieniowym Quantum.</span><span class="sxs-lookup"><span data-stu-id="c9893-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="c9893-161">Jednak ich użycie w funkcjach nie działa, ponieważ pętle zawierają tylko kod, który jest uruchamiany na sprzęcie konwencjonalnym (innym niż Quantum).</span><span class="sxs-lookup"><span data-stu-id="c9893-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="c9893-162">:::no-loc(Q#):::w związku z tym obsługuje używanie pętli while tylko w obrębie funkcji.</span><span class="sxs-lookup"><span data-stu-id="c9893-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="c9893-162">Q#w związku z tym obsługuje używanie pętli while tylko w obrębie funkcji.</span><span class="sxs-lookup"><span data-stu-id="c9893-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
 <span data-ttu-id="c9893-163">`while`Instrukcja składa się z słowa kluczowego `while` , wyrażenia logicznego w nawiasach i bloku instrukcji.</span><span class="sxs-lookup"><span data-stu-id="c9893-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
 <span data-ttu-id="c9893-164">Blok instrukcji (treść pętli) działa tak długo, jak warunek zostanie obliczony `true` .</span><span class="sxs-lookup"><span data-stu-id="c9893-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="c9893-169">:::no-loc(Q#)::: obsługuje instrukcję sprzężenia implementującą poprzednią transformację.</span><span class="sxs-lookup"><span data-stu-id="c9893-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="c9893-170">Korzystając z tej instrukcji, `ApplyWith` można zaimplementować operację w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="c9893-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="c9893-169">Q# obsługuje instrukcję sprzężenia implementującą poprzednią transformację.</span><span class="sxs-lookup"><span data-stu-id="c9893-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="c9893-170">Korzystając z tej instrukcji, `ApplyWith` można zaimplementować operację w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="c9893-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -249,7 +249,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="c9893-193">Wzorzec jednostek ru dla obrotu pojedynczej qubit o osi niewymiernej</span><span class="sxs-lookup"><span data-stu-id="c9893-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="c9893-194">W typowym przypadku użycia następująca :::no-loc(Q#)::: operacja implementuje obrót wokół osi niewymiernej $ (I + 2i z)/\sqrt {5} $ w sferze Bloch.</span><span class="sxs-lookup"><span data-stu-id="c9893-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="c9893-195">Implementacja używa znanego wzorca jednostek ru:</span><span class="sxs-lookup"><span data-stu-id="c9893-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="c9893-194">W typowym przypadku użycia następująca Q# operacja implementuje obrót wokół osi niewymiernej $ (I + 2i z)/\sqrt {5} $ w sferze Bloch.</span><span class="sxs-lookup"><span data-stu-id="c9893-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="c9893-195">Implementacja używa znanego wzorca jednostek ru:</span><span class="sxs-lookup"><span data-stu-id="c9893-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -375,4 +375,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a><span data-ttu-id="c9893-210">Następne kroki</span><span class="sxs-lookup"><span data-stu-id="c9893-210">Next steps</span></span>
 
-<span data-ttu-id="c9893-211">Więcej informacji na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging) w programie :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="c9893-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="c9893-211">Więcej informacji na temat [testowania i debugowania](xref:microsoft.quantum.guide.testingdebugging) w programie Q# .</span><span class="sxs-lookup"><span data-stu-id="c9893-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>

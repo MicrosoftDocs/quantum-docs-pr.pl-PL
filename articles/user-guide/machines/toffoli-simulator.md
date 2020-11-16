@@ -7,8 +7,8 @@ ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -24,7 +24,7 @@ ms.locfileid: "92690779"
 
 ## <a name="invoking-the-toffoli-simulator"></a><span data-ttu-id="73601-109">Wywoływanie symulatora Toffoli</span><span class="sxs-lookup"><span data-stu-id="73601-109">Invoking the Toffoli simulator</span></span>
 
-<span data-ttu-id="73601-110">Symulator Toffoli można uwidocznić za pośrednictwem `ToffoliSimulator` klasy.</span><span class="sxs-lookup"><span data-stu-id="73601-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="73601-111">Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania :::no-loc(Q#)::: programu](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="73601-111">For additional details, see [Ways to run a :::no-loc(Q#)::: program](xref:microsoft.quantum.guide.host-programs).</span></span>
+<span data-ttu-id="73601-110">Symulator Toffoli można uwidocznić za pośrednictwem `ToffoliSimulator` klasy.</span><span class="sxs-lookup"><span data-stu-id="73601-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="73601-111">Aby uzyskać dodatkowe informacje, zobacz [sposoby uruchamiania Q# programu](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="73601-111">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a><span data-ttu-id="73601-112">Wywoływanie symulatora Toffoli z języka C #</span><span class="sxs-lookup"><span data-stu-id="73601-112">Invoking the Toffoli simulator from C#</span></span>
 
@@ -40,7 +40,7 @@ ms.locfileid: "92690779"
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a><span data-ttu-id="73601-115">Wywoływanie symulatora Toffoli z poziomu języka Python</span><span class="sxs-lookup"><span data-stu-id="73601-115">Invoking the Toffoli simulator from Python</span></span>
 
-<span data-ttu-id="73601-116">Użyj metody [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną :::no-loc(Q#)::: operacją:</span><span class="sxs-lookup"><span data-stu-id="73601-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported :::no-loc(Q#)::: operation:</span></span>
+<span data-ttu-id="73601-116">Użyj metody [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) z biblioteki języka Python z zaimportowaną Q# operacją:</span><span class="sxs-lookup"><span data-stu-id="73601-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -48,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a><span data-ttu-id="73601-117">Wywoływanie symulatora Toffoli z wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="73601-117">Invoking the Toffoli simulator from the command line</span></span>
 
-<span data-ttu-id="73601-118">Podczas uruchamiania :::no-loc(Q#)::: programu z wiersza polecenia, użyj parametru **--symulatora** (lub **-s** skrótu), aby określić komputer docelowy symulatora Toffoli.</span><span class="sxs-lookup"><span data-stu-id="73601-118">When running a :::no-loc(Q#)::: program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="73601-119">Następujące polecenie uruchamia program przy użyciu szacowania zasobów:</span><span class="sxs-lookup"><span data-stu-id="73601-119">The following command runs a program using the resources estimator:</span></span> 
+<span data-ttu-id="73601-118">Podczas uruchamiania Q# programu z wiersza polecenia, użyj parametru **--symulatora** (lub **-s** skrótu), aby określić komputer docelowy symulatora Toffoli.</span><span class="sxs-lookup"><span data-stu-id="73601-118">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="73601-119">Następujące polecenie uruchamia program przy użyciu szacowania zasobów:</span><span class="sxs-lookup"><span data-stu-id="73601-119">The following command runs a program using the resources estimator:</span></span> 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -56,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a><span data-ttu-id="73601-120">Wywoływanie symulatora Toffoli z notesów Juptyer</span><span class="sxs-lookup"><span data-stu-id="73601-120">Invoking the Toffoli simulator from Juptyer Notebooks</span></span>
 
-<span data-ttu-id="73601-121">Użyj I :::no-loc(Q#)::: Magic polecenia [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) , aby uruchomić :::no-loc(Q#)::: operację.</span><span class="sxs-lookup"><span data-stu-id="73601-121">Use the I:::no-loc(Q#)::: magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="73601-121">Użyj I Q# Magic polecenia [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) , aby uruchomić Q# operację.</span><span class="sxs-lookup"><span data-stu-id="73601-121">Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the Q# operation.</span></span>
 
 ```
 %toffoli myOperation
