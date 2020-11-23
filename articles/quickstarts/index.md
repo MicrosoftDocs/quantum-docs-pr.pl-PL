@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 74b9b3d8f694072f5b5f4d0eb520263387de8919
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
+ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834486"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870825"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Konfigurowanie zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -40,12 +40,48 @@ Zestawu QDK można używać na trzy sposoby:
 
 Możesz opracowywać kod w języku Q# w większości ulubionych środowisk IDE, a także integrować język Q# z innymi językami, takimi jak język Python i języki platformy .NET (C#, F#).
 
-|&nbsp; | **VS Code<br>(2019 lub nowszy)**| **Visual Studio<br>(2019 lub nowszy)** | **Notesy programu Jupyter** | **Wiersz polecenia**|
-|:-----|:-----:|:-----:|:-----:|:-----:|
-|**System operacyjny** |Windows, macOS, Linux |Tylko Windows |Windows, macOS, Linux |Windows, macOS, Linux |
-|<br>**Autonomiczny język Q#** |<br>[Instalacja](xref:microsoft.quantum.install.standalone) |<br> [Instalacja](xref:microsoft.quantum.install.standalone)  |<br> [Instalacja](xref:microsoft.quantum.install.jupyter) |<br>[Instalacja](xref:microsoft.quantum.install.standalone)|
-|**Język Q# i język Python** |[Instalacja](xref:microsoft.quantum.install.python) |[Instalacja](xref:microsoft.quantum.install.python) |[Instalacja](xref:microsoft.quantum.install.jupyter) |[Instalacja](xref:microsoft.quantum.install.python) |
-|**Język Q# i platforma .NET (C#, F#)**|[Instalacja](xref:microsoft.quantum.install.cs) |[Instalacja](xref:microsoft.quantum.install.cs)|&#10006; |[Instalacja](xref:microsoft.quantum.install.cs) |
+<table>
+    <tr>
+        <th width=10%>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 lub nowsza wersja)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 lub nowsza wersja)</b></th>
+        <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Notesy programu Jupyter</b></th>
+        <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Wiersz polecenia</b></th>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <td align="left"><b>Obsługa systemu operacyjnego:</b></td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Tylko Windows</td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows, macOS, Linux</td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/quantum-wht.png" alt="QDK" width="60"/></td>
+        <td align="left"><b>Autonomiczny język Q#</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Instalacja</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/python.png" alt="python install" width="50"/></td>
+        <td align="left"><b>Język Q# i język Python</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Instalacja</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
+        <td align="left"><b>Język Q# i platforma .NET (C#, F#)</b></td> 
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Instalacja</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Instalacja</a></td>
+        <td align="center">&#10006;</td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Instalacja</a></td>
+   </tr>
+</table>
 
 ## <a name="use-the-qdk-online"></a>Używanie zestawu QDK online
 
