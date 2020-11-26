@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.HTermsToGenIdx
 title: HTermsToGenIdx, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry
 qsharp.name: HTermsToGenIdx
 qsharp.summary: Converts an index to a Hamiltonian term in `HTerm[]` data format to a GeneratorIndex.
-ms.openlocfilehash: 73324a48cc4b42de0d5d8618ad9e833d289125f7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dbe0718fa3b5439a2987d455fdad73731c988678
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714854"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216017"
 ---
 # <a name="htermstogenidx-function"></a>HTermsToGenIdx, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Chemia](xref:Microsoft.Quantum.Chemistry)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Chemia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Konwertuje indeks na termin hamiltonian w `HTerm[]` formacie danych na GeneratorIndex.
