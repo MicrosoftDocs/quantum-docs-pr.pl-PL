@@ -87,8 +87,8 @@ Autor: bradben UID: Microsoft. Quantum. koncepcje. Pauli MS. Author: v-benbra MS
 
 W poprzednich dyskusjach koncentrujemy się na obliczaniu pomiarów bazowych.
 W rzeczywistości istnieją inne typowe pomiary związane z przetwarzaniem jednostek Quantum, które z perspektywy notacji są wygodne do wyrażania na podstawie obliczeniowych pomiarów.
-Podczas pracy z programem Q# najbardziej typowym rodzajem pomiarów, w których będziesz korzystać, będzie prawdopodobnie *Pauli pomiary* , które uogólnią pomiary bazowe, aby uwzględnić pomiary w innych bazach i o parzystości między różnymi qubits.
-W takich przypadkach często omawia się pomiar pomiaru operatora Pauli, w ogólności operatora, takiego jak $ X, Y, Z $ lub $ z \otimes z, x \otimes x, x \otimes Y $ i tak dalej.
+Podczas pracy z programem Q# najbardziej typowym rodzajem pomiarów, w których będziesz korzystać, będzie prawdopodobnie *Pauli pomiary*, które uogólnią pomiary bazowe, aby uwzględnić pomiary w innych bazach i o parzystości między różnymi qubits.
+W takich przypadkach często omawia się pomiar pomiaru operatora Pauli, w ogólności operatora, takiego jak $ X, Y, Z $ lub $ z \otimes z, x \otimes x, x \otimes Y $ i tak dalej. 
 
 > [!TIP]
 > W programie Q# Operatory qubit Pauli są ogólnie reprezentowane przez tablice typu `Pauli[]` .
@@ -168,7 +168,7 @@ $$
 W ten sposób produkty dwuetapowe z dwóch $ operatorów Pauli-Z $ tworzą macierz składającą się z dwóch spacji składających się z $ + 1 $ i $ -1 $ eigenvalues.
 Podobnie jak w przypadku pojedynczej qubit, oba stanowią pół obszaru, co połowa dostępnego miejsca wektorowego należy do $ + 1 $ eigenspace i pozostałe połowy do $ -1 $ eigenspace.
 Ogólnie rzecz biorąc, można łatwo zapoznać się z definicją iloczynu dwuczęściowego, któremu każdy dwuczęściowy iloczyn $ operatorów Pauli-z $ i tożsamość również przestrzega tego.
-Przykład:
+Na przykład
 
 $$
 \begin{align}
@@ -247,12 +247,12 @@ Aby uzyskać więcej informacji, zobacz [`Measure`](xref:Microsoft.Quantum.Intri
 Informacje o Quantum są zaawansowane.
 Umożliwia nam wykonywanie niezwykłych rzeczy, takich jak liczba czynników, które są wykładniczo szybsze niż najlepsze znane klasyczne algorytmy, lub efektywnie symuluje skorelowane systemy elektronów, które w sposób klasyczny wymagają wykładniczego kosztu, aby symulować dokładne symulacje.
 Istnieją jednak ograniczenia dotyczące mocy obliczeniowej Quantum.
-Takie ograniczenie jest określone przez *theorem bez klonowania* .
+Takie ograniczenie jest określone przez *theorem bez klonowania*.
 
 No-Cloning theorem jest aptly o nazwie.
 Nie zezwala na klonowanie ogólnych Stanów Quantum przez komputer Quantum.
 Potwierdzenie theorem jest niezwykle proste.
-Gdy Pełna weryfikacja theorem nie jest w stanie nieco zbyt technicznym w naszej dyskusji, w przypadku braku dodatkowych qubits pomocniczych znajduje się w naszym zakresie (pomocnicze qubits to qubits używany do wyznaczania miejsca podczas obliczeń i są łatwe w użyciu i zarządzane w programie Q# ). [borrowed qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)
+Podczas gdy Pełna weryfikacja theorem nie jest w stanie nieco zbyt technicznym w naszej dyskusji, dowód w przypadku braku dodatkowych qubits pomocniczych znajduje się w naszym zakresie.
 
 W przypadku takiego komputera z systemem Quantum Operacja klonowania musi być opisana przez macierz jednostkową.
 Nie można wymusić pomiaru, ponieważ spowodowałoby to uszkodzenie stanu Quantum, który próbujemy sklonować.

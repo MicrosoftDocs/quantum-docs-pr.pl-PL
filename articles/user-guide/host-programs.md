@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231693"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Sposoby uruchamiania Q# programu
 
@@ -26,7 +26,7 @@ Podstawowa różnica polega na tym, że Q# można uruchomić:
 - jako aplikacja autonomiczna, w której Q# jest jedynym używanym językiem, a program jest wywoływany bezpośrednio. Dwie metody faktycznie należą do tej kategorii:
   - Interfejs wiersza polecenia
   - Q# Notesy Jupyter
-- za pomocą dodatkowego *programu hosta* , pisanego w języku Python lub języka .NET (na przykład C# lub F #), który następnie wywołuje program i może dodatkowo przetwarzać wyniki zwrócone.
+- za pomocą dodatkowego *programu hosta*, pisanego w języku Python lub języka .NET (na przykład C# lub F #), który następnie wywołuje program i może dodatkowo przetwarzać wyniki zwrócone.
 
 Aby zapoznać się z najlepszymi procesami i ich różnicami, należy wziąć pod uwagę prosty Q# program i porównać sposoby jego działania.
 
@@ -45,7 +45,7 @@ W programie Q# można to wykonać za pomocą następującego kodu:
 ```
 
 Jednak ten kod nie może być uruchamiany przez Q# .
-W tym celu należy wykonać treść [operacji](xref:microsoft.quantum.guide.basics#q-operations-and-functions), która jest uruchamiana, gdy wywoływana---albo bezpośrednio lub przez inną operację. W związku z tym można napisać operację w następującej postaci:
+W tym celu należy wykonać treść [operacji](xref:microsoft.quantum.qsharp.operationsandfunctions), która jest uruchamiana, gdy wywoływana---albo bezpośrednio lub przez inną operację. W związku z tym można napisać operację w następującej postaci:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,18 +54,18 @@ W tym celu należy wykonać treść [operacji](xref:microsoft.quantum.guide.basi
         }
     }
 ```
-Zdefiniowano operację, `MeasureSuperposition` która nie pobiera danych wejściowych i zwraca wartość typu [Result](xref:microsoft.quantum.guide.types).
+Zdefiniowano operację, `MeasureSuperposition` która nie pobiera danych wejściowych i zwraca wartość typu [Result](xref:microsoft.quantum.qsharp.typesystem-index#available-types).
 
-Chociaż przykłady na tej stronie składają się tylko z Q# *operacji* , wszystkie koncepcje, które będziemy omawiać, odnoszą się również do Q# *funkcji* , a tym samym odwołują się do nich. *callables* Różnice między nimi są omówione w oparciu o [ Q# kwestie podstawowe: operacje i funkcje](xref:microsoft.quantum.guide.basics#q-operations-and-functions)oraz więcej szczegółowych informacji na temat ich definiowania można znaleźć w temacie [Operations and Functions](xref:microsoft.quantum.guide.operationsfunctions).
+Oprócz operacji, Q# umożliwia również Hermetyzowanie deterministycznych obliczeń do funkcji. Oprócz zagwarantowania, że obliczenia, które działają na qubits muszą zostać hermetyzowane do operacji, a nie funkcji, istnieje niewiele różnic między operacjami i funkcją. *Nazywamy* je zbiorczo.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Zdefiniowane w Q# pliku
 
 Wywołanie jest precyzyjnie wywoływane i uruchamiane przez Q# .
 Jednak wymaga to kilku dodatkowych uzupełnień w celu przeprowadzenia pełnego `*.qs` Q# pliku.
 
-Wszystkie Q# typy i elementy, które można ustalić (zarówno te, które zostały zdefiniowane, jak i wewnętrzne dla języka) są zdefiniowane w *przestrzeni nazw* , co zapewnia pełną nazwę, do której można się odwoływać.
+Wszystkie Q# typy i elementy, które można ustalić (zarówno te, które zostały zdefiniowane, jak i wewnętrzne dla języka) są zdefiniowane w *przestrzeni nazw*, co zapewnia pełną nazwę, do której można się odwoływać.
 
-Na przykład [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) operacje i są dostępne w [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) przestrzeniach nazw i (części [ Q# bibliotek standardowych](xref:microsoft.quantum.qsharplibintro)).
+Na przykład [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) operacje i są dostępne w [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) przestrzeniach nazw i (części [ Q# bibliotek standardowych](xref:microsoft.quantum.libraries.standard.intro)).
 W związku z tym zawsze można je wywoływać za pośrednictwem ich *pełnych* nazw, `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` ale zawsze będzie to miało nieczytelny kod.
 
 Zamiast tego `open` instrukcje umożliwiają wywoływanie z bardziej zwięzłą składnią skróconą, jak zostało to zrobione w powyższej treści operacji.
@@ -103,7 +103,7 @@ Teraz ogólny model przebiegu Q# programu zostanie wyczyszczony.
 Po pierwsze, konkretnie wywoływane do uruchomienia ma dostęp do wszelkich innych metod i typów zdefiniowanych w tej samej przestrzeni nazw.
 Uzyskują również dostęp do tych elementów z dowolnej [ Q# biblioteki](xref:microsoft.quantum.libraries), ale muszą one być przywoływane za pośrednictwem ich pełnej nazwy albo za pomocą `open` instrukcji opisanych powyżej.
 
-Samo wywoływanie jest uruchamiane na *[maszynie docelowej](xref:microsoft.quantum.machines)* .
+Samo wywoływanie jest uruchamiane na *[maszynie docelowej](xref:microsoft.quantum.machines)*.
 Takie maszyny docelowe mogą być rzeczywistym sprzętem Quantum lub wieloma symulatorami dostępnymi jako część QDK.
 W naszym przykładzie najbardziej przydatną maszyną docelową jest wystąpienie [symulatora pełnego stanu](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` która oblicza zachowanie programu tak, jakby było uruchamiane na komputerze z systemem Quantum bez użycia szumu.
 
@@ -164,7 +164,7 @@ Teraz wywołanie `dotnet run` z wiersza polecenia prowadzi do `MeasureSuperposit
 W związku z tym zobaczysz `One` lub `Zero` Wydrukowano. 
 
 Należy pamiętać, że nie ma znaczenia, czy masz więcej żądanych, zdefiniowanych poniżej, tylko `MeasureSuperposition` zostanie uruchomiony.
-Ponadto nie jest to problem, jeśli Twoje wywoływane dane zawierają [Komentarze dokumentacji](xref:microsoft.quantum.guide.filestructure#documentation-comments) przed jej deklaracją, `@EntryPoint()` atrybut może być po prostu umieszczony nad nimi.
+Ponadto nie jest to problem, jeśli Twoje wywoływane dane zawierają [Komentarze dokumentacji](xref:microsoft.quantum.qsharp.comments#documentation-comments) przed jej deklaracją, `@EntryPoint()` atrybut może być po prostu umieszczony nad nimi.
 
 ### <a name="callable-arguments"></a>Wywoływane argumenty
 
@@ -589,7 +589,7 @@ Tutaj szczegółowo opisano sposób uruchamiania Q# operacji zdefiniowanych powy
 
 W Q# Jupyter Notebook wprowadzasz kod w Q# taki sam sposób jak w przestrzeni nazw Q# pliku.
 
-Dzięki temu możemy umożliwić dostęp do wywoływanych [ Q# bibliotek standardowych](xref:microsoft.quantum.qsharplibintro) za pomocą `open` instrukcji dla odpowiednich przestrzeni nazw.
+Dzięki temu możemy umożliwić dostęp do wywoływanych [ Q# bibliotek standardowych](xref:microsoft.quantum.libraries.standard.intro) za pomocą `open` instrukcji dla odpowiednich przestrzeni nazw.
 Po uruchomieniu komórki z taką instrukcją definicje z tych przestrzeni nazw są dostępne w całym obszarze roboczym.
 
 > [!NOTE]

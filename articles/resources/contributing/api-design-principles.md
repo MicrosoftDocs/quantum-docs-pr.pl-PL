@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691825"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231778"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Zasady projektowania interfejsu API
 
@@ -215,7 +215,7 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
   *Przykłady:*
   - Preferuj "iteracja wzmocnienia amplitudy" na "iteracja Grover".
 
-- ✅**Wybierz operacje** i nazwy funkcji, które wyraźnie komunikują oczekiwany efekt możliwego do przeprowadzenia, a nie jego implementację. Należy pamiętać, że implementacja może i powinna być udokumentowana w [komentarzach dokumentacji interfejsu API](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+- ✅**Wybierz operacje** i nazwy funkcji, które wyraźnie komunikują oczekiwany efekt możliwego do przeprowadzenia, a nie jego implementację. Należy pamiętać, że implementacja może i powinna być udokumentowana w [komentarzach dokumentacji interfejsu API](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
   *Przykłady:*
   - Preferuj "oszacowanie nakładania się" na "test Hadamard", ponieważ ten drugi komunikuje się, jak dawna jest implementacja.
@@ -224,44 +224,44 @@ W tym artykule wymieniono te zasady i przedstawiono przykłady, które ułatwiaj
 
   - **Słowa**
 
-    - **Potwierdzenie** : należy sprawdzić, czy założono założenie stanu maszyny docelowej i jej qubits, prawdopodobnie przy użyciu zasobów niefizycznych. Operacje korzystające z tego zlecenia powinny zawsze być bezpiecznie usuwalne bez wpływu na funkcjonalność bibliotek i programów wykonywalnych. Należy zauważyć, że w przeciwieństwie do faktów, potwierdzenia mogą zasadniczo zależeć od stanu zewnętrznego, takiego jak stan rejestru qubit, środowisko uruchomieniowe lub tak dalej. Ponieważ zależność od stanu zewnętrznego jest rodzajem efektu ubocznego, potwierdzenia muszą być uwidocznione jako operacje, a nie funkcje.
+    - **Potwierdzenie**: należy sprawdzić, czy założono założenie stanu maszyny docelowej i jej qubits, prawdopodobnie przy użyciu zasobów niefizycznych. Operacje korzystające z tego zlecenia powinny zawsze być bezpiecznie usuwalne bez wpływu na funkcjonalność bibliotek i programów wykonywalnych. Należy zauważyć, że w przeciwieństwie do faktów, potwierdzenia mogą zasadniczo zależeć od stanu zewnętrznego, takiego jak stan rejestru qubit, środowisko uruchomieniowe lub tak dalej. Ponieważ zależność od stanu zewnętrznego jest rodzajem efektu ubocznego, potwierdzenia muszą być uwidocznione jako operacje, a nie funkcje.
 
-    - **Oszacowanie** : użycie jednego lub większej liczby możliwych do powtórzenia pomiarów, oszacowanie klasycznej ilości wyników pomiarów.
+    - **Oszacowanie**: użycie jednego lub większej liczby możliwych do powtórzenia pomiarów, oszacowanie klasycznej ilości wyników pomiarów.
 
       *Przykłady:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Przygotowywanie** : stosowanie operacji Quantum lub sekwencji operacji do jednego lub większej liczby qubits założono, że wystąpiły w określonym stanie początkowym (zazwyczaj $ \ket{00\cdots 0} $), powodując, że stan tych qubits będzie się rozwijać do żądanego stanu końcowego. Ogólnie rzecz biorąc, działające na Stanach innych niż dany stan początkowy **może** skutkować niezdefiniowaną transformację jednostkową, ale mimo to nadal **należy** zachować operację i jej podległych "anulować" i zastosować wartość No-op.
+    - **Przygotowywanie**: stosowanie operacji Quantum lub sekwencji operacji do jednego lub większej liczby qubits założono, że wystąpiły w określonym stanie początkowym (zazwyczaj $ \ket{00\cdots 0} $), powodując, że stan tych qubits będzie się rozwijać do żądanego stanu końcowego. Ogólnie rzecz biorąc, działające na Stanach innych niż dany stan początkowy **może** skutkować niezdefiniowaną transformację jednostkową, ale mimo to nadal **należy** zachować operację i jej podległych "anulować" i zastosować wartość No-op.
 
       *Przykłady:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Miara** : stosowanie operacji Quantum lub sekwencji operacji do co najmniej jednego qubits, odczytywanie klasycznych danych z powrotem.
+    - **Miara**: stosowanie operacji Quantum lub sekwencji operacji do co najmniej jednego qubits, odczytywanie klasycznych danych z powrotem.
 
       *Przykłady:*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Zastosuj** : stosowanie operacji Quantum lub sekwencji operacji do jednego lub większej liczby qubits, co powoduje spójny stan tych qubits. To zlecenie jest najbardziej ogólnym zleceniem w \# nomenklaturze Q i **nie powinno być** używane, gdy bardziej szczegółowe zlecenie jest bardziej istotne.
+    - **Zastosuj**: stosowanie operacji Quantum lub sekwencji operacji do jednego lub większej liczby qubits, co powoduje spójny stan tych qubits. To zlecenie jest najbardziej ogólnym zleceniem w \# nomenklaturze Q i **nie powinno być** używane, gdy bardziej szczegółowe zlecenie jest bardziej istotne.
 
-  - **Rzeczowniki** :
+  - **Rzeczowniki**:
 
-    - **Fakt** : warunek logiczny, który zależy tylko od danych wejściowych, a nie na stanie maszyny docelowej, jego środowisku lub stanu qubits maszyny. W przeciwieństwie do potwierdzenia fakt jest tylko wrażliwy na *wartości* podane dla tego faktu. Na przykład:
+    - **Fakt**: warunek logiczny, który zależy tylko od danych wejściowych, a nie na stanie maszyny docelowej, jego środowisku lub stanu qubits maszyny. W przeciwieństwie do potwierdzenia fakt jest tylko wrażliwy na *wartości* podane dla tego faktu. Przykład:
 
       *Przykłady:*
       - @"microsoft.quantum.diagnostics.equalityfacti": reprezentuje fakt dotyczący dwóch danych wejściowych z liczbą całkowitą; liczby całkowite podane jako dane wejściowe są równe siebie lub nie są niezależne od żadnego innego stanu programu.
 
-    - **Opcje:** Typ UDT zawierający kilka nazwanych elementów, które mogą działać jako argumenty opcjonalne do funkcji lub operacji. Na przykład:
+    - **Opcje:** Typ UDT zawierający kilka nazwanych elementów, które mogą działać jako argumenty opcjonalne do funkcji lub operacji. Przykład:
 
       *Przykłady:*
       - @"microsoft.quantum.machinelearning.trainingoptions"UDT zawiera nazwane elementy dla stawki szkoleniowej, rozmiar minibatch oraz inne konfigurowalne parametry szkolenia ml.
 
-  - **Przymiotniki** :
+  - **Przymiotniki**:
 
-    - ⛔️ **New** : **nie należy** używać tego przymiotnika, aby uniknąć nieporozumień z użyciem jako czasownika w wielu językach programowania (np.: C++, C#, Java, TypeScript, PowerShell).
+    - ⛔️ **New**: **nie należy** używać tego przymiotnika, aby uniknąć nieporozumień z użyciem jako czasownika w wielu językach programowania (np.: C++, C#, Java, TypeScript, PowerShell).
 
   - **Położenia pozycyjne:** W niektórych przypadkach, można użyć pozycji, aby bardziej odróżnić lub wyjaśnić role rzeczowników i czasowników w nazwach funkcji i operacji. Należy jednak zachować ostrożność i spójność.
 

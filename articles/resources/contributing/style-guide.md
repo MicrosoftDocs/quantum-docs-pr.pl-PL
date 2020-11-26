@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691732"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231659"
 ---
 # <a name="no-locq-style-guide"></a>Q# Styl — Przewodnik #
 ## <a name="general-conventions"></a>Konwencje ogólne ##
@@ -52,7 +52,7 @@ Takie rozróżnienie sugeruje, że nazwy operacji są nazywane czasownikami i fu
 > W tej perspektywie typy zdefiniowane przez użytkownika powinny być nazwane jako rzeczowniki, tak aby oba typy i funkcje konstruktora miały spójne nazwy.
 
 W odpowiednim przypadku upewnij się, że nazwy operacji zaczynają się od czasowników jasno wskazujących wpływ operacji.
-Na przykład:
+Przykład:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -68,7 +68,7 @@ Inne zlecenia mogą być również przydatne w tym przypadku, jak w `IterateThro
 | Zastosuj | Operacja podana jako dane wejściowe jest wywoływana |
 | Assert | Hipoteza dotycząca wyniku możliwego pomiaru Quantum jest sprawdzana przez symulator |
 | Szacowanie | Wartość jest zwracana, reprezentująca oszacowanie pobrane z co najmniej jednego pomiaru |
-| Miara | Pomiar Quantum jest wykonywany, a jego wynik jest zwracany do użytkownika |
+| Measure | Pomiar Quantum jest wykonywany, a jego wynik jest zwracany do użytkownika |
 | Przygotowywanie | Dana Rejestracja qubits jest inicjowana w określonym stanie |
 | Przykład | Wartość klasyczna jest zwracana losowo z pewnej dystrybucji |
 
@@ -215,7 +215,7 @@ _*_
 Ponieważ Q# jest silnie i statycznie wpisanym językiem, wartość jednego typu może być używana tylko jako wartość innego typu za pomocą jawnego wywołania funkcji konwersji typu.
 Jest to w przeciwieństwie do języków, które umożliwiają niejawną zmianę typów wartości (np.: Promocja typu) lub poprzez rzutowanie.
 W związku z tym funkcje konwersji typów odgrywają ważną rolę w Q# tworzeniu biblioteki i składają się z jednej z najczęściej wykrytych decyzji dotyczących nazewnictwa.
-Pamiętaj jednak, że ponieważ konwersje typów są zawsze _deterministyczne_ , można je napisać jako funkcje i w związku z tym powyższym.
+Pamiętaj jednak, że ponieważ konwersje typów są zawsze _deterministyczne_, można je napisać jako funkcje i w związku z tym powyższym.
 W szczególności sugerujemy, aby funkcje konwersji typów nigdy nie były nazwane jako czasowniki (np.: `ConvertToX` ) lub parametrów przedpozycyjnych fraz ( `ToX` ), ale powinny być nazwane jako niezależne wyrażenia przymiotników, które wskazują typy źródłowe i docelowe ( `XAsY` ).
 Podczas wyświetlania listy typów tablicowych w nazwach funkcji konwersji typów zaleca się użycie skrótu `Arr` .
 Z zablokowaniem wyjątkowej sytuacji zalecamy, aby wszystkie funkcje konwersji typów były nazwane przy użyciu, `As` Aby można je było szybko zidentyfikować.
@@ -390,7 +390,7 @@ Podobnie serwer językowy dostarczony z zestawem Quantum Development Kit używa 
 Korzystanie z komentarzy do dokumentacji może ułatwić użytkownikom zrozumienie kodu przez udostępnienie przydatnego odwołania do szczegółów, które nie są łatwo wyrażone przy użyciu innych konwencji zawartych w tym dokumencie.
 
 > [!div class="nextstepaction"]
-> [Odwołanie do składni komentarza do dokumentacji](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Odwołanie do składni komentarza do dokumentacji](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Aby efektywnie korzystać z tej funkcji w celu ułatwienia użytkownikom, zalecamy zachowywanie kilku rzeczy podczas pisania komentarzy do dokumentacji.
 
