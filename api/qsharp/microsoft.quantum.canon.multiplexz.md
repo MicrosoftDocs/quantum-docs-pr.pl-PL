@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: MultiplexZ, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: f7b1973e18ad396ebe892ad63ae47374a7cafbd5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715778"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206072"
 ---
 # <a name="multiplexz-operation"></a>MultiplexZ, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje obrót Pauli Z na tablicy qubits.
 
 ```qsharp
-operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -62,7 +62,7 @@ Pojedynczy rejestr qubit, który jest obrócony $e ^ {i P \ theta_j} $.
 
 `coefficients` zostanie uzupełniona o elementy $ \ theta_j = $0,0, jeśli określono mniej niż $2 ^ n $.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - Synteza obwodów logiki Quantum Vivek V. Shende, Stephen S. Bullock, Igora L. Markov https://arxiv.org/abs/quant-ph/0406176
 

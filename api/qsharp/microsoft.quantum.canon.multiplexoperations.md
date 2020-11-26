@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexOperations
 title: MultiplexOperations, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -12,18 +12,18 @@ qsharp.summary: >-
   That is, applies Multiply-controlled unitary operation $U$ that applies a unitary $V_j$ when controlled by $n$-qubit number state $\ket{j}$.
 
   $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-ms.openlocfilehash: 267c9c2858090ebe024fd387938e8bd2f8c76867
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ad66b39fcfacbe5231ec3b9ba96989d6d5d449c1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715834"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206106"
 ---
 # <a name="multiplexoperations-operation"></a>MultiplexOperations, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje tablicę operacji sterowaną przez tablicę liczb Stanów.
@@ -33,13 +33,13 @@ Oznacza to, że jest stosowana operacja jednostkowa o pomnożenia $U $, która s
 $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 
 ```qsharp
-operation MultiplexOperations<'T> (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit
+operation MultiplexOperations<'T> (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="unitaries--t--unit-adj--ctl"></a>unitaries: 'T => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL []
+### <a name="unitaries--t--unit--is-adj--ctl"></a>unitaries: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > to przymiotnik + CTL []
 
 Tablica operacji jednostkowych do $2 ^ n $. Operacja $j $ th jest indeksowana przez stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.
 
@@ -69,6 +69,6 @@ Ogólny rejestr qubit, który $V _j $ działa.
 
 `coefficients` zostaną uzupełnione elementami tożsamości, jeśli określono mniej niż $2 ^ n $. Ta implementacja używa qubits pomocniczego $n-$1.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - W kierunku pierwszej symulacji Quantum przy użyciu Quantum przyspieszenie Andrew M. Childs, Dmitri Maslov, Yunseong, Neila J. Ross, Juan Su https://arxiv.org/abs/1711.10980

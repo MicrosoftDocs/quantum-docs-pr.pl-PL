@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationA
 title: TransformedOperationA, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: 349424a102dba7354bbaa65fffdc2b5d506a3b91
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eceba260e601b73bdfa2de6ea6ab146820b5c59a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715330"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204882"
 ---
 # <a name="transformedoperationa-function"></a>TransformedOperationA, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dana funkcja i operacja zwracają nową operację, której dane wejściowe są przekształcane przez daną funkcję.
@@ -35,13 +35,13 @@ function TransformedOperationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Adj
 Funkcja, która przekształca dane wejściowe w formularz oczekiwany przez operację.
 
 
-### <a name="op--t--unit-adj"></a>op: 'T => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>op: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja, która ma zostać przekształcona.
 
 
 
-## <a name="output--u--unit-adj"></a>Wynik: "U => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--u--unit--is-adj"></a>Wynik: wartość "U => [Unit](xref:microsoft.quantum.lang-ref.unit)  jest korektą
 
 Nowa operacja tbat wywołania `fn` z danymi wejściowymi, a następnie przekazuje wynikowe dane wyjściowe do `op` .
 

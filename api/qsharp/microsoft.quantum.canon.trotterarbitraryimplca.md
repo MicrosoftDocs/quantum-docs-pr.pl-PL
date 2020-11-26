@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
 title: TrotterArbitraryImplCA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TrotterArbitraryImplCA
 qsharp.summary: Recursive implementation of even-order Trotter–Suzuki integrator.
-ms.openlocfilehash: 1c094d09ac8bdd71a59ef57d8715a6f90f18efc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2abfbb9d51a98d8ede1b0835875a3771ffda0691
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715288"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204729"
 ---
 # <a name="trotterarbitraryimplca-operation"></a>TrotterArbitraryImplCA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Cykliczna implementacja integratora Trotter — Suzuki.
 
 ```qsharp
-operation TrotterArbitraryImplCA<'T> (order : Int, (nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit
+operation TrotterArbitraryImplCA<'T> (order : Int, (nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Kolejność integratora Trotter-Suzuki.
 Liczba operacji do rozdzielenia na etapy czasu.
 
 
-### <a name="op--intdoublet--unit-adj--ctl"></a>op: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), t) => skorygowanie [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="op--intdoublet--unit--is-adj--ctl"></a>op: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), t) => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL
 
 Operacja akceptująca dane wejściowe indeksu (typ `Int` ) i czas wejścia (typ `Double` ) i rejestr Quantum (typ `'T` ) dla dekompozycji.
 
