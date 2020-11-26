@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R1Frac
 title: R1Frac, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -12,18 +12,18 @@ qsharp.summary: >-
   \begin{align} R_1(n, k) \mathrel{:=} \operatorname{diag}(1, e^{i \pi k / 2^n}). \end{align}
 
   > [!WARNING] > This operation uses the **opposite** sign convention from > @"microsoft.quantum.intrinsic.r", and does not include the > factor of $1/ 2$ included by @"microsoft.quantum.intrinsic.r1".
-ms.openlocfilehash: bfa6cd60eebd05feec8cfa2bf71e09dc0d02843a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eb2dd8750ed5ad9fc75ca24bb4c8ef36298f69f4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198779"
 ---
 # <a name="r1frac-operation"></a>R1Frac, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. wewnętrzna](xref:Microsoft.Quantum.Intrinsic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Stosuje obrót o stanie $ \ket {1} $ przez kąt określony jako ułamek dyadic.
@@ -35,7 +35,7 @@ Stosuje obrót o stanie $ \ket {1} $ przez kąt określony jako ułamek dyadic.
 > Ta operacja używa **przeciwległej** Konwencji podpisywania z @"microsoft.quantum.intrinsic.r" i nie obejmuje współczynnika $1/2 $ dołączonego przez @"microsoft.quantum.intrinsic.r1" .
 
 ```qsharp
-operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit
+operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
