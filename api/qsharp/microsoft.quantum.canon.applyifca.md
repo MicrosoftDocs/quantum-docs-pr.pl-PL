@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfCA
 title: ApplyIfCA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfCA
 qsharp.summary: Applies a unitary operation conditioned on a classical bit.
-ms.openlocfilehash: 9057c79622f15a082963d94fc261664e00322feb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0ac469d6dea51951e0d9b2cfceb54253d4b4c5d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718233"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209625"
 ---
 # <a name="applyifca-operation"></a>ApplyIfCA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje operacje jednostkowe z zastosowaniem klasycznego bitu.
 
 ```qsharp
-operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ Sufiks `CA` wskazuje, że operacja ma zostać zastosowana, jest jednostką (ster
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="op--t--unit-ctl--adj"></a>op: 'T => [jednostki](xref:microsoft.quantum.lang-ref.unit) CTL + przymiotnik
+### <a name="op--t--unit--is-adj--ctl"></a>op: 'R => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL
 
 Operacja, która ma być stosowana warunkowo.
 

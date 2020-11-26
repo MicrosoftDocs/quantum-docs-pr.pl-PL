@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroC
 title: ApplyIfZeroC, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroC
 qsharp.summary: Applies a controllable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: cfc2a659f4da011baadff1a0d6a20a2a36d0a285
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c89490b13d946d119f3fd38d130d90847d67fea6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718013"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209353"
 ---
 # <a name="applyifzeroc-operation"></a>ApplyIfZeroC, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje operację z możliwością kontrolowania, która jest zależna od wartości wyniku klasycznego.
 
 ```qsharp
-operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit
+operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit is Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Sufiks `C` wskazuje, że operacja do zastosowania jest sterowana.
 Wynik pomiaru, który kontroluje, czy operacja jest stosowana, czy nie.
 
 
-### <a name="op--t--unit-ctl"></a>op: 'T => — lista CTL [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-ctl"></a>op: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest listą CTL
 
 Operacja, która ma być stosowana warunkowo.
 

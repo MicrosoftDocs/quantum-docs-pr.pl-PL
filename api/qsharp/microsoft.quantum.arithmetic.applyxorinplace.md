@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyXorInPlace
 title: ApplyXorInPlace, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyXorInPlace
 qsharp.summary: Applies a bitwise-XOR operation between a classical integer and an integer represented by a register of qubits.
-ms.openlocfilehash: 5a35abc16a967e64c84466a47844ed7beeb618dc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b7fc20ac421d5cff9baa3fe05450c1564f123505
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721392"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210117"
 ---
 # <a name="applyxorinplace-operation"></a>ApplyXorInPlace, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje operacje bitowe-XOR między klasyczną liczbą całkowitą i liczbą całkowitą reprezentowaną przez rejestr qubits.
 
 ```qsharp
-operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
