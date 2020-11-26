@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Enumerated
 title: Funkcja wyliczana
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Enumerated
 qsharp.summary: Given an array, returns a new array containing elements of the original array along with the indices of each element.
-ms.openlocfilehash: 0a591025a4eef79e08b47527c0bdb556f5645334
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 94e8fdb7288bc43ed84d10a3292819b455a2be31
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719304"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221423"
 ---
 # <a name="enumerated-function"></a>Funkcja wyliczana
 
 Przestrzeń nazw: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dana tablica zwraca nową tablicę zawierającą elementy oryginalnej tablicy wraz z indeksami każdego elementu.

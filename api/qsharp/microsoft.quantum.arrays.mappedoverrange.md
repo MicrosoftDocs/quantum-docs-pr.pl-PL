@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.MappedOverRange
 title: MappedOverRange, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: MappedOverRange
 qsharp.summary: Given a range and a function that takes an integer as input, returns a new array that consists of the images of the range values under the function.
-ms.openlocfilehash: e527a3ca1fd7571836f4f79bb453581f53d1db2b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b1d73c2503e63ed09a3d6a56421760ca29eb0c3f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719040"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220692"
 ---
 # <a name="mappedoverrange-function"></a>MappedOverRange, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Uwzględniając zakres i funkcję, która przyjmuje liczbę całkowitą jako dane wejściowe, zwraca nową tablicę, która składa się z obrazów wartości zakresu w ramach funkcji.
