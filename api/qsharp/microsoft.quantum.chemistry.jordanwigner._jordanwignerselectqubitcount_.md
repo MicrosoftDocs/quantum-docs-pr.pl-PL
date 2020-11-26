@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitCount_
 title: _JordanWignerSelectQubitCount_ , funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerSelectQubitCount_
 qsharp.summary: ''
-ms.openlocfilehash: 7c84bc17d3140aa3d0d5ebcac8335051dbd2f3b7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fff79e424454079f462aec891699ddc5d61032c5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714471"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215575"
 ---
 # <a name="_jordanwignerselectqubitcount_-function"></a>_JordanWignerSelectQubitCount_ , funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Chemia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Chemia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
