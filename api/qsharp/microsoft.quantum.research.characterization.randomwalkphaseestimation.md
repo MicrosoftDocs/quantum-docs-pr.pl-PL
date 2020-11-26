@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: RandomWalkPhaseEstimation, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710878"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226166"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>RandomWalkPhaseEstimation, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Research. scharakteryzowanie](xref:Microsoft.Quantum.Research.Characterization)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Research. scharakteryzowanie](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization)
 
 
 Wykonuje iteracyjne szacowanie faz przy użyciu losowego instruktażu do przybliżonego Bayesowskieowania na podstawie wyników pomiaru klasycznego z danej bazy danych Oracle i eigenstate.
@@ -80,7 +80,7 @@ Następnie wykonywanie szacowania fazy iteracyjnej ostatecznie wywoła zbieżno�
 
 ### <a name="experiment-design"></a>Projekt eksperymentu
 
-Czasy pomiaru $t $ i niezgodne ze kątami $ \theta $ `oracle` są wybierane zgodnie z *algorytmem heurystycznego zgadywania cząsteczek* , \Begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac {1} {\variance{\phi}}.
+Czasy pomiaru $t $ i niezgodne ze kątami $ \theta $ `oracle` są wybierane zgodnie z *algorytmem heurystycznego zgadywania cząsteczek*, \Begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac {1} {\variance{\phi}}.
 \end{align} ten algorytm heurystyczny jest optymalny, aby zmniejszyć oczekiwaną wariancję w fazie iteracji, w ramach założeń normalnych przed.
 
 ### <a name="optimality"></a>Optymalność
@@ -89,8 +89,8 @@ Ta operacja przybliża optymalną szacowaniaę dla fazy $ \phi $, która został
 
 Zobacz [bayesowskie fazy szacowania](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) , aby uzyskać więcej szczegółów na temat statystyk oszacowania fazy iteracji.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - Odwołujące *et al.* 2011 [DOI: 10/TFX](https://doi.org/10.1007/s11128-012-0407-6), [ArXiv: 1110.3067](https://arxiv.org/abs/1110.3067).
 - Wiebe *et al.* 2013 [DOI: 10/TF3](https://doi.org/10.1103/PhysRevLett.112.190501), [ArXiv: 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe i granade 2018 *(w przygotowaniu)* .
+- Wiebe i granade 2018 *(w przygotowaniu)*.

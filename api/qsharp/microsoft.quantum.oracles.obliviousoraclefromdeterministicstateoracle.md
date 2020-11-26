@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Oracles.ObliviousOracleFromDeterministicStateOracle
 title: ObliviousOracleFromDeterministicStateOracle, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ObliviousOracleFromDeterministicStateOracle
 qsharp.summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
-ms.openlocfilehash: 9e18776ad4d6adf0068213117c6d1d8ed5c5f126
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f1fe34e38edefba228fb9d01e1712e4c0916970
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226693"
 ---
 # <a name="obliviousoraclefromdeterministicstateoracle-function"></a>ObliviousOracleFromDeterministicStateOracle, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Łączy firmy Oracle `DeterministicStateOracle` i `ObliviousOracle` .
