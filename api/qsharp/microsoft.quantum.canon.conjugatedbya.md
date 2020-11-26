@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByA
 title: ConjugatedByA, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByA
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: bcaab28e99d3d61f4a36da866321d28f3dc4bd53
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eaa104039b857f0469ddc0aaba97698eca20860d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716464"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207347"
 ---
 # <a name="conjugatedbya-function"></a>ConjugatedByA, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dana operacja zewnętrzna i wewnętrzna zwraca nową operację, która jest sprzężona z operacją wewnętrzną przez operację zewnętrzną.
@@ -30,18 +30,18 @@ function ConjugatedByA<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: 'T => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja $U $, która powinna być używana do sprzężonia $V $. Należy zauważyć, że operacja zewnętrzna $U $ musi być przylegające, ale nie musi być sterowana.
 
 
-### <a name="inneroperation--t--unit-adj"></a>innerOperation: 'T => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="inneroperation--t--unit--is-adj"></a>innerOperation: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja $V $ jest sprzężona.
 
 
 
-## <a name="output--t--unit-adj"></a>Wynik: 'T => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--t--unit--is-adj"></a>Wartość wyjściowa: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Nowa operacja, której akcja jest reprezentowana przez jednostkę $U ^ {\dagger} V U $.
 

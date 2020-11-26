@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayA
 title: Opóźnienie operacji
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 77c40633824ccd9250252804b08d7400936515dd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7c3325fd98a85c7e9123f383cbdc0a68627222c8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716296"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207143"
 ---
 # <a name="delaya-operation"></a>Opóźnienie operacji
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje daną operację z opóźnieniem.
 
 ```qsharp
-operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit
+operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit is Adj
 ```
 
 
@@ -36,7 +36,7 @@ Wyrażenie `Delay(op,arg,_)` umożliwia opóźnienie aplikacji `op` .
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="op--t--unit-adj"></a>op: 'T => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>op: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja, która ma zostać zastosowana.
 
