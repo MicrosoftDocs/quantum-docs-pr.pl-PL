@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math._ContinuedFractionConvergentI
 title: Funkcja _ContinuedFractionConvergentI
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: _ContinuedFractionConvergentI
 qsharp.summary: Internal recursive call to calculate the GCD with a bound
-ms.openlocfilehash: 849c3f72fe4c82d7256e91f07af284217f998a63
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 337ef5e90f98b3529ccda628abe203d391877646
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723412"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211512"
 ---
 # <a name="_continuedfractionconvergenti-function"></a>Funkcja _ContinuedFractionConvergentI
 
 Przestrzeń nazw: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wewnętrzne wywołanie cykliczne do obliczania GCD z powiązaniem
