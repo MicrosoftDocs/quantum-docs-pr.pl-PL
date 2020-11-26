@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CY
 title: CY — operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the controlled-Y (CY) gate to a pair of qubits.
 
   $$ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & -i \\\\ 0 & 0 & i & 0 \end{align}, $$ where rows and columns are organized as in the quantum concepts guide.
-ms.openlocfilehash: 291891457ff39cf7092d17aa1d900dd0d35d9cf8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4a1a533421dd9205e973d5e8237d67b20bc4886d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716361"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216578"
 ---
 # <a name="cy-operation"></a>CY — operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje bramę kontrolowane-Y (CY) do pary qubits.
@@ -29,7 +29,7 @@ Stosuje bramę kontrolowane-Y (CY) do pary qubits.
 $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i \\ \\ 0 & 0 & i & 0 \end{align}, $ $, gdzie wiersze i kolumny są zorganizowane jak w przewodniku koncepcji Quantum.
 
 ```qsharp
-operation CY (control : Qubit, target : Qubit) : Unit
+operation CY (control : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 

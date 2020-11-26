@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.BoundCA
 title: BoundCA, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: BoundCA
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence. The modifier `CA` indicates that all operations in the array are adjointable and controllable.
-ms.openlocfilehash: d96d33781def10940479ba2eafdcc6711a0c05a5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 774a6f57566dce75b98290a7e81540b28afea1af
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216885"
 ---
 # <a name="boundca-function"></a>BoundCA, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dana tablica operacji działających na pojedynczym wejściu tworzy nową operację, która wykonuje każdą daną operację w sekwencji.
@@ -31,13 +31,13 @@ function BoundCA<'T> (operations : ('T => Unit is Adj + Ctl)[]) : ('T => Unit is
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="operations--t--unit-adj--ctl"></a>operacje: 'T => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL []
+### <a name="operations--t--unit--is-adj--ctl"></a>operacje: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą i listą CTL []
 
 Sekwencja operacji do wykonania na danym wejściu.
 
 
 
-## <a name="output--t--unit-adj--ctl"></a>Wynik: 'T => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+## <a name="output--t--unit--is-adj--ctl"></a>Wynik: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą i listą CTL
 
 Nowa operacja wykonująca każdą daną operację w sekwencji na jej wejściu.
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroCA
 title: ApplyIfZeroCA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being zero.
-ms.openlocfilehash: 85612bd3dd7af45b7901fef775a7d556eb229608
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4baae1fe7d615cbbf01935b4eca05fe947ff296e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718004"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218465"
 ---
 # <a name="applyifzeroca-operation"></a>ApplyIfZeroCA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje operację jednostkową warunkową dla klasycznej wartości wynikowej równej zero.
 
 ```qsharp
-operation ApplyIfZeroCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit
+operation ApplyIfZeroCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Sufiks `CA` wskazuje, że operacja ma zostać zastosowana, jest jednostką (ster
 Wynik pomiaru, który kontroluje, czy operacja jest stosowana, czy nie.
 
 
-### <a name="op--t--unit-adj--ctl"></a>op: 'T => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>op: 'R => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL
 
 Operacja, która ma być stosowana warunkowo.
 

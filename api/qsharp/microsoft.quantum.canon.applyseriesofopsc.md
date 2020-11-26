@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsC
 title: ApplySeriesOfOpsC, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsC
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Controlled)
-ms.openlocfilehash: d909aadbfe86f6d1314e9be5434249c40932ae4a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eaa0ea3e33cce708af5879cfbe875397fbb82a8a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717649"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217938"
 ---
 # <a name="applyseriesofopsc-operation"></a>ApplySeriesOfOpsC, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje listę operacji Ops i ich obiekty docelowe sekwencyjnie na tablicy. Kontrolowane
 
 ```qsharp
-operation ApplySeriesOfOpsC<'T> (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit
+operation ApplySeriesOfOpsC<'T> (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="listofops--t--unit-ctl"></a>listOfOps: t [] => CTL [jednostki](xref:microsoft.quantum.lang-ref.unit) []
+### <a name="listofops--t--unit--is-ctl"></a>listOfOps: t [] = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest listą CTL []
 
 Lista operacji, z których każda pobiera tablicę, która ma zostać zastosowana. Są one stosowane sekwencyjnie, najpierw najniższy indeks.
 Każdy z nich musi mieć kontrolowany Funktor

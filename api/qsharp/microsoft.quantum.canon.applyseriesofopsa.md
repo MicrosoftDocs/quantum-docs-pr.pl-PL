@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsA
 title: ApplySeriesOfOpsA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsA
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Adjoint)
-ms.openlocfilehash: e2b928fa4c9446e16d2bf5e7b68a32d4bba3a528
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e5b3527507f79dcc77803ce01472856145df0e9f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717654"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217972"
 ---
 # <a name="applyseriesofopsa-operation"></a>ApplySeriesOfOpsA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje listę operacji Ops i ich obiekty docelowe sekwencyjnie na tablicy. (Sąsiadujący)
 
 ```qsharp
-operation ApplySeriesOfOpsA<'T> (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit
+operation ApplySeriesOfOpsA<'T> (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="listofops--t--unit-adj"></a>listOfOps: t [] => korektę [jednostki](xref:microsoft.quantum.lang-ref.unit) []
+### <a name="listofops--t--unit--is-adj"></a>listOfOps: t [] = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą []
 
 Lista operacji, z których każda pobiera tablicę, która ma zostać zastosowana. Są one stosowane sekwencyjnie, najpierw najniższy indeks.
 Każdy element musi mieć przyległych Funktor
