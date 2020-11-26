@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace
 title: ApplyMajorityInPlace, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyMajorityInPlace
 qsharp.summary: Applies the three-qubit majority operation in-place on a register of qubits.
-ms.openlocfilehash: 3664ffe96cd1db8cf5e8898387fe7f2d45b4ea98
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c32d7546fb753f78a72479cec11a6ed09c5e6179
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721596"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190738"
 ---
 # <a name="applymajorityinplace-operation"></a>ApplyMajorityInPlace, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje qubit większość operacji w miejscu rejestracji qubits.
 
 ```qsharp
-operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit
+operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

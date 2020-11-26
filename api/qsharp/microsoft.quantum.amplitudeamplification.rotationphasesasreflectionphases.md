@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
 title: RotationPhasesAsReflectionPhases, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: RotationPhasesAsReflectionPhases
 qsharp.summary: Converts phases specified as single-qubit rotations to phases specified as partial reflections.
-ms.openlocfilehash: d62a7584324c9467ccc759e4bed81acbceee719c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6e601cfd867b449d628da7cd60dfacd465e48860
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721755"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191197"
 ---
 # <a name="rotationphasesasreflectionphases-function"></a>RotationPhasesAsReflectionPhases, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Konwertuje fazy określone jako rotacje pojedynczej qubit na fazy określone jako częściowe odbicia.
@@ -40,7 +40,7 @@ Tablica rotacji z pojedynczą qubitą do przekonwertowania na częściowe odbici
 
 Operacja implementująca fazy określone jako częściowe odbicia.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 Używamy Konwencji w
 
