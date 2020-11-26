@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.X
 title: Operacja X
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,37 +10,37 @@ qsharp.summary: >-
   Applies the Pauli $X$ gate.
 
   \begin{align} \sigma_x \mathrel{:=} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}. \end{align}
-ms.openlocfilehash: 30e5473f86078860e53a157356bab10f766213f2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: df338ce0892a75f2885e26dba10030768d99040f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720840"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198507"
 ---
-# <a name="x-operation"></a><span data-ttu-id="71a2f-102">Operacja X</span><span class="sxs-lookup"><span data-stu-id="71a2f-102">X operation</span></span>
+# <a name="x-operation"></a><span data-ttu-id="8fae1-102">Operacja X</span><span class="sxs-lookup"><span data-stu-id="8fae1-102">X operation</span></span>
 
-<span data-ttu-id="71a2f-103">Przestrzeń nazw: [Microsoft. Quantum. wewnętrzna](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="71a2f-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
+<span data-ttu-id="8fae1-103">Przestrzeń nazw: [Microsoft. Quantum. wewnętrzna](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="8fae1-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
 
-<span data-ttu-id="71a2f-104">Package [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="71a2f-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="8fae1-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="8fae1-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="71a2f-105">Stosuje bramę Pauli $X $.</span><span class="sxs-lookup"><span data-stu-id="71a2f-105">Applies the Pauli $X$ gate.</span></span>
+<span data-ttu-id="8fae1-105">Stosuje bramę Pauli $X $.</span><span class="sxs-lookup"><span data-stu-id="8fae1-105">Applies the Pauli $X$ gate.</span></span>
 
-<span data-ttu-id="71a2f-106">\begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}.</span><span class="sxs-lookup"><span data-stu-id="71a2f-106">\begin{align} \sigma_x \mathrel{:=} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.</span></span>
-<span data-ttu-id="71a2f-107">\end{align}</span><span class="sxs-lookup"><span data-stu-id="71a2f-107">\end{align}</span></span>
+<span data-ttu-id="8fae1-106">\begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}.</span><span class="sxs-lookup"><span data-stu-id="8fae1-106">\begin{align} \sigma_x \mathrel{:=} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.</span></span>
+<span data-ttu-id="8fae1-107">\end{align}</span><span class="sxs-lookup"><span data-stu-id="8fae1-107">\end{align}</span></span>
 
 ```qsharp
-operation X (qubit : Qubit) : Unit
+operation X (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="71a2f-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="71a2f-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="8fae1-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="8fae1-108">Input</span></span>
 
-### <a name="qubit--qubit"></a><span data-ttu-id="71a2f-109">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="71a2f-109">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="qubit--qubit"></a><span data-ttu-id="8fae1-109">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="8fae1-109">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-<span data-ttu-id="71a2f-110">Qubit, do którego należy zastosować bramę.</span><span class="sxs-lookup"><span data-stu-id="71a2f-110">Qubit to which the gate should be applied.</span></span>
+<span data-ttu-id="8fae1-110">Qubit, do którego należy zastosować bramę.</span><span class="sxs-lookup"><span data-stu-id="8fae1-110">Qubit to which the gate should be applied.</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="71a2f-111">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="71a2f-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="8fae1-111">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="8fae1-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
