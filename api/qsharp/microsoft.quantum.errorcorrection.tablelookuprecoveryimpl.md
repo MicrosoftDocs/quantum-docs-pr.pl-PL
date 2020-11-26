@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecoveryImpl
 title: TableLookupRecoveryImpl, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: TableLookupRecoveryImpl
 qsharp.summary: ''
-ms.openlocfilehash: 520454a51301eceb391fdd413067b0f09d1ee3c4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8b6528a40052dc62773f0991c145450751d2dd53
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712040"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200292"
 ---
-# <a name="tablelookuprecoveryimpl-function"></a><span data-ttu-id="ead9d-102">TableLookupRecoveryImpl, funkcja</span><span class="sxs-lookup"><span data-stu-id="ead9d-102">TableLookupRecoveryImpl function</span></span>
+# <a name="tablelookuprecoveryimpl-function"></a><span data-ttu-id="0a3d1-102">TableLookupRecoveryImpl, funkcja</span><span class="sxs-lookup"><span data-stu-id="0a3d1-102">TableLookupRecoveryImpl function</span></span>
 
-<span data-ttu-id="ead9d-103">Przestrzeń nazw: [Microsoft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span><span class="sxs-lookup"><span data-stu-id="ead9d-103">Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span></span>
+<span data-ttu-id="0a3d1-103">Przestrzeń nazw: [Microsoft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span><span class="sxs-lookup"><span data-stu-id="0a3d1-103">Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span></span>
 
-<span data-ttu-id="ead9d-104">Package [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="ead9d-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="0a3d1-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="0a3d1-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
@@ -28,18 +28,18 @@ function TableLookupRecoveryImpl (table : Pauli[][], syndrome : Microsoft.Quantu
 ```
 
 
-## <a name="input"></a><span data-ttu-id="ead9d-105">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="ead9d-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="0a3d1-105">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="0a3d1-105">Input</span></span>
 
-### <a name="table--pauli"></a><span data-ttu-id="ead9d-106">Tabela: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[] []</span><span class="sxs-lookup"><span data-stu-id="ead9d-106">table : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[][]</span></span>
-
-
-
-
-### <a name="syndrome--syndrome"></a><span data-ttu-id="ead9d-107">Syndrome: [Syndrome](xref:Microsoft.Quantum.ErrorCorrection.Syndrome)</span><span class="sxs-lookup"><span data-stu-id="ead9d-107">syndrome : [Syndrome](xref:Microsoft.Quantum.ErrorCorrection.Syndrome)</span></span>
+### <a name="table--pauli"></a><span data-ttu-id="0a3d1-106">Tabela: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[] []</span><span class="sxs-lookup"><span data-stu-id="0a3d1-106">table : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[][]</span></span>
 
 
 
 
+### <a name="syndrome--syndrome"></a><span data-ttu-id="0a3d1-107">Syndrome: [Syndrome](xref:Microsoft.Quantum.ErrorCorrection.Syndrome)</span><span class="sxs-lookup"><span data-stu-id="0a3d1-107">syndrome : [Syndrome](xref:Microsoft.Quantum.ErrorCorrection.Syndrome)</span></span>
 
-## <a name="output--pauli"></a><span data-ttu-id="ead9d-108">Wynik: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span><span class="sxs-lookup"><span data-stu-id="ead9d-108">Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span></span>
+
+
+
+
+## <a name="output--pauli"></a><span data-ttu-id="0a3d1-108">Wynik: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span><span class="sxs-lookup"><span data-stu-id="0a3d1-108">Output : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span></span>
 

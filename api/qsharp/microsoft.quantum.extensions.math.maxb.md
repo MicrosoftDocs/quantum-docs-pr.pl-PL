@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.MaxB
 title: MaxB, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.maxl".
-ms.openlocfilehash: c74fe68a79c27f7a4f7b460a37ca25aa903a429c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4b5c9b171a28a052086191d79b99b2130bd2d703
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199578"
 ---
-# <a name="maxb-function"></a><span data-ttu-id="a553c-102">MaxB, funkcja</span><span class="sxs-lookup"><span data-stu-id="a553c-102">MaxB function</span></span>
+# <a name="maxb-function"></a><span data-ttu-id="c18f3-102">MaxB, funkcja</span><span class="sxs-lookup"><span data-stu-id="c18f3-102">MaxB function</span></span>
 
-<span data-ttu-id="a553c-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="a553c-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="c18f3-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="c18f3-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="a553c-104">Package [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="a553c-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="c18f3-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="c18f3-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="a553c-105">MaxB jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="a553c-105">MaxB has been deprecated.</span></span> <span data-ttu-id="a553c-106">Użyj <xref:Microsoft.Quantum.Math.MaxL> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="a553c-106">Please use <xref:Microsoft.Quantum.Math.MaxL> instead.</span></span>
+> <span data-ttu-id="c18f3-105">MaxB jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="c18f3-105">MaxB has been deprecated.</span></span> <span data-ttu-id="c18f3-106">Użyj <xref:Microsoft.Quantum.Math.MaxL> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="c18f3-106">Please use <xref:Microsoft.Quantum.Math.MaxL> instead.</span></span>
 >
-> <span data-ttu-id="a553c-107">Używaj @"microsoft.quantum.math.maxl".</span><span class="sxs-lookup"><span data-stu-id="a553c-107">Please use @"microsoft.quantum.math.maxl".</span></span>
+> <span data-ttu-id="c18f3-107">Używaj @"microsoft.quantum.math.maxl".</span><span class="sxs-lookup"><span data-stu-id="c18f3-107">Please use @"microsoft.quantum.math.maxl".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function MaxB (a : BigInt, b : BigInt) : BigInt
 ```
 
 
-## <a name="input"></a><span data-ttu-id="a553c-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="a553c-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="c18f3-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="c18f3-108">Input</span></span>
 
-### <a name="a--bigint"></a><span data-ttu-id="a553c-109">Odp.: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="a553c-109">a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
-
-
-
-
-### <a name="b--bigint"></a><span data-ttu-id="a553c-110">b: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="a553c-110">b : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+### <a name="a--bigint"></a><span data-ttu-id="c18f3-109">Odp.: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="c18f3-109">a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
 
 
 
+### <a name="b--bigint"></a><span data-ttu-id="c18f3-110">b: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="c18f3-110">b : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
-## <a name="output--bigint"></a><span data-ttu-id="a553c-111">Dane wyjściowe: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="a553c-111">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+
+
+
+
+## <a name="output--bigint"></a><span data-ttu-id="c18f3-111">Dane wyjściowe: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="c18f3-111">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
