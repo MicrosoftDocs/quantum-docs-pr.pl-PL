@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.And
 title: And — funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.and".
-ms.openlocfilehash: 2172e96052a3bbcf524a35fe5b507e2281c1d7cf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eabc656fdf34711e2feb5152f82543a2937dc33a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712035"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213637"
 ---
-# <a name="and-function"></a><span data-ttu-id="21036-102">And — funkcja</span><span class="sxs-lookup"><span data-stu-id="21036-102">And function</span></span>
+# <a name="and-function"></a><span data-ttu-id="ff60a-102">And — funkcja</span><span class="sxs-lookup"><span data-stu-id="ff60a-102">And function</span></span>
 
-<span data-ttu-id="21036-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. bitowe](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="21036-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
+<span data-ttu-id="ff60a-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. bitowe](xref:Microsoft.Quantum.Extensions.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="ff60a-103">Namespace: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)</span></span>
 
-<span data-ttu-id="21036-104">Package [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="21036-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="ff60a-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ff60a-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="21036-105">I został uznany za przestarzały.</span><span class="sxs-lookup"><span data-stu-id="21036-105">And has been deprecated.</span></span> <span data-ttu-id="21036-106">Użyj <xref:Microsoft.Quantum.Bitwise.And> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="21036-106">Please use <xref:Microsoft.Quantum.Bitwise.And> instead.</span></span>
+> <span data-ttu-id="ff60a-105">I został uznany za przestarzały.</span><span class="sxs-lookup"><span data-stu-id="ff60a-105">And has been deprecated.</span></span> <span data-ttu-id="ff60a-106">Użyj <xref:Microsoft.Quantum.Bitwise.And> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="ff60a-106">Please use <xref:Microsoft.Quantum.Bitwise.And> instead.</span></span>
 >
-> <span data-ttu-id="21036-107">Używaj @"microsoft.quantum.bitwise.and".</span><span class="sxs-lookup"><span data-stu-id="21036-107">Please use @"microsoft.quantum.bitwise.and".</span></span>
+> <span data-ttu-id="ff60a-107">Używaj @"microsoft.quantum.bitwise.and".</span><span class="sxs-lookup"><span data-stu-id="ff60a-107">Please use @"microsoft.quantum.bitwise.and".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function And (a : Int, b : Int) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="21036-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="21036-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ff60a-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="ff60a-108">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="21036-109">Odp.: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="21036-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="b--int"></a><span data-ttu-id="21036-110">b: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="21036-110">b : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="a--int"></a><span data-ttu-id="ff60a-109">Odp.: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ff60a-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
+### <a name="b--int"></a><span data-ttu-id="ff60a-110">b: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ff60a-110">b : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--int"></a><span data-ttu-id="21036-111">Wynik: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="21036-111">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+## <a name="output--int"></a><span data-ttu-id="ff60a-111">Wynik: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ff60a-111">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 

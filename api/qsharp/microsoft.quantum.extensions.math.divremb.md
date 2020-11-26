@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.DivRemB
 title: DivRemB, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.divreml".
-ms.openlocfilehash: 1e7cd05bd502aed48903f7ce81efa44576d2c4de
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8e6d6196de8d3e4ef031a0b6a938feddd78d1599
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710346"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213076"
 ---
-# <a name="divremb-function"></a><span data-ttu-id="03519-102">DivRemB, funkcja</span><span class="sxs-lookup"><span data-stu-id="03519-102">DivRemB function</span></span>
+# <a name="divremb-function"></a><span data-ttu-id="b8f59-102">DivRemB, funkcja</span><span class="sxs-lookup"><span data-stu-id="b8f59-102">DivRemB function</span></span>
 
-<span data-ttu-id="03519-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="03519-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="b8f59-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="b8f59-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="03519-104">Package [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="03519-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="b8f59-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="b8f59-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="03519-105">DivRemB jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="03519-105">DivRemB has been deprecated.</span></span> <span data-ttu-id="03519-106">Użyj <xref:Microsoft.Quantum.Math.DivRemL> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="03519-106">Please use <xref:Microsoft.Quantum.Math.DivRemL> instead.</span></span>
+> <span data-ttu-id="b8f59-105">DivRemB jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="b8f59-105">DivRemB has been deprecated.</span></span> <span data-ttu-id="b8f59-106">Użyj <xref:Microsoft.Quantum.Math.DivRemL> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="b8f59-106">Please use <xref:Microsoft.Quantum.Math.DivRemL> instead.</span></span>
 >
-> <span data-ttu-id="03519-107">Używaj @"microsoft.quantum.math.divreml".</span><span class="sxs-lookup"><span data-stu-id="03519-107">Please use @"microsoft.quantum.math.divreml".</span></span>
+> <span data-ttu-id="b8f59-107">Używaj @"microsoft.quantum.math.divreml".</span><span class="sxs-lookup"><span data-stu-id="b8f59-107">Please use @"microsoft.quantum.math.divreml".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function DivRemB (dividend : BigInt, divisor : BigInt) : (BigInt, BigInt)
 ```
 
 
-## <a name="input"></a><span data-ttu-id="03519-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="03519-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="b8f59-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="b8f59-108">Input</span></span>
 
-### <a name="dividend--bigint"></a><span data-ttu-id="03519-109">dzielna: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="03519-109">dividend : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
-
-
-
-
-### <a name="divisor--bigint"></a><span data-ttu-id="03519-110">dzielnik: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="03519-110">divisor : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+### <a name="dividend--bigint"></a><span data-ttu-id="b8f59-109">dzielna: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="b8f59-109">dividend : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
 
 
 
+### <a name="divisor--bigint"></a><span data-ttu-id="b8f59-110">dzielnik: [bigint](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="b8f59-110">divisor : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
-## <a name="output--bigintbigint"></a><span data-ttu-id="03519-111">Wynik: ([bigint](xref:microsoft.quantum.lang-ref.bigint),[bigint](xref:microsoft.quantum.lang-ref.bigint))</span><span class="sxs-lookup"><span data-stu-id="03519-111">Output : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[BigInt](xref:microsoft.quantum.lang-ref.bigint))</span></span>
+
+
+
+
+## <a name="output--bigintbigint"></a><span data-ttu-id="b8f59-111">Wynik: ([bigint](xref:microsoft.quantum.lang-ref.bigint),[bigint](xref:microsoft.quantum.lang-ref.bigint))</span><span class="sxs-lookup"><span data-stu-id="b8f59-111">Output : ([BigInt](xref:microsoft.quantum.lang-ref.bigint),[BigInt](xref:microsoft.quantum.lang-ref.bigint))</span></span>
 
