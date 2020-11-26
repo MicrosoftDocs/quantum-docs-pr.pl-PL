@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Oracles.ReflectionOracleFromDeterministicStateOracle
 title: ReflectionOracleFromDeterministicStateOracle, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ReflectionOracleFromDeterministicStateOracle
 qsharp.summary: Constructs reflection about a given state from an oracle.
-ms.openlocfilehash: c2d37216aebcdc5243d0f1d6ec9db261cc9bd0c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 09de63d615a4d80e2b59deeddc07567aefe7660e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722180"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193832"
 ---
 # <a name="reflectionoraclefromdeterministicstateoracle-function"></a>ReflectionOracleFromDeterministicStateOracle, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Oracles](xref:Microsoft.Quantum.Oracles)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tworzy odbicie dotyczące danego stanu z bazy danych Oracle.

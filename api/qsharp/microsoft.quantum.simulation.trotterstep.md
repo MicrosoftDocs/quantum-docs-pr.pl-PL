@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterStep
 title: TrotterStep, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TrotterStep
 qsharp.summary: Implements a single time-step of time-evolution by the system described in an `EvolutionGenerator` using a Trotter–Suzuki decomposition.
-ms.openlocfilehash: 7a1a27ba4dc4b8b7bbc4da6a378d4a1494bc9415
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 516b40ac9920a4a8acc09ad7f558db88dbeb41e8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725353"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192812"
 ---
 # <a name="trotterstep-function"></a>TrotterStep, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Symulacja](xref:Microsoft.Quantum.Simulation)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementuje jednokrotne przechodzenie czasowe przez system opisany w `EvolutionGenerator` Trotter – Suzuki dekompozycji.
@@ -46,7 +46,7 @@ Czas trwania symulowanego czasu rozwoju w jednym kroku Trotter.
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Output: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+## <a name="output--qubit--unit--is-adj--ctl"></a>Output: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [Jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą i listą CTL
 
 Operacja jednostkowa, która przybliża jeden etap ewolucji czasu trwania `trotterStepSize` .
 

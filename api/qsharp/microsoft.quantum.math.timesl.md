@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.TimesL
 title: Funkcja Times
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: TimesL
 qsharp.summary: Returns the product of two inputs.
-ms.openlocfilehash: 749999af8f34b65bb43c7f99b304531c095cfacb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 095d408c674cae5f46a6fb1c1d8f4d7dba0d84e7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194291"
 ---
 # <a name="timesl-function"></a>Funkcja Times
 
 Przestrzeń nazw: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Zwraca iloczyn dwóch danych wejściowych.

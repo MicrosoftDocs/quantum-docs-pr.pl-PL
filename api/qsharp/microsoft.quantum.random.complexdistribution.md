@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.ComplexDistribution
 title: ComplexDistribution typ zdefiniowany przez użytkownika
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ComplexDistribution
 qsharp.summary: Represents a univariate probability distribution over complex numbers.
-ms.openlocfilehash: eb66284694a69d3e14713b067d212cd37d1acab8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 660ebd43ffc1ce25f070716c936ec15ed54bd5dc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722810"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193152"
 ---
 # <a name="complexdistribution-user-defined-type"></a>ComplexDistribution typ zdefiniowany przez użytkownika
 
 Przestrzeń nazw: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Reprezentuje rozkład prawdopodobieństwa univariate dla liczb zespolonych.
