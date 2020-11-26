@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
 title: SingleQubitProcessTomographyMeasurement, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: SingleQubitProcessTomographyMeasurement
 qsharp.summary: Performs a single-qubit process tomography measurement in the Pauli basis, given a particular channel of interest.
-ms.openlocfilehash: 34e5143d5be316ee42a63124d35475949db0a692
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3756040df8e34ecee1e968428b08387e0096ab7b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714924"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204202"
 ---
 # <a name="singlequbitprocesstomographymeasurement-operation"></a>SingleQubitProcessTomographyMeasurement, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. charakteryzującą](xref:Microsoft.Quantum.Characterization)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Wykonuje pojedynczy qubit proces pomiaru Tomography w bazie Pauli, z uwzględnieniem konkretnego kanału zainteresowania.

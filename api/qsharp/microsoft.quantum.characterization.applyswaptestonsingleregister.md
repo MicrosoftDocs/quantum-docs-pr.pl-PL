@@ -1,41 +1,41 @@
 ---
 uid: Microsoft.Quantum.Characterization.ApplySwapTestOnSingleRegister
 title: ApplySwapTestOnSingleRegister, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: ApplySwapTestOnSingleRegister
 qsharp.summary: ''
-ms.openlocfilehash: 29f43e676da15c152df67bdfb3563d0874ffd730
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b35663c282d00ca91bb00967fdeb9715114f959e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715092"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204406"
 ---
 # <a name="applyswaptestonsingleregister-operation"></a>ApplySwapTestOnSingleRegister, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. charakteryzującą](xref:Microsoft.Quantum.Characterization)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplySwapTestOnSingleRegister (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), register : Qubit[]) : Unit
+operation ApplySwapTestOnSingleRegister (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), register : Qubit[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="preparation1--qubit--unit-adj"></a>preparation1: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="preparation1--qubit--unit--is-adj"></a>preparation1: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [Jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 
 
 
-### <a name="preparation2--qubit--unit-adj"></a>preparation2: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="preparation2--qubit--unit--is-adj"></a>preparation2: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [Jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 
 
