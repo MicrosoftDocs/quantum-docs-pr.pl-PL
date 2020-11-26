@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.CombinedStructure
 title: CombinedStructure, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: CombinedStructure
 qsharp.summary: Given one or more layers of controlled rotations, returns a single layer with model parameter index shifted such that distinct layers are parameterized by distinct model parameters.
-ms.openlocfilehash: fbfd87761a40abe350e5f955fb53d8024eeb614e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0a7d66be8b45d6a9df95b425e66b9b6bba241136
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720516"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211971"
 ---
 # <a name="combinedstructure-function"></a>CombinedStructure, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 W przypadku co najmniej jednej warstwy sterowanych obrotów funkcja zwraca jedną warstwę z indeksem parametru modelu przesuniętą w taki sposób, że odrębne warstwy są sparametryzowane według odrębnych parametrów modelu.

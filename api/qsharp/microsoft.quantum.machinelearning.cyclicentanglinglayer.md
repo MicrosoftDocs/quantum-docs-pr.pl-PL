@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
 title: CyclicEntanglingLayer, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: CyclicEntanglingLayer
 qsharp.summary: Returns an array of singly controlled rotations along a given axis, arranged cyclically across a register of qubits, and parameterized by distinct model parameters.
-ms.openlocfilehash: 6e0f5057b35baefe2677126ba70ee4fddde7d4db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5421765e36ef3e8e744e118206dafcb2bb582cc2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720513"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211937"
 ---
 # <a name="cyclicentanglinglayer-function"></a>CyclicEntanglingLayer, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Zwraca tablicę z pojedynczo kontrolowanymi obrotami wzdłuż danej osi, ułożone cyklicznie w rejestrze qubits i sparametryzowane według odrębnych parametrów modelu.
