@@ -1,59 +1,59 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderNoCarryTTK
 title: RippleCarryAdderNoCarryTTK, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderNoCarryTTK
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers without carry out.
-ms.openlocfilehash: 59451b4f5c992f900a27139332059af7427b9b93
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a539d85a4800c2f4452a1c6fe2c4f88a6296c3e1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719580"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222001"
 ---
-# <a name="ripplecarryaddernocarryttk-operation"></a><span data-ttu-id="bc4cb-102">RippleCarryAdderNoCarryTTK, operacja</span><span class="sxs-lookup"><span data-stu-id="bc4cb-102">RippleCarryAdderNoCarryTTK operation</span></span>
+# <a name="ripplecarryaddernocarryttk-operation"></a><span data-ttu-id="1e773-102">RippleCarryAdderNoCarryTTK, operacja</span><span class="sxs-lookup"><span data-stu-id="1e773-102">RippleCarryAdderNoCarryTTK operation</span></span>
 
-<span data-ttu-id="bc4cb-103">Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)</span><span class="sxs-lookup"><span data-stu-id="bc4cb-103">Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span></span>
+<span data-ttu-id="1e773-103">Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)</span><span class="sxs-lookup"><span data-stu-id="1e773-103">Namespace: [Microsoft.Quantum.Arithmetic](xref:Microsoft.Quantum.Arithmetic)</span></span>
 
-<span data-ttu-id="bc4cb-104">Package [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="bc4cb-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="1e773-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="1e773-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="bc4cb-105">Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych bez przeprowadzenia.</span><span class="sxs-lookup"><span data-stu-id="bc4cb-105">Reversible, in-place ripple-carry addition of two integers without carry out.</span></span>
+<span data-ttu-id="1e773-105">Odwracalny, w miejscu Ripple — Dodawanie dwóch liczb całkowitych bez przeprowadzenia.</span><span class="sxs-lookup"><span data-stu-id="1e773-105">Reversible, in-place ripple-carry addition of two integers without carry out.</span></span>
 
 ```qsharp
-operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a><span data-ttu-id="bc4cb-106">Opis</span><span class="sxs-lookup"><span data-stu-id="bc4cb-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="1e773-106">Opis</span><span class="sxs-lookup"><span data-stu-id="1e773-106">Description</span></span>
 
-<span data-ttu-id="bc4cb-107">W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys` , operacja oblicza sumę dwóch liczb całkowitych modulo $2 ^ n $, gdzie $n $ jest rozmiarem bitowym danych wejściowych `xs` i `ys` .</span><span class="sxs-lookup"><span data-stu-id="bc4cb-107">Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`, the operation computes the sum of the two integers modulo $2^n$, where $n$ is the bit size of the inputs `xs` and `ys`.</span></span> <span data-ttu-id="bc4cb-108">Nie jest obliczany bit przeprowadzenia.</span><span class="sxs-lookup"><span data-stu-id="bc4cb-108">It does not compute the carry out bit.</span></span>
+<span data-ttu-id="1e773-107">W przypadku dwóch $n $-bitowych liczb całkowitych zakodowanych w rejestrach LittleEndian `xs` i `ys` , operacja oblicza sumę dwóch liczb całkowitych modulo $2 ^ n $, gdzie $n $ jest rozmiarem bitowym danych wejściowych `xs` i `ys` .</span><span class="sxs-lookup"><span data-stu-id="1e773-107">Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`, the operation computes the sum of the two integers modulo $2^n$, where $n$ is the bit size of the inputs `xs` and `ys`.</span></span> <span data-ttu-id="1e773-108">Nie jest obliczany bit przeprowadzenia.</span><span class="sxs-lookup"><span data-stu-id="1e773-108">It does not compute the carry out bit.</span></span>
 
-## <a name="input"></a><span data-ttu-id="bc4cb-109">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="bc4cb-109">Input</span></span>
+## <a name="input"></a><span data-ttu-id="1e773-109">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="1e773-109">Input</span></span>
 
-### <a name="xs--littleendian"></a><span data-ttu-id="bc4cb-110">XS: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="bc4cb-110">xs : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="xs--littleendian"></a><span data-ttu-id="1e773-110">XS: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="1e773-110">xs : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-<span data-ttu-id="bc4cb-111">LittleEndian qubit rejestruje pierwszą liczbę całkowitą summand.</span><span class="sxs-lookup"><span data-stu-id="bc4cb-111">LittleEndian qubit register encoding the first integer summand.</span></span>
-
-
-### <a name="ys--littleendian"></a><span data-ttu-id="bc4cb-112">YS: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="bc4cb-112">ys : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
-
-<span data-ttu-id="bc4cb-113">LittleEndian qubit rejestru kodowanie drugiej wartości całkowitej summand, jest modyfikowany do przechowywania $n $ najmniej znaczących bitów sum.</span><span class="sxs-lookup"><span data-stu-id="bc4cb-113">LittleEndian qubit register encoding the second integer summand, is modified to hold the $n$ least significant bits of the sum.</span></span>
+<span data-ttu-id="1e773-111">LittleEndian qubit rejestruje pierwszą liczbę całkowitą summand.</span><span class="sxs-lookup"><span data-stu-id="1e773-111">LittleEndian qubit register encoding the first integer summand.</span></span>
 
 
+### <a name="ys--littleendian"></a><span data-ttu-id="1e773-112">YS: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="1e773-112">ys : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="bc4cb-114">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="bc4cb-114">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="1e773-113">LittleEndian qubit rejestru kodowanie drugiej wartości całkowitej summand, jest modyfikowany do przechowywania $n $ najmniej znaczących bitów sum.</span><span class="sxs-lookup"><span data-stu-id="1e773-113">LittleEndian qubit register encoding the second integer summand, is modified to hold the $n$ least significant bits of the sum.</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="bc4cb-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bc4cb-115">Remarks</span></span>
+## <a name="output--unit"></a><span data-ttu-id="1e773-114">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="1e773-114">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="bc4cb-116">Ta operacja ma takie same funkcje jak RippleCarryAdderTTK, ale nie zwraca bitu przenoszenia.</span><span class="sxs-lookup"><span data-stu-id="bc4cb-116">This operation has the same functionality as RippleCarryAdderTTK but does not return the carry bit.</span></span>
 
-## <a name="references"></a><span data-ttu-id="bc4cb-117">Dokumentacja</span><span class="sxs-lookup"><span data-stu-id="bc4cb-117">References</span></span>
 
-- <span data-ttu-id="bc4cb-118">Yasuhiro Takahashi, Seiichiro tani, Noboru Kunihiro: "Podłączanie jednostek Quantum i niepowiązane wentylatory", informacje o Quantum i obliczenia, vol. 10, 2010.</span><span class="sxs-lookup"><span data-stu-id="bc4cb-118">Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum Addition Circuits and Unbounded Fan-Out", Quantum Information and Computation, Vol. 10, 2010.</span></span>
+## <a name="remarks"></a><span data-ttu-id="1e773-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1e773-115">Remarks</span></span>
+
+<span data-ttu-id="1e773-116">Ta operacja ma takie same funkcje jak RippleCarryAdderTTK, ale nie zwraca bitu przenoszenia.</span><span class="sxs-lookup"><span data-stu-id="1e773-116">This operation has the same functionality as RippleCarryAdderTTK but does not return the carry bit.</span></span>
+
+## <a name="references"></a><span data-ttu-id="1e773-117">Odwołania</span><span class="sxs-lookup"><span data-stu-id="1e773-117">References</span></span>
+
+- <span data-ttu-id="1e773-118">Yasuhiro Takahashi, Seiichiro tani, Noboru Kunihiro: "Podłączanie jednostek Quantum i niepowiązane wentylatory", informacje o Quantum i obliczenia, vol. 10, 2010.</span><span class="sxs-lookup"><span data-stu-id="1e773-118">Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum Addition Circuits and Unbounded Fan-Out", Quantum Information and Computation, Vol. 10, 2010.</span></span>
   https://arxiv.org/abs/0910.2530
