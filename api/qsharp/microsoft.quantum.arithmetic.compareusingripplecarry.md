@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry
 title: CompareUsingRippleCarry, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CompareUsingRippleCarry
 qsharp.summary: This operation tests if an integer represented by a register of qubits is greater than another integer, applying an XOR of the result onto an output qubit.
-ms.openlocfilehash: 842e7ded1e38f4f6e01e79d2758e30afb85dd349
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e2d6e5a663f8c4e101c7e2ab1346d10cade3f4e0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721272"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223463"
 ---
 # <a name="compareusingripplecarry-operation"></a>CompareUsingRippleCarry, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Ta operacja sprawdza, czy liczba całkowita reprezentowana przez rejestr qubits jest większa niż inna liczba całkowita, stosując XOR wyniku do qubit wyjściowego.
 
 ```qsharp
-operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit
+operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -56,6 +56,6 @@ Qubit, który przechowuje wynik porównania $x>y $.
 
 
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - Nowy program Quantum Ripple — przeniesienie obwodu dodawania Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184

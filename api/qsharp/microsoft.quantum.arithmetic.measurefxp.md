@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MeasureFxP
 title: MeasureFxP, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MeasureFxP
 qsharp.summary: Measure a fixed-point number, returns its value as Double, and resets all the register to zero.
-ms.openlocfilehash: 928d16f4e2d8515f9affe0126b0f7f61cfd4cf88
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 53a3ef3f3a92c160f7077e2ca25de83d5ecb22fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720984"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222715"
 ---
 # <a name="measurefxp-operation"></a>MeasureFxP, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Zmierz liczbę stałych punktów, zwraca jej wartość jako podwójną i resetuje wszystkie rejestry do zera.

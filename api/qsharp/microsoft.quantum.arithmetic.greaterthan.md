@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.GreaterThan
 title: GreaterThan, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: GreaterThan
 qsharp.summary: Applies a greater-than comparison between two integers encoded into qubit registers, flipping a target qubit based on the result of the comparison.
-ms.openlocfilehash: b7214b43dacd07b4750be4b681f30937185ac953
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 644d68affbdb508938f76de5025a1a463e7284e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721137"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223089"
 ---
 # <a name="greaterthan-operation"></a>GreaterThan, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje większe niż porównanie dwóch liczb całkowitych zakodowanych w rejestrach qubit, przerzucając docelowy qubit na podstawie wyniku porównania.
 
 ```qsharp
-operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit
+operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -58,7 +58,7 @@ Pojedyncze qubit, które zostaną przerzucone, jeśli $x > y $.
 
 Używa lew, która $x-y = (x ' + y) ' $, gdzie ' oznacza uzupełnienie jednego.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A New Quantum Ripple-przenieść obwód dodawania", 2004.
   https://arxiv.org/abs/quant-ph/0410184v1

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.EvaluateOddPolynomialFxP
 title: EvaluateOddPolynomialFxP, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: EvaluateOddPolynomialFxP
 qsharp.summary: Evaluates an odd polynomial in a fixed-point representation.
-ms.openlocfilehash: d52da4092f16d43ab9d08b03f798a4d6789c7348
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1bf9b6e7c416e994e70b93e5967caefd444f6426
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721197"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223225"
 ---
 # <a name="evaluateoddpolynomialfxp-operation"></a>EvaluateOddPolynomialFxP, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. arytmetyczna](xref:Microsoft.Quantum.Arithmetic)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Oblicza nieparzysty wielomian w reprezentacji ustalonej.
 
 ```qsharp
-operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 
