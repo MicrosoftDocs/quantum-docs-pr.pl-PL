@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.DividedByD
 title: DividedByD, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: DividedByD
 qsharp.summary: Returns the quotient of two inputs.
-ms.openlocfilehash: 383969e3b9a36efc66061c6449b4eeb2cdf0e344
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c94949ba0a93ab06b9f297267e5e311c104c6ba6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723790"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195583"
 ---
 # <a name="dividedbyd-function"></a>DividedByD, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Zwraca iloraz dwóch danych wejściowych.

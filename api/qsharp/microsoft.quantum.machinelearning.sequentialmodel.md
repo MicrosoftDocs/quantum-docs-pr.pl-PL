@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.SequentialModel
 title: SequentialModel typ zdefiniowany przez użytkownika
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: SequentialModel
 qsharp.summary: Describes a quantum classifier model composed of a sequence of parameterized and controlled rotations, an assignment of rotation angles, and a bias between the two classes recognized by the model.
-ms.openlocfilehash: a425d2155489384ca81ef1c00a5e842bcfb40ae7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3afdb8dafe0179535fe5d8c3dff668f1f3de2f7d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196178"
 ---
 # <a name="sequentialmodel-user-defined-type"></a>SequentialModel typ zdefiniowany przez użytkownika
 
 Przestrzeń nazw: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Opisuje model klasyfikatora Quantum składający się z sekwencji sparametryzowanej i kontrolowanej rotacji, przypisywania kątów obrotu oraz różnicy między dwiema klasami rozpoznawanymi przez model.
@@ -42,6 +42,6 @@ Przypisanie kątów obrotu do danej struktury klasyfikacji.
 
 Różnica między dwiema klasami rozpoznawanymi przez ten klasyfikator.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)
