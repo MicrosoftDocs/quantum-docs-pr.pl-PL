@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
 title: BlockEncodingByLCU, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Encodes an operator of interest into a `BlockEncoding`.
 
   This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of unitaries. Typically, $P$ is a state preparation unitary such that $P\ket{0}\_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$, and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
-ms.openlocfilehash: 04738aa54ce8b719b05954824e3553388a995df0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 254ace01750f94e6c871de9b62f1342000bc84ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724863"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229549"
 ---
 # <a name="blockencodingbylcu-function"></a>BlockEncodingByLCU, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Symulacja](xref:Microsoft.Quantum.Simulation)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Koduje operatora zainteresowania `BlockEncoding` .
@@ -35,18 +35,18 @@ function BlockEncodingByLCU<'T, 'S> (statePreparation : ('T => Unit is Adj + Ctl
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="statepreparation--t--unit-adj--ctl"></a>statePreparation: 'T => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="statepreparation--t--unit--is-adj--ctl"></a>statePreparation: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą i listą CTL
 
 Jednostkowy $P $, który przygotowuje jakiś stan docelowy.
 
 
-### <a name="selector--ts--unit-adj--ctl"></a>Selektor: (t,) => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="selector--ts--unit--is-adj--ctl"></a>Selektor: ('T,) => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL
 
 Jednostkowy $V $, który koduje składnik unitaries $H $.
 
 
 
-## <a name="output--ts--unit-adj--ctl"></a>Dane wyjściowe: (t,) => skorygowania [jednostki](xref:microsoft.quantum.lang-ref.unit) + CTL
+## <a name="output--ts--unit--is-adj--ctl"></a>Wynik: (t,) = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą i listą CTL
 
 Jednostkowe $U $ działające wspólnie z rejestrami `a` i tymi `s` , które zablokują $H $, i spełniają $U ^ \Dagger = U $.
 

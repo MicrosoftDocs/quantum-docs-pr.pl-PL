@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.IdentityGeneratorSystem
 title: IdentityGeneratorSystem, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: IdentityGeneratorSystem
 qsharp.summary: Returns a generator system consistent with the zero Hamiltonian `H = 0`, which corresponds to the identity evolution operation.
-ms.openlocfilehash: 251d0ae23a61d20f6d7a8d6b7c9f86f543886c52
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 64e0e5370b232474548487e0431fbbde9e759e68
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230569"
 ---
 # <a name="identitygeneratorsystem-function"></a>IdentityGeneratorSystem, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Symulacja](xref:Microsoft.Quantum.Simulation)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Zwraca System generatora spójny z zerem hamiltonian `H = 0` , który odpowiada operacji ewolucji tożsamości.

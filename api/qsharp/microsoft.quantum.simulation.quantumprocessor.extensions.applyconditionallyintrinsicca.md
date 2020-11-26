@@ -1,51 +1,51 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyIntrinsicCA
 title: ApplyConditionallyIntrinsicCA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyIntrinsicCA
 qsharp.summary: ''
-ms.openlocfilehash: 7cdddba45824d5e5037270d8578f2cb16c03be83
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2dd7a9b6e281c62470defa64685dc58872694468
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720132"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230195"
 ---
 # <a name="applyconditionallyintrinsicca-operation"></a>ApplyConditionallyIntrinsicCA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Symulacja. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyConditionallyIntrinsicCA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Ctl + Adj), onNonEqualOp : (Unit => Unit is Ctl + Adj)) : Unit
+operation ApplyConditionallyIntrinsicCA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Ctl + Adj), onNonEqualOp : (Unit => Unit is Ctl + Adj)) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="measurementresults--__invalidresult__"></a>measurementResults: __nieprawidłowy <Result>__ []
+### <a name="measurementresults--__invalidresult__"></a>measurementResults: __nieprawidłowy <Result>__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>resultsValues: __nieprawidłowy <Result>__ []
+### <a name="resultsvalues--__invalidresult__"></a>resultsValues: __nieprawidłowy <Result>__[]
 
 
 
 
-### <a name="onequalop--unit--unit-ctl--adj"></a>onEqualOp: [Unit](xref:microsoft.quantum.lang-ref.unit) jednostka => CTL i korekta [jednostki](xref:microsoft.quantum.lang-ref.unit) jednostki
+### <a name="onequalop--unit--unit--is-adj--ctl"></a>onEqualOp: jednostka [jednostkowa](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) to korekta i CTL
 
 
 
 
-### <a name="onnonequalop--unit--unit-ctl--adj"></a>onNonEqualOp: [Unit](xref:microsoft.quantum.lang-ref.unit) jednostka => CTL i korekta [jednostki](xref:microsoft.quantum.lang-ref.unit) jednostki
+### <a name="onnonequalop--unit--unit--is-adj--ctl"></a>onNonEqualOp: jednostka [jednostkowa](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) to korekta i CTL
 
 
 
