@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
 title: EqualityWithinToleranceFact, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityWithinToleranceFact
 qsharp.summary: Represents the claim that a classical floating point value has the expected value up to a given absolute tolerance.
-ms.openlocfilehash: de15a32d5b38c5ab8c681d2c052669a48cf676cc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ada2632974fddd6dd0fd8e4e6ab0866e4f29524
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712749"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201720"
 ---
 # <a name="equalitywithintolerancefact-function"></a>EqualityWithinToleranceFact, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Reprezentuje zastrzeżenie, że klasyczna wartość zmiennoprzecinkowa ma oczekiwaną wartość do odporności absolutnej.

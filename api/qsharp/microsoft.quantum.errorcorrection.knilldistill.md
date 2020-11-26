@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
 title: KnillDistill, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: KnillDistill
 qsharp.summary: Implements the Knill magic state distillation algorithm.
-ms.openlocfilehash: 1135db83cf750918347df10c6f1301b636aaee0c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: df00c7572d909a67ec658bc8dccaf0e338afe5c5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712278"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200751"
 ---
 # <a name="knilldistill-operation"></a>KnillDistill, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementuje algorytm Knillowania stanu Magic.
@@ -50,6 +50,6 @@ Przestrzegamy algorytmu Knill.
 Jednak Obecna implementacja jest daleko przed optymalną, ponieważ używa zbyt wielu qubits.
 Stany Magic są wstrzykiwane w tej procedurze, w tym przypadku są to lepsze protokoły.
 
-## <a name="references"></a>Dokumentacja
+## <a name="references"></a>Odwołania
 
 - [Knill](https://arxiv.org/abs/quant-ph/0402171)
