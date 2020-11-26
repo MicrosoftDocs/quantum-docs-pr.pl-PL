@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._Label
 title: Funkcja _Label
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _Label
 qsharp.summary: ''
-ms.openlocfilehash: ebfdea8e2d193cb9387d654b1b45167996a6255e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9f8442c08e96d6f0dcb18cb6379d44b233e92c9a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722567"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196875"
 ---
 # <a name="_label-function"></a>Funkcja _Label
 
 Przestrzeń nazw: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

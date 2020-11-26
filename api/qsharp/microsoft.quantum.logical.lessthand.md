@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanD
 title: LessThanD, funkcja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanD
 qsharp.summary: Returns true if and only if a number is less than another number.
-ms.openlocfilehash: 8cd274d5e299df2f556006baf7457d54aebcd071
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 40f059e49affbb1b5af7dc349f6ee53dfb357873
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197742"
 ---
 # <a name="lessthand-function"></a>LessThanD, funkcja
 
 Przestrzeń nazw: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Zwraca wartość true, jeśli i tylko wtedy, gdy liczba jest mniejsza od innej liczby.
