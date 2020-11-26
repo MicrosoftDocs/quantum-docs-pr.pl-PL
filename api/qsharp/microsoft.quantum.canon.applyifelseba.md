@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBA
 title: ApplyIfElseBA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical bit.
-ms.openlocfilehash: ce08907646c3210f76244f29aa0d936e2bd6ee43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74d43344481c5a808e84ce9c9e36fa3e83cd0d89
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718200"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218669"
 ---
 # <a name="applyifelseba-operation"></a>ApplyIfElseBA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje jedną z dwóch operacji przylegających, w zależności od wartości klasycznego bitu.
 
 ```qsharp
-operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit
+operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ Na przykład bit `bit` , stosuje operację `trueOp` wraz z `trueInput` jako dane
 Wartość logiczna służąca do określenia `trueOp` , czy `falseOp` ma zostać zastosowana.
 
 
-### <a name="trueop--t--unit-adj"></a>trueOp: 'T => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="trueop--t--unit--is-adj"></a>trueOp: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `true` .
 
@@ -49,7 +49,7 @@ Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `tru
 Dane wejściowe, które mają być dostarczone, `trueOp` gdy `bit` ma wartość `true` .
 
 
-### <a name="falseop--u--unit-adj"></a>falseOp: ' U => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="falseop--u--unit--is-adj"></a>falseOp: "U = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja przylegania, która ma zostać zastosowana, gdy `bit` ma wartość `false` .
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRA
 title: ApplyIfElseRA, operacja
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical result.
-ms.openlocfilehash: d0181d98a9867f71d8a8f8dea4331e5a13f9e59c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ebd09b1e5876ff397f3524ba828ba26a271e91e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718144"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218601"
 ---
 # <a name="applyifelsera-operation"></a>ApplyIfElseRA, operacja
 
 Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Package [](https://nuget.org/packages/)
+Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Stosuje jeden z dwóch operacji sąsiednich, w zależności od wartości klasycznego wyniku.
 
 ```qsharp
-operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit
+operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ W związku z `result` tym, stosuje operację `zeroOp` za pomocą `zeroInput` jak
 Wynik pomiaru służący do określenia `zeroOp` , czy lub `oneOp` ma zostać zastosowany.
 
 
-### <a name="zeroop--t--unit-adj"></a>zeroOp: 'T => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="zeroop--t--unit--is-adj"></a>zeroOp: t = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja sąsiedniego, która ma zostać zastosowana w przypadku `result == Zero` .
 
@@ -49,7 +49,7 @@ Operacja sąsiedniego, która ma zostać zastosowana w przypadku `result == Zero
 Dane wejściowe, które mają być dostarczone przez `zeroOp` `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj"></a>oneOp: ' U => korekta [jednostki](xref:microsoft.quantum.lang-ref.unit)
+### <a name="oneop--u--unit--is-adj"></a>oneOp: "U = [jednostka](xref:microsoft.quantum.lang-ref.unit) > jest korektą
 
 Operacja sąsiedniego, która ma zostać zastosowana w przypadku `result == One` .
 
