@@ -1,0 +1,20 @@
+- name: Instrukcje w języku Q#
+  href: index.md
+- name: Zakresy powiązań
+  href: bindingscopes.md
+- name: Instrukcje wywołań
+  href: callstatements.md
+- name: Zwracane dane i kończenie
+  href: returnsandtermination.md
+- name: Deklarowanie i ponowne przypisywanie zmiennych
+  href: variabledeclarationsandreassignments.md
+- name: Iteracje
+  href: iterations.md
+- name: Pętle warunkowe
+  href: conditionalloops.md
+- name: Rozgałęzianie warunkowe
+  href: conditionalbranching.md
+- name: Sprzężenia
+  href: conjugations.md
+- name: Zarządzanie pamięcią w obliczeniach kwantowych
+  href: quantummemorymanagement.md

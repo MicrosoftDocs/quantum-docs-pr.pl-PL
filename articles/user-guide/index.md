@@ -9,44 +9,26 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 979e468cc743bd9125eaba0b71f794977c914447
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231761"
 ---
 # <a name="the-no-locq-user-guide"></a>Podręcznik użytkownika języka Q#
 
 Podręcznik użytkownika języka Q# — Zapraszamy! 
 
-W poszczególnych tematach tego przewodnika opisano szczegółowo podstawowe pojęcia dotyczące języka Q# oraz wszystkie informacje potrzebne do pisania programów kwantowych.
+W różnych tematach tego przewodnika wprowadzamy podstawowe informacje na temat tworzenia programów kwantowych za pomocą języka Q#.
+
+Odwołujemy się do [podręcznika języka Q#](xref:microsoft.quantum.qsharp.index), który zawiera pełną specyfikację i dokumentację kwantowego języka programowania Q#. 
 
 ## <a name="user-guide-contents"></a>Zawartość podręcznika użytkownika
 
-- [Podstawy języka Q#](xref:microsoft.quantum.guide.basics): Wprowadzające omówienie dotyczące przeznaczenia i funkcjonalności języka programowania Q#. 
+- [Programy w języku Q#](xref:microsoft.quantum.guide.programs): Krótkie wprowadzenie do programów kwantowych w języku Q#. 
 
 - [Sposoby uruchamiania programu w języku Q#](xref:microsoft.quantum.guide.host-programs): Zawiera opis sposobu uruchamiania programu w języku Q# i udostępnia przegląd różnych metod wywoływania programu: z wiersza polecenia, w notesach Jupyter Notebook języka Q# lub z klasycznego programu hosta napisanego w języku Python lub języku platformy .NET.
-
-### <a name="no-locq-language"></a>Język Q#
-
-- [Typy w języku Q#](xref:microsoft.quantum.guide.types): Opis modelu typów języka Q# oraz składni służącej do określania typów i pracy z nimi.
-
-- [Wyrażenia typów](xref:microsoft.quantum.guide.expressions): Szczegóły dotyczące określania, łączenia i wykonywania operacji w przypadku wartości poszczególnych typów w języku Q# oraz odwoływania się do nich. 
-
-### <a name="using-no-locq"></a>Korzystanie z akcji Q#
-
-- [Struktura plików języka Q#](xref:microsoft.quantum.guide.filestructure): Opis struktury i składni pliku `*.qs` języka Q#.
-
-- [Operacje i funkcje](xref:microsoft.quantum.guide.operationsfunctions): Szczegóły dwóch wywoływalnych typów w języku Q#: *operacji*, które obejmują akcje dotyczące rejestrów kubitów, oraz *funkcji*, które współpracują wyłącznie z informacjami klasycznymi. 
-    W tym miejscu opisano, jak je definiować i wywoływać, łącznie ze sprzężonymi i kontrolowanymi wersjami operacji kwantowych.
-
-- [Zmienne](xref:microsoft.quantum.guide.variables): Opis roli zmiennych w programach języka Q# oraz sposobu ich skutecznego używania. 
-    Na przykład dostępne są informacje o zakresach powiązań, różnicach między zmiennymi, których nie można modyfikować, i tymi, które można modyfikować, a także o sposobie ich przypisywania i ponownego przypisywania.
-
-- [Praca z kubitami](xref:microsoft.quantum.guide.qubits): Opis funkcji języka Q# używanych do adresowania poszczególnych kubitów i systemów kubitów, w szczególności do alokowania ich, wykonywania operacji na nich i mierzenia ich. 
-
-- [Przepływ sterowania](xref:microsoft.quantum.guide.controlflow): Szczegóły programowania wzorców przepływu sterowania dostępnych w języku Q#, które obejmują wiele standardowych technik (przetwarzanie warunkowe, pętle *for*, pętle *while* itp.), a także wzorzec specyficzny dla programów kwantowych *Repeat-Until-Success*.
 
 - [Testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging): Szczegóły niektórych technik służących do upewniania się, że kod działa zgodnie z oczekiwaniami. 
     Ze względu na ogólną nieprzezroczystość informacji kwantowych debugowanie programu kwantowego może wymagać wyspecjalizowanych technik. 

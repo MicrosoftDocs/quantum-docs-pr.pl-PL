@@ -1,0 +1,12 @@
+- name: Implementacja programu
+  href: index.md
+- name: Przestrzenie nazw
+  href: namespaces.md
+- name: Deklaracje typów
+  href: typedeclarations.md
+- name: Wywoływalne deklaracje
+  href: callabledeclarations.md
+- name: Deklaracje specjalizacji
+  href: specializationdeclarations.md
+- name: Komentarze
+  href: comments.md
