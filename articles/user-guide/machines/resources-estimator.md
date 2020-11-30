@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691871"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318494"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
@@ -123,15 +123,15 @@ namespace Quantum.MyProgram
 
 Szacowania zasobów śledzi następujące metryki:
 
-|Metryka|Opis|
+|Metric|Opis|
 |----|----|
 |__CNOT__    |Liczba uruchomień `CNOT` operacji (znanych także jako kontrolowane operacje Pauli X).|
 |__QubitClifford__ |Liczba uruchomień pojedynczego qubit Clifford i Pauli operacji.|
-|__Miara__    |Liczba uruchomień pomiarów.  |
+|__Measure__    |Liczba uruchomień pomiarów.  |
 |__R__    |Liczba uruchomień wszystkich rotacji qubit, z wyjątkiem `T` operacji Clifford i Pauli.  |
 |__T__    |Liczba uruchomień `T` operacji i ich sprzężenia, w tym `T` operacje, T_x = H. T. H i T_y = HY. T. HY.  |
 |__Ścisł__|Głębokość obwodu Quantum uruchamianego przez Q# operację (patrz [poniżej](#depth-width-and-qubitcount)). Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Szerokość__|Szerokość obwodu Quantum uruchamianego przez Q# operację (patrz [poniżej](#depth-width-and-qubitcount)). Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [głębokość licznika](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|Szerokość obwodu Quantum uruchamianego przez Q# operację (patrz [poniżej](#depth-width-and-qubitcount)). Domyślnie Metryka głębokości liczy tylko `T` bramy. Aby uzyskać więcej informacji, zobacz [Width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |Dolna granica maksymalnej liczby qubits przydzieloną podczas uruchamiania Q# operacji. Ta Metryka może nie być zgodna z __głębokością__ (patrz poniżej).  |
 |__BorrowedWidth__    |Maksymalna liczba qubits zaciągniętych w ramach Q# operacji.  |
 
@@ -165,7 +165,7 @@ __OptimizeDepth = FAŁSZ:__ QubitManager zaleca się ponowne użycie qubits i po
 
 Możesz użyć <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> z <xref:Microsoft.Quantum.Diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Kwantowy symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)
