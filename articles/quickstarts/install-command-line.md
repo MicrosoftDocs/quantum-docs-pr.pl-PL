@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376426"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228733"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Tworzenie aplikacji w języku Q# w środowisku IDE
 
@@ -63,7 +63,7 @@ Aby utworzyć nowy projekt:
 
 1. Kliknij pozycję **View** -> **Command Palette** (Widok -> Paleta poleceń), a następnie wybierz polecenie **Q#: Create New Project** (Q#: utwórz nowy projekt).
 2. Kliknij pozycję **Standalone console application** (Autonomiczna aplikacja konsolowa).
-3. Przejdź do lokalizacji, w której chcesz zapisać projekt, a następnie kliknij pozycję **Create project** (Utwórz projekt).
+3. Przejdź do lokalizacji, w której ma zostać zapisany projekt. Wpisz nową nazwę projektu i kliknij pozycję **Create project** (Utwórz projekt).
 4. Po pomyślnym utworzeniu projektu kliknij pozycję **Open new project...** (Otwórz nowy projekt) w prawym dolnym rogu.
 
 Zapoznaj się z projektem. Powinien zawierać plik źródłowy o nazwie `Program.qs`, czyli program języka Q#, w którym zdefiniowano prostą operację drukowania komunikatu w konsoli.
