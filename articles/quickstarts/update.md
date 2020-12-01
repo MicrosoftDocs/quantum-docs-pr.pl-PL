@@ -43,7 +43,7 @@ Niezależnie od tego, czy hostujesz operacje języka Q# przy użyciu środowiska
  
 1. Zaktualizuj program Visual Studio 2019 do najnowszej wersji — instrukcje znajdziesz [tutaj](https://docs.microsoft.com/visualstudio/install/update-visual-studio).
 2. Otwórz rozwiązanie w programie Visual Studio.
-3. Z menu wybierz pozycję**Kompilacja** -> **Wyczyść rozwiązanie**.
+3. Z menu wybierz pozycję **Kompilacja** -> **Wyczyść rozwiązanie**.
 4. W każdym z plików .csproj zaktualizuj platformę docelową do wersji `netcoreapp3.1` (lub `netstandard2.1`, jeśli jest to projekt biblioteki).
     W tym celu edytuj wiersze w następującym formacie:
 
