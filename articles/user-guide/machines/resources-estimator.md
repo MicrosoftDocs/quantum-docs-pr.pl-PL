@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318494"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604647"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
@@ -28,9 +28,9 @@ Możesz użyć szacowania zasobów do uruchomienia dowolnej Q# operacji. Aby uzy
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>Wywoływanie zasobów szacowania z języka C # 
 
-Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie klasy `ResourceEstimator`, a następnie przekazać je jako pierwszy parametr metody operacji `Run`.
+Podobnie jak w przypadku innych komputerów docelowych, należy najpierw utworzyć wystąpienie klasy `ResourcesEstimator`, a następnie przekazać je jako pierwszy parametr metody operacji `Run`.
 
-Należy pamiętać, że w przeciwieństwie do klasy `QuantumSimulator` klasa `ResourceEstimator` nie implementuje interfejsu <xref:System.IDisposable>, dlatego nie trzeba go umieszczać w instrukcji `using`.
+Należy pamiętać, że w przeciwieństwie do klasy `QuantumSimulator` klasa `ResourcesEstimator` nie implementuje interfejsu <xref:System.IDisposable>, dlatego nie trzeba go umieszczać w instrukcji `using`.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 Szacowania zasobów śledzi następujące metryki:
 
-|Metric|Opis|
+|Metryka|Opis|
 |----|----|
 |__CNOT__    |Liczba uruchomień `CNOT` operacji (znanych także jako kontrolowane operacje Pauli X).|
 |__QubitClifford__ |Liczba uruchomień pojedynczego qubit Clifford i Pauli operacji.|
@@ -165,7 +165,7 @@ __OptimizeDepth = FAŁSZ:__ QubitManager zaleca się ponowne użycie qubits i po
 
 Możesz użyć <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> z <xref:Microsoft.Quantum.Diagnostics> przestrzeni nazw, aby podać informacje o oczekiwanym prawdopodobieństwie operacji pomiaru. Aby uzyskać więcej informacji, zobacz [symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Symulator śledzenia Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Kwantowy symulator Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)
