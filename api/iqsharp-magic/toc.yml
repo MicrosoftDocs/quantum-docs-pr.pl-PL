@@ -1,3 +1,5 @@
+- href: index.md
+  name: Polecenia magic IQ#
 - href: azure.connect.md
   name: '%azure.connect, polecenie magic'
 - href: azure.execute.md
