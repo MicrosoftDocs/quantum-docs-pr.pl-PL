@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692160"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940890"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Scharakteryzowanie i statystyka Quantum #
 
@@ -22,7 +22,7 @@ Niezwykle ważne jest, aby mieć możliwość scharakteryzowania skutków operac
 Jest to trudne, ponieważ każde pomiary systemu Quantum daje maksymalnie jeden bit informacji.
 Aby uzyskać informacje o eigenvalue, powiadom sam stan Quantum, wyniki wielu pomiarów muszą być połączone, aby użytkownik mógł zgłębiać wiele informacji potrzebnych do reprezentowania tych koncepcji.
 Stany Quantum są szczególnie uciążliwych z powodu braku [klonowania theorem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) , że nie ma możliwości poznania dowolnego stanu Quantum z pojedynczej kopii stanu, ponieważ dzięki temu można tworzyć kopie stanu.
-Ta zaciemnianie stanu Quantum od użytkownika jest odzwierciedlane w rzeczywistości, która Q# nie ujawnia ani nie definiuje stanu dla programów Quantum. *is*
+Ta zaciemnianie stanu Quantum od użytkownika jest odzwierciedlane w rzeczywistości, która Q# nie ujawnia ani nie definiuje stanu dla programów Quantum. 
 W ten sposób zbliżamy się do charakterystyki Quantum przez traktowanie operacji i Stanów jako czarnych. Ta metoda jest często wspólna w przypadku eksperymentalnej praktycznej charakterystyki Quantum, weryfikacji i weryfikacji (QCVV).
 
 Scharakteryzowanie różni się od wielu innych omawianych wcześniej bibliotek.
@@ -56,7 +56,7 @@ Podkreślamy to, krótko opisując ocenę fazy iteracyjnej na poziomie teoretycz
 
 Jeśli podany jest stan wejściowy, który nie jest eigenstate, co oznacza, że jeśli $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $, wówczas proces szacowania fazy nie jest w sposób jednoznaczny zorientowany na pojedynczy eigenstate energetyczny.  Eigenstate, do którego ostatecznie jest zbieżny, jest eigenstate, który najprawdopodobniej wyprodukował obserwowane `Result` .
 
-W odniesieniu do jednego kroku środowiska uruchomieniowego jest wykonywana następująca niezależna transformacja na stanie \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{Result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j) \sum \_ j \Pr (\Text{Result} | \phi \_ j)}}.
+W odniesieniu do jednego kroku środowiska uruchomieniowego jest wykonywana następująca niezależna transformacja na stanie \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{Result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j) \sum \_ k \Pr (\Text{Result} | \phi \_ k)}}.
 \end{align}, ponieważ ten proces jest powtarzany przez wiele `Result` wartości, eigenstates, które nie mają maksymalnych wartości $ \ prod_k \pr (\Text{Result} \_ k | \phi \_ j) $ zostanie pominięty wykładniczo.
 W efekcie proces wnioskowania będzie przerastał zbieżność do Stanów o pojedynczej eigenvalue, jeśli eksperymenty są wybrane prawidłowo.
 
@@ -153,7 +153,7 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 ```
 
 `bitsPrecision`Dane wejściowe są unikatowe dla `RobustPhaseEstimation` , chociaż `oracle` i `eigenstate` są wspólne.
-Tak więc, jak widać w **H2Sample** , operacja może akceptować algorytm iteracyjnej oceny fazy z wejściem formularza, `(DiscreteOracle, Qubit[]) => Unit` Aby zezwolić użytkownikowi na określenie dowolnych algorytmów szacowania fazy:
+Tak więc, jak widać w **H2Sample**, operacja może akceptować algorytm iteracyjnej oceny fazy z wejściem formularza, `(DiscreteOracle, Qubit[]) => Unit` Aby zezwolić użytkownikowi na określenie dowolnych algorytmów szacowania fazy:
 
 ```qsharp
 operation H2EstimateEnergy(
