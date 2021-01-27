@@ -1,50 +1,50 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQandPQQRTerm_
 title: _ApplyJordanWignerPQandPQQRTerm_ , operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ApplyJordanWignerPQandPQQRTerm_
 qsharp.summary: Applies time-evolution by a PQ or PQQR term described by a `GeneratorIndex`.
-ms.openlocfilehash: 8b6d022c70052a91d3cf6d4549db5ed1434d3fc8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cd4a63378f4e491217a7bb478a8ea3dcce67bc5a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203981"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839570"
 ---
-# <a name="_applyjordanwignerpqandpqqrterm_-operation"></a><span data-ttu-id="01b0f-102">_ApplyJordanWignerPQandPQQRTerm_ , operacja</span><span class="sxs-lookup"><span data-stu-id="01b0f-102">_ApplyJordanWignerPQandPQQRTerm_ operation</span></span>
+# <a name="_applyjordanwignerpqandpqqrterm_-operation"></a><span data-ttu-id="7b3c9-102">_ApplyJordanWignerPQandPQQRTerm_ , operacja</span><span class="sxs-lookup"><span data-stu-id="7b3c9-102">_ApplyJordanWignerPQandPQQRTerm_ operation</span></span>
 
-<span data-ttu-id="01b0f-103">Przestrzeń nazw: [Microsoft. Quantum. Chemia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="01b0f-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="7b3c9-103">Przestrzeń nazw: [Microsoft. Quantum. Chemia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="7b3c9-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="01b0f-104">Pakiet: [Microsoft. Quantum. Chemia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="01b0f-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
+<span data-ttu-id="7b3c9-104">Pakiet: [Microsoft. Quantum. Chemia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="7b3c9-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
-<span data-ttu-id="01b0f-105">Stosuje ewolucję czasową przez PQ lub PQQR termin opisany przez `GeneratorIndex` .</span><span class="sxs-lookup"><span data-stu-id="01b0f-105">Applies time-evolution by a PQ or PQQR term described by a `GeneratorIndex`.</span></span>
+<span data-ttu-id="7b3c9-105">Stosuje ewolucję czasową przez PQ lub PQQR termin opisany przez `GeneratorIndex` .</span><span class="sxs-lookup"><span data-stu-id="7b3c9-105">Applies time-evolution by a PQ or PQQR term described by a `GeneratorIndex`.</span></span>
 
 ```qsharp
 operation _ApplyJordanWignerPQandPQQRTerm_ (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="01b0f-106">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="01b0f-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7b3c9-106">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="7b3c9-106">Input</span></span>
 
-### <a name="term--generatorindex"></a><span data-ttu-id="01b0f-107">termin: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="01b0f-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
+### <a name="term--generatorindex"></a><span data-ttu-id="7b3c9-107">termin: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="7b3c9-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
 
-<span data-ttu-id="01b0f-108">`GeneratorIndex` reprezentujący termin PQ lub PQQR.</span><span class="sxs-lookup"><span data-stu-id="01b0f-108">`GeneratorIndex` representing a PQ or PQQR term.</span></span>
-
-
-### <a name="stepsize--double"></a><span data-ttu-id="01b0f-109">stepSize: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="01b0f-109">stepSize : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-<span data-ttu-id="01b0f-110">Czas trwania ewolucji.</span><span class="sxs-lookup"><span data-stu-id="01b0f-110">Duration of time-evolution.</span></span>
+<span data-ttu-id="7b3c9-108">`GeneratorIndex` reprezentujący termin PQ lub PQQR.</span><span class="sxs-lookup"><span data-stu-id="7b3c9-108">`GeneratorIndex` representing a PQ or PQQR term.</span></span>
 
 
-### <a name="qubits--qubit"></a><span data-ttu-id="01b0f-111">qubits: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="01b0f-111">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="stepsize--double"></a><span data-ttu-id="7b3c9-109">stepSize: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="7b3c9-109">stepSize : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="01b0f-112">Qubits hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="01b0f-112">Qubits of Hamiltonian.</span></span>
+<span data-ttu-id="7b3c9-110">Czas trwania ewolucji.</span><span class="sxs-lookup"><span data-stu-id="7b3c9-110">Duration of time-evolution.</span></span>
+
+
+### <a name="qubits--qubit"></a><span data-ttu-id="7b3c9-111">qubits: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="7b3c9-111">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+
+<span data-ttu-id="7b3c9-112">Qubits hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="7b3c9-112">Qubits of Hamiltonian.</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="01b0f-113">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="01b0f-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="7b3c9-113">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="7b3c9-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 

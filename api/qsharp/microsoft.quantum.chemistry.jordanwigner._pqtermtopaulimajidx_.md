@@ -1,41 +1,41 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliMajIdx_
 title: _PQTermToPauliMajIdx_ , funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _PQTermToPauliMajIdx_
 qsharp.summary: Converts a GeneratorIndex describing a PQ term to an expression 'GeneratorIndex[]' in terms of Paulis
-ms.openlocfilehash: bb9fad038c30b3362ffbecf546bcf85cb7dd13df
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: edb9302e04de2abc6dfa9da0da27504f776e721f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96215405"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839286"
 ---
-# <a name="_pqtermtopaulimajidx_-function"></a><span data-ttu-id="fb424-102">_PQTermToPauliMajIdx_ , funkcja</span><span class="sxs-lookup"><span data-stu-id="fb424-102">_PQTermToPauliMajIdx_ function</span></span>
+# <a name="_pqtermtopaulimajidx_-function"></a><span data-ttu-id="7e754-102">_PQTermToPauliMajIdx_ , funkcja</span><span class="sxs-lookup"><span data-stu-id="7e754-102">_PQTermToPauliMajIdx_ function</span></span>
 
-<span data-ttu-id="fb424-103">Przestrzeń nazw: [Microsoft. Quantum. Chemia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="fb424-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="7e754-103">Przestrzeń nazw: [Microsoft. Quantum. Chemia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="7e754-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="fb424-104">Pakiet: [Microsoft. Quantum. Chemia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="fb424-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
+<span data-ttu-id="7e754-104">Pakiet: [Microsoft. Quantum. Chemia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="7e754-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
-<span data-ttu-id="fb424-105">Konwertuje element GeneratorIndex opisujący termin PQ na wyrażenie "GeneratorIndex []" w postaci Paul</span><span class="sxs-lookup"><span data-stu-id="fb424-105">Converts a GeneratorIndex describing a PQ term to an expression 'GeneratorIndex[]' in terms of Paulis</span></span>
+<span data-ttu-id="7e754-105">Konwertuje element GeneratorIndex opisujący termin PQ na wyrażenie "GeneratorIndex []" w postaci Paul</span><span class="sxs-lookup"><span data-stu-id="7e754-105">Converts a GeneratorIndex describing a PQ term to an expression 'GeneratorIndex[]' in terms of Paulis</span></span>
 
 ```qsharp
 function _PQTermToPauliMajIdx_ (term : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex
 ```
 
 
-## <a name="input"></a><span data-ttu-id="fb424-106">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="fb424-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7e754-106">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="7e754-106">Input</span></span>
 
-### <a name="term--generatorindex"></a><span data-ttu-id="fb424-107">termin: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="fb424-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
+### <a name="term--generatorindex"></a><span data-ttu-id="7e754-107">termin: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="7e754-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
 
-<span data-ttu-id="fb424-108">`GeneratorIndex` reprezentujący termin PQ.</span><span class="sxs-lookup"><span data-stu-id="fb424-108">`GeneratorIndex` representing a PQ term.</span></span>
+<span data-ttu-id="7e754-108">`GeneratorIndex` reprezentujący termin PQ.</span><span class="sxs-lookup"><span data-stu-id="7e754-108">`GeneratorIndex` representing a PQ term.</span></span>
 
 
 
-## <a name="output--optimizedbetermindex"></a><span data-ttu-id="fb424-109">Wynik: [OptimizedBETermIndex](xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex)</span><span class="sxs-lookup"><span data-stu-id="fb424-109">Output : [OptimizedBETermIndex](xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex)</span></span>
+## <a name="output--optimizedbetermindex"></a><span data-ttu-id="7e754-109">Wynik: [OptimizedBETermIndex](xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex)</span><span class="sxs-lookup"><span data-stu-id="7e754-109">Output : [OptimizedBETermIndex](xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex)</span></span>
 
-<span data-ttu-id="fb424-110">"GeneratorIndex []" wyraża PQ termin jako warunki Pauli.</span><span class="sxs-lookup"><span data-stu-id="fb424-110">'GeneratorIndex[]' expressing PQ term as Pauli terms.</span></span>
+<span data-ttu-id="7e754-110">"GeneratorIndex []" wyraża PQ termin jako warunki Pauli.</span><span class="sxs-lookup"><span data-stu-id="7e754-110">'GeneratorIndex[]' expressing PQ term as Pauli terms.</span></span>
