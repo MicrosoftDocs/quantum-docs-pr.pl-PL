@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.StandardTransformation
 title: StandardTransformation, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: StandardTransformation
 qsharp.summary: ''
-ms.openlocfilehash: 23bcc6000821ac6816736bf993c36c81c5feef7f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c5e8110b25ab02b55f02d886fa081a32d7dffb1d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226319"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857784"
 ---
-# <a name="standardtransformation-function"></a><span data-ttu-id="022e2-102">StandardTransformation, funkcja</span><span class="sxs-lookup"><span data-stu-id="022e2-102">StandardTransformation function</span></span>
+# <a name="standardtransformation-function"></a><span data-ttu-id="c7475-102">StandardTransformation, funkcja</span><span class="sxs-lookup"><span data-stu-id="c7475-102">StandardTransformation function</span></span>
 
-<span data-ttu-id="022e2-103">Przestrzeń nazw: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="022e2-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
+<span data-ttu-id="c7475-103">Przestrzeń nazw: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="c7475-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
 
-<span data-ttu-id="022e2-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="022e2-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="c7475-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="c7475-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 
@@ -28,23 +28,23 @@ function StandardTransformation (mean : Double, variance : Double, variate : Dou
 ```
 
 
-## <a name="input"></a><span data-ttu-id="022e2-105">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="022e2-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="c7475-105">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="c7475-105">Input</span></span>
 
-### <a name="mean--double"></a><span data-ttu-id="022e2-106">średnia: [Podwójna](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="022e2-106">mean : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
-
-
-### <a name="variance--double"></a><span data-ttu-id="022e2-107">WARIANCJA: [Podwójna](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="022e2-107">variance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="mean--double"></a><span data-ttu-id="c7475-106">średnia: [Podwójna](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c7475-106">mean : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
-### <a name="variate--double"></a><span data-ttu-id="022e2-108">variate: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="022e2-108">variate : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="variance--double"></a><span data-ttu-id="c7475-107">WARIANCJA: [Podwójna](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c7475-107">variance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+
+
+
+
+### <a name="variate--double"></a><span data-ttu-id="c7475-108">variate: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c7475-108">variate : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
 
-## <a name="output--double"></a><span data-ttu-id="022e2-109">Dane wyjściowe: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="022e2-109">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+## <a name="output--double"></a><span data-ttu-id="c7475-109">Dane wyjściowe: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c7475-109">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
