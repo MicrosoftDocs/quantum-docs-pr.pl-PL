@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.MaxD
 title: MaxD, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.maxd".
-ms.openlocfilehash: d6b0b5dd80cbaffd3a5146f1333e88eee0d08a67
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 05648435279692287d55e536e7dc1b180d6ad49c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96212923"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98821827"
 ---
-# <a name="maxd-function"></a><span data-ttu-id="d40c4-102">MaxD, funkcja</span><span class="sxs-lookup"><span data-stu-id="d40c4-102">MaxD function</span></span>
+# <a name="maxd-function"></a><span data-ttu-id="07755-102">MaxD, funkcja</span><span class="sxs-lookup"><span data-stu-id="07755-102">MaxD function</span></span>
 
-<span data-ttu-id="d40c4-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="d40c4-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="07755-103">Przestrzeń nazw: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="07755-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="d40c4-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="d40c4-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="07755-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="07755-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="d40c4-105">MaxD jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="d40c4-105">MaxD has been deprecated.</span></span> <span data-ttu-id="d40c4-106">Użyj <xref:Microsoft.Quantum.Math.MaxD> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="d40c4-106">Please use <xref:Microsoft.Quantum.Math.MaxD> instead.</span></span>
+> <span data-ttu-id="07755-105">MaxD jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="07755-105">MaxD has been deprecated.</span></span> <span data-ttu-id="07755-106">Użyj <xref:Microsoft.Quantum.Math.MaxD> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="07755-106">Please use <xref:Microsoft.Quantum.Math.MaxD> instead.</span></span>
 >
-> <span data-ttu-id="d40c4-107">Używaj @"microsoft.quantum.math.maxd".</span><span class="sxs-lookup"><span data-stu-id="d40c4-107">Please use @"microsoft.quantum.math.maxd".</span></span>
+> <span data-ttu-id="07755-107">Używaj @"microsoft.quantum.math.maxd".</span><span class="sxs-lookup"><span data-stu-id="07755-107">Please use @"microsoft.quantum.math.maxd".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function MaxD (a : Double, b : Double) : Double
 ```
 
 
-## <a name="input"></a><span data-ttu-id="d40c4-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="d40c4-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="07755-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="07755-108">Input</span></span>
 
-### <a name="a--double"></a><span data-ttu-id="d40c4-109">Odp.: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="d40c4-109">a : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
-
-
-### <a name="b--double"></a><span data-ttu-id="d40c4-110">b: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="d40c4-110">b : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="a--double"></a><span data-ttu-id="07755-109">Odp.: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="07755-109">a : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
+### <a name="b--double"></a><span data-ttu-id="07755-110">b: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="07755-110">b : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-## <a name="output--double"></a><span data-ttu-id="d40c4-111">Dane wyjściowe: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="d40c4-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+
+
+
+
+## <a name="output--double"></a><span data-ttu-id="07755-111">Dane wyjściowe: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="07755-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
