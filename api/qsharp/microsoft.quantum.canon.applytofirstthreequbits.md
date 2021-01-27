@@ -1,60 +1,60 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubits
 title: ApplyToFirstThreeQubits, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstThreeQubits
 qsharp.summary: Applies an operation to the first three qubits in the register.
-ms.openlocfilehash: 5572bd2a096a4f9bdb1153ae80950ae854965b82
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b01c1072306cfdebcb90827a14683a32312481fc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217462"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850699"
 ---
-# <a name="applytofirstthreequbits-operation"></a><span data-ttu-id="f1a37-102">ApplyToFirstThreeQubits, operacja</span><span class="sxs-lookup"><span data-stu-id="f1a37-102">ApplyToFirstThreeQubits operation</span></span>
+# <a name="applytofirstthreequbits-operation"></a><span data-ttu-id="e68ea-102">ApplyToFirstThreeQubits, operacja</span><span class="sxs-lookup"><span data-stu-id="e68ea-102">ApplyToFirstThreeQubits operation</span></span>
 
-<span data-ttu-id="f1a37-103">Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="f1a37-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="e68ea-103">Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="e68ea-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="f1a37-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="f1a37-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="e68ea-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="e68ea-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="f1a37-105">Stosuje operację do pierwszych trzech qubits w rejestrze.</span><span class="sxs-lookup"><span data-stu-id="f1a37-105">Applies an operation to the first three qubits in the register.</span></span>
+<span data-ttu-id="e68ea-105">Stosuje operację do pierwszych trzech qubits w rejestrze.</span><span class="sxs-lookup"><span data-stu-id="e68ea-105">Applies an operation to the first three qubits in the register.</span></span>
 
 ```qsharp
 operation ApplyToFirstThreeQubits (op : ((Qubit, Qubit, Qubit) => Unit), register : Qubit[]) : Unit
 ```
 
 
-## <a name="input"></a><span data-ttu-id="f1a37-106">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="f1a37-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="e68ea-106">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="e68ea-106">Input</span></span>
 
-### <a name="op--qubitqubitqubit--unit"></a><span data-ttu-id="f1a37-107">op: ([qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit)) = [Jednostka](xref:microsoft.quantum.lang-ref.unit)></span><span class="sxs-lookup"><span data-stu-id="f1a37-107">op : ([Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)) => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
+### <a name="op--qubitqubitqubit--unit"></a><span data-ttu-id="e68ea-107">op: ([qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit),[qubit](xref:microsoft.quantum.lang-ref.qubit)) = [Jednostka](xref:microsoft.quantum.lang-ref.unit)></span><span class="sxs-lookup"><span data-stu-id="e68ea-107">op : ([Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit),[Qubit](xref:microsoft.quantum.lang-ref.qubit)) => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
 
-<span data-ttu-id="f1a37-108">Operacja, która ma zostać zastosowana do pierwszych trzech qubits</span><span class="sxs-lookup"><span data-stu-id="f1a37-108">An operation to be applied to the first three qubits</span></span>
-
-
-### <a name="register--qubit"></a><span data-ttu-id="f1a37-109">Rejestr: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="f1a37-109">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
-
-<span data-ttu-id="f1a37-110">Qubit tablicę do pierwszych trzech qubits, do których zostanie zastosowana operacja.</span><span class="sxs-lookup"><span data-stu-id="f1a37-110">Qubit array to the first three qubits of which the operation is applied.</span></span>
+<span data-ttu-id="e68ea-108">Operacja, która ma zostać zastosowana do pierwszych trzech qubits</span><span class="sxs-lookup"><span data-stu-id="e68ea-108">An operation to be applied to the first three qubits</span></span>
 
 
+### <a name="register--qubit"></a><span data-ttu-id="e68ea-109">Rejestr: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="e68ea-109">register : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="f1a37-111">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="f1a37-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="e68ea-110">Qubit tablicę do pierwszych trzech qubits, do których zostanie zastosowana operacja.</span><span class="sxs-lookup"><span data-stu-id="e68ea-110">Qubit array to the first three qubits of which the operation is applied.</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="f1a37-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f1a37-112">Remarks</span></span>
+## <a name="output--unit"></a><span data-ttu-id="e68ea-111">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="e68ea-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="f1a37-113">Jest to równoważne z:</span><span class="sxs-lookup"><span data-stu-id="f1a37-113">This is equivalent to:</span></span>
+
+
+## <a name="remarks"></a><span data-ttu-id="e68ea-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e68ea-112">Remarks</span></span>
+
+<span data-ttu-id="e68ea-113">Jest to równoważne z:</span><span class="sxs-lookup"><span data-stu-id="e68ea-113">This is equivalent to:</span></span>
 
 ```qsharp
 op(register[0], register[1], register[2]);
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f1a37-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f1a37-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e68ea-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e68ea-114">See Also</span></span>
 
-- [<span data-ttu-id="f1a37-115">Microsoft. Quantum. Canon. ApplyToFirstThreeQubitsC</span><span class="sxs-lookup"><span data-stu-id="f1a37-115">Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC)
-- [<span data-ttu-id="f1a37-116">Microsoft. Quantum. Canon. ApplyToFirstThreeQubitsA</span><span class="sxs-lookup"><span data-stu-id="f1a37-116">Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsA)
-- [<span data-ttu-id="f1a37-117">Microsoft. Quantum. Canon. ApplyToFirstThreeQubitsCA</span><span class="sxs-lookup"><span data-stu-id="f1a37-117">Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsCA)
+- [<span data-ttu-id="e68ea-115">Microsoft. Quantum. Canon. ApplyToFirstThreeQubitsC</span><span class="sxs-lookup"><span data-stu-id="e68ea-115">Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC)
+- [<span data-ttu-id="e68ea-116">Microsoft. Quantum. Canon. ApplyToFirstThreeQubitsA</span><span class="sxs-lookup"><span data-stu-id="e68ea-116">Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsA)
+- [<span data-ttu-id="e68ea-117">Microsoft. Quantum. Canon. ApplyToFirstThreeQubitsCA</span><span class="sxs-lookup"><span data-stu-id="e68ea-117">Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsCA</span></span>](xref:Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsCA)

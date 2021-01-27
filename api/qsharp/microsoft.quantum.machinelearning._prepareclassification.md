@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._PrepareClassification
 title: Operacja _PrepareClassification
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _PrepareClassification
 qsharp.summary: ''
-ms.openlocfilehash: be7dd4266ceb67e130998e1c3592a7ec22c1791d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 81243702bcc356ab0540446de1ea0eddde8fe245
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96212175"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846125"
 ---
-# <a name="_prepareclassification-operation"></a><span data-ttu-id="dc305-102">Operacja _PrepareClassification</span><span class="sxs-lookup"><span data-stu-id="dc305-102">_PrepareClassification operation</span></span>
+# <a name="_prepareclassification-operation"></a><span data-ttu-id="7063d-102">Operacja _PrepareClassification</span><span class="sxs-lookup"><span data-stu-id="7063d-102">_PrepareClassification operation</span></span>
 
-<span data-ttu-id="dc305-103">Przestrzeń nazw: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="dc305-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="7063d-103">Przestrzeń nazw: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="7063d-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
 
-<span data-ttu-id="dc305-104">Pakiet: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="dc305-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="7063d-104">Pakiet: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="7063d-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
 
@@ -28,23 +28,23 @@ operation _PrepareClassification (encoder : (Microsoft.Quantum.Arithmetic.Little
 ```
 
 
-## <a name="input"></a><span data-ttu-id="dc305-105">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="dc305-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7063d-105">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="7063d-105">Input</span></span>
 
-### <a name="encoder--littleendian--unit--is-adj--ctl"></a><span data-ttu-id="dc305-106">koder: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL</span><span class="sxs-lookup"><span data-stu-id="dc305-106">encoder : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
-
-
-
-
-### <a name="model--sequentialmodel"></a><span data-ttu-id="dc305-107">Model: [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span><span class="sxs-lookup"><span data-stu-id="dc305-107">model : [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span></span>
+### <a name="encoder--littleendian--unit--is-adj--ctl"></a><span data-ttu-id="7063d-106">koder: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL</span><span class="sxs-lookup"><span data-stu-id="7063d-106">encoder : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
 
 
 
-### <a name="target--qubit"></a><span data-ttu-id="dc305-108">target: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="dc305-108">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="model--sequentialmodel"></a><span data-ttu-id="7063d-107">Model: [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span><span class="sxs-lookup"><span data-stu-id="7063d-107">model : [SequentialModel](xref:Microsoft.Quantum.MachineLearning.SequentialModel)</span></span>
+
+
+
+
+### <a name="target--qubit"></a><span data-ttu-id="7063d-108">target: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="7063d-108">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="dc305-109">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="dc305-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="7063d-109">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="7063d-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
