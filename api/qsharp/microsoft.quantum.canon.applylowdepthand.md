@@ -1,60 +1,60 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
 title: ApplyLowDepthAnd, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyLowDepthAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.
-ms.openlocfilehash: 4c5e381227bf82415121add38d0c0d2959fb529d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7fa9d9bf2f1905bf1b59e783d7bceb8cb2e09fa4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209319"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841704"
 ---
-# <a name="applylowdepthand-operation"></a><span data-ttu-id="8183f-102">ApplyLowDepthAnd, operacja</span><span class="sxs-lookup"><span data-stu-id="8183f-102">ApplyLowDepthAnd operation</span></span>
+# <a name="applylowdepthand-operation"></a><span data-ttu-id="06080-102">ApplyLowDepthAnd, operacja</span><span class="sxs-lookup"><span data-stu-id="06080-102">ApplyLowDepthAnd operation</span></span>
 
-<span data-ttu-id="8183f-103">Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="8183f-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="06080-103">Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="06080-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="8183f-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="8183f-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="06080-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="06080-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="8183f-105">Odwraca podaną wartość docelową qubit, jeśli i tylko wtedy, gdy oba kontrolki qubits są w stanie 1, z głębokością T 1, przy użyciu miary do wykonania sąsiedniej operacji.</span><span class="sxs-lookup"><span data-stu-id="8183f-105">Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.</span></span>
+<span data-ttu-id="06080-105">Odwraca podaną wartość docelową qubit, jeśli i tylko wtedy, gdy oba kontrolki qubits są w stanie 1, z głębokością T 1, przy użyciu miary do wykonania sąsiedniej operacji.</span><span class="sxs-lookup"><span data-stu-id="06080-105">Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.</span></span>
 
 ```qsharp
 operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a><span data-ttu-id="8183f-106">Opis</span><span class="sxs-lookup"><span data-stu-id="8183f-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="06080-106">Opis</span><span class="sxs-lookup"><span data-stu-id="06080-106">Description</span></span>
 
-<span data-ttu-id="8183f-107">Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, ale zakłada, że `target` jest w stanie 0.</span><span class="sxs-lookup"><span data-stu-id="8183f-107">Inverts `target` if and only if both controls are 1, but assumes that `target` is in state 0.</span></span>  <span data-ttu-id="8183f-108">Operacja ma wartość T-Count 4, T-głębokość 1 i wymaga jednego pomocnika qubit i dlatego może być zalecana dla operacji CCNOT, jeśli `target` jest znana jako 0.</span><span class="sxs-lookup"><span data-stu-id="8183f-108">The operation has T-count 4, T-depth 1 and requires one helper qubit, and may therefore be preferable to a CCNOT operation, if `target` is known to be 0.</span></span>  <span data-ttu-id="8183f-109">Sąsiednia operacja jest oparta na pomiarach i nie wymaga żadnych bram T i nie qubit pomocnika.</span><span class="sxs-lookup"><span data-stu-id="8183f-109">The adjoint of this operation is measurement based and requires no T gates, and no helper qubit.</span></span>
+<span data-ttu-id="06080-107">Odwraca, `target` czy i tylko wtedy, gdy obie kontrolki są 1, ale zakłada, że `target` jest w stanie 0.</span><span class="sxs-lookup"><span data-stu-id="06080-107">Inverts `target` if and only if both controls are 1, but assumes that `target` is in state 0.</span></span>  <span data-ttu-id="06080-108">Operacja ma wartość T-Count 4, T-głębokość 1 i wymaga jednego pomocnika qubit i dlatego może być zalecana dla operacji CCNOT, jeśli `target` jest znana jako 0.</span><span class="sxs-lookup"><span data-stu-id="06080-108">The operation has T-count 4, T-depth 1 and requires one helper qubit, and may therefore be preferable to a CCNOT operation, if `target` is known to be 0.</span></span>  <span data-ttu-id="06080-109">Sąsiednia operacja jest oparta na pomiarach i nie wymaga żadnych bram T i nie qubit pomocnika.</span><span class="sxs-lookup"><span data-stu-id="06080-109">The adjoint of this operation is measurement based and requires no T gates, and no helper qubit.</span></span>
 
-## <a name="input"></a><span data-ttu-id="8183f-110">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="8183f-110">Input</span></span>
+## <a name="input"></a><span data-ttu-id="06080-110">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="06080-110">Input</span></span>
 
-### <a name="control1--qubit"></a><span data-ttu-id="8183f-111">Control1: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="8183f-111">control1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="control1--qubit"></a><span data-ttu-id="06080-111">Control1: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="06080-111">control1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-<span data-ttu-id="8183f-112">Pierwszy formant qubit</span><span class="sxs-lookup"><span data-stu-id="8183f-112">First control qubit</span></span>
-
-
-### <a name="control2--qubit"></a><span data-ttu-id="8183f-113">Control2: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="8183f-113">control2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
-
-<span data-ttu-id="8183f-114">Druga kontrolka qubit</span><span class="sxs-lookup"><span data-stu-id="8183f-114">Second control qubit</span></span>
+<span data-ttu-id="06080-112">Pierwszy formant qubit</span><span class="sxs-lookup"><span data-stu-id="06080-112">First control qubit</span></span>
 
 
-### <a name="target--qubit"></a><span data-ttu-id="8183f-115">obiekt docelowy: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="8183f-115">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="control2--qubit"></a><span data-ttu-id="06080-113">Control2: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="06080-113">control2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-<span data-ttu-id="8183f-116">Docelowa qubit pomocnicza; musi być w stanie 0</span><span class="sxs-lookup"><span data-stu-id="8183f-116">Target auxiliary qubit; must be in state 0</span></span>
+<span data-ttu-id="06080-114">Druga kontrolka qubit</span><span class="sxs-lookup"><span data-stu-id="06080-114">Second control qubit</span></span>
 
 
+### <a name="target--qubit"></a><span data-ttu-id="06080-115">obiekt docelowy: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="06080-115">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="8183f-117">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="8183f-117">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="06080-116">Docelowa qubit pomocnicza; musi być w stanie 0</span><span class="sxs-lookup"><span data-stu-id="06080-116">Target auxiliary qubit; must be in state 0</span></span>
 
 
 
-## <a name="references"></a><span data-ttu-id="8183f-118">Odwołania</span><span class="sxs-lookup"><span data-stu-id="8183f-118">References</span></span>
+## <a name="output--unit"></a><span data-ttu-id="06080-117">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="06080-117">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-- <span data-ttu-id="8183f-119">Cody Nowak: "Nowa konstrukcja dla bramy Toffoli odpornej na uszkodzenia", biorev. obr. A 87, 022328, 2013 [ArXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328</span><span class="sxs-lookup"><span data-stu-id="8183f-119">Cody Jones: "Novel constructions for the fault-tolerant Toffoli gate", Phys. Rev. A 87, 022328, 2013 [arXiv:1212.5069](https://arxiv.org/abs/1212.5069) doi:10.1103/PhysRevA.87.022328</span></span>
-- <span data-ttu-id="8183f-120">Piotr Selinger: "" Quantum obwodów "T-głębokości" i "," Bio. Rev. A 87, 042302, 2013 [ArXiv: 1210.0974](https://arxiv.org/abs/1210.0974) DOI: 10.1103/PhysRevA. 87.042302</span><span class="sxs-lookup"><span data-stu-id="8183f-120">Peter Selinger: "Quantum circuits of T-depth one", Phys. Rev. A 87, 042302, 2013 [arXiv:1210.0974](https://arxiv.org/abs/1210.0974) doi:10.1103/PhysRevA.87.042302</span></span>
+
+
+## <a name="references"></a><span data-ttu-id="06080-118">Odwołania</span><span class="sxs-lookup"><span data-stu-id="06080-118">References</span></span>
+
+- <span data-ttu-id="06080-119">Cody Nowak: "Nowa konstrukcja dla bramy Toffoli odpornej na uszkodzenia", biorev. obr. A 87, 022328, 2013 [ArXiv: 1212.5069](https://arxiv.org/abs/1212.5069) DOI: 10.1103/PhysRevA. 87.022328</span><span class="sxs-lookup"><span data-stu-id="06080-119">Cody Jones: "Novel constructions for the fault-tolerant Toffoli gate", Phys. Rev. A 87, 022328, 2013 [arXiv:1212.5069](https://arxiv.org/abs/1212.5069) doi:10.1103/PhysRevA.87.022328</span></span>
+- <span data-ttu-id="06080-120">Piotr Selinger: "" Quantum obwodów "T-głębokości" i "," Bio. Rev. A 87, 042302, 2013 [ArXiv: 1210.0974](https://arxiv.org/abs/1210.0974) DOI: 10.1103/PhysRevA. 87.042302</span><span class="sxs-lookup"><span data-stu-id="06080-120">Peter Selinger: "Quantum circuits of T-depth one", Phys. Rev. A 87, 042302, 2013 [arXiv:1210.0974](https://arxiv.org/abs/1210.0974) doi:10.1103/PhysRevA.87.042302</span></span>

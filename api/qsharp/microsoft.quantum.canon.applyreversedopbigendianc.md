@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianC
 title: ApplyReversedOpBigEndianC, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
-ms.openlocfilehash: 032502d687ffd363ef307eb2029d5f3f2aa62dd2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 425f71da1a5300cc3319f8ecb8ab2bca6f40d8e4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209013"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841548"
 ---
-# <a name="applyreversedopbigendianc-operation"></a><span data-ttu-id="44e8c-102">ApplyReversedOpBigEndianC, operacja</span><span class="sxs-lookup"><span data-stu-id="44e8c-102">ApplyReversedOpBigEndianC operation</span></span>
+# <a name="applyreversedopbigendianc-operation"></a><span data-ttu-id="48f4c-102">ApplyReversedOpBigEndianC, operacja</span><span class="sxs-lookup"><span data-stu-id="48f4c-102">ApplyReversedOpBigEndianC operation</span></span>
 
-<span data-ttu-id="44e8c-103">Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="44e8c-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="48f4c-103">Przestrzeń nazw: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="48f4c-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="44e8c-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="44e8c-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="48f4c-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="48f4c-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="44e8c-105">ApplyReversedOpBigEndianC jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="44e8c-105">ApplyReversedOpBigEndianC has been deprecated.</span></span> <span data-ttu-id="44e8c-106">Użyj <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="44e8c-106">Please use <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC> instead.</span></span>
+> <span data-ttu-id="48f4c-105">ApplyReversedOpBigEndianC jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="48f4c-105">ApplyReversedOpBigEndianC has been deprecated.</span></span> <span data-ttu-id="48f4c-106">Użyj <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="48f4c-106">Please use <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC> instead.</span></span>
 >
-> <span data-ttu-id="44e8c-107">Używaj @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".</span><span class="sxs-lookup"><span data-stu-id="44e8c-107">Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".</span></span>
+> <span data-ttu-id="48f4c-107">Używaj @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".</span><span class="sxs-lookup"><span data-stu-id="48f4c-107">Please use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".</span></span>
 
 
 
@@ -40,18 +40,18 @@ operation ApplyReversedOpBigEndianC (op : (Microsoft.Quantum.Arithmetic.BigEndia
 ```
 
 
-## <a name="input"></a><span data-ttu-id="44e8c-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="44e8c-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="48f4c-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="48f4c-108">Input</span></span>
 
-### <a name="op--bigendian--unit--is-ctl"></a><span data-ttu-id="44e8c-109">op: [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) BigEndian jest listą CTL</span><span class="sxs-lookup"><span data-stu-id="44e8c-109">op : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl</span></span>
-
-
-
-
-### <a name="register--littleendian"></a><span data-ttu-id="44e8c-110">Zarejestruj się: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="44e8c-110">register : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="op--bigendian--unit--is-ctl"></a><span data-ttu-id="48f4c-109">op: [](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) BigEndian jest listą CTL</span><span class="sxs-lookup"><span data-stu-id="48f4c-109">op : [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl</span></span>
 
 
 
 
+### <a name="register--littleendian"></a><span data-ttu-id="48f4c-110">Zarejestruj się: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="48f4c-110">register : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="44e8c-111">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="44e8c-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="48f4c-111">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="48f4c-111">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
