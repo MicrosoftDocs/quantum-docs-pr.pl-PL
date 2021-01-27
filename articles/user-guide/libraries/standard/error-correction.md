@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692047"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857207"
 ---
 # <a name="error-correction"></a>Korekcja błędów #
 
@@ -61,7 +61,7 @@ Wyniki każdego pomiaru są notowane według znaku zaobserwowanego eigenvalue, c
 | $X _2 $ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 W rezultacie wyniki dwóch pomiarów jednoznacznie decydują o tym, który wystąpił błąd podczas przerzucania bitów, ale bez ujawniania informacji o tym, który ze stanem został zakodowany.
-Nazywamy te wyniki *Syndrome* i zapoznaj się z procesem mapowania Syndrome z powrotem do błędu, który spowodował *odzyskanie* .
+Nazywamy te wyniki *Syndrome* i zapoznaj się z procesem mapowania Syndrome z powrotem do błędu, który spowodował *odzyskanie*.
 W szczególności podkreślamy, że odzyskiwanie jest *klasyczną* procedurą wnioskowania, która przyjmuje jako dane wejściowe Syndrome, która wystąpiła, i zwraca receptę dotyczącą sposobu naprawy wszelkich błędów, które mogły wystąpić.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ W szczególności podkreślamy, że odzyskiwanie jest *klasyczną* procedurą wn
 > Podobnie zastosowanie operacji przerzucenia fazy `Z` spowoduje zamapowanie $ \ket{\overline {1} } $ do $-\ket{\overline {1} } $, a tym samym zamapowanie $ \ket{\overline{+}} $ do $ \ket{\overline {-} } $.
 > Bardziej ogólnie rzecz biorąc, kody mogą być tworzone w celu obsługi większej liczby błędów oraz do obsługi $Z $ błędów, a także $X $ błędy.
 
-Szczegółowe informacje o tym, że możemy opisać miary w korekcji błędów Quantum, które działają tak samo jak w przypadku wszystkich stanów kodu, jest istoty *formalnego stabilizacji* .
+Szczegółowe informacje o tym, że możemy opisać miary w korekcji błędów Quantum, które działają tak samo jak w przypadku wszystkich stanów kodu, jest istoty *formalnego stabilizacji*.
 Q#Canon oferuje strukturę służącą do opisywania kodowania i dekodowania od kodów stabilizatorów oraz do opisywania, jak jeden odzyskuje błędy.
 W tej sekcji opisano te struktury i jej aplikacje do kilku prostych kodów korygujących błędów Quantum.
 

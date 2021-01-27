@@ -4,17 +4,17 @@ description: Dowiedz się więcej na temat wewnętrznych operacji i funkcji w QD
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692125"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857185"
 ---
 # <a name="the-prelude"></a>Preludium #
 
@@ -109,13 +109,13 @@ Zaczynamy od tego, że możemy wyrazić jakąkolwiek operację qubit za pomocą 
 Brama $T $ jest zaimplementowana przez <xref:Microsoft.Quantum.Intrinsic.T> operację i ma sygnaturę `(Qubit => Unit is Adj + Ctl)` wskazującą, że jest operacją jednostkową na jednym qubit.
 
 Mimo że jest to w zasadzie wystarczającej do opisywania dowolnej operacji pojedynczej qubit, różne maszyny docelowe mogą być bardziej wydajnymi reprezentacjami dla rotacji z operatorami Pauli, tak że Preludium zawiera różne sposoby convienentlynia takich rotacji.
-Najbardziej podstawowe są <xref:Microsoft.Quantum.Intrinsic.r> operacje, które implementują obrót wokół określonej osi Pauli, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation} gdzie $ \sigma $ jest operatorem Pauli, $ \phi $ to kąt i gdzie $ \exp $ reprezentuje tablicę wykładniczą.
+Najbardziej podstawowe są <xref:Microsoft.Quantum.Intrinsic.R> operacje, które implementują obrót wokół określonej osi Pauli, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation} gdzie $ \sigma $ jest operatorem Pauli, $ \phi $ to kąt i gdzie $ \exp $ reprezentuje tablicę wykładniczą.
 Ma sygnaturę `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` , gdzie pierwsze dwie części danych wejściowych reprezentują klasyczne argumenty $ \sigma $ i $ \phi $, które są niezbędne do określenia operatora jednostkowego $R (\sigma, \phi) $.
 Firma Microsoft może częściowo zastosować $ \sigma $ i $ \phi $, aby uzyskać operację, której typem jest moduł jednostki pojedynczej qubit.
 Na przykład `R(PauliZ, PI() / 4, _)` ma typ `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> <xref:Microsoft.Quantum.Intrinsic.r>Operacja dzieli kąt wejścia na 2 i mnoży ją przez-1.
+> <xref:Microsoft.Quantum.Intrinsic.R>Operacja dzieli kąt wejścia na 2 i mnoży ją przez-1.
 > W przypadku $Z $ rotacji oznacza to, że $ \ket {0} $ eigenstate jest obrócona o $-\phi/$2, a $ \ket {1} $ eigenstate jest obrócona o $ \phi/$2, tak aby $ \ket {1} $ eigenstate został obrócony przez $ \phi $ względem elementu $ \ket {0} $ eigenstate.
 >
 > W szczególności oznacza to, że `T` `R(PauliZ, PI() / 8, _)` różnią się tylko nieistotną [fazą globalną](xref:microsoft.quantum.glossary#global-phase).
@@ -217,7 +217,7 @@ Najpierw ponieważ wykonywanie pomiarów qubit jest dość popularne, Preludium 
 <xref:Microsoft.Quantum.Intrinsic.M>Operacja mierzy operator Pauli $Z $ na jednym qubit i ma sygnaturę `(Qubit => Result)` .
 `M(q)` jest równoważne `Measure([PauliZ], [q])`.
 
-<xref:microsoft.quantum.measurement.MultiM>Mierzy operator Pauli $Z $ *oddzielnie* na każdej tablicy qubits, zwracając *tablicę* `Result` wartości uzyskanych dla każdego qubit.
+<xref:Microsoft.Quantum.Measurement.MultiM>Mierzy operator Pauli $Z $ *oddzielnie* na każdej tablicy qubits, zwracając *tablicę* `Result` wartości uzyskanych dla każdego qubit.
 W niektórych przypadkach może to być zoptymalizowane. Ma sygnaturę ( `Qubit[] => Result[])` .
 `MultiM(qs)` jest równoważne:
 
