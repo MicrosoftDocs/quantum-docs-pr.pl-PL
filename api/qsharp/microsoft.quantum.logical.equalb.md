@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualB
 title: EqualB, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: EqualB
 qsharp.summary: Returns true if and only if two inputs are equal.
-ms.openlocfilehash: b566f5ba8548eadeecf63a1e91956d936e7e9a20
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2a15a749f52fe814db4fa57118f69c80fa22158a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198473"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98817254"
 ---
 # <a name="equalb-function"></a>EqualB, funkcja
 
@@ -49,7 +49,7 @@ Druga wartość do porównania.
 
 Następujące elementy są równoważne:
 
-```Q#
+```qsharp
 let cond = a == b;
 let cond = EqualB(a, b);
 ```
