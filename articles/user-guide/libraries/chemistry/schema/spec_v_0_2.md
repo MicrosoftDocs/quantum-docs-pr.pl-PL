@@ -4,17 +4,17 @@ description: Szczegółowe informacje o specyfikacjach Broombridge Quantum chemi
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833773"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854059"
 ---
 # <a name="broombridge-specification-v02"></a>Specyfikacja Broombridge v 0,2 #
 
@@ -171,7 +171,7 @@ Każdy obiekt opisu problemu musi mieć właściwość, `coulomb_repulsion` któ
 Każdy obiekt opisu problemu musi mieć właściwość, `energy_offet` której wartość jest obiektem o prostej liczbie.
 > KORYGUJĄC Wartości `coulomb_repulsion` i `energy_offet` dodane razem przechwytują okres tożsamości hamiltonian.
 
-##### <a name="one-electron-integrals-object"></a>Obiekt całkowity w jednym Elektronzie #####
+##### <a name="one-electron-integrals-object"></a>Obiekt całkowity One-Electron #####
 
 Ta sekcja jest normatywna.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge używa indeksowania opartego na 1.
 
 
-##### <a name="two-electron-integrals-object"></a>Dwukolorowy obiekt całkowity #####
+##### <a name="two-electron-integrals-object"></a>Obiekt całkowity Two-Electron #####
 
 Ta sekcja jest normatywna.
 

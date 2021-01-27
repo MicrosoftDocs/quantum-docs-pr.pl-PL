@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690861"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858703"
 ---
 # <a name="higher-order-control-flow"></a>Przepływ sterowania Higher-Order #
 
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Teraz możemy przyczynić się do rozszerzenia Trotter – Suzuki *bez odwołania do Mechanics Quantum* .
+Teraz możemy przyczynić się do rozszerzenia Trotter – Suzuki *bez odwołania do Mechanics Quantum*.
 Rozszerzanie jest efektywnie bardzo konkretnym wzorcem iteracji, które zostały poddane przez $ \eqref{EQ: Trotter-Suzuki-0} $.
-Ten wzorzec iteracji jest implementowany przez <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
+Ten wzorzec iteracji jest implementowany przez <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ Ta konstrukcja jest precyzyjna `ApplyWith` , dlatego należy odpowiednio napisa�
 ```
 
 W tym miejscu użyto, <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> Aby zastosować $P $, częściowo stosując się do jego celu do użycia z `ApplyWith` .
-Należy jednak pamiętać, że musimy przekształcić rejestr *kontrolki* na nasz żądany formularz, więc częściowo stosujemy wewnętrzną operację `(Controlled oracle)` na *obiekcie docelowym* .
+Należy jednak pamiętać, że musimy przekształcić rejestr *kontrolki* na nasz żądany formularz, więc częściowo stosujemy wewnętrzną operację `(Controlled oracle)` na *obiekcie docelowym*.
 Spowoduje to pozostawienie w `ApplyWith` nawiasie klamrowym rejestracji kontrolki z $P $, dokładnie tak, jak jest to konieczne.
 
 W tym momencie możemy to zrobić, ale jest to w jakiś sposób niezadowalający, że nasza nowa operacja nie "działa", jak zastosowanie `Controlled` Funktor.

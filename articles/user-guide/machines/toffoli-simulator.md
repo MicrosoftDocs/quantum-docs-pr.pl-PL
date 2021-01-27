@@ -4,17 +4,17 @@ description: Dowiedz się więcej o symulatorze Microsoft QDK Toffoli, w specjal
 author: alan-geller
 ms.author: ageller
 ms.date: 6/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 84b958912ab5116a3181c8eff4f331fc8394604c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690779"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858565"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Zestaw Quantum Development Kit (QDK) Toffoli symulator
 
@@ -67,7 +67,7 @@ Użyj I Q# Magic polecenia [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.
 Symulator Toffoli obsługuje:
 
 * Rotacje i exponentiated Pauly, takie jak `R` i `Exp` , gdy wynikiem operacji jest równa `X` się lub macierzy tożsamości.
-* Operacje pomiarów i [potwierdzeń](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) , ale tylko na `Z` podstawie Pauli. Zwróć uwagę, że prawdopodobieństwo operacji pomiaru ma zawsze **wartość 0** lub **1** ; nie ma losowości w symulatorze Toffoli.
+* Operacje pomiarów i [potwierdzeń](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) , ale tylko na `Z` podstawie Pauli. Zwróć uwagę, że prawdopodobieństwo operacji pomiaru ma zawsze **wartość 0** lub **1**; nie ma losowości w symulatorze Toffoli.
 * `DumpMachine` i `DumpRegister` funkcje.
 Obie funkcje wyprowadzają bieżący `Z` stan bazowy każdego qubitu, jedną qubit na wiersz.
 

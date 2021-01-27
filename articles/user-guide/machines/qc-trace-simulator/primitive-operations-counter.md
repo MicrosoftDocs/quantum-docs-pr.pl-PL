@@ -4,17 +4,17 @@ description: Dowiedz się więcej o liczniku operacji programu Microsoft QDKe po
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19ea3c1f5a91c00de4d3e435318bf4cf8cdd83be
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690952"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858602"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Symulator śledzenia Quantum: licznik operacji pierwotnych
 
@@ -24,7 +24,7 @@ Wszystkie <xref:Microsoft.Quantum.Intrinsic> operacje są wyrażane w odniesieni
 
 ## <a name="invoking-the-primitive-operation-counter"></a>Wywoływanie licznika operacji pierwotnej
 
-Aby uruchomić symulator śledzenia Quantum z licznikiem operacji pierwotnej, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UsePrimitiveOperationsCounter` Właściwość na **true** , a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie za pomocą `QCTraceSimulatorConfiguration` jako parametru.
+Aby uruchomić symulator śledzenia Quantum z licznikiem operacji pierwotnej, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UsePrimitiveOperationsCounter` Właściwość na **true**, a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie za pomocą `QCTraceSimulatorConfiguration` jako parametru.
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Używanie licznika operacji pierwotnej w programie hosta C#
 
-Poniższy przykład kodu w języku C# jest częścią liczby <xref:Microsoft.Quantum.Intrinsic.T> operacji potrzebnych do zaimplementowania <xref:Microsoft.Quantum.Intrinsic.ccnot> operacji w oparciu o następujący Q# przykładowy kod:
+Poniższy przykład kodu w języku C# jest częścią liczby <xref:Microsoft.Quantum.Intrinsic.T> operacji potrzebnych do zaimplementowania <xref:Microsoft.Quantum.Intrinsic.CCNOT> operacji w oparciu o następujący Q# przykładowy kod:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyIntrinsicA
 title: ApplyConditionallyIntrinsicA, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyIntrinsicA
 qsharp.summary: ''
-ms.openlocfilehash: d815467b714d1a529e784c2d8519e981cf4750b0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b22cb94a835f0504116e7152a4a1bfe66c483c10
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96230229"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858514"
 ---
 # <a name="applyconditionallyintrinsica-operation"></a>ApplyConditionallyIntrinsicA, operacja
 
@@ -40,12 +40,12 @@ operation ApplyConditionallyIntrinsicA (measurementResults : Result[], resultsVa
 
 
 
-### <a name="onequalop--unit--unit--is-adj"></a>onEqualOp: [Unit](xref:microsoft.quantum.lang-ref.unit) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) jednostki jest korektą
+### <a name="onequalop--unit--unit--is-adj"></a>onEqualOp: [](xref:microsoft.quantum.lang-ref.unit) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) jednostki jest korektą
 
 
 
 
-### <a name="onnonequalop--unit--unit--is-adj"></a>onNonEqualOp: [Unit](xref:microsoft.quantum.lang-ref.unit) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) jednostki jest korektą
+### <a name="onnonequalop--unit--unit--is-adj"></a>onNonEqualOp: [](xref:microsoft.quantum.lang-ref.unit) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) jednostki jest korektą
 
 
 

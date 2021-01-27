@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: Oblicza Hadamard transformację funkcji logicznej w {-1,1} kodowaniu przy użyciu metody Yates
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Dla każdej jednostki dwupoziomowej oblicza "Przerzuć maskę", która wskazuje qubits, które należy odwrócić przed i po zastosowaniu odpowiedniej bramy 1-qubit. W przypadku wygody dołączają wynik 0.
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: Tworzy typ MCMTMask jako tablicę pojedynczą, jeśli elementy docelowe nie są równe 0. w przeciwnym razie zwraca pustą tablicę.
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Oblicza do dwóch masek MCMT do przekształcenia y do x.
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: Dostosowuje tabelę prawdy z tablicy wartości logicznych zgodnie z liczbą zmiennych, która zwraca długość nowej tablicy `2^numVars` , co może wymagać zwiększenia `table` rozmiaru z `false` wpisami lub obcinanie go do `2^numVars` elementów.
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Sprawdza, czy dana tablica reprezentuje macierz kwadratową.
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: Maskowanie masek bramy w celu wysyntezowania permutacji.
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: Oblicza maski bramy w celu przekształcenia uprawnienie [x] do x i aktualizuje bieżącą permutację.
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: Wstaw 0-bitowe do liczby całkowitej
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: Stan podczas dekompozycji na podstawie indeksów zmiennych
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: Permutes amplitud w stanie Quantum przy użyciu syntezy opartej na transformacji.
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: Stosuje bramę Single-qubitd zdefiniowaną przez macierz jednostkową (2x2).
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    Stosuje bramę zdefiniowaną przez 2 ^ n x 2 ^ n macierz jednostkową.
+
+    Kończy się niepowodzeniem, jeśli macierz nie jest jednostką lub ma zły rozmiar.
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: Stosuje @"microsoft.quantum.intrinsic.x" operację na `target` , jeśli funkcja logiczna `func` zwróci wartość true dla klasycznego przypisania w `controlRegister` .
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: Stosuje @"microsoft.quantum.intrinsic.x" operację na `target` , jeśli funkcja logiczna `func` zwróci wartość true dla klasycznego przypisania w `controlRegister` .
@@ -63,9 +76,9 @@ operations:
 summary: Ta przestrzeń nazw zawiera funkcje i operacje umożliwiające syntezowanie operacji Quantum na podstawie permutacji i funkcji logicznych.
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92725722"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855186"

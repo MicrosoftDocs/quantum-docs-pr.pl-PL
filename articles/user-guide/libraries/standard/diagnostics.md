@@ -4,16 +4,16 @@ description: Dowiedz się więcej o funkcjach i operacjach diagnostycznych w Q# 
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690847"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858681"
 ---
 # <a name="diagnostics"></a>Diagnostyka #
 
@@ -27,7 +27,7 @@ Diagnostykę na temat klasycznych wartości można uzyskać za pomocą <xref:Mic
 Domyślnie program zapisuje ciąg w konsoli programu.
 Używane razem z interpolowanymi ciągami <xref:Microsoft.Quantum.Intrinsic.Message> ułatwia raportowanie informacji diagnostycznych o klasycznych wartościach:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -45,9 +45,9 @@ Porównując, komputer docelowy [symulatora Toffoli](xref:microsoft.quantum.mach
 
 ## <a name="facts-and-assertions"></a>Fakty i potwierdzenia ##
 
-Zgodnie z opisem w sekcji [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging), funkcja lub operacja z podpisem `Unit -> Unit` lub `Unit => Unit` odpowiednio, można oznaczyć jako *test jednostkowy* .
+Zgodnie z opisem w sekcji [testowanie i debugowanie](xref:microsoft.quantum.guide.testingdebugging), funkcja lub operacja z podpisem `Unit -> Unit` lub `Unit => Unit` odpowiednio, można oznaczyć jako *test jednostkowy*.
 Każdy test jednostkowy zwykle składa się z małego programu Quantum oraz co najmniej jednego warunku, który sprawdza poprawność tego programu.
-Warunki te mogą mieć postać _faktów_ , które sprawdzają wartości danych wejściowych lub _zatwierdzeń_ , które sprawdzają Stany jednego lub więcej qubitsów, które zostały przesłane jako dane wejściowe.
+Warunki te mogą mieć postać _faktów_, które sprawdzają wartości danych wejściowych lub _zatwierdzeń_, które sprawdzają Stany jednego lub więcej qubitsów, które zostały przesłane jako dane wejściowe.
 
 Na przykład, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` reprezentuje fakt matematyczny, że $1 + 1 = $2, natomiast `AssertQubit(One, qubit)` reprezentuje warunek, który mierzy `qubit` zwraca `One` z pewnością.
 W poprzednim przypadku można sprawdzić poprawność warunku, używając tylko jego wartości, a w tym drugim musimy wiedzieć coś o stanie qubit, aby oszacować potwierdzenie.
@@ -145,7 +145,7 @@ W przypadkach, gdy operacja implementuje odwracalną operację klasyczną, na pr
 
 Jednak te dwa podejścia przetestują różne właściwości operacji pod kontrolą.
 Ponieważ potwierdzenie w miejscu wywołuje każdą operację wiele razy, raz dla każdego stanu danych wejściowych, wszystkie losowe wybory i wyniki pomiarów mogą ulec zmianie między wywołaniami.
-Z drugiej strony potwierdzenie odwołania wywołuje każdą operację dokładnie raz, aby sprawdzać, czy operacje są równe *pojedynczego zrzutu* .
+Z drugiej strony potwierdzenie odwołania wywołuje każdą operację dokładnie raz, aby sprawdzać, czy operacje są równe *pojedynczego zrzutu*.
 Oba te testy są przydatne w celu zapewnienia poprawności programów Quantum.
 
 

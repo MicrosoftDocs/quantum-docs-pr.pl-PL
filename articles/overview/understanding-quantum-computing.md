@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834996"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855106"
 ---
 # <a name="understanding-quantum-computing"></a>Informacje na temat obliczeń kwantowych
 
-Dzięki obliczeniom kwantowym można przetwarzać informacje, bazując na zasadach mechaniki kwantowej. Z tego względu wykonywanie obliczeń kwantowych wymaga innego podejścia niż w przypadku obliczeń klasycznych. Jednym z przykładów obrazujących tę różnicę jest procesor używany do obliczeń kwantowych. Podczas gdy komputery klasyczne używają znanych mikroukładów opartych na krzemie, komputery kwantowe korzystają z systemów kwantowych, takich jak atomy, jony, fotony lub elektrony. Wykorzystują one właściwości kwantowe do reprezentowania bitów, które mogą być przygotowywane w różnych kwantowych superpozycjach wartości 1 i 0.  
+Dzięki obliczeniom kwantowym można przetwarzać informacje, bazując na zasadach mechaniki kwantowej. Z tego względu wykonywanie obliczeń kwantowych wymaga innego podejścia niż w przypadku obliczeń klasycznych. Jednym z przykładów obrazujących tę różnicę jest procesor używany do obliczeń kwantowych. Gdy klasyczne komputery używają znanych mikroukładów opartych na krzemie, komputery Quantum używają systemów Quantum (systemy, w których możemy sterować unikatowymi właściwościami i zachowaniami Quantum Mechanics), takimi jak atomy, jony, photons lub Electrons. Gdy klasyczne komputery używają odpowiednio binarnych obciążeń opartych na logice i najniższa, tj. 1 i 0, komputery Quantum używają właściwości Quantum do reprezentowania bitów, które mogą być przygotowane w różnych górnych miejscach Quantum 1 i 0.  
 
 Materiał kwantowy zachowuje się zgodnie z prawami mechaniki kwantowej, w której używa się pojęć, takich jak obliczenia probabilistyczne, superpozycja czy splątanie. Te pojęcia stanowią podstawę algorytmów kwantowych, które wykorzystują moc obliczeń kwantowych do rozwiązywania złożonych problemów. W tym artykule opisano niektóre podstawowe pojęcia mechaniki kwantowej, na której bazują obliczenia kwantowe.
 
@@ -52,7 +52,7 @@ Oprócz tej współzależności cząstki mogą zachować to połączenie nawet w
 
 ### <a name="qubits-and-probability"></a>Kubity i prawdopodobieństwo
 
-Klasyczne komputery przechowują i przetwarzają informacje w postaci bitów. Każdy bit może mieć wartość 1 lub 0, ale nigdy nie może mieć obu tych wartości jednocześnie. Odpowiednikiem bitu w obliczeniach kwantowych jest **kubit**, który reprezentuje stan cząstek kwantowych. Ze względu na zjawisko superpozycji kubity mogą mieć wartości 1, 0 lub dowolną wartość pośrednią. W zależności od konfiguracji kubit ma pewne *prawdopodobieństwo* kolapsu do wartości 1 lub 0. Prawdopodobieństwo kolapsu kubitu do jednej lub innej wartości jest zdeterminowane przez **interferencję kwantową**. 
+Klasyczne komputery przechowują i przetwarzają informacje w postaci bitów. Każdy bit może mieć wartość 1 lub 0, ale nigdy nie może mieć obu tych wartości jednocześnie. Odpowiednikiem bitu w obliczeniach kwantowych jest **kubit**, który reprezentuje stan cząstek kwantowych. Ze względu na zjawisko superpozycji kubity mogą mieć wartości 1, 0 lub dowolną wartość pośrednią. W zależności od konfiguracji kubit ma pewne *prawdopodobieństwo* kolapsu do wartości 1 lub 0. Prawdopodobieństwo kolapsu kubitu do jednej lub innej wartości jest zdeterminowane przez **interferencję kwantową**.
 
 Czy pamiętasz swojego znajomego, który robił Ci zdjęcie? Załóżmy, że ma on na aparacie specjalne filtry *interferencyjne*. Jeśli wybierze on filtr *70/30* i zacznie robić zdjęcia, na 70% z nich będziesz patrzeć w lewo, a na 30% z nich — w prawo. Filtr zakłócił zwykły stan aparatu i wpłynął na prawdopodobieństwo jego zachowania.
 

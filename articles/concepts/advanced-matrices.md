@@ -1,6 +1,6 @@
 ---
 title: zaawansowane pojęcia dotyczące macierzy: informacje na temat eigenvectors, eigenvalues i wykładniczych, podstawowych narzędzi służących do opisywania i symulowania algorytmów Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Matrix — Advanced MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Matrix — Advanced MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"

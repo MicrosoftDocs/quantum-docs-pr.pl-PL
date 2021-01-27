@@ -1,6 +1,6 @@
 ---
 title: Opis obwodów Quantum: informacje o wizualizacji reprezentują proste i złożone operacje Quantum przy użyciu diagramów obwodów Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Circuits MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Circuits MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ Ta sekwencja bram ma podstawowe znaczenie dla przetwarzania Quantum, ponieważ t
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Operacje o tej lub większej złożoności są powszechnie stosowane w algorytmach Quantum i korekcji błędów Quantum, dlatego powinna być to świetna, że istnieje prosta metoda dla wizualizacji zwanej *diagramem obwodu Quantum* .
+Operacje o tej lub większej złożoności są powszechnie stosowane w algorytmach Quantum i korekcji błędów Quantum, dlatego powinna być to świetna, że istnieje prosta metoda dla wizualizacji zwanej *diagramem obwodu Quantum*.
 Diagram obwodu do przygotowywania tego stanu Maximally Entangled Quantum to:
 
 <!--- ![](.\media\1.svg) --->

@@ -4,17 +4,17 @@ description: Dowiedz się, jak uczenie maszynowe jest używane w systemach Quant
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833799"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854029"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Wprowadzenie do Machine Learning Quantum
 
@@ -41,7 +41,7 @@ W takim przypadku rozwiązanie jest analogową usługą Quantum dla maszyny wekt
 
 Prosty projekt klasyfikatora Quantum można porównać do tradycyjnego rozwiązania do obsługi maszyn wektorowych (SVM). Wnioskowanie dla przykładu danych $x $ w przypadku SVM jest wykonywane przy użyciu optymalnego formularza jądra $ \sum \ alpha_j k (x_j, x) $, gdzie $k $ jest pewną funkcją jądra.
 
-Z kolei klasyfikator Quantum używa predykcyjności $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, który jest podobny w duchu, ale technicznie inny. W tym przypadku, gdy używane jest proste kodowanie amplitudy, $p (y │ x, U (\theta)) $ jest postacią kwadratową w amplitudach $x $, ale współczynniki tego formularza nie są już niezależne. Zamiast tego są one agregowane z elementów macierzy obwodu $U (\theta) $, które zwykle mają znacznie mniej bardziej poznanie parametry $ \theta $ niż wymiar wektora $x $. Stopień wielomianu $p (y │ x, U (\theta)) $ w oryginalnych funkcjach można zwiększyć do wartości $2 ^ l $ przy użyciu kodowania produktu Quantum na $l $ kopie $x $.
+Z kolei klasyfikator Quantum używa predykcyjnego $p (t │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, który jest podobny do, ale technicznie inny. W tym przypadku, gdy używane jest proste kodowanie amplitudy, $p (y │ x, U (\theta)) $ jest postacią kwadratową w amplitudach $x $, ale współczynniki tego formularza nie są już niezależne. Zamiast tego są one agregowane z elementów macierzy obwodu $U (\theta) $, które zwykle mają znacznie mniej bardziej poznanie parametry $ \theta $ niż wymiar wektora $x $. Stopień wielomianu $p (y │ x, U (\theta)) $ w oryginalnych funkcjach można zwiększyć do wartości $2 ^ l $ przy użyciu kodowania produktu Quantum na $l $ kopie $x $.
 
 Nasza architektura analizuje stosunkowo płytki obwodów, co w związku z tym musi być *szybko Entangling* w celu przechwycenia wszystkich korelacji między funkcjami danych we wszystkich zakresach. Przykład najbardziej przydatnego, szybkiego składnika obwodu Entangling pokazano na poniższej ilustracji. Mimo że obwód z tą geometrią składa się tylko z bram o $3 n + 1 $, macierz wagi jednostki, która jest obliczana, zapewnia znaczącą komunikację krzyżową między funkcjami $2 ^ n $.
 

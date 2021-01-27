@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
 title: DiscreteUniformDistribution, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DiscreteUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive range.
-ms.openlocfilehash: 08a62805f59df339ef6b91dff802c40c407808f4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f909e7def5439ec0feef4ca4dc0cf8ed12374dfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193016"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853722"
 ---
 # <a name="discreteuniformdistribution-function"></a>DiscreteUniformDistribution, funkcja
 
@@ -44,6 +44,15 @@ Największa liczba całkowita do narysowania.
 ## <a name="output--discretedistribution"></a>Wynik: [DiscreteDistribution](xref:Microsoft.Quantum.Random.DiscreteDistribution)
 
 Rozkład, którego losowo variates są liczbami całkowitymi w łącznym zakresie od `min` do `max` z jednolitym prawdopodobieństwem.
+
+## <a name="example"></a>Przykład
+
+Poniższy fragment kodu Q # losowy rzutuje na sześć stron:
+
+```qsharp
+let dieDistribution = DiscreteUniformDistribution(1, 6);
+let dieRoll = dieDistribution::Sample();
+```
 
 ## <a name="remarks"></a>Uwagi
 

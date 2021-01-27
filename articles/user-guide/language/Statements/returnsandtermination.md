@@ -1,6 +1,6 @@
 ---
 title: "instrukcje powrotu i niepowodzenia w Q# " Opis: informacje na temat używania instrukcji "return" i "Fail" w Q# celu zakończenia podprocedury lub programu.
-Autor: bettinaheim MS. Author: beheim MS. Date: 10/07/2020 MS.: artykuł UID: Microsoft. Quantum. qsharp. returnsandtermination No-Loc:
+Autor: bettinaheim MS. Author: beheim MS. Date: 10/07/2020 MS.: informacje o UID: Microsoft. Quantum. qsharp. returnsandtermination No-Loc:
 - "Q#"
 - "$$v"
 

@@ -4,17 +4,17 @@ description: Dowiedz się więcej o liczniku szerokości QDK firmy Microsoft, kt
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9a526ee1440544aace922bd83c6ea39cb83c1ae
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691120"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858577"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Symulator śledzenia Quantum: szerokość licznika
 
@@ -22,7 +22,7 @@ Licznik width jest częścią [symulatora śledzenia](xref:microsoft.quantum.mac
 
 ## <a name="invoking-the-width-counter"></a>Wywoływanie licznika szerokości
 
-Aby uruchomić symulator śledzenia Quantum z licznikiem szerokości, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UseWidthCounter` Właściwość na **true** , a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie przy użyciu `QCTraceSimulatorConfiguration` jako parametru. 
+Aby uruchomić symulator śledzenia Quantum z licznikiem szerokości, należy utworzyć <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> wystąpienie, ustawić `UseWidthCounter` Właściwość na **true**, a następnie utworzyć nowe <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> wystąpienie przy użyciu `QCTraceSimulatorConfiguration` jako parametru. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-Operacja mnożenia z mnożeniem <xref:Microsoft.Quantum.Intrinsic.X> działa na ogół pięciu qubits, przydziela dwa [pomocnicze qubits](xref:microsoft.quantum.glossary#ancilla)i ma szerokość wejściową **5** . Aby sprawdzić liczbę liczników, użyj następującego programu w języku C#:
+Operacja mnożenia z mnożeniem <xref:Microsoft.Quantum.Intrinsic.X> działa na ogół pięciu qubits, przydziela dwa [pomocnicze qubits](xref:microsoft.quantum.glossary#ancilla)i ma szerokość wejściową **5**. Aby sprawdzić liczbę liczników, użyj następującego programu w języku C#:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
