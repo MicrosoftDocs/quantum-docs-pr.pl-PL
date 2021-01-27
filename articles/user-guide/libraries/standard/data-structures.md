@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692240"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858329"
 ---
 # <a name="data-structures-and-modeling"></a>Struktury i modelowanie danych #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Firmy Oracle ##
 
 W [ocenie fazy](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) i literaturze [wzmocnienia amplitudy](https://en.wikipedia.org/wiki/Amplitude_amplification) koncepcje Oracle często pojawiają się.
-W tym miejscu termin Oracle odwołuje się do procedury podrzędnej Blackbox Quantum, która działa na zestawie qubits i zwraca odpowiedź jako fazę.
+W tym miejscu termin Oracle odnosi się do procedury podrzędnej Quantum, która działa na zestawie qubits i zwraca odpowiedź jako fazę.
 Ta podprocedura często może być traktowana jako dane wejściowe algorytmu Quantum, który akceptuje Oracle, oprócz innych parametrów, i stosuje szereg operacji Quantum i traktowanie wywołania tej podprocedury Quantum, tak jakby była bramą podstawową.
 Oczywiście, aby faktycznie zaimplementować większy algorytm, należy podać konkretną dekompozycję Oracle do podstawowych bram, ale takie dekompozycja nie jest wymagana w celu zrozumienia algorytmu, który wywołuje Oracle.
 W programie Q# to streszczenie jest reprezentowane przez użycie tych operacji jako wartości pierwszej klasy, na przykład, że operacje mogą być przesyłane do implementacji algorytmów Quantum w sposób czarno-Box.

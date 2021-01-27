@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexOf
 title: IndexOf, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IndexOf
 qsharp.summary: Returns the first index of the first element in an array that satisfies a given predicate. If no such element exists, returns -1.
-ms.openlocfilehash: d63b204334611f8f2c3860f9ee1d756f637780e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 64db55e831078a7130a3ced6a30bfbd2299c392d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221015"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848523"
 ---
 # <a name="indexof-function"></a>IndexOf, funkcja
 
@@ -49,3 +49,13 @@ Najmniejszy indeks taki, `idx` który `predicate(arr[idx])` ma wartość true, l
 
 ### <a name="t"></a>'C
 
+
+
+## <a name="example"></a>Przykład
+
+Załóżmy, że `IsEven : Int -> Bool` jest funkcją, która zwraca wartość, `true` Jeśli i tylko wtedy, gdy jej dane wejściowe są parzyste. Następnie można go użyć w `IndexOf` celu znalezienia pierwszego elementu parzystego w tablicy:
+
+```qsharp
+let items = [1, 3, 17, 2, 21];
+let idx = IndexOf(IsEven, items); // returns 3
+```

@@ -4,18 +4,17 @@ description: Tu opisano, jak zaktualizować projekty języka Q# i zestaw Microso
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1b5def3226bd073c878f8573aaddd757d733ec48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834927"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858058"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Aktualizowanie zestawu Microsoft Quantum Development Kit (QDK)
 
@@ -282,7 +281,7 @@ Procedura aktualizacji zależy od tego, czy program został pierwotnie zainstalo
     %workspace reload
     ```
 
-***
+**_
 
 Teraz możesz używać zaktualizowanego jądra IQ# do uruchamiania istniejących notesów Jupyter Notebook języka Q#.
 
@@ -301,7 +300,7 @@ Teraz możesz używać zaktualizowanego jądra IQ# do uruchamiania istniejących
 1. Aktualizowanie rozszerzenia programu VS Code dla obliczeń kwantowych
 
     - Uruchom ponownie program VS Code
-    - Przejdź do karty **Extensions** (Rozszerzenia)
+    - Przejdź do karty _ *rozszerzeń**
     - Wybierz rozszerzenie **Microsoft Quantum Development Kit for Visual Studio Code**
     - Załaduj ponownie rozszerzenie
 
