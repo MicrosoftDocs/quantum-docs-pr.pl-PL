@@ -4,17 +4,17 @@ description: Poznaj konwencje nazewnictwa, wprowadzania, dokumentacji i formatow
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231659"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852758"
 ---
 # <a name="no-locq-style-guide"></a>Q# Styl — Przewodnik #
 ## <a name="general-conventions"></a>Konwencje ogólne ##
@@ -52,7 +52,7 @@ Takie rozróżnienie sugeruje, że nazwy operacji są nazywane czasownikami i fu
 > W tej perspektywie typy zdefiniowane przez użytkownika powinny być nazwane jako rzeczowniki, tak aby oba typy i funkcje konstruktora miały spójne nazwy.
 
 W odpowiednim przypadku upewnij się, że nazwy operacji zaczynają się od czasowników jasno wskazujących wpływ operacji.
-Przykład:
+Na przykład:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -384,7 +384,7 @@ _*_
 ## <a name="documentation-conventions"></a>Konwencje dokumentacji ##
 
 Q#Język umożliwia dołączanie dokumentacji do operacji, funkcji i typów zdefiniowanych przez użytkownika za pomocą specjalnie sformatowanych komentarzy do dokumentacji.
-Oznacza to `///` , że komentarze w dokumentacji to małe ukośniki (), które mogą [DocFX-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) być używane do opisywania przeznaczenia każdej operacji, funkcji i typu zdefiniowanego przez użytkownika, jakie dane muszą oczekiwać i tak dalej.
+Oznacza to `///` , że komentarze w dokumentacji to małe ukośniki (), które mogą [](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) być używane do opisywania przeznaczenia każdej operacji, funkcji i typu zdefiniowanego przez użytkownika, jakie dane muszą oczekiwać i tak dalej.
 Kompilator dostarczany z zestawem SDK Quantum wyodrębnia te komentarze i korzysta z nich, aby pomóc w poziomego złożenia dokumentacji podobnej do tej https://docs.microsoft.com/quantum .
 Podobnie serwer językowy dostarczony z zestawem Quantum Development Kit używa tych komentarzy, aby zapewnić użytkownikom Pomoc po umieszczeniu wskaźnika myszy na symbolach w Q# kodzie.
 Korzystanie z komentarzy do dokumentacji może ułatwić użytkownikom zrozumienie kodu przez udostępnienie przydatnego odwołania do szczegółów, które nie są łatwo wyrażone przy użyciu innych konwencji zawartych w tym dokumencie.
