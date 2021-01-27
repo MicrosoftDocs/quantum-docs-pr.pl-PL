@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: AssertProbInt, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
 qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
-ms.openlocfilehash: b95c2c6294dd5a95b7215c22bd6c50a41635f432
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 85ff04bbad9dc2ed0f803db65508fdfbb0d22c56
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223701"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843403"
 ---
 # <a name="assertprobint-operation"></a>AssertProbInt, operacja
 
@@ -57,3 +57,14 @@ Absolutna tolerancja różnicy między wartością rzeczywistą i oczekiwaną.
 
 ## <a name="output--unit"></a>Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>Przykład
+
+Załóżmy, że `qubits` Rejestr koduje qubit Quantum $ \ket{\psi} = \ sqrt {1/8} \ KET {0} + \ sqrt {7/8} \ KET {6} $ w formacie little-endian.
+Oznacza to, że liczba Stany $ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $ i $ \ket {6} \equiv\ket {0} \ket {1} \ket {1} $. Następnie następujące potwierdzenia zostały wykonane pomyślnie:
+
+```qsharp
+AssertProbInt(0, 0.125, qubits, 10e-10);
+AssertProbInt(6, 0.875, qubits, 10e-10);
+```

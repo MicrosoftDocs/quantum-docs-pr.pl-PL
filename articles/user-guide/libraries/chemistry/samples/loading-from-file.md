@@ -4,17 +4,17 @@ description: Dowiedz się, jak automatycznie generować duże hamiltonian przy u
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869243"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844114"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Ładowanie operatora Hamiltona z pliku
 Wcześniej tworzymy Hamiltonians przez dodanie do niej poszczególnych warunków. Chociaż jest to bardzo szczegółowe w przypadku małych przykładów, Chemia Quantum na skalę wymaga Hamiltonians z milionami lub miliardami warunków. Takie Hamiltonians, generowane przez pakiety chemii, takie jak NWChem, są zbyt duże, aby można je było zaimportować. W tym przykładzie pokazano, jak `FermionHamiltonian` wystąpienie może być automatycznie generowane na podstawie cząsteczki reprezentowanej przez [schemat Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). W przypadku elementu Reference można przeprowadzić inspekcję podanego `LithiumHydrideGUI` przykładu lub `RunSimulation` próbki. Ograniczona pomoc techniczna jest również dostępna do zaimportowania w formacie użytym przez [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).

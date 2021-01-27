@@ -1,30 +1,30 @@
 ---
-title: Jordania — reprezentacja Wigner
-description: Zapoznaj się z reprezentacją Jordania-Wigner, która mapuje operatory hamiltonian na macierze jednostkowe, które można łatwiej zaimplementować na komputerze Quantum.
+title: Reprezentacja Jordan-Wigner
+description: Dowiedz się więcej na temat reprezentacji Jordan-Wigner, która mapuje operatory hamiltonian na macierze jednostkowe, które można łatwiej zaimplementować na komputerze Quantum.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833853"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844135"
 ---
-# <a name="jordan-wigner-representation"></a>Jordania — reprezentacja Wigner
+# <a name="jordan-wigner-representation"></a>Reprezentacja Jordan-Wigner
 
 Podczas gdy druga Quantized Hamiltonians jest wygodnie reprezentowana w $a ^ \dagger $ (Tworzenie) i $a $ (Annihilation), te operacje nie są podstawowymi operacjami na komputerach Quantum.
 W związku z tym, Jeśli wolimy wdrożyć je na komputerze z systemem Quantum, musimy zmapować operatory na macierze jednostkowe, które można zaimplementować na komputerze Quantum.
 Reprezentacja Jordania – Wigner daje jedną taką mapę.
 Jednak inne, takie jak Bravyi — reprezentacja Kitaev istnieje również i mają własne względne zalety i wady.
-Główną zaletą reprezentacji Jordania-Wigner jest prostota.
+Główną zaletą reprezentacji Jordan-Wigner jest prostota.
 
-Reprezentacja Jordania-Wigner jest prosta do przesłania do.
+Reprezentacja Jordan-Wigner jest prosta do przesłania do.
 Należy odwołać się, że stan $ \ket {0} _j $ oznacza, że $j "$" jest puste, a $ _j \ket $ {1} oznacza, że jest zajęta.
 Oznacza to, że qubits może w naturalny sposób przechowywać zawód danego kręgu.
 Następnie będziemy $a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ i $a ^ \ dagger_j \ket {1} _j = $0.
@@ -51,14 +51,14 @@ Pełna konstrukcja jest następująca:
 \begin{align} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, { \\ \\ \ dagger_2 &= Z\otimes\left (\frac{X-iy} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_3 &= Z\otimes Z\otimes \left (\frac{X-iy} {2} \right) \otimes 1 \otimes \cdots \otimes 1, \\ \\ & \Vdots \\ \\ a ^ \ dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left (\frac{X-iy} \right {2} ). \label{eq:JW} \end{align}
 
 Warto również przedstawić Operatory liczbowe, $n _j $, w odniesieniu do operatorów Pauli.
-Thankfully, ciągi $Z $ operatory (nazywane ciągami Jordania-Wigner) anulują po wykonaniu tej podstawienia.
+Thankfully, ciągi $Z $ operatory (znane jako ciągi Jordan-Wigner) anulują po wykonaniu tej podstawie.
 Po przeprowadzeniu tego wywołania (i odwołujący się do $X _jY_j = iZ_j $) mamy \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Konstruowanie Hamiltonians w Jordanii-Wigner reprezentacji
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Konstruowanie Hamiltonians w reprezentacji Jordan-Wigner
 
-Po wywołaniu reprezentacji Jordania-Wigner przetłumaczenia hamiltonian na sumę operatorów Pauli jest prosta do przodu.
+Po wywołaniu Jordan-Wigner reprezentację tłumaczenia hamiltonian na sumę operatorów Pauli jest prosta do przodu.
 Po prostu należy zamienić wszystkie operatory $a ^ \dagger $ i $a $ w Fermionic hamiltonian na ciągi Pauli-operatory określone powyżej.
 Gdy jedna z nich wykonuje tę podstawienie, istnieje tylko pięć klas warunków w hamiltonian.
 Te pięć klas odpowiada różnym sposobom, w których można wybrać $p, q $ i $p, q, r, s $ w jednoczęściowej i dwóch terminologii w hamiltonian.

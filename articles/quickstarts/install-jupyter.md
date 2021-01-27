@@ -4,18 +4,17 @@ description: Dowiedz się, jak utworzyć aplikację Q# przy użyciu notesów Jup
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
-ms.translationtype: HT
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771388"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844294"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Programowanie w języku Q# przy użyciu notesów Jupyter Notebook
 
@@ -69,7 +68,7 @@ IQ# (wymawiane jak „i-q-sharp”) to rozszerzenie zestawu .NET Core SDK używa
 > gdzie `/path/to/dotnet-iqsharp` należy zastąpić ścieżką bezwzględną narzędzia `dotnet-iqsharp` w systemie plików.
 > Zwykle znajduje się ono w podfolderze `.dotnet/tools` w folderze profilu użytkownika.
     
-***
+**_
 
 Gotowe. Masz teraz jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i uruchamiania operacji języka Q# z poziomu notesów Jupyter języka Q#.
 
@@ -85,7 +84,7 @@ Teraz możesz zweryfikować instalację notesu Jupyter języka Q#, pisząc i uru
 
     - Jeśli notes Jupyter Notebook nie zostanie otwarty automatycznie w przeglądarce, skopiuj i wklej adres URL otrzymany w wierszu polecenia do okna przeglądarki.
 
-1. Wybierz pozycję **New → Q#** (Nowy → Q#), aby utworzyć notes Jupyter z jądrem Q#, i dodaj następujący kod do pierwszej komórki notesu:
+1. Wybierz _ *New → Q#**, aby utworzyć Jupyter notebook z Q# jądrem, i Dodaj następujący kod do pierwszej komórki notesu:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

@@ -4,18 +4,17 @@ description: Dowiedz się, jak utworzyć aplikację Q# przy użyciu języka Pyth
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834163"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844266"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Programowanie przy użyciu języków Q# i Python
 
@@ -72,7 +71,7 @@ Zainstaluj zestaw QDK, aby tworzyć programy hosta w języku Python umożliwiaj�
     > gdzie `/path/to/dotnet-iqsharp` należy zastąpić ścieżką bezwzględną narzędzia `dotnet-iqsharp` w systemie plików.
     > Zwykle znajduje się ono w podfolderze `.dotnet/tools` w folderze profilu użytkownika.
     
-***
+**_
 
 Gotowe. Masz teraz zarówno pakiet `qsharp` języka Python, jak i jądro IQ# dla środowiska Jupyter, które udostępnia podstawowe funkcje kompilowania i uruchamiania operacji języka Q# z poziomu środowiska Python oraz umożliwia korzystanie z notesów Jupyter języka Q#.
 
@@ -113,7 +112,7 @@ Teraz możesz już zweryfikować instalację pakietu `qsharp` języka Python, pi
 1. Powinien zostać wyświetlony wynik wywołanej operacji. W tym przypadku, ponieważ operacja generuje losowy wynik, na ekranie zostanie wyświetlona wartość `0` lub `1`. W przypadku wielokrotnego uruchamiania programu każdy wynik powinien być wyświetlany w przybliżeniu przez połowę czasu.
 
 > [!NOTE]
-> * Ten kod języka Python to zwykły program w języku Python. Możesz użyć dowolnego środowiska języka Python, w tym notesów Jupyter Notebook opartych na języku Python, aby napisać program w języku Python i wywołać operacje języka Q#. Program w języku Python może zaimportować operacje języka Q# z dowolnych plików qs znajdujących się w tym samym folderze co sam kod języka Python.
+> _ Kod języka Python jest tylko zwykłym programem w języku Python. Możesz użyć dowolnego środowiska języka Python, w tym notesów Jupyter Notebook opartych na języku Python, aby napisać program w języku Python i wywołać operacje języka Q#. Program w języku Python może zaimportować operacje języka Q# z dowolnych plików qs znajdujących się w tym samym folderze co sam kod języka Python.
 
 ## <a name="next-steps"></a>Następne kroki
 
