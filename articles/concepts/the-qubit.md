@@ -1,6 +1,6 @@
 ---
 title: qubit w usłudze Quantum Computing Description: Poznaj qubits, podstawową jednostkę informacji w ramach przetwarzania Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"

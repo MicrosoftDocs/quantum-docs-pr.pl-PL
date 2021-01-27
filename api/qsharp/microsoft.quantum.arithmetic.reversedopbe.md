@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpBE
 title: ReversedOpBE, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpBE
 qsharp.summary: Given an operation that takes a big-endian input, returns a new operation that takes a little-endian input.
-ms.openlocfilehash: 3c39a90ed4b5df09b90d8b5020d8b824285b50eb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 878b0fae8a803b3136d1537309c945c052e1052c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222324"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846482"
 ---
 # <a name="reversedopbe-function"></a>ReversedOpBE, funkcja
 
@@ -36,7 +36,7 @@ Operacja, której dane wejściowe mają zostać cofnięte.
 
 
 
-## <a name="output--littleendian--unit"></a>Dane wyjściowe [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) : => [Jednostka](xref:microsoft.quantum.lang-ref.unit) LittleEndian 
+## <a name="output--littleendian--unit"></a>Dane wyjściowe [](xref:Microsoft.Quantum.Arithmetic.LittleEndian) : => [Jednostka](xref:microsoft.quantum.lang-ref.unit) LittleEndian 
 
 Nowa operacja, która akceptuje dane wejściowe jako rejestr little-endian.
 
