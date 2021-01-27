@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedC
 title: DelayedC, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedC
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: d8036397559b1587b806f701d89e892eea2da8f9
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a1f2582668131816b774bf4a8b7476d9f1ee8cad
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207019"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840558"
 ---
 # <a name="delayedc-function"></a>DelayedC, funkcja
 
@@ -41,7 +41,7 @@ Dane wejściowe, do których `op` zostanie zastosowana operacja.
 
 
 
-## <a name="output--unit--unit--is-ctl"></a>Wynik: [Unit](xref:microsoft.quantum.lang-ref.unit) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) jednostki jest listą CTL
+## <a name="output--unit--unit--is-ctl"></a>Wynik: [](xref:microsoft.quantum.lang-ref.unit) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) jednostki jest listą CTL
 
 Nowa operacja stosowana `op` z danymi wejściowymi `arg`
 
