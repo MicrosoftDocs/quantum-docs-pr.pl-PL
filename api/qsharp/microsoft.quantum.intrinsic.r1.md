@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R1
 title: R1 — operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,50 +10,50 @@ qsharp.summary: >-
   Applies a rotation about the $\ket{1}$ state by a given angle.
 
   \begin{align} R_1(\theta) \mathrel{:=} \operatorname{diag}(1, e^{i\theta}). \end{align}
-ms.openlocfilehash: a98c2cc0b309a239650afd2910cc74dffa9f899a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 07cce580b50fef5664fdac32bb4fae0ba22d25e2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198813"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849347"
 ---
-# <a name="r1-operation"></a><span data-ttu-id="c6aba-102">R1 — operacja</span><span class="sxs-lookup"><span data-stu-id="c6aba-102">R1 operation</span></span>
+# <a name="r1-operation"></a><span data-ttu-id="6dab6-102">R1 — operacja</span><span class="sxs-lookup"><span data-stu-id="6dab6-102">R1 operation</span></span>
 
-<span data-ttu-id="c6aba-103">Przestrzeń nazw: [Microsoft. Quantum. wewnętrzna](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="c6aba-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
+<span data-ttu-id="6dab6-103">Przestrzeń nazw: [Microsoft. Quantum. wewnętrzna](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="6dab6-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
 
-<span data-ttu-id="c6aba-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="c6aba-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="6dab6-104">Pakiet: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="6dab6-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="c6aba-105">Stosuje obrót o stanie $ \ket {1} $ o danym kącie.</span><span class="sxs-lookup"><span data-stu-id="c6aba-105">Applies a rotation about the $\ket{1}$ state by a given angle.</span></span>
+<span data-ttu-id="6dab6-105">Stosuje obrót o stanie $ \ket {1} $ o danym kącie.</span><span class="sxs-lookup"><span data-stu-id="6dab6-105">Applies a rotation about the $\ket{1}$ state by a given angle.</span></span>
 
-<span data-ttu-id="c6aba-106">\begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).</span><span class="sxs-lookup"><span data-stu-id="c6aba-106">\begin{align} R_1(\theta) \mathrel{:=} \operatorname{diag}(1, e^{i\theta}).</span></span>
-<span data-ttu-id="c6aba-107">\end{align}</span><span class="sxs-lookup"><span data-stu-id="c6aba-107">\end{align}</span></span>
+<span data-ttu-id="6dab6-106">\begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).</span><span class="sxs-lookup"><span data-stu-id="6dab6-106">\begin{align} R_1(\theta) \mathrel{:=} \operatorname{diag}(1, e^{i\theta}).</span></span>
+<span data-ttu-id="6dab6-107">\end{align}</span><span class="sxs-lookup"><span data-stu-id="6dab6-107">\end{align}</span></span>
 
 ```qsharp
 operation R1 (theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="c6aba-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="c6aba-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="6dab6-108">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="6dab6-108">Input</span></span>
 
-### <a name="theta--double"></a><span data-ttu-id="c6aba-109">teta: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="c6aba-109">theta : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="theta--double"></a><span data-ttu-id="6dab6-109">teta: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="6dab6-109">theta : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="c6aba-110">Kąt, dla którego ma zostać obrócony qubit.</span><span class="sxs-lookup"><span data-stu-id="c6aba-110">Angle about which the qubit is to be rotated.</span></span>
-
-
-### <a name="qubit--qubit"></a><span data-ttu-id="c6aba-111">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="c6aba-111">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
-
-<span data-ttu-id="c6aba-112">Qubit, do którego należy zastosować bramę.</span><span class="sxs-lookup"><span data-stu-id="c6aba-112">Qubit to which the gate should be applied.</span></span>
+<span data-ttu-id="6dab6-110">Kąt, dla którego ma zostać obrócony qubit.</span><span class="sxs-lookup"><span data-stu-id="6dab6-110">Angle about which the qubit is to be rotated.</span></span>
 
 
+### <a name="qubit--qubit"></a><span data-ttu-id="6dab6-111">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="6dab6-111">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="c6aba-113">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="c6aba-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="6dab6-112">Qubit, do którego należy zastosować bramę.</span><span class="sxs-lookup"><span data-stu-id="6dab6-112">Qubit to which the gate should be applied.</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="c6aba-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c6aba-114">Remarks</span></span>
+## <a name="output--unit"></a><span data-ttu-id="6dab6-113">Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="6dab6-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="c6aba-115">Równoważne:</span><span class="sxs-lookup"><span data-stu-id="c6aba-115">Equivalent to:</span></span>
+
+
+## <a name="remarks"></a><span data-ttu-id="6dab6-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6dab6-114">Remarks</span></span>
+
+<span data-ttu-id="6dab6-115">Równoważne:</span><span class="sxs-lookup"><span data-stu-id="6dab6-115">Equivalent to:</span></span>
 
 ```qsharp
 R(PauliZ, theta, qubit);
