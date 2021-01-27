@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertPhase
 title: AssertPhase, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertPhase
 qsharp.summary: Asserts that the phase of an equal superposition state has the expected value.
-ms.openlocfilehash: 9130d6c735d90abbc51989ef4a68a8eff8b41371
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 59fa0f2f68b4de271b972aef776ee5097fd5c201
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202264"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98830077"
 ---
 # <a name="assertphase-operation"></a>AssertPhase, operacja
 
@@ -52,3 +52,18 @@ Absolutna tolerancja różnicy między wartością rzeczywistą i oczekiwaną.
 
 ## <a name="output--unit"></a>Dane wyjściowe: [Jednostka](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>Przykład
+
+Następujące potwierdzenie powiodło się: `qubit` znajduje się w stanie $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2} \ KET {0} + e ^ {i 0,5} \ sqrt {1/2} \ KET {1} $;
+
+- `AssertPhase(0.0,qubit,10e-10);`
+
+`qubit` jest w stanie $ \ket{\psi} = e ^ {i 0,5} \ sqrt {1/2} \ KET {0} + e ^ {-i 0,5} \ sqrt {1/2} \ KET {1} $;
+
+- `AssertPhase(0.5,qubit,10e-10);`
+
+`qubit` jest w stanie $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ KET {0} + e ^ {i 0,2} \ sqrt {1/2} \ KET {1} $;
+
+- `AssertPhase(-1.2,qubit,10e-10);`
