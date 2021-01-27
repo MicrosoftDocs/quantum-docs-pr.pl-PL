@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 title: StatePreparationComplexCoefficients, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -17,47 +17,65 @@ qsharp.summary: >-
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}. \end{align} $$
-ms.openlocfilehash: 1d0efa7b83d2e8e75c4b293866f3929f357ec44b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c16df0fe075b15cff745a6b7d5b79aac39c14d09
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210373"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856131"
 ---
-# <a name="statepreparationcomplexcoefficients-function"></a><span data-ttu-id="8469a-102">StatePreparationComplexCoefficients, funkcja</span><span class="sxs-lookup"><span data-stu-id="8469a-102">StatePreparationComplexCoefficients function</span></span>
+# <a name="statepreparationcomplexcoefficients-function"></a><span data-ttu-id="77bf6-102">StatePreparationComplexCoefficients, funkcja</span><span class="sxs-lookup"><span data-stu-id="77bf6-102">StatePreparationComplexCoefficients function</span></span>
 
-<span data-ttu-id="8469a-103">Przestrzeń nazw: [Microsoft. Quantum. przygotowaniu](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="8469a-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="77bf6-103">Przestrzeń nazw: [Microsoft. Quantum. przygotowaniu](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="77bf6-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="8469a-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="8469a-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="77bf6-104">Pakiet: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="77bf6-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="8469a-105">StatePreparationComplexCoefficients jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="8469a-105">StatePreparationComplexCoefficients has been deprecated.</span></span> <span data-ttu-id="8469a-106">Użyj <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="8469a-106">Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.</span></span>
+> <span data-ttu-id="77bf6-105">StatePreparationComplexCoefficients jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="77bf6-105">StatePreparationComplexCoefficients has been deprecated.</span></span> <span data-ttu-id="77bf6-106">Użyj <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="77bf6-106">Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.</span></span>
 
-<span data-ttu-id="8469a-107">Zwraca operację, która przygotowuje określony stan Quantum.</span><span class="sxs-lookup"><span data-stu-id="8469a-107">Returns an operation that prepares a specific quantum state.</span></span>
+<span data-ttu-id="77bf6-107">Zwraca operację, która przygotowuje określony stan Quantum.</span><span class="sxs-lookup"><span data-stu-id="77bf6-107">Returns an operation that prepares a specific quantum state.</span></span>
 
-<span data-ttu-id="8469a-108">Zwrócona operacja $U $ przygotowuje dowolny stan Quantum $ \ket{\psi} $ z złożonymi współdziałami $r _j e ^ {i t_j} $ z $n $-qubit — stan podstawy obliczeniowej $ \ket{0...0} $.</span><span class="sxs-lookup"><span data-stu-id="8469a-108">The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.</span></span>
+<span data-ttu-id="77bf6-108">Zwrócona operacja $U $ przygotowuje dowolny stan Quantum $ \ket{\psi} $ z złożonymi współdziałami $r _j e ^ {i t_j} $ z $n $-qubit — stan podstawy obliczeniowej $ \ket{0...0} $.</span><span class="sxs-lookup"><span data-stu-id="77bf6-108">The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.</span></span>
 
-<span data-ttu-id="8469a-109">Akcja U w nowo przydzielonym rejestrze jest określona przez $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.</span><span class="sxs-lookup"><span data-stu-id="8469a-109">The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}.</span></span>
-<span data-ttu-id="8469a-110">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="8469a-110">\end{align} $$</span></span>
+<span data-ttu-id="77bf6-109">Akcja U w nowo przydzielonym rejestrze jest określona przez $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.</span><span class="sxs-lookup"><span data-stu-id="77bf6-109">The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}.</span></span>
+<span data-ttu-id="77bf6-110">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="77bf6-110">\end{align} $$</span></span>
 
 ```qsharp
 function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.Math.ComplexPolar[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)
 ```
 
 
-## <a name="input"></a><span data-ttu-id="8469a-111">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="8469a-111">Input</span></span>
+## <a name="input"></a><span data-ttu-id="77bf6-111">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="77bf6-111">Input</span></span>
 
-### <a name="coefficients--complexpolar"></a><span data-ttu-id="8469a-112">współczynniki: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="8469a-112">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
+### <a name="coefficients--complexpolar"></a><span data-ttu-id="77bf6-112">współczynniki: [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="77bf6-112">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
 
-<span data-ttu-id="8469a-113">Tablica do $2 ^ n $ złożone współczynniki reprezentowane przez ich wartości bezwzględne i fazy $ (r_j, t_j) $.</span><span class="sxs-lookup"><span data-stu-id="8469a-113">Array of up to $2^n$ complex coefficients represented by their absolute value and phase $(r_j, t_j)$.</span></span> <span data-ttu-id="8469a-114">Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.</span><span class="sxs-lookup"><span data-stu-id="8469a-114">The $j$th coefficient indexes the number state $\ket{j}$ encoded in little-endian format.</span></span>
+<span data-ttu-id="77bf6-113">Tablica do $2 ^ n $ złożone współczynniki reprezentowane przez ich wartości bezwzględne i fazy $ (r_j, t_j) $.</span><span class="sxs-lookup"><span data-stu-id="77bf6-113">Array of up to $2^n$ complex coefficients represented by their absolute value and phase $(r_j, t_j)$.</span></span> <span data-ttu-id="77bf6-114">Współczynnik $j $ th indeksuje stan liczbowy $ \ket{j} $ zakodowany w formacie little-endian.</span><span class="sxs-lookup"><span data-stu-id="77bf6-114">The $j$th coefficient indexes the number state $\ket{j}$ encoded in little-endian format.</span></span>
 
 
 
-## <a name="output--littleendian--unit--is-adj--ctl"></a><span data-ttu-id="8469a-115">Output: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL</span><span class="sxs-lookup"><span data-stu-id="8469a-115">Output : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+## <a name="output--littleendian--unit--is-adj--ctl"></a><span data-ttu-id="77bf6-115">Output: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  to przymiotnik + CTL</span><span class="sxs-lookup"><span data-stu-id="77bf6-115">Output : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-<span data-ttu-id="8469a-116">Operacja jednostki przygotowania stanu $U $.</span><span class="sxs-lookup"><span data-stu-id="8469a-116">A state-preparation unitary operation $U$.</span></span>
+<span data-ttu-id="77bf6-116">Operacja jednostki przygotowania stanu $U $.</span><span class="sxs-lookup"><span data-stu-id="77bf6-116">A state-preparation unitary operation $U$.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="8469a-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8469a-117">Remarks</span></span>
+## <a name="example"></a><span data-ttu-id="77bf6-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="77bf6-117">Example</span></span>
 
-<span data-ttu-id="8469a-118">Ujemne współczynniki wejścia $r _j < $0 będą traktowane jako wynik dodatni z wartością $ | r_j | $.</span><span class="sxs-lookup"><span data-stu-id="8469a-118">Negative input coefficients $r_j < 0$ will be treated as though positive with value $|r_j|$.</span></span> <span data-ttu-id="8469a-119">`coefficients` zostanie uzupełniona o elementy $ (r_j, t_j) = (0,0, 0,0) $, jeśli określono mniej niż $2 ^ n $.</span><span class="sxs-lookup"><span data-stu-id="8469a-119">`coefficients` will be padded with elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are specified.</span></span>
+<span data-ttu-id="77bf6-118">Poniższy fragment kodu przygotowuje stan Quantum $ \ket{\psi} = e ^ {i 0,1} \ sqrt {1/8} \ KET {0} + \ sqrt {7/8} \ KET {2} $ w rejestrze qubit `qubitsLE` .</span><span class="sxs-lookup"><span data-stu-id="77bf6-118">The following snippet prepares the quantum state $\ket{\psi}=e^{i 0.1}\sqrt{1/8}\ket{0}+\sqrt{7/8}\ket{2}$ in the qubit register `qubitsLE`.</span></span>
+
+```qsharp
+let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+let phases = [0.1, 0.0, 0.0, 0.0];
+mutable complexNumbers = new ComplexPolar[4];
+for (idx in 0..3) {
+    set complexNumbers[idx] = ComplexPolar(amplitudes[idx], phases[idx]);
+}
+let op = StatePreparationComplexCoefficients(complexNumbers);
+using (qubits = Qubit[2]) {
+    let qubitsLE = LittleEndian(qubits);
+    op(qubitsLE);
+}
+```
+
+## <a name="remarks"></a><span data-ttu-id="77bf6-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="77bf6-119">Remarks</span></span>
+
+<span data-ttu-id="77bf6-120">Ujemne współczynniki wejścia $r _j < $0 będą traktowane jako wynik dodatni z wartością $ | r_j | $.</span><span class="sxs-lookup"><span data-stu-id="77bf6-120">Negative input coefficients $r_j < 0$ will be treated as though positive with value $|r_j|$.</span></span> <span data-ttu-id="77bf6-121">`coefficients` zostanie uzupełniona o elementy $ (r_j, t_j) = (0,0, 0,0) $, jeśli określono mniej niż $2 ^ n $.</span><span class="sxs-lookup"><span data-stu-id="77bf6-121">`coefficients` will be padded with elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are specified.</span></span>
