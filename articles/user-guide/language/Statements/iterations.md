@@ -1,6 +1,6 @@
 ---
 title: "iteracje i pętle w Q# " Description: Poznaj użycie pętli "for" w Q# języku programowania.
-Autor: bettinaheim MS. Author: beheim MS. Date: 10/07/2020 MS.: artykuł UID: Microsoft. Quantum. qsharp. iteracje No-Loc:
+Autor: bettinaheim MS. Author: beheim MS. Date: 10/07/2020 MS.: informacje o UID: Microsoft. Quantum. qsharp. iteracje No-Loc:
 - "Q#"
 - "$$v"
 

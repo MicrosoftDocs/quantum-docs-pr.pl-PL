@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692174"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857238"
 ---
 # <a name="applications"></a>Aplikacje #
 
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>Algorytm Shora ##
 Algorytm skró pozostaje jednym z najbardziej znaczących zmian w zakresie przetwarzania w modelu Quantum, ponieważ wykazał, że komputery z systemem Quantum mogą być używane do rozwiązywania ważnych, obecnie w sposób klasycznych problemów z problemami.
-Algorytm skró zapewnia szybki sposób wykorzystania dużych liczb przy użyciu komputera z systemem Quantum, o nazwie *factoring* .
+Algorytm skró zapewnia szybki sposób wykorzystania dużych liczb przy użyciu komputera z systemem Quantum, o nazwie *factoring*.
 Bezpieczeństwo wielu codziennych Cryptosystems opiera się na założeniu, że nie istnieje szybki algorytm do refaktoryzacji.
 Dlatego algorytm skró miał głęboki wpływ na to, jak sądzimy o zabezpieczeniach w świecie w urzędzie Quantum.
 
@@ -178,7 +178,7 @@ Kontrolowane $U _a $ Gate Maps $ \ket{x} $ do $ \ket{(AX) \Text{mod} N} $, jeśl
 Aby osiągnąć $ (a ^ NX) \Text{mod} N $, można po prostu zastosować kontrolowane $U _ {a ^ N} $, gdzie obliczamy $a ^ n \Text{mod} N $ w trybie klasycznym, aby podłączyć obwód do obwodu Quantum.  
 Obwody do osiągnięcia takich modularnych arytmetycznych zostały opisane w [dokumentacji arytmetycznej](./algorithms.md#arithmetic), w związku z czym potrzebujemy modularnego obwodu wykładniczego, aby zaimplementować operacje kontrolowane $U \_ {a} $.
 
-Chociaż obwód powyżej odnosi się do [szacowania fazy Quantum](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) i jawnie włącza wyszukiwanie zamówień, można zmniejszyć liczbę wymaganych qubits. Możemy użyć metody Beauregard, aby znaleźć kolejność wyszukiwania zgodnie z opisem [na stronie 8 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), lub skorzystać z jednej z procedur szacowania fazy dostępnych w Microsoft. Quantum. charakteryzującą. Na przykład [niezawodna Ocena fazy](xref:microsoft.quantum.characterization.robustphaseestimation) używa również jednej dodatkowej qubit.
+Chociaż obwód powyżej odnosi się do [szacowania fazy Quantum](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) i jawnie włącza wyszukiwanie zamówień, można zmniejszyć liczbę wymaganych qubits. Możemy użyć metody Beauregard, aby znaleźć kolejność wyszukiwania zgodnie z opisem [na stronie 8 ArXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), lub skorzystać z jednej z procedur szacowania fazy dostępnych w Microsoft. Quantum. charakteryzującą. Na przykład [niezawodna Ocena fazy](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) używa również jednej dodatkowej qubit.
 
 ### <a name="factoring"></a>Wyprowadzenie ###
 Celem jest określenie dwóch czynników zasadniczych liczby całkowitej $N $, gdzie $N $ jest numerem $n $-bitowym.  
