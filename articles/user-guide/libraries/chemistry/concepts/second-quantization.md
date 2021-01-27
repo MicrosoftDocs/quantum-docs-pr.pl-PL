@@ -4,17 +4,17 @@ description: Dowiedz się więcej na temat drugiego podejścia podziału do mode
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835812"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858833"
 ---
 # <a name="second-quantization"></a>Drugie podziału
 
@@ -84,7 +84,7 @@ Stany zawodności dla elementu $2N $ orbitals mogą być w podobny sposób przec
 Przykładowo, jeśli $N = $2, wówczas stan $ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $
 
 będzie odpowiadać za zajmowany przez pozostałe elementy orbitals $1 $ i $2 $.
-Analogicznie, stan $ $ \ket {0} \equiv \ket {0} _ {0} \cdots \ket {0} _{N-1}, $ $
+Analogicznie, stan $ $ \ket {0} \equiv \ket {0} _{0} \cdots \ket {0}_{N-1}, $ $
 
 nie ma Electrons i jest znany jako "stan próżniowy".
 
@@ -216,7 +216,7 @@ Wszystkie `FermionTerm` są automatycznie umieszczane w porządku kanonicznym w 
 Być może unsurprising, że hamiltonian w [modelach Quantum dla systemów elektronicznych](xref:microsoft.quantum.chemistry.concepts.quantummodels) można napisać pod warunkiem tworzenia i operatorów Annihilation.
 W szczególności, jeśli $ \psi \_ j $ to orbitals kręgosłupa, które tworzą podstawę
 
-\begin{Equation} \hat{H} = \sum \_ {pq} h { \_ pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ RA \_ s + h \_ {\textrm}, NUC: \label{EQ} totalHam, gdzie $h \_ {\end{Equation} \textrm} $ to energia jądrowa (jest to stała w ramach przybliżania ponoszonego przez NUC) i
+\begin{Equation} \hat{H} = \sum \_ {pq} h { \_ pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ RA \_ s + h \_ {\textrm}, NUC: \label{EQ} totalHam, gdzie $h \_ {\end{Equation} \textrm} $ to energia jądrowa (jest to stała w Born-Oppenheimer przybliżeniu) i
 
 \begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p (x \_ 1) \left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \psi \_ q (x \_ 1) \mathrm{d} ^ 3 \_ , \end{align}
 

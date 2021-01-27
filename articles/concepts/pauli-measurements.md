@@ -1,6 +1,6 @@
 ---
 title: Paulis Description: informacje na temat pracy z operacjami pomiaru pojedynczego i wieloqubitowego Pauli.
-Autor: bradben UID: Microsoft. Quantum. koncepcje. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: bradben UID: Microsoft. Quantum. koncepcje. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 Jest również odpowiednikiem zastosowania $ HS ^ \dagger $ do wektora stanu Quantum, a następnie mierzenia $ z $ , tak że Następująca operacja jest równoważna z `Measure([PauliY], [q])` :
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

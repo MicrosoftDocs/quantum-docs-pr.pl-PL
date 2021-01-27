@@ -1,6 +1,6 @@
 ---
 title: Opis platformy Quantum Oracle: informacje na temat pracy z i definiowania Quantum Oracle, operacje czarnego pola, które są używane jako dane wejściowe w innym algorytmie.
-Autor: cgranade UID: Microsoft. Quantum. koncepcje. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. temat: artykuł No-Loc:
+Autor: cgranade UID: Microsoft. Quantum. koncepcje. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ gdzie $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C } 
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Następnie $$
         &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Zwróć uwagę, że $ z ^ { -1 } = z ^ { \dagger } = z $ i w związku $ z tym z ^ { f (0)-f (1) } = Z ^ { f (1)-f (0) } .$
 
 Ogólnie rzecz biorąc, oba widoki rozwiązań firmy Oracle można rozszerzyć, aby reprezentować funkcje klasyczne, które zwracają liczby rzeczywiste, a nie tylko jeden bit.
 
