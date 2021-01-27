@@ -1,20 +1,20 @@
 ---
 title: Zasoby Quantum szacowania-Quantum Development Kit
 description: Dowiedz się więcej o programie Microsoft QDKe szacowania, który szacuje zasoby wymagane do uruchomienia danego wystąpienia Q# operacji na komputerze z systemem Quantum.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604647"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847462"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Zasoby zestawu Quantum Development Kit (QDK) szacowania
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 Szacowania zasobów śledzi następujące metryki:
 
-|Metryka|Opis|
+|Metric|Opis|
 |----|----|
 |__CNOT__    |Liczba uruchomień `CNOT` operacji (znanych także jako kontrolowane operacje Pauli X).|
 |__QubitClifford__ |Liczba uruchomień pojedynczego qubit Clifford i Pauli operacji.|
@@ -143,8 +143,8 @@ Raportowane oszacowania głębokości i szerokości są zgodne ze sobą.
 
 Zgłaszane są następujące metryki:
 
-__Głębokość:__ W przypadku operacji głównej należy wykonać ją w celu jej wykonania przy założeniu określonych czasów bramy.
-Dla operacji o nazwie lub późniejszych wartościach czasowych między najnowszym czasem dostępności qubit na początku i na końcu operacji.
+__Głębokość:__ W przypadku operacji głównej należy wykonać ją w celu założenia skonfigurowanych czasów bramy.
+W przypadku operacji o nazwie lub kolejnych operacji — różnica czasu między najnowszym czasem dostępności qubit na początku i na końcu operacji.
 
 __Szerokość:__ W przypadku operacji głównej — liczba qubits rzeczywiście użyta do jej wykonania (i operacji wywoływanych przez nią).
 W przypadku operacji o wartościach lub kolejnych operacjach — ile więcej qubits było używanych oprócz qubits już używanych na początku operacji.
@@ -157,9 +157,9 @@ W przypadku operacji o nazwie lub kolejnych operacji — minimalna liczba qubits
 
 Obsługiwane są dwa tryby operacji. Tryb jest wybierany przez ustawienie QCTraceSimulatorConfiguration. OptimizeDepth.
 
-__OptimizeDepth = true:__ Nie zaleca się QubitManager z qubit ponownie i przydziela nowe qubit za każdym razem, gdy zostanie wyświetlony monit o qubit. Dla __głębokości__ operacji głównej jest to minimalna głębokość (Dolna granica). Dla tej głębokości zgłoszono zgodną __Szerokość__ (obie można osiągnąć w tym samym czasie). Należy zauważyć, że ta szerokość prawdopodobnie nie będzie optymalna. Wartość __QubitCount__ może być mniejsza niż szerokość operacji głównej, ponieważ zakłada się jej ponowne użycie.
+__OptimizeDepth = FAŁSZ:__ Jest to tryb domyślny. QubitManager zaleca się ponowne użycie qubits i ponowne użycie zwolnienia qubits przed przydzieleniem nowych. __Szerokość__ operacji głównej jest minimalna (Dolna granica). Jest raportowana zgodna __głębokość__ , na której można ją osiągnąć. __QubitCount__ będzie taka sama jak __Szerokość__ dla operacji głównej, przy założeniu, że nie pożyczy się.
 
-__OptimizeDepth = FAŁSZ:__ QubitManager zaleca się ponowne użycie qubits i ponowne użycie zwolnienia qubits przed przydzieleniem nowych. __Szerokość__ operacji głównej jest minimalna (Dolna granica). Jest raportowana zgodna __głębokość__ , na której można ją osiągnąć. __QubitCount__ będzie taka sama jak __Szerokość__ dla operacji głównej, przy założeniu, że nie pożyczy się.
+__OptimizeDepth = true:__ Nie zaleca się QubitManager ponownego użycia i optymalizacji opartej na heurystyki na potrzeby qubit ponownej do użytku w trakcie wykonywania i po nim. Dla __głębokości__ operacji głównej jest to minimalna głębokość (Dolna granica). Dla tej głębokości zgłoszono zgodną __Szerokość__ (obie można osiągnąć w tym samym czasie). Aby zoptymalizować szerokość, bramy napotkane w dalszej części programu mogą zostać zaplanowane przed wystąpieniem bram w programie, ale qubits zaplanowano ponownie użyć w taki sposób, że głębokość będzie nieminimalny. Ponieważ qubits są ponownie używane na podstawie wartości czasu, zaleca się, aby czasy bramy były skonfigurowane jako wartości całkowite. __Szerokość__ nie gwarantuje optymalnej. Więcej informacji można znaleźć w dokumencie [Szerokość i głębokość dokumentu śledzenia](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Podawanie prawdopodobieństwa wyników pomiarów
 

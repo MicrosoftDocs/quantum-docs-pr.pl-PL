@@ -4,17 +4,17 @@ description: Dowiedz się, jak używać Trotter-Suzuki formuł i qubitization do
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691882"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857593"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Symulowanie hamiltonian Dynamics
 
@@ -28,7 +28,7 @@ Pomysłem za Trotter — formuły Suzuki są proste: wyrażenie hamiltonian jako
 W szczególności Let $H = \ sum_ {j = 1} ^ m H_j $ to hamiltonian.
 Następnie $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, co oznacza, że jeśli $t \ll $1, błąd w tym przybliżeniu będzie nieznaczny.
 Należy pamiętać, że jeśli $e ^ {-i H t} $ były zwykłą wartością wykładniczą, błąd w tym przybliżeniu nie będzie $O (m ^ 2 t ^ 2) $: wartość będzie równa zero.
-Ten błąd występuje, ponieważ $e ^ {-iHt} $ jest operatorem wykładniczym i w związku z tym występuje błąd podczas korzystania z tej formuły ze względu na fakt, że $H _j $ warunki nie współpracownicy ( *tj.* $H _j H_k \ne H_k H_j $).
+Ten błąd występuje, ponieważ $e ^ {-iHt} $ jest operatorem wykładniczym i w związku z tym występuje błąd podczas korzystania z tej formuły ze względu na fakt, że $H _j $ warunki nie współpracownicy (*tj.*$H _j H_k \ne H_k H_j $).
 
 Jeśli $t $ jest duże, Trotter — formuły Suzuki mogą być używane w celu dokładnego symulowania dynamiki przez podzielenie go na sekwencję krótkich etapów czasu.
 Niech $r $ to liczba kroków podejmowanych w trakcie rozwoju czasu, więc każdy krok czasu jest wykonywany dla czasu $t/r $. Następnie mamy $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m ^ {-iH_j t/r} \ Right) ^ r + O (m ^ 2 t ^ 2/r), $ $, co oznacza, że jeśli $r $ skaluje jako $m ^ 2 t ^ 2/1/Epsilon $, błąd można wykonać z najwyżej $ \epsilon $ dla dowolnego $ \epsilon>$0.

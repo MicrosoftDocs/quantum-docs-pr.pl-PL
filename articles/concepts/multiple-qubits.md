@@ -1,6 +1,6 @@
 ---
 title: wiele qubits opis: informacje na temat wykonywania operacji na co najmniej dwóch qubitsach.
-Autor: bradben UID: Microsoft. Quantum. koncepcje. Multiple-qubits MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: bradben UID: Microsoft. Quantum. koncepcje. Multiple-qubits MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ Bramy pojedynczej qubit mają pewne funkcje, takie jak możliwość znajdowania 
 Rzeczywista moc obliczeniowa Quantum jest oczywista tylko wtedy, gdy zwiększy się liczbę qubits.
 Ta moc jest częścią, ponieważ wymiar przestrzeni wektorowej wektorów stanu Quantum rośnie wykładniczo z liczbą qubits.
 Oznacza to, że w przypadku, gdy pojedyncze qubit można modelować, Symulacja obliczeń 50-qubit Quantum będzie raczej wypchnięcie ograniczeń istniejących komputerów.
-Zwiększenie rozmiaru obliczeń przez tylko jeden dodatkowy qubit *podwaja* ilość pamięci wymaganej do przechowania stanu i wydłuża czas *doubles* obliczeniowy.
+Zwiększenie rozmiaru obliczeń przez tylko jeden dodatkowy qubit *podwaja* ilość pamięci wymaganej do przechowania stanu i wydłuża czas  obliczeniowy.
 To szybkie podwojenie mocy obliczeniowej polega na tym, że komputer Quantum o stosunkowo niewielkiej liczbie qubits może znacznie przekroczyć najbardziej wydajne nadchodzące komputery dzisiejsze, jutro i więcej w przypadku niektórych zadań obliczeniowych.
 
 Dlaczego mamy wykładniczy wzrost dla wektorów stanu Quantum?  Naszym celem w tej sekcji jest zapoznanie się z regułami używanymi do kompilowania wielu qubit Stanów z jednego qubit Stanów, a także omówienia operacji związanych z bramą, które należy uwzględnić w naszym zestawie bram w celu utworzenia uniwersalnego komputera z systemem Quantum z wieloma qubitami.
@@ -105,10 +105,10 @@ Wynika to z faktu, że podstawa obliczeniowa dla dwóch qubit Stanów jest tworz
 Łatwiej jest zobaczyć, że bardziej ogólnie jest stan Quantum dla $ n $ qubits jest reprezentowany przez wektor jednostki wymiaru $ 2 ^ n $ przy użyciu tej konstrukcji.  Wektor
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-reprezentuje stan Quantum dla dwóch qubits, jeśli $ | \alpha _ { 00 } | ^ 2 + | \alpha _ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 + | \alpha _ { 11 } | ^ 2 = 1 $ . Podobnie jak w przypadku pojedynczego qubits wektor stanu Quantum dla wielu qubits przechowuje wszystkie informacje potrzebne do opisania zachowania systemu.
+reprezentuje stan Quantum dla dwóch qubits, jeśli $ | \alpha _{ 00 } | ^ 2 + | \alpha_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 + | \alpha_ { 11 } | ^ 2 = 1 $ . Podobnie jak w przypadku pojedynczego qubits wektor stanu Quantum dla wielu qubits przechowuje wszystkie informacje potrzebne do opisania zachowania systemu.
 
 Jeśli podano dwie osobne qubits, jeden w stanie $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ i drugi qubit w stanie $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ , odpowiadający mu stan qubit to    
 
@@ -124,22 +124,22 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ / \sqrt { 
 
 Taki stan dwuqubitowy, który nie może być zapisany jako iloczyn dwuetapowego stanu jednego qubitu, jest nazywany "Entangled State"; dwa qubits są określane jako [*Entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement).  Mówiąc, że stan Quantum nie może być uważany za pojedynczy iloczyn jednego z qubit Stanów, informacje przechowywane przez stan nie są ograniczone do jednej z qubits indywidualnie.  Zamiast tego informacje są przechowywane nie lokalnie w korelacji między tymi dwoma stanami.  Taka nielokalna informacja jest jedną z głównych funkcji przetwarzania Quantum w porównaniu z klasycznym przetwarzaniem i jest istotna dla wielu protokołów Quantum, takich jak [teleporty](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) Quantum i [Korekcja błędów Quantum](xref:microsoft.quantum.libraries.error-correction).
 
-## <a name="measuring-two-qubit-states"></a>Mierzenie dwuQubitowych Stanów ##
+## <a name="measuring-two-qubit-states"></a>Mierzenie Stanów Two-Qubit ##
 Mierzenie dwuqubitowych Stanów jest bardzo podobne do pomiarów pojedynczej qubit. Mierzenie stanu
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-zwraca $ 00 $ z prawdopodobieństwem $ | \alpha _ { 00 } | ^ 2 $ , $ 01 $ $ | z \alpha prawdopodobieństwem _ { 01 } | ^ 2 $ , $ 10 $ z prawdopodobieństwem $ | \alpha _ { 10 } | ^ 2 $ i $ 11 $ z $ prawdopodobieństwem | 11 \alpha _ { } | ^ 2 $ . Zmienne $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ i $ 11 \alpha _ { } $ zostały świadomie nazwane, aby to połączenie było jasne. Po pomiarze, jeśli wynik wynosi $ 00, $ stan Quantum dla systemu dwuqubitowego został zwinięty i jest teraz
+zwraca $ 00 $ z prawdopodobieństwem $ | \alpha _{ 00 } | ^ 2 $ , $ 01 $ $ | z \alpha prawdopodobieństwem_ { 01 } | ^ 2 $ , $ 10 $ z prawdopodobieństwem $ | \alpha _{ 10 } | ^ 2 $ i $ 11 $ z $ prawdopodobieństwem | 11 \alpha_ { } | ^ 2 $ . Zmienne $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ i $ 11 \alpha_ { } $ zostały świadomie nazwane, aby to połączenie było jasne. Po pomiarze, jeśli wynik wynosi $ 00, $ stan Quantum dla systemu dwuqubitowego został zwinięty i jest teraz
 
 $$
     1,00 \equiv
     \begin{bmatrix}
-        jedno \\\\ 
+        1 \\\\ 
         2,0 \\\\ 
         2,0 \\\\ 
         0 \end{bmatrix} .
@@ -193,7 +193,7 @@ $$
 
 ponownie zgodnie z naszymi Intuition.
 
-## <a name="two-qubit-operations"></a>Dwie qubit operacje
+## <a name="two-qubit-operations"></a>Operacje Two-Qubit
 Podobnie jak w przypadku pojedynczej qubit, każda transformacja jednostkowa jest prawidłową operacją na qubits. Ogólnie rzecz biorąc, przekształcenie jednostkowe na $ n $ qubits jest macierzą $ $ o rozmiarze $ 2 ^ n \times 2 ^ n $ (tak, aby działała na wektorach o rozmiarze $ 2 ^ n $ ), takich jak $ u ^ { -1 } = U ^ \dagger $ .
 Na przykład brama CNOT (sterowana bez) jest powszechnie wykorzystywaną bramą dwuqubitową i jest reprezentowana przez następującą macierz jednostkową:
 
@@ -240,7 +240,7 @@ Bramy można również kontrolować przy użyciu informacji klasycznych.  Klasyc
 Tak jak w przypadku pojedynczej qubit, Brama dwuqubitowa jest uniwersalna, jeśli dowolna wartość $ \times $ macierzy jednostkowej 4 4 może być przybliżona przez iloczyn bram z tego zestawu do dowolnej precyzji.
 Przykładem uniwersalnego zestawu bram jest brama Hadamard, Brama T i bramę CNOT. Pobierając produkty z tych bram, możemy przybliżyć każdą macierz jednostkową na dwóch qubits.
 
-## <a name="many-qubit-systems"></a>Wiele systemów qubit
+## <a name="many-qubit-systems"></a>Systemy Many-Qubit
 Obserwujemy dokładnie te same wzorce, które zostały zbadane w przypadku dwóch qubitów, aby skompilować Stany Quantum qubit z mniejszych systemów.  Takie Stany są tworzone przez tworzenie iloczynów części mniejszych Stanów.  Rozważmy na przykład kodowanie ciągu bitowego $ 1011001 $ na komputerze Quantum.  Możemy kodować ten
 
 $$

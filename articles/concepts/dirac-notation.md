@@ -1,6 +1,6 @@
 ---
 title: Dirac opis notacji: informacje na temat używania notacji Dirac do reprezentowania Stanów Quantum i symulowania operacji Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: artykuł No-Loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. koncepcje. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. temat: koncepcyjne No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -120,6 +120,7 @@ $$
 $$
 
 ### <a name="computational-basis-vectors"></a>Wektory podstawy obliczeniowej
+
 Pokazuje to, dlaczego te Stany są często nazywane *zasadami obliczeniowymi*: każdy stan Quantum może zawsze być wyrażony jako sumy wektorów obliczeniowych, a takie kwoty są łatwo wyrażone przy użyciu notacji Dirac.  Ta wartość obowiązuje również w tym, że Stany $ \ket { + } $ i $ \ket { - } $ również stanowią podstawę dla Stanów Quantum.  Można to sprawdzić z faktu, że
 
 $$
@@ -128,14 +129,20 @@ $$
 
 Przykładem notacji Dirac należy wziąć pod uwagę hamulec $ \braket { 0 | 1 } $ , czyli wewnętrzny produkt od $ 0 $ do $ 1 $ .  Może być zapisany jako 
 
-$$\braket{0 | 1 1 } = \begin{bmatrix} & 0 0 \end{bmatrix} \begin{bmatrix} \\\\ \end{bmatrix} = .$$
+$$
+\braket{0 | 1 1 } = \begin{bmatrix} & 0 0 \end{bmatrix} \begin{bmatrix} \\\\ \end{bmatrix} = .
+$$
 
 Oznacza to, że wartości $ \ket { 0 } $ i $ \ket { 1 } $ są wektorami prostopadłymi, czyli $ \braket { równym 0 | 1 } = \braket { 1 | 0 0 } = $ .  Także przez definicję $ \braket { 0 | 0 1 1 } = \braket { | } = $ , co oznacza, że dwa wektory obliczeniowe mogą być również nazywane *orthonormal*.
-Te właściwości orthonormal będą przydatne w poniższym przykładzie. Jeśli mamy stan $ \ket { \psi } = { \frac { 3 } { 5 } } \ket { 1 }  +  { \frac { 4 } { 5 } } \ket { 0 } $ $ \braket { , ponieważ 1 | 0 } = 0 $ prawdopodobieństwo pomiaru $ 1 $ jest  
 
-$$\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | } \right | ^ 2 = \frac { 9 } { 25 } .$$ 
+Te właściwości orthonormal będą przydatne w poniższym przykładzie. Jeśli mamy stan $ \ket { \psi } = { \frac { 3 } { 5 } } \ket { 1 }  +  { \frac { 4 } { 5 } } \ket { 0 } $ $ \braket { , ponieważ 1 | 0 } = 0 $ prawdopodobieństwo pomiaru $ 1 $ jest 
+
+$$
+\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | } \right | ^ 2 = \frac { 9 } { 25 } .
+$$
 
 ### <a name="tensor-product-notation"></a>Notacja iloczynu
+
 Notacja Dirac obejmuje również niejawną strukturę produktu w ramach tego programu.  Jest to ważne, ponieważ w przypadku przetwarzania Quantum wektor stanu opisany przez dwa nieskorelowane rejestry Quantum jest iloczynów dwustanowych.  Zwięzłe opisywanie struktury produktu dwuczęściowego lub jego braku, jest istotne, jeśli chcesz wyjaśnić obliczenia Quantum.  Struktura produktu dwuetapowego oznacza, że możemy pisać $ \psi \otimes \phi $ dla każdego dwóch wektorów Stanów Quantum $ \phi $ i $ \psi $ tak $ \ket { \psi } \ket { \phi } $ , jak to jest czasami jawnie napisane jako $ \ket { \psi } \otimes \ket { \phi } $ , ale nie $ \otimes $ jest to konieczne.  Na przykład stan z dwoma qubits zainicjowany do stanu zero jest określony przez
 
 $$
@@ -155,6 +162,7 @@ $$
 $$
 
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Przykład: Opisywanie nadpozycji z notacją Dirac
+
 Innym przykładem, jak można użyć notacji Dirac do opisania stanu Quantum, należy wziąć pod uwagę następujące równoważne sposoby pisania stanu Quantum, który jest równej nadpozycji dla każdego możliwego ciągu bitowego o długości $ n$
 
 $$
@@ -165,6 +173,7 @@ W tym miejscu możesz zazastanawiać się, dlaczego suma jest od $ 0 $ do $ 2 ^ 
 Jako notatka po stronie, w tym przykładzie nie użyto $ \ket { + } ^ { \otimes n } = \ket { + } $ w sposób analogowy do $ \ket { 0 } ^ { \otimes n } = \ket { 0, } $ ponieważ Konwencja ta jest zwykle zarezerwowana dla stanu podstawy obliczeń z każdym qubit zainicjowanym do zera.  Chociaż taka konwencja byłaby w tym przypadku rozsądna, nie jest ona stosowana w literaturze obliczeniowej Quantum.
 
 ### <a name="expressing-linearity-with-dirac-notation"></a>Wyrażanie liniowości przy użyciu notacji Dirac
+
 Kolejną cechą notacji Dirac jest fakt, że jest on liniowy.  Jeśli chcemy napisać w przypadku czterech wektorów stanu Quantum, 
 
 $$( \alpha \ket { \psi }  + \beta \ket { \phi } ) \otimes ( \gamma \ket { \chi }  +  \delta \ket { \omega } ) = \alpha \gamma \ket { \psi } \ket { \chi }  +  \alpha \delta \ket { \psi } \ket { \omega } + \beta \gamma \ket { \phi } \ket { \chi } + \beta \delta \ket { \phi } \ket { \omega } .$$
@@ -180,6 +189,7 @@ $$|\braket{- |\psi}| ^ 2 = \left | \frac { 1 } { \sqrt { 2 } } ( \bra { 0 }  -  
 Fakt, że znak ujemny pojawia się w obliczeniach prawdopodobieństwa, jest manifestem wpływów Quantum, który jest jednym z mechanizmów, za pomocą których przetwarzanie Quantum uzyskuje korzyści w porównaniu do klasycznego przetwarzania danych.
 
 ## <a name="ketbra-or-outer-product"></a>ketbra lub zewnętrzny produkt
+
 Ostatni element omawiany w notacji Dirac jest produktem *ketbra* lub zewnętrznym.  Zewnętrzny produkt jest reprezentowany w notacjach Dirac jako $ \ket { \psi } \bra { \phi } $ i czasami nazywany ketbras, ponieważ Bras i kets występują w kolejności odwrotnej jako brakets.  Produkt zewnętrzny jest definiowany za pośrednictwem mnożenia macierzy jako $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ dla wektorów stanu Quantum $ \psi $ i $ \phi $ .  Najprostszym i raczej najbardziej typowym przykładem tego zapisu jest
 
 $$
@@ -231,4 +241,5 @@ Ogólne operatory stanu Quantum, a nie wektory, są powszechnie dostępne w niek
 W przypadku interesującego czytnika zalecamy odczytanie jednej z książek referencyjnych, które znajdują się w temacie, [Aby uzyskać więcej informacji](xref:microsoft.quantum.more-information).
 
 ## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# sekwencje bram równoważne z Stanami Quantum
+
 Punkt końcowy, który jest podwyższany dla notacji Quantum i Q# języka programowania: na początku tego dokumentu stwierdzamy, że element Quantum jest podstawowym obiektem informacji w ramach przetwarzania Quantum.  Może to być niespodziewane, że w przypadku Q# wystąpienia Quantum nie ma żadnego pojęcia.  Zamiast tego wszystkie stany są opisane tylko przez operacje używane do ich przygotowania.  Poprzedni przykład jest doskonałym ilustracją.  Zamiast wyznaczać jednolite nadpozycja dla każdego ciągu bitowego Quantum w rejestrze, możemy przedstawić wynik jako $ H ^ { \otimes n } \ket { 0 } $ .  Ten wykładniczy, krótszy opis stanu nie tylko ma zaletę, że możemy z niej skorzystać, ale również zwięzłie definiuje operacje, które są niezbędne do propagowania przez stos oprogramowania w celu wdrożenia algorytmu.  Z tego powodu Q# zaprojektowano w celu emitowania sekwencji bram zamiast Stanów Quantum; jednak na poziomie teoretycznym dwie perspektywy są równoważne.

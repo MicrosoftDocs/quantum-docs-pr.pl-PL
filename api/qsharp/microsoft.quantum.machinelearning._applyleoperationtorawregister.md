@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._ApplyLEOperationToRawRegister
 title: Operacja _ApplyLEOperationToRawRegister
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _ApplyLEOperationToRawRegister
 qsharp.summary: ''
-ms.openlocfilehash: 8e6620b9707576df581498c68467efc5f092a04e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: fa3c269a230df4255ed06558de09bfb39fc07ea4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197045"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847426"
 ---
 # <a name="_applyleoperationtorawregister-operation"></a>Operacja _ApplyLEOperationToRawRegister
 
@@ -30,7 +30,7 @@ operation _ApplyLEOperationToRawRegister (op : (Microsoft.Quantum.Arithmetic.Lit
 
 ## <a name="input"></a>Dane wejściowe
 
-### <a name="op--littleendian--unit--is-adj"></a>op: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) LittleEndian jest korektą
+### <a name="op--littleendian--unit--is-adj"></a>op: [](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Jednostka](xref:microsoft.quantum.lang-ref.unit) LittleEndian jest korektą
 
 
 

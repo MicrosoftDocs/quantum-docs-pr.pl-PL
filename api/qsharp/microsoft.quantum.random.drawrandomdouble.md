@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomDouble
 title: DrawRandomDouble, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomDouble
 qsharp.summary: Draws a random real number in a given inclusive interval.
-ms.openlocfilehash: d62416f4a222716edb9393fe4f43731d0e8aa9d3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 792e9c714b761b48618aec2091e167a359c2b522
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192948"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847622"
 ---
 # <a name="drawrandomdouble-operation"></a>DrawRandomDouble, operacja
 
@@ -44,6 +44,14 @@ Największa liczba rzeczywista do narysowania.
 ## <a name="output--double"></a>Dane wyjściowe: [Double](xref:microsoft.quantum.lang-ref.double)
 
 Losowa liczba rzeczywista w interwale łącznym od `min` do wartości `max` z jednolitym prawdopodobieństwem.
+
+## <a name="example"></a>Przykład
+
+Poniższy fragment kodu Q # losowo rysuje kąt między $0 $ i $2 \pi $:
+
+```qsharp
+let angle = DrawRandomDouble(0.0, 2.0 * PI());
+```
 
 ## <a name="remarks"></a>Uwagi
 

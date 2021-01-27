@@ -4,17 +4,17 @@ description: Dowiedz się, jak współtworzyć koncepcję lub zawartość interf
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691785"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857358"
 ---
 # <a name="improving-documentation"></a>Ulepszanie dokumentacji
 
@@ -42,7 +42,7 @@ Opiszemy więcej informacji na temat żądań ściągnięcia poniżej, ale teraz
 - Niektórzy czytelnicy zobaczą, że abstrakcyjne instrukcje i definicje są najbardziej przydatne, a inne czytelnicy działają najlepiej przez ekstrapolację z konkretnych przykładów. Udostępnienie zarówno ogólnego przypadku, jak i konkretnych przykładów może pomóc obu czytelnikom w największej liczbie programów związanych z programowaniem Quantum.
 - Szczególnie jeśli zapisałeś również kod, który jest udokumentowany, elementy mogą być oczywiste, które nie są widoczne dla czytnika. Nie ma żadnego unikatowego najlepszego sposobu programowania, więc niezależnie od tego, jak sprytne lub doświadczony czytelnik nie może się przydać, nie mogą oni odgadnąć od tego, jakie wzorce projektowe okazały się najbardziej pomocne do wyrażania pomysłów w kodzie. Czyszczenie informacji o tym, jak czytelnik może oczekiwać na użycie kodu, może pomóc w udostępnieniu tego kontekstu.
 - Wielu członków społeczności programowania Quantum to badacze akademickie i są rozpoznawane głównie przez cytaty dla ich wkładu do społeczności. Oprócz ułatwienia czytelnikom znajdowania dodatkowych materiałów, dzięki czemu warto prawidłowo zamieszczać dane naukowe, takie jak dokumenty, rozmowy, wpisy w blogu i narzędzia programowe, mogą pomóc akademickim współautorom w prowadzeniu najlepszych zadań do ulepszania społeczności.
-- Społeczność programowania Quantum jest szeroką i bardzo różnorodną społecznością. Korzystanie z teoretycznych rzeczowników w przykładach innych osób (np.: "Jeśli użytkownik..., będzie..."), może przełączać się, a nie uwzględnić. Firma Cognizant nazwiska osób w cytatach i łączach, a poprawna dołączenie znaków nienależących do zestawu ASCII może zapewnić różnorodność społeczności, wskazując jej składowe. Podobnie wiele wyrazów w języku angielskim jest często używanych w hateful, w taki sposób, że ich użycie w dokumentacji technicznej może spowodować szkody zarówno dla indywidualnych czytelników, jak i dla społeczności.
+- Społeczność programowania Quantum jest szeroką i bardzo różnorodną społecznością. Korzystanie z teoretycznych rzeczowników w przykładach innych osób (np.: "Jeśli użytkownik..., będą..."), może przełączać się, a nie do include. Firma Cognizant nazwiska osób w cytatach i łączach, a poprawna dołączenie znaków nienależących do zestawu ASCII może zapewnić różnorodność społeczności, wskazując jej składowe. Podobnie wiele wyrazów w języku angielskim jest często używanych w hateful, w taki sposób, że ich użycie w dokumentacji technicznej może spowodować szkody zarówno dla indywidualnych czytelników, jak i dla społeczności.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Odwołuje się do przykładowego kodu z artykułu koncepcyjnego
 
@@ -54,6 +54,19 @@ Jeśli chcesz dołączyć kod z [repozytorium przykładów](https://github.com/M
 
 To polecenie spowoduje zaimportowanie wierszy 4 do 8 [ `Game.qs` pliku z `chsh-game` przykładu](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)i oznaczenie ich jako Q# kodu na potrzeby wyróżniania składni.
 Za pomocą tego polecenia można uniknąć duplikowania kodu między artykułami koncepcyjnymi i repozytorium przykładów, aby kod przykładowy w dokumentacji był zawsze aktualny, jak to możliwe.
+
+### <a name="contributing-image-files"></a>Udział plików obrazów
+
+**Ważne**: aby obrazy były prawidłowo renderowane w trybie ciemnym, należy unikać przezroczy.
+
+- Dla plików jpg. nie musisz wykonywać żadnych czynności, ponieważ format. jpg nie obsługuje przezroczystych elementów.
+- W przypadku plików PNG należy dodać białe tło lub zmienić wartość kanału alfa na **100**. Najprostszym sposobem wykonania tej czynności w systemie Windows jest otwarcie pliku w programie **Paint** i zapisanie go, zastępując oryginalny plik.
+- W przypadku plików. SVG należy dodać biały prostokąt do najniższej warstwy. Można to zrobić za pomocą **Inkscape**:
+  1. Otwórz plik. SVG.
+  1. Wybierz narzędzie do tworzenia i rysowania białych prostokątów na początku oryginalnego rysunku.
+  1. Wybierz narzędzie **Wybierz i Przekształć obiekty** , klikając w ciemnej strzałkę lub naciskając klawisz **F1**.
+  1. Po wybraniu prostokąta kliknij element paska narzędzi **dolny zaznaczenie na dół (koniec)**.
+  1. Dostosuj prostokąt przy użyciu myszy lub klawiszy strzałek.
 
 ## <a name="contributing-to-the-api-references"></a>Współtworzenie odwołań do interfejsów API
 

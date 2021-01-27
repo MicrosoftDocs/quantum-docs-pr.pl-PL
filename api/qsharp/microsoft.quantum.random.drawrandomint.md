@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomInt
 title: DrawRandomInt, operacja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomInt
 qsharp.summary: Draws a random integer in a given inclusive range.
-ms.openlocfilehash: f7b6cb75f761e4c45295245ed4bd4fb82c592809
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ebed7f52b7c4a8c538ed9d718c486b5aa94a0327
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192914"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851140"
 ---
 # <a name="drawrandomint-operation"></a>DrawRandomInt, operacja
 
@@ -44,6 +44,14 @@ Największa liczba całkowita do narysowania.
 ## <a name="output--int"></a>Wynik: [int](xref:microsoft.quantum.lang-ref.int)
 
 Liczba całkowita w zakresie włącznie z `min` do z `max` jednolitym prawdopodobieństwem.
+
+## <a name="example"></a>Przykład
+
+Poniższy fragment kodu Q # losowy rzutuje na sześć stron:
+
+```qsharp
+let roll = DrawRandomInt(1, 6);
+```
 
 ## <a name="remarks"></a>Uwagi
 
