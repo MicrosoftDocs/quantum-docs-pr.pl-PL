@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedCA
 title: DelayedCA, funkcja
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedCA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: fe2babb87d716185286b0864745f7ff6e637f8a1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c44e3448c471f2a20f995d4546ee54f3affb726e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207018"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840548"
 ---
 # <a name="delayedca-function"></a>DelayedCA, funkcja
 
@@ -41,7 +41,7 @@ Dane wejściowe, do których `op` zostanie zastosowana operacja.
 
 
 
-## <a name="output--unit--unit--is-adj--ctl"></a>Wynik: [Jednostka jednostkowa](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) to korekta i CTL
+## <a name="output--unit--unit--is-adj--ctl"></a>Wynik: [Jednostka jednostkowa](xref:microsoft.quantum.lang-ref.unit) => [](xref:microsoft.quantum.lang-ref.unit) to korekta i CTL
 
 Nowa operacja stosowana `op` z danymi wejściowymi `arg`
 
