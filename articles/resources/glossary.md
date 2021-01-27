@@ -1,6 +1,6 @@
 ---
 title: Opis słownika przetwarzania Quantum: słownik typowych warunków, akcji i obiektów używanych w ramach przetwarzania Quantum.
-Autor: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS. temat: identyfikator UID artykułu: Microsoft. Quantum. słownik No-Loc:
+Autor: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS.: identyfikator UID odwołania: Microsoft. Quantum. słownik No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -175,7 +175,7 @@ Jednostka podstawowa obliczeń w Q# . Jest w przybliżeniu odpowiednikiem funkcj
 
 ## <a name="oracle"></a>Oracle
 
-Podprocedura, która dostarcza informacje zależne od danych do algorytmu Quantum w czasie wykonywania. Zazwyczaj celem jest zapewnienie nadmiaru danych [superposition](xref:microsoft.quantum.glossary#superposition) wyjściowych odpowiadających danym wejściowym, które znajdują się w położeniu. Aby uzyskać więcej informacji, zobacz [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles).
+Podprocedura, która dostarcza informacje zależne od danych do algorytmu Quantum w czasie wykonywania. Zazwyczaj celem jest zapewnienie nadmiaru danych [](xref:microsoft.quantum.glossary#superposition) wyjściowych odpowiadających danym wejściowym, które znajdują się w położeniu. Aby uzyskać więcej informacji, zobacz [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles).
 
 ## <a name="partial-application"></a>Aplikacja częściowa
 

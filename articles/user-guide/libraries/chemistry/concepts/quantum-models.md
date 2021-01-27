@@ -4,24 +4,24 @@ description: Dowiedz się, jak systemy elektroniczne molekularne są symulowane 
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833925"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856222"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Modele Quantum dla systemów elektronicznych
 
 Aby symulować systemy elektroniczne, musimy najpierw zacząć od określenia hamiltonian, które można znaleźć w postaci kanonicznej procedury podziału opisanej powyżej.
 W odniesieniu do $N _e $ Electrons z chwilą $p _i $ (w trzech wymiarach) i mas $m _e $ i położenia wektorów $x _i $ wraz z jądrem z opłatami $Z _k e $ w pozycjach $y _k $, operator hamiltonian odczytuje \begin{Equation} \hat{H} = \sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2 mln \_ e} + \frac {1} {2} \sum \_ {i\ne j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \frac{Z \_ KE ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k '} \frac{Z \_ kZ \_ {k '} e ^ 2} {| y \_ k-t \_ k ' |}. \label{EQ: Ham} \end{Equation} operatory czasu $ \hat{p} \_ i ^ 2 $ można wyświetlić w realnym miejscu jako operatorzy Laplacian, tj. $ \hat{p} \_ i ^ 2 =-\partial \_ {x \_ i} ^ 2-\partial \_ {y \_ i} ^ 2-\partial \_ {z \_ i} ^ 2 $.
 Tutaj wprowadziliśmy uproszczenie, że jądro jest w stanie spoczynku dla cząsteczki.
-Jest to znane jako przybliżenie Oppenheimer i ma być ważne dla spektrum energii niskiego poziomu dla elementu $ \hat{H} $, ponieważ masa elektronów wynosi około $1/1836 $ masy Proton.
+Jest to znane jako Born-Oppenheimer zbliżenie i ma być ważne dla spektrum energii niskiego poziomu dla elementu $ \hat{H} $, ponieważ masa elektronów ma wartość około $1/1836 $ masy Proton.
 Ten operator hamiltonian można łatwo znaleźć, pisząc energię dla systemu $N \_ e $ Electrons i stosując proces kanoniczny podziału opisany w temacie [Quantum Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics).
 
 Aby utworzyć reprezentację macierzy jednostkowej dla $e ^ {-i\hat {H} t} $, musimy reprezentować operator $ \hat{H} $ jako macierz.
@@ -36,7 +36,7 @@ Z tego powodu wybór podstawy, który może zwięzłie reprezentować problem, j
 
 Istnieje wiele odpowiednich podstaw, których można użyć, i wybór odpowiedniej podstawy, aby dopasować problem, jest znaczną częścią chemii Quantum.
 Prawdopodobnie najprostszymi takimi zestawami są Slater-Type-Orbitals (konie), które są (ortogonalne) rozwiązania do równania Schrödinger (tj. eigenfunctions of $ \hat{H} $) dla atomów, takich jak.
-Inne zestawy podstawowe, takie jak orbitalsy płaszczyzny lub rzeczywiste miejsce, mogą być używane i aby uzyskać bardziej szczegółowe informacje, odwołując się do czytnika chcesz wiedzieć do standardowego tekstu ["Teoria struktury elektronicznej molekularnej"](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) przez Helgaker.
+Inne zestawy podstawowe, takie jak orbitalsy płaszczyzny lub rzeczywiste miejsce, mogą być używane i aby uzyskać bardziej szczegółowe informacje, odwołując się do czytnika chcesz wiedzieć do standardowego tekstu ["Electronic-Structure molekularne](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) ", przez Helgaker.
 
 Chociaż Stany używane w powyższym modelu mogą wydawać się dowolne, Mechanics Quantum nakłada ograniczenia dotyczące stanów, które można znaleźć w charakterze.
 W szczególności wszystkie prawidłowe elektroniczne Stany Quantum muszą mieć zabezpieczenia symetryczne w ramach wymiany etykiet elektronów.

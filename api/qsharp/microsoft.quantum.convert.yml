@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: Konwertuje daną tablicę wartości logicznych na równoważną dużą liczbę całkowitą. Element 0 tablicy jest najmniej znaczącym bitem dużej liczby całkowitej.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Tworzy dodatnią liczbę całkowitą z ciągu bitów w formacie little endian.
+- summary: Tworzy nieujemną liczbę całkowitą z ciągu bitów w formacie little endian.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: Podanym ciągiem bitowym zwraca operator qubit Pauli, reprezentowany jako tablica operatorów typu Single-qubit Pauli.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: Konwertuje daną liczbę całkowitą na równoważną liczbę całkowitą.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: Tworzy binarną reprezentację dodatniej liczby całkowitej przy użyciu reprezentacji little-endian dla zwróconej tablicy.
+- summary: Tworzy binarną reprezentację nieujemnej liczby całkowitej przy użyciu reprezentacji little-endian dla zwróconej tablicy.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: Konwertuje daną liczbę całkowitą na równoważną liczbę zmiennoprzecinkową o podwójnej precyzji.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: Konwertuje `Result[]` Typ na `Bool[]` Typ, gdzie `One` jest mapowany na `true` i `Zero` jest mapowany na `false` .
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Tworzy dodatnią liczbę całkowitą z ciągu wyników w formacie little endian.
+- summary: Tworzy nieujemną liczbę całkowitą z ciągu wyników w formacie little endian.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: Konwertuje `Result` Typ na `Bool` Typ, gdzie `One` jest mapowany na `true` i `Zero` jest mapowany na `false` .
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: 'Ta przestrzeń nazw zawiera funkcje do konwersji między różnymi typami danych Q #.'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92713818"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850068"
