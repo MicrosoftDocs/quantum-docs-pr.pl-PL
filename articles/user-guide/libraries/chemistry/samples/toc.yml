@@ -1,8 +1,0 @@
-- name: Uzyskiwanie szacunkowych poziomów energii
-  href: molecular-hydrogen.md
-- name: Ładowanie operatora Hamiltona z pliku
-  href: loading-from-file.md
-- name: Uzyskiwanie liczb zasobów
-  href: resource-counts.md
-- name: Kompleksowe rozwiązanie z NWChem
-  href: end-to-end.md
